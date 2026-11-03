@@ -1,4 +1,16 @@
-# Firefox Security FAQ
+# FragmentedFox security
+
+## Reporting a problem in FragmentedFox
+
+For issues in FragmentedFox's own changes (branding, default settings, build and signing setup), use the repository's **Security** tab and choose **Report a vulnerability**, which creates a private report. Please do not open a public issue for a security problem.
+
+## Reporting a problem in Firefox itself
+
+FragmentedFox is built from Mozilla's source, so a bug in Firefox or Gecko code is a Mozilla bug. Report it to Mozilla as described below, and it will be fixed upstream and merged here in a later ESR release. FragmentedFox has no bounty program of its own.
+
+# Firefox Security FAQ (Mozilla)
+
+The rest of this file is Mozilla's, kept for reference.
 
 General information about security at Mozilla is available at [https://www.mozilla.org/en-US/security/](https://www.mozilla.org/en-US/security/).
 

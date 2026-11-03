@@ -1,3 +1,10 @@
+# FragmentedFox fork notes
+- This repository is FragmentedFox, a fork of Firefox based on a Mozilla ESR release tag. The default branch is `esr153-fragmentedfox`. See `README.md` and `fragmentedfox-docs/` for what differs from Mozilla's code and how to upgrade.
+- Keep FragmentedFox changes small and easy to re-apply on a new ESR release. Prefer changing a default value over restructuring Mozilla code.
+- Builds run on GitHub Actions, not locally. Do not start long local builds in cloud sessions.
+- Never commit keystores, tokens or other secrets.
+- Do not use the Firefox name or logo for FragmentedFox's own branding. Names of real Mozilla services (Relay, Monitor, Send, Profiler) stay as they are.
+
 # Global instructions
 Limit the amount of comments you put in the code to a strict minimum. You should almost never add comments, except sometimes on non-trivial code, function definitions if the arguments aren't self-explanatory, and class definitions and their members.
 

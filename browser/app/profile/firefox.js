@@ -3630,3 +3630,8 @@ pref("distribution.mozillaonline.ignore", true);
 #ifdef XP_MACOSX
   pref("browser.macAppMenu.setAsDefaultShown", false);
 #endif
+
+pref("dom.security.https_only_mode", true);
+pref("network.trr.mode", 2);
+pref("network.trr.uri", "https://dns.quad9.net/dns-query");
+pref("network.trr.default_provider_uri", "https://dns.quad9.net/dns-query");

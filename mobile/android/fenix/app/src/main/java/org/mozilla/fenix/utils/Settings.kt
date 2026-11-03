@@ -173,6 +173,8 @@ class Settings(
          * Bug 1946867 - Currently "hardcoded" to the DoH TRR URI of Cloudflare
          */
         private const val CLOUDFLARE_URI = "https://mozilla.cloudflare-dns.com/dns-query"
+
+        private const val QUAD9_URI = "https://dns.quad9.net/dns-query"
     }
 
     private val logger = Logger("Settings")
@@ -1167,7 +1169,7 @@ class Settings(
 
     var shouldUseHttpsOnly by booleanPreference(
         appContext.getPreferenceKey(R.string.pref_key_https_only),
-        default = false,
+        default = true,
     )
 
     var shouldUseHttpsOnlyInAllTabs by booleanPreference(
@@ -2971,7 +2973,7 @@ class Settings(
      */
     private var trrMode by intPreference(
         key = appContext.getPreferenceKey(R.string.pref_key_doh_settings_mode),
-        default = DOH_SETTINGS_DEFAULT,
+        default = DOH_SETTINGS_INCREASED,
     )
 
     /**
@@ -2980,7 +2982,7 @@ class Settings(
      */
     var dohProviderUrl by stringPreference(
         key = appContext.getPreferenceKey(R.string.pref_key_doh_provider_uri),
-        default = "",
+        default = QUAD9_URI,
     )
 
     /**

@@ -4,12 +4,12 @@ on:
   workflow_dispatch:
     inputs:
       mode:
-        description: "artifact downloads Mozilla's prebuilt engine (fast), full compiles it (slow)"
+        description: "full compiles the engine (slow). artifact needs Mozilla's prebuilt engine, which is not published for this base"
         type: choice
         options:
-          - artifact
           - full
-        default: artifact
+          - artifact
+        default: full
       shrink:
         description: "on shrinks code and resources (smaller app), off skips it (faster, use if shrinking fails)"
         type: choice

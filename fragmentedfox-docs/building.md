@@ -12,7 +12,7 @@ Builds run on GitHub Actions. Each workflow is started by hand: open the reposit
 
 The workflow has a `mode` choice when started:
 
-- `full` (default) compiles GeckoView from source with 2 parallel jobs. Two earlier full runs with 4 parallel jobs were killed about 13 minutes in, during the heavy Rust compile, with "The runner has received a shutdown signal". Memory pressure is the likely cause but is not confirmed.
+- `full` (default) compiles GeckoView from source on all 4 cores with debug symbols off (`--disable-debug-symbols`), which cuts the memory the Rust compile needs. Earlier full runs lost their runner: with 4 jobs and debug symbols, about 13 minutes in (twice), and with 2 jobs about 26 minutes in, each time without a log. Memory pressure during the heavy Rust compile is the likely cause but is not confirmed. A full compile on 4 cores may also approach GitHub's 6 hour job limit.
 - `artifact` is meant to download Mozilla's prebuilt GeckoView engine. It does not work for this base: the lookup checked 150 upstream revisions and found no built Android artifacts, so it fails in under a minute.
 
 Either way the job then builds the app with `./mach gradle fenix:assembleRelease`. The `shrink` choice (default `on`) shrinks code and resources for a smaller app. Choose `off` to add `-PdisableOptimization` if shrinking fails. The job adds 8 GB of swap and prints disk and memory details if a step fails.

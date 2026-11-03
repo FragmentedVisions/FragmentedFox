@@ -950,23 +950,4 @@ sealed class AppAction : Action {
          */
         data class OneWeekToWorldCupOverrideUpdated(val isOneWeekToWorldCupOverride: Boolean) : SportsWidgetAction()
     }
-
-    /**
-     * [SnackbarAction]s related to the IP Protection feature.
-     */
-    sealed class IPProtectionSnackbarAction : SnackbarAction() {
-        /**
-         * Dispatched when IP Protection feature experienced a connection error.
-         *
-         * @property title The title to display in the snackbar.
-         */
-        data class ConnectionError(val title: String) : IPProtectionSnackbarAction()
-
-        /**
-         * Dispatched when IP Protection feature experienced a connection error.
-         *
-         * @property title The title to display in the snackbar.
-         */
-        data class DataLimitReached(val title: String) : IPProtectionSnackbarAction()
-    }
 }

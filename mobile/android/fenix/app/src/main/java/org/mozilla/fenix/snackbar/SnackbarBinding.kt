@@ -31,7 +31,6 @@ import org.mozilla.fenix.bookmarks.BookmarksGlobalResultReport
 import org.mozilla.fenix.bookmarks.friendlyRootTitle
 import org.mozilla.fenix.browser.BrowserFragmentDirections
 import org.mozilla.fenix.components.AppStore
-import org.mozilla.fenix.components.accounts.FenixFxAEntryPoint
 import org.mozilla.fenix.components.appstate.AppAction
 import org.mozilla.fenix.components.appstate.AppAction.ShareAction
 import org.mozilla.fenix.components.appstate.AppAction.SnackbarAction
@@ -41,7 +40,6 @@ import org.mozilla.fenix.downloads.getCannotOpenFileErrorMessage
 import org.mozilla.fenix.ext.components
 import org.mozilla.fenix.ext.navigateWithBreadcrumb
 import org.mozilla.fenix.ext.tabClosedUndoMessage
-import org.mozilla.fenix.ipprotection.ui.IPProtectionSnackbarBinding
 import org.mozilla.fenix.settings.downloads.DownloadLocationManager
 import org.mozilla.fenix.utils.getSnackbarTimeout
 
@@ -364,12 +362,6 @@ class SnackbarBinding(
                     }
 
                     is SnackbarState.None -> Unit
-
-                    is SnackbarState.IPProtectionDataLimitReached ->
-                        handleIPProtectionDataLimitReachedSnackbarState(state)
-
-                    is SnackbarState.IPProtectionConnectionError ->
-                        handleIPProtectionConnectionErrorSnackbarSate(state)
                 }
             }
     }
@@ -420,42 +412,5 @@ class SnackbarBinding(
             text = context.getString(id),
             duration = Snackbar.LENGTH_LONG,
         )
-    }
-
-    /**
-     * The state could be consumed by [IPProtectionSnackbarBinding] as well (e.g. three dot menu or trust panel opened),
-     * in which case, to avoid showing snackbar twice, we only show it here if the view is active.
-     */
-    private fun handleIPProtectionDataLimitReachedSnackbarState(state: SnackbarState.IPProtectionDataLimitReached) {
-        if (viewHasFocus()) {
-            snackbarDelegate.show(
-                text = state.title,
-                duration = Snackbar.LENGTH_LONG,
-                action = context.getString(R.string.ip_protection_data_limit_reached_snackbar_action),
-            ) {
-                navController.navigate(
-                    BrowserFragmentDirections.actionGlobalIpProtectionFragment(
-                        entrypoint = FenixFxAEntryPoint.IPProtectionSettings,
-                    ),
-                )
-            }
-
-            appStore.dispatch(SnackbarAction.SnackbarShown)
-        }
-    }
-
-    /**
-     * The state could be consumed by [IPProtectionSnackbarBinding] as well (e.g. three dot menu or trust panel opened),
-     * in which case, to avoid showing snackbar twice, we only show it here if the view is active.
-     */
-    private fun handleIPProtectionConnectionErrorSnackbarSate(state: SnackbarState.IPProtectionConnectionError) {
-        if (viewHasFocus()) {
-            snackbarDelegate.show(
-                text = state.title,
-                duration = Snackbar.LENGTH_SHORT,
-            )
-
-            appStore.dispatch(SnackbarAction.SnackbarShown)
-        }
     }
 }

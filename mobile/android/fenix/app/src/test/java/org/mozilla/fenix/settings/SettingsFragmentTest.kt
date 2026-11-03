@@ -12,11 +12,7 @@ import io.mockk.verify
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.advanceUntilIdle
 import kotlinx.coroutines.test.runTest
-import mozilla.components.ExperimentalAndroidComponentsApi
 import mozilla.components.concept.fetch.Client
-import mozilla.components.feature.ipprotection.store.IPProtectionStore
-import mozilla.components.feature.ipprotection.store.state.EligibilityStatus
-import mozilla.components.feature.ipprotection.store.state.IPProtectionState
 import mozilla.components.service.fxa.manager.FxaAccountManager
 import mozilla.components.service.fxrelay.eligibility.Eligible
 import mozilla.components.service.fxrelay.eligibility.Ineligible
@@ -468,35 +464,4 @@ class SettingsFragmentTest {
         assertFalse(preference.isVisible)
     }
 
-    @OptIn(ExperimentalAndroidComponentsApi::class)
-    @Test
-    fun `WHEN ip protection feature is available for the user THEN preference is visible`() {
-        val preference = settingsFragment.requirePreference<Preference>(
-            R.string.pref_key_ip_protection_settings,
-        )
-
-        settingsFragment.setupIPProtectionPreferences(
-            ipProtectionStore = IPProtectionStore(
-                initialState = IPProtectionState(EligibilityStatus.Eligible),
-            ),
-        )
-
-        assertTrue(preference.isVisible)
-    }
-
-    @OptIn(ExperimentalAndroidComponentsApi::class)
-    @Test
-    fun `WHEN ip protection feature is not available for the user THEN preference is hidden`() {
-        val preference = settingsFragment.requirePreference<Preference>(
-            R.string.pref_key_ip_protection_settings,
-        )
-
-        settingsFragment.setupIPProtectionPreferences(
-            ipProtectionStore = IPProtectionStore(
-                initialState = IPProtectionState(EligibilityStatus.UnsupportedRegion),
-            ),
-        )
-
-        assertFalse(preference.isVisible)
-    }
 }

@@ -62,8 +62,6 @@ import mozilla.components.browser.state.selector.selectedTab
 import mozilla.components.concept.engine.translate.TranslationSupport
 import mozilla.components.concept.engine.translate.findLanguage
 import mozilla.components.feature.addons.Addon
-import mozilla.components.feature.ipprotection.store.IPProtectionAction
-import mozilla.components.feature.ipprotection.store.state.isEligible
 import mozilla.components.service.fxa.manager.AccountState.NotAuthenticated
 import mozilla.components.support.base.feature.ViewBoundFeatureWrapper
 import mozilla.components.support.ktx.android.util.dpToPx
@@ -72,10 +70,8 @@ import mozilla.components.support.utils.ext.isLandscape
 import mozilla.components.support.utils.ext.top
 import mozilla.telemetry.glean.private.NoExtras
 import org.mozilla.fenix.GleanMetrics.Events
-import org.mozilla.fenix.GleanMetrics.Vpn
 import org.mozilla.fenix.R
 import org.mozilla.fenix.automotive.isAndroidAutomotiveAvailable
-import org.mozilla.fenix.components.Components
 import org.mozilla.fenix.components.appstate.SupportedMenuNotifications
 import org.mozilla.fenix.components.components
 import org.mozilla.fenix.components.menu.compose.Addons
@@ -91,8 +87,6 @@ import org.mozilla.fenix.components.menu.middleware.MenuNavigationMiddleware
 import org.mozilla.fenix.components.menu.middleware.MenuTelemetryMiddleware
 import org.mozilla.fenix.components.menu.store.BrowserMenuState
 import org.mozilla.fenix.components.menu.store.ExtensionMenuState
-import org.mozilla.fenix.components.menu.store.IPProtectionMenuState
-import org.mozilla.fenix.components.menu.store.IPProtectionMenuStatus
 import org.mozilla.fenix.components.menu.store.MenuAction
 import org.mozilla.fenix.components.menu.store.MenuState
 import org.mozilla.fenix.components.menu.store.MenuStore
@@ -106,7 +100,6 @@ import org.mozilla.fenix.ext.openToBrowser
 import org.mozilla.fenix.ext.pixelSizeFor
 import org.mozilla.fenix.ext.requireComponents
 import org.mozilla.fenix.ext.runIfFragmentIsAttached
-import org.mozilla.fenix.ipprotection.ui.IPProtectionSnackbarBinding
 import org.mozilla.fenix.nimbus.FxNimbus
 import org.mozilla.fenix.settings.SupportUtils
 import org.mozilla.fenix.settings.deletebrowsingdata.DefaultDeleteBrowsingDataController
@@ -114,7 +107,6 @@ import org.mozilla.fenix.settings.deletebrowsingdata.DefaultDeleteBrowsingDataCo
 import org.mozilla.fenix.settings.deletebrowsingdata.DefaultDeleteBrowsingDataController.DeleteDataUseCases
 import org.mozilla.fenix.settings.deletebrowsingdata.DefaultDeleteBrowsingDataController.Stores
 import org.mozilla.fenix.settings.deletebrowsingdata.DeleteBrowsingDataController
-import org.mozilla.fenix.snackbar.FenixSnackbarDelegate
 import org.mozilla.fenix.theme.FirefoxTheme
 import org.mozilla.fenix.translations.TranslationsEnabledSettings
 import org.mozilla.fenix.utils.DELAY_MS_MAIN_MENU
@@ -148,8 +140,6 @@ class MenuDialogFragment : BottomSheetDialogFragment() {
 
     private val args by navArgs<MenuDialogFragmentArgs>()
     private val webExtensionsMenuBinding = ViewBoundFeatureWrapper<WebExtensionsMenuBinding>()
-    private val ipProtectionMenuBinding = ViewBoundFeatureWrapper<IPProtectionMenuBinding>()
-    private val ipProtectionSnackbarBinding = ViewBoundFeatureWrapper<IPProtectionSnackbarBinding>()
     private val snackbarHostState = SnackbarHostState()
     private var bottomSheetBehavior: BottomSheetBehavior<View>? = null
     private var isPrivate: Boolean = false
@@ -459,17 +449,6 @@ class MenuDialogFragment : BottomSheetDialogFragment() {
                         view = this,
                     )
 
-                    ipProtectionMenuBinding.set(
-                        feature = IPProtectionMenuBinding(
-                            ipProtectionStore = components.ipProtection.store,
-                            onIPProtectionStatusUpdate = {
-                                store.dispatch(MenuAction.UpdateIPProtectionMenuState(it))
-                            },
-                        ),
-                        owner = this@MenuDialogFragment,
-                        view = this,
-                    )
-
                     val recommendedAddons by remember {
                         store.stateFlow
                             .map { state ->
@@ -558,10 +537,6 @@ class MenuDialogFragment : BottomSheetDialogFragment() {
                     val summarizationMenuState by remember {
                         store.stateFlow.map { state -> state.summarizationMenuState }
                     }.collectAsState(initial = SummarizationMenuState.Default)
-
-                    val ipProtectionMenuState by remember {
-                        store.stateFlow.map { state -> state.ipProtectionMenuState }
-                    }.collectAsState(initial = store.state.ipProtectionMenuState)
 
                     val contentState: Route by remember { mutableStateOf(initRoute) }
 
@@ -687,8 +662,6 @@ class MenuDialogFragment : BottomSheetDialogFragment() {
                                     isDownloadHighlighted = isDownloadHighlighted,
                                     webExtensionMenuCount = webExtensionsCount,
                                     isAllWebExtensionsDisabled = isAllWebExtensionsDisabled,
-                                    showIPProtection = components.ipProtection.store.state.isEligible,
-                                    ipProtectionMenuState = ipProtectionMenuState,
                                     onMozillaAccountButtonClick = {
                                         store.dispatch(
                                             MenuAction.Navigate.MozillaAccount(
@@ -775,13 +748,6 @@ class MenuDialogFragment : BottomSheetDialogFragment() {
                                         selectedTab?.let {
                                             store.dispatch(MenuAction.Navigate.Share)
                                         }
-                                    },
-                                    onIPProtectionClick = {
-                                        handleIPProtectionClick(ipProtectionMenuState, components, store)
-                                    },
-                                    onIPProtectionNavigate = {
-                                        Vpn.settingsPageTapped.record(Vpn.SettingsPageTappedExtra(entrypoint = "Menu"))
-                                        store.dispatch(MenuAction.Navigate.IPProtectionSettings)
                                     },
                                     moreSettingsSubmenu = {
                                         MoreSettingsSubmenu(
@@ -975,54 +941,6 @@ class MenuDialogFragment : BottomSheetDialogFragment() {
                         }
                     }
                 }
-            }
-        }
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-        ipProtectionSnackbarBinding.set(
-            feature = IPProtectionSnackbarBinding(
-                appStore = requireComponents.appStore,
-                snackbarDelegate = FenixSnackbarDelegate(
-                    snackbarHostState = snackbarHostState,
-                    scope = viewLifecycleOwner.lifecycleScope,
-                    context = requireContext(),
-                ),
-            ),
-            owner = this,
-            view = view,
-        )
-    }
-
-    private fun handleIPProtectionClick(
-        ipProtectionMenuState: IPProtectionMenuState,
-        components: Components,
-        store: MenuStore,
-    ) {
-        when (ipProtectionMenuState.status) {
-            IPProtectionMenuStatus.Disabled -> {
-                Vpn.menuTurnedOn.record()
-                components.ipProtection.store.dispatch(IPProtectionAction.Toggle)
-            }
-
-            IPProtectionMenuStatus.Enabled -> {
-                Vpn.menuTurnedOff.record()
-                components.ipProtection.store.dispatch(IPProtectionAction.Toggle)
-            }
-
-            IPProtectionMenuStatus.AuthRequired -> {
-                // If authorization is required, the user clicked the "Try it" button.
-                Vpn.menuTryItTapped.record(NoExtras())
-                store.dispatch(MenuAction.Navigate.IPProtectionSettings)
-            }
-
-            IPProtectionMenuStatus.Activating,
-            IPProtectionMenuStatus.DataLimitReached,
-            IPProtectionMenuStatus.ConnectionError,
-                -> {
-                components.ipProtection.store.dispatch(IPProtectionAction.Toggle)
             }
         }
     }

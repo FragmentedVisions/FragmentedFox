@@ -10,7 +10,6 @@ import mozilla.components.concept.engine.permission.SitePermissions
 import mozilla.components.concept.engine.permission.SitePermissions.AutoplayStatus
 import mozilla.components.lib.state.State
 import org.mozilla.fenix.R
-import org.mozilla.fenix.components.menu.store.IPProtectionMenuState
 import org.mozilla.fenix.settings.PhoneFeature
 import org.mozilla.fenix.trackingprotection.TrackerBuckets
 import org.mozilla.fenix.trackingprotection.TrackingProtectionCategory
@@ -32,7 +31,6 @@ typealias WebsitePermissionsState = Map<PhoneFeature, WebsitePermission>
  * for the current site.
  * @property websiteInfoState [State] containing information about the website connection.
  * @property websitePermissionsState Mapping of [PhoneFeature]s to [WebsitePermission]s.
- * @property ipProtectionMenuState The current [IPProtectionMenuState] for the IP protection menu item.
  */
 data class TrustPanelState(
     val baseDomain: String? = null,
@@ -44,7 +42,6 @@ data class TrustPanelState(
     val sitePermissions: SitePermissions? = null,
     val websiteInfoState: WebsiteInfoState = WebsiteInfoState(),
     val websitePermissionsState: WebsitePermissionsState = mapOf(),
-    val ipProtectionMenuState: IPProtectionMenuState = IPProtectionMenuState(),
 ) : State
 
 /**

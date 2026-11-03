@@ -17,7 +17,6 @@ import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.mozilla.fenix.R
-import org.mozilla.fenix.components.menu.store.IPProtectionMenuState
 import org.mozilla.fenix.settings.trustpanel.store.WebsiteInfoState
 import org.mozilla.fenix.theme.FirefoxTheme
 import org.mozilla.fenix.theme.Theme
@@ -104,12 +103,10 @@ class ProtectionPanelTest {
                         websiteTitle = "Mozilla",
                         certificate = null,
                     ),
-                    ipProtectionMenuState = IPProtectionMenuState(),
                     icon = null,
                     isTrackingProtectionEnabled = true,
                     isGlobalTrackingProtectionEnabled = true,
                     isLocalPdf = false,
-                    showIPProtection = false,
                     numberOfTrackersBlocked = numberOfTrackersBlocked,
                     websitePermissions = emptyList(),
                     onTrackerBlockedMenuClick = onTrackerBlockedMenuClick,
@@ -120,8 +117,6 @@ class ProtectionPanelTest {
                     onToggleablePermissionClick = {},
                     onViewCertificateClick = {},
                     onViewQWACClick = {},
-                    onIPProtectionToggle = {},
-                    onIPProtectionNavigate = {},
                 )
             }
         }

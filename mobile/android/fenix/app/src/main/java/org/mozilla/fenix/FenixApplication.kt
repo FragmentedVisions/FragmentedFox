@@ -379,8 +379,6 @@ open class FenixApplication : Application(), Provider, ThemeProvider {
 
         setupPush()
 
-        maybeSetupIPProtection()
-
         GlobalFxSuggestDependencyProvider.initialize(components.fxSuggest.storage)
 
         visibilityLifecycleCallback = VisibilityLifecycleCallback(getSystemService())
@@ -651,11 +649,6 @@ open class FenixApplication : Application(), Provider, ThemeProvider {
             // Initialize the service. This could potentially be done in a coroutine in the future.
             it.initialize()
         }
-    }
-
-    private fun maybeSetupIPProtection() {
-        components.ipProtection.feature.initialize()
-        components.ipProtection.storageSynchronizer.initialize()
     }
 
     private fun setupCrashReporting(): CrashReporter {

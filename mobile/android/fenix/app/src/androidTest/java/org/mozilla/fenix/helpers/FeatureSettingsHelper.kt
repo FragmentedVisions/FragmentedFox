@@ -160,17 +160,6 @@ interface FeatureSettingsHelper {
         }
     }
 
-    /**
-     * Enable or disable the IP Protection feature.
-     */
-    fun enableOrDisableIPProtection(enableIPProtection: Boolean) {
-        if (enableIPProtection) {
-            FxNimbusHelper.enableIPProtection()
-        } else {
-            FxNimbusHelper.disableIPProtection()
-        }
-    }
-
     fun applyFlagUpdates()
 
     fun resetAllFeatureFlags()

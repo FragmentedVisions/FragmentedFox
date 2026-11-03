@@ -15,7 +15,6 @@ import org.junit.Test
 import org.junit.runner.RunWith
 import org.mozilla.fenix.R
 import org.mozilla.fenix.components.menu.MenuAccessPoint
-import org.mozilla.fenix.components.menu.store.IPProtectionMenuState
 import org.mozilla.fenix.theme.FirefoxTheme
 import org.mozilla.fenix.theme.Theme
 
@@ -68,8 +67,6 @@ class MainMenuTest {
                     showBanner = false,
                     isDownloadHighlighted = false,
                     webExtensionMenuCount = 0,
-                    showIPProtection = false,
-                    ipProtectionMenuState = IPProtectionMenuState(),
                     onMoreMenuClick = {},
                     onCustomizeReaderViewMenuClick = {},
                     onMozillaAccountButtonClick = {},
@@ -91,8 +88,6 @@ class MainMenuTest {
                     onForwardButtonClick = {},
                     onRefreshButtonClick = {},
                     onStopButtonClick = {},
-                    onIPProtectionClick = {},
-                    onIPProtectionNavigate = {},
                     onShareButtonClick = {},
                     extensionsMenuItemDescription = null,
                     moreSettingsSubmenu = {},

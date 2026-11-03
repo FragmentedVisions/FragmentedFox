@@ -106,8 +106,6 @@ import org.mozilla.fenix.browser.browsingmode.DefaultBrowsingModeManager
 import org.mozilla.fenix.components.appstate.AppAction
 import org.mozilla.fenix.components.appstate.AppAction.ShareAction
 import org.mozilla.fenix.components.appstate.OrientationMode
-import org.mozilla.fenix.components.ipprotection.ErrorMessages
-import org.mozilla.fenix.components.ipprotection.IPProtectionInfoPrompter
 import org.mozilla.fenix.components.menu.MenuAccessPoint
 import org.mozilla.fenix.components.menu.share.QRCodeDialogFragment
 import org.mozilla.fenix.components.metrics.BreadcrumbsRecorder
@@ -241,19 +239,6 @@ open class HomeActivity : LocaleAwareAppCompatActivity(), NavHostActivity, Crash
                     )
                 }
             },
-        )
-    }
-
-    private val ipProtectionPrompter by lazy {
-        IPProtectionInfoPrompter(
-            store = components.ipProtection.store,
-            appStore = components.appStore,
-            errorMessages = ErrorMessages(
-                dataLimitReached = this.getString(
-                    R.string.ip_protection_data_limit_reached_snackbar,
-                    FxNimbus.features.ipProtection.value().dataLimitGigabyte,
-                ),
-            ),
         )
     }
 
@@ -598,7 +583,6 @@ open class HomeActivity : LocaleAwareAppCompatActivity(), NavHostActivity, Crash
             summarizeToolbarHighlightBinding,
             components.core.summarizationSettings,
             translationsAIControllableFeatureRegistrar,
-            ipProtectionPrompter,
         )
 
         if (!isCustomTabIntent(intent)) {

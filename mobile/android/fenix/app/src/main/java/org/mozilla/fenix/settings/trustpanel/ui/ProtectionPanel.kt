@@ -61,14 +61,12 @@ import mozilla.components.compose.base.text.value
 import mozilla.components.compose.base.theme.surfaceDimVariant
 import mozilla.components.support.utils.CertificateUtils
 import org.mozilla.fenix.R
-import org.mozilla.fenix.components.menu.compose.IPProtectionMenuItem
 import org.mozilla.fenix.components.menu.compose.MenuBadgeItem
 import org.mozilla.fenix.components.menu.compose.MenuGroup
 import org.mozilla.fenix.components.menu.compose.MenuItem
 import org.mozilla.fenix.components.menu.compose.MenuItemState
 import org.mozilla.fenix.components.menu.compose.MenuScaffold
 import org.mozilla.fenix.components.menu.compose.MenuTextItem
-import org.mozilla.fenix.components.menu.store.IPProtectionMenuState
 import org.mozilla.fenix.settings.PhoneFeature
 import org.mozilla.fenix.settings.trustpanel.store.AutoplayValue
 import org.mozilla.fenix.settings.trustpanel.store.WebsiteInfoState
@@ -95,12 +93,10 @@ private const val DROPDOWN_TEXT_WIDTH_FRACTION = 0.5f
 @Composable
 internal fun ProtectionPanel(
     websiteInfoState: WebsiteInfoState,
-    ipProtectionMenuState: IPProtectionMenuState,
     icon: Bitmap?,
     isTrackingProtectionEnabled: Boolean,
     isGlobalTrackingProtectionEnabled: Boolean,
     isLocalPdf: Boolean,
-    showIPProtection: Boolean,
     numberOfTrackersBlocked: Int,
     websitePermissions: List<WebsitePermission>,
     onTrackerBlockedMenuClick: () -> Unit,
@@ -111,8 +107,6 @@ internal fun ProtectionPanel(
     onToggleablePermissionClick: (WebsitePermission.Toggleable) -> Unit,
     onViewCertificateClick: () -> Unit,
     onViewQWACClick: () -> Unit,
-    onIPProtectionToggle: () -> Unit,
-    onIPProtectionNavigate: () -> Unit,
 ) {
     val isSiteProtectionEnabled = isTrackingProtectionEnabled && isGlobalTrackingProtectionEnabled
     MenuScaffold(
@@ -137,13 +131,6 @@ internal fun ProtectionPanel(
             isGlobalTrackingProtectionEnabled = isGlobalTrackingProtectionEnabled,
             isSiteProtectionEnabled = isSiteProtectionEnabled,
             onTrackingProtectionToggleClick = onTrackingProtectionToggleClick,
-        )
-
-        IPProtectionMenuGroup(
-            visible = showIPProtection,
-            ipProtectionMenuState = ipProtectionMenuState,
-            onIPProtectionToggle = onIPProtectionToggle,
-            onIPProtectionNavigate = onIPProtectionNavigate,
         )
 
         ConnectionSecurityMenuGroup(
@@ -303,24 +290,6 @@ private fun ConnectionSecurityMenuGroup(
                 label = stringResource(id = R.string.connection_security_panel_not_secure),
                 beforeIconPainter = painterResource(id = iconsR.drawable.mozac_ic_lock_slash_critical_24),
                 state = MenuItemState.CRITICAL,
-            )
-        }
-    }
-}
-
-@Composable
-private fun IPProtectionMenuGroup(
-    visible: Boolean,
-    ipProtectionMenuState: IPProtectionMenuState,
-    onIPProtectionToggle: () -> Unit,
-    onIPProtectionNavigate: () -> Unit,
-) {
-    if (visible) {
-        MenuGroup {
-            IPProtectionMenuItem(
-                state = ipProtectionMenuState,
-                onToggle = onIPProtectionToggle,
-                onNavigate = onIPProtectionNavigate,
             )
         }
     }
@@ -677,12 +646,10 @@ private fun ProtectionPanelPreview() {
                     websiteTitle = "Mozilla",
                     certificate = null,
                 ),
-                ipProtectionMenuState = IPProtectionMenuState(),
                 icon = null,
                 isTrackingProtectionEnabled = true,
                 isGlobalTrackingProtectionEnabled = true,
                 isLocalPdf = false,
-                showIPProtection = true,
                 numberOfTrackersBlocked = 5,
                 websitePermissions = listOf(
                     WebsitePermission.Autoplay(
@@ -699,8 +666,6 @@ private fun ProtectionPanelPreview() {
                 onToggleablePermissionClick = {},
                 onViewCertificateClick = {},
                 onViewQWACClick = {},
-                onIPProtectionToggle = {},
-                onIPProtectionNavigate = {},
             )
         }
     }

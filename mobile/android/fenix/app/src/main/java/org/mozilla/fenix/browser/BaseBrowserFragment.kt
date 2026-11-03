@@ -89,7 +89,6 @@ import mozilla.components.feature.downloads.temporary.CopyDownloadFeature
 import mozilla.components.feature.downloads.temporary.ShareResourceFeature
 import mozilla.components.feature.findinpage.view.FindInPageBar
 import mozilla.components.feature.intent.ext.EXTRA_SESSION_ID
-import mozilla.components.feature.ipprotection.IPProtectionWarningBinding
 import mozilla.components.feature.media.fullscreen.MediaSessionFullscreenFeature
 import mozilla.components.feature.privatemode.feature.SecureWindowFeature
 import mozilla.components.feature.prompts.PromptFeature
@@ -153,7 +152,6 @@ import org.mozilla.fenix.FeatureFlags
 import org.mozilla.fenix.GleanMetrics.EmailMask
 import org.mozilla.fenix.GleanMetrics.MediaState
 import org.mozilla.fenix.GleanMetrics.PullToRefreshInBrowser
-import org.mozilla.fenix.GleanMetrics.Vpn
 import org.mozilla.fenix.HomeActivity
 import org.mozilla.fenix.IntentReceiverActivity
 import org.mozilla.fenix.NavGraphDirections
@@ -331,7 +329,6 @@ abstract class BaseBrowserFragment :
     private val findInPageBinding = ViewBoundFeatureWrapper<FindInPageBinding>()
     private val snackbarBinding = ViewBoundFeatureWrapper<SnackbarBinding>()
     private val standardSnackbarErrorBinding = ViewBoundFeatureWrapper<StandardSnackbarErrorBinding>()
-    private val ipProtectionWarningBinding = ViewBoundFeatureWrapper<IPProtectionWarningBinding>()
 
     protected val summarizeToolbarCfrBinding = ViewBoundFeatureWrapper<SummarizeToolbarCFRBinding>()
 
@@ -635,20 +632,6 @@ abstract class BaseBrowserFragment :
             ),
             owner = viewLifecycleOwner,
             view = binding.root,
-        )
-
-        ipProtectionWarningBinding.set(
-            feature = IPProtectionWarningBinding(
-                store = requireComponents.ipProtection.store,
-                proxyUnavailable = {
-                    Vpn.proxyUnavailable.record()
-                    findNavController().navigate(
-                        BrowserFragmentDirections.actionGlobalIpProtectionUnavailableDialog(),
-                    )
-                },
-            ),
-            owner = this,
-            view = view,
         )
 
         secureWindowFeature.set(

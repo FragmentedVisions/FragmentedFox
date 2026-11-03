@@ -59,7 +59,6 @@ import mozilla.components.concept.sync.AccountObserver
 import mozilla.components.concept.sync.AuthType
 import mozilla.components.concept.sync.OAuthAccount
 import mozilla.components.feature.accounts.push.SendTabUseCases
-import mozilla.components.feature.ipprotection.IPProtectionWarningBinding
 import mozilla.components.feature.tab.collections.TabCollection
 import mozilla.components.feature.top.sites.presenter.DefaultTopSitesPresenter
 import mozilla.components.lib.state.ext.flow
@@ -74,7 +73,6 @@ import mozilla.components.support.utils.ext.navigateToDefaultBrowserAppsSettings
 import mozilla.telemetry.glean.private.NoExtras
 import org.mozilla.fenix.BrowserDirection
 import org.mozilla.fenix.GleanMetrics.HomeScreen
-import org.mozilla.fenix.GleanMetrics.Vpn
 import org.mozilla.fenix.HomeActivity
 import org.mozilla.fenix.NavGraphDirections
 import org.mozilla.fenix.R
@@ -145,7 +143,6 @@ import org.mozilla.fenix.home.topsites.controller.DefaultTopSiteController
 import org.mozilla.fenix.home.topsites.getTopSitesConfig
 import org.mozilla.fenix.home.ui.Homepage
 import org.mozilla.fenix.home.ui.WallpaperBackground
-import org.mozilla.fenix.ipprotection.store.IPProtectionOnboardingPrompt
 import org.mozilla.fenix.messaging.DefaultMessageController
 import org.mozilla.fenix.messaging.FenixMessageSurfaceId
 import org.mozilla.fenix.messaging.MessagingFeature
@@ -182,7 +179,6 @@ import org.mozilla.fenix.utils.getUndoDelay
 import org.mozilla.fenix.utils.showAddSearchWidgetPromptIfSupported
 import org.mozilla.fenix.wallpapers.Wallpaper
 import java.lang.ref.WeakReference
-import org.mozilla.fenix.ipprotection.store.Surface as IPProtectionSurface
 
 /**
  * The home screen.
@@ -261,8 +257,6 @@ class HomeFragment : Fragment() {
     private val showReviewPromptBinding = ViewBoundFeatureWrapper<ShowReviewPromptBinding>()
     private val topSitesBinding = ViewBoundFeatureWrapper<TopSitesBinding>()
     private val trackersBlockedFeature = ViewBoundFeatureWrapper<TrackersBlockedFeature>()
-    private val ipProtectionWarningBinding = ViewBoundFeatureWrapper<IPProtectionWarningBinding>()
-    private val ipProtectionOnboardingPrompt = ViewBoundFeatureWrapper<IPProtectionOnboardingPrompt>()
 
     private val homepageEdgeToEdgeFeature = ViewBoundFeatureWrapper<HomepageEdgeToEdgeFeature>()
     private var qrScanFenixFeature: ViewBoundFeatureWrapper<QrScanFenixFeature>? =
@@ -524,7 +518,6 @@ class HomeFragment : Fragment() {
         initReviewPromptBinding(view = view)
         initTabsCleanupFeature(view = view)
         initSnackbarBinding(view = view)
-        initIpProtectionBindings(view = view)
 
         privacyNoticeBannerStore = PrivacyNoticeBannerStore(
             initialState = PrivacyNoticeBannerState(
@@ -1211,37 +1204,6 @@ class HomeFragment : Fragment() {
                 sendTabUseCases = SendTabUseCases(requireComponents.backgroundServices.accountManager),
                 customTabSessionId = null,
                 viewHasFocus = { view.hasWindowFocus() },
-            ),
-            owner = this,
-            view = view,
-        )
-    }
-
-    private fun initIpProtectionBindings(view: View) {
-        ipProtectionWarningBinding.set(
-            feature = IPProtectionWarningBinding(
-                store = requireComponents.ipProtection.store,
-                proxyUnavailable = {
-                    Vpn.proxyUnavailable.record()
-                    findNavController().navigate(
-                        HomeFragmentDirections.actionGlobalIpProtectionUnavailableDialog(),
-                    )
-                },
-            ),
-            owner = this,
-            view = view,
-        )
-
-        ipProtectionOnboardingPrompt.set(
-            feature = IPProtectionOnboardingPrompt(
-                repository = requireComponents.ipProtectionPromptRepository,
-                timeProvider = DefaultDateTimeProvider(),
-                store = requireComponents.ipProtection.store,
-                onShowOnboarding = {
-                    findNavController().navigate(
-                        HomeFragmentDirections.actionGlobalIpProtectionDialog(IPProtectionSurface.HOMEPAGE),
-                    )
-                },
             ),
             owner = this,
             view = view,

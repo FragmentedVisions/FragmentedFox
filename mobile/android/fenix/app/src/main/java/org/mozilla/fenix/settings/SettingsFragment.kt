@@ -41,8 +41,6 @@ import mozilla.components.concept.sync.AuthType
 import mozilla.components.concept.sync.OAuthAccount
 import mozilla.components.concept.sync.Profile
 import mozilla.components.feature.addons.ui.AddonFilePicker
-import mozilla.components.feature.ipprotection.store.IPProtectionStore
-import mozilla.components.feature.ipprotection.store.state.isEligible
 import mozilla.components.service.fxrelay.eligibility.Eligible
 import mozilla.components.support.base.feature.ViewBoundFeatureWrapper
 import mozilla.components.support.ktx.android.view.showKeyboard
@@ -60,7 +58,6 @@ import org.mozilla.fenix.GleanMetrics.Events
 import org.mozilla.fenix.GleanMetrics.SettingsSearch
 import org.mozilla.fenix.GleanMetrics.TrackingProtection
 import org.mozilla.fenix.GleanMetrics.Translations
-import org.mozilla.fenix.GleanMetrics.Vpn
 import org.mozilla.fenix.HomeActivity
 import org.mozilla.fenix.R
 import org.mozilla.fenix.components.Components
@@ -429,13 +426,6 @@ class SettingsFragment : PreferenceFragmentCompat(), SystemInsetsPaddedFragment 
                 SettingsFragmentDirections.actionSettingsFragmentToHttpsOnlyFragment()
             }
 
-            resources.getString(R.string.pref_key_ip_protection_settings) -> {
-                Vpn.settingsPageTapped.record(Vpn.SettingsPageTappedExtra(entrypoint = "Settings"))
-                SettingsFragmentDirections.actionSettingsFragmentToIpProtectionFragment(
-                    entrypoint = FenixFxAEntryPoint.IPProtectionSettings,
-                )
-            }
-
             resources.getString(R.string.pref_key_tracking_protection_settings) -> {
                 TrackingProtection.etpSettings.record(NoExtras())
                 SettingsFragmentDirections.actionSettingsFragmentToTrackingProtectionFragment()
@@ -638,7 +628,6 @@ class SettingsFragment : PreferenceFragmentCompat(), SystemInsetsPaddedFragment 
         )
         setupGeckoLogsPreference(settings)
         setupHttpsOnlyPreferences(settings)
-        setupIPProtectionPreferences(components.ipProtection.store)
         setupNotificationPreference(
             NotificationManagerCompat.from(requireContext()).areNotificationsEnabled(),
         )
@@ -865,16 +854,6 @@ class SettingsFragment : PreferenceFragmentCompat(), SystemInsetsPaddedFragment 
                     getString(R.string.preferences_https_only_on_private)
                 else -> null
             }
-    }
-
-    @VisibleForTesting
-    internal fun setupIPProtectionPreferences(ipProtectionStore: IPProtectionStore) {
-        findPreference<IPProtectionPreference>(
-            getPreferenceKey(R.string.pref_key_ip_protection_settings),
-        )?.apply {
-            isVisible = ipProtectionStore.state.isEligible
-            showBetaBadge = FxNimbus.features.ipProtection.value().showBetaBadge
-        }
     }
 
     private fun updateProfilerUI(profilerStatus: Boolean) {

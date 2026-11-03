@@ -54,8 +54,6 @@ import kotlinx.coroutines.withContext
 import mozilla.components.browser.state.selector.findTabOrCustomTab
 import mozilla.components.browser.state.state.SessionState
 import mozilla.components.browser.state.store.BrowserStore
-import mozilla.components.feature.ipprotection.store.IPProtectionAction
-import mozilla.components.feature.ipprotection.store.state.isEligible
 import mozilla.components.lib.state.ext.consumeFlow
 import mozilla.components.lib.state.ext.observeAsComposableState
 import mozilla.components.lib.state.helpers.StoreProvider.Companion.fragmentStore
@@ -63,18 +61,12 @@ import mozilla.components.support.base.feature.ViewBoundFeatureWrapper
 import mozilla.components.support.base.log.logger.Logger
 import mozilla.components.support.ktx.kotlinx.coroutines.flow.ifAnyChanged
 import org.mozilla.fenix.BuildConfig
-import org.mozilla.fenix.GleanMetrics.Vpn
 import org.mozilla.fenix.R
-import org.mozilla.fenix.components.Components
 import org.mozilla.fenix.components.components
-import org.mozilla.fenix.components.menu.IPProtectionMenuBinding
 import org.mozilla.fenix.components.menu.compose.MenuDialogBottomSheet
 import org.mozilla.fenix.components.menu.compose.MenuHandleState
-import org.mozilla.fenix.components.menu.store.IPProtectionMenuState
-import org.mozilla.fenix.components.menu.store.IPProtectionMenuStatus
 import org.mozilla.fenix.ext.requireComponents
 import org.mozilla.fenix.ext.runIfFragmentIsAttached
-import org.mozilla.fenix.ipprotection.ui.IPProtectionSnackbarBinding
 import org.mozilla.fenix.settings.PhoneFeature
 import org.mozilla.fenix.settings.trustpanel.middleware.TrustPanelMiddleware
 import org.mozilla.fenix.settings.trustpanel.middleware.TrustPanelNavigationMiddleware
@@ -88,7 +80,6 @@ import org.mozilla.fenix.settings.trustpanel.ui.ClearSiteDataDialog
 import org.mozilla.fenix.settings.trustpanel.ui.ProtectionPanel
 import org.mozilla.fenix.settings.trustpanel.ui.TrackerCategoryDetailsPanel
 import org.mozilla.fenix.settings.trustpanel.ui.TrackersBlockedPanel
-import org.mozilla.fenix.snackbar.FenixSnackbarDelegate
 import org.mozilla.fenix.theme.FirefoxTheme
 import org.mozilla.fenix.trackingprotection.ProtectionsDashboardContent
 import org.mozilla.fenix.trackingprotection.TrackersBlockedFeature
@@ -111,8 +102,6 @@ class TrustPanelFragment : BottomSheetDialogFragment() {
 
     private val args by navArgs<TrustPanelFragmentArgs>()
     private val trackersBlockedFeature = ViewBoundFeatureWrapper<TrackersBlockedFeature>()
-    private val ipProtectionMenuBinding = ViewBoundFeatureWrapper<IPProtectionMenuBinding>()
-    private val ipProtectionSnackbarBinding = ViewBoundFeatureWrapper<IPProtectionSnackbarBinding>()
     private val snackbarHostState = SnackbarHostState()
     private lateinit var permissionsCallback: ((Map<String, Boolean>) -> Unit)
     private val requestPermissionsLauncher = registerForActivityResult(
@@ -254,10 +243,6 @@ class TrustPanelFragment : BottomSheetDialogFragment() {
                     store.stateFlow.map { state -> state.websitePermissionsState.values }
                 }.collectAsState(initial = listOf())
                 val isGlobalTrackingProtectionEnabled = settings.shouldUseTrackingProtection
-                val showIpProtection = components.ipProtection.store.state.isEligible
-                val ipProtectionMenuState by remember {
-                    store.stateFlow.map { state -> state.ipProtectionMenuState }
-                }.collectAsState(initial = store.state.ipProtectionMenuState)
 
                 permissionsCallback = { isGranted: Map<String, Boolean> ->
                     if (isGranted.values.all { it }) {
@@ -327,12 +312,10 @@ class TrustPanelFragment : BottomSheetDialogFragment() {
                         Route.ProtectionPanel -> {
                             ProtectionPanel(
                                 websiteInfoState = websiteInfoState,
-                                ipProtectionMenuState = ipProtectionMenuState,
                                 icon = sessionState?.content?.icon,
                                 isTrackingProtectionEnabled = isTrackingProtectionEnabled,
                                 isGlobalTrackingProtectionEnabled = isGlobalTrackingProtectionEnabled,
                                 isLocalPdf = args.isLocalPdf,
-                                showIPProtection = showIpProtection,
                                 numberOfTrackersBlocked = numberOfTrackersBlocked,
                                 websitePermissions = websitePermissions.filter { it.isVisible },
                                 onTrackerBlockedMenuClick = {
@@ -359,15 +342,6 @@ class TrustPanelFragment : BottomSheetDialogFragment() {
                                 },
                                 onViewQWACClick = {
                                     store.dispatch(TrustPanelAction.Navigate.QWAC)
-                                },
-                                onIPProtectionToggle = {
-                                    handleIPProtectionToggleAndRecordTelemetry(ipProtectionMenuState, components)
-                                },
-                                onIPProtectionNavigate = {
-                                    Vpn.settingsPageTapped.record(
-                                        Vpn.SettingsPageTappedExtra(entrypoint = "Trust Panel"),
-                                    )
-                                    store.dispatch(TrustPanelAction.Navigate.IPProtectionSettings)
                                 },
                             )
                         }
@@ -436,33 +410,6 @@ class TrustPanelFragment : BottomSheetDialogFragment() {
         }
     }
 
-    private fun handleIPProtectionToggleAndRecordTelemetry(
-        ipProtectionMenuState: IPProtectionMenuState,
-        components: Components,
-    ) {
-        recordIPProtectionTelemetry(ipProtectionMenuState.status)
-
-        when (ipProtectionMenuState.status) {
-            IPProtectionMenuStatus.AuthRequired ->
-                store.dispatch(TrustPanelAction.Navigate.IPProtectionSettings)
-
-            else -> components.ipProtection.store.dispatch(IPProtectionAction.Toggle)
-        }
-    }
-
-    private fun recordIPProtectionTelemetry(status: IPProtectionMenuStatus) {
-        when (status) {
-            IPProtectionMenuStatus.Disabled -> Vpn.trustPanelTurnedOn.record()
-            IPProtectionMenuStatus.Enabled -> Vpn.trustPanelTurnedOff.record()
-            IPProtectionMenuStatus.AuthRequired -> Vpn.trustPanelTryItTapped.record()
-
-            IPProtectionMenuStatus.DataLimitReached,
-            IPProtectionMenuStatus.ConnectionError,
-            IPProtectionMenuStatus.Activating,
-                -> Unit
-        }
-    }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -478,30 +425,6 @@ class TrustPanelFragment : BottomSheetDialogFragment() {
                 view = view,
             )
         }
-
-        ipProtectionMenuBinding.set(
-            feature = IPProtectionMenuBinding(
-                ipProtectionStore = requireComponents.ipProtection.store,
-                onIPProtectionStatusUpdate = {
-                    store.dispatch(TrustPanelAction.UpdateIPProtectionMenuState(it))
-                },
-            ),
-            owner = this@TrustPanelFragment,
-            view = view,
-        )
-
-        ipProtectionSnackbarBinding.set(
-            feature = IPProtectionSnackbarBinding(
-                appStore = requireComponents.appStore,
-                snackbarDelegate = FenixSnackbarDelegate(
-                    snackbarHostState = snackbarHostState,
-                    scope = viewLifecycleOwner.lifecycleScope,
-                    context = requireContext(),
-                ),
-            ),
-            owner = this,
-            view = view,
-        )
     }
 
     @Composable

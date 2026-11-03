@@ -35,7 +35,7 @@ Not changed: Safe Browsing local list updates, search suggestions, and the add-o
 - Android Firefox Suggest (`fx-suggest` in `mobile/android/fenix/app/nimbus.fml.yaml`) defaults to off for release builds and is only on for developer and nightly channels. No remote experiment endpoint is configured, so nothing can turn it on.
 - Android search suggestions and trending searches default to on (`Settings.kt`), so typed text is sent to the search engine as it is typed. Turning them off by default is an open decision.
 
-- Mozilla's IP Protection (VPN) feature: on Android, the app-level `ip-protection` feature in `nimbus.fml.yaml` is off for release builds (on only for developer, nightly and beta), and its use needs a Mozilla account sign-in. As a second layer, `browser.ipProtection.enabled` is set to false in `geckoview-prefs.js`. On desktop it is already off by default.
+- Mozilla's IP Protection (VPN) feature is removed from the Android app on the `remove-vpn` branch: the settings entry, menu item, toolbar pill, trust panel section, first-run prompt, snackbars, account sign-in hooks, navigation destinations, the `ip-protection` Nimbus feature and the Fenix dependency on `feature-ipprotection`, with the matching tests. Left in place: the shared android-components and GeckoView VPN code, which nothing in the app uses, the translated strings, and the `vpn` Glean metric definitions. This was not compiled here, so it needs a successful build before it is merged. `browser.ipProtection.enabled` is also false in `geckoview-prefs.js`.
 
 ## Names and branding
 

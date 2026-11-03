@@ -1105,46 +1105,6 @@ features:
         type: Boolean
         default: true
 
-  ip-protection:
-    description: Feature to enable IP Protection (VPN) for users on Firefox on Android.
-    variables:
-      enabled:
-        description: If true, IP Protection feature is enabled.
-        type: Boolean
-        default: false
-      show-beta-badge:
-        description: If true, a BETA badge is shown next to the IP Protection entry in the settings list.
-        type: Boolean
-        default: true
-      show-onboarding-bottom-sheet:
-        description: If true, the IP Protection onboarding bottom sheet is shown to the user.
-        type: Boolean
-        default: false
-      data-limit-gigabyte:
-        description: Specifies the VPN data limit for unpaid users in GB (e.g. 50 GB).
-        type: Int
-        default: 50
-      allowed-regions:
-        description: Country codes whose users are eligible for IP Protection.
-        type: List<String>
-        default: [ "AU", "AT", "BE", "BG", "CA", "CL", "CO", "DK", "FI", "FR", "DE", "IE", "IT", "JP", "MY", "MX",
-                   "NL", "NZ", "NO", "PL", "PT", "SG", "ZA", "ES", "SE", "CH", "TH", "GB", "US" ]
-      promo-deadline:
-        description: The final date for the promotion to end. This needs to be an ISO 8601 formatted date (i.e. YYYY-MM-DD).
-        type: String
-        default: "2026-08-31"
-    defaults:
-      - channel: developer
-        value:
-          enabled: true
-          allowed-regions: ["XX"]
-      - channel: nightly
-        value:
-          enabled: true
-      - channel: beta
-        value:
-          enabled: true
-
   native-share-sheet:
     description: Feature to enable the Native Share Sheet for users on Firefox on Android.
     variables:

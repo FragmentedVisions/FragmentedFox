@@ -21,6 +21,8 @@ Not changed: Safe Browsing local list updates, search suggestions, and the add-o
 - `mobile/android/fenix/app/build.gradle`: application ID `com.fragmentedvisions.fragmentedfox`, `TELEMETRY` and `CRASH_REPORTING` build flags off, Mozilla's shared user ID removed from the release build type, and a signing config that reads the release key from the environment.
 - `Settings.kt`: the telemetry and Contile settings default to off.
 - `ContentRecommendationsFeatureHelper.kt`: no supported locales, so Pocket recommendations and sponsored stories are disabled.
+- `nimbus.fml.yaml`: the marketing onboarding card (sharing install data with Mozilla's marketing partners) defaults to off.
+- `strings.xml` (default language only): strings that refer to this browser say FragmentedFox, and the About text says it is a fork built from Mozilla's source. Strings about Mozilla services (Sync, studies, crash reports, Terms of Use) and all other languages are unchanged.
 
 ## Checked and left as is
 
@@ -36,7 +38,8 @@ Not changed: Safe Browsing local list updates, search suggestions, and the add-o
 
 ## Known gaps
 
-- Many strings, onboarding images and links in the Android app still mention Firefox or Mozilla.
+- The first-run onboarding still shows a Terms of Use page with Mozilla's terms and data-sharing text. It needs a code change to replace or remove it.
+- Translations in other languages still say Firefox, and some Android strings, images and links still mention Firefox or Mozilla.
 - No update server. The desktop build is configured with the updater off, so new versions are shipped as downloads.
 - The default search engines, Sync and add-on sources are Mozilla's.
 - `Assets.car` (a compiled macOS asset catalog) still has the old icon.

@@ -1008,7 +1008,7 @@ features:
       enabled:
         description: If false, the marketing onboarding card will never be shown.
         type: Boolean
-        default: true
+        default: false
 
   suppress-sponsored-top-sites:
     description: Suppress sponsored top sites for new users for 14 days.

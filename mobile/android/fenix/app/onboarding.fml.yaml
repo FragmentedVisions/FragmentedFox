@@ -32,8 +32,10 @@ features:
                   subheader-one-text: nova_onboarding_tou_subtitle
                   line-one-text: nova_onboarding_tou_body_line_1
                   line-one-link-text: nova_onboarding_tou_body_line_1_link_text
+                  line-one-link-url: fragmentedfox_license_url
                   line-two-text: nova_onboarding_tou_body_line_2
                   line-two-link-text: nova_onboarding_tou_body_line_2_link_text
+                  line-two-link-url: fragmentedfox_about_url
                   line-three-text: nova_onboarding_tou_body_line_3
                   line-three-link-text: nova_onboarding_tou_body_line_3_link_text
 

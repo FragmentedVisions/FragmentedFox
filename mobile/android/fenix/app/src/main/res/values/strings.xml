@@ -512,28 +512,31 @@
     <string name="nova_onboarding_tou_title" tools:ignore="UnusedResources">Get ready to run free</string>
 
     <!-- Terms of use (ToU) onboarding subtitle. -->
-    <string name="nova_onboarding_tou_subtitle">Speedy, safe, and won’t sell you out.\nBrowsing just got better.</string>
+    <string name="nova_onboarding_tou_subtitle">Private by design.\nYours by default.</string>
 
     <!-- Terms of use (ToU) onboarding body line one.
         %1$s is replaced by an active link, using nova_onboarding_tou_body_line_1_link_text as text (“Firefox Terms of Use”). -->
-    <string name="nova_onboarding_tou_body_line_1">By continuing, you agree to the %1$s.</string>
+    <string name="nova_onboarding_tou_body_line_1">FragmentedFox is free software, provided as is under the %1$s.</string>
 
     <!-- Terms of use (ToU) onboarding body line one link text for nova_onboarding_tou_body_line_1. 'Firefox' is intentionally hardcoded. -->
-    <string name="nova_onboarding_tou_body_line_1_link_text" tools:ignore="BrandUsage">Firefox Terms of Use</string>
+    <string name="nova_onboarding_tou_body_line_1_link_text" tools:ignore="BrandUsage">Mozilla Public License 2.0</string>
 
     <!-- Terms of use (ToU) onboarding body line two. 'Firefox' is intentionally hardcoded.
         %1$s is replaced by an active link, using nova_onboarding_tou_body_line_2_link_text as text (“Privacy Notice”). -->
-    <string name="nova_onboarding_tou_body_line_2" tools:ignore="BrandUsage">Firefox cares about your privacy. Learn more in our %1$s.</string>
+    <string name="nova_onboarding_tou_body_line_2" tools:ignore="BrandUsage">FragmentedFox cares about your privacy. Learn what is different in the %1$s.</string>
 
     <!-- Terms of use (ToU) onboarding body line two link text for nova_onboarding_tou_body_line_2. -->
-    <string name="nova_onboarding_tou_body_line_2_link_text">Privacy Notice</string>
+    <string name="nova_onboarding_tou_body_line_2_link_text">README</string>
 
     <!-- Terms of use (ToU) onboarding body line three. 'Firefox' and 'Mozilla' are intentionally hardcoded.
         %1$s is replaced by an active link, using nova_onboarding_tou_body_line_3_link_text as text (“Manage Settings”). -->
-    <string name="nova_onboarding_tou_body_line_3" tools:ignore="BrandUsage">To help improve the browser, Firefox sends diagnostic and interaction data to Mozilla. %1$s</string>
+    <string name="nova_onboarding_tou_body_line_3" tools:ignore="BrandUsage">FragmentedFox is set up not to send diagnostic or interaction data to Mozilla. %1$s</string>
 
     <!-- Terms of use (ToU) onboarding body line three link text for nova_onboarding_tou_body_line_3. -->
     <string name="nova_onboarding_tou_body_line_3_link_text">Manage settings</string>
+
+    <string name="fragmentedfox_license_url" translatable="false">https://www.mozilla.org/MPL/2.0/</string>
+    <string name="fragmentedfox_about_url" translatable="false">https://github.com/FragmentedVisions/FragmentedFox#readme</string>
 
     <!-- "Set to default" onboarding title. -->
     <string name="nova_onboarding_set_to_default_title" tools:ignore="UnusedResources">Say goodbye to creepy trackers</string>

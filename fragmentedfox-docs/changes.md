@@ -22,6 +22,7 @@ Not changed: Safe Browsing local list updates, search suggestions, and the add-o
 - `Settings.kt`: the telemetry and Contile settings default to off.
 - `ContentRecommendationsFeatureHelper.kt`: no supported locales, so Pocket recommendations and sponsored stories are disabled.
 - `nimbus.fml.yaml`: the marketing onboarding card (sharing install data with Mozilla's marketing partners) defaults to off.
+- `onboarding.fml.yaml` and `strings.xml`: the first-run Terms of Use card shows the Mozilla Public License and README links and a FragmentedFox privacy line instead of Mozilla's Terms of Use and data-sharing text.
 - `strings.xml` (default language only): strings that refer to this browser say FragmentedFox, and the About text says it is a fork built from Mozilla's source. Strings about Mozilla services (Sync, studies, crash reports, Terms of Use) and all other languages are unchanged.
 
 ## Checked and left as is
@@ -38,7 +39,7 @@ Not changed: Safe Browsing local list updates, search suggestions, and the add-o
 
 ## Known gaps
 
-- The first-run onboarding still shows a Terms of Use page with Mozilla's terms and data-sharing text. It needs a code change to replace or remove it.
+- The first-run Terms page keeps its structure and buttons (accepting still records acceptance and starts the telemetry client, which stays disabled by the build flags), but its text now describes the licence and links to the README. The privacy line says the app is set up not to send diagnostic data to Mozilla. That statement has not been verified on a running build yet.
 - Translations in other languages still say Firefox, and some Android strings, images and links still mention Firefox or Mozilla.
 - No update server. The desktop build is configured with the updater off, so new versions are shipped as downloads.
 - The default search engines, Sync and add-on sources are Mozilla's.

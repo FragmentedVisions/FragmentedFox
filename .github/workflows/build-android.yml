@@ -41,6 +41,22 @@ jobs:
       - name: Bootstrap
         run: ./mach --no-interactive bootstrap --application-choice=mobile_android
 
+      - name: Set up signing key
+        env:
+          KEYSTORE_B64: ${{ secrets.ANDROID_KEYSTORE_B64 }}
+          KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
+        run: |
+          if [ -n "$KEYSTORE_B64" ]; then
+            echo "$KEYSTORE_B64" | base64 -d > "$RUNNER_TEMP/fragmentedfox.p12"
+            echo "FRAGMENTEDFOX_KEYSTORE=$RUNNER_TEMP/fragmentedfox.p12" >> "$GITHUB_ENV"
+            echo "FRAGMENTEDFOX_KEYSTORE_PASSWORD=$KEYSTORE_PASSWORD" >> "$GITHUB_ENV"
+            echo "FRAGMENTEDFOX_KEY_ALIAS=$KEY_ALIAS" >> "$GITHUB_ENV"
+            echo "Signing with the FragmentedFox release key."
+          else
+            echo "No signing key configured, the APK will use a temporary debug key."
+          fi
+
       - name: Build GeckoView
         run: ./mach build
 

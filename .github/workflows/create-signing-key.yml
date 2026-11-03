@@ -1,0 +1,36 @@
+name: Create Android signing key
+
+on:
+  workflow_dispatch:
+
+jobs:
+  create:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Create the key and store it as repository secrets
+        env:
+          GH_TOKEN: ${{ secrets.SIGNING_ADMIN_TOKEN }}
+        run: |
+          set -euo pipefail
+          if [ -z "$GH_TOKEN" ]; then
+            echo "Add the SIGNING_ADMIN_TOKEN secret first."
+            exit 1
+          fi
+          if gh secret list --repo "$GITHUB_REPOSITORY" | grep -q '^ANDROID_KEYSTORE_B64'; then
+            echo "A signing key already exists. Refusing to replace it."
+            exit 1
+          fi
+          KS_PASS=$(openssl rand -base64 33 | tr -d '\n')
+          echo "::add-mask::$KS_PASS"
+          export KS_PASS
+          KS="$RUNNER_TEMP/fragmentedfox.p12"
+          keytool -genkeypair -keystore "$KS" -storetype PKCS12 \
+            -alias fragmentedfox -keyalg RSA -keysize 4096 -validity 9125 \
+            -dname "CN=FragmentedFox, O=Fragmented Visions" \
+            -storepass:env KS_PASS -keypass:env KS_PASS
+          printf '%s' "$KS_PASS" | gh secret set ANDROID_KEYSTORE_PASSWORD --repo "$GITHUB_REPOSITORY"
+          printf '%s' "fragmentedfox" | gh secret set ANDROID_KEY_ALIAS --repo "$GITHUB_REPOSITORY"
+          base64 -w0 "$KS" | gh secret set ANDROID_KEYSTORE_B64 --repo "$GITHUB_REPOSITORY"
+          echo "Public certificate fingerprint:"
+          keytool -list -v -keystore "$KS" -storepass:env KS_PASS | grep 'SHA256:'
+          rm -f "$KS"

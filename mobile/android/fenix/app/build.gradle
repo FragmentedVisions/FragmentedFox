@@ -52,6 +52,19 @@ android {
 
     compileSdk { version = release(config.compileSdkMajorVersion) { minorApiLevel = config.compileSdkMinorVersion } }
 
+    signingConfigs {
+        debug {
+            def keystorePath = System.getenv("FRAGMENTEDFOX_KEYSTORE")
+            if (keystorePath) {
+                storeFile file(keystorePath)
+                storeType "pkcs12"
+                storePassword System.getenv("FRAGMENTEDFOX_KEYSTORE_PASSWORD")
+                keyAlias System.getenv("FRAGMENTEDFOX_KEY_ALIAS")
+                keyPassword System.getenv("FRAGMENTEDFOX_KEYSTORE_PASSWORD")
+            }
+        }
+    }
+
     defaultConfig {
         ksp {
             arg("room.schemaLocation", "$projectDir/schemas".toString())

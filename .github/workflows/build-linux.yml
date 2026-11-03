@@ -1,0 +1,58 @@
+name: Build FragmentedFox (Linux)
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 355
+    steps:
+      - name: Free disk space
+        run: |
+          sudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/ghc /opt/hostedtoolcache/CodeQL /usr/local/share/boost
+          sudo docker image prune --all --force || true
+          df -h /
+
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Cache toolchains
+        uses: actions/cache@v4
+        with:
+          path: ~/.mozbuild
+          key: mozbuild-${{ runner.os }}-${{ hashFiles('python/mozboot/mozboot/*.py', 'build/mach_bootstrap.py') }}
+
+      - name: Write mozconfig
+        run: |
+          cat > mozconfig <<'EOF'
+          ac_add_options --enable-application=browser
+          ac_add_options --enable-optimize
+          ac_add_options --disable-debug
+          ac_add_options --disable-tests
+          ac_add_options --disable-updater
+          mk_add_options MOZ_OBJDIR=@TOPSRCDIR@/obj-fragmentedfox
+          EOF
+          cat mozconfig
+
+      - name: Bootstrap
+        run: ./mach --no-interactive bootstrap --application-choice=browser
+
+      - name: Build
+        run: ./mach build
+
+      - name: Package
+        run: ./mach package
+
+      - name: Check version, vendor and branding
+        run: |
+          obj-fragmentedfox/dist/bin/firefox --version
+          grep -E '^(Vendor|Name|Version)=' obj-fragmentedfox/dist/bin/application.ini
+
+      - name: Upload build
+        uses: actions/upload-artifact@v4
+        with:
+          name: fragmentedfox-linux-x86_64
+          path: obj-fragmentedfox/dist/*.tar.*
+          if-no-files-found: error

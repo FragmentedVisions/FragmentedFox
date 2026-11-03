@@ -35,12 +35,22 @@ jobs:
         with:
           fetch-depth: 1
 
-      - name: Restore toolchains
-        id: toolchains
+      - name: Install ccache
+        run: sudo apt-get install -y ccache
+
+      - name: Restore compile cache
         uses: actions/cache/restore@v4
         with:
-          path: ~/.mozbuild
-          key: android-${{ runner.os }}-${{ hashFiles('python/mozboot/mozboot/*.py', 'build/mach_bootstrap.py') }}
+          path: ~/.ccache
+          key: ccache-android-${{ github.run_id }}
+          restore-keys: ccache-android-
+
+      - name: Configure ccache
+        run: |
+          echo "CCACHE_DIR=$HOME/.ccache" >> "$GITHUB_ENV"
+          echo "CCACHE_MAXSIZE=4G" >> "$GITHUB_ENV"
+          echo "CCACHE_COMPRESS=1" >> "$GITHUB_ENV"
+          echo "CCACHE_BASEDIR=$GITHUB_WORKSPACE" >> "$GITHUB_ENV"
 
       - name: Write mozconfig
         run: |
@@ -52,19 +62,13 @@ jobs:
           ac_add_options --disable-tests
           ac_add_options --disable-debug-symbols
           ac_add_options --disable-webrtc
+          ac_add_options --with-ccache
           mk_add_options MOZ_OBJDIR=@TOPSRCDIR@/obj-android
           EOF
           cat mozconfig
 
       - name: Bootstrap
         run: ./mach --no-interactive bootstrap --application-choice=mobile_android
-
-      - name: Save toolchains
-        if: steps.toolchains.outputs.cache-hit != 'true'
-        uses: actions/cache/save@v4
-        with:
-          path: ~/.mozbuild
-          key: android-${{ runner.os }}-${{ hashFiles('python/mozboot/mozboot/*.py', 'build/mach_bootstrap.py') }}
 
       - name: Set up signing key
         env:
@@ -102,6 +106,17 @@ jobs:
           name: fragmentedfox-android
           path: mobile/android/fenix/app/build/outputs/apk/**/*.apk
           if-no-files-found: error
+
+      - name: Compile cache statistics
+        if: always()
+        run: ccache -s
+
+      - name: Save compile cache
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: ~/.ccache
+          key: ccache-android-${{ github.run_id }}
 
       - name: Size report
         if: always()

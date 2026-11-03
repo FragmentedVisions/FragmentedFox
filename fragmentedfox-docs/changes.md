@@ -35,6 +35,8 @@ Not changed: Safe Browsing local list updates, search suggestions, and the add-o
 - Android Firefox Suggest (`fx-suggest` in `mobile/android/fenix/app/nimbus.fml.yaml`) defaults to off for release builds and is only on for developer and nightly channels. No remote experiment endpoint is configured, so nothing can turn it on.
 - Android search suggestions and trending searches default to on (`Settings.kt`), so typed text is sent to the search engine as it is typed. Turning them off by default is an open decision.
 
+- Mozilla's IP Protection (VPN) feature: on Android, the app-level `ip-protection` feature in `nimbus.fml.yaml` is off for release builds (on only for developer, nightly and beta), and its use needs a Mozilla account sign-in. As a second layer, `browser.ipProtection.enabled` is set to false in `geckoview-prefs.js`. On desktop it is already off by default.
+
 ## Names and branding
 
 - `browser/branding/fragmentedfox` and `mobile/android/branding/fragmentedfox` are the default branding directories. SVG sources for the logo are in `browser/branding/fragmentedfox/source`.
@@ -43,8 +45,6 @@ Not changed: Safe Browsing local list updates, search suggestions, and the add-o
 - Names of real Mozilla services such as Relay, Monitor, Send and Profiler are left as they are.
 
 ## Known gaps
-
-- `mobile/android/app/geckoview-prefs.js` enables `browser.ipProtection.enabled` with a Mozilla VPN endpoint (`https://vpn.mozilla.org/`) and sign-in through a Mozilla account. It has not been reviewed or turned off.
 
 - The Android home screen has a sports widget that fetches tournament data from Mozilla's servers. It has not been reviewed or disabled.
 - uBlock Origin and Privacy Badger overlap in what they block. Running both costs some memory and gives little extra protection, so one may be dropped later.

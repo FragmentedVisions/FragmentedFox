@@ -22,6 +22,11 @@ Not changed: Safe Browsing local list updates, search suggestions, and the add-o
 - `Settings.kt`: the telemetry and Contile settings default to off.
 - `ContentRecommendationsFeatureHelper.kt`: no supported locales, so Pocket recommendations and sponsored stories are disabled.
 
+## Checked and left as is
+
+- Android Firefox Suggest (`fx-suggest` in `mobile/android/fenix/app/nimbus.fml.yaml`) defaults to off for release builds and is only on for developer and nightly channels. No remote experiment endpoint is configured, so nothing can turn it on.
+- Android search suggestions and trending searches default to on (`Settings.kt`), so typed text is sent to the search engine as it is typed. Turning them off by default is an open decision.
+
 ## Names and branding
 
 - `browser/branding/fragmentedfox` and `mobile/android/branding/fragmentedfox` are the default branding directories. SVG sources for the logo are in `browser/branding/fragmentedfox/source`.

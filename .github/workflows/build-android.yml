@@ -3,13 +3,6 @@ name: Build FragmentedFox (Android)
 on:
   workflow_dispatch:
     inputs:
-      mode:
-        description: "full compiles the engine (slow). artifact needs Mozilla's prebuilt engine, which is not published for this base"
-        type: choice
-        options:
-          - full
-          - artifact
-        default: full
       shrink:
         description: "on shrinks code and resources (smaller app), off skips it (faster, use if shrinking fails)"
         type: choice
@@ -40,44 +33,37 @@ jobs:
 
       - uses: actions/checkout@v4
         with:
-          fetch-depth: ${{ inputs.mode == 'artifact' && 50 || 1 }}
+          fetch-depth: 1
 
-      - name: Cache toolchains
-        uses: actions/cache@v4
+      - name: Restore toolchains
+        id: toolchains
+        uses: actions/cache/restore@v4
         with:
-          path: |
-            ~/.mozbuild
-            ~/.gradle/caches
-          key: android-${{ runner.os }}-${{ hashFiles('python/mozboot/mozboot/*.py', 'build/mach_bootstrap.py', 'gradle/libs.versions.toml') }}
+          path: ~/.mozbuild
+          key: android-${{ runner.os }}-${{ hashFiles('python/mozboot/mozboot/*.py', 'build/mach_bootstrap.py') }}
 
       - name: Write mozconfig
-        env:
-          MODE: ${{ inputs.mode }}
         run: |
           cat > mozconfig <<'EOF'
           ac_add_options --enable-project=mobile/android
           ac_add_options --target=aarch64
+          ac_add_options --enable-optimize
+          ac_add_options --disable-debug
+          ac_add_options --disable-tests
+          ac_add_options --disable-debug-symbols
           mk_add_options MOZ_OBJDIR=@TOPSRCDIR@/obj-android
           EOF
-          if [ "$MODE" = "artifact" ]; then
-            echo "ac_add_options --enable-artifact-builds" >> mozconfig
-          else
-            {
-              echo "ac_add_options --enable-optimize"
-              echo "ac_add_options --disable-debug"
-              echo "ac_add_options --disable-tests"
-              echo "ac_add_options --disable-debug-symbols"
-            } >> mozconfig
-          fi
           cat mozconfig
 
       - name: Bootstrap
-        env:
-          MODE: ${{ inputs.mode }}
-        run: |
-          CHOICE=mobile_android
-          if [ "$MODE" = "artifact" ]; then CHOICE=mobile_android_artifact_mode; fi
-          ./mach --no-interactive bootstrap --application-choice="$CHOICE"
+        run: ./mach --no-interactive bootstrap --application-choice=mobile_android
+
+      - name: Save toolchains
+        if: steps.toolchains.outputs.cache-hit != 'true'
+        uses: actions/cache/save@v4
+        with:
+          path: ~/.mozbuild
+          key: android-${{ runner.os }}-${{ hashFiles('python/mozboot/mozboot/*.py', 'build/mach_bootstrap.py') }}
 
       - name: Set up signing key
         env:
@@ -95,7 +81,7 @@ jobs:
             echo "No signing key configured, the APK will use a temporary debug key."
           fi
 
-      - name: Build GeckoView (or download it in artifact mode)
+      - name: Build GeckoView
         run: ./mach build
 
       - name: Build the app

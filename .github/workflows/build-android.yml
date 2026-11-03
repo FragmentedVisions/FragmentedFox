@@ -2,6 +2,14 @@ name: Build FragmentedFox (Android)
 
 on:
   workflow_dispatch:
+    inputs:
+      mode:
+        description: "artifact downloads Mozilla's prebuilt engine (fast), full compiles it (slow)"
+        type: choice
+        options:
+          - artifact
+          - full
+        default: artifact
 
 jobs:
   build:
@@ -36,6 +44,8 @@ jobs:
           key: android-${{ runner.os }}-${{ hashFiles('python/mozboot/mozboot/*.py', 'build/mach_bootstrap.py', 'gradle/libs.versions.toml') }}
 
       - name: Write mozconfig
+        env:
+          MODE: ${{ inputs.mode }}
         run: |
           cat > mozconfig <<'EOF'
           ac_add_options --enable-project=mobile/android
@@ -45,10 +55,20 @@ jobs:
           ac_add_options --disable-tests
           mk_add_options MOZ_OBJDIR=@TOPSRCDIR@/obj-android
           EOF
+          if [ "$MODE" = "artifact" ]; then
+            echo "ac_add_options --enable-artifact-builds" >> mozconfig
+          else
+            echo "mk_add_options MOZ_PARALLEL_BUILD=2" >> mozconfig
+          fi
           cat mozconfig
 
       - name: Bootstrap
-        run: ./mach --no-interactive bootstrap --application-choice=mobile_android
+        env:
+          MODE: ${{ inputs.mode }}
+        run: |
+          CHOICE=mobile_android
+          if [ "$MODE" = "artifact" ]; then CHOICE=mobile_android_artifact_mode; fi
+          ./mach --no-interactive bootstrap --application-choice="$CHOICE"
 
       - name: Set up signing key
         env:
@@ -66,7 +86,7 @@ jobs:
             echo "No signing key configured, the APK will use a temporary debug key."
           fi
 
-      - name: Build GeckoView
+      - name: Build GeckoView (or download it in artifact mode)
         run: ./mach build
 
       - name: Build the app

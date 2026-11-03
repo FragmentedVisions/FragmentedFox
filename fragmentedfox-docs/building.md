@@ -10,13 +10,13 @@ Builds run on GitHub Actions. Each workflow is started by hand: open the reposit
 
 ## Android
 
-The job bootstraps the Android toolchain, compiles GeckoView from source on all 4 cores with debug symbols off (`--disable-debug-symbols`), then builds the app with `./mach gradle fenix:assembleRelease`. The toolchain download is cached between runs, even when a build fails.
+The job bootstraps the Android toolchain, compiles GeckoView from source on all 4 cores with debug symbols off (`--disable-debug-symbols`) and WebRTC left out (`--disable-webrtc`), then builds the app with `./mach gradle fenix:assembleRelease`. The toolchain download is cached between runs, even when a build fails.
 
 The `shrink` choice (default `on`) shrinks code and resources for a smaller app. Choose `off` to add `-PdisableOptimization` if shrinking fails. The job adds 8 GB of swap, uploads the build logs and a size breakdown of the APK, and prints disk and memory details if a step fails.
 
 Known problems:
 
-- No full compile has finished yet. Earlier runs lost their runner without a log: with 4 jobs and debug symbols about 13 minutes in (twice), and with 2 jobs about 26 minutes in. Memory pressure during the heavy Rust compile is the likely cause but is not confirmed. Debug symbols were turned off to reduce it, and that change has not been tested.
+- No full compile has finished yet. Earlier runs lost their runner without a log: with 4 jobs and debug symbols about 13 minutes in (twice), and with 2 jobs about 26 minutes in. Memory pressure during the heavy Rust compile is the likely cause but is not confirmed. Debug symbols were turned off and WebRTC was left out of the compile to reduce it, and neither change has been tested. A build without WebRTC is a supported configuration (GeckoView's build file already handles it), but Mozilla ships Android with WebRTC, so an unexpected failure is possible.
 - A full compile on 4 cores may approach GitHub's 6 hour job limit.
 - Mozilla's prebuilt engine (artifact builds) cannot be used: the lookup checked 150 upstream revisions and found no built Android artifacts for this base.
 

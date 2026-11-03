@@ -1345,7 +1345,7 @@ pref("network.websocket.delay-failed-reconnects", true);
 
 // enables the prefetch service (i.e., prefetching of <link rel="next"> and
 // <link rel="prefetch"> URLs).
-pref("network.prefetch-next", true);
+pref("network.prefetch-next", false);
 
 // The following prefs pertain to the negotiate-auth extension (see bug 17578),
 // which provides transparent Kerberos or NTLM authentication using the SPNEGO
@@ -3254,7 +3254,7 @@ pref("network.captive-portal-service.maxInterval", 1500000); // 25 minutes
 pref("network.captive-portal-service.backoffFactor", "5.0");
 pref("network.captive-portal-service.enabled", false);
 
-pref("network.connectivity-service.enabled", true);
+pref("network.connectivity-service.enabled", false);
 pref("network.connectivity-service.DNSv4.domain", "example.org");
 pref("network.connectivity-service.DNSv6.domain", "example.org");
 pref("network.connectivity-service.DNS_HTTPS.domain", "cloudflare-dns.com");
@@ -3372,7 +3372,7 @@ pref("browser.safebrowsing.allowOverride", true);
 
 // Download protection
 pref("browser.safebrowsing.downloads.enabled", true);
-pref("browser.safebrowsing.downloads.remote.enabled", true);
+pref("browser.safebrowsing.downloads.remote.enabled", false);
 pref("browser.safebrowsing.downloads.remote.timeout_ms", 15000);
 pref("browser.safebrowsing.downloads.remote.url", "https://sb-ssl.google.com/safebrowsing/clientreport/download?key=%GOOGLE_SAFEBROWSING_API_KEY%");
 pref("browser.safebrowsing.downloads.remote.block_dangerous",            true);
@@ -3721,7 +3721,7 @@ pref("toolkit.aboutProcesses.profileDuration", 5);
 pref("toolkit.legacyUserProfileCustomizations.stylesheets", false);
 
 #ifdef MOZ_DATA_REPORTING
-  pref("datareporting.policy.dataSubmissionEnabled", true);
+  pref("datareporting.policy.dataSubmissionEnabled", false);
   pref("datareporting.policy.dataSubmissionPolicyNotifiedTime", "0");
   pref("datareporting.policy.dataSubmissionPolicyAcceptedVersion", 0);
   pref("datareporting.policy.currentPolicyVersion", 2);
@@ -3737,8 +3737,8 @@ pref("toolkit.legacyUserProfileCustomizations.stylesheets", false);
 
     // Health Report is enabled by default on all channels.
     // Do note that the toggle on Fenix and Focus does NOT reflect to this pref.
-    pref("datareporting.healthreport.uploadEnabled", true);
-    pref("datareporting.usage.uploadEnabled", true);
+    pref("datareporting.healthreport.uploadEnabled", false);
+    pref("datareporting.usage.uploadEnabled", false);
   #endif
 #endif
 

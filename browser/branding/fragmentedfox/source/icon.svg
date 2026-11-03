@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <defs>
+    <clipPath id="disc"><circle cx="128" cy="128" r="124"/></clipPath>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="4"/></filter>
+  </defs>
+  <circle cx="128" cy="128" r="124" fill="#050505"/>
+  <g clip-path="url(#disc)">
+    <g fill="#F5F5F5">
+      <circle cx="40" cy="60" r="1.6"/><circle cx="214" cy="48" r="1.4"/><circle cx="26" cy="140" r="1.2"/>
+      <circle cx="232" cy="150" r="1.6"/><circle cx="70" cy="220" r="1.4"/><circle cx="196" cy="228" r="1.2"/>
+      <circle cx="100" cy="24" r="1.2"/><circle cx="170" cy="20" r="1.6"/>
+    </g>
+    <g stroke="#9E8FB2" stroke-width="0.8" opacity="0.5" fill="none">
+      <polyline points="40,60 100,24 170,20 214,48"/>
+      <polyline points="26,140 70,220"/>
+      <polyline points="232,150 196,228"/>
+    </g>
+    <ellipse cx="128" cy="140" rx="132" ry="42" transform="rotate(-28 128 140)" fill="none" stroke="#9E8FB2" stroke-width="1.4" opacity="0.45"/>
+    <circle cx="238" cy="88" r="6" fill="#9E8FB2"/>
+    <g stroke="#050505" stroke-width="4" stroke-linejoin="round">
+      <polygon points="50,28 104,92 44,128" fill="#FF4757"/>
+      <polygon points="206,28 152,92 212,128" fill="#FF4757"/>
+      <polygon points="104,92 128,76 152,92" fill="#D4122A"/>
+      <polygon points="104,92 152,92 128,122" fill="#A80E21"/>
+      <polygon points="44,128 104,92 128,122 84,176" fill="#A80E21"/>
+      <polygon points="212,128 152,92 128,122 172,176" fill="#A80E21"/>
+      <polygon points="84,176 128,122 128,184" fill="#D4122A"/>
+      <polygon points="172,176 128,122 128,184" fill="#D4122A"/>
+      <polygon points="84,176 128,184 128,238" fill="#D4122A"/>
+      <polygon points="172,176 128,184 128,238" fill="#9E8FB2"/>
+      <polygon points="30,196 50,186 44,208" fill="#9E8FB2" opacity="0.8"/>
+      <polygon points="214,190 230,202 208,208" fill="#D4122A" opacity="0.8"/>
+    </g>
+    <g filter="url(#glow)" fill="#00FF88" opacity="0.9">
+      <path d="M62,128 Q86,126 104,144 Q82,150 62,128 Z"/>
+      <path d="M194,128 Q170,126 152,144 Q174,150 194,128 Z"/>
+    </g>
+    <g fill="#00FF88">
+      <path d="M62,128 Q86,126 104,144 Q82,150 62,128 Z"/>
+      <path d="M194,128 Q170,126 152,144 Q174,150 194,128 Z"/>
+    </g>
+    <g fill="#050505">
+      <ellipse cx="84" cy="138" rx="2" ry="6" transform="rotate(-28 84 138)"/>
+      <ellipse cx="172" cy="138" rx="2" ry="6" transform="rotate(28 172 138)"/>
+    </g>
+  </g>
+  <circle cx="128" cy="128" r="124" fill="none" stroke="#2B2B2B" stroke-width="2"/>
+</svg>

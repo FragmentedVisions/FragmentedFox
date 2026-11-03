@@ -3635,3 +3635,6 @@ pref("dom.security.https_only_mode", true);
 pref("network.trr.mode", 2);
 pref("network.trr.uri", "https://dns.quad9.net/dns-query");
 pref("network.trr.default_provider_uri", "https://dns.quad9.net/dns-query");
+pref("media.navigator.video.enabled", false);
+pref("media.peerconnection.ice.default_address_only", true);
+pref("media.peerconnection.ice.no_host", true);

@@ -13,6 +13,7 @@ Defaults changed in `browser/app/profile/firefox.js` and `modules/libpref/init/a
 - Promos: `browser.vpn_promo.enabled`, `browser.promo.pin.enabled`, `browser.promo.focus.enabled`, `browser.topsites.contile.enabled`.
 - Background connections: `network.captive-portal-service.enabled`, `network.connectivity-service.enabled`, `network.prefetch-next`, `browser.safebrowsing.downloads.remote.enabled`.
 - HTTPS-Only mode is on (`dom.security.https_only_mode`), and encrypted DNS is on in fallback mode (`network.trr.mode` 2) with Quad9 (`https://dns.quad9.net/dns-query`) as the resolver. If Quad9 is unreachable, DNS falls back to the system resolver.
+- WebRTC camera capture is off (`media.navigator.video.enabled`), and WebRTC does not expose local network addresses (`media.peerconnection.ice.default_address_only` and `ice.no_host`). Voice calls and receiving video still work. The same three prefs are set for Android in `mobile/android/app/geckoview-prefs.js`.
 - New tab page (`browser/extensions/newtab/lib/ActivityStream.sys.mjs`): sponsored content, sponsored top sites, top stories, weather and telemetry are off.
 
 Not changed: Safe Browsing local list updates, search suggestions, and the add-on blocklist and certificate data that arrive through Remote Settings.
@@ -42,6 +43,8 @@ Not changed: Safe Browsing local list updates, search suggestions, and the add-o
 - Names of real Mozilla services such as Relay, Monitor, Send and Profiler are left as they are.
 
 ## Known gaps
+
+- `mobile/android/app/geckoview-prefs.js` enables `browser.ipProtection.enabled` with a Mozilla VPN endpoint (`https://vpn.mozilla.org/`) and sign-in through a Mozilla account. It has not been reviewed or turned off.
 
 - The Android home screen has a sports widget that fetches tournament data from Mozilla's servers. It has not been reviewed or disabled.
 - uBlock Origin and Privacy Badger overlap in what they block. Running both costs some memory and gives little extra protection, so one may be dropped later.

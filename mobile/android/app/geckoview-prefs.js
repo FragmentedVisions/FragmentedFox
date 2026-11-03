@@ -388,3 +388,7 @@ pref("xpinstall.whitelist.fileRequest", false);
 pref("browser.ipProtection.enabled", true);
 pref("browser.ipProtection.guardian.endpoint", "https://vpn.mozilla.org/");
 pref("toolkit.ipProtection.android.authProvider", "fxa");
+
+pref("media.navigator.video.enabled", false);
+pref("media.peerconnection.ice.default_address_only", true);
+pref("media.peerconnection.ice.no_host", true);

@@ -116,6 +116,23 @@ jobs:
           path: mobile/android/fenix/app/build/outputs/apk/**/*.apk
           if-no-files-found: error
 
+      - name: Size report
+        if: always()
+        run: |
+          for apk in $(find mobile/android/fenix/app/build/outputs/apk -name '*.apk' 2>/dev/null); do
+            echo "== $apk"
+            ls -l "$apk"
+            unzip -l "$apk" | sort -k1 -n -r | head -40
+          done
+
+      - name: Upload build logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-logs
+          path: obj-android/.mozbuild/logs/build/*
+          if-no-files-found: ignore
+
       - name: Diagnostics
         if: failure()
         run: |

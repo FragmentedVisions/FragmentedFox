@@ -50,7 +50,6 @@ import mozilla.components.browser.thumbnails.BrowserThumbnails
 import mozilla.components.compose.browser.toolbar.concept.Action
 import mozilla.components.compose.browser.toolbar.concept.Action.ActionButton
 import mozilla.components.compose.browser.toolbar.concept.Action.ActionButtonRes
-import mozilla.components.compose.browser.toolbar.concept.Action.AnimatedPillActionRes
 import mozilla.components.compose.browser.toolbar.concept.Action.TabCounterAction
 import mozilla.components.compose.browser.toolbar.concept.PageOrigin
 import mozilla.components.compose.browser.toolbar.concept.PageOrigin.Companion.ContextualMenuOption
@@ -165,7 +164,6 @@ import org.mozilla.fenix.utils.Settings
 import org.mozilla.fenix.utils.Stories.markAsOpenedFromHomeScreen
 import org.mozilla.fenix.utils.Stories.markAsOpenedFromStoriesScreen
 import org.robolectric.annotation.Config
-import kotlin.test.assertIs
 import kotlin.test.assertNotNull
 import mozilla.components.browser.toolbar.R as toolbarR
 import mozilla.components.ui.icons.R as iconsR

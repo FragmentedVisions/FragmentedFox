@@ -31,7 +31,6 @@ import org.mozilla.fenix.NavGraphDirections
 import org.mozilla.fenix.R
 import org.mozilla.fenix.browser.BrowserFragmentDirections
 import org.mozilla.fenix.collections.SaveCollectionStep
-import org.mozilla.fenix.components.accounts.FenixFxAEntryPoint
 import org.mozilla.fenix.components.menu.BrowserNavigationParams
 import org.mozilla.fenix.components.menu.MenuDialogFragmentDirections
 import org.mozilla.fenix.components.menu.store.MenuAction

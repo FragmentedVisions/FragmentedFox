@@ -1548,8 +1548,6 @@
   <string name="saved_logins_sort_strategy_alphabetically">Nimi (A-Y)</string>
   <!-- Saved logins sorting strategy menu item -by last used- (if selected, it will sort saved logins by last used) -->
   <string name="saved_logins_sort_strategy_last_used">Viimati kasutatud</string>
-  <!-- Badge label shown in the menu item when the browser VPN is off -->
-  <string name="preferences_ip_protection_off">Väljas</string>
   <!--
     Autofill
 

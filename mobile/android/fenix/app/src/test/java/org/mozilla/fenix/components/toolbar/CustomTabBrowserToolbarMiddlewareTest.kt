@@ -35,7 +35,6 @@ import mozilla.components.browser.state.state.createTab
 import mozilla.components.browser.state.store.BrowserStore
 import mozilla.components.compose.browser.toolbar.concept.Action.ActionButton
 import mozilla.components.compose.browser.toolbar.concept.Action.ActionButtonRes
-import mozilla.components.compose.browser.toolbar.concept.Action.AnimatedPillActionRes
 import mozilla.components.compose.browser.toolbar.concept.PageOrigin
 import mozilla.components.compose.browser.toolbar.concept.PageOrigin.Companion.ContextualMenuOption
 import mozilla.components.compose.browser.toolbar.concept.PageOrigin.Companion.PageOriginContextualMenuInteractions.CopyToClipboardClicked
@@ -77,7 +76,6 @@ import org.robolectric.RobolectricTestRunner
 import org.robolectric.annotation.Config
 import org.robolectric.annotation.Implementation
 import org.robolectric.annotation.Implements
-import kotlin.test.assertIs
 import kotlin.test.assertNotNull
 import mozilla.components.browser.toolbar.R as toolbarR
 import mozilla.components.feature.customtabs.R as customtabsR

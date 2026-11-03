@@ -2258,16 +2258,6 @@
   <string name="saved_logins_sort_strategy_last_used">Āmān garâj sun rūkù nï\'t</string>
   <!-- Text that links to additional information about the Email Masks -->
   <string name="preferences_email_masks_suggest_learn_more">Gāhuin chrūn doj</string>
-  <!-- Link text that opens additional information about the browser VPN -->
-  <string name="ip_protection_learn_more">Gāhuin chrūn doj</string>
-  <!-- Badge label shown in the menu item when the browser VPN is active -->
-  <string name="preferences_ip_protection_on">Nāchrūn</string>
-  <!-- Badge label shown in the menu item when the browser VPN is off -->
-  <string name="preferences_ip_protection_off">Dūnâ\'àj</string>
-  <!-- Badge label shown in the menu item when the browser VPN is paused -->
-  <string name="ip_protection_menu_paused">Dūnikïn\' akuan\'</string>
-  <!-- Used as text for a link in ip_protection_onboarding_body. Make sure to adapt capitalization if the link is in the middle of the sentence. -->
-  <string name="ip_protection_onboarding_body_link_promo">Gāhuin chrūn doj</string>
   <!--
     Autofill
 

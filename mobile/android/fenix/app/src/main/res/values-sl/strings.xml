@@ -3052,62 +3052,6 @@
   <!-- The message displayed when there was an error with the email mask or Firefox Account services. -->
   <string name="email_masks_error_retrieving_masks">E-poštne maske ta trenutek niso na voljo. Poskusite znova čez nekaj minut.</string>
   <!--
-    Firefox browser VPN (a browser-only proxy, distinct from the Mozilla VPN service)
-
-    Title for the browser VPN entry in the settings list
-  -->
-  <string name="preferences_ip_protection_title_2">Vgrajeni VPN</string>
-  <!-- Label for the BETA badge for the browser VPN entry in the settings list -->
-  <string name="preferences_ip_protection_beta_badge_label">BETA</string>
-  <!-- Title for the browser VPN settings screen (displayed in the app bar) -->
-  <string name="ip_protection_title">VPN</string>
-  <!-- Label for the browser VPN toggle on the settings screen -->
-  <string name="ip_protection_toggle_label">VPN</string>
-  <!-- Content description for the browser VPN settings screen top bar back button -->
-  <string name="ip_protection_navigate_back_button_content_description">Pojdi nazaj</string>
-  <!-- Headline for the browser VPN promo card. %s is the name of the app (for example "Firefox"). -->
-  <string name="ip_protection_promo_headline">%sov vgrajeni VPN</string>
-  <!-- Link text that opens additional information about the browser VPN -->
-  <string name="ip_protection_learn_more">Več o tem</string>
-  <!-- Header for the browser VPN `location` section -->
-  <string name="ip_protection_location_section">Lokacija</string>
-  <!-- Label for the recommended automatic location option on the browser VPN settings screen -->
-  <string name="ip_protection_location_recommended_label">Priporočena</string>
-  <!-- Badge label shown in the menu item when the browser VPN is active -->
-  <string name="preferences_ip_protection_on">Vklopljen</string>
-  <!-- Badge label shown in the menu item when the browser VPN is off -->
-  <string name="preferences_ip_protection_off">Izklopljen</string>
-  <!-- Badge label shown in the menu item while the browser VPN is connecting -->
-  <string name="ip_protection_menu_connecting">Povezovanje …</string>
-  <!-- Badge label shown in the menu item when the browser VPN is paused -->
-  <string name="ip_protection_menu_paused">Začasno ustavljeno</string>
-  <!-- Badge label shown in the menu item when the browser VPN has an error -->
-  <string name="ip_protection_menu_error">Napaka</string>
-  <!-- Badge label shown in the menu item when the user is eligible to use the browser VPN but should authenticate or authorize it first. -->
-  <string name="ip_protection_menu_auth_required">Preizkusite ga</string>
-  <!-- Content description for the chevron button that opens the browser VPN settings screen -->
-  <string name="ip_protection_navigate_settings">Odpri nastavitve VPN</string>
-  <!-- Label shown next to the browser protection icon in the address bar when the browser VPN is active -->
-  <string name="ip_protection_toolbar_pill_label">VPN je vklopljen</string>
-  <!-- Accessibility description for the browser VPN pill in the address bar when the VPN has been activated -->
-  <string name="ip_protection_toolbar_pill_description">VPN deluje.</string>
-  <!-- Label for the button that starts the browser VPN authentication or authorization flow on the settings screen -->
-  <string name="ip_protection_get_started">Začnite</string>
-  <!-- Label for the "connecting" state of the button that starts the browser VPN authentication or authorization flow on the settings screen -->
-  <string name="ip_protection_connecting">Povezovanje …</string>
-  <!-- Headline for the browser VPN onboarding card. %s is the name of the app (for example "Firefox"). -->
-  <string name="ip_protection_onboarding_card_headline">Preizkusite %sov vgrajeni VPN</string>
-  <!-- Used as text for a link in ip_protection_onboarding_body. Make sure to adapt capitalization if the link is in the middle of the sentence. -->
-  <string name="ip_protection_onboarding_body_link">Brskajte z dodatno zaščito</string>
-  <!-- Used as text for a link in ip_protection_onboarding_body. Make sure to adapt capitalization if the link is in the middle of the sentence. -->
-  <string name="ip_protection_onboarding_body_link_promo">Več o tem</string>
-  <!-- Label for the dismiss button on the onboarding bottom sheet. -->
-  <string name="ip_protection_onboarding_not_now_button">Ne zdaj</string>
-  <!-- Snackbar (in-app pop-up notification) text to signal the browser VPN connection error -->
-  <string name="ip_protection_connection_error_snackbar">Povezava z VPN ni uspela. Poskusite znova čez nekaj minut.</string>
-  <!-- Snackbar (in-app pop-up notification) action button text that takes the user to the VPN settings screen. -->
-  <string name="ip_protection_data_limit_reached_snackbar_action">Nastavitve</string>
-  <!--
     Autofill
 
     Preference and title for managing the autofill settings

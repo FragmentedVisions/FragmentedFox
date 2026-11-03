@@ -1,0 +1,58 @@
+name: Build FragmentedFox (Android)
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 355
+    steps:
+      - name: Free disk space
+        run: |
+          sudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/ghc /opt/hostedtoolcache/CodeQL /usr/local/share/boost
+          sudo docker image prune --all --force || true
+          df -h /
+
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Cache toolchains
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.mozbuild
+            ~/.gradle/caches
+          key: android-${{ runner.os }}-${{ hashFiles('python/mozboot/mozboot/*.py', 'build/mach_bootstrap.py', 'gradle/libs.versions.toml') }}
+
+      - name: Write mozconfig
+        run: |
+          cat > mozconfig <<'EOF'
+          ac_add_options --enable-project=mobile/android
+          ac_add_options --target=aarch64
+          ac_add_options --enable-optimize
+          ac_add_options --disable-debug
+          ac_add_options --disable-tests
+          mk_add_options MOZ_OBJDIR=@TOPSRCDIR@/obj-android
+          EOF
+          cat mozconfig
+
+      - name: Bootstrap
+        run: ./mach --no-interactive bootstrap --application-choice=mobile_android
+
+      - name: Build GeckoView
+        run: ./mach build
+
+      - name: Build the app
+        run: ./mach gradle fenix:assembleRelease -PdisableOptimization
+
+      - name: List APKs
+        run: find mobile/android/fenix/app/build obj-android -name '*.apk' -exec ls -l {} \;
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: fragmentedfox-android
+          path: mobile/android/fenix/app/build/outputs/apk/**/*.apk
+          if-no-files-found: error

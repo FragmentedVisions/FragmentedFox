@@ -50,15 +50,17 @@ jobs:
           cat > mozconfig <<'EOF'
           ac_add_options --enable-project=mobile/android
           ac_add_options --target=aarch64
-          ac_add_options --enable-optimize
-          ac_add_options --disable-debug
-          ac_add_options --disable-tests
           mk_add_options MOZ_OBJDIR=@TOPSRCDIR@/obj-android
           EOF
           if [ "$MODE" = "artifact" ]; then
             echo "ac_add_options --enable-artifact-builds" >> mozconfig
           else
-            echo "mk_add_options MOZ_PARALLEL_BUILD=2" >> mozconfig
+            {
+              echo "ac_add_options --enable-optimize"
+              echo "ac_add_options --disable-debug"
+              echo "ac_add_options --disable-tests"
+              echo "mk_add_options MOZ_PARALLEL_BUILD=2"
+            } >> mozconfig
           fi
           cat mozconfig
 

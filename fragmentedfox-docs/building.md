@@ -16,7 +16,7 @@ The `shrink` choice (default `on`) shrinks code and resources for a smaller app.
 
 Known problems:
 
-- No full compile has finished yet. Earlier runs lost their runner without a log: with 4 jobs and debug symbols about 13 minutes in (twice), and with 2 jobs about 26 minutes in. Memory pressure during the heavy Rust compile is the likely cause but is not confirmed. Debug symbols were turned off and WebRTC was left out of the compile to reduce it, and neither change has been tested. A build without WebRTC is a supported configuration (GeckoView's build file already handles it), but Mozilla ships Android with WebRTC, so an unexpected failure is possible.
+- With WebRTC and debug symbols left out, the engine compile finished in about 87 minutes. The earlier runs, which had both, lost their runner without a log: with 4 jobs and debug symbols about 13 minutes in (twice), and with 2 jobs about 26 minutes in. Memory pressure during the heavy Rust compile is the likely cause but is not confirmed. Debug symbols were turned off and WebRTC was left out of the compile to reduce it, and neither change has been tested. A build without WebRTC is a supported configuration (GeckoView's build file already handles it), but Mozilla ships Android with WebRTC, so an unexpected failure is possible.
 - A full compile on 4 cores may approach GitHub's 6 hour job limit.
 - Mozilla's prebuilt engine (artifact builds) cannot be used: the lookup checked 150 upstream revisions and found no built Android artifacts for this base.
 

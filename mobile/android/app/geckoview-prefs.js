@@ -392,3 +392,4 @@ pref("toolkit.ipProtection.android.authProvider", "fxa");
 pref("media.navigator.video.enabled", false);
 pref("media.peerconnection.ice.default_address_only", true);
 pref("media.peerconnection.ice.no_host", true);
+pref("media.peerconnection.enabled", false);

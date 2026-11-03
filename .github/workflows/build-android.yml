@@ -14,6 +14,15 @@ jobs:
           sudo docker image prune --all --force || true
           df -h /
 
+      - name: Add swap
+        run: |
+          sudo swapoff -a || true
+          sudo fallocate -l 8G /mnt/swapfile
+          sudo chmod 600 /mnt/swapfile
+          sudo mkswap /mnt/swapfile
+          sudo swapon /mnt/swapfile
+          free -h
+
       - uses: actions/checkout@v4
         with:
           fetch-depth: 1
@@ -72,3 +81,10 @@ jobs:
           name: fragmentedfox-android
           path: mobile/android/fenix/app/build/outputs/apk/**/*.apk
           if-no-files-found: error
+
+      - name: Diagnostics
+        if: failure()
+        run: |
+          df -h
+          free -h
+          sudo dmesg | tail -30 || true

@@ -196,6 +196,8 @@ android {
         // manifest.template.json is converted to manifest.json at build time.
         // No need to package the template in the APK.
         ignoreAssetsPattern = "manifest.template.json"
+
+        localeFilters.addAll(getFragmentedFoxLocales())
     }
 
     testOptions {
@@ -772,6 +774,11 @@ ${f.text}"""
     }
 }
 
+// Languages shipped in the app, as a comma separated list. Override with -Pfragmentedfox.locales=en,de
+def getFragmentedFoxLocales() {
+    return (project.findProperty("fragmentedfox.locales") ?: "en").tokenize(",").collect { it.trim() }
+}
+
 def getSupportedLocales() {
     // This isn't running as a task, instead the array is build when the gradle file is parsed.
     // https://github.com/mozilla-mobile/fenix/issues/14175
@@ -782,6 +789,9 @@ def getSupportedLocales() {
         if (details.file.path.endsWith("${File.separator}strings.xml")) {
             def languageCode = details.file.parent.tokenize(File.separator).last().replaceAll('values-', '').replaceAll('-r', '-')
             languageCode = (languageCode == "values") ? "en-US" : languageCode
+            if (!getFragmentedFoxLocales().contains(languageCode.tokenize('-')[0])) {
+                return
+            }
             foundLocales.append("\"").append(languageCode).append("\"").append(",")
         }
     }

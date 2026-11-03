@@ -10,6 +10,13 @@ on:
           - artifact
           - full
         default: artifact
+      shrink:
+        description: "on shrinks code and resources (smaller app), off skips it (faster, use if shrinking fails)"
+        type: choice
+        options:
+          - "on"
+          - "off"
+        default: "on"
 
 jobs:
   build:
@@ -92,7 +99,12 @@ jobs:
         run: ./mach build
 
       - name: Build the app
-        run: ./mach gradle fenix:assembleRelease -PdisableOptimization
+        env:
+          SHRINK: ${{ inputs.shrink }}
+        run: |
+          FLAGS=""
+          if [ "$SHRINK" = "off" ]; then FLAGS="-PdisableOptimization"; fi
+          ./mach gradle fenix:assembleRelease $FLAGS
 
       - name: List APKs
         run: find mobile/android/fenix/app/build obj-android -name '*.apk' -exec ls -l {} \;

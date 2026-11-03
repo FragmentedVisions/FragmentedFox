@@ -622,6 +622,11 @@ class Settings(
         default = false,
     )
 
+    var hasSeenDefaultExtensionsPrompt by booleanPreference(
+        appContext.getPreferenceKey(R.string.pref_key_default_extensions_prompt_seen),
+        default = false,
+    )
+
     var isMarketingTelemetryEnabled by booleanPreference(
         appContext.getPreferenceKey(R.string.pref_key_marketing_telemetry),
         default = false,

@@ -538,6 +538,11 @@
     <string name="fragmentedfox_license_url" translatable="false">https://www.mozilla.org/MPL/2.0/</string>
     <string name="fragmentedfox_about_url" translatable="false">https://github.com/FragmentedVisions/FragmentedFox#readme</string>
 
+    <string name="default_extensions_title">Block ads and trackers?</string>
+    <string name="default_extensions_message">FragmentedFox recommends uBlock Origin and Privacy Badger. They block ads and trackers on the sites you visit. To do that, each can read and change the data on every website you open. They are installed from Mozilla’s add-ons site, update automatically, and can be removed at any time in Add-ons.</string>
+    <string name="default_extensions_install">Install both</string>
+    <string name="default_extensions_not_now">Not now</string>
+
     <!-- "Set to default" onboarding title. -->
     <string name="nova_onboarding_set_to_default_title" tools:ignore="UnusedResources">Say goodbye to creepy trackers</string>
     <!-- "Set to default" onboarding title. -->

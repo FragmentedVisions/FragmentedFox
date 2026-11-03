@@ -23,6 +23,8 @@ Not changed: Safe Browsing local list updates, search suggestions, and the add-o
 - `Settings.kt`: the telemetry and Contile settings default to off.
 - `Settings.kt`: HTTPS-Only mode defaults to on for all tabs, and encrypted DNS defaults to Increased protection (fallback to normal DNS) with Quad9 as the provider. The settings screen shows Quad9 as a custom provider.
 - `ContentRecommendationsFeatureHelper.kt`: no supported locales, so Pocket recommendations and sponsored stories are disabled.
+- `DefaultExtensionsPrompt.kt`, `HomeFragment.kt`: the first time the home screen is shown, a dialog offers to install uBlock Origin and Privacy Badger from Mozilla's add-ons site (`addons.mozilla.org/firefox/downloads/latest/ublock-origin` and `privacy-badger17`). Nothing is installed unless the user taps Install both, and both are allowed in private tabs. The dialog shows once (`hasSeenDefaultExtensionsPrompt` in `Settings.kt`). Not tested on a device. If either extension is not available for Android, its install fails and is logged.
+- `build.gradle`: only the languages in `fragmentedfox.locales` (default `en`) are packaged and offered in the language list. Override with `-Pfragmentedfox.locales=en,de`.
 - `nimbus.fml.yaml`: the marketing onboarding card (sharing install data with Mozilla's marketing partners) defaults to off.
 - `onboarding.fml.yaml` and `strings.xml`: the first-run Terms of Use card shows the Mozilla Public License and README links and a FragmentedFox privacy line instead of Mozilla's Terms of Use and data-sharing text.
 - `strings.xml` (default language only): strings that refer to this browser say FragmentedFox, and the About text says it is a fork built from Mozilla's source. Strings about Mozilla services (Sync, studies, crash reports, Terms of Use) and all other languages are unchanged.
@@ -40,6 +42,9 @@ Not changed: Safe Browsing local list updates, search suggestions, and the add-o
 - Names of real Mozilla services such as Relay, Monitor, Send and Profiler are left as they are.
 
 ## Known gaps
+
+- The Android home screen has a sports widget that fetches tournament data from Mozilla's servers. It has not been reviewed or disabled.
+- uBlock Origin and Privacy Badger overlap in what they block. Running both costs some memory and gives little extra protection, so one may be dropped later.
 
 - The first-run Terms page keeps its structure and buttons (accepting still records acceptance and starts the telemetry client, which stays disabled by the build flags), but its text now describes the licence and links to the README. The privacy line says the app is set up not to send diagnostic data to Mozilla. That statement has not been verified on a running build yet.
 - Translations in other languages still say Firefox, and some Android strings, images and links still mention Firefox or Mozilla.

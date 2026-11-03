@@ -15,7 +15,7 @@ The workflow has a `mode` choice when started:
 - `artifact` (default) downloads Mozilla's prebuilt GeckoView engine and only builds the app on top. This is fast and avoids compiling the engine. It only works if Mozilla published engine artifacts for the base revision, and it is only valid while FragmentedFox changes no compiled engine code.
 - `full` compiles GeckoView from source with 2 parallel jobs. Two full runs on GitHub's free runners were killed about 13 minutes in, during the heavy Rust compile, with "The runner has received a shutdown signal". Memory pressure is the likely cause but is not confirmed.
 
-Either way the job then builds the app with `./mach gradle fenix:assembleRelease -PdisableOptimization`. It adds 8 GB of swap and prints disk and memory details if a step fails.
+Either way the job then builds the app with `./mach gradle fenix:assembleRelease`. The `shrink` choice (default `on`) shrinks code and resources for a smaller app. Choose `off` to add `-PdisableOptimization` if shrinking fails. The job adds 8 GB of swap and prints disk and memory details if a step fails.
 
 To install the APK on a phone, download the artifact, unzip it, and open the APK. Android asks to allow installs from your browser or file manager the first time.
 

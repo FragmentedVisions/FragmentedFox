@@ -78,6 +78,7 @@ import org.mozilla.fenix.GleanMetrics.Vpn
 import org.mozilla.fenix.HomeActivity
 import org.mozilla.fenix.NavGraphDirections
 import org.mozilla.fenix.R
+import org.mozilla.fenix.addons.DefaultExtensionsPrompt
 import org.mozilla.fenix.biometricauthentication.AuthenticationStatus
 import org.mozilla.fenix.biometricauthentication.BiometricAuthenticationManager
 import org.mozilla.fenix.browser.BrowserFragmentDirections
@@ -932,6 +933,8 @@ class HomeFragment : Fragment() {
         // triggered to cause an automatic update on warm start (no tab selection occurs). So we
         // update it manually here.
         components.useCases.sessionUseCases.updateLastAccess()
+
+        DefaultExtensionsPrompt(requireContext(), components.settings, components.addonManager).showIfNeeded()
 
         evaluateMessagesForMicrosurvey(components)
 

@@ -194,7 +194,7 @@ const PREF_NEWTAB_REMOTE_RENDERER_ENABLED =
   "browser.newtabpage.activity-stream.remote-renderer.enabled";
 
 export const PREF_DEFAULT_VALUE_TOPSITES_ENABLED = true;
-export const PREF_DEFAULT_VALUE_TOPSTORIES_ENABLED = true;
+export const PREF_DEFAULT_VALUE_TOPSTORIES_ENABLED = false;
 
 export const WEATHER_OPTIN_REGIONS = [
   "AT", // Austria
@@ -360,13 +360,6 @@ function storiesRegionLocaleMatches(geo, locale) {
 }
 
 // Determine if spocs should be shown for a geo/locale
-function showSpocs({ geo }) {
-  const spocsGeoString =
-    lazy.NimbusFeatures.pocketNewtab.getVariable("regionSpocsConfig") || "";
-  const spocsGeo = spocsGeoString.split(",").map(s => s.trim());
-  return spocsGeo.includes(geo);
-}
-
 function showWeather({ geo, locale }) {
   return (
     csvPrefHasValue(REGION_WEATHER_CONFIG, geo) &&
@@ -698,22 +691,21 @@ export const PREFS_CONFIG = new Map([
     "showSponsored",
     {
       title: "User pref for sponsored Pocket content",
-      value: true,
+      value: false,
     },
   ],
   [
     "system.showSponsored",
     {
       title: "System pref for sponsored Pocket content",
-      // This pref is dynamic as the sponsored content depends on the region
-      getValue: showSpocs,
+      value: false,
     },
   ],
   [
     "showSponsoredTopSites",
     {
       title: "Show sponsored top sites",
-      value: true,
+      value: false,
     },
   ],
   [
@@ -835,15 +827,14 @@ export const PREFS_CONFIG = new Map([
     "system.showWeather",
     {
       title: "system.showWeather",
-      // pref is dynamic
-      getValue: showWeather,
+      value: false,
     },
   ],
   [
     "showWeather",
     {
       title: "showWeather",
-      value: true,
+      value: false,
     },
   ],
   [
@@ -1010,7 +1001,7 @@ export const PREFS_CONFIG = new Map([
     "telemetry",
     {
       title: "Enable system error and usage data collection",
-      value: true,
+      value: false,
       value_local_dev: false,
     },
   ],

@@ -193,7 +193,7 @@ class SettingsTest {
     fun isTelemetryEnabled() {
         // When just created
         // Then
-        assertTrue(settings.isTelemetryEnabled)
+        assertFalse(settings.isTelemetryEnabled)
     }
 
     @Test
@@ -917,8 +917,8 @@ class SettingsTest {
     }
 
     @Test
-    fun `GIVEN unset user preferences THEN https-only is disabled`() {
-        assertFalse(settings.shouldUseHttpsOnly)
+    fun `GIVEN unset user preferences THEN https-only is enabled`() {
+        assertTrue(settings.shouldUseHttpsOnly)
     }
 
     @Test

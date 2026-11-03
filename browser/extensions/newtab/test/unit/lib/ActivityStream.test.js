@@ -293,77 +293,12 @@ describe("ActivityStream", () => {
       assert.isFalse(featureCheck);
     });
   });
-  describe("showWeather", () => {
-    let stub;
-    let getStringPrefStub;
-    const FEATURE_ENABLED_PREF = "system.showWeather";
-    const REGION_WEATHER_CONFIG =
-      "browser.newtabpage.activity-stream.discoverystream.region-weather-config";
-    const LOCALE_WEATHER_CONFIG =
-      "browser.newtabpage.activity-stream.discoverystream.locale-weather-config";
-    beforeEach(() => {
-      stub = sandbox.stub(global.Region, "home");
-
-      sandbox
-        .stub(global.Services.locale, "appLocaleAsBCP47")
-        .get(() => "en-US");
-
-      getStringPrefStub = sandbox.stub(global.Services.prefs, "getStringPref");
-
-      // Set default regions
-      getStringPrefStub.withArgs(REGION_WEATHER_CONFIG).returns("US, CA");
-
-      // Set default locales
-      getStringPrefStub
-        .withArgs(LOCALE_WEATHER_CONFIG)
-        .returns("en-US,en-GB,en-CA");
+  describe("weather prefs", () => {
+    it("should keep system.showWeather off", () => {
+      assert.isFalse(PREFS_CONFIG.get("system.showWeather").value);
     });
-    it("should turn off when region and locale are not set", () => {
-      stub.get(() => "");
-      sandbox.stub(global.Services.locale, "appLocaleAsBCP47").get(() => "");
-      as._updateDynamicPrefs();
-      assert.isFalse(PREFS_CONFIG.get(FEATURE_ENABLED_PREF).value);
-    });
-    it("should turn off when region is not set", () => {
-      stub.get(() => "");
-      as._updateDynamicPrefs();
-      assert.isFalse(PREFS_CONFIG.get(FEATURE_ENABLED_PREF).value);
-    });
-    it("should turn on when region is supported", () => {
-      stub.get(() => "US");
-      as._updateDynamicPrefs();
-      assert.isTrue(PREFS_CONFIG.get(FEATURE_ENABLED_PREF).value);
-    });
-    it("should turn off when region is not supported", () => {
-      stub.get(() => "JP");
-      as._updateDynamicPrefs();
-      assert.isFalse(PREFS_CONFIG.get(FEATURE_ENABLED_PREF).value);
-    });
-    it("should turn off when locale is not set", () => {
-      stub.get(() => "US");
-      sandbox.stub(global.Services.locale, "appLocaleAsBCP47").get(() => "");
-      as._updateDynamicPrefs();
-      assert.isFalse(PREFS_CONFIG.get(FEATURE_ENABLED_PREF).value);
-    });
-    it("should turn on when locale is supported", () => {
-      stub.get(() => "US");
-      sandbox
-        .stub(global.Services.locale, "appLocaleAsBCP47")
-        .get(() => "en-US");
-      as._updateDynamicPrefs();
-      assert.isTrue(PREFS_CONFIG.get(FEATURE_ENABLED_PREF).value);
-    });
-    it("should turn off when locale is not supported", () => {
-      stub.get(() => "US");
-      sandbox.stub(global.Services.locale, "appLocaleAsBCP47").get(() => "fr");
-      as._updateDynamicPrefs();
-      assert.isFalse(PREFS_CONFIG.get(FEATURE_ENABLED_PREF).value);
-    });
-    it("should turn off when region and locale are both not supported", () => {
-      stub.get(() => "FR");
-      sandbox.stub(global.Services.locale, "appLocaleAsBCP47").get(() => "fr");
-      as._updateDynamicPrefs();
-      assert.isFalse(PREFS_CONFIG.get(FEATURE_ENABLED_PREF).value);
+    it("should keep widgets.system.weather.enabled off", () => {
+      assert.isFalse(PREFS_CONFIG.get("widgets.system.weather.enabled").value);
     });
   });
   describe("getWeatherWidgetSize", () => {

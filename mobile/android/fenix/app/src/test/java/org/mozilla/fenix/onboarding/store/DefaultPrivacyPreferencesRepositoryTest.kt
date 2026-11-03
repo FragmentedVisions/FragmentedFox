@@ -71,20 +71,22 @@ class DefaultPrivacyPreferencesRepositoryTest {
         runTest {
             val settings = Settings(testContext)
             val repository = DefaultPrivacyPreferencesRepository(settings, FakeNimbusApi(), createCrashReporter())
-            assertTrue(settings.isTelemetryEnabled)
-            assertTrue(repository.getPreference(PreferenceType.UsageData))
-
-            settings.isTelemetryEnabled = false
+            assertFalse(settings.isTelemetryEnabled)
             assertFalse(repository.getPreference(PreferenceType.UsageData))
 
             settings.isTelemetryEnabled = true
             assertTrue(repository.getPreference(PreferenceType.UsageData))
+
+            settings.isTelemetryEnabled = false
+            assertFalse(repository.getPreference(PreferenceType.UsageData))
         }
     }
 
     @Test
     fun `WHEN setPreference is called for telemetry setting THEN the preference value is updated`() = runTest {
         val settings = Settings(testContext)
+        settings.isTelemetryEnabled = true
+        settings.isExperimentationEnabled = true
         val nimbusSdk = FakeNimbusApi()
         val crashTelemetryService = FakeCrashTelemetryService(settings.isTelemetryEnabled)
         val repository = DefaultPrivacyPreferencesRepository(

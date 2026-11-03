@@ -81,11 +81,6 @@ const REGION_SOV_CONFIG =
 const LOCALE_SOV_CONFIG =
   "browser.newtabpage.activity-stream.sov.locale-config";
 
-const REGION_WEATHER_CONFIG =
-  "browser.newtabpage.activity-stream.discoverystream.region-weather-config";
-const LOCALE_WEATHER_CONFIG =
-  "browser.newtabpage.activity-stream.discoverystream.locale-weather-config";
-
 const REGION_TOPICS_CONFIG =
   "browser.newtabpage.activity-stream.discoverystream.topicSelection.region-topics-config";
 const LOCALE_TOPICS_CONFIG =
@@ -206,21 +201,12 @@ function useContextualAds({ geo, locale }) {
   );
 }
 
-// Determine if spocs should be shown for a geo/locale
-function showWeather({ geo, locale }) {
-  return (
-    csvPrefHasValue(REGION_WEATHER_CONFIG, geo) &&
-    csvPrefHasValue(LOCALE_WEATHER_CONFIG, locale)
-  );
-}
-
 /**
  * Returns the default size for widgets that support large/medium sizes.
  * This sets a default pref, not a user pref — if the user has explicitly
  * resized a widget via the UI, their choice takes precedence.
  *
- * In the future this will follow the same regional logic as showWeather,
- * returning different defaults based on the user's region.
+ * In the future this may return different defaults based on the user's region.
  */
 function getDefaultWidgetSize() {
   return Services.prefs.getStringPref(
@@ -1312,7 +1298,7 @@ export const PREFS_CONFIG = new Map([
     "widgets.system.weather.enabled",
     {
       title: "Enables the weather widget experiment in Nimbus",
-      getValue: showWeather,
+      value: false,
     },
   ],
   [

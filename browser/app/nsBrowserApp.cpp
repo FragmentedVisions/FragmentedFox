@@ -144,7 +144,7 @@ static MOZ_FORMAT_PRINTF(1, 2) void Output(const char* fmt, ...) {
       decltype(MessageBoxW)* messageBoxW =
           (decltype(MessageBoxW)*)GetProcAddress(user32, "MessageBoxW");
       if (messageBoxW) {
-        messageBoxW(nullptr, wide_msg, L"Firefox",
+        messageBoxW(nullptr, wide_msg, L"FragmentedFox",
                     MB_OK | MB_ICONERROR | MB_SETFOREGROUND);
       } else {
         showMessageBox = false;

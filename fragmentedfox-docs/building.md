@@ -30,3 +30,7 @@ The job uses a `mozconfig` with the updater, tests and debug code off, then runs
 ## Limits
 
 GitHub's free runners have 4 cores, 16 GB of memory and a 6 hour job limit. A full Firefox build uses most of that, so a run can fail from time or memory limits rather than a code error. Read the failing step's log first.
+
+## Size analysis
+
+Every Android build also runs `.github/scripts/size-analysis.py` and uploads `size-analysis.txt` as the `size-analysis` artifact. It lists the APK by folder and file, the engine's built-in JavaScript (`omni.ja`) by folder, app code by package, and the largest compiled symbols in `libxul.so` and `libmegazord.so` grouped by namespace. Use it to pick what to trim. The step never fails the build.

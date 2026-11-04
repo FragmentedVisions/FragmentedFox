@@ -10,11 +10,11 @@ FragmentedFox is a private, independent fork of the Firefox browser from [Fragme
 
 ## Status
 
-Early and experimental. The changes are in place, but the browser has not been verified on a device yet, and the first CI builds are still being worked out.
+Early and experimental. The Android app builds on GitHub Actions and produces a signed APK, but it has not been tested on a device yet.
 
 | Platform | Status |
 | --- | --- |
-| Android (arm64) | Builds on GitHub Actions. First successful build pending. |
+| Android (arm64) | Builds on GitHub Actions into a signed APK (about 47 minutes with a warm compile cache). Not tested on a device yet. |
 | Linux desktop | Workflow written, not run yet. |
 | Windows, macOS, iOS | Not supported yet. |
 

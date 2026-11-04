@@ -23,7 +23,7 @@ Build notes:
 
 To install the APK on a phone, download the artifact. It always arrives as a zip, even if the file is renamed `.apk`, and Android then says "Can't install app". Rename it to `.zip`, decompress it, and open the APK inside. Android asks to allow installs from your browser or file manager the first time. Builds signed with the release key update over an installed copy.
 
-The workflow runs on the branch you pick. Start it from `remove-sdks` to build the latest changes, or `remove-vpn` for the last tested ones.
+The workflow runs on the branch you pick. Build from `NonStable--test` to test new changes. Build from `Stable-Main` only to rebuild the last known good version.
 
 ## Linux desktop
 
@@ -35,4 +35,4 @@ GitHub's free runners have 4 cores, 16 GB of memory and a 6 hour job limit. A fu
 
 ## Size analysis
 
-Every Android build also runs `.github/scripts/size-analysis.py` (added on `remove-vpn`, so it runs from there and from `remove-sdks`) and uploads `size-analysis.txt` as the `size-analysis` artifact. It lists the APK by folder and file, the engine's built-in JavaScript (`omni.ja`) by folder, app code by package, and the largest compiled symbols in `libxul.so` and `libmegazord.so` grouped by namespace. Use it to pick what to trim. The step never fails the build.
+Every Android build also runs `.github/scripts/size-analysis.py` (it runs from both branches) and uploads `size-analysis.txt` as the `size-analysis` artifact. It lists the APK by folder and file, the engine's built-in JavaScript (`omni.ja`) by folder, app code by package, and the largest compiled symbols in `libxul.so` and `libmegazord.so` grouped by namespace. Use it to pick what to trim. The step never fails the build.

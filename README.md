@@ -34,15 +34,16 @@ FragmentedFox follows Mozilla's [Extended Support Release](https://support.mozil
 
 ### Removed from the Android app
 
-Mozilla's VPN, the Adjust, Firebase, Google Play Integrity and Sentry SDKs, the page summarizer and the Play Store review prompt are removed, not just switched off. The VPN removal is built and running. The rest are on the `remove-sdks` branch and are not built or merged yet. Details are in [changes](./fragmentedfox-docs/changes.md), which also lists known gaps such as the missing network audit.
+Mozilla's VPN, the Adjust, Firebase, Google Play Integrity and Sentry SDKs, the page summarizer and the Play Store review prompt are removed, not just switched off. The VPN removal is built and running. The rest are on the `NonStable--test` branch and are not built or merged into `Stable-Main` yet. Details are in [changes](./fragmentedfox-docs/changes.md), which also lists known gaps such as the missing network audit.
 
 ## Branches
 
+There are only two branches. All changes are made on `NonStable--test`, and builds are run from it. `Stable-Main` only moves forward after a `NonStable--test` build succeeds and the app has been checked on a phone.
+
 | Branch | Purpose |
 | --- | --- |
-| `esr153-fragmentedfox` | Default branch. |
-| `remove-vpn` | The VPN removal, the WebRTC, HTTPS-Only and encrypted DNS defaults, and the build fixes. The last build from it was installed on a phone. Its newest commits (the FragmentedFox name fix and the size analysis) are not built yet. |
-| `remove-sdks` | Builds on `remove-vpn` and removes the SDKs, summarizer and review prompt. Not built yet. |
+| `Stable-Main` | The default branch. The last state that was built and installed on a phone. Currently at the commit after the first successful build. Its newest two commits (the FragmentedFox name fix and the size analysis) are not built yet. |
+| `NonStable--test` | Where all work happens. It includes everything in `Stable-Main`, plus the SDK, summarizer and review prompt removals and the docs update, none of which are built yet. |
 
 ## Building
 

@@ -1,5 +1,5 @@
 # FragmentedFox fork notes
-- This repository is FragmentedFox, a fork of Firefox based on a Mozilla ESR release tag. The default branch is `esr153-fragmentedfox`. See `README.md` and `fragmentedfox-docs/` for what differs from Mozilla's code and how to upgrade.
+- This repository is FragmentedFox, a fork of Firefox based on a Mozilla ESR release tag. There are two branches: `Stable-Main` (the default, only updated after a successful build checked on a phone) and `NonStable--test` (all changes are made and built here). See `README.md` and `fragmentedfox-docs/` for what differs from Mozilla's code and how to upgrade.
 - Keep FragmentedFox changes small and easy to re-apply on a new ESR release. Prefer changing a default value over restructuring Mozilla code.
 - Builds run on GitHub Actions, not locally. Do not start long local builds in cloud sessions.
 - Never commit keystores, tokens or other secrets.

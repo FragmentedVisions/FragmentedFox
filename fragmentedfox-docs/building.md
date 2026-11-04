@@ -14,14 +14,16 @@ The job bootstraps the Android toolchain, compiles GeckoView from source on all 
 
 The `shrink` choice (default `on`) shrinks code and resources for a smaller app. Choose `off` to add `-PdisableOptimization` if shrinking fails. The job adds 8 GB of swap, uploads the build logs and a size breakdown of the APK, and prints disk and memory details if a step fails.
 
-Known problems:
+Build notes:
 
 - Full builds pass. With a cold compile cache the engine compile took about 97 minutes. With the cache from the previous run it took about 20 minutes, with about half of all cached C and C++ compiles reused, and the whole job took 47 minutes. The app build took about 40 minutes, 25 of which were Android lint, which the workflow now skips (`-x :fenix:lintVitalRelease`), bringing it to about 19 minutes. The APK is signed with the release key: the `apksigner` check prints the certificate SHA-256 shown in [signing](./signing.md). Gradle output goes to `obj-android/gradle/build/mobile/android/fenix/app/outputs/apk/release/`, and only the `arm64-v8a` APK is a complete phone build, since only the arm64 engine is compiled.
-- With WebRTC and debug symbols left out, the engine compile finished in about 87 minutes. The earlier runs, which had both, lost their runner without a log: with 4 jobs and debug symbols about 13 minutes in (twice), and with 2 jobs about 26 minutes in. Memory pressure during the heavy Rust compile is the likely cause but is not confirmed. Debug symbols were turned off and WebRTC was left out of the compile to reduce it, and neither change has been tested. A build without WebRTC is a supported configuration (GeckoView's build file already handles it), but Mozilla ships Android with WebRTC, so an unexpected failure is possible.
-- A full compile on 4 cores may approach GitHub's 6 hour job limit.
+- The earliest runs lost their runner without a log (about 13 minutes in with 4 jobs and debug symbols, twice, and about 26 minutes in with 2 jobs). Memory pressure during the heavy Rust compile is the likely cause. Turning debug symbols off and leaving WebRTC out fixed it, and the engine compile then finished (about 87 minutes cold). A build without WebRTC is a supported configuration, but Mozilla ships Android with WebRTC, so a new failure after an upgrade is possible.
+- A cold full compile on 4 cores can approach GitHub's 6 hour job limit, so keep the compile cache.
 - Mozilla's prebuilt engine (artifact builds) cannot be used: the lookup checked 150 upstream revisions and found no built Android artifacts for this base.
 
-To install the APK on a phone, download the artifact, unzip it, and open the APK. Android asks to allow installs from your browser or file manager the first time.
+To install the APK on a phone, download the artifact. It always arrives as a zip, even if the file is renamed `.apk`, and Android then says "Can't install app". Rename it to `.zip`, decompress it, and open the APK inside. Android asks to allow installs from your browser or file manager the first time. Builds signed with the release key update over an installed copy.
+
+The workflow runs on the branch you pick. Start it from `remove-sdks` to build the latest changes, or `remove-vpn` for the last tested ones.
 
 ## Linux desktop
 
@@ -33,4 +35,4 @@ GitHub's free runners have 4 cores, 16 GB of memory and a 6 hour job limit. A fu
 
 ## Size analysis
 
-Every Android build also runs `.github/scripts/size-analysis.py` and uploads `size-analysis.txt` as the `size-analysis` artifact. It lists the APK by folder and file, the engine's built-in JavaScript (`omni.ja`) by folder, app code by package, and the largest compiled symbols in `libxul.so` and `libmegazord.so` grouped by namespace. Use it to pick what to trim. The step never fails the build.
+Every Android build also runs `.github/scripts/size-analysis.py` (added on `remove-vpn`, so it runs from there and from `remove-sdks`) and uploads `size-analysis.txt` as the `size-analysis` artifact. It lists the APK by folder and file, the engine's built-in JavaScript (`omni.ja`) by folder, app code by package, and the largest compiled symbols in `libxul.so` and `libmegazord.so` grouped by namespace. Use it to pick what to trim. The step never fails the build.

@@ -3,6 +3,7 @@
 - Keep FragmentedFox changes small and easy to re-apply on a new ESR release. Prefer changing a default value over restructuring Mozilla code.
 - Builds run on GitHub Actions, not locally. Do not start long local builds in cloud sessions.
 - Never commit keystores, tokens or other secrets.
+- The Android app has had its VPN, Adjust, Firebase, Play Integrity, Sentry, summarizer and Play Store review prompt removed. See `fragmentedfox-docs/changes.md` before adding anything back, and do not reintroduce those SDKs.
 - Do not use the Firefox name or logo for FragmentedFox's own branding. Names of real Mozilla services (Relay, Monitor, Send, Profiler) stay as they are.
 
 # Global instructions

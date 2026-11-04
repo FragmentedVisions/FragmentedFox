@@ -27,6 +27,7 @@ FragmentedFox is a small set of commits on top of a Mozilla ESR release tag. Upg
    git cherry-pick <first-fragmentedfox-commit>^..esr153-fragmentedfox
    ```
 
+   The feature removals (VPN, SDKs, summarizer, review prompt) are commits too, so merge `remove-vpn` and `remove-sdks` into the default branch before upgrading. Upstream changes to the files they delete will show up as modify/delete conflicts. Delete the file again and check nothing new references it.
 5. Fix any conflicts. Pref files change between releases, so when `firefox.js`, `all.js` or `brandings.ftl` conflict, take Mozilla's version and re-apply each value change by exact match. Check that every changed pref still exists.
 6. Run the Android and Linux builds from the new branch and check the result.
 7. Make the new branch the default branch, and keep the old one until the new build is verified.

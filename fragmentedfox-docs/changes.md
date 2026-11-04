@@ -30,16 +30,23 @@ Not changed: Safe Browsing local list updates, search suggestions, and the add-o
 - `onboarding.fml.yaml` and `strings.xml`: the first-run Terms of Use card shows the Mozilla Public License and README links and a FragmentedFox privacy line instead of Mozilla's Terms of Use and data-sharing text.
 - `static_strings.xml`: the fixed `firefox` and `app_name_firefox` text resources, which about 30 screens use as the browser's name (trackers panel, About, setup checklist, translation dialogs, link sharing, crash screen and others), now say FragmentedFox.
 - `strings.xml` (default language only): strings that refer to this browser say FragmentedFox, and the About text says it is a fork built from Mozilla's source. Strings about Mozilla services (Sync, studies, crash reports, Terms of Use) and all other languages are unchanged.
-- Page summarizer ("shake to summarize") removed from the Android app: the summarize screen and page content extraction, the Summarize menu item and toolbar highlight, the shake detector, the Page summaries settings screen and its AI controls entry, the `shake-to-summarize` Nimbus feature, the related metrics, and the `feature-summarize`, `lib-llm-mlpa` and `lib-shake` dependencies. It sent page text to a Mozilla-hosted service. No page text leaves the device for summarising any more.
-- Play Store review prompt removed from the Android app: the rating prompt and its custom bottom sheet, the "Rate on Google Play" settings item, the `custom-review-prompt` Nimbus features, the review prompt metrics and the Google Play review library. It only works for apps installed from Google Play.
-- Third-party SDKs removed from the Android app (branch `remove-sdks`): Adjust marketing attribution, the Google Play install referrer and advertising ID reader (and the Mozilla Return to AMO handler that used the referrer), Firebase push (and with it web push and push-based Send Tab alerts, which were already off without a Firebase config), Google Play Integrity, and Sentry crash reporting. Their Gradle dependencies, manifest entries, build tokens, debug screens and tests are gone. The settings, Glean metrics, the `adjust-attribution` ping and the onboarding code that only those SDKs fed were removed too. The library modules `lib-push-firebase`, `lib-integrity-googleplay` and `lib-crash-sentry` (still used by Focus) stay in the tree but are not compiled into the app, to keep the change small. The UTM install-referrer settings and Nimbus context fields are still present and now always empty.
+
+## Removed from the Android app
+
+Removing a feature means deleting its code, resources, metrics, tests and dependencies. These removals live on the `remove-vpn` branch (the VPN) and the `remove-sdks` branch (everything after it, which includes `remove-vpn`), and are not merged into `esr153-fragmentedfox` yet. The VPN removal has been built and installed. The others have not been built yet.
+
+- **Mozilla VPN (IP Protection):** the settings entry, menu item, toolbar pill, trust panel section, first-run prompt, snackbars, account sign-in hooks, navigation destinations, the `ip-protection` Nimbus feature, the Fenix dependency on `feature-ipprotection`, the strings in every language, the `vpn` Glean metrics and the matching tests. Left in place: the shared android-components and GeckoView VPN code, which nothing in the app uses, and entries for the deleted files in the lint and detekt baselines. `browser.ipProtection.enabled` is also false in `geckoview-prefs.js`.
+- **Third-party SDKs:** Adjust marketing attribution, the Google Play install referrer and advertising ID reader (and the Return to AMO handler that used the referrer), Firebase push (so web push and push-based Send Tab alerts are gone, and were already off without a Firebase config), Google Play Integrity, and Sentry crash reporting. Their dependencies, manifest entries, build tokens, debug screens, settings, Glean metrics, the `adjust-attribution` ping and tests are removed.
+- **Page summarizer ("shake to summarize"):** the summarize screen and page content extraction, the Summarize menu item and toolbar highlight, the shake detector, the Page summaries settings screen and its AI controls entry, the `shake-to-summarize` Nimbus feature, the metrics, the instrumented tests, and the `feature-summarize`, `lib-llm-mlpa` and `lib-shake` dependencies. It sent page text to a Mozilla-hosted service, so no page text leaves the device for summarising any more.
+- **Play Store review prompt:** the rating prompt and its bottom sheet, the "Rate on Google Play" settings item, the `custom-review-prompt` Nimbus features, the metrics and the Google Play review library. It only works for apps installed from Google Play.
+
+Kept on purpose, to keep each change small and easy to re-apply: the library modules `lib-push-firebase`, `lib-integrity-googleplay` and `lib-crash-sentry` (still used by Focus), which stay in the tree but are not compiled into the app; the UTM install-referrer settings and Nimbus context fields, which are always empty now; and Mozilla's Socorro crash reporter, which only sends a report if the user taps send on the crash screen.
 
 ## Checked and left as is
 
 - Android Firefox Suggest (`fx-suggest` in `mobile/android/fenix/app/nimbus.fml.yaml`) defaults to off for release builds and is only on for developer and nightly channels. No remote experiment endpoint is configured, so nothing can turn it on.
 - Android search suggestions and trending searches default to on (`Settings.kt`), so typed text is sent to the search engine as it is typed. Turning them off by default is an open decision.
 
-- Mozilla's IP Protection (VPN) feature is removed from the Android app on the `remove-vpn` branch: the settings entry, menu item, toolbar pill, trust panel section, first-run prompt, snackbars, account sign-in hooks, navigation destinations, the `ip-protection` Nimbus feature and the Fenix dependency on `feature-ipprotection`, with the matching tests. Its strings (in every language) and the `vpn` Glean metric definitions are removed too. Left in place: the shared android-components and GeckoView VPN code, which nothing in the app uses, and entries for the deleted files in the lint and detekt baselines. This was not compiled here, so it needs a successful build before it is merged. `browser.ipProtection.enabled` is also false in `geckoview-prefs.js`.
 
 ## Names and branding
 
@@ -52,9 +59,10 @@ Not changed: Safe Browsing local list updates, search suggestions, and the add-o
 
 - The Android home screen has a sports widget that fetches tournament data from Mozilla's servers. It has not been reviewed or disabled.
 - uBlock Origin and Privacy Badger overlap in what they block. Running both costs some memory and gives little extra protection, so one may be dropped later.
-
 - The first-run Terms page keeps its structure and buttons (accepting still records acceptance and starts the telemetry client, which stays disabled by the build flags), but its text now describes the licence and links to the README. The privacy line says the app is set up not to send diagnostic data to Mozilla. That statement has not been verified on a running build yet.
 - Translations in other languages still say Firefox, and some Android strings, images and links still mention Firefox or Mozilla.
 - No update server. The desktop build is configured with the updater off, so new versions are shipped as downloads.
 - The default search engines, Sync and add-on sources are Mozilla's.
 - `Assets.car` (a compiled macOS asset catalog) still has the old icon.
+- The Android app still uses Google's open-source license listing plugin (`oss-licenses`). It only builds the licenses screen and is next to be reviewed.
+- No network audit has been done yet, so "no data is sent" is based on reading the code and the build flags, not on watching traffic.

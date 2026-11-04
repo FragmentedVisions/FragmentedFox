@@ -28,6 +28,7 @@ Not changed: Safe Browsing local list updates, search suggestions, and the add-o
 - `build.gradle`: only the languages in `fragmentedfox.locales` (default `en`) are packaged and offered in the language list. Override with `-Pfragmentedfox.locales=en,de`.
 - `nimbus.fml.yaml`: the marketing onboarding card (sharing install data with Mozilla's marketing partners) defaults to off.
 - `onboarding.fml.yaml` and `strings.xml`: the first-run Terms of Use card shows the Mozilla Public License and README links and a FragmentedFox privacy line instead of Mozilla's Terms of Use and data-sharing text.
+- `static_strings.xml`: the fixed `firefox` and `app_name_firefox` text resources, which about 30 screens use as the browser's name (trackers panel, About, setup checklist, translation dialogs, link sharing, crash screen and others), now say FragmentedFox.
 - `strings.xml` (default language only): strings that refer to this browser say FragmentedFox, and the About text says it is a fork built from Mozilla's source. Strings about Mozilla services (Sync, studies, crash reports, Terms of Use) and all other languages are unchanged.
 
 ## Checked and left as is

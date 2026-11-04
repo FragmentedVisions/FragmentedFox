@@ -66,8 +66,6 @@ class HomeActivityTestRule(
         isTabSwipeCFREnabled: Boolean = false,
         isTermsOfServiceAccepted: Boolean = true,
         openLinksInExternalApp: OpenLinksInApp = getOpenLinksInApp(settings),
-        hasSeenShakeToSummarizeToolbarCfr: Boolean = true,
-        shakeToSummarizeFeatureFlagEnabled: Boolean = settings.shakeToSummarizeFeatureFlagEnabled,
         isPrivateModeAndStoriesEntryPointEnabled: Boolean = false,
         shouldUseExpandedToolbar: Boolean = false,
         nativeShareSheetEnabled: Boolean = false,
@@ -92,8 +90,6 @@ class HomeActivityTestRule(
         this.isTabSwipeCFREnabled = isTabSwipeCFREnabled
         this.isTermsOfServiceAccepted = isTermsOfServiceAccepted
         this.openLinksInExternalApp = openLinksInExternalApp
-        this.hasSeenShakeToSummarizeToolbarCfr = hasSeenShakeToSummarizeToolbarCfr
-        this.shakeToSummarizeFeatureFlagEnabled = shakeToSummarizeFeatureFlagEnabled
         this.isPrivateModeAndStoriesEntryPointEnabled = isPrivateModeAndStoriesEntryPointEnabled
         this.shouldUseExpandedToolbar = shouldUseExpandedToolbar
         this.nativeShareSheetEnabled = nativeShareSheetEnabled
@@ -159,7 +155,6 @@ class HomeActivityTestRule(
             isPageLoadTranslationsPromptEnabled = false,
             isUseNewCrashReporterFlow = useNewCrashReporterFlow,
             isTabSwipeCFREnabled = true,
-            hasSeenShakeToSummarizeToolbarCfr = true,
             isTermsOfServiceAccepted = true,
             isPrivateModeAndStoriesEntryPointEnabled = false,
         )
@@ -207,8 +202,6 @@ class HomeActivityIntentTestRule internal constructor(
         isTermsOfServiceAccepted: Boolean = true,
         openLinksInExternalApp: OpenLinksInApp = getOpenLinksInApp(settings),
         tabManagerOpeningAnimationEnabled: Boolean = false,
-        hasSeenShakeToSummarizeToolbarCfr: Boolean = true,
-        shakeToSummarizeFeatureFlagEnabled: Boolean = settings.shakeToSummarizeFeatureFlagEnabled,
         isPrivateModeAndStoriesEntryPointEnabled: Boolean = false,
         shouldUseExpandedToolbar: Boolean = false,
         nativeShareSheetEnabled: Boolean = false,
@@ -234,8 +227,6 @@ class HomeActivityIntentTestRule internal constructor(
         this.isTermsOfServiceAccepted = isTermsOfServiceAccepted
         this.openLinksInExternalApp = openLinksInExternalApp
         this.tabManagerOpeningAnimationEnabled = tabManagerOpeningAnimationEnabled
-        this.hasSeenShakeToSummarizeToolbarCfr = hasSeenShakeToSummarizeToolbarCfr
-        this.shakeToSummarizeFeatureFlagEnabled = shakeToSummarizeFeatureFlagEnabled
         this.isPrivateModeAndStoriesEntryPointEnabled = isPrivateModeAndStoriesEntryPointEnabled
         this.shouldUseExpandedToolbar = shouldUseExpandedToolbar
         this.nativeShareSheetEnabled = nativeShareSheetEnabled
@@ -313,7 +304,6 @@ class HomeActivityIntentTestRule internal constructor(
         isTermsOfServiceAccepted = settings.hasAcceptedTermsOfService
         openLinksInExternalApp = getOpenLinksInApp(settings)
         tabManagerOpeningAnimationEnabled = settings.tabManagerOpeningAnimationEnabled
-        hasSeenShakeToSummarizeToolbarCfr = settings.shakeToSummarizeToolbarCfrShown
         isPrivateModeAndStoriesEntryPointEnabled = settings.privateModeAndStoriesEntryPointEnabled
         nativeShareSheetEnabled = settings.nativeShareSheetEnabled
     }
@@ -344,7 +334,6 @@ class HomeActivityIntentTestRule internal constructor(
             shouldUseBottomToolbar = true,
             isPageLoadTranslationsPromptEnabled = false,
             isTabSwipeCFREnabled = true,
-            hasSeenShakeToSummarizeToolbarCfr = true,
             isTermsOfServiceAccepted = true,
             tabManagerOpeningAnimationEnabled = false,
             isPrivateModeAndStoriesEntryPointEnabled = false,

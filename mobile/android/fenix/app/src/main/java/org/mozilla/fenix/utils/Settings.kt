@@ -2632,15 +2632,6 @@ class Settings(
         default = { FxNimbus.features.microsurveys.value().enabled },
     )
 
-    /**
-     * Nimbus controlled feature flag that Indicates if the Shake to Summarize feature should be
-     * enabled
-     */
-    var shakeToSummarizeFeatureFlagEnabled by booleanPreference(
-        key = appContext.getPreferenceKey(R.string.pref_key_enable_shake_to_summarize),
-        default = { FxNimbus.features.shakeToSummarize.value().enabled },
-    )
-
     var aiControlsFeatureFlagEnabled by booleanPreference(
         key = appContext.getPreferenceKey(R.string.pref_key_enable_ai_controls),
         default = true,
@@ -2652,41 +2643,6 @@ class Settings(
     var importBookmarksFeatureFlagEnabled by booleanPreference(
         key = appContext.getPreferenceKey(R.string.pref_key_enable_import_bookmarks),
         default = { FxNimbus.features.importBookmarks.value().enabled },
-    )
-
-    /**
-     * Tracks how many times the summarize menu item has been shown.
-     * Used to control highlight/badge visibility for feature discovery.
-     */
-    val shakeToSummarizeMenuItemExposureCount = counterPreference(
-        key = appContext.getPreferenceKey(R.string.pref_key_summarize_highlight_menu_item_exposure_count),
-        maxCount = 2,
-    )
-
-    /**
-     * Tracks how many times the user has interacted with the more menu item.
-     * Used to control highlight/badge visibility for feature discovery.
-     */
-    val shakeToSummarizeMoreMenuItemInteractionCount = counterPreference(
-        key = appContext.getPreferenceKey(R.string.pref_key_summarize_highlight_more_item_interaction_count),
-        maxCount = 1,
-    )
-
-    /**
-     * Tracks how many times the user has interacted with the toolbar menu entry point.
-     * Used to control highlight/badge visibility for feature discovery.
-     */
-    val shakeToSummarizeToolbarInteractionCount = counterPreference(
-        key = appContext.getPreferenceKey(R.string.pref_key_summarize_highlight_toolbar_interaction_count),
-        maxCount = 1,
-    )
-
-    /**
-     * Tracks if the user has been shown the shake to summarize toolbar CFR
-     */
-    var shakeToSummarizeToolbarCfrShown by booleanPreference(
-        key = appContext.getPreferenceKey(R.string.pref_key_summarize_toolbar_cfr_shown),
-        default = false,
     )
 
     /**

@@ -20,7 +20,6 @@ import kotlinx.coroutines.test.StandardTestDispatcher
 import kotlinx.coroutines.test.runTest
 import mozilla.appservices.places.BookmarkRoot
 import mozilla.components.browser.state.state.createTab
-import mozilla.components.concept.engine.EngineSession
 import mozilla.components.concept.engine.webextension.InstallationMethod
 import mozilla.components.feature.addons.Addon
 import mozilla.components.feature.addons.AddonManager
@@ -55,8 +54,6 @@ import org.mozilla.fenix.components.menu.store.BrowserMenuState
 import org.mozilla.fenix.components.menu.store.MenuAction
 import org.mozilla.fenix.components.menu.store.MenuState
 import org.mozilla.fenix.components.menu.store.MenuStore
-import org.mozilla.fenix.settings.summarize.FakeSummarizationFeatureConfiguration
-import org.mozilla.fenix.summarization.eligibility.SummarizationEligibilityChecker
 import org.mozilla.fenix.utils.Settings
 import org.robolectric.RobolectricTestRunner
 import kotlin.test.assertNotNull
@@ -81,7 +78,6 @@ class MenuDialogMiddlewareTest {
     private lateinit var migratePrivateTabUseCase: TabsUseCases.MigratePrivateTabUseCase
     private lateinit var settings: Settings
 
-    private val summarizeFeatureSettings = FakeSummarizationFeatureConfiguration()
     private lateinit var lastSavedFolderCache: LastSavedFolderCache
 
     companion object {
@@ -931,213 +927,9 @@ class MenuDialogMiddlewareTest {
         assertFalse(shownWasCalled)
     }
 
-    @Test
-    fun `GIVEN summarization feature setting indicates the menu item is not visible, WHEN menu is initialized, THEN the menu item is not visible`() =
-        runTest(testDispatcher) {
-            summarizeFeatureSettings.showMenuItem = false
-
-            val store = createStore()
-            store.dispatch(MenuAction.InitAction)
-
-            testScheduler.advanceUntilIdle()
-
-            assertFalse(
-                "Expected the menu item is not visible because the feature settings indicate that it should not be visible",
-                store.state.summarizationMenuState.visible,
-            )
-        }
-
-    @Test
-    fun `GIVEN the selected tab is not eligible for summarization by language, WHEN menu is initialized, THEN the menu item is not enabled`() =
-        runTest(testDispatcher) {
-            summarizeFeatureSettings.showMenuItem = true
-
-            val store = createStore(
-                summarizationEligibilityChecker = TestSummarizationEligibilityChecker(isEligibleByLanguage = false),
-            )
-            store.dispatch(MenuAction.InitAction)
-
-            testScheduler.advanceUntilIdle()
-
-            assertFalse(
-                "Expected the menu item is not enabled because the page is not eligible for summarization",
-                store.state.summarizationMenuState.enabled,
-            )
-        }
-
-    @Test
-    fun `GIVEN summarization feature setting indicates the menu item should be visible, WHEN menu is initialized, THEN the menu item is visible`() =
-        runTest(testDispatcher) {
-            summarizeFeatureSettings.showMenuItem = true
-
-            val store = createStore()
-            store.dispatch(MenuAction.InitAction)
-
-            testScheduler.advanceUntilIdle()
-
-            assertTrue(
-                "Expected the menu item to be visible because the feature settings indicate that it should be visible",
-                store.state.summarizationMenuState.visible,
-            )
-        }
-
-    @Test
-    fun `GIVEN a page is loading, WHEN menu is initialized, THEN the the summarization menu item is disabled`() =
-        runTest(testDispatcher) {
-            summarizeFeatureSettings.showMenuItem = true
-
-            val store = createStore(isTabLoading = true)
-            store.dispatch(MenuAction.InitAction)
-
-            testScheduler.advanceUntilIdle()
-
-            assertFalse(
-                "Expected the menu item to be disabled because the page is loading",
-                store.state.summarizationMenuState.enabled,
-            )
-        }
-
-    @Test
-    fun `GIVEN summarization feature setting indicates that menu item is not highlighted, WHEN menu is initialized, THEN the menu item is not highlighted`() =
-        runTest(testDispatcher) {
-            summarizeFeatureSettings.shouldHighlightMenuItem = false
-
-            val store = createStore()
-            store.dispatch(MenuAction.InitAction)
-
-            testScheduler.advanceUntilIdle()
-
-            assertFalse(
-                "Expected the menu item to be highlighted because the feature settings indicate that it should not be highlighted",
-                store.state.summarizationMenuState.highlighted,
-            )
-        }
-
-    @Test
-    fun `GIVEN summarization feature setting indicates that menu item should be highlighted, WHEN menu is initialized, THEN the menu item is highlighted`() =
-        runTest(testDispatcher) {
-            summarizeFeatureSettings.shouldHighlightMenuItem = true
-
-            val store = createStore()
-            store.dispatch(MenuAction.InitAction)
-
-            testScheduler.advanceUntilIdle()
-
-            assertTrue(
-                "Expected the menu item to be highlighted because the feature settings indicate that it should be highlighted",
-                store.state.summarizationMenuState.highlighted,
-            )
-        }
-
-    @Test
-    fun `WHEN summarization menu is exposed to the user, THEN we cache that exposure in the settings`() =
-        runTest(testDispatcher) {
-            val store = createStore()
-            store.dispatch(MenuAction.InitAction)
-
-            testScheduler.advanceUntilIdle()
-            store.dispatch(MenuAction.OnSummarizationMenuExposed)
-            testScheduler.advanceUntilIdle()
-
-            assertEquals(
-                "Expected the feature settings now indicates that the user has been exposed",
-                1,
-                summarizeFeatureSettings.menuItemExposureCount,
-            )
-        }
-
-    @Test
-    fun `GIVEN selected tab is private, WHEN init action is dispatched, THEN the summarize page menu item is not enabled`() =
-        runTest(testDispatcher) {
-            val store = createStore(
-                menuState = MenuState(
-                    browserMenuState = BrowserMenuState(
-                        selectedTab = createTab(url = "https://mozilla.org", private = true),
-                    ),
-                ),
-            )
-            store.dispatch(MenuAction.InitAction)
-
-            testScheduler.advanceUntilIdle()
-            assertFalse(
-                "Expected the summarize page menu item to be disabled",
-                store.state.summarizationMenuState.enabled,
-            )
-        }
-
-    @Test
-    fun `GIVEN no selected tab, WHEN init action is dispatched, THEN the summarize page menu item is not enabled`() =
-        runTest(testDispatcher) {
-            val store = createStore(
-                menuState = MenuState(
-                    browserMenuState = null,
-                ),
-            )
-            store.dispatch(MenuAction.InitAction)
-
-            testScheduler.advanceUntilIdle()
-            assertFalse(
-                "Expected the summarize page menu item to be disabled",
-                store.state.summarizationMenuState.enabled,
-            )
-        }
-
-    @Test
-    fun `GIVEN selected tab is normal, WHEN init action is dispatched, THEN a toolbar highlight interaction is cached`() =
-        runTest(testDispatcher) {
-            val store = createStore(
-                menuState = MenuState(
-                    browserMenuState = BrowserMenuState(
-                        selectedTab = createTab(url = "https://mozilla.org"),
-                    ),
-                ),
-            )
-            store.dispatch(MenuAction.InitAction)
-
-            testScheduler.advanceUntilIdle()
-            assertTrue(
-                "Expected the toolbar highlight interaction to be cached",
-                summarizeFeatureSettings.toolbarOverflowMenuInteractionCount > 0,
-            )
-        }
-
-    @Test
-    fun `WHEN more menu is clicked, THEN we cache that interaction in the summarization menu settings`() =
-        runTest(testDispatcher) {
-            val store = createStore()
-            store.dispatch(MenuAction.InitAction)
-            testScheduler.advanceUntilIdle()
-            store.dispatch(MenuAction.OnMoreMenuClicked)
-            testScheduler.advanceUntilIdle()
-
-            assertEquals(
-                "Expected the more menu clicked to be cached in the summarization menu settings",
-                1,
-                summarizeFeatureSettings.menuOverflowInteractionCount,
-            )
-        }
-
-    @Test
-    fun `GIVEN more menu is not highlighted by summarize feature, WHEN more menu is clicked, THEN the interaction is not cached`() =
-        runTest(testDispatcher) {
-            summarizeFeatureSettings.shouldHighlightOverflowMenuItem = false
-
-            val store = createStore()
-            store.dispatch(MenuAction.InitAction)
-            store.dispatch(MenuAction.OnMoreMenuClicked)
-            testScheduler.advanceUntilIdle()
-
-            assertEquals(
-                "Expected the more menu click is not cached in the summarization menu settings",
-                0,
-                summarizeFeatureSettings.menuOverflowInteractionCount,
-            )
-        }
-
     private fun createStore(
         appStore: AppStore = AppStore(),
         isTabLoading: Boolean = false,
-        summarizationEligibilityChecker: SummarizationEligibilityChecker = TestSummarizationEligibilityChecker(),
         menuState: MenuState = MenuState(
             browserMenuState = BrowserMenuState(
                 selectedTab = createTab(
@@ -1156,8 +948,6 @@ class MenuDialogMiddlewareTest {
                 appStore = appStore,
                 addonManager = addonManager,
                 settings = settings,
-                summarizeMenuSettings = summarizeFeatureSettings,
-                summarizationEligibilityChecker = summarizationEligibilityChecker,
                 bookmarksStorage = bookmarksStorage,
                 pinnedSiteStorage = pinnedSiteStorage,
                 appLinksUseCases = appLinksUseCases,
@@ -1175,15 +965,4 @@ class MenuDialogMiddlewareTest {
             ),
         ),
     )
-
-    private class TestSummarizationEligibilityChecker(
-        private val isEligible: Boolean = false,
-        private val isEligibleByLanguage: Boolean = true,
-    ) : SummarizationEligibilityChecker {
-        override suspend fun check(session: EngineSession): Result<Boolean> =
-            Result.success(isEligible)
-
-        override suspend fun checkLanguage(session: EngineSession): Result<Boolean> =
-            Result.success(isEligibleByLanguage)
-    }
 }

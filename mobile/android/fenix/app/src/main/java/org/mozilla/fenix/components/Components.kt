@@ -12,10 +12,7 @@ import androidx.compose.runtime.ReadOnlyComposable
 import androidx.compose.ui.platform.LocalContext
 import androidx.core.app.NotificationManagerCompat
 import androidx.core.content.getSystemService
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.MainScope
-import kotlinx.coroutines.SupervisorJob
 import mozilla.components.concept.ai.controls.AIFeatureBlock
 import mozilla.components.concept.ai.controls.AIFeatureRegistry
 import mozilla.components.feature.addons.AddonManager
@@ -23,14 +20,11 @@ import mozilla.components.feature.addons.amo.AMOAddonsProvider
 import mozilla.components.feature.addons.migration.DefaultSupportedAddonsChecker
 import mozilla.components.feature.addons.update.DefaultAddonUpdater
 import mozilla.components.feature.autofill.AutofillConfiguration
-import mozilla.components.feature.summarize.PageSummaryFeature
-import mozilla.components.feature.summarize.settings.SummarizationSettings
 import mozilla.components.lib.ai.controls.AIFeatureBlockStorage
 import mozilla.components.lib.ai.controls.dataStore
 import mozilla.components.lib.ai.controls.default
 import mozilla.components.lib.crash.store.CrashAction
 import mozilla.components.lib.crash.store.CrashMiddleware
-import mozilla.components.lib.llm.mlpa.MlpaTokenStorage
 import mozilla.components.lib.publicsuffixlist.PublicSuffixList
 import mozilla.components.service.fxrelay.eligibility.RelayEligibilityStore
 import mozilla.components.service.fxrelay.eligibility.middlewares.ClearLastUsedMiddleware
@@ -60,8 +54,6 @@ import org.mozilla.fenix.components.appstate.setup.checklist.getSetupChecklistCo
 import org.mozilla.fenix.components.appstate.sports.SportsWidgetState
 import org.mozilla.fenix.components.bookmarks.lastSavedFolderCache
 import org.mozilla.fenix.components.lens.GoogleLensAIControlFeature
-import org.mozilla.fenix.components.llm.Llm
-import org.mozilla.fenix.components.llm.ext.accessTokenProvider
 import org.mozilla.fenix.components.metrics.MetricsMiddleware
 import org.mozilla.fenix.crashes.CrashReportingAppMiddleware
 import org.mozilla.fenix.crashes.SettingsCrashReportCache
@@ -102,7 +94,6 @@ import org.mozilla.fenix.settings.datachoices.DataChoicesSearchProvider
 import org.mozilla.fenix.settings.emailmasks.middleware.DefaultEmailMasksRepository
 import org.mozilla.fenix.settings.emailmasks.middleware.EmailMasksRepository
 import org.mozilla.fenix.settings.labs.FirefoxLabsSettingsSearchProvider
-import org.mozilla.fenix.settings.pagesummaries.PageSummariesSettingsSearchProvider
 import org.mozilla.fenix.settings.settingssearch.DefaultFenixSettingsIndexer
 import org.mozilla.fenix.termsofuse.TermsOfUseManager
 import org.mozilla.fenix.termsofuse.store.DefaultTermsOfUsePromptRepository
@@ -424,9 +415,6 @@ class Components(private val context: Context) {
             additionalProviders = listOf(
                 DataChoicesSearchProvider,
                 AIControlsSearchProvider,
-                PageSummariesSettingsSearchProvider(
-                    summarizationFeatureConfiguration = core.summarizeFeatureSettings,
-                ),
                 FirefoxLabsSettingsSearchProvider(
                     isLabsEnabled = { settings.enableFirefoxLabs },
                 ),
@@ -463,22 +451,8 @@ class Components(private val context: Context) {
         AIFeatureBlockStorage.dataStore(context)
     }
 
-    val summarizationSettings: SummarizationSettings by lazyMonitored {
-        SummarizationSettings.dataStore(context)
-    }
-
-    val summarizationSettingsCache by lazyMonitored {
-        SummarizationSettingsCache(
-            settings = summarizationSettings,
-            scope = CoroutineScope(SupervisorJob() + Dispatchers.IO),
-        )
-    }
-
     val aiFeatureRegistry by lazyMonitored {
         AIFeatureRegistry.default(scope = MainScope(), context = context).also {
-            if (settings.shakeToSummarizeFeatureFlagEnabled) {
-                it.register(PageSummaryFeature(summarizationSettings))
-            }
             it.register(
                 VoiceSearchAIControlFeature(
                     settings = settings,
@@ -496,14 +470,6 @@ class Components(private val context: Context) {
         AIFeatureBlock.default(
             storage = aiFeatureBlockStorage,
             registry = aiFeatureRegistry,
-        )
-    }
-
-    val llm: Llm by lazyMonitored {
-        Llm(
-            client = core.client,
-            storage = MlpaTokenStorage.sharedPrefs(context),
-            fxaTokenProvider = backgroundServices.accountManager.accessTokenProvider,
         )
     }
 }

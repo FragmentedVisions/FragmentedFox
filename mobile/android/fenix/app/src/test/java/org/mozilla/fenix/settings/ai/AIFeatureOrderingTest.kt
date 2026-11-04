@@ -6,7 +6,6 @@ package org.mozilla.fenix.settings.ai
 
 import mozilla.components.concept.ai.controls.AIControllableFeature
 import mozilla.components.concept.ai.controls.AIFeatureMetadata
-import mozilla.components.feature.summarize.PageSummaryFeature
 import org.junit.Assert.assertEquals
 import org.junit.Test
 import org.mozilla.fenix.search.VoiceSearchAIControlFeature
@@ -18,14 +17,12 @@ class AIFeatureOrderingTest {
     fun `sortedForDisplay places known features in canonical order regardless of input order`() {
         val features = listOf(
             AIControllableFeature.inMemory(id = VoiceSearchAIControlFeature.id),
-            AIControllableFeature.inMemory(id = PageSummaryFeature.id),
             AIControllableFeature.inMemory(id = TranslationsAIControllableFeature.id),
         )
 
         assertEquals(
             listOf(
                 TranslationsAIControllableFeature.id,
-                PageSummaryFeature.id,
                 VoiceSearchAIControlFeature.id,
             ),
             features.sortedForDisplay().map { it.id },

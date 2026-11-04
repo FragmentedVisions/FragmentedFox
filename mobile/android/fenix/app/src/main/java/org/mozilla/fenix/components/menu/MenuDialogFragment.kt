@@ -90,7 +90,6 @@ import org.mozilla.fenix.components.menu.store.ExtensionMenuState
 import org.mozilla.fenix.components.menu.store.MenuAction
 import org.mozilla.fenix.components.menu.store.MenuState
 import org.mozilla.fenix.components.menu.store.MenuStore
-import org.mozilla.fenix.components.menu.store.SummarizationMenuState
 import org.mozilla.fenix.components.menu.store.TranslationInfo
 import org.mozilla.fenix.components.menu.store.WebExtensionMenuItem
 import org.mozilla.fenix.ext.canGoBackInHistoryOrToStories
@@ -310,8 +309,6 @@ class MenuDialogFragment : BottomSheetDialogFragment() {
                                 appStore = appStore,
                                 addonManager = components.addonManager,
                                 settings = settings,
-                                summarizeMenuSettings = components.core.summarizeFeatureSettings,
-                                summarizationEligibilityChecker = components.core.summarizationEligibilityChecker,
                                 bookmarksStorage = components.core.bookmarksStorage,
                                 pinnedSiteStorage = components.core.pinnedSiteStorage,
                                 appLinksUseCases = appLinksUseCases,
@@ -534,10 +531,6 @@ class MenuDialogFragment : BottomSheetDialogFragment() {
                         },
                     )
 
-                    val summarizationMenuState by remember {
-                        store.stateFlow.map { state -> state.summarizationMenuState }
-                    }.collectAsState(initial = SummarizationMenuState.Default)
-
                     val contentState: Route by remember { mutableStateOf(initRoute) }
 
                     var shouldShowMenuBanner by
@@ -652,8 +645,7 @@ class MenuDialogFragment : BottomSheetDialogFragment() {
                                     isPdf = isPdf,
                                     isPrivate = isPrivate,
                                     isReaderViewActive = isReaderViewActive,
-                                    isMoreMenuHighlighted = isOpenInAppMenuHighlighted ||
-                                            summarizationMenuState.overflowMenuHighlighted,
+                                    isMoreMenuHighlighted = isOpenInAppMenuHighlighted,
                                     canGoBack = browserStore.state.canGoBackInHistoryOrToStories(),
                                     canGoForward = selectedTab?.content?.canGoForward ?: true,
                                     extensionsMenuItemDescription = extensionsMenuItemDescription,
@@ -764,17 +756,8 @@ class MenuDialogFragment : BottomSheetDialogFragment() {
                                             translationInfo = translationInfo,
                                             showShortcuts = settings.showTopSitesFeature,
                                             isAndroidAutomotiveAvailable = context.isAndroidAutomotiveAvailable(),
-                                            summarizationMenuState = summarizationMenuState,
                                             onWebCompatReporterClick = {
                                                 store.dispatch(MenuAction.Navigate.WebCompatReporter)
-                                            },
-                                            onSummarizePageMenuExposed = {
-                                                store.dispatch(
-                                                    MenuAction.OnSummarizationMenuExposed,
-                                                )
-                                            },
-                                            onSummarizePageClick = {
-                                                store.dispatch(MenuAction.Navigate.Summarizer)
                                             },
                                             onShortcutsMenuClick = {
                                                 if (!isPinned) {

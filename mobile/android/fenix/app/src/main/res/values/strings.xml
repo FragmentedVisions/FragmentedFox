@@ -258,10 +258,6 @@
     <string name="browser_menu_move_to_non_private_tab">Move to non-private tab</string>
     <!-- Browser menu label for navigating to the translation feature, which provides language translation options the current visited page -->
     <string name="browser_menu_translate_page_2">Translate page</string>
-    <!-- Browser menu label for navigating to the summarization feature, which provides site summarization for the current visited page -->
-    <string name="browser_menu_summarize_page">Summarize page</string>
-    <!-- Browser menu badge text for summarization feature -->
-    <string name="browser_menu_summarize_page_badge">New</string>
     <!-- Browser menu label for navigating to the Web Compat Reporter feature, which provides users the ability to send bug reports for broken sites. -->
     <string name="browser_menu_webcompat_reporter_2">Report broken site</string>
     <!-- Browser menu label that is displayed when the current page has been translated by the translation feature. -->
@@ -294,8 +290,6 @@
     <!-- Browser Toolbar -->
     <!-- Content description for the translate page toolbar button that opens the translations dialog when no translation has occurred. -->
     <string name="browser_toolbar_translate">Translate page</string>
-    <!-- CFR description for the browser toolbar describing the "Shake to summarize feature" -->
-    <string name="browser_toolbar_summarize_cfr_description">Shake your device to summarize this page in seconds. ⚡️</string>
 
     <!-- Translation Toolbar -->
     <!-- Translation toolbar label that is displayed when the current page has been translated by the translation feature.
@@ -307,9 +301,6 @@
     <!-- Content description for the translate toolbar action that closes the translations toolbar. -->
     <string name="translation_toolbar_close_action">Dismiss message</string>
 
-    <!-- Page summaries -->
-    <!-- Toolbar title for the Page summaries settings fragment -->
-    <string name="preferences_page_summaries">Page summaries</string>
 
     <!-- AI Controls settings -->
     <!-- Title for the AI controls settings screen -->
@@ -336,8 +327,6 @@
     <string name="ai_controls_translations_description">All translations stay private on your device.</string>
     <!-- Link text to navigate to more translations settings -->
     <string name="ai_controls_more_translations_settings">More translations settings</string>
-    <!-- Link text to navigate to more page summary settings -->
-    <string name="ai_controls_more_page_summary_settings">More page summary settings</string>
     <!-- Title for the voice search AI feature toggle -->
     <string name="ai_controls_voice_search_title">Voice search</string>
     <!-- Description for the voice search AI feature toggle -->
@@ -1287,8 +1276,6 @@
     <string name="preference_gestures_swipe_toolbar_show_tabs_2">Swipe toolbar vertically to see open tabs</string>
     <!-- Preference for switching tabs by swiping horizontally on the addressbar -->
     <string name="preference_gestures_swipe_toolbar_switch_tabs_2">Swipe address bar sideways to switch tabs</string>
-    <!-- Preference for switching for the shake to summarize toggle in page summaries and customize settings -->
-    <string name="preferences_shake_to_summarize">Shake to summarize</string>
 
     <!-- Library -->
     <!-- Option in Library to open Downloads page -->

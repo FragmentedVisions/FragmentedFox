@@ -56,7 +56,6 @@ import mozilla.components.feature.autofill.AutofillUseCases
 import mozilla.components.feature.fxsuggest.GlobalFxSuggestDependencyProvider
 import mozilla.components.feature.search.ext.buildSearchUrl
 import mozilla.components.feature.search.ext.waitForSelectedOrDefaultSearchEngine
-import mozilla.components.feature.summarize.settings.SummarizationSettings
 import mozilla.components.feature.syncedtabs.commands.GlobalSyncedTabsCommandsProvider
 import mozilla.components.feature.top.sites.TopSitesFrecencyConfig
 import mozilla.components.feature.top.sites.TopSitesProviderConfig
@@ -99,7 +98,6 @@ import org.mozilla.fenix.GleanMetrics.SearchDefaultEngine
 import org.mozilla.fenix.GleanMetrics.SearchDefaultEngineForPrivate
 import org.mozilla.fenix.GleanMetrics.TabStrip
 import org.mozilla.fenix.GleanMetrics.TermsOfUse
-import org.mozilla.fenix.GleanMetrics.UserAiSummarize
 import org.mozilla.fenix.components.Components
 import org.mozilla.fenix.components.Core
 import org.mozilla.fenix.components.appstate.AppAction
@@ -930,11 +928,6 @@ open class FenixApplication : Application(), Provider, ThemeProvider {
             supported.set(autofillUseCases.isSupported(applicationContext))
             enabled.set(autofillUseCases.isEnabled(applicationContext))
         }
-
-        val summarizeSettings = SummarizationSettings.dataStore(applicationContext)
-        UserAiSummarize.summarizationEnabled.set(summarizeSettings.getFeatureEnabledUserStatus().first() == true)
-        UserAiSummarize.gestureEnabled.set(summarizeSettings.getGestureEnabledUserStatus().first())
-        UserAiSummarize.summarizationConsented.set(summarizeSettings.getHasConsentedToShake().first())
 
         Browser.globalAiControlIsBlocking.set(components.aiControlsFeatureBlock.isBlocked.first())
         components.aiFeatureRegistry.getFeatures().forEach { feature ->

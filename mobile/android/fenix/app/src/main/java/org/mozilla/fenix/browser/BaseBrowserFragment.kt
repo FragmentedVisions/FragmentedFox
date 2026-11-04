@@ -160,7 +160,6 @@ import org.mozilla.fenix.OpenInFirefoxBinding
 import org.mozilla.fenix.R
 import org.mozilla.fenix.ReaderViewBinding
 import org.mozilla.fenix.bindings.FindInPageBinding
-import org.mozilla.fenix.bindings.SummarizeToolbarCFRBinding
 import org.mozilla.fenix.biometricauthentication.AuthenticationStatus
 import org.mozilla.fenix.biometricauthentication.BiometricAuthenticationManager
 import org.mozilla.fenix.browser.applinks.AppLinksPromptFragment
@@ -329,8 +328,6 @@ abstract class BaseBrowserFragment :
     private val findInPageBinding = ViewBoundFeatureWrapper<FindInPageBinding>()
     private val snackbarBinding = ViewBoundFeatureWrapper<SnackbarBinding>()
     private val standardSnackbarErrorBinding = ViewBoundFeatureWrapper<StandardSnackbarErrorBinding>()
-
-    protected val summarizeToolbarCfrBinding = ViewBoundFeatureWrapper<SummarizeToolbarCFRBinding>()
 
     private val sitePermissionsLearnMoreUrlProvider: SitePermissionsLearnMoreUrlProvider by lazy {
         FenixSitePermissionLearnMoreUrlProvider()
@@ -1374,22 +1371,6 @@ abstract class BaseBrowserFragment :
                 settings = settings,
                 hideWhenKeyboardShown = true,
             )
-
-        // set the summarize CFR binding only for regular, non-custom tabs
-        if (customTabSessionId == null) {
-            summarizeToolbarCfrBinding.set(
-                feature = SummarizeToolbarCFRBinding(
-                    browserStore = requireComponents.core.store,
-                    browserToolbarStore = toolbarStore,
-                    featureDiscovery = requireComponents.core.summarizeFeatureSettings,
-                    eligibilityChecker = requireComponents.core.summarizationEligibilityChecker,
-                    mainDispatcher = Dispatchers.Main,
-                    ioDispatcher = Dispatchers.IO,
-                ),
-                owner = viewLifecycleOwner,
-                view = binding.root,
-            )
-        }
 
         return BrowserToolbarComposable(
             activity = activity,

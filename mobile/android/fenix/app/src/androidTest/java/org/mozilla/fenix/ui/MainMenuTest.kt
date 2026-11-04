@@ -28,7 +28,6 @@ import org.mozilla.fenix.helpers.HomeActivityIntentTestRule
 import org.mozilla.fenix.helpers.MatcherHelper
 import org.mozilla.fenix.helpers.MatcherHelper.itemContainingText
 import org.mozilla.fenix.helpers.MockBrowserDataHelper
-import org.mozilla.fenix.helpers.TestAssetHelper.articleSummaryAsset
 import org.mozilla.fenix.helpers.TestAssetHelper.firstForeignWebPageAsset
 import org.mozilla.fenix.helpers.TestAssetHelper.getGenericAsset
 import org.mozilla.fenix.helpers.TestAssetHelper.pdfFormAsset
@@ -65,7 +64,6 @@ class MainMenuTest {
                 skipOnboarding = true,
                 isMenuRedesignCFREnabled = false,
                 isPageLoadTranslationsPromptEnabled = false,
-                shakeToSummarizeFeatureFlagEnabled = true,
             ),
         ) { it.activity }
 
@@ -1402,51 +1400,6 @@ class MainMenuTest {
         }.openThreeDotMenu {
             clickTheMoreButton()
             verifyMoreMainMenuItems()
-        }
-    }
-
-    // TestRail link: https://mozilla.testrail.io/index.php?/cases/view/4036009
-    @Ignore("Disabling to ease uplift. See bug 2049060.")
-    @SmokeTest
-    @Test
-    fun verifyTheMoreMainMenuSummarizePageButtonTest() {
-        composeTestRule.activityRule.applySettingsExceptions {
-            it.hasSeenShakeToSummarizeToolbarCfr = false
-        }
-
-        val articlePage = mockWebServer.articleSummaryAsset
-
-        navigationToolbar(composeTestRule) {
-        }.enterURLAndEnterToBrowser(articlePage.url) {
-            waitForPageToLoad()
-            clickTheDismissButtonOnSummarizeCFR()
-        }.openThreeDotMenu {
-            clickTheMoreButton()
-            verifySummarizePageButton()
-        }
-    }
-
-    // TestRail link: https://mozilla.testrail.io/index.php?/cases/view/4036011
-    @Ignore("Disabling to ease uplift. See bug 2049060.")
-    @SmokeTest
-    @Test
-    fun verifyTheMoreMainMenuSummarizePageButtonFunctionalityTest() {
-        composeTestRule.activityRule.applySettingsExceptions {
-            it.hasSeenShakeToSummarizeToolbarCfr = false
-        }
-
-        val articlePage = mockWebServer.articleSummaryAsset
-
-        navigationToolbar(composeTestRule) {
-        }.enterURLAndEnterToBrowser(articlePage.url) {
-            waitForPageToLoad()
-            clickTheDismissButtonOnSummarizeCFR()
-        }.openThreeDotMenu {
-            clickTheMoreButton()
-            verifySummarizePageButton()
-        }.clickSummarizePageButton {
-            composeTestRule.waitForIdle()
-            verifyTheSummarizedBottomSheet()
         }
     }
 }

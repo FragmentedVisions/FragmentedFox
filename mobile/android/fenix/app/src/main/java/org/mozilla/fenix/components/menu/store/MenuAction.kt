@@ -192,18 +192,6 @@ sealed class MenuAction : Action {
     data object OnMoreMenuClicked : MenuAction()
 
     /**
-     * [MenuAction] dispatched to record that the summarize page menu has been exposed to the user
-     */
-    data object OnSummarizationMenuExposed : MenuAction()
-
-    /**
-     * [MenuAction] dispatched to initialize the state of the summarize page menu.
-     *
-     * @property state The [SummarizationMenuState] to set up
-     */
-    data class InitializeSummarizationMenuState(val state: SummarizationMenuState) : MenuAction()
-
-    /**
      * [MenuAction] dispatched when a navigation event occurs for a specific destination.
      */
     sealed class Navigate : MenuAction() {
@@ -310,11 +298,6 @@ sealed class MenuAction : Action {
          * [Navigate] action dispatched when the user clicks to report a broken site.
          */
         data object WebCompatReporter : Navigate()
-
-        /**
-         * [Navigate] action dispatched when the user clicks to summarize the current page.
-         */
-        data object Summarizer : Navigate()
 
         /**
          * [Navigate] action dispatched when navigating back from the current page.

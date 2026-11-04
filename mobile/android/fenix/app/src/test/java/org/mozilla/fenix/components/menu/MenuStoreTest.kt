@@ -22,7 +22,6 @@ import org.mozilla.fenix.components.menu.store.ExtensionMenuState
 import org.mozilla.fenix.components.menu.store.MenuAction
 import org.mozilla.fenix.components.menu.store.MenuState
 import org.mozilla.fenix.components.menu.store.MenuStore
-import org.mozilla.fenix.components.menu.store.SummarizationMenuState
 import org.mozilla.fenix.components.menu.store.WebExtensionMenuItem
 import org.mozilla.fenix.components.menu.store.copyWithBrowserMenuState
 import org.mozilla.fenix.components.menu.store.copyWithExtensionMenuState
@@ -397,25 +396,6 @@ class MenuStoreTest {
                 webExtensionMenuItemList,
             )
         }
-
-    @Test
-    fun `WHEN initialize summarizer state action is received, THEN the summarize page state is updated`() = runTest {
-        val initialState = MenuState()
-        val store = MenuStore(initialState = initialState)
-
-        val newState = SummarizationMenuState.Default.copy(
-            visible = true,
-            highlighted = true,
-            showNewFeatureBadge = true,
-        )
-        store.dispatch(MenuAction.InitializeSummarizationMenuState(newState))
-
-        assertEquals(
-            "Expected the new state to be the same as what was dispatched",
-            newState,
-            store.state.summarizationMenuState,
-        )
-    }
 
     @Test
     fun `GIVEN more menu is expanded, WHEN the OnMoreMenuClicked action is received, THEN the menu is not expanded`() =

@@ -159,11 +159,4 @@ object TestAssetHelper {
         content,
         title,
     )
-
-    val MockWebServer.articleSummaryAsset
-        get() = createTestAsset(
-            path = "pages/article-summary.html",
-            content = "Page content: article summary",
-            title = "Article for Testing Summarization Feature",
-        )
 }

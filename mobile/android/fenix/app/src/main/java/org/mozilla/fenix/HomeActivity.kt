@@ -97,7 +97,6 @@ import org.mozilla.fenix.GleanMetrics.StartOnHome
 import org.mozilla.fenix.addons.ExtensionsProcessDisabledBackgroundController
 import org.mozilla.fenix.addons.ExtensionsProcessDisabledForegroundController
 import org.mozilla.fenix.bindings.ExternalAppLinkStatusBinding
-import org.mozilla.fenix.bindings.SummarizeToolbarHighlightBinding
 import org.mozilla.fenix.bookmarks.DesktopFolders
 import org.mozilla.fenix.browser.BrowserFragment
 import org.mozilla.fenix.browser.browsingmode.BrowsingMode
@@ -289,15 +288,6 @@ open class HomeActivity : LocaleAwareAppCompatActivity(), NavHostActivity, Crash
             appLinksUseCases = components.useCases.appLinksUseCases,
             browserStore = components.core.store,
             appStore = components.appStore,
-        )
-    }
-
-    private val summarizeToolbarHighlightBinding by lazy {
-        SummarizeToolbarHighlightBinding(
-            appStore = components.appStore,
-            featureDiscoverySettings = components.core.summarizeFeatureSettings,
-            browserStore = components.core.store,
-            mainDispatcher = Main,
         )
     }
 
@@ -579,8 +569,6 @@ open class HomeActivity : LocaleAwareAppCompatActivity(), NavHostActivity, Crash
             downloadSnackbar,
             privateBrowsingLockFeature,
             externalAppLinkStatusBinding,
-            summarizeToolbarHighlightBinding,
-            components.core.summarizationSettings,
             translationsAIControllableFeatureRegistrar,
         )
 

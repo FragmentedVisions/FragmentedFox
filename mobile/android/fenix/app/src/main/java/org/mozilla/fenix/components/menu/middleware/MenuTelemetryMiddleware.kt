@@ -292,7 +292,6 @@ class MenuTelemetryMiddleware(
 
             MenuAction.OnCFRDismiss -> Menu.dismissCfr.record(NoExtras())
 
-            MenuAction.Navigate.Summarizer,
             MenuAction.InitAction,
             is MenuAction.CustomMenuItemAction,
             is MenuAction.UpdateBookmarkState,
@@ -303,8 +302,6 @@ class MenuTelemetryMiddleware(
             is MenuAction.InstallAddonSuccess,
             is MenuAction.UpdateInstallAddonInProgress,
             is MenuAction.UpdateAvailableAddons,
-            is MenuAction.OnSummarizationMenuExposed,
-            is MenuAction.InitializeSummarizationMenuState,
             is MenuAction.OnMoreMenuClicked,
             -> Unit
         }

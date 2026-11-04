@@ -49,8 +49,6 @@ class FeatureSettingsHelperDelegate : FeatureSettingsHelper {
         isTermsOfServiceAccepted = settings.hasAcceptedTermsOfService,
         openLinksInApp = getOpenLinksInApp(settings),
         tabManagerOpeningAnimationEnabled = settings.tabManagerOpeningAnimationEnabled,
-        hasSeenShakeToSummarizeToolbarCfr = settings.shakeToSummarizeToolbarCfrShown,
-        shakeToSummarizeFeatureFlagEnabled = settings.shakeToSummarizeFeatureFlagEnabled,
         isPrivateModeAndStoriesEntryPointEnabled = settings.privateModeAndStoriesEntryPointEnabled,
         shouldUseExpandedToolbar = settings.shouldUseExpandedToolbar,
         nativeShareSheetEnabled = settings.nativeShareSheetEnabled,
@@ -81,8 +79,6 @@ class FeatureSettingsHelperDelegate : FeatureSettingsHelper {
     override var isTermsOfServiceAccepted: Boolean by updatedFeatureFlags::isTermsOfServiceAccepted
     override var openLinksInExternalApp: OpenLinksInApp by updatedFeatureFlags::openLinksInApp
     override var tabManagerOpeningAnimationEnabled: Boolean by updatedFeatureFlags::tabManagerOpeningAnimationEnabled
-    override var hasSeenShakeToSummarizeToolbarCfr: Boolean by updatedFeatureFlags::hasSeenShakeToSummarizeToolbarCfr
-    override var shakeToSummarizeFeatureFlagEnabled: Boolean by updatedFeatureFlags::shakeToSummarizeFeatureFlagEnabled
     override var isPrivateModeAndStoriesEntryPointEnabled: Boolean by updatedFeatureFlags::isPrivateModeAndStoriesEntryPointEnabled
     override var shouldUseExpandedToolbar: Boolean by updatedFeatureFlags::shouldUseExpandedToolbar
     override var nativeShareSheetEnabled: Boolean by updatedFeatureFlags::nativeShareSheetEnabled
@@ -124,8 +120,6 @@ class FeatureSettingsHelperDelegate : FeatureSettingsHelper {
         settings.hasAcceptedTermsOfService = featureFlags.isTermsOfServiceAccepted
         setOpenLinksInApp(featureFlags.openLinksInApp)
         settings.tabManagerOpeningAnimationEnabled = featureFlags.tabManagerOpeningAnimationEnabled
-        settings.shakeToSummarizeToolbarCfrShown = featureFlags.hasSeenShakeToSummarizeToolbarCfr
-        settings.shakeToSummarizeFeatureFlagEnabled = featureFlags.shakeToSummarizeFeatureFlagEnabled
         settings.privateModeAndStoriesEntryPointEnabled = featureFlags.isPrivateModeAndStoriesEntryPointEnabled
         settings.shouldUseExpandedToolbar = featureFlags.shouldUseExpandedToolbar
         settings.nativeShareSheetEnabled = featureFlags.nativeShareSheetEnabled
@@ -154,8 +148,6 @@ private data class FeatureFlags(
     var isTermsOfServiceAccepted: Boolean,
     var openLinksInApp: OpenLinksInApp,
     var tabManagerOpeningAnimationEnabled: Boolean,
-    var hasSeenShakeToSummarizeToolbarCfr: Boolean,
-    var shakeToSummarizeFeatureFlagEnabled: Boolean,
     var isPrivateModeAndStoriesEntryPointEnabled: Boolean,
     var shouldUseExpandedToolbar: Boolean,
     var nativeShareSheetEnabled: Boolean,

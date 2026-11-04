@@ -27,7 +27,6 @@ projects:
     - components:concept-engine
     - components:concept-fetch
     - components:concept-integrity
-    - components:concept-llm
     - components:concept-menu
     - components:concept-passwords-file
     - components:concept-passwords-parser
@@ -64,7 +63,6 @@ projects:
     - components:feature-session
     - components:feature-share
     - components:feature-sitepermissions
-    - components:feature-summarize
     - components:feature-syncedtabs
     - components:feature-tab-collections
     - components:feature-tabs
@@ -80,11 +78,9 @@ projects:
     - components:lib-bookmarks-file
     - components:lib-crash
     - components:lib-dataprotect
-    - components:lib-llm-mlpa
     - components:lib-password-parser-csv
     - components:lib-passwords-file
     - components:lib-publicsuffixlist
-    - components:lib-shake
     - components:lib-state
     - components:service-digitalassetlinks
     - components:service-firefox-accounts

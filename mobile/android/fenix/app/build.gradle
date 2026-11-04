@@ -488,7 +488,6 @@ dependencies {
     implementation project(':components:feature-session')
     implementation project(':components:feature-share')
     implementation project(':components:feature-sitepermissions')
-    implementation project(':components:feature-summarize')
     implementation project(':components:feature-syncedtabs')
     implementation project(':components:feature-toolbar')
     implementation project(':components:feature-tab-collections')
@@ -530,8 +529,6 @@ dependencies {
     implementation project(':components:lib-dataprotect')
     implementation project(':components:lib-state')
     implementation project(':components:lib-accelerometer-sensormanager')
-    implementation project(':components:lib-llm-mlpa')
-    implementation project(':components:lib-shake')
     implementation project(':components:lib-ai-controls')
 
     implementation ComponentsDependencies.mozilla_appservices_syncmanager

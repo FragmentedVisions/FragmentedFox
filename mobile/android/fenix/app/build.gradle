@@ -588,8 +588,6 @@ dependencies {
     implementation libs.kotlinx.coroutines
     implementation libs.kotlinx.serialization.json
     implementation libs.mozilla.glean
-    implementation libs.play.review
-    implementation libs.play.review.ktx
     implementation libs.protobuf.javalite
     implementation libs.androidx.documentfile
     implementation libs.zxing

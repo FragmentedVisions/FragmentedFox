@@ -728,8 +728,6 @@
     <string name="preference_search_address_bar_fx_suggest" tools:ignore="BrandUsage">Address bar - Firefox Suggest</string>
     <!-- Preference link to Learn more about Firefox Suggest -->
     <string name="preference_search_learn_about_fx_suggest" tools:ignore="BrandUsage">Learn more about Firefox Suggest</string>
-    <!-- Preference link to rating Fenix on the Play Store -->
-    <string name="preferences_rate">Rate on Google Play</string>
     <!-- Preference linking to about page for Fenix
         %1$s is the name of the app (for example "Firefox"). -->
     <string name="preferences_about">About %1$s</string>
@@ -3852,22 +3850,6 @@
     <string name="private_tab_cfr_negative">No thanks</string>
     <!-- Positive button text for the contextual feature recommendation (CFR) enabling screen lock for private tabs -->
     <string name="private_tab_cfr_positive">Lock tabs</string>
-
-    <!-- Review prompt -->
-    <!-- Title for a prompt asking the user about their experience using the app. %1$s is the name of the app (for example "Firefox"). -->
-    <string name="review_prompt_pre_prompt_header">What do you think about %1$s?</string>
-    <!-- Label for a button negatively rating the user's experience with the app -->
-    <string name="review_prompt_negative_button">I’m having issues</string>
-    <!-- Label for a button positively rating the user's experience with the app -->
-    <string name="review_prompt_positive_button">It’s great!</string>
-    <!-- Title for a prompt asking the user to rate the app on Google Play Store. %1$s is the name of the app (for example "Firefox"). -->
-    <string name="review_prompt_rate_header">Thanks for loving %1$s. Got a second to spread the love with a rating?</string>
-    <!-- Label for a button proceeding to rate the app on Google Play Store. %1$s is the name of the app (for example "Firefox"). -->
-    <string name="review_prompt_rate_button">Rate %1$s on the Play Store</string>
-    <!-- Title for a prompt asking the user send us feedback. %1$s is the name of the app (for example "Firefox"). -->
-    <string name="review_prompt_feedback_header">We’re sorry you’re having issues. Let us know how we can improve %1$s.</string>
-    <!-- Label for a button opening a feedback forum -->
-    <string name="review_prompt_feedback_button">Leave feedback</string>
 
     <!-- Settings Search Strings -->
     <!-- Title of Settings Search. "Search" is a verb here-->

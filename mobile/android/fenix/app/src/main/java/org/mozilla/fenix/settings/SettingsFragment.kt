@@ -68,7 +68,6 @@ import org.mozilla.fenix.ext.application
 import org.mozilla.fenix.ext.components
 import org.mozilla.fenix.ext.getPreferenceKey
 import org.mozilla.fenix.ext.navigateToNotificationsSettings
-import org.mozilla.fenix.ext.openInNewTab
 import org.mozilla.fenix.ext.requireComponents
 import org.mozilla.fenix.ext.showToolbar
 import org.mozilla.fenix.ext.showToolbarWithIconButton
@@ -537,11 +536,6 @@ class SettingsFragment : PreferenceFragmentCompat(), SystemInsetsPaddedFragment 
             }
 
             // About preferences
-            resources.getString(R.string.pref_key_rate) -> {
-                components.playStoreReviewPromptController.tryLaunchPlayStoreReview(requireActivity(), ::openInNewTab)
-                null
-            }
-
             resources.getString(R.string.pref_key_about) -> {
                 SettingsFragmentDirections.actionSettingsFragmentToAboutFragment()
             }

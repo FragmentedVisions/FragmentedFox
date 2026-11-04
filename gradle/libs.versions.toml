@@ -61,7 +61,6 @@ material = "1.14.0"
 mlkit-prompt = "1.0.0-beta2"
 osslicenses-plugin = "0.12.0"
 play-integrity = "1.6.0"
-play-review = "2.0.2"
 play-services-base = "18.10.0"
 play-services-fido = "21.3.0"
 protobuf = "4.35.0" # Keep Protobuf in sync with the version used by AppServices.
@@ -230,8 +229,6 @@ ksp-symbol-processing-common-deps = { module = "com.google.devtools.ksp:symbol-p
 mlkit-prompt = { module = "com.google.mlkit:genai-prompt", version.ref = "mlkit-prompt" }
 osslicenses-plugin = { module = "com.google.android.gms:oss-licenses-plugin", version.ref = "osslicenses-plugin" }
 play-integrity = { module = "com.google.android.play:integrity", version.ref = "play-integrity" }
-play-review = { module = "com.google.android.play:review", version.ref = "play-review" }
-play-review-ktx = { module = "com.google.android.play:review-ktx", version.ref = "play-review" }
 play-services-base = { module = "com.google.android.gms:play-services-base", version.ref = "play-services-base" }
 play-services-fido = { module = "com.google.android.gms:play-services-fido", version.ref = "play-services-fido" }
 protobuf-compiler = { module = "com.google.protobuf:protoc", version.ref = "protobuf" }

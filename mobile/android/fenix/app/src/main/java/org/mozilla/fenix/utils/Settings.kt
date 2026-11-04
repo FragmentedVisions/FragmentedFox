@@ -392,26 +392,6 @@ class Settings(
         default = false,
     )
 
-    var adjustCampaignId by stringPreference(
-        appContext.getPreferenceKey(R.string.pref_key_adjust_campaign),
-        default = "",
-    )
-
-    var adjustNetwork by stringPreference(
-        appContext.getPreferenceKey(R.string.pref_key_adjust_network),
-        default = "",
-    )
-
-    var adjustAdGroup by stringPreference(
-        appContext.getPreferenceKey(R.string.pref_key_adjust_adgroup),
-        default = "",
-    )
-
-    var adjustCreative by stringPreference(
-        appContext.getPreferenceKey(R.string.pref_key_adjust_creative),
-        default = "",
-    )
-
     var nimbusExperimentsFetched by booleanPreference(
         appContext.getPreferenceKey(R.string.pref_key_nimbus_experiments_fetched),
         default = false,
@@ -465,21 +445,6 @@ class Settings(
     var isUserXTwitterAttributed by booleanPreference(
         appContext.getPreferenceKey(R.string.pref_key_is_user_x_twitter_attributed),
         default = false,
-    )
-
-    var rtamoAddonDownloadUrl by stringPreference(
-        appContext.getPreferenceKey(R.string.pref_key_rtamo_addon_download_url),
-        default = "",
-    )
-
-    var rtamoAddonImageUrl by stringPreference(
-        appContext.getPreferenceKey(R.string.pref_key_rtamo_addon_image_url),
-        default = "",
-    )
-
-    var rtamoAddonName by stringPreference(
-        appContext.getPreferenceKey(R.string.pref_key_rtamo_addon_name),
-        default = "",
     )
 
     var contileContextId by stringPreference(

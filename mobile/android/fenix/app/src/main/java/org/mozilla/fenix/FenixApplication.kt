@@ -861,11 +861,6 @@ open class FenixApplication : Application(), Provider, ThemeProvider {
                 ),
             )
 
-            adjustCampaign.set(settings.adjustCampaignId)
-            adjustAdGroup.set(settings.adjustAdGroup)
-            adjustCreative.set(settings.adjustCreative)
-            adjustNetwork.set(settings.adjustNetwork)
-
             settings.migrateSearchWidgetInstalledPrefIfNeeded()
             searchWidgetInstalled.set(settings.searchWidgetInstalled)
 

@@ -16,6 +16,7 @@ The `shrink` choice (default `on`) shrinks code and resources for a smaller app.
 
 Known problems:
 
+- A full build has now passed: the engine compile took about 97 minutes and the app build about 40 minutes, 25 of which were Android lint, which the workflow now skips (`-x :fenix:lintVitalRelease`). That run's APK was lost because the workflow looked for it in the wrong folder. Gradle output goes to `obj-android/gradle/build/mobile/android/fenix/app/outputs/apk/release/`, and only the `arm64-v8a` APK is a complete phone build, since only the arm64 engine is compiled.
 - With WebRTC and debug symbols left out, the engine compile finished in about 87 minutes. The earlier runs, which had both, lost their runner without a log: with 4 jobs and debug symbols about 13 minutes in (twice), and with 2 jobs about 26 minutes in. Memory pressure during the heavy Rust compile is the likely cause but is not confirmed. Debug symbols were turned off and WebRTC was left out of the compile to reduce it, and neither change has been tested. A build without WebRTC is a supported configuration (GeckoView's build file already handles it), but Mozilla ships Android with WebRTC, so an unexpected failure is possible.
 - A full compile on 4 cores may approach GitHub's 6 hour job limit.
 - Mozilla's prebuilt engine (artifact builds) cannot be used: the lookup checked 150 upstream revisions and found no built Android artifacts for this base.

@@ -95,16 +95,21 @@ jobs:
         run: |
           FLAGS=""
           if [ "$SHRINK" = "off" ]; then FLAGS="-PdisableOptimization"; fi
-          ./mach gradle fenix:assembleRelease $FLAGS
+          ./mach gradle fenix:assembleRelease -x :fenix:lintVitalRelease $FLAGS
 
       - name: List APKs
-        run: find mobile/android/fenix/app/build obj-android -name '*.apk' -exec ls -l {} \;
+        run: find obj-android/gradle/build/mobile/android/fenix/app/outputs/apk -name '*.apk' -exec ls -l {} \;
+
+      - name: Show APK signature
+        run: |
+          APKSIGNER=$(ls ~/.mozbuild/android-sdk-linux/build-tools/*/apksigner | tail -1)
+          "$APKSIGNER" verify --print-certs obj-android/gradle/build/mobile/android/fenix/app/outputs/apk/release/fenix-arm64-v8a-release.apk || true
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: fragmentedfox-android
-          path: mobile/android/fenix/app/build/outputs/apk/**/*.apk
+          path: obj-android/gradle/build/mobile/android/fenix/app/outputs/apk/release/fenix-arm64-v8a-release.apk
           if-no-files-found: error
 
       - name: Compile cache statistics
@@ -121,7 +126,7 @@ jobs:
       - name: Size report
         if: always()
         run: |
-          for apk in $(find mobile/android/fenix/app/build/outputs/apk -name '*.apk' 2>/dev/null); do
+          for apk in $(find obj-android/gradle/build/mobile/android/fenix/app/outputs/apk -name '*.apk' 2>/dev/null); do
             echo "== $apk"
             ls -l "$apk"
             unzip -l "$apk" | sort -k1 -n -r | head -40

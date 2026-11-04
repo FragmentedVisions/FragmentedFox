@@ -10,13 +10,12 @@ import org.junit.Assert.assertFalse
 import org.junit.Assert.assertTrue
 import org.junit.Test
 import org.junit.runner.RunWith
-import org.mozilla.fenix.components.metrics.MozillaProductDetector
 import org.mozilla.fenix.customtabs.EXTRA_IS_SANDBOX_CUSTOM_TAB
 import org.robolectric.RobolectricTestRunner
 
 private const val AUTH_CUSTOM_TAB_ACTIVITY_CLASS_NAME = "org.mozilla.fenix.settings.account.AuthCustomTabActivity"
 
-private val FIREFOX_PACKAGE_NAME = MozillaProductDetector.MozillaProducts.FIREFOX.productName
+private const val FIREFOX_PACKAGE_NAME = "org.mozilla.firefox"
 
 /**
  * The application ID of each Fenix build flavor (see app/build.gradle). The sync-auth check must

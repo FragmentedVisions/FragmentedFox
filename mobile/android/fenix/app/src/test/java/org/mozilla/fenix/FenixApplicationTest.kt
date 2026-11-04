@@ -42,7 +42,6 @@ import org.mozilla.fenix.GleanMetrics.SearchDefaultEngine
 import org.mozilla.fenix.GleanMetrics.TabStrip
 import org.mozilla.fenix.GleanMetrics.TopSites
 import org.mozilla.fenix.components.fake.FakeMetricController
-import org.mozilla.fenix.components.metrics.MozillaProductDetector
 import org.mozilla.fenix.components.toolbar.ToolbarPosition
 import org.mozilla.fenix.distributions.DefaultDistributionBrowserStoreProvider
 import org.mozilla.fenix.distributions.DistributionIdManager
@@ -66,7 +65,6 @@ class FenixApplicationTest {
 
     private lateinit var application: FenixApplication
     private lateinit var browsersCache: BrowsersCache
-    private lateinit var mozillaProductDetector: MozillaProductDetector
     private lateinit var browserStore: BrowserStore
 
     private val testDistributionProviderChecker = object : DistributionProviderChecker {
@@ -83,7 +81,6 @@ class FenixApplicationTest {
     fun setUp() {
         application = ApplicationProvider.getApplicationContext()
         browsersCache = mockk(relaxed = true)
-        mozillaProductDetector = mockk(relaxed = true)
         browserStore = BrowserStore()
 
         every { testContext.components.core } returns mockk(relaxed = true)
@@ -130,7 +127,6 @@ class FenixApplicationTest {
     @Test
     @Config(sdk = [Build.VERSION_CODES.O])
     fun `WHEN setStartupMetrics is called THEN sets some base metrics`() = runBlocking {
-        val expectedAppName = "org.mozilla.fenix"
         val expectedAppInstallSource = "org.mozilla.install.source"
         val settings = spyk(Settings(testContext))
         val dohSettingsProvider = mockk<DohSettingsProvider>()
@@ -141,8 +137,6 @@ class FenixApplicationTest {
         @Suppress("DEPRECATION")
         every { packageManager.getInstallerPackageName(any()) } returns expectedAppInstallSource
         DefaultBrowserUtils.setAsDefaultBrowser(testContext.packageName)
-        every { mozillaProductDetector.getMozillaBrowserDefault(any()) } returns expectedAppName
-        every { mozillaProductDetector.getInstalledMozillaProducts(any()) } returns listOf(expectedAppName)
         // Testing [settings.migrateSearchWidgetInstalledPrefIfNeeded]
         settings.preferences.edit().putInt("pref_key_search_widget_installed", 5).apply()
         settings.preferences.edit().putString("pref_key_current_wallpaper", "default").apply()
@@ -203,14 +197,11 @@ class FenixApplicationTest {
             browserStore = browserStore,
             settings = settings,
             dohSettingsProvider,
-            mozillaProductDetector = mozillaProductDetector,
         )
 
         // Verify that browser defaults metrics are set.
         assertEquals("Mozilla", Metrics.distributionId.testGetValue())
         assertEquals(true, Metrics.defaultBrowser.testGetValue())
-        assertEquals(expectedAppName, Metrics.defaultMozBrowser.testGetValue())
-        assertEquals(listOf(expectedAppName), Metrics.mozillaProducts.testGetValue())
         assertEquals(true, Metrics.searchWidgetInstalled.testGetValue())
         assertEquals(true, Metrics.hasOpenTabs.testGetValue())
         assertEquals(1, Metrics.tabsOpenCount.testGetValue())
@@ -264,7 +255,6 @@ class FenixApplicationTest {
         application.setStartupMetrics(
             browserStore = browserStore,
             settings = settings,
-            mozillaProductDetector = mozillaProductDetector,
         )
 
         assertEquals(contextId, TopSites.contextId.testGetValue())
@@ -284,7 +274,6 @@ class FenixApplicationTest {
             application.setStartupMetrics(
                 browserStore = browserStore,
                 settings = settings,
-                mozillaProductDetector = mozillaProductDetector,
             )
 
             assertEquals("Test", Preferences.etpCustomCookiesSelection.testGetValue())
@@ -306,7 +295,6 @@ class FenixApplicationTest {
             application.setStartupMetrics(
                 browserStore = browserStore,
                 settings = settings,
-                mozillaProductDetector = mozillaProductDetector,
             )
 
             assertEquals("Test", Preferences.etpCustomCookiesSelection.testGetValue())

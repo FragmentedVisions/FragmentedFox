@@ -50,7 +50,6 @@ subprojects {
 
     // Prevent some dependencies used by Fenix/Focus from being used in AC.
     project.configurations.all {
-        exclude group: 'com.adjust.sdk', module: 'adjust-android'
         exclude group: 'io.mockk', module: 'mockk'
     }
 

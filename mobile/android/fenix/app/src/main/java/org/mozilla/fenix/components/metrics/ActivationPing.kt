@@ -6,10 +6,8 @@ package org.mozilla.fenix.components.metrics
 
 import android.content.Context
 import android.content.SharedPreferences
-import android.util.Base64
 import androidx.annotation.VisibleForTesting
 import androidx.core.content.edit
-import com.google.android.gms.ads.identifier.AdvertisingIdClient
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -17,7 +15,6 @@ import kotlinx.coroutines.launch
 import mozilla.components.support.base.log.logger.Logger
 import org.mozilla.fenix.GleanMetrics.Activation
 import org.mozilla.fenix.GleanMetrics.Pings
-import org.mozilla.fenix.components.metrics.MetricsUtils.getHashedIdentifier
 
 class ActivationPing(
     private val context: Context,
@@ -65,17 +62,7 @@ class ActivationPing(
         Activation.activationId.generateAndSet()
 
         CoroutineScope(backgroundDispatcher).launch {
-            val hashedId = getHashedIdentifier(
-                retrieveAdvertisingIdInfo = { AdvertisingIdClient.getAdvertisingIdInfo(context).id },
-                encodeToString = Base64::encodeToString,
-            )
-            if (hashedId != null) {
-                Logger.info("ActivationPing - generating ping with the hashed id")
-                // We have a valid, hashed Google Advertising ID.
-                Activation.identifier.set(hashedId)
-            }
-
-            Logger.info("ActivationPing - generating ping (has `identifier`: ${hashedId != null})")
+            Logger.info("ActivationPing - generating ping")
             Pings.activation.submit()
             markAsTriggered()
         }

@@ -2993,32 +2993,6 @@ metrics:
     metadata:
       tags:
         - Settings
-  distribution_id:
-    type: string
-    lifetime: application
-    description: |
-      A string containing the distribution identifier. This was used
-      to identify installs from Mozilla Online, but now also identifies
-      partnership deal distributions
-    send_in_pings:
-      - metrics
-      - baseline
-      - usage-reporting
-    bugs:
-      - https://github.com/mozilla-mobile/fenix/issues/16075
-    data_reviews:
-      - https://github.com/mozilla-mobile/fenix/issues/16075
-      - https://github.com/mozilla-mobile/fenix/pull/19924#issuecomment-861423789
-    data_sensitivity:
-      - technical
-    notification_emails:
-      - android-probes@mozilla.com
-    expires: never
-    no_lint:
-      - BASELINE_PING
-    metadata:
-      tags:
-        - China
   bookmarks_add:
     type: labeled_counter
     lifetime: application
@@ -9517,25 +9491,6 @@ stories_library:
       tags:
         - PocketIntegration
 first_session:
-  distribution_id:
-    type: string
-    lifetime: application
-    description: |
-      A string containing the distribution identifier. This was used
-      to identify installs from Mozilla Online, but now also identifies
-      partnership deal distributions
-    send_in_pings:
-      - first-session
-    bugs:
-      - https://github.com/mozilla-mobile/fenix/issues/20376
-    data_reviews:
-      - https://github.com/mozilla-mobile/fenix/pull/22543#issuecomment-977456848
-    data_sensitivity:
-      - technical
-    notification_emails:
-      - android-probes@mozilla.com
-      - rxu@mozilla.com
-    expires: never
   timestamp:
     send_in_pings:
       - first-session

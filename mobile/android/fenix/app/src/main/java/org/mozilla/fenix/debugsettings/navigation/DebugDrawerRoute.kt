@@ -21,7 +21,6 @@ import org.mozilla.fenix.debugsettings.cfrs.CfrToolsState
 import org.mozilla.fenix.debugsettings.cfrs.CfrToolsStore
 import org.mozilla.fenix.debugsettings.crashtools.CrashTools
 import org.mozilla.fenix.debugsettings.creditcards.CreditCardsTools
-import org.mozilla.fenix.debugsettings.distributions.DistributionTools
 import org.mozilla.fenix.debugsettings.gleandebugtools.GleanDebugToolsStore
 import org.mozilla.fenix.debugsettings.gleandebugtools.ui.GleanDebugToolsScreen
 import org.mozilla.fenix.debugsettings.logins.LoginsTools
@@ -99,10 +98,6 @@ enum class DebugDrawerRoute(
     SportsWidgetTool(
         route = "sports_widget_tool",
         title = R.string.debug_drawer_sports_widget_tool_title,
-    ),
-    DistributionTools(
-        route = "distribution_tools",
-        title = R.string.debug_drawer_distribution_tools_title,
     ),
     ;
 
@@ -272,15 +267,6 @@ enum class DebugDrawerRoute(
                             debugDrawerStore.dispatch(DebugDrawerAction.DrawerClosed)
                         }
                         content = {}
-                    }
-
-                    DistributionTools -> {
-                        onClick = {
-                            debugDrawerStore.dispatch(DebugDrawerAction.NavigateTo.DistributionTools)
-                        }
-                        content = {
-                            DistributionTools()
-                        }
                     }
                 }
 

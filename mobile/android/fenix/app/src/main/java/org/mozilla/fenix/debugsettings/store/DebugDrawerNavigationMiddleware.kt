@@ -71,8 +71,6 @@ class DebugDrawerNavigationMiddleware(
                 navController.navigate(route = DebugDrawerRoute.TabGroupTools.route)
             is DebugDrawerAction.NavigateTo.TabProcessTools ->
                 navController.navigate(route = DebugDrawerRoute.TabProcessTools.route)
-            is DebugDrawerAction.NavigateTo.DistributionTools ->
-                navController.navigate(route = DebugDrawerRoute.DistributionTools.route)
         }
     }
 }

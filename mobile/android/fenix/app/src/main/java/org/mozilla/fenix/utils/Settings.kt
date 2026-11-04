@@ -2921,14 +2921,6 @@ class Settings(
     )
 
     /**
-     * Distribution ID that represents if the app was installed via a distribution deal
-     */
-    var distributionId by stringPreference(
-        key = appContext.getPreferenceKey(R.string.pref_key_distribution_id),
-        default = "",
-    )
-
-    /**
      * Whether the Tab Manager opening animation is enabled.
      */
     var tabManagerOpeningAnimationEnabled by booleanPreference(

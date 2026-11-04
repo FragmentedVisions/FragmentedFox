@@ -84,7 +84,6 @@ class FirstSessionMetricsService(private val context: Context) : MetricsService 
                     packageName = context.application.packageName,
                 ),
             )
-            FirstSession.distributionId.set(context.components.distributionIdManager.getDistributionId())
 
             Pings.firstSession.submit()
             markAsTriggered()

@@ -365,10 +365,6 @@ open class FenixApplication : Application(), Provider, ThemeProvider {
                     components.settings.hasMadeMarketingTelemetrySelection,
                 isDailyUsagePingEnabled = components.settings.isDailyUsagePingEnabled,
             )
-        } else {
-            CoroutineScope(IO).launch {
-                components.distributionIdManager.startAdjustIfSkippingConsentScreen()
-            }
         }
 
         GlobalFxSuggestDependencyProvider.initialize(components.fxSuggest.storage)
@@ -839,9 +835,6 @@ open class FenixApplication : Application(), Provider, ThemeProvider {
     ) {
         setPreferenceMetrics(settings, dohSettingsProvider)
         with(Metrics) {
-            // Set this early to guarantee it's in every ping from here on.
-            distributionId.set(components.distributionIdManager.getDistributionId())
-
             if (settings.hasAcceptedTermsOfService) {
                 setTermsOfUseStartUpMetrics(settings)
             }

@@ -38,7 +38,6 @@ class DebugDrawerTelemetryMiddleware : Middleware<DebugDrawerState, DebugDrawerA
             DebugDrawerAction.NavigateTo.Logins,
             DebugDrawerAction.NavigateTo.RegionDebugTools,
             DebugDrawerAction.NavigateTo.TabTools,
-            DebugDrawerAction.NavigateTo.DistributionTools,
             DebugDrawerAction.OnBackPressed,
             -> Unit
         }

@@ -37,7 +37,6 @@ import mozilla.components.support.remotesettings.RemoteSettingsService
 import mozilla.components.support.remotesettings.into
 import mozilla.components.support.utils.BuildManufacturerChecker
 import mozilla.components.support.utils.ClipboardHandler
-import mozilla.components.support.utils.ext.packageManagerWrapper
 import org.mozilla.fenix.BuildConfig
 import org.mozilla.fenix.Config
 import org.mozilla.fenix.FeatureFlags
@@ -58,10 +57,6 @@ import org.mozilla.fenix.components.metrics.MetricsMiddleware
 import org.mozilla.fenix.crashes.CrashReportingAppMiddleware
 import org.mozilla.fenix.crashes.SettingsCrashReportCache
 import org.mozilla.fenix.datastore.pocketStoriesSelectedCategoriesDataStore
-import org.mozilla.fenix.distributions.DefaultDistributionBrowserStoreProvider
-import org.mozilla.fenix.distributions.DefaultDistributionProviderChecker
-import org.mozilla.fenix.distributions.DefaultDistributionSettings
-import org.mozilla.fenix.distributions.DistributionIdManager
 import org.mozilla.fenix.ext.asRecentTabs
 import org.mozilla.fenix.ext.components
 import org.mozilla.fenix.ext.filterState
@@ -383,16 +378,6 @@ class Components(private val context: Context) {
     )
 
     val fxSuggest by lazyMonitored { FxSuggest(context, remoteSettingsService.value, analytics.crashReporter) }
-
-    val distributionIdManager by lazyMonitored {
-        DistributionIdManager(
-            packageManager = context.packageManagerWrapper,
-            browserStoreProvider = DefaultDistributionBrowserStoreProvider(core.store),
-            distributionProviderChecker = DefaultDistributionProviderChecker(context),
-            distributionSettings = DefaultDistributionSettings(settings),
-            metricController = analytics.metrics,
-        )
-    }
 
     val termsOfUsePromptRepository by lazyMonitored {
         DefaultTermsOfUsePromptRepository(settings)

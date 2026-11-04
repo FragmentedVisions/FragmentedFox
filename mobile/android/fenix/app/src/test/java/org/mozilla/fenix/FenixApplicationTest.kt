@@ -27,7 +27,6 @@ import mozilla.components.feature.addons.migration.DefaultSupportedAddonsChecker
 import mozilla.components.support.test.robolectric.DefaultBrowserUtils
 import mozilla.components.support.test.robolectric.testContext
 import mozilla.components.support.utils.BrowsersCache
-import mozilla.components.support.utils.ext.packageManagerWrapper
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNull
 import org.junit.Assert.assertTrue
@@ -41,12 +40,7 @@ import org.mozilla.fenix.GleanMetrics.Preferences
 import org.mozilla.fenix.GleanMetrics.SearchDefaultEngine
 import org.mozilla.fenix.GleanMetrics.TabStrip
 import org.mozilla.fenix.GleanMetrics.TopSites
-import org.mozilla.fenix.components.fake.FakeMetricController
 import org.mozilla.fenix.components.toolbar.ToolbarPosition
-import org.mozilla.fenix.distributions.DefaultDistributionBrowserStoreProvider
-import org.mozilla.fenix.distributions.DistributionIdManager
-import org.mozilla.fenix.distributions.DistributionProviderChecker
-import org.mozilla.fenix.distributions.DistributionSettings
 import org.mozilla.fenix.ext.components
 import org.mozilla.fenix.helpers.FenixGleanTestRule
 import org.mozilla.fenix.settings.ShortcutType
@@ -67,16 +61,6 @@ class FenixApplicationTest {
     private lateinit var browsersCache: BrowsersCache
     private lateinit var browserStore: BrowserStore
 
-    private val testDistributionProviderChecker = object : DistributionProviderChecker {
-        override suspend fun queryProvider(): String? = null
-    }
-
-    private val testDistributionSettings = object : DistributionSettings {
-        override fun getDistributionId(): String = ""
-        override fun saveDistributionId(id: String) = Unit
-        override fun setMarketingTelemetryPreferences() = Unit
-    }
-
     @Before
     fun setUp() {
         application = ApplicationProvider.getApplicationContext()
@@ -87,13 +71,6 @@ class FenixApplicationTest {
         every { testContext.components.nimbus } returns mockk(relaxed = true)
         every { testContext.components.aiControlsFeatureBlock } returns AIFeatureBlock.inMemory()
         every { testContext.components.aiFeatureRegistry } returns AIFeatureRegistry.inMemory()
-        every { testContext.components.distributionIdManager } returns DistributionIdManager(
-            packageManager = testContext.packageManagerWrapper,
-            browserStoreProvider = DefaultDistributionBrowserStoreProvider(browserStore),
-            distributionProviderChecker = testDistributionProviderChecker,
-            distributionSettings = testDistributionSettings,
-            metricController = FakeMetricController(),
-        )
     }
 
     @Test
@@ -200,7 +177,6 @@ class FenixApplicationTest {
         )
 
         // Verify that browser defaults metrics are set.
-        assertEquals("Mozilla", Metrics.distributionId.testGetValue())
         assertEquals(true, Metrics.defaultBrowser.testGetValue())
         assertEquals(true, Metrics.searchWidgetInstalled.testGetValue())
         assertEquals(true, Metrics.hasOpenTabs.testGetValue())

@@ -22,7 +22,6 @@ import mozilla.components.concept.sync.DeviceType
 import mozilla.components.concept.sync.OAuthAccount
 import mozilla.components.feature.accounts.push.CloseTabsCommandReceiver
 import mozilla.components.feature.accounts.push.CloseTabsFeature
-import mozilla.components.feature.accounts.push.FxaPushSupportFeature
 import mozilla.components.feature.accounts.push.SendTabFeature
 import mozilla.components.feature.syncedtabs.SyncedTabsAutocompleteProvider
 import mozilla.components.feature.syncedtabs.commands.SyncedTabsCommands
@@ -76,7 +75,6 @@ private val DEFAULT_SYNCED_TABS_COMMANDS_EXTRA_FLUSH_DELAY = 5.seconds
 @Suppress("LongParameterList")
 class BackgroundServices(
     private val context: Context,
-    private val push: Push,
     settings: Settings,
     crashReporter: CrashReporter,
     historyStorage: Lazy<PlacesHistoryStorage>,
@@ -222,12 +220,6 @@ class BackgroundServices(
         accountManager.register(accountAbnormalities)
 
         accountManager.register(AccountManagerReadyObserver(accountManagerAvailableQueue))
-
-        // Enable push if it's configured.
-        push.feature?.let { autoPushFeature ->
-            FxaPushSupportFeature(context, accountManager, autoPushFeature, crashReporter)
-                .initialize()
-        }
 
         SendTabFeature(accountManager) { device, tabs ->
             notificationManager.showReceivedTabs(context, device, tabs)

@@ -30,6 +30,7 @@ Not changed: Safe Browsing local list updates, search suggestions, and the add-o
 - `onboarding.fml.yaml` and `strings.xml`: the first-run Terms of Use card shows the Mozilla Public License and README links and a FragmentedFox privacy line instead of Mozilla's Terms of Use and data-sharing text.
 - `static_strings.xml`: the fixed `firefox` and `app_name_firefox` text resources, which about 30 screens use as the browser's name (trackers panel, About, setup checklist, translation dialogs, link sharing, crash screen and others), now say FragmentedFox.
 - `strings.xml` (default language only): strings that refer to this browser say FragmentedFox, and the About text says it is a fork built from Mozilla's source. Strings about Mozilla services (Sync, studies, crash reports, Terms of Use) and all other languages are unchanged.
+- Third-party SDKs removed from the Android app (branch `remove-sdks`): Adjust marketing attribution, the Google Play install referrer and advertising ID reader (and the Mozilla Return to AMO handler that used the referrer), Firebase push (and with it web push and push-based Send Tab alerts, which were already off without a Firebase config), Google Play Integrity (the page summarizer now authenticates only through a Mozilla account), and Sentry crash reporting. Their Gradle dependencies, manifest entries, build tokens, debug screens and tests are gone. The Glean marketing metric definitions, settings keys and the Sentry library module (still used by Focus) were left in place to keep the change small.
 
 ## Checked and left as is
 

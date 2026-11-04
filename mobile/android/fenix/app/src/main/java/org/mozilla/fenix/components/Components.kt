@@ -31,7 +31,6 @@ import mozilla.components.lib.ai.controls.dataStore
 import mozilla.components.lib.ai.controls.default
 import mozilla.components.lib.crash.store.CrashAction
 import mozilla.components.lib.crash.store.CrashMiddleware
-import mozilla.components.lib.integrity.googleplay.GooglePlayIntegrityClient
 import mozilla.components.lib.llm.mlpa.MlpaTokenStorage
 import mozilla.components.lib.publicsuffixlist.PublicSuffixList
 import mozilla.components.service.fxrelay.eligibility.RelayEligibilityStore
@@ -426,14 +425,6 @@ class Components(private val context: Context) {
         )
     }
 
-    val integrityClient by lazyMonitored {
-        GooglePlayIntegrityClient.create(
-            context = context,
-            projectNumberToken = BuildConfig.GPS_INTEGRITY_TOKEN,
-            requestHashProvider = clientUUID,
-        )
-    }
-
     val termsOfUsePromptRepository by lazyMonitored {
         DefaultTermsOfUsePromptRepository(settings)
     }
@@ -535,12 +526,8 @@ class Components(private val context: Context) {
             client = core.client,
             storage = MlpaTokenStorage.sharedPrefs(context),
             fxaTokenProvider = backgroundServices.accountManager.accessTokenProvider,
-            integrityClient = integrityClient,
-            userIdProvider = clientUUID,
         )
     }
-
-    val clientUUID by lazyMonitored { ClientUUID.build(context) }
 }
 
 /**

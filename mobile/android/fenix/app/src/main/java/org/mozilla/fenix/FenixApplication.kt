@@ -431,7 +431,6 @@ open class FenixApplication : Application(), Provider, ThemeProvider {
         queueIncrementNumberOfAppLaunches(queue)
         queueRestoreLocale(queue)
         queueStorageMaintenance(queue)
-        queueIntegrityClientWarmUp(queue)
         queueNimbusFetchInForeground(queue)
         queueDownloadWallpapers(queue)
 
@@ -557,20 +556,6 @@ open class FenixApplication : Application(), Provider, ThemeProvider {
         components.core.historyStorage.registerStorageMaintenanceWorker()
         components.core.passwordsStorage.registerStorageMaintenanceWorker()
         components.core.autofillStorage.registerStorageMaintenanceWorker()
-    }
-
-    @OptIn(DelicateCoroutinesApi::class) // GlobalScope usage
-    private fun queueIntegrityClientWarmUp(queue: RunWhenReadyQueue) {
-        // We want to avoid shipping this warmup into UI test builds to reduce quota impact, especially given
-        // that the Integrity verdicts will always fail anyway.
-        if (!BuildConfig.TELEMETRY) {
-            return
-        }
-        runOnVisualCompleteness(queue) {
-            GlobalScope.launch(IO) {
-                components.integrityClient.warmUp()
-            }
-        }
     }
 
     @OptIn(DelicateCoroutinesApi::class, ExperimentalAndroidComponentsApi::class) // GlobalScope usage

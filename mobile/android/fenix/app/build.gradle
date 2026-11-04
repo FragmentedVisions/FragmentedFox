@@ -373,13 +373,6 @@ android.defaultConfig.with {
         buildConfigField 'String', 'MLS_TOKEN', '""'
     }
 
-    try {
-        def token = new File("${rootDir}/.gps_integrity_token").text.trim()
-        buildConfigField 'String', 'GPS_INTEGRITY_TOKEN', '"' + token + '"'
-    } catch (FileNotFoundException ignored) {
-        buildConfigField 'String', 'GPS_INTEGRITY_TOKEN', '""'
-    }
-
     if (gradle.hasProperty("localProperties.glean.custom.server.url")) {
         def url = gradle.getProperty("localProperties.glean.custom.server.url")
         buildConfigField 'String', 'GLEAN_CUSTOM_URL', url
@@ -546,7 +539,6 @@ dependencies {
     implementation project(':components:lib-dataprotect')
     implementation project(':components:lib-state')
     implementation project(':components:lib-accelerometer-sensormanager')
-    implementation project(':components:lib-integrity-googleplay')
     implementation project(':components:lib-llm-mlpa')
     implementation project(':components:lib-shake')
     implementation project(':components:lib-ai-controls')

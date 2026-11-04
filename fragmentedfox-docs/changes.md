@@ -38,6 +38,7 @@ Removing a feature means deleting its code, resources, metrics, tests and depend
 - **Mozilla VPN (IP Protection):** the settings entry, menu item, toolbar pill, trust panel section, first-run prompt, snackbars, account sign-in hooks, navigation destinations, the `ip-protection` Nimbus feature, the Fenix dependency on `feature-ipprotection`, the strings in every language, the `vpn` Glean metrics and the matching tests. Left in place: the shared android-components and GeckoView VPN code, which nothing in the app uses, and entries for the deleted files in the lint and detekt baselines. `browser.ipProtection.enabled` is also false in `geckoview-prefs.js`.
 - **Third-party SDKs:** Adjust marketing attribution, the Google Play install referrer and advertising ID reader (and the Return to AMO handler that used the referrer), Firebase push (so web push and push-based Send Tab alerts are gone, and were already off without a Firebase config), Google Play Integrity, and Sentry crash reporting. Their dependencies, manifest entries, build tokens, debug screens, settings, Glean metrics, the `adjust-attribution` ping and tests are removed.
 - **Page summarizer ("shake to summarize"):** the summarize screen and page content extraction, the Summarize menu item and toolbar highlight, the shake detector, the Page summaries settings screen and its AI controls entry, the `shake-to-summarize` Nimbus feature, the metrics, the instrumented tests, and the `feature-summarize`, `lib-llm-mlpa` and `lib-shake` dependencies. It sent page text to a Mozilla-hosted service, so no page text leaves the device for summarising any more.
+- **Installed apps probe and partner distribution code:** the startup check that listed which Mozilla apps were installed (it only fed two telemetry metrics), and the distribution manager that detected partner preinstalls (Vivo, Digital Turbine, Aura, Xiaomi). The distribution code queried other apps' content providers on first run, could switch marketing telemetry on without a prompt on partner devices, and needed the `com.adjust.preinstall.READ_PERMISSION` permission, which is gone too. Their metrics, debug screen, setting and tests are removed.
 - **Play Store review prompt:** the rating prompt and its bottom sheet, the "Rate on Google Play" settings item, the `custom-review-prompt` Nimbus features, the metrics and the Google Play review library. It only works for apps installed from Google Play.
 
 Kept on purpose, to keep each change small and easy to re-apply: the library modules `lib-push-firebase`, `lib-integrity-googleplay` and `lib-crash-sentry` (still used by Focus), which stay in the tree but are not compiled into the app; the UTM install-referrer settings and Nimbus context fields, which are always empty now; and Mozilla's Socorro crash reporter, which only sends a report if the user taps send on the crash screen.
@@ -47,6 +48,14 @@ Kept on purpose, to keep each change small and easy to re-apply: the library mod
 - Android Firefox Suggest (`fx-suggest` in `mobile/android/fenix/app/nimbus.fml.yaml`) defaults to off for release builds and is only on for developer and nightly channels. No remote experiment endpoint is configured, so nothing can turn it on.
 - Android search suggestions and trending searches default to on (`Settings.kt`), so typed text is sent to the search engine as it is typed. Turning them off by default is an open decision.
 
+
+## Android security review
+
+Checked in the app manifest: backups are off (`allowBackup=false`), the only exported components are the launcher and link entry points, the autofill and custom tabs services, the search widget and a QA receiver protected by the `DUMP` permission. `QUERY_ALL_PACKAGES` is kept because "open in app", sharing and default browser detection need it. Not changed, but worth knowing:
+
+- `usesCleartextTraffic` is true and the network security config allows cleartext. This only governs Android's own Java networking. Gecko does its own networking, and HTTPS-Only is on, so page loads are not affected. Tightening it needs testing first.
+- `CAMERA` and `RECORD_AUDIO` are declared. WebRTC is compiled out, so sites cannot use them, but the QR scanner and similar features may. Nothing is requested until a feature asks.
+- Every pref named in the Desktop section above was checked and still exists. `app.shield.optoutstudies.enabled` is set to false twice in `firefox.js`, harmlessly, because both branches of Mozilla's `#ifdef` now say false.
 
 ## Names and branding
 
@@ -64,5 +73,6 @@ Kept on purpose, to keep each change small and easy to re-apply: the library mod
 - No update server. The desktop build is configured with the updater off, so new versions are shipped as downloads.
 - The default search engines, Sync and add-on sources are Mozilla's.
 - `Assets.car` (a compiled macOS asset catalog) still has the old icon.
+- The marketing data consent code is still in the app but can no longer be reached: the onboarding card (off by default), the "Marketing data" switch in Data choices (only shown after consent was recorded), and the marketing telemetry settings and service type. Removing it means editing the onboarding and Data choices screens.
 - The Android app still uses Google's open-source license listing plugin (`oss-licenses`). It only builds the licenses screen and is next to be reviewed.
 - No network audit has been done yet, so "no data is sent" is based on reading the code and the build flags, not on watching traffic.

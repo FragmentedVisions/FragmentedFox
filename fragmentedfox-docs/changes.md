@@ -48,6 +48,7 @@ Kept on purpose, to keep each change small and easy to re-apply: the library mod
 
 ## Checked and left as is
 
+- The "+" new tab button in the top toolbar is off by default (`toolbarSimpleShortcutKey` is `none` in `Settings.kt`). A new tab is still one long press away on the tab counter, and the button can be brought back under Settings, Customize, toolbar shortcut. This only applies to new installs, because Android keeps the value already saved on a phone. `expected-settings.json` guards the default.
 - Pocket stories, sponsored stories, the Mozilla Ads Client and the Merino manifest are switched off by default in `nimbus.fml.yaml`. The code stays, so these are defaults that `expected-nimbus.json` guards. See [network](./network.md).
 - Android Firefox Suggest (`fx-suggest` in `mobile/android/fenix/app/nimbus.fml.yaml`) defaults to off for release builds and is only on for developer and nightly channels. No remote experiment endpoint is configured, so nothing can turn it on.
 - Android search suggestions and trending searches default to on (`Settings.kt`), so typed text is sent to the search engine as it is typed. They stay on by default on purpose, and the user can turn them off in settings.

@@ -215,7 +215,7 @@ class Settings(
      */
     var toolbarSimpleShortcutKey: String by stringPreference(
         key = appContext.getPreferenceKey(R.string.pref_key_toolbar_simple_shortcut),
-        default = { ShortcutType.NEW_TAB.value },
+        default = { ShortcutType.NONE.value },
         persistDefaultIfNotExists = true,
     )
 

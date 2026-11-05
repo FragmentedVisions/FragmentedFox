@@ -168,7 +168,7 @@ def check_settings():
     expected = json.loads(read(os.path.join(ROOT, "fragmentedfox-docs/expected-settings.json")))
     text = read(os.path.join(APP, "src/main/java/org/mozilla/fenix/utils/Settings.kt"))
     for name, value in expected.items():
-        match = re.search(r"\bvar %s by \w+\(.*?default\s*=\s*([^,\n]+),?" % re.escape(name), text, flags=re.S)
+        match = re.search(r"\bvar %s(?::\s*[\w<>?]+)? by \w+\(.*?default\s*=\s*([^,\n]+),?" % re.escape(name), text, flags=re.S)
         if not match:
             fail("settings", f"Settings.kt: {name} not found")
         elif match.group(1).strip() != value:

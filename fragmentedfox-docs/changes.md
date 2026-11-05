@@ -57,7 +57,9 @@ Kept on purpose, to keep each change small and easy to re-apply: the library mod
 
 Checked in the app manifest: backups are off (`allowBackup=false`), the only exported components are the launcher and link entry points, the autofill and custom tabs services, the search widget and a QA receiver protected by the `DUMP` permission. `QUERY_ALL_PACKAGES` is kept because "open in app", sharing and default browser detection need it. Not changed, but worth knowing:
 
-- `usesCleartextTraffic` is true and the network security config allows cleartext. This only governs Android's own Java networking. Gecko does its own networking, and HTTPS-Only is on, so page loads are not affected. Tightening it needs testing first.
+- Cleartext traffic is off. `usesCleartextTraffic` is false and the network security config refuses cleartext except for `localhost` and `127.0.0.1`. This only governs Android's own Java networking, since Gecko does its own networking and HTTPS-Only mode covers pages. The fork guard checks it. If an app feature that fetches over plain HTTP stops working, this is the first place to look.
+- `REQUEST_INSTALL_PACKAGES` is removed (`tools:node="remove"`, because the downloads library declares it). The browser can no longer launch the installer for a downloaded APK. The file can still be installed from the Files app.
+- `QUERY_ALL_PACKAGES` stays. The share sheet, the app icon picker and open-in-app links need it. Dropping it would need a `<queries>` list and testing on a phone.
 - `CAMERA` and `RECORD_AUDIO` are declared. WebRTC is compiled out, so sites cannot use them, but the QR scanner and similar features may. Nothing is requested until a feature asks.
 - Every pref named in the Desktop section above was checked and still exists. `app.shield.optoutstudies.enabled` is set to false twice in `firefox.js`, harmlessly, because both branches of Mozilla's `#ifdef` now say false.
 

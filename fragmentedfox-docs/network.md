@@ -32,6 +32,10 @@ What the Android app can contact, as read from the code and defaults. This is a 
 | Mozilla account servers | only if you sign in to sync |
 | Mozilla crash-stats | only if you choose to send a crash report |
 
+## Cleartext
+
+Plain HTTP from the app's own Java code is refused except for localhost. Pages are covered by HTTPS-Only mode.
+
 ## Not contacted on Android
 
 Several desktop prefs in `all.js` name Google or Mozilla URLs, such as the geolocation provider. They are not used by the Android app, which uses the system location service and asks the site permission first.

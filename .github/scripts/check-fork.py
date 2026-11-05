@@ -146,8 +146,9 @@ def check_removed():
         for pattern in forbidden["patterns"]:
             if re.search(pattern, text):
                 fail("removed", f"{os.path.relpath(path, ROOT)}: matches removed pattern {pattern}")
+    manifest = re.sub(r"<[^<>]*tools:node=\"remove\"[^<>]*>", "", read(os.path.join(APP, "src/main/AndroidManifest.xml")))
     for permission in forbidden["permissions"]:
-        if permission in read(os.path.join(APP, "src/main/AndroidManifest.xml")):
+        if permission in manifest:
             fail("removed", f"manifest still declares {permission}")
 
 
@@ -191,6 +192,16 @@ def check_nimbus():
             fail("nimbus", f"nimbus.fml.yaml: {key} is {actual}, expected {value}")
 
 
+def check_cleartext():
+    manifest = read(os.path.join(APP, "src/main/AndroidManifest.xml"))
+    if 'android:usesCleartextTraffic="false"' not in manifest:
+        fail("cleartext", "AndroidManifest.xml: usesCleartextTraffic is not false")
+    config = read(os.path.join(APP, "src/main/res/xml/network_security_config.xml"))
+    base = re.search(r"<base-config[^>]*cleartextTrafficPermitted=\"(\w+)\"", config)
+    if not base or base.group(1) != "false":
+        fail("cleartext", "network_security_config.xml: base-config permits cleartext")
+
+
 def check_syntax():
     for path in glob.glob(os.path.join(APP, "*.yaml")):
         try:
@@ -213,7 +224,7 @@ def normalise(section, message):
 
 
 def main():
-    checks = [check_imports, check_resources, check_pings, check_removed, check_prefs, check_settings, check_nimbus, check_syntax]
+    checks = [check_imports, check_resources, check_pings, check_removed, check_prefs, check_settings, check_nimbus, check_cleartext, check_syntax]
     selected_flags = [a for a in sys.argv[1:] if a.startswith("--")]
     selected = [a for a in sys.argv[1:] if not a.startswith("--")]
     for check in checks:

@@ -43,6 +43,7 @@ GitHub's free runners have 4 cores, 16 GB of memory and a 6 hour job limit. A fu
 - the prefs in `expected-prefs.json` and the Android defaults in `expected-settings.json` and the Nimbus defaults in `expected-nimbus.json` still have the values FragmentedFox sets (an ESR upgrade can silently change them);
 - cleartext traffic is still refused, DuckDuckGo is still the preferred default search engine, and the Android defaults flipped by FragmentedFox (Pocket, ads client, expanded toolbar and others) have not changed back;
 - string, drawable and raw resources used by instrumentation tests (`androidTest`) exist as well, so removing a resource from the app cannot leave a test pointing at it;
+- every Glean metric and ping the app code records is defined in `metrics.yaml` and `pings.yaml`, and every `FxNimbus.features` flag exists in the FML files (these are generated classes, so a metric or flag removed while code still uses it only fails deep in the compile);
 - the Glean pings, YAML and XML files are consistent.
 
 `check-baseline.txt` lists older findings that are false alarms (generated code and other modules), so only new problems fail. Run `python3 .github/scripts/check-fork.py` locally before pushing. After adding a deliberate change, add its entry to the matching JSON file.

@@ -207,6 +207,61 @@ def check_search():
         fail("search", "SearchMiddleware.kt: DuckDuckGo is no longer the preferred default search engine")
 
 
+def glean_class(category):
+    return "".join(part[:1].upper() + part[1:] for part in re.split(r"[._]", category))
+
+
+def glean_member(name):
+    parts = re.split(r"[._-]", name)
+    return parts[0] + "".join(part[:1].upper() + part[1:] for part in parts[1:])
+
+
+SCOPE_FUNCTIONS = {"apply", "let", "also", "run", "takeIf", "takeUnless", "with"}
+USES = r"(?:set|add|record|start|stop|cancel|accumulate\w*|measure|testGetValue|get)"
+
+
+def check_glean():
+    metrics = yaml.safe_load(read(os.path.join(APP, "metrics.yaml")))
+    pings = yaml.safe_load(read(os.path.join(APP, "pings.yaml")))
+    members = {}
+    for category, body in metrics.items():
+        if isinstance(body, dict) and not category.startswith("$"):
+            members[glean_class(category)] = {glean_member(n) for n, m in body.items() if isinstance(m, dict)}
+    members["Pings"] = {glean_member(n) for n in pings if not n.startswith("$")}
+    for path in source_files():
+        text = strip_comments(read(path))
+        imported = {}
+        for name, alias in re.findall(r"(?m)^import org\.mozilla\.fenix\.GleanMetrics\.(\w+)(?: as (\w+))?\s*$", text):
+            imported[alias or name] = name
+        for local, name in imported.items():
+            if name not in members:
+                continue
+            skip = SCOPE_FUNCTIONS | set(re.findall(r"\b(?:val|var)\s+(\w+)", text))
+            skip |= set(re.findall(r"(?m)^import org\.mozilla\.fenix\.GleanMetrics\.\w+\.(\w+)", text))
+            found = set(re.findall(r"(?<![\w.])%s\.([a-z]\w*)" % re.escape(local), text))
+            for block in re.finditer(r"with\(%s\)\s*\{" % re.escape(local), text):
+                depth, i = 1, block.end()
+                while i < len(text) and depth:
+                    depth += {"{": 1, "}": -1}.get(text[i], 0)
+                    i += 1
+                found |= set(re.findall(r"(?m)^\s*([a-z]\w*)\.%s\(" % USES, text[block.end():i]))
+            for member in sorted(found):
+                if member not in members[name] and member not in skip:
+                    fail("glean", f"{os.path.relpath(path, ROOT)}: {name}.{member} is not defined in metrics.yaml or pings.yaml")
+
+
+def check_features():
+    names = set()
+    for path in glob.glob(os.path.join(APP, "*.fml.yaml")):
+        doc = yaml.safe_load(read(path)) or {}
+        names |= {glean_member(n) for n in (doc.get("features") or {})}
+    for path in source_files():
+        text = strip_comments(read(path))
+        for member in sorted(set(re.findall(r"FxNimbus\.features\.([a-z]\w*)", text))):
+            if member not in names:
+                fail("features", f"{os.path.relpath(path, ROOT)}: FxNimbus.features.{member} is not defined in the FML files")
+
+
 def check_syntax():
     for path in glob.glob(os.path.join(APP, "*.yaml")):
         try:
@@ -229,7 +284,7 @@ def normalise(section, message):
 
 
 def main():
-    checks = [check_imports, check_resources, check_pings, check_removed, check_prefs, check_settings, check_nimbus, check_cleartext, check_search, check_syntax]
+    checks = [check_imports, check_resources, check_pings, check_removed, check_prefs, check_settings, check_nimbus, check_cleartext, check_search, check_glean, check_features, check_syntax]
     selected_flags = [a for a in sys.argv[1:] if a.startswith("--")]
     selected = [a for a in sys.argv[1:] if not a.startswith("--")]
     for check in checks:

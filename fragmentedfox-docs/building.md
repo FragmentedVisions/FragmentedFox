@@ -40,7 +40,7 @@ GitHub's free runners have 4 cores, 16 GB of memory and a 6 hour job limit. A fu
 
 - every `org.mozilla.fenix` import points at something that still exists, and every string and drawable used in code exists (this catches code that still points at something deleted, which would otherwise fail 90 minutes into a build);
 - nothing from `fragmentedfox-docs/removed.json` (the removed SDKs and features) has come back;
-- the prefs in `expected-prefs.json` and the Android defaults in `expected-settings.json` still have the values FragmentedFox sets (an ESR upgrade can silently change them);
+- the prefs in `expected-prefs.json` and the Android defaults in `expected-settings.json` and the Nimbus defaults in `expected-nimbus.json` still have the values FragmentedFox sets (an ESR upgrade can silently change them);
 - the Glean pings, YAML and XML files are consistent.
 
 `check-baseline.txt` lists older findings that are false alarms (generated code and other modules), so only new problems fail. Run `python3 .github/scripts/check-fork.py` locally before pushing. After adding a deliberate change, add its entry to the matching JSON file.

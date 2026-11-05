@@ -174,6 +174,23 @@ def check_settings():
             fail("settings", f"Settings.kt: {name} default is {match.group(1).strip()}, expected {value}")
 
 
+def check_nimbus():
+    expected = json.loads(read(os.path.join(ROOT, "fragmentedfox-docs/expected-nimbus.json")))
+    features = yaml.safe_load(read(os.path.join(APP, "nimbus.fml.yaml")))["features"]
+    for key, value in expected.items():
+        feature, _, variable = key.partition(".")
+        variable, _, entry = variable.partition(".")
+        try:
+            actual = features[feature]["variables"][variable]["default"]
+            if entry:
+                actual = actual[entry]
+        except (KeyError, TypeError):
+            fail("nimbus", f"nimbus.fml.yaml: {key} not found")
+            continue
+        if str(actual).lower() != value:
+            fail("nimbus", f"nimbus.fml.yaml: {key} is {actual}, expected {value}")
+
+
 def check_syntax():
     for path in glob.glob(os.path.join(APP, "*.yaml")):
         try:
@@ -196,7 +213,7 @@ def normalise(section, message):
 
 
 def main():
-    checks = [check_imports, check_resources, check_pings, check_removed, check_prefs, check_settings, check_syntax]
+    checks = [check_imports, check_resources, check_pings, check_removed, check_prefs, check_settings, check_nimbus, check_syntax]
     selected_flags = [a for a in sys.argv[1:] if a.startswith("--")]
     selected = [a for a in sys.argv[1:] if not a.startswith("--")]
     for check in checks:

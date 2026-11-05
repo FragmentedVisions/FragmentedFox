@@ -45,7 +45,6 @@ import org.mozilla.fenix.compose.list.RadioButtonListItem
 import org.mozilla.fenix.compose.list.SwitchListItem
 import org.mozilla.fenix.compose.list.TextListItem
 import org.mozilla.fenix.compose.settings.SettingsSectionHeader
-import org.mozilla.fenix.ext.components
 import org.mozilla.fenix.settings.settingssearch.PreferenceFileInformation
 import org.mozilla.fenix.settings.settingssearch.SettingsSearchItem
 import org.mozilla.fenix.settings.settingssearch.SettingsSearchProvider
@@ -58,7 +57,6 @@ private enum class DataChoicesSectionKey {
     STUDIES,
     USAGE_DATA,
     CRASH_REPORTS,
-    CAMPAIGN_MEASUREMENT,
 }
 
 /**
@@ -76,7 +74,6 @@ internal fun DataChoicesScreen(
     val state by store.observeAsComposableState { it }
     val onTelemetryToggle: () -> Unit = { store.dispatch(ChoiceAction.TelemetryClicked) }
     val onUsagePingToggle: () -> Unit = { store.dispatch(ChoiceAction.UsagePingClicked) }
-    val onMarketingDataToggled: () -> Unit = { store.dispatch(ChoiceAction.MeasurementDataClicked) }
     val onCrashOptionSelected: (CrashReportOption) -> Unit = { newValue ->
         store.dispatch(ChoiceAction.ReportOptionClicked(newValue))
     }
@@ -85,7 +82,6 @@ internal fun DataChoicesScreen(
     val learnMoreTechnicalData: () -> Unit = { store.dispatch(LearnMore.TelemetryLearnMoreClicked) }
     val learnMoreDailyUsage: () -> Unit = { store.dispatch(LearnMore.UsagePingLearnMoreClicked) }
     val learnMoreCrashReport: () -> Unit = { store.dispatch(LearnMore.CrashLearnMoreClicked) }
-    val learnMoreMarketingData: () -> Unit = { store.dispatch(LearnMore.MeasurementDataLearnMoreClicked) }
 
     Surface {
         DataChoicesUi(
@@ -93,13 +89,11 @@ internal fun DataChoicesScreen(
             onStudiesClick = onStudiesClick,
             onTelemetryToggle = onTelemetryToggle,
             onUsagePingToggle = onUsagePingToggle,
-            onMeasurementDataToggled = onMarketingDataToggled,
             onCrashOptionSelected = onCrashOptionSelected,
             onScrolledToItem = onScrolledToItem,
             learnMoreTechnicalData = learnMoreTechnicalData,
             learnMoreDailyUsage = learnMoreDailyUsage,
             learnMoreCrashReport = learnMoreCrashReport,
-            learnMoreMarketingData = learnMoreMarketingData,
         )
     }
 }
@@ -111,13 +105,11 @@ internal fun DataChoicesUi(
     onStudiesClick: () -> Unit,
     onTelemetryToggle: () -> Unit,
     onUsagePingToggle: () -> Unit,
-    onMeasurementDataToggled: () -> Unit,
     onCrashOptionSelected: (CrashReportOption) -> Unit,
     onScrolledToItem: () -> Unit,
     learnMoreTechnicalData: () -> Unit,
     learnMoreDailyUsage: () -> Unit,
     learnMoreCrashReport: () -> Unit,
-    learnMoreMarketingData: () -> Unit,
 ) {
     val lazyListState = rememberLazyListState()
     val coroutineScope = rememberCoroutineScope()
@@ -175,15 +167,6 @@ internal fun DataChoicesUi(
                     onOptionSelected = onCrashOptionSelected,
                     onLearnMoreClicked = learnMoreCrashReport,
                 )
-                DataChoicesSectionKey.CAMPAIGN_MEASUREMENT -> TogglePreferenceSection(
-                    categoryTitle = stringResource(R.string.preferences_marketing_data_title),
-                    preferenceTitle = stringResource(R.string.preferences_marketing_data_2),
-                    preferenceSummary = stringResource(R.string.preferences_marketing_data_description_4),
-                    learnMoreText = stringResource(R.string.preferences_marketing_data_learn_more),
-                    isToggled = state.measurementDataEnabled,
-                    onToggleChanged = onMeasurementDataToggled,
-                    onLearnMoreClicked = learnMoreMarketingData,
-                )
             }
             if (section != items.last()) {
                 HorizontalDivider(modifier = Modifier.padding(top = 16.dp, bottom = 24.dp))
@@ -194,15 +177,12 @@ internal fun DataChoicesUi(
 
 @Composable
 private fun buildDataChoicesItems(state: DataChoicesState): List<DataChoicesSectionKey> {
-    return remember(state.showMeasurementDataSection) {
+    return remember {
         buildList {
             add(DataChoicesSectionKey.TECHNICAL_DATA)
             add(DataChoicesSectionKey.STUDIES)
             add(DataChoicesSectionKey.USAGE_DATA)
             add(DataChoicesSectionKey.CRASH_REPORTS)
-            if (state.showMeasurementDataSection) {
-                add(DataChoicesSectionKey.CAMPAIGN_MEASUREMENT)
-            }
         }
     }
 }
@@ -410,24 +390,6 @@ private fun DataChoicesTelemetryDisabledPreview(
     }
 }
 
-@Preview
-@Composable
-private fun DataChoicesMarketingSectionDisabledPreview(
-    @PreviewParameter(PreviewThemeProvider::class) theme: Theme,
-) {
-    FirefoxTheme(theme) {
-        DataChoicesScreen(
-            store = DataChoicesStore(
-                initialState = DataChoicesState(
-                    studiesEnabled = false,
-                    telemetryEnabled = false,
-                    showMeasurementDataSection = false,
-                ),
-            ),
-        )
-    }
-}
-
 /**
  * Provides [SettingsSearchItem]s for the Data Choices settings screen for use in settings search.
  */
@@ -468,16 +430,6 @@ object DataChoicesSearchProvider : SettingsSearchProvider {
                     key = DataChoicesSectionKey.CRASH_REPORTS,
                 ),
             )
-            if (context.components.settings.hasMadeMarketingTelemetrySelection) {
-                add(
-                    buildSearchItem(
-                        context = context,
-                        titleRes = R.string.preferences_marketing_data_2,
-                        summaryRes = R.string.preferences_marketing_data_description_4,
-                        key = DataChoicesSectionKey.CAMPAIGN_MEASUREMENT,
-                    ),
-                )
-            }
         }
     }
 

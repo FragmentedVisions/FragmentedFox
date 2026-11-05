@@ -121,9 +121,6 @@ class Analytics(
                 GleanUsageReportingMetricsService(gleanProfileIdStore = GleanProfileIdPreferenceStore(context)),
             ),
             isDataTelemetryEnabled = { settings.isTelemetryEnabled },
-            isMarketingDataTelemetryEnabled = {
-                settings.isMarketingTelemetryEnabled && settings.hasMadeMarketingTelemetrySelection
-            },
             isUsageTelemetryEnabled = { settings.isDailyUsagePingEnabled },
             settings,
         )

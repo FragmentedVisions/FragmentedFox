@@ -156,8 +156,6 @@ class SettingsFragment : PreferenceFragmentCompat(), SystemInsetsPaddedFragment 
                 getString(R.string.pref_key_show_search_suggestions),
                 getString(R.string.pref_key_remote_debugging),
                 getString(R.string.pref_key_telemetry),
-                getString(R.string.pref_key_marketing_telemetry),
-                getString(R.string.pref_key_learn_about_marketing_telemetry),
                 getString(R.string.pref_key_tracking_protection),
                 getString(R.string.pref_key_search_bookmarks),
                 getString(R.string.pref_key_search_browsing_history),

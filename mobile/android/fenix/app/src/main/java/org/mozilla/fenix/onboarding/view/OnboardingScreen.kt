@@ -83,15 +83,8 @@ private val SMALL_SCREEN_MAX_HEIGHT = 570.dp
  * @param onboardingStore The store which contains all the state related to the add-ons onboarding screen.
  * @param termsOfServiceEventHandler Invoked when the primary button on the terms of service page is clicked.
  * @param onCustomizeToolbarClick Invoked when positive button customize toolbar page is clicked.
- * @param onMarketingDataLearnMoreClick callback for when the user clicks the learn more text link
- * @param onMarketingOptInToggle callback for when the user toggles the opt-in checkbox
- * @param onMarketingDataContinueClick callback for when the user clicks the continue button on the
- * marketing data opt out screen.
- * @param onMarketingDataSkipClick callback for when the user clicks the skip button on the
- * marketing data opt out screen.
  * @param onFinish Invoked when the onboarding is completed.
  * @param onImpression Invoked when a page in the pager is displayed.
- * @param currentIndex callback for when the current horizontal pager page changes
  * @param onNavigateToNextPage callback for when the user navigates to the next page in onboarding.
  */
 @Composable
@@ -109,13 +102,8 @@ fun OnboardingScreen(
     onboardingStore: OnboardingStore? = null,
     termsOfServiceEventHandler: OnboardingTermsOfServiceEventHandler,
     onCustomizeToolbarClick: () -> Unit,
-    onMarketingDataLearnMoreClick: () -> Unit,
-    onMarketingOptInToggle: (optIn: Boolean) -> Unit,
-    onMarketingDataContinueClick: (allowMarketingDataCollection: Boolean) -> Unit,
-    onMarketingDataSkipClick: () -> Unit,
     onFinish: (pageType: OnboardingPageUiData) -> Unit,
     onImpression: (pageType: OnboardingPageUiData) -> Unit,
-    currentIndex: (index: Int) -> Unit,
     onNavigateToNextPage: () -> Unit,
 ) {
     val coroutineScope = rememberCoroutineScope()
@@ -134,7 +122,6 @@ fun OnboardingScreen(
                 if (page > lastSettledPage) {
                     onNavigateToNextPage()
                 }
-                currentIndex(page)
                 lastSettledPage = page
             }
     }
@@ -226,16 +213,6 @@ fun OnboardingScreen(
         termsOfServiceEventHandler = termsOfServiceEventHandler,
         onAgreeAndConfirmTermsOfService = {
             termsOfServiceEventHandler.onAcceptTermsButtonClicked()
-            scrollToNextPageOrDismiss()
-        },
-        onMarketingDataLearnMoreClick = onMarketingDataLearnMoreClick,
-        onMarketingOptInToggle = onMarketingOptInToggle,
-        onMarketingDataContinueClick = { allowMarketingDataCollection ->
-            onMarketingDataContinueClick(allowMarketingDataCollection)
-            scrollToNextPageOrDismiss()
-        },
-        onMarketingDataSkipClick = {
-            onMarketingDataSkipClick()
             scrollToNextPageOrDismiss()
         },
         onboardingStore = onboardingStore,
@@ -337,10 +314,6 @@ private fun OnboardingContent(
     onCustomizeToolbarButtonClick: () -> Unit,
     termsOfServiceEventHandler: OnboardingTermsOfServiceEventHandler,
     onAgreeAndConfirmTermsOfService: () -> Unit,
-    onMarketingOptInToggle: (optIn: Boolean) -> Unit,
-    onMarketingDataLearnMoreClick: () -> Unit,
-    onMarketingDataContinueClick: (allowMarketingDataCollection: Boolean) -> Unit,
-    onMarketingDataSkipClick: () -> Unit,
 ) {
     BoxWithConstraints(modifier = Modifier.fillMaxSize()) {
         val layout = getOnboardingLayout(this)
@@ -373,8 +346,6 @@ private fun OnboardingContent(
                 key = { pagesToDisplay[it].type },
                 overscrollEffect = null,
             ) { pageIndex ->
-                // protect against a rare case where the user goes to the marketing screen at the same
-                // moment it gets removed by [MarketingPageRemovalSupport]
                 val pageUiState = pagesToDisplay.getOrElse(pageIndex) { pagesToDisplay[it.dec()] }
                 val onboardingPageState = mapToOnboardingPageState(
                     onboardingPageUiData = pageUiState,
@@ -396,10 +367,6 @@ private fun OnboardingContent(
                     state = onboardingPageState,
                     onboardingStore = onboardingStore,
                     termsOfServiceEventHandler = termsOfServiceEventHandler,
-                    onMarketingDataLearnMoreClick = onMarketingDataLearnMoreClick,
-                    onMarketingOptInToggle = onMarketingOptInToggle,
-                    onMarketingDataContinueClick = onMarketingDataContinueClick,
-                    onMarketingDataSkipClick = onMarketingDataSkipClick,
                 )
             }
 
@@ -446,10 +413,6 @@ private fun OnboardingPageForType(
     state: OnboardingPageState,
     onboardingStore: OnboardingStore? = null,
     termsOfServiceEventHandler: OnboardingTermsOfServiceEventHandler,
-    onMarketingDataLearnMoreClick: () -> Unit,
-    onMarketingOptInToggle: (optIn: Boolean) -> Unit,
-    onMarketingDataContinueClick: (allowMarketingDataCollection: Boolean) -> Unit,
-    onMarketingDataSkipClick: () -> Unit,
 ) {
     when (type) {
         OnboardingPageUiData.Type.DEFAULT_BROWSER,
@@ -476,14 +439,6 @@ private fun OnboardingPageForType(
                 )
             }
         }
-
-        OnboardingPageUiData.Type.MARKETING_DATA -> MarketingDataOnboardingPage(
-            state = state,
-            onMarketingDataLearnMoreClick = onMarketingDataLearnMoreClick,
-            onMarketingOptInToggle = onMarketingOptInToggle,
-            onMarketingDataContinueClick = onMarketingDataContinueClick,
-            onMarketingDataSkipClick = onMarketingDataSkipClick,
-        )
 
         OnboardingPageUiData.Type.TERMS_OF_SERVICE -> TermsOfServiceOnboardingPage(
             state,
@@ -651,10 +606,6 @@ private fun OnboardingScreenPreview() {
             onCustomizeToolbarButtonClick = {},
             onAgreeAndConfirmTermsOfService = {},
             termsOfServiceEventHandler = object : OnboardingTermsOfServiceEventHandler {},
-            onMarketingDataLearnMoreClick = {},
-            onMarketingOptInToggle = {},
-            onMarketingDataContinueClick = {},
-            onMarketingDataSkipClick = {},
             onNotificationPermissionButtonClick = {},
             onNotificationPermissionSkipClick = {},
         )

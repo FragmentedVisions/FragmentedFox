@@ -76,12 +76,6 @@ class MetricControllerTest {
     private lateinit var dataService2: MetricsService
 
     @MockK(relaxUnitFun = true)
-    private lateinit var marketingService1: MetricsService
-
-    @MockK(relaxUnitFun = true)
-    private lateinit var marketingService2: MetricsService
-
-    @MockK(relaxUnitFun = true)
     private lateinit var usageReportingService: MetricsService
 
     @Before
@@ -90,8 +84,6 @@ class MetricControllerTest {
 
         every { dataService1.type } returns MetricServiceType.Data
         every { dataService2.type } returns MetricServiceType.Data
-        every { marketingService1.type } returns MetricServiceType.Marketing
-        every { marketingService2.type } returns MetricServiceType.Marketing
         every { usageReportingService.type } returns MetricServiceType.UsageReporting
     }
 
@@ -111,9 +103,8 @@ class MetricControllerTest {
     fun `release metric controller starts and stops all data services`() {
         var enabled = true
         val controller = createReleaseMetricController(
-            services = listOf(dataService1, marketingService1, dataService2, marketingService2, usageReportingService),
+            services = listOf(dataService1, dataService2, usageReportingService),
             isDataTelemetryEnabled = { enabled },
-            isMarketingDataTelemetryEnabled = { enabled },
             isUsageTelemetryEnabled = { enabled },
         )
 
@@ -128,10 +119,6 @@ class MetricControllerTest {
         verify { dataService2.stop() }
 
         verifyAll(inverse = true) {
-            marketingService1.start()
-            marketingService1.stop()
-            marketingService2.start()
-            marketingService2.stop()
             usageReportingService.start()
             usageReportingService.stop()
         }
@@ -314,41 +301,12 @@ class MetricControllerTest {
     }
 
     @Test
-    fun `release metric controller starts and stops all marketing services`() {
-        var enabled = true
-        val controller = createReleaseMetricController(
-            services = listOf(dataService1, marketingService1, dataService2, marketingService2),
-            isDataTelemetryEnabled = { enabled },
-            isMarketingDataTelemetryEnabled = { enabled },
-            isUsageTelemetryEnabled = { enabled },
-        )
-
-        controller.start(MetricServiceType.Marketing)
-        verify { marketingService1.start() }
-        verify { marketingService2.start() }
-
-        enabled = false
-
-        controller.stop(MetricServiceType.Marketing)
-        verify { marketingService1.stop() }
-        verify { marketingService2.stop() }
-
-        verifyAll(inverse = true) {
-            dataService1.start()
-            dataService1.stop()
-            dataService2.start()
-            dataService2.stop()
-        }
-    }
-
-    @Test
     fun `topsites fact should set value in SharedPreference`() {
         val enabled = true
         val settings: Settings = mockk(relaxed = true)
         val controller = createReleaseMetricController(
             services = listOf(dataService1),
             isDataTelemetryEnabled = { enabled },
-            isMarketingDataTelemetryEnabled = { enabled },
             isUsageTelemetryEnabled = { enabled },
             settings = settings,
         )
@@ -374,7 +332,6 @@ class MetricControllerTest {
         val controller = createReleaseMetricController(
             services = listOf(dataService1),
             isDataTelemetryEnabled = { enabled },
-            isMarketingDataTelemetryEnabled = { enabled },
             isUsageTelemetryEnabled = { enabled },
             settings = settings,
         )
@@ -935,9 +892,7 @@ class MetricControllerTest {
 
     @Test
     fun `GIVEN advertising search facts WHEN the list is processed THEN the right metric is recorded`() {
-        val controller = createReleaseMetricController(
-            isMarketingDataTelemetryEnabled = { false },
-        )
+        val controller = createReleaseMetricController()
         val action = mockk<Action>()
 
         // an ad was clicked in a Search Engine Result Page
@@ -1063,14 +1018,12 @@ class MetricControllerTest {
     private fun createReleaseMetricController(
         services: List<MetricsService> = emptyList(),
         isDataTelemetryEnabled: () -> Boolean = { true },
-        isMarketingDataTelemetryEnabled: () -> Boolean = { true },
         isUsageTelemetryEnabled: () -> Boolean = { true },
         settings: Settings = mockk(),
     ) =
         ReleaseMetricController(
             services = services,
             isDataTelemetryEnabled = isDataTelemetryEnabled,
-            isMarketingDataTelemetryEnabled = isMarketingDataTelemetryEnabled,
             isUsageTelemetryEnabled = isUsageTelemetryEnabled,
             settings = settings,
         )

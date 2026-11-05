@@ -361,8 +361,6 @@ open class FenixApplication : Application(), Provider, ThemeProvider {
                 logger = logger,
                 analytics = components.analytics,
                 isTelemetryEnabled = components.settings.isTelemetryEnabled,
-                isMarketingTelemetryEnabled = components.settings.isMarketingTelemetryEnabled &&
-                    components.settings.hasMadeMarketingTelemetrySelection,
                 isDailyUsagePingEnabled = components.settings.isDailyUsagePingEnabled,
             )
         }

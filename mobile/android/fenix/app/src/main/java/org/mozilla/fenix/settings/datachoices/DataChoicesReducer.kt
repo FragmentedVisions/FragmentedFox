@@ -10,9 +10,6 @@ internal fun dataChoicesReducer(state: DataChoicesState, action: DataChoicesActi
             telemetryEnabled = !state.telemetryEnabled,
         )
     }
-    is ChoiceAction.MeasurementDataClicked -> {
-        state.copy(measurementDataEnabled = !state.measurementDataEnabled)
-    }
     is ChoiceAction.UsagePingClicked -> {
         state.copy(usagePingEnabled = !state.usagePingEnabled)
     }
@@ -27,15 +24,12 @@ internal fun dataChoicesReducer(state: DataChoicesState, action: DataChoicesActi
             telemetryEnabled = action.telemetryEnabled,
             usagePingEnabled = action.usagePingEnabled,
             studiesEnabled = action.studiesEnabled,
-            showMeasurementDataSection = action.showMeasurementDataSection,
-            measurementDataEnabled = action.measurementDataEnabled,
             selectedCrashOption = action.crashReportOption,
         )
     is StudiesLoaded -> {
         state.copy(studiesEnabled = action.newValue)
     }
     LearnMore.CrashLearnMoreClicked,
-    LearnMore.MeasurementDataLearnMoreClicked,
     LearnMore.TelemetryLearnMoreClicked,
     LearnMore.UsagePingLearnMoreClicked,
     is ChoiceAction.StudiesClicked,

@@ -5,7 +5,6 @@
 package org.mozilla.fenix.onboarding.view
 
 import androidx.annotation.DrawableRes
-import org.mozilla.fenix.nimbus.MarketingCardVariant
 
 /**
  * Model containing data for [OnboardingPage].
@@ -17,7 +16,6 @@ import org.mozilla.fenix.nimbus.MarketingCardVariant
  * @property secondaryButton Optional [Action] for the secondary button.
  * @property termsOfService Optional term of service page data.
  * @property toolbarOptions Optional list of toolbar selection options.
- * @property marketingData Optional marketing page data.
  * @property onRecordImpressionEvent Callback for recording impression event.
  * @property isSmallDevice Whether to apply layout optimizations for constrained screen heights.
  */
@@ -29,7 +27,6 @@ data class OnboardingPageState(
     val secondaryButton: Action? = null,
     val termsOfService: OnboardingTermsOfService? = null,
     val toolbarOptions: List<ToolbarOption>? = null,
-    val marketingData: OnboardingMarketingData? = null,
     val onRecordImpressionEvent: () -> Unit = {},
     val isSmallDevice: Boolean = false,
 )
@@ -83,16 +80,6 @@ data class OnboardingTermsOfService(
     val lineTwoLinkUrl: String,
     val lineThreeText: String,
     val lineThreeLinkText: String,
-)
-
-/**
- * Model containing data for the marketing data page during onboarding.
- */
-data class OnboardingMarketingData(
-    val marketingCardVariant: MarketingCardVariant,
-    val bodyOneText: String,
-    val bodyOneLinkText: String,
-    val bodyTwoText: String,
 )
 
 /**

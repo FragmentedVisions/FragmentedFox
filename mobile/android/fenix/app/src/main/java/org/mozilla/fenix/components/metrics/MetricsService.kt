@@ -5,7 +5,7 @@
 package org.mozilla.fenix.components.metrics
 
 enum class MetricServiceType {
-    Data, Marketing, UsageReporting
+    Data, UsageReporting
 }
 
 interface MetricsService {

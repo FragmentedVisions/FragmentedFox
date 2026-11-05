@@ -13,7 +13,6 @@ class DataChoicesReducerTest {
 
     private val defaultState = DataChoicesState(
         telemetryEnabled = false,
-        measurementDataEnabled = false,
         usagePingEnabled = false,
         studiesEnabled = false,
         selectedCrashOption = CrashReportOption.Ask,
@@ -24,13 +23,6 @@ class DataChoicesReducerTest {
         val before = defaultState.copy(telemetryEnabled = false)
         val after = dataChoicesReducer(before, ChoiceAction.TelemetryClicked)
         assertEquals(true, after.telemetryEnabled)
-    }
-
-    @Test
-    fun `when measurement data is clicked then measurementDataEnabled is toggled`() {
-        val before = defaultState.copy(measurementDataEnabled = false)
-        val after = dataChoicesReducer(before, ChoiceAction.MeasurementDataClicked)
-        assertEquals(true, after.measurementDataEnabled)
     }
 
     @Test
@@ -53,16 +45,12 @@ class DataChoicesReducerTest {
             telemetryEnabled = true,
             usagePingEnabled = true,
             studiesEnabled = true,
-            showMeasurementDataSection = true,
-            measurementDataEnabled = true,
             crashReportOption = CrashReportOption.Never,
         )
         val after = dataChoicesReducer(defaultState, action)
         assertEquals(true, after.telemetryEnabled)
         assertEquals(true, after.usagePingEnabled)
         assertEquals(true, after.studiesEnabled)
-        assertEquals(true, after.showMeasurementDataSection)
-        assertEquals(true, after.measurementDataEnabled)
         assertEquals(CrashReportOption.Never, after.selectedCrashOption)
     }
 

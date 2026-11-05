@@ -5,7 +5,6 @@
 package org.mozilla.fenix.onboarding.view
 
 import org.mozilla.fenix.nimbus.CustomizationToolbarData
-import org.mozilla.fenix.nimbus.MarketingData
 import org.mozilla.fenix.nimbus.OnboardingCardData
 import org.mozilla.fenix.nimbus.OnboardingCardType
 import org.mozilla.fenix.nimbus.TermsOfServiceData
@@ -104,7 +103,6 @@ private fun OnboardingCardData.toPageUiData() = OnboardingPageUiData(
         ?.takeIf { it.isNotEmpty() }
         ?.toOnboardingToolbarOptions(),
     termsOfService = extraData?.termOfServiceData?.toOnboardingTermsOfService(),
-    marketingData = extraData?.marketingData?.toOnboardingMarketingData(),
 )
 
 private fun OnboardingCardType.toPageUiDataType() = when (this) {
@@ -114,7 +112,6 @@ private fun OnboardingCardType.toPageUiDataType() = when (this) {
     OnboardingCardType.ADD_SEARCH_WIDGET -> OnboardingPageUiData.Type.ADD_SEARCH_WIDGET
     OnboardingCardType.TOOLBAR_PLACEMENT -> OnboardingPageUiData.Type.TOOLBAR_PLACEMENT
     OnboardingCardType.TERMS_OF_SERVICE -> OnboardingPageUiData.Type.TERMS_OF_SERVICE
-    OnboardingCardType.MARKETING_DATA -> OnboardingPageUiData.Type.MARKETING_DATA
 }
 
 private fun List<CustomizationToolbarData>.toOnboardingToolbarOptions() = map { it.toOnboardingCustomizeToolbar() }
@@ -134,13 +131,6 @@ private fun TermsOfServiceData.toOnboardingTermsOfService() = with(this) {
         lineThreeLinkText = lineThreeLinkText,
     )
 }
-
-private fun MarketingData.toOnboardingMarketingData() = OnboardingMarketingData(
-    marketingCardVariant = marketingCardVariant,
-    bodyOneText = bodyLineOneText,
-    bodyOneLinkText = bodyLineOneLinkText,
-    bodyTwoText = bodyLineTwoText,
-)
 
 private fun CustomizationToolbarData.toOnboardingCustomizeToolbar() = with(this) {
     ToolbarOption(
@@ -173,7 +163,6 @@ internal fun mapToOnboardingPageState(
     onAddFirefoxWidgetSkipClick: () -> Unit,
     onCustomizeToolbarButtonClick: () -> Unit,
     onTermsOfServiceButtonClick: () -> Unit,
-    onMarketingDataContinueClick: () -> Unit = {},
 ): OnboardingPageState = when (onboardingPageUiData.type) {
     OnboardingPageUiData.Type.DEFAULT_BROWSER -> createOnboardingPageState(
         onboardingPageUiData = onboardingPageUiData,
@@ -216,13 +205,6 @@ internal fun mapToOnboardingPageState(
         onNegativeButtonClick = {}, // No negative button option for terms of service.
         isSmallDevice = isSmallDevice,
     )
-
-    OnboardingPageUiData.Type.MARKETING_DATA -> createOnboardingPageState(
-        onboardingPageUiData = onboardingPageUiData,
-        onPositiveButtonClick = onMarketingDataContinueClick,
-        onNegativeButtonClick = {}, // No negative button option for marketing data.
-        isSmallDevice = isSmallDevice,
-    )
 }
 
 private fun createOnboardingPageState(
@@ -240,6 +222,5 @@ private fun createOnboardingPageState(
     },
     toolbarOptions = onboardingPageUiData.toolbarOptions,
     termsOfService = onboardingPageUiData.termsOfService,
-    marketingData = onboardingPageUiData.marketingData,
     isSmallDevice = isSmallDevice,
 )

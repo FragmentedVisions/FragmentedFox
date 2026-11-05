@@ -61,7 +61,6 @@ class DataChoicesMiddlewareTest {
         every { settings.isTelemetryEnabled } returns false
         every { settings.isDailyUsagePingEnabled } returns false
         every { settings.isExperimentationEnabled } returns false
-        every { settings.isMarketingTelemetryEnabled } returns false
         coEvery { crashReportCache.getReportOption() } returns CrashReportOption.Auto
 
         val store = makeStore(this)
@@ -73,7 +72,6 @@ class DataChoicesMiddlewareTest {
         assertEquals(false, store.state.telemetryEnabled)
         assertEquals(false, store.state.usagePingEnabled)
         assertEquals(false, store.state.studiesEnabled)
-        assertEquals(false, store.state.measurementDataEnabled)
         assertEquals(CrashReportOption.Auto, store.state.selectedCrashOption)
     }
 
@@ -95,18 +93,6 @@ class DataChoicesMiddlewareTest {
             verify { nimbus.resetTelemetryIdentifiers() }
             verify { engine.notifyTelemetryPrefChanged(false) }
         }
-
-    @Test
-    fun `when measurement data is clicked then marketing telemetry is toggled`() = runTest {
-        every { settings.isMarketingTelemetryEnabled } returns false
-        val store = makeStore(this)
-
-        store.dispatch(ChoiceAction.MeasurementDataClicked)
-
-        verify { settings.isMarketingTelemetryEnabled = true }
-        assertEquals(false, store.state.measurementDataEnabled)
-        verify { metrics.start(MetricServiceType.Marketing) }
-    }
 
     @Test
     fun `when usage ping is clicked then daily usage ping is toggled`() = runTest {
@@ -159,9 +145,6 @@ class DataChoicesMiddlewareTest {
 
             store.dispatch(LearnMore.TelemetryLearnMoreClicked)
             assertEquals(SupportUtils.SumoTopic.TECHNICAL_AND_INTERACTION_DATA, invokedTopic)
-
-            store.dispatch(LearnMore.MeasurementDataLearnMoreClicked)
-            assertEquals(SupportUtils.SumoTopic.MARKETING_DATA, invokedTopic)
 
             store.dispatch(LearnMore.CrashLearnMoreClicked)
             assertEquals(SupportUtils.SumoTopic.CRASH_REPORTS, invokedTopic)

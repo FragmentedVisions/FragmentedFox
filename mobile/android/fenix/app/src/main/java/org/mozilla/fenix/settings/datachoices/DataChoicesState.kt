@@ -23,8 +23,6 @@ internal data class DataChoicesState(
     val telemetryEnabled: Boolean = true,
     val usagePingEnabled: Boolean = true,
     val studiesEnabled: Boolean = true,
-    val showMeasurementDataSection: Boolean = true,
-    val measurementDataEnabled: Boolean = true,
     val selectedCrashOption: CrashReportOption = CrashReportOption.Ask,
     val itemToScrollTo: String? = null,
 ) : State

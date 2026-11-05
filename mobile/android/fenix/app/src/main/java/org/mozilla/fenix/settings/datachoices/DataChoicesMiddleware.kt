@@ -49,8 +49,6 @@ internal class DataChoicesMiddleware(
                         telemetryEnabled = settings.isTelemetryEnabled,
                         usagePingEnabled = settings.isDailyUsagePingEnabled,
                         studiesEnabled = settings.isExperimentationEnabled,
-                        showMeasurementDataSection = settings.hasMadeMarketingTelemetrySelection,
-                        measurementDataEnabled = settings.isMarketingTelemetryEnabled,
                         crashReportOption = crashReportCache.getReportOption(),
                     ),
                 )
@@ -58,9 +56,6 @@ internal class DataChoicesMiddleware(
             is ChoiceAction.TelemetryClicked -> {
                 updateTelemetryChoice()
                 store.dispatch(StudiesLoaded(settings.isExperimentationEnabled))
-            }
-            is ChoiceAction.MeasurementDataClicked -> {
-                updateMarketingDataChoice()
             }
             is ChoiceAction.UsagePingClicked -> {
                 updateUsageChoice()
@@ -73,9 +68,6 @@ internal class DataChoicesMiddleware(
                 updateCrashChoice(action.reportOption)
             }
 
-            LearnMore.MeasurementDataLearnMoreClicked -> {
-                learnMoreClicked(SupportUtils.SumoTopic.MARKETING_DATA)
-            }
             LearnMore.CrashLearnMoreClicked -> {
                 learnMoreClicked(SupportUtils.SumoTopic.CRASH_REPORTS)
             }
@@ -88,16 +80,6 @@ internal class DataChoicesMiddleware(
             is StudiesLoaded -> {}
             is SettingsLoaded -> {}
             is ChoiceAction.ScrolledToItem -> {}
-        }
-    }
-
-    private fun updateMarketingDataChoice() {
-        val newValue = !settings.isMarketingTelemetryEnabled
-        settings.isMarketingTelemetryEnabled = newValue
-        if (newValue) {
-            metrics.start(MetricServiceType.Marketing)
-        } else {
-            metrics.stop(MetricServiceType.Marketing)
         }
     }
 

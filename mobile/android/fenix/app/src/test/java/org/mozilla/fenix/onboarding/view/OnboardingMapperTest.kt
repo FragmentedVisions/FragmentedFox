@@ -7,7 +7,6 @@ package org.mozilla.fenix.onboarding.view
 import org.junit.Assert.assertEquals
 import org.junit.Test
 import org.mozilla.fenix.R
-import org.mozilla.fenix.nimbus.MarketingCardVariant
 
 class OnboardingMapperTest {
 
@@ -195,51 +194,6 @@ class OnboardingMapperTest {
             onAddFirefoxWidgetSkipClick = {},
             onCustomizeToolbarButtonClick = unitLambda,
             onTermsOfServiceButtonClick = {},
-            onMarketingDataContinueClick = {},
-        )
-
-        assertEquals(expected, actual)
-    }
-
-    @Test
-    fun `GIVEN a marketing data collection opt out page WHEN mapToOnboardingPageState is called THEN creates the expected OnboardingPageState`() {
-        val marketingData = OnboardingMarketingData(
-            marketingCardVariant = MarketingCardVariant.DEFAULT,
-            bodyOneText = "marketing data body one",
-            bodyOneLinkText = "marketing data body one link",
-            bodyTwoText = "marketing data body two",
-        )
-
-        val expected = OnboardingPageState(
-            imageRes = R.drawable.ic_high_five,
-            title = "marketing data title",
-            description = "marketing data body",
-            primaryButton = Action("marketing data button text", unitLambda),
-            marketingData = marketingData,
-        )
-
-        val onboardingPageUiData = OnboardingPageUiData(
-            type = OnboardingPageUiData.Type.MARKETING_DATA,
-            imageRes = R.drawable.ic_high_five,
-            title = "marketing data title",
-            description = "marketing data body",
-            primaryButtonLabel = "marketing data button text",
-            marketingData = marketingData,
-        )
-
-        val actual = mapToOnboardingPageState(
-            onboardingPageUiData = onboardingPageUiData,
-            onMakeFirefoxDefaultClick = {},
-            onMakeFirefoxDefaultSkipClick = {},
-            onSignInButtonClick = {},
-            onSignInSkipClick = {},
-            onNotificationPermissionButtonClick = {},
-            onNotificationPermissionSkipClick = {},
-            onAddFirefoxWidgetClick = {},
-            onAddFirefoxWidgetSkipClick = {},
-            onCustomizeToolbarButtonClick = {},
-            onTermsOfServiceButtonClick = {},
-            onMarketingDataContinueClick = unitLambda,
         )
 
         assertEquals(expected, actual)

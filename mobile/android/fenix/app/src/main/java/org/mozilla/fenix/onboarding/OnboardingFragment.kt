@@ -13,7 +13,6 @@ import android.os.Build
 import android.os.Bundle
 import android.os.StrictMode
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.RequiresApi
 import androidx.compose.runtime.Composable
@@ -27,7 +26,6 @@ import mozilla.components.lib.state.helpers.StoreProvider.Companion.fragmentStor
 import mozilla.components.service.nimbus.evalJexlSafe
 import mozilla.components.service.nimbus.messaging.use
 import mozilla.components.support.base.ext.areNotificationsEnabledSafe
-import mozilla.components.support.base.feature.ViewBoundFeatureWrapper
 import mozilla.components.support.base.log.logger.Logger
 import mozilla.components.support.utils.Browsers
 import mozilla.components.support.utils.BuildManufacturerChecker
@@ -67,8 +65,6 @@ import org.mozilla.fenix.utils.maybeShowAddSearchWidgetPrompt
  */
 class OnboardingFragment : Fragment() {
     private val logger = Logger("OnboardingFragment")
-
-    private val removeMarketingFeature = ViewBoundFeatureWrapper<MarketingPageRemovalSupport>()
 
     private val termsOfServiceEventHandler by lazy {
         DefaultOnboardingTermsOfServiceEventHandler(
@@ -164,20 +160,6 @@ class OnboardingFragment : Fragment() {
         FirefoxTheme {
             ScreenContent()
         }
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        removeMarketingFeature.set(
-            feature = MarketingPageRemovalSupport(
-                prefKey = requireContext().getString(R.string.pref_key_should_show_marketing_onboarding),
-                pagesToDisplay = pagesToDisplay,
-                settings = requireComponents.settings,
-                lifecycleOwner = viewLifecycleOwner,
-            ),
-            owner = this,
-            view = view,
-        )
-        super.onViewCreated(view, savedInstanceState)
     }
 
     override fun onResume() {
@@ -289,31 +271,6 @@ class OnboardingFragment : Fragment() {
                     onboardingStore.state.toolbarOptionSelected.id,
                 )
             },
-            onMarketingDataLearnMoreClick = {
-                telemetryRecorder.onMarketingDataLearnMoreClick()
-
-                val url = SupportUtils.getSumoURLForTopic(
-                    requireContext(),
-                    SupportUtils.SumoTopic.MARKETING_DATA,
-                )
-                launchSandboxCustomTab(url)
-            },
-            onMarketingOptInToggle = { optIn ->
-                telemetryRecorder.onMarketingDataOptInToggled(optIn)
-            },
-            onMarketingDataContinueClick = { allowMarketingDataCollection ->
-                with(requireComponents.settings) {
-                    isMarketingTelemetryEnabled = allowMarketingDataCollection
-                    hasMadeMarketingTelemetrySelection = true
-                }
-                telemetryRecorder.onMarketingDataContinueClicked(allowMarketingDataCollection)
-            },
-            onMarketingDataSkipClick = {
-                telemetryRecorder.onMarketingDataSkipClicked()
-            },
-            currentIndex = { index ->
-                removeMarketingFeature.withFeature { it.currentPageIndex = index }
-            },
             onNavigateToNextPage = {
                 telemetryRecorder.onNavigatedToNextPage()
             },
@@ -336,12 +293,10 @@ class OnboardingFragment : Fragment() {
             Pings.onboardingOptOut.submit()
         }
 
-        // The marketing telemetry may be enabled after finishing onboarding.
         startMetricsIfEnabled(
             logger = logger,
             analytics = requireComponents.analytics,
             isTelemetryEnabled = settings.isTelemetryEnabled,
-            isMarketingTelemetryEnabled = false,
             isDailyUsagePingEnabled = settings.isDailyUsagePingEnabled,
         )
     }
@@ -368,7 +323,6 @@ class OnboardingFragment : Fragment() {
             logger = logger,
             analytics = requireComponents.analytics,
             isTelemetryEnabled = false,
-            isMarketingTelemetryEnabled = settings.isMarketingTelemetryEnabled,
             isDailyUsagePingEnabled = false,
         )
 

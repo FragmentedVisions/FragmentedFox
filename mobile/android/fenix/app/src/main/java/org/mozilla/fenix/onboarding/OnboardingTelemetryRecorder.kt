@@ -163,18 +163,6 @@ class OnboardingTelemetryRecorder(
                 )
             }
 
-            OnboardingPageUiData.Type.MARKETING_DATA -> {
-                Onboarding.marketingDataCardViewed.record(
-                    Onboarding.MarketingDataCardViewedExtra(
-                        action = ACTION_IMPRESSION,
-                        elementType = ET_ONBOARDING_CARD,
-                        sequenceId = sequenceId,
-                        sequencePosition = sequencePosition,
-                        onboardingReason = onboardingReason.value,
-                        installSource = installSource,
-                    ),
-                )
-            }
         }
     }
 
@@ -437,56 +425,6 @@ class OnboardingTelemetryRecorder(
         )
         TermsOfUse.version.set(TOU_VERSION.toLong())
         TermsOfUse.date.set()
-    }
-
-    /**
-     * Records the marketing data card continue button click event
-     * @param optIn If the user chose to opt in to marketing data collection
-     */
-    fun onMarketingDataContinueClicked(optIn: Boolean) {
-        Onboarding.marketingDataContinueClicked.record(
-            Onboarding.MarketingDataContinueClickedExtra(
-                optIn = optIn,
-                onboardingReason = onboardingReason.value,
-                installSource = installSource,
-            ),
-        )
-    }
-
-    /**
-     * Records the marketing data card skip button click event.
-     */
-    fun onMarketingDataSkipClicked() {
-        Onboarding.marketingDataSkipClicked.record(
-            Onboarding.MarketingDataSkipClickedExtra(
-                onboardingReason = onboardingReason.value,
-                installSource = installSource,
-            ),
-        )
-    }
-
-    /**
-     * Records when the marketing data learn more link clicked.
-     */
-    fun onMarketingDataLearnMoreClick() = Onboarding.marketingDataLearnMore.record(
-        extra = Onboarding.MarketingDataLearnMoreExtra(
-            onboardingReason = onboardingReason.value,
-            installSource = installSource,
-        ),
-    )
-
-    /**
-     * Records the marketing data opt-in toggle event.
-     * @param optIn True if the user chose to opt in to marketing data collection.
-     */
-    fun onMarketingDataOptInToggled(optIn: Boolean) {
-        Onboarding.marketingDataOptInToggled.record(
-            Onboarding.MarketingDataOptInToggledExtra(
-                optIn = optIn,
-                onboardingReason = onboardingReason.value,
-                installSource = installSource,
-            ),
-        )
     }
 
     /**

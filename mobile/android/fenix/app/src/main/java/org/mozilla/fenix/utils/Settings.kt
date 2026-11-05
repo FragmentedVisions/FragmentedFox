@@ -543,16 +543,6 @@ class Settings(
         default = false,
     )
 
-    var isMarketingTelemetryEnabled by booleanPreference(
-        appContext.getPreferenceKey(R.string.pref_key_marketing_telemetry),
-        default = false,
-    )
-
-    var hasMadeMarketingTelemetrySelection by booleanPreference(
-        appContext.getPreferenceKey(R.string.pref_key_marketing_telemetry_selection_made),
-        default = false,
-    )
-
     var hasAcceptedTermsOfService by booleanPreference(
         appContext.getPreferenceKey(R.string.pref_key_terms_accepted),
         default = false,
@@ -2191,14 +2181,6 @@ class Settings(
     var seventhDayOnboardingCompletedTimestamp by longPreference(
         key = appContext.getPreferenceKey(R.string.pref_key_continuous_onboarding_day_seven_completed_timestamp),
         default = -1L,
-    )
-
-    /**
-     * Indicates if the marketing onboarding card should be shown to the user.
-     */
-    var shouldShowMarketingOnboarding by booleanPreference(
-        appContext.getPreferenceKey(R.string.pref_key_should_show_marketing_onboarding),
-        default = true,
     )
 
     var shouldUseMinimalBottomToolbarWhenEnteringText by booleanPreference(

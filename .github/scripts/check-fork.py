@@ -202,6 +202,13 @@ def check_cleartext():
         fail("cleartext", "network_security_config.xml: base-config permits cleartext")
 
 
+def check_search():
+    path = os.path.join(AC, "components/feature/search/src/main/java/mozilla/components/feature/search/middleware/SearchMiddleware.kt")
+    text = read(path)
+    if 'PREFERRED_DEFAULT_SEARCH_ENGINE_ID = "ddg"' not in text or "it.id == PREFERRED_DEFAULT_SEARCH_ENGINE_ID" not in text:
+        fail("search", "SearchMiddleware.kt: DuckDuckGo is no longer the preferred default search engine")
+
+
 def check_syntax():
     for path in glob.glob(os.path.join(APP, "*.yaml")):
         try:
@@ -224,7 +231,7 @@ def normalise(section, message):
 
 
 def main():
-    checks = [check_imports, check_resources, check_pings, check_removed, check_prefs, check_settings, check_nimbus, check_cleartext, check_syntax]
+    checks = [check_imports, check_resources, check_pings, check_removed, check_prefs, check_settings, check_nimbus, check_cleartext, check_search, check_syntax]
     selected_flags = [a for a in sys.argv[1:] if a.startswith("--")]
     selected = [a for a in sys.argv[1:] if not a.startswith("--")]
     for check in checks:

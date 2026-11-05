@@ -445,7 +445,7 @@ features:
           back/forward/share/bookmark/menu) to enabled. Only takes visible effect
           on tall, non-wide windows.
         type: Boolean
-        default: false
+        default: true
 
   homescreen-edge-to-edge-background:
     description: >

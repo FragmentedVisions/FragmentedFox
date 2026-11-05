@@ -44,6 +44,8 @@ data class SearchExtraParams(
 
 internal const val SEARCH_CONFIG_ICONS_COLLECTION_NAME = "search-config-icons"
 
+private const val PREFERRED_DEFAULT_SEARCH_ENGINE_ID = "ddg"
+
 /**
  * [Middleware] implementation for loading and saving [SearchEngine]s whenever the state changes.
  *
@@ -215,7 +217,9 @@ class SearchMiddleware(
 
         val action = SearchAction.SetSearchEnginesAction(
             regionSearchEngines = filteredRegionSearchEngines,
-            regionDefaultSearchEngineId = regionBundle.await().defaultSearchEngineId,
+            regionDefaultSearchEngineId = filteredRegionSearchEngines
+                .firstOrNull { it.id == PREFERRED_DEFAULT_SEARCH_ENGINE_ID }?.id
+                ?: regionBundle.await().defaultSearchEngineId,
             userSelectedSearchEngineId = userChoice.await()?.searchEngineId,
             userSelectedSearchEngineName = userChoice.await()?.searchEngineName,
             userSelectedPrivateSearchEngineId = userPrivateChoice.await()?.searchEngineId,

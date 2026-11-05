@@ -4,5 +4,6 @@
   "merino-manifest.enabled": "false",
   "mozilla-ads-client.enabled": "false",
   "fx-suggest.enabled": "false",
-  "merino-client.enabled": "false"
+  "merino-client.enabled": "false",
+  "default-expanded-toolbar.enabled": "true"
 }

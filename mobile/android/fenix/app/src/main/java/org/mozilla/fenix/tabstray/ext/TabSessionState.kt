@@ -44,13 +44,6 @@ internal fun TabSessionState.isNormalTabInactive(maxActiveTime: Long): Boolean {
 }
 
 /**
- * Returns true if the [TabSessionState] is not private.
- */
-internal fun TabSessionState.isNormalTab(): Boolean {
-    return !content.private
-}
-
-/**
  * Returns a [String] for displaying a [TabSessionState]'s title or its url when a title is not available.
  */
 fun TabSessionState.toDisplayTitle(): String = content.title.ifEmpty { content.url.trimmed() }

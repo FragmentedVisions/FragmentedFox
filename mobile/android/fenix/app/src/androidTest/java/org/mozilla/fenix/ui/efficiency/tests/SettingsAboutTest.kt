@@ -16,13 +16,6 @@ class SettingsAboutTest : BaseTest() {
              .mozVerifyElementsByGroup("aboutSection")
      }
 
-    // TestRail: https://mozilla.testrail.io/index.php?/cases/view/246966
-    @Test
-    fun verifyRateOnGooglePlayButtonTest() {
-        on.settings.navigateToPage()
-            .mozVerifyElementsByGroup("googlePlay")
-    }
-
     @Test
     fun verifyLibrariesListInReleaseBuildsTest() {
             on.settingsAbout.navigateToPage()

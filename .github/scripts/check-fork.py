@@ -101,8 +101,6 @@ def resource_index():
 def check_resources():
     names = resource_index()
     for path in source_files():
-        if "/androidTest/" in path:
-            continue
         text = strip_comments(read(path))
         framework = "import android.R\n" in text
         for kind, name in re.findall(r"\bR\.(string|plurals|drawable|raw)\.(\w+)", text):

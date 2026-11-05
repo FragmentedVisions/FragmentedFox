@@ -528,7 +528,6 @@ dependencies {
     implementation project(':components:lib-crash')
     implementation project(':components:lib-dataprotect')
     implementation project(':components:lib-state')
-    implementation project(':components:lib-accelerometer-sensormanager')
     implementation project(':components:lib-ai-controls')
 
     implementation ComponentsDependencies.mozilla_appservices_syncmanager

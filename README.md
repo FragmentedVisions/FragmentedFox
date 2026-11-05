@@ -43,7 +43,7 @@ There are only two branches. All changes are made on `NonStable--test`, and buil
 | Branch | Purpose |
 | --- | --- |
 | `Stable-Main` | The default branch. The last state that was built and installed on a phone (commit `a82cf4a57c`). |
-| `NonStable--test` | Where all work happens. It includes everything in `Stable-Main` plus any newer changes. Its last build passed and was checked on a phone, so the two branches currently match apart from documentation updates. |
+| `NonStable--test` | Where all work happens. It includes everything in `Stable-Main` plus any newer changes. Its newest changes (DuckDuckGo search, the expanded toolbar, the fox icons, the app icon picker removal, cleartext and permission hardening and a cleanup pass) are being built and have not been checked on a phone yet. `Stable-Main` stays where it is until they have been. |
 
 ## Building
 

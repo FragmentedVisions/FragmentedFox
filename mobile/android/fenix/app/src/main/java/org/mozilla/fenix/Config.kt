@@ -30,12 +30,6 @@ enum class ReleaseChannel {
     val isReleaseOrBeta: Boolean
         get() = this == Release || this == Beta
 
-    val isRelease: Boolean
-        get() = when (this) {
-            Release -> true
-            else -> false
-        }
-
     val isBeta: Boolean
         get() = this == Beta
 

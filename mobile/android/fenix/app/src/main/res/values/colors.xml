@@ -53,7 +53,7 @@
     <color name="fx_mobile_icon_private">@color/novaViolet50</color>
     <color name="fx_mobile_scrim">@color/novaBlackA50</color>
 
-    <color name="fx_mobile_splashscreen_background">#FCF3EE</color>
+    <color name="fx_mobile_splashscreen_background">#050505</color>
 
     <!-- Design system color variables -->
 

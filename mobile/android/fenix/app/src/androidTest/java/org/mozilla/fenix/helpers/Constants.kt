@@ -13,7 +13,6 @@ object Constants {
 
     // Device or AVD requires a Google Services Android OS installation
     object PackageName {
-        const val GOOGLE_PLAY_SERVICES = "com.android.vending"
         const val GOOGLE_APPS_PHOTOS = "com.google.android.apps.photos"
         const val GOOGLE_QUICK_SEARCH = "com.google.android.googlequicksearchbox"
         const val GOOGLE_DOCS = "com.google.android.apps.docs"

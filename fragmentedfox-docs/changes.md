@@ -67,6 +67,7 @@ Checked in the app manifest: backups are off (`allowBackup=false`), the only exp
 
 ## Names and branding
 
+- The Android launcher icon (including the themed monochrome version), the notification status icon and the in-app logo drawables (`ic_firefox`, `expressive_firefox`, `mozac_ic_logo_firefox_24`) are the FragmentedFox fox. They are generated from `browser/branding/fragmentedfox/source/icon-small.svg` by `python3 .github/scripts/make-android-icons.py`, so rerun it if the logo changes. The launcher background colour is `#050505`.
 - `browser/branding/fragmentedfox` and `mobile/android/branding/fragmentedfox` are the default branding directories. SVG sources for the logo are in `browser/branding/fragmentedfox/source`.
 - The application vendor is `FragmentedVisions` (desktop and Android) in `browser/moz.configure` and `mobile/android/moz.configure`.
 - Network error pages, the names of browser-owned features (View, Home, Labs, Screenshots, Translations, Suggest), the Windows startup dialog title and the distribution text say FragmentedFox.
@@ -82,4 +83,5 @@ Checked in the app manifest: backups are off (`allowBackup=false`), the only exp
 - The default search engines, Sync and add-on sources are Mozilla's.
 - `Assets.car` (a compiled macOS asset catalog) still has the old icon.
 - The Android app still uses Google's open-source license listing plugin (`oss-licenses`). It only builds the licenses screen and is next to be reviewed.
-- No network audit has been done yet, so "no data is sent" is based on reading the code and the build flags, not on watching traffic.
+- The network contacts in [network](./network.md) come from reading the code and defaults, not from watching traffic. A capture on a fresh install is still to do.
+- Some Android artwork is still Mozilla's Firefox art: the home and shortcut wordmark images (`ic_logo_wordmark_*`, `ic_wordmark_*`), the fox mascot illustrations (`fox_*`, `illustration_fox_*`), the sports promo logo (`firefox_sport`) and the default-browser banner illustration. Replacing them needs new artwork or a wordmark drawn from the FragmentedFox font.

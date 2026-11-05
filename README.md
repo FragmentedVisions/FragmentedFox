@@ -10,11 +10,11 @@ FragmentedFox is a private, independent fork of the Firefox browser from [Fragme
 
 ## Status
 
-Early and experimental. The Android app builds on GitHub Actions into a signed APK that installs and runs on a phone. It has had only light testing, and the newest changes (below) are not built yet.
+Early and experimental. The Android app builds on GitHub Actions into a signed APK that installs and runs on a phone. It has had only light testing. The latest build passed and was checked on a phone, but the newest cleanups (listed below) came after it and are not built yet.
 
 | Platform | Status |
 | --- | --- |
-| Android (arm64) | Builds on GitHub Actions into a signed APK (about 47 minutes with a warm compile cache). Installed and run on a phone. |
+| Android (arm64) | Builds on GitHub Actions into a signed APK (about 65 minutes with a warm compile cache). Installed and checked on a phone. |
 | Linux desktop | Workflow written, not run yet. |
 | Windows, macOS, iOS | Not supported yet. |
 
@@ -34,7 +34,7 @@ FragmentedFox follows Mozilla's [Extended Support Release](https://support.mozil
 
 ### Removed from the Android app
 
-Mozilla's VPN, the Adjust, Firebase, Google Play Integrity and Sentry SDKs, the page summarizer and the Play Store review prompt are removed, not just switched off. The VPN removal is built and running. The rest are on the `NonStable--test` branch and are not built or merged into `Stable-Main` yet. Details are in [changes](./fragmentedfox-docs/changes.md), which also lists known gaps such as the missing network audit.
+Mozilla's VPN, the Adjust, Firebase, Google Play Integrity and Sentry SDKs, the page summarizer, the Play Store review prompt, the marketing data consent flow, the growth conversion and install attribution code, and the partner distribution code are removed, not just switched off. `Stable-Main` has the VPN removal. The rest is on `NonStable--test`. The growth tracking, marketing consent and attribution removals are the newest and are not built yet. Details are in [changes](./fragmentedfox-docs/changes.md), which also lists known gaps such as the missing network audit.
 
 ## Branches
 
@@ -43,11 +43,11 @@ There are only two branches. All changes are made on `NonStable--test`, and buil
 | Branch | Purpose |
 | --- | --- |
 | `Stable-Main` | The default branch. The last state that was built and installed on a phone. Currently at the commit after the first successful build. Its newest two commits (the FragmentedFox name fix and the size analysis) are not built yet. |
-| `NonStable--test` | Where all work happens. It includes everything in `Stable-Main`, plus the SDK, summarizer and review prompt removals and the docs update, none of which are built yet. |
+| `NonStable--test` | Where all work happens. It includes everything in `Stable-Main`, plus the other removals, the dead-code cleanups and the fork guard. Its last build (run 13) passed and was checked on a phone. The growth tracking, marketing consent and attribution removals and the guard came after it and are not built yet. |
 
 ## Building
 
-Builds run on GitHub Actions and are started by hand from the Actions tab. See [building](./fragmentedfox-docs/building.md). Android builds are signed with a stored release key, described in [signing](./fragmentedfox-docs/signing.md).
+Builds run on GitHub Actions and are started by hand from the Actions tab. See [building](./fragmentedfox-docs/building.md). Android builds are signed with a stored release key, described in [signing](./fragmentedfox-docs/signing.md). A quick check (`.github/scripts/check-fork.py`) runs before every Android build and catches code that points at removed things, and prefs or defaults that changed.
 
 ## Security
 

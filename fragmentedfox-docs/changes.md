@@ -75,5 +75,6 @@ Checked in the app manifest: backups are off (`allowBackup=false`), the only exp
 - No update server. The desktop build is configured with the updater off, so new versions are shipped as downloads.
 - The default search engines, Sync and add-on sources are Mozilla's.
 - `Assets.car` (a compiled macOS asset catalog) still has the old icon.
+- `FontEnumerationWorker` still runs in the background. It reads every font on the device to build a telemetry ping. Telemetry is off so the ping is not uploaded, but the worker still runs. It is the next candidate for removal.
 - The Android app still uses Google's open-source license listing plugin (`oss-licenses`). It only builds the licenses screen and is next to be reviewed.
 - No network audit has been done yet, so "no data is sent" is based on reading the code and the build flags, not on watching traffic.

@@ -6,6 +6,7 @@ Builds run on GitHub Actions. Each workflow is started by hand: open the reposit
 | --- | --- | --- |
 | Build FragmentedFox (Android) | `.github/workflows/build-android.yml` | `fragmentedfox-android` artifact with the APK |
 | Build FragmentedFox (Linux) | `.github/workflows/build-linux.yml` | `fragmentedfox-linux-x86_64` artifact with a tarball |
+| Check FragmentedFox | `.github/workflows/checks.yml` | Runs the quick guard on its own, see Checks below |
 | Create Android signing key | `.github/workflows/create-signing-key.yml` | One-time job, see [signing](./signing.md) |
 
 ## Android
@@ -16,7 +17,7 @@ The `shrink` choice (default `on`) shrinks code and resources for a smaller app.
 
 Build notes:
 
-- Full builds pass. With a cold compile cache the engine compile took about 97 minutes. With the cache from the previous run it took about 20 minutes, with about half of all cached C and C++ compiles reused, and the whole job took 47 minutes. The app build took about 40 minutes, 25 of which were Android lint, which the workflow now skips (`-x :fenix:lintVitalRelease`), bringing it to about 19 minutes. The APK is signed with the release key: the `apksigner` check prints the certificate SHA-256 shown in [signing](./signing.md). Gradle output goes to `obj-android/gradle/build/mobile/android/fenix/app/outputs/apk/release/`, and only the `arm64-v8a` APK is a complete phone build, since only the arm64 engine is compiled.
+- Full builds pass. The latest (run 13, with a warm cache) took 65 minutes: about 29 for the engine and 27 for the app. Earlier figures: with a cold compile cache the engine compile took about 97 minutes. With the cache from the previous run it took about 20 minutes, with about half of all cached C and C++ compiles reused, and the whole job took 47 minutes. The app build took about 40 minutes, 25 of which were Android lint, which the workflow now skips (`-x :fenix:lintVitalRelease`), bringing it to about 19 minutes. The APK is signed with the release key: the `apksigner` check prints the certificate SHA-256 shown in [signing](./signing.md). Gradle output goes to `obj-android/gradle/build/mobile/android/fenix/app/outputs/apk/release/`, and only the `arm64-v8a` APK is a complete phone build, since only the arm64 engine is compiled.
 - The earliest runs lost their runner without a log (about 13 minutes in with 4 jobs and debug symbols, twice, and about 26 minutes in with 2 jobs). Memory pressure during the heavy Rust compile is the likely cause. Turning debug symbols off and leaving WebRTC out fixed it, and the engine compile then finished (about 87 minutes cold). A build without WebRTC is a supported configuration, but Mozilla ships Android with WebRTC, so a new failure after an upgrade is possible.
 - A cold full compile on 4 cores can approach GitHub's 6 hour job limit, so keep the compile cache.
 - Mozilla's prebuilt engine (artifact builds) cannot be used: the lookup checked 150 upstream revisions and found no built Android artifacts for this base.
@@ -47,3 +48,5 @@ GitHub's free runners have 4 cores, 16 GB of memory and a 6 hour job limit. A fu
 ## Size analysis
 
 Every Android build also runs `.github/scripts/size-analysis.py` (it runs from both branches) and uploads `size-analysis.txt` as the `size-analysis` artifact. It lists the APK by folder and file, the engine's built-in JavaScript (`omni.ja`) by folder, app code by package, and the largest compiled symbols in `libxul.so` and `libmegazord.so` grouped by namespace. Use it to pick what to trim. The step never fails the build.
+
+In the latest report (before the newest removals), the arm64 app's compressed parts add up to roughly 98 MB: native libraries about 73 MB, built-in assets about 12 MB, app code about 8 MB and resources about 4 MB. The engine library `libxul.so` is 143.6 MB uncompressed and the Rust services library `libmegazord.so` is 21 MB, both unchanged by the app removals. The built-in JavaScript is about 36 MB uncompressed, of which DevTools is 5.8 MB, the PDF viewer 4.8 MB and the remote automation agent 2 MB. App code was about 1.2 MB (6%) smaller after the SDK removals. The biggest size cuts would come from the engine, not the app.

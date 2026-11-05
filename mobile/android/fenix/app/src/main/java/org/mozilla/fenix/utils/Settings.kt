@@ -2353,14 +2353,6 @@ class Settings(
     )
 
     /**
-     * Font List Telemetry Ping Sent
-     */
-    var numFontListSent by intPreference(
-        key = appContext.getPreferenceKey(R.string.pref_key_num_font_list_sent),
-        default = 0,
-    )
-
-    /**
      * Indicates if hidden engines were restored due to migration to unified search settings UI.
      * Should be removed once we expect the majority of the users to migrate.
      * Tracking: https://bugzilla.mozilla.org/show_bug.cgi?id=1850767

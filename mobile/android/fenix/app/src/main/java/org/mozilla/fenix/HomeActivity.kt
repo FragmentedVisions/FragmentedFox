@@ -108,7 +108,6 @@ import org.mozilla.fenix.components.appstate.OrientationMode
 import org.mozilla.fenix.components.menu.MenuAccessPoint
 import org.mozilla.fenix.components.menu.share.QRCodeDialogFragment
 import org.mozilla.fenix.components.metrics.BreadcrumbsRecorder
-import org.mozilla.fenix.components.metrics.fonts.FontEnumerationWorker
 import org.mozilla.fenix.components.share.QR_CODE_URI_KEY
 import org.mozilla.fenix.components.share.SEND_TO_DEVICES_ACTION
 import org.mozilla.fenix.components.share.SendToDevicesDialogFragment
@@ -724,7 +723,6 @@ open class HomeActivity : LocaleAwareAppCompatActivity(), NavHostActivity, Crash
                 Events.defaultBrowserChanged.record(NoExtras())
             }
 
-            FontEnumerationWorker.sendActivatedSignalIfNeeded(applicationContext)
 
             if (NotificationManagerCompat.from(applicationContext).areNotificationsEnabled()) {
                 MessageNotificationWorker.setMessageNotificationWorker(applicationContext)

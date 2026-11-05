@@ -399,7 +399,6 @@
 
     <string name="pref_key_login_exceptions" translatable="false">pref_key_login_exceptions</string>
 
-    <string name="pref_key_num_font_list_sent"  translatable="false">pref_key_num_font_list_sent</string>
 
     <!-- Adjust Activated User values-->
 

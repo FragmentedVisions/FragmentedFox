@@ -18,7 +18,9 @@
     "lib\\.push\\.firebase",
     "components:lib-push-firebase",
     "components:lib-crash-sentry",
-    "components:feature-summarize"
+    "components:feature-summarize",
+    "FontEnumerationWorker",
+    "FontParser"
   ],
   "permissions": [
     "com.adjust.preinstall.READ_PERMISSION"

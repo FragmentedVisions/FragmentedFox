@@ -24,7 +24,7 @@ What the Android app can contact, as read from the code and defaults. This is a 
 
 | Service | Why |
 | --- | --- |
-| Your search engine | search suggestions are on by default (`shouldShowSearchSuggestions`), so typed text is sent to the engine as you type. This is an open decision |
+| Your search engine | search suggestions are on by default (`shouldShowSearchSuggestions`), so typed text is sent to the engine as you type. This is left on on purpose, and the user can turn it off in settings |
 | Quad9 (`dns.quad9.net`) | encrypted DNS, the default resolver |
 | Mozilla Remote Settings | tracker lists, certificate revocation filters, add-on blocklist, polled daily |
 | Google Safe Browsing | phishing and malware list updates (hash prefixes only) |

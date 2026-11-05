@@ -42,8 +42,8 @@ There are only two branches. All changes are made on `NonStable--test`, and buil
 
 | Branch | Purpose |
 | --- | --- |
-| `Stable-Main` | The default branch. The last state that was built and installed on a phone. Currently at the commit after the first successful build. Its newest two commits (the FragmentedFox name fix and the size analysis) are not built yet. |
-| `NonStable--test` | Where all work happens. It includes everything in `Stable-Main`, plus the other removals, the dead-code cleanups and the fork guard. Its last build (run 13) passed and was checked on a phone. The growth tracking, marketing consent and attribution removals and the guard came after it and are not built yet. |
+| `Stable-Main` | The default branch. The last state that was built and installed on a phone (commit `a82cf4a57c`). |
+| `NonStable--test` | Where all work happens. It includes everything in `Stable-Main` plus any newer changes. Its last build passed and was checked on a phone, so the two branches currently match apart from documentation updates. |
 
 ## Building
 

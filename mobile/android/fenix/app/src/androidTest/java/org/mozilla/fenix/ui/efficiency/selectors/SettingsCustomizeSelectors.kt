@@ -24,20 +24,6 @@ object SettingsCustomizeSelectors {
         groups = listOf("customizeSettings"),
     )
 
-    val SELECT_APP_ICON_TITLE = Selector(
-        strategy = SelectorStrategy.UIAUTOMATOR_WITH_TEXT,
-        value = getStringResource(R.string.preference_select_app_icon_title),
-        description = "Select App Icon title",
-        groups = listOf("appIconDefault"),
-    )
-
-    val APP_ICON_DEFAULT = Selector(
-        strategy = SelectorStrategy.UIAUTOMATOR_WITH_TEXT,
-        value = "Default",
-        description = "Default app icon option",
-        groups = listOf("appIconDefault"),
-    )
-
     val TOOLBAR_LAYOUT_SIMPLE = Selector(
         strategy = SelectorStrategy.ESPRESSO_BY_TEXT,
         value = getStringResource(R.string.preference_simple_toolbar),

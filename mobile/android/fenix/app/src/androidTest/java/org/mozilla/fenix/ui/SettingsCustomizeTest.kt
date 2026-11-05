@@ -8,7 +8,6 @@ import android.content.res.Configuration
 import org.junit.Rule
 import org.junit.Test
 import org.mozilla.fenix.customannotations.Converted
-import org.mozilla.fenix.customannotations.SmokeTest
 import org.mozilla.fenix.helpers.AppAndSystemHelper.enableOrDisableBackGestureNavigationOnDevice
 import org.mozilla.fenix.helpers.FenixTestRule
 import org.mozilla.fenix.helpers.HomeActivityIntentTestRule
@@ -16,7 +15,6 @@ import org.mozilla.fenix.helpers.TestAssetHelper.firstForeignWebPageAsset
 import org.mozilla.fenix.helpers.TestAssetHelper.getGenericAsset
 import org.mozilla.fenix.helpers.TestAssetHelper.secondForeignWebPageAsset
 import org.mozilla.fenix.helpers.TestHelper.exitMenu
-import org.mozilla.fenix.helpers.TestHelper.restartApp
 import org.mozilla.fenix.helpers.TestHelper.verifyDarkThemeApplied
 import org.mozilla.fenix.helpers.TestHelper.verifyLightThemeApplied
 import org.mozilla.fenix.helpers.TestHelper.waitUntilSnackbarGone
@@ -133,69 +131,6 @@ class SettingsCustomizeTest {
             verifyPullToRefreshGesturePrefState(isEnabled = true)
             clickPullToRefreshToggle()
             verifyPullToRefreshGesturePrefState(isEnabled = false)
-        }
-    }
-
-    // TestRail link: https://mozilla.testrail.io/index.php?/cases/view/3186732
-    @Converted(
-        replacedBy = ["org.mozilla.fenix.ui.efficiency.tests.SettingsCustomizeTest#verifyTheDefaultAppIconSettingTest"],
-        bug = 2039839,
-        since = "2026-05",
-    )
-    @SmokeTest
-    @Test
-    fun verifyTheDefaultAppIconSettingTest() {
-        homeScreen(composeTestRule) {
-        }.openThreeDotMenu {
-        }.clickSettingsButton {
-        }.openCustomizeSubMenu {
-            verifyAppIconOption(composeTestRule, "Default")
-        }
-    }
-
-    // TestRail link: https://mozilla.testrail.io/index.php?/cases/view/3186731
-    @Converted(
-        replacedBy = ["org.mozilla.fenix.ui.efficiency.tests.SettingsCustomizeTest#verifyTheAppIconSelectionPageTest"],
-        bug = 2040906,
-        since = "2026-05",
-    )
-    @SmokeTest
-    @Test
-    fun verifyTheAppIconSelectionPageTest() {
-        homeScreen(composeTestRule) {
-        }.openThreeDotMenu {
-        }.clickSettingsButton {
-        }.openCustomizeSubMenu {
-            clickTheAppIconOption(composeTestRule)
-            verifyAppIconSettingItems(composeTestRule)
-        }
-    }
-
-    // TestRail link: https://mozilla.testrail.io/index.php?/cases/view/3186734
-    @Converted(
-        replacedBy = ["org.mozilla.fenix.ui.efficiency.tests.SettingsCustomizeTest#verifyTheChangeAppIconButtonTest"],
-        bug = 2040906,
-        since = "2026-05",
-    )
-    @SmokeTest
-    @Test
-    fun verifyTheChangeAppIconButtonTest() {
-        homeScreen(composeTestRule) {
-        }.openThreeDotMenu {
-        }.clickSettingsButton {
-        }.openCustomizeSubMenu {
-            verifyAppIconOption(composeTestRule, "Default")
-            clickTheAppIconOption(composeTestRule)
-            clickAppIconOption(composeTestRule, appIconOptionName = "Dark")
-            verifyChangeAppIconDialog(composeTestRule)
-            clickTheChangeIconDialogButton(composeTestRule)
-            restartApp(composeTestRule.activityRule)
-        }
-        homeScreen(composeTestRule) {
-        }.openThreeDotMenu {
-        }.clickSettingsButton {
-        }.openCustomizeSubMenu {
-            verifyAppIconOption(composeTestRule, "Dark")
         }
     }
 

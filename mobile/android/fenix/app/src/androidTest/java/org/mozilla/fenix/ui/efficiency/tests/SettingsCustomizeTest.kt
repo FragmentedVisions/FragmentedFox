@@ -6,9 +6,7 @@ package org.mozilla.fenix.ui.efficiency.tests
 
 import org.junit.Ignore
 import org.junit.Test
-import org.mozilla.fenix.customannotations.SmokeTest
 import org.mozilla.fenix.ui.efficiency.helpers.BaseTest
-import org.mozilla.fenix.ui.efficiency.selectors.SettingsAppIconSelectors
 import org.mozilla.fenix.ui.efficiency.selectors.SettingsCustomizeSelectors
 
 class SettingsCustomizeTest : BaseTest() {
@@ -30,46 +28,5 @@ class SettingsCustomizeTest : BaseTest() {
         on.settingsCustomize.verifyOptionIsSelected(SettingsCustomizeSelectors.TOOLBAR_POSITION_BOTTOM)
         on.settingsCustomize.mozVerifyElementsByGroup("toolbarLayout")
         on.settingsCustomize.verifyOptionIsSelected(SettingsCustomizeSelectors.TOOLBAR_LAYOUT_EXPANDED)
-    }
-
-    // TestRail link: https://mozilla.testrail.io/index.php?/cases/view/3186734
-    @SmokeTest
-    @Test
-    fun verifyTheChangeAppIconButtonTest() {
-        on.settingsCustomize.navigateToPage()
-            .mozVerifyElementHasSiblingWithText(
-                selector = SettingsCustomizeSelectors.SELECT_APP_ICON_TITLE,
-                siblingText = SettingsCustomizeSelectors.APP_ICON_DEFAULT.value,
-            )
-        on.settingsAppIcon.navigateToPage()
-            .clickAppIconOption(SettingsAppIconSelectors.DARK_ICON)
-            .mozVerifyElementsByGroup("changeIconDialog")
-        on.settingsAppIcon.clickChangeIconButton()
-        on.settingsAppIcon.restartApp()
-        on.settingsCustomize.navigateToPage()
-            .mozVerifyElementHasSiblingWithText(
-                selector = SettingsCustomizeSelectors.SELECT_APP_ICON_TITLE,
-                siblingText = SettingsAppIconSelectors.DARK_ICON.value,
-            )
-    }
-
-    // TestRail link: https://mozilla.testrail.io/index.php?/cases/view/3186731
-    @SmokeTest
-    @Test
-    fun verifyTheAppIconSelectionPageTest() {
-        on.settingsAppIcon.navigateToPage()
-            .mozVerifyElementsByGroup("appIconItems")
-            .mozVerifyElementsByGroup("appIconGradientsItems")
-    }
-
-    // TestRail link: https://mozilla.testrail.io/index.php?/cases/view/3186732
-    @SmokeTest
-    @Test
-    fun verifyTheDefaultAppIconSettingTest() {
-        on.settingsCustomize.navigateToPage()
-            .mozVerifyElementHasSiblingWithText(
-                selector = SettingsCustomizeSelectors.SELECT_APP_ICON_TITLE,
-                siblingText = SettingsCustomizeSelectors.APP_ICON_DEFAULT.value,
-            )
     }
 }

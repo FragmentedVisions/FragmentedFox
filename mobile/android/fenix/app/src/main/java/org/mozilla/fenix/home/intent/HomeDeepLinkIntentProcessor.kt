@@ -78,7 +78,6 @@ class HomeDeepLinkIntentProcessor(
             "settings_wallpapers" -> GlobalDirections.WallpaperSettings
             "home_collections" -> GlobalDirections.Home
             "settings_private_browsing" -> GlobalDirections.SettingsPrivateBrowsing
-            "settings_app_icon" -> GlobalDirections.SettingsAppIcon
             "settings_ai_controls" -> GlobalDirections.SettingsAIControls
 
             else -> return

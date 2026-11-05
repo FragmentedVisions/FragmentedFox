@@ -343,14 +343,6 @@ class HomeDeepLinkIntentProcessorTest {
     }
 
     @Test
-    fun `process settings_app_icon deep link`() {
-        assertTrue(processorHome.process(testIntent("settings_app_icon"), navController, out, settings))
-
-        verify { navController.navigate(NavGraphDirections.actionGlobalAppIconSelectionFragment()) }
-        verify { out wasNot Called }
-    }
-
-    @Test
     fun `process settings_ai_controls deep link`() {
         assertTrue(processorHome.process(testIntent("settings_ai_controls"), navController, out, settings))
 

@@ -20,7 +20,11 @@
     "components:lib-crash-sentry",
     "components:feature-summarize",
     "FontEnumerationWorker",
-    "FontParser"
+    "FontParser",
+    "fenix\\.iconpicker",
+    "changeAppLauncherIcon",
+    "alternativeAppLauncherIcon",
+    "AppSolidLight"
   ],
   "permissions": [
     "com.adjust.preinstall.READ_PERMISSION",

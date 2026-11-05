@@ -46,11 +46,6 @@ object CustomAttributeProvider : JexlAttributeProvider {
             mapOf(
                 // By convention, we should use snake case.
                 "is_first_run" to isFirstRun,
-                "install_referrer_response_utm_source" to settings.utmSource,
-                "install_referrer_response_utm_medium" to settings.utmMedium,
-                "install_referrer_response_utm_campaign" to settings.utmCampaign,
-                "install_referrer_response_utm_term" to settings.utmTerm,
-                "install_referrer_response_utm_content" to settings.utmContent,
                 "number_of_app_launches" to settings.numberOfAppLaunches,
                 "is_large_device" to context.isLargeScreenSize(),
                 // This camelCase attribute is a boolean value represented as a string.

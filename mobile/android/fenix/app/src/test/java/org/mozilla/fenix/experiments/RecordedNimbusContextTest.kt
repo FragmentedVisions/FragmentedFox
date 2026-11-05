@@ -57,11 +57,6 @@ class RecordedNimbusContextTest {
                 putJsonObject("events") {
                     put("TEST", 1)
                 }
-                put("install_referrer_response_utm_source", "")
-                put("install_referrer_response_utm_medium", "")
-                put("install_referrer_response_utm_campaign", "")
-                put("install_referrer_response_utm_term", "")
-                put("install_referrer_response_utm_content", "")
                 put("android_sdk_version", Build.VERSION.SDK_INT.toString())
                 put("app_version", "")
                 put("locale", "")
@@ -110,11 +105,6 @@ class RecordedNimbusContextTest {
                 putJsonObject("event_query_values") {
                     put("days_opened_in_last_28", 1)
                 }
-                put("install_referrer_response_utm_source", "")
-                put("install_referrer_response_utm_medium", "")
-                put("install_referrer_response_utm_campaign", "")
-                put("install_referrer_response_utm_term", "")
-                put("install_referrer_response_utm_content", "")
                 put("is_first_run", false)
                 put("language", "en")
                 put("locale", "")

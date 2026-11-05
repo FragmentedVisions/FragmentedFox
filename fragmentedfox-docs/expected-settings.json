@@ -1,0 +1,8 @@
+{
+  "isTelemetryEnabled": "false",
+  "shouldUseHttpsOnly": "true",
+  "shouldUseHttpsOnlyInAllTabs": "true",
+  "showContileFeature": "false",
+  "trrMode": "DOH_SETTINGS_INCREASED",
+  "dohProviderUrl": "QUAD9_URI"
+}

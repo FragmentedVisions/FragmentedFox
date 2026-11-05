@@ -1,0 +1,40 @@
+{
+  "browser/app/profile/firefox.js": {
+    "browser.tabs.crashReporting.sendReport": "false",
+    "app.normandy.enabled": "false",
+    "app.shield.optoutstudies.enabled": "false",
+    "nimbus.rollouts.enabled": "false",
+    "messaging-system.askForFeedback": "false",
+    "browser.discovery.enabled": "false",
+    "browser.vpn_promo.enabled": "false",
+    "browser.promo.pin.enabled": "false",
+    "browser.promo.focus.enabled": "false",
+    "browser.topsites.contile.enabled": "false",
+    "network.captive-portal-service.enabled": "false",
+    "dom.security.https_only_mode": "true",
+    "network.trr.mode": "2",
+    "network.trr.uri": "\"https://dns.quad9.net/dns-query\"",
+    "network.trr.default_provider_uri": "\"https://dns.quad9.net/dns-query\"",
+    "media.peerconnection.enabled": "false",
+    "media.navigator.video.enabled": "false",
+    "media.peerconnection.ice.default_address_only": "true",
+    "media.peerconnection.ice.no_host": "true",
+    "browser.ipProtection.enabled": "false"
+  },
+  "mobile/android/app/geckoview-prefs.js": {
+    "media.peerconnection.enabled": "false",
+    "media.navigator.video.enabled": "false",
+    "media.peerconnection.ice.default_address_only": "true",
+    "media.peerconnection.ice.no_host": "true",
+    "browser.ipProtection.enabled": "false"
+  },
+  "modules/libpref/init/all.js": {
+    "datareporting.policy.dataSubmissionEnabled": "false",
+    "datareporting.healthreport.uploadEnabled": "false",
+    "datareporting.usage.uploadEnabled": "false",
+    "network.connectivity-service.enabled": "false",
+    "network.prefetch-next": "false",
+    "browser.safebrowsing.downloads.remote.enabled": "false",
+    "network.captive-portal-service.enabled": "false"
+  }
+}

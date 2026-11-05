@@ -35,6 +35,11 @@ jobs:
         with:
           fetch-depth: 1
 
+      - name: Check for broken references
+        run: |
+          sudo apt-get install -y python3-yaml
+          python3 -I .github/scripts/check-fork.py
+
       - name: Install ccache
         run: sudo apt-get install -y ccache
 

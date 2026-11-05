@@ -1,0 +1,26 @@
+{
+  "patterns": [
+    "com\\.adjust",
+    "io\\.sentry",
+    "com\\.google\\.firebase",
+    "lib\\.integrity\\.googleplay",
+    "com\\.android\\.installreferrer",
+    "gms\\.ads",
+    "lib\\.shake",
+    "feature\\.summarize",
+    "lib\\.llm\\.mlpa",
+    "org\\.mozilla\\.fenix\\.summarization",
+    "com\\.google\\.android\\.play\\.core\\.review",
+    "org\\.mozilla\\.fenix\\.distributions",
+    "MozillaProductDetector",
+    "Event\\.GrowthData",
+    "MetricServiceType\\.Marketing",
+    "lib\\.push\\.firebase",
+    "components:lib-push-firebase",
+    "components:lib-crash-sentry",
+    "components:feature-summarize"
+  ],
+  "permissions": [
+    "com.adjust.preinstall.READ_PERMISSION"
+  ]
+}

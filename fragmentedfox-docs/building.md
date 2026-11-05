@@ -33,6 +33,17 @@ The job uses a `mozconfig` with the updater, tests and debug code off, then runs
 
 GitHub's free runners have 4 cores, 16 GB of memory and a 6 hour job limit. A full Firefox build uses most of that, so a run can fail from time or memory limits rather than a code error. Read the failing step's log first.
 
+## Checks
+
+`.github/scripts/check-fork.py` is a quick guard that runs in seconds. The Android build runs it before the long compile, and the `Check FragmentedFox` workflow runs it on its own. It checks that:
+
+- every `org.mozilla.fenix` import points at something that still exists, and every string and drawable used in code exists (this catches code that still points at something deleted, which would otherwise fail 90 minutes into a build);
+- nothing from `fragmentedfox-docs/removed.json` (the removed SDKs and features) has come back;
+- the prefs in `expected-prefs.json` and the Android defaults in `expected-settings.json` still have the values FragmentedFox sets (an ESR upgrade can silently change them);
+- the Glean pings, YAML and XML files are consistent.
+
+`check-baseline.txt` lists older findings that are false alarms (generated code and other modules), so only new problems fail. Run `python3 .github/scripts/check-fork.py` locally before pushing. After adding a deliberate change, add its entry to the matching JSON file.
+
 ## Size analysis
 
 Every Android build also runs `.github/scripts/size-analysis.py` (it runs from both branches) and uploads `size-analysis.txt` as the `size-analysis` artifact. It lists the APK by folder and file, the engine's built-in JavaScript (`omni.ja`) by folder, app code by package, and the largest compiled symbols in `libxul.so` and `libmegazord.so` grouped by namespace. Use it to pick what to trim. The step never fails the build.

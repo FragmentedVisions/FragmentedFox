@@ -11,50 +11,6 @@ import mozilla.telemetry.glean.Glean
 import org.mozilla.fenix.GleanMetrics.Pings
 import org.mozilla.fenix.ext.components
 
-private class EventWrapper<T : Enum<T>>(
-    private val recorder: ((Map<T, String>?) -> Unit),
-    private val keyMapper: ((String) -> T)? = null,
-) {
-
-    /**
-     * Converts snake_case string to camelCase.
-     */
-    private fun String.asCamelCase(): String {
-        val parts = split("_")
-        val builder = StringBuilder()
-
-        for ((index, part) in parts.withIndex()) {
-            if (index == 0) {
-                builder.append(part)
-            } else {
-                builder.append(part[0].uppercase())
-                builder.append(part.substring(1))
-            }
-        }
-
-        return builder.toString()
-    }
-
-    fun track(event: Event) {
-        val extras = if (keyMapper != null) {
-            event.extras?.mapKeys { (key) ->
-                keyMapper.invoke(key.toString().asCamelCase())
-            }
-        } else {
-            null
-        }
-
-        @Suppress("DEPRECATION")
-        // FIXME(#19967): Migrate to non-deprecated API.
-        this.recorder(extras)
-    }
-}
-
-@Suppress("DEPRECATION")
-// FIXME(#19967): Migrate to non-deprecated API.
-private val Event.wrapper: EventWrapper<*>?
-    get() = null
-
 /**
  * Service responsible for sending the activation and installation pings.
  */
@@ -93,13 +49,5 @@ class GleanMetricsService(
 
     override fun stop() {
         Glean.setCollectionEnabled(false)
-    }
-
-    override fun track(event: Event) {
-        event.wrapper?.track(event)
-    }
-
-    override fun shouldTrack(event: Event): Boolean {
-        return event.wrapper != null
     }
 }

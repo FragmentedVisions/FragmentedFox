@@ -316,7 +316,6 @@ class Components(private val context: Context) {
                     settings = settings,
                 ),
                 MetricsMiddleware(
-                    metrics = analytics.metrics,
                     nimbusEventStore = nimbus.events,
                 ),
                 CrashReportingAppMiddleware(

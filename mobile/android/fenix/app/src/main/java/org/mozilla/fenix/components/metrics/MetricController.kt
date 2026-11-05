@@ -75,7 +75,6 @@ import mozilla.components.compose.browser.awesomebar.AwesomeBarFacts as ComposeA
 interface MetricController {
     fun start(type: MetricServiceType)
     fun stop(type: MetricServiceType)
-    fun track(event: Event)
 
     companion object {
         /**
@@ -120,10 +119,6 @@ internal class DebugMetricController(
 
     override fun stop(type: MetricServiceType) {
         logger.debug("DebugMetricController: stop")
-    }
-
-    override fun track(event: Event) {
-        logger.debug("DebugMetricController: track event: $event")
     }
 }
 
@@ -442,14 +437,12 @@ internal class ReleaseMetricController(
 
         Component.FEATURE_SEARCH to AdsTelemetry.SERP_ADD_CLICKED -> {
             BrowserSearch.adClicks[value!!].add()
-            track(Event.GrowthData.ConversionEvent5)
         }
         Component.FEATURE_SEARCH to AdsTelemetry.SERP_SHOWN_WITH_ADDS -> {
             BrowserSearch.withAds[value!!].add()
         }
         Component.FEATURE_SEARCH to InContentTelemetry.IN_CONTENT_SEARCH -> {
             BrowserSearch.inContent[value!!].add()
-            track(Event.GrowthData.ConversionEvent7(fromSearch = true))
         }
         Component.SUPPORT_WEBEXTENSIONS to WebExtensionFacts.Items.WEB_EXTENSIONS_INITIALIZED -> {
             metadata?.get("installed")?.let { installedAddons ->
@@ -555,20 +548,6 @@ internal class ReleaseMetricController(
             .forEach { it.stop() }
 
         initialized.remove(type)
-    }
-
-    override fun track(event: Event) {
-        services
-            .filter { it.shouldTrack(event) }
-            .forEach {
-                val isEnabled = isTelemetryEnabled(it.type)
-                val isInitialized = isInitialized(it.type)
-                if (!isEnabled || !isInitialized) {
-                    return@forEach
-                }
-
-                it.track(event)
-            }
     }
 
     private fun recordFxSuggestImpression(metadata: Map<String, Any>?) {

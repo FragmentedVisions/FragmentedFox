@@ -37,8 +37,6 @@ class FirstSessionMetricsService(private val context: Context) : MetricsService 
     }
 
     override fun stop() = Unit
-    override fun track(event: Event) = Unit
-    override fun shouldTrack(event: Event): Boolean = false
 
     /**
      * Checks whether or not the installation ping was already

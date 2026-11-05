@@ -36,8 +36,6 @@ import org.mozilla.fenix.GleanMetrics.Events
 import org.mozilla.fenix.GleanMetrics.Metrics
 import org.mozilla.fenix.GleanMetrics.Translations
 import org.mozilla.fenix.GleanMetrics.Urlbar
-import org.mozilla.fenix.components.metrics.Event
-import org.mozilla.fenix.components.metrics.MetricController
 import org.mozilla.fenix.ext.components
 import org.mozilla.fenix.utils.Settings
 import org.mozilla.fenix.GleanMetrics.EngineTab as EngineMetrics
@@ -47,13 +45,11 @@ import org.mozilla.fenix.GleanMetrics.EngineTab as EngineMetrics
  *
  * @param context An Android [Context].
  * @param settings reference to the application [Settings].
- * @param metrics [MetricController] to pass events that have been mapped from actions.
  * @param crashReporting An instance of [CrashReporting] to report caught exceptions.
  */
 class TelemetryMiddleware(
     private val context: Context,
     private val settings: Settings,
-    private val metrics: MetricController,
     private val crashReporting: CrashReporting? = null,
 ) : Middleware<BrowserState, BrowserAction> {
 
@@ -112,9 +108,6 @@ class TelemetryMiddleware(
                     crashReporting?.submitCaughtException(action.throwable)
                 }
                 return
-            }
-            is EngineAction.LoadUrlAction -> {
-                metrics.track(Event.GrowthData.ConversionEvent3)
             }
             else -> {
                 // no-op

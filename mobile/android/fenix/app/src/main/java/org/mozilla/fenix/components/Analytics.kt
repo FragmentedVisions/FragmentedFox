@@ -17,17 +17,14 @@ import mozilla.components.lib.crash.service.CrashReporterService
 import mozilla.components.lib.crash.service.GleanCrashReporterService
 import mozilla.components.lib.crash.service.socorro.MozillaSocorroService
 import mozilla.components.lib.crash.store.CrashReportOption
-import mozilla.components.support.utils.Browsers
 import mozilla.components.support.utils.ext.packageManagerCompatHelper
 import org.mozilla.fenix.HomeActivity
 import org.mozilla.fenix.R
-import org.mozilla.fenix.components.metrics.DefaultMetricsStorage
 import org.mozilla.fenix.components.metrics.FirstSessionMetricsService
 import org.mozilla.fenix.components.metrics.GleanMetricsService
 import org.mozilla.fenix.components.metrics.GleanProfileIdPreferenceStore
 import org.mozilla.fenix.components.metrics.GleanUsageReportingMetricsService
 import org.mozilla.fenix.components.metrics.MetricController
-import org.mozilla.fenix.components.metrics.MetricsStorage
 import org.mozilla.fenix.crashes.CrashFactCollector
 import org.mozilla.fenix.crashes.NimbusExperimentDataProvider
 import org.mozilla.fenix.crashes.ReleaseRuntimeTagProvider
@@ -114,14 +111,6 @@ class Analytics(
 
     val crashFactCollector: CrashFactCollector by lazyMonitored {
         CrashFactCollector(crashReporter)
-    }
-
-    val metricsStorage: MetricsStorage by lazyMonitored {
-        DefaultMetricsStorage(
-            context = context,
-            settings = settings,
-            checkDefaultBrowser = { Browsers.isDefaultBrowser(context) },
-        )
     }
 
     val metrics: MetricController by lazyMonitored {

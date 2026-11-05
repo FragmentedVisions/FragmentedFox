@@ -51,12 +51,6 @@ class GleanUsageReportingMetricsService(
         unsetUsageProfileId()
     }
 
-    override fun track(event: Event) {
-        // no-op
-    }
-
-    override fun shouldTrack(event: Event): Boolean = false
-
     private fun checkAndSetUsageProfileId() {
         val profileId = gleanProfileIdStore.profileId
         if (profileId == null) {

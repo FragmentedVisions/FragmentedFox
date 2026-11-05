@@ -47,8 +47,6 @@ import org.mozilla.fenix.GleanMetrics.Metrics
 import org.mozilla.fenix.GleanMetrics.Translations
 import org.mozilla.fenix.components.AppStore
 import org.mozilla.fenix.components.appstate.AppAction
-import org.mozilla.fenix.components.fake.FakeMetricController
-import org.mozilla.fenix.components.metrics.Event
 import org.mozilla.fenix.ext.components
 import org.mozilla.fenix.helpers.FenixGleanTestRule
 import org.mozilla.fenix.utils.Settings
@@ -72,7 +70,6 @@ class TelemetryMiddlewareTest {
     val gleanRule = FenixGleanTestRule(ApplicationProvider.getApplicationContext())
 
     private val clock = FakeClock()
-    private val metrics = FakeMetricController()
 
     @Before
     fun setUp() {
@@ -81,7 +78,6 @@ class TelemetryMiddlewareTest {
         telemetryMiddleware = TelemetryMiddleware(
             context = testContext,
             settings = settings,
-            metrics = metrics,
         )
         val engine: Engine = mockk()
         every { engine.enableExtensionProcessSpawning() } just runs
@@ -633,13 +629,6 @@ class TelemetryMiddlewareTest {
             assertEquals(recordedEventsBefore + 1, recordedEventsAfter.size)
             assertEquals("content_process_kill", recordedEventsAfter.last().extra?.get("reason"))
         }
-
-    @Test
-    fun `WHEN uri loaded to engine THEN matching event is sent to metrics`() = runTest {
-        store.dispatch(EngineAction.LoadUrlAction("", ""))
-
-        assertTrue(metrics.trackedEvents.contains(Event.GrowthData.ConversionEvent3))
-    }
 
     @Test
     fun `WHEN EnabledAction is dispatched THEN enable the process spawning`() = runTest {

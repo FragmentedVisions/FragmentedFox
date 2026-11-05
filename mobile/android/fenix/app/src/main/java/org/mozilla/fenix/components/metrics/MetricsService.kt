@@ -13,6 +13,4 @@ interface MetricsService {
 
     fun start()
     fun stop()
-    fun track(event: Event)
-    fun shouldTrack(event: Event): Boolean
 }

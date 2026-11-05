@@ -387,8 +387,6 @@ open class FenixApplication : Application(), Provider, ThemeProvider {
             VisibilityLifecycleObserver(),
         )
 
-        components.analytics.metricsStorage.tryRegisterAsUsageRecorder(this)
-
         CoroutineScope(IO).launch {
             components.useCases.wallpaperUseCases.fetchCurrentWallpaperUseCase.invoke()
         }

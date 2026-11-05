@@ -2259,70 +2259,6 @@ class Settings(
         }
     }
 
-    var setAsDefaultGrowthSent by booleanPreference(
-        key = appContext.getPreferenceKey(R.string.pref_key_growth_set_as_default),
-        default = false,
-    )
-
-    var firstWeekSeriesGrowthSent by booleanPreference(
-        key = appContext.getPreferenceKey(R.string.pref_key_growth_first_week_series_sent),
-        default = false,
-    )
-
-    var firstWeekPostInstallLastThreeDaysActivitySent by booleanPreference(
-        key = appContext.getPreferenceKey(R.string.pref_key_first_week_post_install_last_three_days_activity_sent),
-        default = false,
-    )
-
-    var firstWeekPostInstallRecurrentActivitySent by booleanPreference(
-        key = appContext.getPreferenceKey(R.string.pref_key_first_week_post_install_recurrent_activity_sent),
-        default = false,
-    )
-
-    var firstWeekPostInstallEverydayActivityAndSetToDefaultSent by booleanPreference(
-        key = appContext.getPreferenceKey(
-            R.string.pref_key_first_week_post_install_everyday_activity_and_set_to_default_sent,
-        ),
-        default = false,
-    )
-
-    var firstWeekPostInstallIsBrowserSetToDefaultDuringFirstFourDays by booleanPreference(
-        key = appContext.getPreferenceKey(
-            R.string.pref_key_first_week_post_install_is_browser_set_to_default_during_first_four_days,
-        ),
-        default = false,
-    )
-
-    var firstWeekDaysOfUseGrowthData by stringSetPreference(
-        key = appContext.getPreferenceKey(R.string.pref_key_growth_first_week_days_of_use),
-        default = setOf(),
-    )
-
-    var adClickGrowthSent by booleanPreference(
-        key = appContext.getPreferenceKey(R.string.pref_key_growth_ad_click_sent),
-        default = false,
-    )
-
-    var firstDayUsageTimeGrowthData by longPreference(
-        key = appContext.getPreferenceKey(R.string.pref_key_growth_usage_time),
-        default = -1,
-    )
-
-    var usageTimeGrowthSent by booleanPreference(
-        key = appContext.getPreferenceKey(R.string.pref_key_growth_usage_time_sent),
-        default = false,
-    )
-
-    var resumeGrowthLastSent by longPreference(
-        key = appContext.getPreferenceKey(R.string.pref_key_growth_resume_last_sent),
-        default = 0,
-    )
-
-    var uriLoadGrowthLastSent by longPreference(
-        key = appContext.getPreferenceKey(R.string.pref_key_growth_uri_load_last_sent),
-        default = 0,
-    )
-
     /**
      * Indicates if the extensions status should be shown in the menu opened for custom tabs.
      */
@@ -2485,27 +2421,11 @@ class Settings(
     )
 
     /**
-     * Adjust Activated User sent
-     */
-    var growthUserActivatedSent by booleanPreference(
-        key = appContext.getPreferenceKey(R.string.pref_key_growth_user_activated_sent),
-        default = false,
-    )
-
-    /**
      * Font List Telemetry Ping Sent
      */
     var numFontListSent by intPreference(
         key = appContext.getPreferenceKey(R.string.pref_key_num_font_list_sent),
         default = 0,
-    )
-
-    /**
-     * Indicates how many days in the first week user searched in the app.
-     */
-    var growthEarlySearchUsed by booleanPreference(
-        key = appContext.getPreferenceKey(R.string.pref_key_growth_early_search),
-        default = false,
     )
 
     /**

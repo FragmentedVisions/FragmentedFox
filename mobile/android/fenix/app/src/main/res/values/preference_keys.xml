@@ -416,8 +416,6 @@
     <string name="pref_key_num_font_list_sent"  translatable="false">pref_key_num_font_list_sent</string>
 
     <!-- Adjust Activated User values-->
-    <string name="pref_key_growth_user_activated_sent" translatable="false">pref_key_growth_user_activated_sent</string>
-    <string name="pref_key_growth_early_search" translatable="false">pref_key_growth_early_search</string>
 
     <!-- Tabs Settings -->
     <!-- pref_key_tab_view_list_do_not_use is needed for UI implementation only and should be expected to be useful. -->
@@ -485,20 +483,8 @@
     <string name="pref_key_logins_list_sort_order" translatable="false">pref_key_logins_list_sort_order</string>
 
     <!-- Growth Data -->
-    <string name="pref_key_growth_set_as_default" translatable="false">pref_key_growth_set_as_default</string>
-    <string name="pref_key_growth_first_week_series_sent" translatable="false">pref_key_growth_first_week_series_sent</string>
-    <string name="pref_key_growth_first_week_days_of_use" translatable="false">pref_key_growth_first_week_days_of_use</string>
-    <string name="pref_key_growth_ad_click_sent" translatable="false">pref_key_growth_ad_click_sent</string>
-    <string name="pref_key_growth_usage_time" translatable="false">pref_key_growth_usage_time</string>
-    <string name="pref_key_growth_usage_time_sent" translatable="false">pref_key_growth_usage_time_sent</string>
-    <string name="pref_key_growth_resume_last_sent" translatable="false">pref_key_growth_last_resumed</string>
-    <string name="pref_key_growth_uri_load_last_sent" translatable="false">pref_key_growth_uri_load_last_sent</string>
 
     <!-- Post Install Data -->
-    <string name="pref_key_first_week_post_install_last_three_days_activity_sent" translatable="false">pref_key_first_week_post_install_last_three_days_activity_sent</string>
-    <string name="pref_key_first_week_post_install_recurrent_activity_sent" translatable="false">pref_key_first_week_post_install_recurrent_activity_sent</string>
-    <string name="pref_key_first_week_post_install_everyday_activity_and_set_to_default_sent" translatable="false">pref_key_first_week_post_install_everyday_activity_and_set_to_default_sent</string>
-    <string name="pref_key_first_week_post_install_is_browser_set_to_default_during_first_four_days" translatable="false">pref_key_first_week_post_install_is_browser_set_to_default_during_first_four_days</string>
 
     <!--Translations -->
     <string name="pref_key_ignore_translations_data_saver_warning" translatable="false">pref_key_ignore_translations_data_saver_warning</string>

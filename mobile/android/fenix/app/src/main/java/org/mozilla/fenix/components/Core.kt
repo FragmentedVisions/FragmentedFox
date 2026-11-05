@@ -375,7 +375,7 @@ class Core(
                     ),
                 ),
                 ReaderViewMiddleware(),
-                TelemetryMiddleware(context, context.components.settings, metrics, crashReporter),
+                TelemetryMiddleware(context, context.components.settings, crashReporter),
                 ThumbnailsMiddleware(thumbnailStorage),
                 UndoMiddleware(context.components.settings.getUndoDelay()),
                 RegionMiddleware(context, locationService),
@@ -524,10 +524,6 @@ class Core(
             manifestProvider = merinoManifestProvider,
             useMerinoManifest = context.components.settings.enableMerinoManifest,
         )
-    }
-
-    val metrics by lazyMonitored {
-        context.components.analytics.metrics
     }
 
     val adsTelemetry by lazyMonitored {

@@ -19,10 +19,11 @@ Source files we added (the scripts in `.github/scripts`, the generated Android i
 
 ## Names and logos
 
+The FragmentedFox and Fragmented Visions names and the fox artwork are reserved, see `TRADEMARKS.md` in the repository root.
+
 "Firefox" and the Firefox logo are Mozilla's trademarks and are not used for FragmentedFox's own branding. Names of real Mozilla services (Relay, Monitor, Send, Profiler) stay as they are. Mozilla's branding folders (`browser/branding/aurora`, `nightly`, `official` and `unofficial`, and `mobile/android/branding/beta`, `nightly`, `official` and `unofficial`) are left in the source tree and are not used by FragmentedFox builds. Remaining Mozilla artwork is listed under known gaps in `changes.md`.
 
 ## Open points
 
 - The Android open source libraries screen is a placeholder because Google's licence plugin is only applied to official Mozilla builds (see `changes.md`).
 - The About screen still links to Mozilla's privacy notice and support pages. They describe Mozilla's product, not FragmentedFox.
-- No licence statement exists yet for the FragmentedFox name and fox artwork.

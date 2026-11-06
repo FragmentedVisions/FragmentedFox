@@ -19,7 +19,7 @@ Source files we added (the scripts in `.github/scripts`, the generated Android i
 
 ## Names and logos
 
-"Firefox" and the Firefox logo are Mozilla's trademarks and are not used for FragmentedFox's own branding. Names of real Mozilla services (Relay, Monitor, Send, Profiler) stay as they are. The Mozilla branding folders of the upstream tree (`browser/branding/official`, `nightly`, `unofficial`, `mobile/android/branding` others than `fragmentedfox`) are left in the source tree and are not used by FragmentedFox builds. Remaining Mozilla artwork is listed under known gaps in `changes.md`.
+"Firefox" and the Firefox logo are Mozilla's trademarks and are not used for FragmentedFox's own branding. Names of real Mozilla services (Relay, Monitor, Send, Profiler) stay as they are. Mozilla's branding folders (`browser/branding/aurora`, `nightly`, `official` and `unofficial`, and `mobile/android/branding/beta`, `nightly`, `official` and `unofficial`) are left in the source tree and are not used by FragmentedFox builds. Remaining Mozilla artwork is listed under known gaps in `changes.md`.
 
 ## Open points
 

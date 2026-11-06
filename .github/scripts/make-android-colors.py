@@ -289,13 +289,20 @@ def xml_files(scope):
     return found
 
 
+def resolve(path, value):
+    # Some android-components modules do not depend on the colours module, so they get the hex value.
+    if value.startswith("@color/ff") and path.startswith(AC):
+        return "#" + BRAND[value[len("@color/ff"):]]
+    return value
+
+
 def set_xml_tokens(scope, tokens, required=True):
     files = {path: read(path) for path in xml_files(scope)}
     for name, value in tokens.items():
         pattern = re.compile(r'(<color name="%s"[^>]*>)[^<]*(</color>)' % re.escape(name))
         for path, text in files.items():
             if pattern.search(text):
-                files[path] = pattern.sub(lambda m: m.group(1) + value + m.group(2), text, count=1)
+                files[path] = pattern.sub(lambda m: m.group(1) + resolve(path, value) + m.group(2), text, count=1)
                 break
         else:
             if required:

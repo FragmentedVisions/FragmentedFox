@@ -224,6 +224,18 @@ def check_theme():
         fail("theme", "the Fragmented Visions colours are not applied, run .github/scripts/make-android-colors.py")
 
 
+def check_palette_visibility():
+    for path in glob.glob(os.path.join(AC, "**", "src", "main", "res", "**", "*.xml"), recursive=True):
+        if "/ui/colors/" in path:
+            continue
+        if "@color/ff" not in read(path):
+            continue
+        module = path.split("/src/main/res/")[0]
+        gradle = os.path.join(module, "build.gradle")
+        if not os.path.exists(gradle) or ":components:ui-colors" not in read(gradle):
+            fail("theme", f"{os.path.relpath(path, ROOT)} uses a palette colour but its module does not depend on ui-colors, use the hex value")
+
+
 def check_search():
     path = os.path.join(AC, "components/feature/search/src/main/java/mozilla/components/feature/search/middleware/SearchMiddleware.kt")
     text = read(path)
@@ -328,7 +340,7 @@ def normalise(section, message):
 
 
 def main():
-    checks = [check_imports, check_resources, check_pings, check_removed, check_prefs, check_settings, check_nimbus, check_cleartext, check_launcher_aliases, check_theme, check_search, check_glean, check_features, check_telemetry, check_syntax]
+    checks = [check_imports, check_resources, check_pings, check_removed, check_prefs, check_settings, check_nimbus, check_cleartext, check_launcher_aliases, check_theme, check_palette_visibility, check_search, check_glean, check_features, check_telemetry, check_syntax]
     selected_flags = [a for a in sys.argv[1:] if a.startswith("--")]
     selected = [a for a in sys.argv[1:] if not a.startswith("--")]
     for check in checks:

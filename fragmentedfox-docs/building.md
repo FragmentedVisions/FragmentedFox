@@ -45,6 +45,15 @@ GitHub's free runners have 4 cores, 16 GB of memory and a 6 hour job limit. A fu
 - string, drawable and raw resources used by instrumentation tests (`androidTest`) exist as well, so removing a resource from the app cannot leave a test pointing at it;
 - every Glean metric and ping the app code records is defined in `metrics.yaml` and `pings.yaml`, and every `FxNimbus.features` flag exists in the FML files (these are generated classes, so a metric or flag removed while code still uses it only fails deep in the compile);
 - the Glean pings, YAML and XML files are consistent.
+- the 23 alternative launcher aliases are still in the manifest and the install permission removal has not come back (see [changes](./changes.md)); the dark theme is the default and the Fragmented Visions colours are applied; and no android-components module refers to a palette colour it cannot see.
+
+The `Check FragmentedFox` workflow has options besides the guard, all started by hand:
+
+- `run_id` (and `compare_run_id`) inspect the APK of a finished build without building anything: signature, alignment, manifest, permissions, launcher aliases, and every resource file the resource table points to. A second run id compares two builds.
+- `emulator` installs both builds on an Android emulator to see the exact install error.
+- `backup_key` exports an encrypted backup of the signing key, see [signing](./signing.md).
+
+The scripts in `.github/scripts` that rewrite Mozilla's files are meant to be run again after an upgrade: `make-android-icons.py` (logo and picker icons) and `make-android-colors.py` (the Fragmented Visions palette).
 
 `check-baseline.txt` lists older findings that are false alarms (generated code and other modules), so only new problems fail. Run `python3 .github/scripts/check-fork.py` locally before pushing. After adding a deliberate change, add its entry to the matching JSON file.
 

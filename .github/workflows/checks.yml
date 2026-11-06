@@ -9,6 +9,10 @@ on:
       compare_run_id:
         description: "Optional: a second build run to compare with"
         required: false
+      emulator:
+        description: "Also install the builds on an Android emulator to see the exact install error (needs both run ids)"
+        type: boolean
+        default: false
 
 jobs:
   check:
@@ -76,3 +80,68 @@ jobs:
           }
           for f in apk-main/*.apk; do check "$f"; done
           if [ -d apk-compare ]; then for f in apk-compare/*.apk; do check "$f"; done; fi
+
+  install-test:
+    if: inputs.run_id != '' && inputs.compare_run_id != '' && inputs.emulator
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    strategy:
+      fail-fast: false
+      matrix:
+        api: [34, 36]
+    permissions:
+      contents: read
+      actions: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Download the newer APK
+        uses: actions/download-artifact@v4
+        with:
+          name: fragmentedfox-android
+          path: apk-new
+          run-id: ${{ inputs.run_id }}
+          github-token: ${{ github.token }}
+
+      - name: Download the older APK
+        uses: actions/download-artifact@v4
+        with:
+          name: fragmentedfox-android
+          path: apk-old
+          run-id: ${{ inputs.compare_run_id }}
+          github-token: ${{ github.token }}
+
+      - name: Remove the native libraries and re-sign with a throwaway key
+        run: |
+          set -e
+          BT=$(ls -d "$ANDROID_HOME"/build-tools/* | sort -V | tail -1)
+          mkdir work
+          keytool -genkeypair -keystore work/test.jks -storepass android -keypass android \
+            -alias test -keyalg RSA -keysize 2048 -validity 30 -dname "CN=test"
+          prep() {
+            cp "$1" work/tmp.apk
+            zip -q -d work/tmp.apk 'lib/*'
+            "$BT/zipalign" -f 4 work/tmp.apk work/aligned.apk
+            "$BT/apksigner" sign --ks work/test.jks --ks-pass pass:android --key-pass pass:android --out "$2" work/aligned.apk
+            rm -f work/tmp.apk work/aligned.apk
+          }
+          prep apk-old/fenix-arm64-v8a-release.apk work/old.apk
+          prep apk-new/fenix-arm64-v8a-release.apk work/new.apk
+          ls -l work/*.apk
+
+      - name: Enable KVM
+        run: |
+          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+          sudo udevadm control --reload-rules
+          sudo udevadm trigger --name-match=kvm
+
+      - name: Install on an emulator
+        uses: reactivecircus/android-emulator-runner@v2.30.1
+        with:
+          api-level: ${{ matrix.api }}
+          target: google_apis
+          arch: x86_64
+          disable-animations: true
+          script: bash .github/scripts/emulator-install-test.sh

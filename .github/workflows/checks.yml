@@ -13,6 +13,10 @@ on:
         description: "Also install the builds on an Android emulator to see the exact install error (needs both run ids)"
         type: boolean
         default: false
+      backup_key:
+        description: "Export an encrypted backup of the Android signing key as a one day artifact"
+        type: boolean
+        default: false
 
 jobs:
   check:
@@ -178,3 +182,32 @@ jobs:
           arch: x86_64
           disable-animations: true
           script: bash .github/scripts/emulator-install-test.sh
+
+  backup-signing-key:
+    if: inputs.backup_key
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 1
+
+      - name: Export and encrypt the signing key
+        env:
+          KEYSTORE_B64: ${{ secrets.ANDROID_KEYSTORE_B64 }}
+          KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
+          BACKUP_PASSPHRASE: ${{ secrets.KEYSTORE_BACKUP_PASSPHRASE }}
+          EXPECTED_FINGERPRINT: 8A:8F:89:E8:D8:E4:CC:08:2C:AE:58:4D:11:D0:3B:44:FC:28:94:CC:C0:AA:86:04:2C:55:FD:A9:C7:61:EE:9F
+          OUT_DIR: ${{ runner.temp }}/key-backup
+        run: bash .github/scripts/backup-signing-key.sh
+
+      - name: Upload the encrypted backup
+        uses: actions/upload-artifact@v6
+        with:
+          name: fragmentedfox-signing-key-backup
+          path: ${{ runner.temp }}/key-backup/fragmentedfox-signing-key.tar.gpg
+          retention-days: 1
+          if-no-files-found: error

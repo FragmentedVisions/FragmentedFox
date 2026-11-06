@@ -28,9 +28,9 @@ GitHub secrets cannot be read back, so keep an encrypted copy outside GitHub.
 
 1. Add a repository secret `KEYSTORE_BACKUP_PASSPHRASE`: a long random passphrase of at least 20 characters. Also store it in a password manager. Without it the backup cannot be opened.
 2. Run the `Check FragmentedFox` workflow with `backup_key` ticked. It checks that the key in the secrets still has the certificate fingerprint above, packs the keystore with its password and alias, encrypts it with GPG (AES-256), checks that it decrypts, and uploads it as the artifact `fragmentedfox-signing-key-backup` kept for one day.
-3. Download the artifact straight away, store the `.tar.gpg` file somewhere safe (not in this repository), then delete the artifact from the run page. The repository is public, so anyone logged in to GitHub can download an artifact until it is deleted or expires. It stays useless without the passphrase, which is why the passphrase must be long and random.
+3. Download the artifact straight away. GitHub gives it to you inside a zip, so keep the zip or unzip it and keep `fragmentedfox-signing-key.tar.gpg`. Store it somewhere safe (not in this repository), then delete the run, which removes its artifact too. The repository is public, so anyone logged in to GitHub can download an artifact until it is deleted or expires. It stays useless without the passphrase, which is why the passphrase must be long and random.
 
-To restore, decrypt the file and put the three secrets back:
+To restore, unzip the download if needed, decrypt the file and put the three secrets back:
 
 ```bash
 gpg --decrypt fragmentedfox-signing-key.tar.gpg | tar -x

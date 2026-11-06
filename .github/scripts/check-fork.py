@@ -200,6 +200,14 @@ def check_cleartext():
         fail("cleartext", "network_security_config.xml: base-config permits cleartext")
 
 
+def check_launcher_aliases():
+    manifest = read(os.path.join(APP, "src/main/AndroidManifest.xml"))
+    if manifest.count("<activity-alias") < 26:
+        fail("manifest", "AndroidManifest.xml: launcher aliases were removed; builds without them did not install (see changes.md)")
+    if 'android.permission.REQUEST_INSTALL_PACKAGES" tools:node="remove"' in manifest:
+        fail("manifest", "AndroidManifest.xml: REQUEST_INSTALL_PACKAGES removal is untested (see changes.md)")
+
+
 def check_search():
     path = os.path.join(AC, "components/feature/search/src/main/java/mozilla/components/feature/search/middleware/SearchMiddleware.kt")
     text = read(path)
@@ -304,7 +312,7 @@ def normalise(section, message):
 
 
 def main():
-    checks = [check_imports, check_resources, check_pings, check_removed, check_prefs, check_settings, check_nimbus, check_cleartext, check_search, check_glean, check_features, check_telemetry, check_syntax]
+    checks = [check_imports, check_resources, check_pings, check_removed, check_prefs, check_settings, check_nimbus, check_cleartext, check_launcher_aliases, check_search, check_glean, check_features, check_telemetry, check_syntax]
     selected_flags = [a for a in sys.argv[1:] if a.startswith("--")]
     selected = [a for a in sys.argv[1:] if not a.startswith("--")]
     for check in checks:

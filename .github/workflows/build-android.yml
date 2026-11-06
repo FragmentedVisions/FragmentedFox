@@ -36,7 +36,6 @@ jobs:
           fetch-depth: 1
 
       - name: Check for broken references
-        continue-on-error: true
         run: |
           sudo apt-get install -y python3-yaml
           python3 -I .github/scripts/check-fork.py

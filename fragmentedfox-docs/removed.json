@@ -24,13 +24,11 @@
     "fenix\\.iconpicker",
     "changeAppLauncherIcon",
     "alternativeAppLauncherIcon",
-    "AppSolidLight",
-    "lib-accelerometer-sensormanager",
+      "lib-accelerometer-sensormanager",
     "RATE_APP_URL",
     "FENIX_PLAY_STORE_URL"
   ],
   "permissions": [
-    "com.adjust.preinstall.READ_PERMISSION",
-    "android.permission.REQUEST_INSTALL_PACKAGES"
+    "com.adjust.preinstall.READ_PERMISSION"
   ]
 }

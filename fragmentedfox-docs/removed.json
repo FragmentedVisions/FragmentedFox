@@ -25,7 +25,10 @@
     "RATE_APP_URL",
     "FENIX_PLAY_STORE_URL",
     "features\\.alternativeAppLauncherIcon",
-    "alternative-app-launcher-icon"
+    "alternative-app-launcher-icon",
+    "SupportUtils\\.WHATS_NEW_URL",
+    "SumoTopic\\.YOUR_RIGHTS",
+    "SumoTopic\\.HELP"
   ],
   "permissions": [
     "com.adjust.preinstall.READ_PERMISSION"

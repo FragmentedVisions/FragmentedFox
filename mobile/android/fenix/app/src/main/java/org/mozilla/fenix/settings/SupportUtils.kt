@@ -25,6 +25,11 @@ object SupportUtils {
     const val GOOGLE_US_URL = "https://www.google.com/webhp?client=firefox-b-1-m&channel=ts"
     const val GOOGLE_XX_URL = "https://www.google.com/webhp?client=firefox-b-m&channel=ts"
     const val WHATS_NEW_URL = "https://www.mozilla.org/firefox/android/notes"
+    const val FRAGMENTEDFOX_REPO_URL = "https://github.com/FragmentedVisions/FragmentedFox"
+    const val FRAGMENTEDFOX_CHANGES_URL = "$FRAGMENTEDFOX_REPO_URL/blob/HEAD/fragmentedfox-docs/changes.md"
+    const val FRAGMENTEDFOX_SUPPORT_URL = "$FRAGMENTEDFOX_REPO_URL/issues"
+    const val FRAGMENTEDFOX_PRIVACY_URL = "$FRAGMENTEDFOX_REPO_URL/blob/HEAD/PRIVACY.md"
+    const val FRAGMENTEDFOX_LICENSING_URL = "$FRAGMENTEDFOX_REPO_URL/blob/HEAD/fragmentedfox-docs/licensing.md"
     const val FXACCOUNT_SUMO_URL = "https://support.mozilla.org/kb/access-mozilla-services-firefox-account"
     const val RELAY_MANAGE_URL = "https://relay.firefox.com"
 

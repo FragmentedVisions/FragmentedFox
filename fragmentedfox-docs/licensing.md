@@ -26,4 +26,3 @@ The FragmentedFox and Fragmented Visions names and the fox artwork are reserved,
 ## Open points
 
 - The Android open source libraries screen is a placeholder because Google's licence plugin is only applied to official Mozilla builds (see `changes.md`).
-- The About screen still links to Mozilla's privacy notice and support pages. They describe Mozilla's product, not FragmentedFox.

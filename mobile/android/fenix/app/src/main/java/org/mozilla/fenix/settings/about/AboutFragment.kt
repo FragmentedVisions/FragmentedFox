@@ -196,13 +196,11 @@ class AboutFragment(
     }
 
     private fun populateAboutList(): List<AboutPageItem> {
-        val context = requireContext()
-
         return listOf(
             AboutPageItem(
                 AboutItem.ExternalLink(
                     WHATS_NEW,
-                    SupportUtils.WHATS_NEW_URL,
+                    SupportUtils.FRAGMENTEDFOX_CHANGES_URL,
                 ),
                 // Note: Fenix only has release notes for 'Release' versions, NOT 'Beta' & 'Nightly'.
                 getString(R.string.about_whats_new, getString(R.string.firefox)),
@@ -210,7 +208,7 @@ class AboutFragment(
             AboutPageItem(
                 AboutItem.ExternalLink(
                     SUPPORT,
-                    SupportUtils.getSumoURLForTopic(context, SupportUtils.SumoTopic.HELP),
+                    SupportUtils.FRAGMENTEDFOX_SUPPORT_URL,
                 ),
                 getString(R.string.about_support),
             ),
@@ -221,14 +219,14 @@ class AboutFragment(
             AboutPageItem(
                 AboutItem.ExternalLink(
                     PRIVACY_NOTICE,
-                    SupportUtils.getMozillaPageUrl(SupportUtils.MozillaPage.PRIVACY_NOTICE),
+                    SupportUtils.FRAGMENTEDFOX_PRIVACY_URL,
                 ),
                 getString(R.string.about_privacy_notice),
             ),
             AboutPageItem(
                 AboutItem.ExternalLink(
                     RIGHTS,
-                    SupportUtils.getSumoURLForTopic(context, SupportUtils.SumoTopic.YOUR_RIGHTS),
+                    SupportUtils.FRAGMENTEDFOX_LICENSING_URL,
                 ),
                 getString(R.string.about_know_your_rights),
             ),

@@ -2,6 +2,13 @@ name: Check FragmentedFox
 
 on:
   workflow_dispatch:
+    inputs:
+      run_id:
+        description: "Optional: an Android build run id to inspect the APK of"
+        required: false
+      compare_run_id:
+        description: "Optional: a second build run to compare with"
+        required: false
 
 jobs:
   check:
@@ -17,3 +24,55 @@ jobs:
 
       - name: Check references, removed code, prefs and defaults
         run: python3 -I .github/scripts/check-fork.py
+
+  inspect:
+    if: inputs.run_id != ''
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    permissions:
+      contents: read
+      actions: read
+    steps:
+      - name: Download the APK
+        uses: actions/download-artifact@v4
+        with:
+          name: fragmentedfox-android
+          path: apk-main
+          run-id: ${{ inputs.run_id }}
+          github-token: ${{ github.token }}
+
+      - name: Download the comparison APK
+        if: inputs.compare_run_id != ''
+        uses: actions/download-artifact@v4
+        with:
+          name: fragmentedfox-android
+          path: apk-compare
+          run-id: ${{ inputs.compare_run_id }}
+          github-token: ${{ github.token }}
+
+      - name: Check the APK
+        run: |
+          set +e
+          BT=$(ls -d "$ANDROID_HOME"/build-tools/* | sort -V | tail -1)
+          echo "Using $BT"
+          check() {
+            APK="$1"
+            echo "=================================================="
+            echo "$APK"
+            ls -l "$APK"
+            echo "--- signature"
+            "$BT/apksigner" verify --verbose --print-certs "$APK" 2>&1 | head -20
+            echo "--- zip alignment, 4 byte and 16 KB for native libraries"
+            "$BT/zipalign" -c -v 4 "$APK" 2>&1 | grep -v ' (OK)' | head -20
+            "$BT/zipalign" -c -P 16 -v 4 "$APK" 2>&1 | grep -iv ' (OK' | head -20
+            echo "--- compression of resources.arsc and the manifest"
+            unzip -v "$APK" | grep -E 'resources.arsc|AndroidManifest.xml'
+            echo "--- badging (package, version, sdk, launcher)"
+            "$BT/aapt2" dump badging "$APK" 2>&1 | grep -E "^package|sdkVersion|targetSdk|launchable|application-label:|ERROR|error|W/" | head -20
+            echo "--- permissions"
+            "$BT/aapt2" dump permissions "$APK" 2>&1 | head -40
+            echo "--- activities and aliases"
+            "$BT/aapt2" dump xmltree --file AndroidManifest.xml "$APK" 2>&1 | grep -E 'E: activity-alias|E: activity |E: application|usesCleartext|A: http://schemas.android.com/apk/res/android:name\(0x01010003\)="[^"]*(App|Home)[^"]*"' | head -40
+          }
+          for f in apk-main/*.apk; do check "$f"; done
+          if [ -d apk-compare ]; then for f in apk-compare/*.apk; do check "$f"; done; fi

@@ -29,6 +29,7 @@ import mozilla.components.support.base.ext.areNotificationsEnabledSafe
 import mozilla.components.support.base.log.logger.Logger
 import mozilla.components.support.utils.Browsers
 import mozilla.components.support.utils.BuildManufacturerChecker
+import org.mozilla.fenix.BuildConfig
 import org.mozilla.fenix.GleanMetrics.Pings
 import org.mozilla.fenix.R
 import org.mozilla.fenix.components.accounts.FenixFxAEntryPoint
@@ -288,7 +289,7 @@ class OnboardingFragment : Fragment() {
             )
         }
 
-        if (!settings.isTelemetryEnabled) {
+        if (BuildConfig.TELEMETRY && !settings.isTelemetryEnabled) {
             Pings.onboardingOptOut.setEnabled(true)
             Pings.onboardingOptOut.submit()
         }

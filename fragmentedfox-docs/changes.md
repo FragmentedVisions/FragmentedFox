@@ -22,6 +22,7 @@ Not changed: Safe Browsing local list updates, search suggestions, and the add-o
 
 - `mobile/android/fenix/app/build.gradle`: application ID `com.fragmentedvisions.fragmentedfox`, `TELEMETRY` and `CRASH_REPORTING` build flags off, Mozilla's shared user ID removed from the release build type, and a signing config that reads the release key from the environment.
 - `Settings.kt`: the telemetry and Contile settings default to off.
+- `GleanHelper.kt` and `OnboardingFragment.kt`: Glean only uploads when the build has `TELEMETRY` on, whatever the Settings switch says, and the first-run "onboarding opt-out" ping (which is sent even when telemetry is off) is only sent in those builds. Before this change the opt-out ping went to Mozilla when the terms card was accepted on a fresh install. `check-fork.py` checks both.
 - `SearchMiddleware.kt` (android-components): DuckDuckGo (`ddg`) is the default search engine whenever it is in the list for the user's region, instead of the region's default (Google in most places). A search engine the user picks still wins. `check-fork.py` checks this.
 - `nimbus.fml.yaml`: the expanded toolbar (bottom navigation bar) is the default layout for new installs on phone-sized screens (`default-expanded-toolbar`). Phones that already saved a layout keep it.
 - `Settings.kt`: HTTPS-Only mode defaults to on for all tabs, and encrypted DNS defaults to Increased protection (fallback to normal DNS) with Quad9 as the provider. The settings screen shows Quad9 as a custom provider.
@@ -78,7 +79,8 @@ Checked in the app manifest: backups are off (`allowBackup=false`), the only exp
 
 ## Known gaps
 
-- The Android home screen has a sports widget that fetches tournament data from Mozilla's servers. It has not been reviewed or disabled.
+- The Android home screen sports widget (tournament data from Mozilla's servers) is off by default on the release channel (`homepage-sports-widget`), so it makes no requests. It is on in nightly, beta and developer builds.
+- The Data collection screen and the first-run "Manage settings" dialog still show the technical data, daily usage and Studies switches. Turning "technical data" on starts Mozilla's experiments (Nimbus) over Remote Settings, though Glean uploads stay blocked by the build flag. Whether to hide them is undecided.
 - uBlock Origin and Privacy Badger overlap in what they block. Running both costs some memory and gives little extra protection, so one may be dropped later.
 - The first-run Terms page keeps its structure and buttons (accepting still records acceptance and starts the telemetry client, which stays disabled by the build flags), but its text now describes the licence and links to the README. The privacy line says the app is set up not to send diagnostic data to Mozilla. That statement has not been verified on a running build yet.
 - Translations in other languages still say Firefox, and some Android strings, images and links still mention Firefox or Mozilla.

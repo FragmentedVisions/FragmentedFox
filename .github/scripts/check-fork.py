@@ -262,6 +262,15 @@ def check_features():
                 fail("features", f"{os.path.relpath(path, ROOT)}: FxNimbus.features.{member} is not defined in the FML files")
 
 
+def check_telemetry():
+    glean = read(os.path.join(APP, "src/main/java/org/mozilla/fenix/components/GleanHelper.kt"))
+    if "uploadEnabled = isTelemetryUploadEnabled && BuildConfig.TELEMETRY" not in glean:
+        fail("telemetry", "GleanHelper.kt: Glean upload is no longer gated on BuildConfig.TELEMETRY")
+    onboarding = read(os.path.join(APP, "src/main/java/org/mozilla/fenix/onboarding/OnboardingFragment.kt"))
+    if "BuildConfig.TELEMETRY && !settings.isTelemetryEnabled" not in onboarding:
+        fail("telemetry", "OnboardingFragment.kt: the onboarding opt-out ping is no longer gated on BuildConfig.TELEMETRY")
+
+
 def check_syntax():
     for path in glob.glob(os.path.join(APP, "*.yaml")):
         try:
@@ -284,7 +293,7 @@ def normalise(section, message):
 
 
 def main():
-    checks = [check_imports, check_resources, check_pings, check_removed, check_prefs, check_settings, check_nimbus, check_cleartext, check_search, check_glean, check_features, check_syntax]
+    checks = [check_imports, check_resources, check_pings, check_removed, check_prefs, check_settings, check_nimbus, check_cleartext, check_search, check_glean, check_features, check_telemetry, check_syntax]
     selected_flags = [a for a in sys.argv[1:] if a.startswith("--")]
     selected = [a for a in sys.argv[1:] if not a.startswith("--")]
     for check in checks:

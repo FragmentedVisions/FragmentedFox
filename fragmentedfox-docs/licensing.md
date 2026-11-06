@@ -1,0 +1,28 @@
+# Licensing
+
+## What applies
+
+FragmentedFox is built from Mozilla's source and is covered by the Mozilla Public License 2.0 (MPL 2.0). Mozilla's own notices stay in every file. Do not remove or change them.
+
+## Where the licence texts are
+
+| What | Where |
+| --- | --- |
+| The repository licence | `LICENSE` (unchanged from Mozilla). It points to `toolkit/content/license.html`, which holds the MPL 2.0 text and the licences of bundled third party code. |
+| In the app | Settings, About, Licensing information opens `about:license`, which shows `toolkit/content/license.html` from inside the app. |
+| Android library list | Settings, About, Open source libraries. In our builds this still shows Mozilla's placeholder text, see the open points below. |
+| Source code | This repository is the source of every build. |
+
+## Files added by FragmentedFox
+
+Source files we added (the scripts in `.github/scripts`, the generated Android icons) carry the standard MPL header. Documentation, workflow files and JSON lists have none, as in Mozilla's tree. Add the header to any new script or source file.
+
+## Names and logos
+
+"Firefox" and the Firefox logo are Mozilla's trademarks and are not used for FragmentedFox's own branding. Names of real Mozilla services (Relay, Monitor, Send, Profiler) stay as they are. The Mozilla branding folders of the upstream tree (`browser/branding/official`, `nightly`, `unofficial`, `mobile/android/branding` others than `fragmentedfox`) are left in the source tree and are not used by FragmentedFox builds. Remaining Mozilla artwork is listed under known gaps in `changes.md`.
+
+## Open points
+
+- The Android open source libraries screen is a placeholder because Google's licence plugin is only applied to official Mozilla builds (see `changes.md`).
+- The About screen still links to Mozilla's privacy notice and support pages. They describe Mozilla's product, not FragmentedFox.
+- No licence statement exists yet for the FragmentedFox name and fox artwork.

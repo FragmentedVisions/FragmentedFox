@@ -47,7 +47,7 @@ There are only two branches. All changes are made on `NonStable--test`, and buil
 
 ## Building
 
-Builds run on GitHub Actions and are started by hand from the Actions tab. See [building](./fragmentedfox-docs/building.md). Android builds are signed with a stored release key, described in [signing](./fragmentedfox-docs/signing.md). A quick check (`.github/scripts/check-fork.py`) runs before every Android build and catches code that points at removed things, and prefs or defaults that changed.
+Builds run on GitHub Actions and are started by hand from the Actions tab. See [building](./fragmentedfox-docs/building.md). What the app can and cannot send is in [telemetry](./fragmentedfox-docs/telemetry.md) and [network](./fragmentedfox-docs/network.md). Android builds are signed with a stored release key, described in [signing](./fragmentedfox-docs/signing.md). A quick check (`.github/scripts/check-fork.py`) runs before every Android build and catches code that points at removed things, and prefs or defaults that changed.
 
 ## Security
 

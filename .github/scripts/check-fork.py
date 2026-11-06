@@ -262,7 +262,18 @@ def check_features():
                 fail("features", f"{os.path.relpath(path, ROOT)}: FxNimbus.features.{member} is not defined in the FML files")
 
 
+REVIEWED_UNCONDITIONAL_PINGS = {"onboarding-opt-out", "usage-reporting", "usage-deletion-request"}
+
+
 def check_telemetry():
+    pings = yaml.safe_load(read(os.path.join(APP, "pings.yaml")))
+    for name, spec in pings.items():
+        if isinstance(spec, dict) and (spec.get("metadata") or {}).get("follows_collection_enabled", True) is False:
+            if name not in REVIEWED_UNCONDITIONAL_PINGS:
+                fail("telemetry", f"pings.yaml: ping {name} ignores the collection setting and has not been reviewed (see fragmentedfox-docs/telemetry.md)")
+    controller = read(os.path.join(APP, "src/main/java/org/mozilla/fenix/components/metrics/MetricController.kt"))
+    if not re.search(r"if \(BuildConfig\.TELEMETRY\) \{\s*ReleaseMetricController\(.*?\} else \{\s*DebugMetricController\(\)", controller, flags=re.S):
+        fail("telemetry", "MetricController.kt: the metric controller no longer falls back to the logging-only one when TELEMETRY is off")
     glean = read(os.path.join(APP, "src/main/java/org/mozilla/fenix/components/GleanHelper.kt"))
     if "uploadEnabled = isTelemetryUploadEnabled && BuildConfig.TELEMETRY" not in glean:
         fail("telemetry", "GleanHelper.kt: Glean upload is no longer gated on BuildConfig.TELEMETRY")

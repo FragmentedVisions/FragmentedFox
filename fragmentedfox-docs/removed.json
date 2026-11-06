@@ -23,7 +23,9 @@
     "FontParser",
     "lib-accelerometer-sensormanager",
     "RATE_APP_URL",
-    "FENIX_PLAY_STORE_URL"
+    "FENIX_PLAY_STORE_URL",
+    "features\\.alternativeAppLauncherIcon",
+    "alternative-app-launcher-icon"
   ],
   "permissions": [
     "com.adjust.preinstall.READ_PERMISSION"

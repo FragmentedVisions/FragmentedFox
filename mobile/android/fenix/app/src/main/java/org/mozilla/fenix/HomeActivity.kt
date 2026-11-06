@@ -5,7 +5,6 @@
 package org.mozilla.fenix
 
 import android.app.assist.AssistContent
-import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
 import android.content.Intent.ACTION_MAIN
@@ -178,7 +177,6 @@ import org.mozilla.fenix.translations.TranslationsAIControllableFeatureRegistrar
 import org.mozilla.fenix.translations.TranslationsEnabledSettings
 import org.mozilla.fenix.utils.AccessibilityUtils.announcePrivateModeForAccessibility
 import org.mozilla.fenix.utils.Settings
-import org.mozilla.fenix.utils.changeAppLauncherIcon
 import java.util.Locale
 import mozilla.components.ui.icons.R as iconsR
 
@@ -791,20 +789,6 @@ open class HomeActivity : LocaleAwareAppCompatActivity(), NavHostActivity, Crash
                 "finishing" to isFinishing.toString(),
             ),
         )
-
-        if (FxNimbus.features.alternativeAppLauncherIcon.value().enabled) {
-            // User has been enrolled in alternative app icon experiment.
-            // Note: Updating the icon will subsequently trigger a call to onDestroy().
-            with(applicationContext) {
-                changeAppLauncherIcon(
-                    context = this,
-                    appAlias = ComponentName(this, "$packageName.App"),
-                    alternativeAppAlias = ComponentName(this, "$packageName.AlternativeApp"),
-                    resetToDefault = FxNimbus.features.alternativeAppLauncherIcon.value().resetToDefault,
-                    crashReporter = components.analytics.crashReporter,
-                )
-            }
-        }
 
         components.core.engine.profiler?.addMarker(
             MarkersActivityLifecycleCallbacks.MARKER_NAME,

@@ -81,6 +81,39 @@ jobs:
           for f in apk-main/*.apk; do check "$f"; done
           if [ -d apk-compare ]; then for f in apk-compare/*.apk; do check "$f"; done; fi
 
+      - name: Check resource files and icons
+        run: |
+          set +e
+          BT=$(ls -d "$ANDROID_HOME"/build-tools/* | sort -V | tail -1)
+          resources() {
+            APK="$1"
+            echo "=================================================="
+            echo "$APK"
+            "$BT/aapt2" dump resources "$APK" 2>/dev/null | grep -oE '\(file\) res/[^ ]+' | sed 's/(file) //' | sort -u > refs.txt
+            unzip -Z1 "$APK" | sort -u > files.txt
+            echo "--- files the resource table points to: $(wc -l < refs.txt), files in the package: $(wc -l < files.txt)"
+            echo "--- referenced but missing from the package"
+            comm -23 refs.txt files.txt | head -40
+            echo "--- XML resources that do not parse"
+            grep -E '\.xml$' refs.txt | while read -r x; do
+              "$BT/aapt2" dump xmltree --file "$x" "$APK" > /dev/null 2>&1 || echo "$x"
+            done | head -40
+            echo "--- application icon attributes"
+            "$BT/aapt2" dump xmltree --file AndroidManifest.xml "$APK" 2>&1 | sed -n '/E: application/,/E: activity/p' | grep -E 'icon|roundIcon|label' | head -6
+            echo "--- launcher icon entries"
+            "$BT/aapt2" dump resources "$APK" 2>/dev/null | grep -A8 -E 'mipmap/ic_launcher( |$)|mipmap/ic_launcher_round( |$)' | head -40
+            sort -u files.txt > "files-$2.txt"
+          }
+          resources apk-main/fenix-arm64-v8a-release.apk main
+          if [ -d apk-compare ]; then
+            resources apk-compare/fenix-arm64-v8a-release.apk compare
+            echo "=================================================="
+            echo "--- files only in the first APK (res and assets)"
+            comm -23 files-main.txt files-compare.txt | grep -E '^(res|assets)/' | head -60
+            echo "--- files only in the second APK (res and assets)"
+            comm -13 files-main.txt files-compare.txt | grep -E '^(res|assets)/' | head -60
+          fi
+
   install-test:
     if: inputs.run_id != '' && inputs.compare_run_id != '' && inputs.emulator
     runs-on: ubuntu-24.04

@@ -31,7 +31,7 @@ jobs:
           sudo swapon /mnt/swapfile
           free -h
 
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           fetch-depth: 1
 
@@ -44,7 +44,7 @@ jobs:
         run: sudo apt-get install -y ccache
 
       - name: Restore compile cache
-        uses: actions/cache/restore@v4
+        uses: actions/cache/restore@v5
         with:
           path: ~/.ccache
           key: ccache-android-${{ github.run_id }}
@@ -111,7 +111,7 @@ jobs:
           "$APKSIGNER" verify --print-certs obj-android/gradle/build/mobile/android/fenix/app/outputs/apk/release/fenix-arm64-v8a-release.apk || true
 
       - name: Upload APK
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: fragmentedfox-android
           path: obj-android/gradle/build/mobile/android/fenix/app/outputs/apk/release/fenix-arm64-v8a-release.apk
@@ -123,7 +123,7 @@ jobs:
 
       - name: Save compile cache
         if: always()
-        uses: actions/cache/save@v4
+        uses: actions/cache/save@v5
         with:
           path: ~/.ccache
           key: ccache-android-${{ github.run_id }}
@@ -151,7 +151,7 @@ jobs:
 
       - name: Upload size analysis
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: size-analysis
           path: size-analysis.txt
@@ -159,7 +159,7 @@ jobs:
 
       - name: Upload build logs
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: build-logs
           path: obj-android/.mozbuild/logs/build/*

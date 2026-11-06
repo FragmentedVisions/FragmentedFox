@@ -128,20 +128,20 @@
 	<color name="photonOrange90">#ff7c1504</color>
 
 	<!-- Ink -->
-	<color name="photonInk05">#ff393473</color>
-	<color name="photonInk10">#ff342f6d</color>
-	<color name="photonInk20">#ff312a64</color>
-	<color name="photonInk20A20">#33312a64</color>
-	<color name="photonInk20A48">#7A312a64</color>
-	<color name="photonInk20A50">#80312A64</color>
-	<color name="photonInk30">#ff2e255d</color>
-	<color name="photonInk40">#ff2b2156</color>
-	<color name="photonInk50">#ff291d4f</color>
-	<color name="photonInk60">#ff271948</color>
-	<color name="photonInk70">#ff241541</color>
-	<color name="photonInk80">#ff20123a</color>
-	<color name="photonInk80A96">#f520123a</color>
-	<color name="photonInk90">#ff1d1133</color>
+	<color name="photonInk05">#ff524463</color>
+	<color name="photonInk10">#ff4d3f5d</color>
+	<color name="photonInk20">#ff463a54</color>
+	<color name="photonInk20A20">#33463a54</color>
+	<color name="photonInk20A48">#7a463a54</color>
+	<color name="photonInk20A50">#80463a54</color>
+	<color name="photonInk30">#ff40354d</color>
+	<color name="photonInk40">#ff3a3047</color>
+	<color name="photonInk50">#ff352c40</color>
+	<color name="photonInk60">#ff30273a</color>
+	<color name="photonInk70">#ff2a2333</color>
+	<color name="photonInk80">#ff251f2d</color>
+	<color name="photonInk80A96">#f5251f2d</color>
+	<color name="photonInk90">#ff211c28</color>
 
 	<!--
 		Grey
@@ -193,25 +193,25 @@
 	<color name="photonDarkGrey90A96">#f515141a</color>
 
 	<!-- Violet -->
-	<color name="photonViolet05">#ffE7DFFF</color>
-	<color name="photonViolet10">#ffd9bfff</color>
-	<color name="photonViolet20">#ffcb9eFF</color>
-	<color name="photonViolet20A60">#99cb9eFF</color>
-	<color name="photonViolet30">#ffc689FF</color>
-	<color name="photonViolet40">#ffab71ff</color>
-	<color name="photonViolet40A12">#1fab71ff</color>
-	<color name="photonViolet40A30">#4dab71ff</color>
-	<color name="photonViolet50">#ff9059FF</color>
-	<color name="photonViolet50A32">#529059FF</color>
-	<color name="photonViolet50A48">#7A9059FF</color>
-	<color name="photonViolet60">#ff7542e5</color>
-	<color name="photonViolet60A50">#807542E5</color>
-	<color name="photonViolet70">#ff592ACB</color>
-	<color name="photonViolet70A12">#1F592ACB</color>
-	<color name="photonViolet70A80">#CC592ACB</color>
-	<color name="photonViolet80">#ff45278d</color>
-	<color name="photonViolet90">#ff321c64</color>
-	<color name="photonViolet90A20">#33321c64</color>
+	<color name="photonViolet05">#fffde1e5</color>
+	<color name="photonViolet10">#fffac4ca</color>
+	<color name="photonViolet20">#fff8a5af</color>
+	<color name="photonViolet20A60">#99f8a5af</color>
+	<color name="photonViolet30">#fff6929e</color>
+	<color name="photonViolet40">#fff47c8a</color>
+	<color name="photonViolet40A12">#1ff47c8a</color>
+	<color name="photonViolet40A30">#4df47c8a</color>
+	<color name="photonViolet50">#fff36576</color>
+	<color name="photonViolet50A32">#52f36576</color>
+	<color name="photonViolet50A48">#7af36576</color>
+	<color name="photonViolet60">#ffef384d</color>
+	<color name="photonViolet60A50">#80ef384d</color>
+	<color name="photonViolet70">#ffe3122b</color>
+	<color name="photonViolet70A12">#1fe3122b</color>
+	<color name="photonViolet70A80">#cce3122b</color>
+	<color name="photonViolet80">#ffa70d1f</color>
+	<color name="photonViolet90">#ff760a16</color>
+	<color name="photonViolet90A20">#33760a16</color>
 
 	<!-- White -->
 	<color name="photonWhite">#ffffff</color>

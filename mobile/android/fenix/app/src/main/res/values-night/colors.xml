@@ -4,53 +4,53 @@
    - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Material3 color variables -->
-    <color name="fx_mobile_primary">@color/novaViolet20</color>
-    <color name="fx_mobile_on_primary">@color/novaGray80</color>
-    <color name="fx_mobile_primary_container">@color/novaViolet60</color>
-    <color name="fx_mobile_on_primary_container">@color/novaVioletDesaturated0</color>
-    <color name="fx_mobile_primary_inverse">@color/novaViolet70</color>
-    <color name="fx_mobile_secondary">@color/novaGray20</color>
-    <color name="fx_mobile_on_secondary">@color/novaGray80</color>
-    <color name="fx_mobile_secondary_container">@color/novaVioletDesaturated70</color>
-    <color name="fx_mobile_on_secondary_container">@color/novaVioletDesaturated0</color>
-    <color name="fx_mobile_tertiary">@color/novaViolet30</color>
-    <color name="fx_mobile_on_tertiary">@color/novaGray80</color>
-    <color name="fx_mobile_tertiary_container">@color/novaVioletDesaturated90</color>
-    <color name="fx_mobile_on_tertiary_container">@color/novaVioletDesaturated0</color>
-    <color name="fx_mobile_background">@color/novaGray75</color>
-    <color name="fx_mobile_on_background">@color/novaVioletDesaturated0</color>
-    <color name="fx_mobile_surface">@color/novaGray75</color>
-    <color name="fx_mobile_on_surface">@color/novaVioletDesaturated0</color>
-    <color name="fx_mobile_surface_variant">@color/novaGray65</color>
-    <color name="fx_mobile_on_surface_variant">@color/novaVioletDesaturated0A70</color>
-    <color name="fx_mobile_surface_inverse">@color/novaGray30</color>
-    <color name="fx_mobile_on_surface_inverse">@color/novaGray80</color>
-    <color name="fx_mobile_error">@color/novaRed30</color>
-    <color name="fx_mobile_on_error">@color/novaGray80</color>
-    <color name="fx_mobile_error_container">@color/novaRed70</color>
-    <color name="fx_mobile_on_error_container">@color/novaVioletDesaturated0</color>
-    <color name="fx_mobile_information">@color/novaBlue30</color>
-    <color name="fx_mobile_on_information">@color/novaGray80</color>
-    <color name="fx_mobile_information_container">@color/novaBlue70</color>
-    <color name="fx_mobile_on_information_container">@color/novaVioletDesaturated0</color>
-    <color name="fx_mobile_success">@color/novaGreen30</color>
-    <color name="fx_mobile_on_success">@color/novaGray80</color>
-    <color name="fx_mobile_warning">@color/novaYellow30</color>
-    <color name="fx_mobile_on_warning">@color/novaGray80</color>
-    <color name="fx_mobile_warning_container">@color/novaYellow70</color>
-    <color name="fx_mobile_on_warning_container">@color/novaVioletDesaturated0</color>
-    <color name="fx_mobile_outline">@color/novaGray45</color>
-    <color name="fx_mobile_outline_variant">@color/novaGray65</color>
-    <color name="fx_mobile_surface_bright">@color/novaGray65</color>
-    <color name="fx_mobile_surface_dim">@color/novaGray85</color>
-    <color name="fx_mobile_surface_container">@color/novaGray75</color>
-    <color name="fx_mobile_surface_container_high">@color/novaGray70</color>
-    <color name="fx_mobile_surface_container_highest">@color/novaGray65</color>
-    <color name="fx_mobile_surface_container_low">@color/novaGray80</color>
-    <color name="fx_mobile_surface_container_lowest">@color/novaGray85</color>
-    <color name="fx_mobile_autofill_text">@color/novaVioletDesaturated30A55</color>
-    <color name="fx_mobile_selected_text">@color/novaGray45A80</color>
-    <color name="fx_mobile_icon_private">@color/novaViolet50</color>
+    <color name="fx_mobile_primary">@color/ffBrightRed</color>
+    <color name="fx_mobile_on_primary">@color/ffVoid</color>
+    <color name="fx_mobile_primary_container">@color/ffSignalRed</color>
+    <color name="fx_mobile_on_primary_container">@color/ffSoftWhite</color>
+    <color name="fx_mobile_primary_inverse">@color/ffSignalRed</color>
+    <color name="fx_mobile_secondary">@color/ffAsh</color>
+    <color name="fx_mobile_on_secondary">@color/ffVoid</color>
+    <color name="fx_mobile_secondary_container">@color/ffLine</color>
+    <color name="fx_mobile_on_secondary_container">@color/ffSoftWhite</color>
+    <color name="fx_mobile_tertiary">@color/ffLavender</color>
+    <color name="fx_mobile_on_tertiary">@color/ffVoid</color>
+    <color name="fx_mobile_tertiary_container">@color/ffLavenderInk</color>
+    <color name="fx_mobile_on_tertiary_container">@color/ffSoftWhite</color>
+    <color name="fx_mobile_background">@color/ffVoid</color>
+    <color name="fx_mobile_on_background">@color/ffSoftWhite</color>
+    <color name="fx_mobile_surface">@color/ffCharcoal</color>
+    <color name="fx_mobile_on_surface">@color/ffSoftWhite</color>
+    <color name="fx_mobile_surface_variant">@color/ffCharcoal2</color>
+    <color name="fx_mobile_on_surface_variant">@color/ffAsh</color>
+    <color name="fx_mobile_surface_inverse">@color/ffSoftWhite</color>
+    <color name="fx_mobile_on_surface_inverse">@color/ffVoid</color>
+    <color name="fx_mobile_error">@color/ffBrightRed</color>
+    <color name="fx_mobile_on_error">@color/ffVoid</color>
+    <color name="fx_mobile_error_container">@color/ffRedDark</color>
+    <color name="fx_mobile_on_error_container">@color/ffSoftWhite</color>
+    <color name="fx_mobile_information">@color/ffLavender</color>
+    <color name="fx_mobile_on_information">@color/ffVoid</color>
+    <color name="fx_mobile_information_container">@color/ffLavenderInk</color>
+    <color name="fx_mobile_on_information_container">@color/ffSoftWhite</color>
+    <color name="fx_mobile_success">@color/ffTerminalGreen</color>
+    <color name="fx_mobile_on_success">@color/ffVoid</color>
+    <color name="fx_mobile_warning">@color/ffBrightRed</color>
+    <color name="fx_mobile_on_warning">@color/ffVoid</color>
+    <color name="fx_mobile_warning_container">@color/ffRedDark</color>
+    <color name="fx_mobile_on_warning_container">@color/ffSoftWhite</color>
+    <color name="fx_mobile_outline">@color/ffGrey600</color>
+    <color name="fx_mobile_outline_variant">@color/ffLine</color>
+    <color name="fx_mobile_surface_bright">@color/ffCharcoal3</color>
+    <color name="fx_mobile_surface_dim">@color/ffVoid</color>
+    <color name="fx_mobile_surface_container">@color/ffCharcoal</color>
+    <color name="fx_mobile_surface_container_high">@color/ffCharcoal2</color>
+    <color name="fx_mobile_surface_container_highest">@color/ffCharcoal3</color>
+    <color name="fx_mobile_surface_container_low">@color/ffCharcoal0</color>
+    <color name="fx_mobile_surface_container_lowest">@color/ffVoid</color>
+    <color name="fx_mobile_autofill_text">@color/ffLavenderA55</color>
+    <color name="fx_mobile_selected_text">@color/ffAshA80</color>
+    <color name="fx_mobile_icon_private">@color/ffLavender</color>
     <color name="fx_mobile_scrim">@color/novaBlackA50</color>
 
     <color name="fx_mobile_splashscreen_background">#050505</color>
@@ -63,9 +63,9 @@
     <!-- Search -->
     <color name="fx_mobile_layer_color_3">@color/photonDarkGrey80</color>
     <!-- Tooltip -->
-    <color name="fx_mobile_layer_color_gradient_start">@color/photonViolet70</color>
+    <color name="fx_mobile_layer_color_gradient_start">@color/ffRedDeep</color>
     <!-- Tooltip -->
-    <color name="fx_mobile_layer_color_gradient_end">@color/photonViolet60</color>
+    <color name="fx_mobile_layer_color_gradient_end">@color/ffSignalRed</color>
     <!-- Warning background -->
     <color name="fx_mobile_layer_color_warning">@color/photonYellow70A77</color>
     <!-- Error background -->
@@ -89,7 +89,7 @@
     <!-- Icon inverted (on color) -->
     <color name="fx_mobile_icon_color_oncolor">@color/photonLightGrey05</color>
     <color name="fx_mobile_icon_color_accent_violet">@color/photonViolet20</color>
-    <color name="fx_mobile_icon_color_accent_blue">@color/photonBlue20</color>
+    <color name="fx_mobile_icon_color_accent_blue">@color/ffLavender</color>
     <color name="fx_mobile_icon_color_accent_pink">@color/photonPink20</color>
     <color name="fx_mobile_icon_color_accent_green">@color/photonGreen20</color>
     <color name="fx_mobile_icon_color_accent_yellow">@color/photonYellow20</color>
@@ -105,20 +105,20 @@
     <color name="add_on_private_browsing_exterior_circle_background_normal_theme">@color/accent_normal_theme</color>
     <color name="prompt_login_edit_text_cursor_color_normal_theme">@color/photonViolet50</color>
     <color name="search_suggestion_indicator_icon_color_normal_theme">@color/photonGreen60</color>
-    <color name="search_suggestion_indicator_icon_bookmark_color_normal_theme">@color/photonBlue40</color>
+    <color name="search_suggestion_indicator_icon_bookmark_color_normal_theme">@color/ffLavender</color>
 
     <!-- Protections Dashboard colors -->
-    <color name="protections_dashboard_chip_background">#FF3D3264</color>
-    <color name="protections_dashboard_chip_text">#FFD9D0F5</color>
+    <color name="protections_dashboard_chip_background">@color/ffLavenderDark</color>
+    <color name="protections_dashboard_chip_text">@color/ffLavenderTint</color>
     <color name="protections_dashboard_progress_bar">@color/novaViolet50</color>
     <color name="protections_dashboard_gradient_start">@color/novaVioletDesaturated90</color>
     <color name="protections_dashboard_gradient_end">@color/novaOrange70</color>
 
     <!-- Colors for Edge to Edge background  -->
-    <color name="homepage_edge_to_edge_gradient_start">#FF0A1A3B</color>
-    <color name="homepage_edge_to_edge_gradient_end">#FF293564</color>
-    <color name="homepage_tab_edge_to_edge_tab_strip_item_background_active">#213B6F</color>
-    <color name="homepage_tab_edge_to_edge_tab_strip_item_background_inactive">#0E1A40</color>
+    <color name="homepage_edge_to_edge_gradient_start">@color/ffCharcoal0</color>
+    <color name="homepage_edge_to_edge_gradient_end">@color/ffCharcoal3</color>
+    <color name="homepage_tab_edge_to_edge_tab_strip_item_background_active">@color/ffLine</color>
+    <color name="homepage_tab_edge_to_edge_tab_strip_item_background_inactive">@color/ffCharcoal2</color>
     <color name="homepage_tab_edge_to_edge_toolbar_background">#00000000</color>
     <color name="homepage_tab_edge_to_edge_toolbar_outline">#00000000</color>
 

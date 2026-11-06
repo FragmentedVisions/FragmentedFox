@@ -212,6 +212,18 @@ def check_launcher_aliases():
         fail("manifest", "AndroidManifest.xml: REQUEST_INSTALL_PACKAGES removal is untested (see changes.md)")
 
 
+def check_theme():
+    prefs = read(os.path.join(APP, "src/main/res/xml/customization_preferences.xml"))
+    for key, expected in (("pref_key_dark_theme", "true"), ("pref_key_light_theme", "false"), ("pref_key_follow_device_theme", "false")):
+        match = re.search(r'android:defaultValue="([^"]*)"\s+android:key="@string/%s"' % key, prefs)
+        if not match or match.group(1) != expected:
+            fail("theme", f"customization_preferences.xml: {key} default is not {expected}")
+    xml = read(os.path.join(AC, "components/ui/colors/src/main/res/values/fragmentedfox_colors.xml"))
+    colors = read(os.path.join(APP, "src/main/res/values-night/colors.xml"))
+    if "@color/ffBrightRed" not in colors or '<color name="ffSignalRed">#FFD4122A</color>' not in xml:
+        fail("theme", "the Fragmented Visions colours are not applied, run .github/scripts/make-android-colors.py")
+
+
 def check_search():
     path = os.path.join(AC, "components/feature/search/src/main/java/mozilla/components/feature/search/middleware/SearchMiddleware.kt")
     text = read(path)
@@ -316,7 +328,7 @@ def normalise(section, message):
 
 
 def main():
-    checks = [check_imports, check_resources, check_pings, check_removed, check_prefs, check_settings, check_nimbus, check_cleartext, check_launcher_aliases, check_search, check_glean, check_features, check_telemetry, check_syntax]
+    checks = [check_imports, check_resources, check_pings, check_removed, check_prefs, check_settings, check_nimbus, check_cleartext, check_launcher_aliases, check_theme, check_search, check_glean, check_features, check_telemetry, check_syntax]
     selected_flags = [a for a in sys.argv[1:] if a.startswith("--")]
     selected = [a for a in sys.argv[1:] if not a.startswith("--")]
     for check in checks:

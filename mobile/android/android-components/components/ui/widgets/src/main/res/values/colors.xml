@@ -6,5 +6,5 @@
     <!-- Button Colors -->
     <color name="mozac_grey_button_color">#E0E0E6</color>
     <color name="mozac_destructive_button_text_color">#C50042</color>
-    <color name="mozac_grey_button_text_color">#312A65</color>
+    <color name="mozac_grey_button_text_color">@color/ffCharcoal2</color>
 </resources>

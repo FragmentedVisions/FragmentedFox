@@ -19,6 +19,7 @@ import androidx.compose.ui.tooling.preview.PreviewLightDark
 import androidx.compose.ui.unit.dp
 import mozilla.components.compose.base.utils.ColorStop
 import mozilla.components.compose.base.utils.LinearGradientBrush
+import mozilla.components.ui.colors.FragmentedFoxColors
 import mozilla.components.ui.colors.NovaColors
 
 private const val CFR_GRADIENT_ANGLE = 135f
@@ -79,24 +80,24 @@ data class AcornGradientScheme(
 private val cfr = AcornGradient(
     type = AcornGradientType.Linear(angleInDegrees = CFR_GRADIENT_ANGLE),
     colorStops = listOf(
-        ColorStop(0f, NovaColors.Violet60),
-        ColorStop(1f, NovaColors.Violet50),
+        ColorStop(0f, FragmentedFoxColors.RedDeep),
+        ColorStop(1f, FragmentedFoxColors.SignalRed),
     ),
 )
 
 private val darkAccent = AcornGradient(
     type = AcornGradientType.Linear(angleInDegrees = ACCENT_GRADIENT_ANGLE),
     colorStops = listOf(
-        ColorStop(0f, NovaColors.Violet30),
-        ColorStop(0.71f, NovaColors.Violet50),
+        ColorStop(0f, FragmentedFoxColors.BrightRed),
+        ColorStop(0.71f, FragmentedFoxColors.SignalRed),
     ),
 )
 
 private val tabOutline = AcornGradient(
     type = AcornGradientType.Linear(angleInDegrees = ACCENT_GRADIENT_ANGLE),
     colorStops = listOf(
-        ColorStop(0f, NovaColors.Violet30),
-        ColorStop(0.71f, NovaColors.Violet50),
+        ColorStop(0f, FragmentedFoxColors.BrightRed),
+        ColorStop(0.71f, FragmentedFoxColors.SignalRed),
     ),
 )
 
@@ -105,15 +106,15 @@ val lightAcornGradientScheme = AcornGradientScheme(
     accent = AcornGradient(
         type = AcornGradientType.Linear(angleInDegrees = ACCENT_GRADIENT_ANGLE),
         colorStops = listOf(
-            ColorStop(0f, NovaColors.Violet30),
-            ColorStop(0.71f, NovaColors.Orange30),
+            ColorStop(0f, FragmentedFoxColors.BrightRed),
+            ColorStop(0.71f, FragmentedFoxColors.SignalRed),
         ),
     ),
     accentSubtle = AcornGradient(
         type = AcornGradientType.Linear(angleInDegrees = ACCENT_GRADIENT_ANGLE),
         colorStops = listOf(
-            ColorStop(0.4f, NovaColors.Violet10A50),
-            ColorStop(1f, NovaColors.Orange10A50),
+            ColorStop(0.4f, FragmentedFoxColors.RedTint.copy(alpha = 0.5f)),
+            ColorStop(1f, FragmentedFoxColors.RedTint.copy(alpha = 0.25f)),
         ),
     ),
     tabOutline = tabOutline,
@@ -125,8 +126,8 @@ val darkAcornGradientScheme = AcornGradientScheme(
     accentSubtle = AcornGradient(
         type = AcornGradientType.Linear(angleInDegrees = ACCENT_GRADIENT_ANGLE),
         colorStops = listOf(
-            ColorStop(0.4f, NovaColors.VioletDesaturated90A50),
-            ColorStop(1f, NovaColors.Orange70A50),
+            ColorStop(0.4f, FragmentedFoxColors.Charcoal.copy(alpha = 0.5f)),
+            ColorStop(1f, FragmentedFoxColors.RedDark.copy(alpha = 0.5f)),
         ),
     ),
     tabOutline = tabOutline,
@@ -138,8 +139,8 @@ val privateAcornGradientScheme = AcornGradientScheme(
     accentSubtle = AcornGradient(
         type = AcornGradientType.Linear(angleInDegrees = ACCENT_GRADIENT_ANGLE),
         colorStops = listOf(
-            ColorStop(0.4f, NovaColors.VioletDesaturated90),
-            ColorStop(1f, NovaColors.VioletDesaturated90),
+            ColorStop(0.4f, FragmentedFoxColors.PrivateBg),
+            ColorStop(1f, FragmentedFoxColors.PrivateBg),
         ),
     ),
     tabOutline = tabOutline,

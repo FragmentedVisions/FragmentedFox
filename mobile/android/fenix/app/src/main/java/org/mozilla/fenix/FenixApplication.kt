@@ -7,10 +7,8 @@ package org.mozilla.fenix
 import android.annotation.SuppressLint
 import android.app.ActivityManager
 import android.app.Application
-import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
-import android.content.pm.PackageManager
 import android.os.Build
 import android.os.Build.VERSION.SDK_INT
 import android.os.StrictMode
@@ -173,25 +171,7 @@ open class FenixApplication : Application(), Provider, ThemeProvider {
     protected val ioDispatcher = Dispatchers.IO
     override fun onCreate() {
         super.onCreate()
-        if (isMainProcess()) {
-            restoreMainLauncherAlias()
-        }
         initializeFenixProcess()
-    }
-
-    /**
-     * The removed app icon picker disabled this alias when another icon was chosen. Without the
-     * alternative aliases the app would have no launcher entry, so put the alias back to its default.
-     */
-    private fun restoreMainLauncherAlias() {
-        val alias = ComponentName(this, "$packageName.App")
-        if (packageManager.getComponentEnabledSetting(alias) == PackageManager.COMPONENT_ENABLED_STATE_DISABLED) {
-            packageManager.setComponentEnabledSetting(
-                alias,
-                PackageManager.COMPONENT_ENABLED_STATE_DEFAULT,
-                PackageManager.DONT_KILL_APP,
-            )
-        }
     }
 
     override fun attachBaseContext(base: Context) {

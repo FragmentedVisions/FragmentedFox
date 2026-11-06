@@ -21,10 +21,7 @@
     "components:feature-summarize",
     "FontEnumerationWorker",
     "FontParser",
-    "fenix\\.iconpicker",
-    "changeAppLauncherIcon",
-    "alternativeAppLauncherIcon",
-      "lib-accelerometer-sensormanager",
+    "lib-accelerometer-sensormanager",
     "RATE_APP_URL",
     "FENIX_PLAY_STORE_URL"
   ],

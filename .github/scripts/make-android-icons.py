@@ -120,6 +120,132 @@ def silhouette(size, fill, tools=False):
     return vector(size, size, 256, 256, body)
 
 
+
+BASE = {"#FF4757": "#FF4757", "#D4122A": "#D4122A", "#A80E21": "#A80E21", "#9E8FB2": "#9E8FB2"}
+LIGHTER = {"#FF4757": "#9E8FB2", "#D4122A": "#6C5C85", "#A80E21": "#4B3F63", "#9E8FB2": "#D4CDE0"}
+TERMINAL = {"#FF4757": "#00FF88", "#D4122A": "#00C26E", "#A80E21": "#008C4F", "#9E8FB2": "#00D97A"}
+EMBER = {"#FF4757": "#FFD23F", "#D4122A": "#FF7A1A", "#A80E21": "#D9261C", "#9E8FB2": "#FFB347"}
+NEON = {"#FF4757": "#00E5FF", "#D4122A": "#00A8C6", "#A80E21": "#6A3DFF", "#9E8FB2": "#FF2E93"}
+RAINBOW = ["#E40303", "#FF8C00", "#FFED00", "#008026", "#004DFF", "#750787"]
+
+
+def centroid_y(points):
+    return sum(y for _, y in points) / len(points)
+
+
+def fox(tx, k, palette=None, colors=None, stroke="#050505", eye="#00FF88", flat=None, outline=None):
+    body = ""
+    order = sorted(range(len(polys)), key=lambda i: centroid_y(polys[i][0]))
+    rank = {i: r for r, i in enumerate(order)}
+    for i, (pts, fill) in enumerate(polys):
+        data = poly_path(pts, tx)
+        if outline:
+            body += path(data, stroke=outline, stroke_w=fmt(5 * k))
+        elif flat:
+            body += path(data, fill=flat, stroke=flat, stroke_w=fmt(7 * k))
+        else:
+            color = colors[rank[i] * len(colors) // len(polys)] if colors else palette[fill.upper()]
+            body += path(data, fill=color, stroke=stroke, stroke_w=fmt(7 * k))
+    for d in eyes:
+        body += path(eye_path(d, tx), fill=eye)
+    return body
+
+
+def compose(mode, builder):
+    if mode == "fg":
+        s = 1.24
+        return vector(432, 432, 432, 432, builder(lambda x, y: ((x - 128) * s + 216, (y - 133) * s + 216), s))
+    return vector(432, 432, 256, 256, builder(lambda x, y: (x, y), 1))
+
+
+def quad(p0, p1, p2, steps=6):
+    return [
+        ((1 - t) ** 2 * p0[0] + 2 * (1 - t) * t * p1[0] + t * t * p2[0],
+         (1 - t) ** 2 * p0[1] + 2 * (1 - t) * t * p1[1] + t * t * p2[1])
+        for t in [i / steps for i in range(steps)]
+    ]
+
+
+def pixel_fox(tx, k, cells=24):
+    from PIL import Image, ImageDraw
+    scale = 8
+    size = 256 * scale
+    img = Image.new("RGBA", (size, size), (0, 0, 0, 0))
+    draw = ImageDraw.Draw(img)
+    for pts, fill in polys:
+        draw.polygon([(x * scale, y * scale) for x, y in pts], fill=fill)
+    for d in eyes:
+        n = [float(v) for v in re.findall(r"-?\d+(?:\.\d+)?", d)]
+        a, b, c, e, f = (n[0], n[1]), (n[2], n[3]), (n[4], n[5]), (n[6], n[7]), (n[8], n[9])
+        pts = quad(a, b, c) + quad(c, e, f) + [f]
+        draw.polygon([(x * scale, y * scale) for x, y in pts], fill="#00FF88")
+    step = 256 / cells
+    grid = {}
+    for row in range(cells):
+        for col in range(cells):
+            r, g, b, a = img.getpixel((int((col + 0.5) * step * scale), int((row + 0.5) * step * scale)))
+            if a > 128:
+                grid.setdefault("#%02X%02X%02X" % (r, g, b), []).append((col, row))
+    body = ""
+    for color, cell_list in grid.items():
+        data = ""
+        for row in sorted({r for _, r in cell_list}):
+            cols = sorted(c for c, r in cell_list if r == row)
+            start = prev = cols[0]
+            for c in cols[1:] + [None]:
+                if c is not None and c == prev + 1:
+                    prev = c
+                    continue
+                x0, y0 = tx(start * step, row * step)
+                x1, y1 = tx((prev + 1) * step, (row + 1) * step)
+                data += f"M{fmt(x0)},{fmt(y0)}H{fmt(x1)}V{fmt(y1)}H{fmt(x0)}Z"
+                if c is not None:
+                    start = prev = c
+        body += path(data, fill=color)
+    return body
+
+
+def duo(tx, k):
+    scale = 0.64
+    left = lambda x, y: tx((x - 128) * scale + 128 - 50, (y - 133) * scale + 133)
+    right = lambda x, y: tx(128 - (x - 128) * scale + 50, (y - 133) * scale + 133)
+    return fox(left, k * scale, BASE) + fox(right, k * scale, LIGHTER)
+
+
+VARIANTS = {
+    "retro_2004": lambda tx, k: fox(tx, k, TERMINAL, eye="#050505"),
+    "pixelated": pixel_fox,
+    "cuddling": duo,
+    "pride": lambda tx, k: fox(tx, k, colors=RAINBOW, eye="#050505"),
+    "flaming": lambda tx, k: fox(tx, k, EMBER, eye="#050505"),
+    "minimal": lambda tx, k: fox(tx, k, flat="#FFFFFF", eye="#050505"),
+    "momo": lambda tx, k: fox(tx, k, outline="#FFFFFF"),
+    "cool": lambda tx, k: fox(tx, k, NEON, stroke="#0B0420", eye="#FFFFFF"),
+}
+
+AAPT = ' xmlns:aapt="http://schemas.android.com/aapt"'
+
+
+def gradient_background(top, bottom):
+    body = (
+        '    <path android:pathData="M0,0h432v432h-432z">\n'
+        '        <aapt:attr name="android:fillColor">\n'
+        '            <gradient android:startX="216" android:startY="0" android:endX="216" android:endY="432" android:type="linear">\n'
+        f'                <item android:offset="0" android:color="{top}"/>\n'
+        f'                <item android:offset="1" android:color="{bottom}"/>\n'
+        '            </gradient>\n'
+        '        </aapt:attr>\n'
+        '    </path>\n'
+    )
+    return vector(432, 432, 432, 432, body, AAPT)
+
+
+for name, builder in VARIANTS.items():
+    write(RES + f"/drawable/ic_launcher_foreground_{name}.xml", compose("fg", builder))
+    write(RES + f"/drawable/ic_{name}.xml", compose("preview", builder))
+write(RES + "/drawable/ic_launcher_background_cuddling.xml", gradient_background("#2A0A1E", "#050505"))
+write(RES + "/drawable/ic_launcher_background_cool.xml", gradient_background("#1A0B3B", "#05010F"))
+
 write(RES + "/drawable/ic_launcher_foreground.xml", foreground())
 write(RES + "/drawable/ic_launcher_monochrome.xml", monochrome())
 write(RES + "/drawable/ic_firefox.xml", mark(108))

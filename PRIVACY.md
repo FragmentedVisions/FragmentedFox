@@ -6,7 +6,8 @@ FragmentedFox is a browser. This page says what the Android app sends and where.
 
 - It sends no telemetry, usage statistics or technical data to Fragmented Visions or to Mozilla. The telemetry code is switched off when the app is built, and the first run no longer sends anything.
 - Fragmented Visions runs no servers for this app, and there are no accounts to create.
-- Sponsored shortcuts, sponsored stories, Pocket stories, ads, Firefox Suggest and remote experiments are off by default.
+- Sponsored shortcuts, sponsored stories, Pocket stories, ads and Firefox Suggest are off by default.
+- It does not download experiments, surveys or feature rollouts from Mozilla, and the ones Mozilla bundled in the app are removed, so Mozilla cannot switch features on in your copy.
 - WebRTC is off.
 
 ## What it does contact

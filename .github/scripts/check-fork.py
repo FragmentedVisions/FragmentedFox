@@ -236,6 +236,16 @@ def check_palette_visibility():
             fail("theme", f"{os.path.relpath(path, ROOT)} uses a palette colour but its module does not depend on ui-colors, use the hex value")
 
 
+def check_remote_experiments():
+    components = read(os.path.join(APP, "src/main/java/org/mozilla/fenix/components/Components.kt"))
+    match = re.search(r"NimbusComponents\((.*?)\n\s{8}\)", components, flags=re.S)
+    if not match or not re.search(r"remoteSettingsService\s*=\s*null\b", match.group(1)):
+        fail("nimbus", "Components.kt: Nimbus must not get the Remote Settings service, it would fetch experiments and rollouts from Mozilla")
+    bundled = json.loads(read(os.path.join(APP, "src/main/res/raw/initial_experiments.json")))
+    if bundled.get("data"):
+        fail("nimbus", "initial_experiments.json: bundled Mozilla experiments and rollouts must stay empty")
+
+
 def check_search():
     path = os.path.join(AC, "components/feature/search/src/main/java/mozilla/components/feature/search/middleware/SearchMiddleware.kt")
     text = read(path)
@@ -340,7 +350,7 @@ def normalise(section, message):
 
 
 def main():
-    checks = [check_imports, check_resources, check_pings, check_removed, check_prefs, check_settings, check_nimbus, check_cleartext, check_launcher_aliases, check_theme, check_palette_visibility, check_search, check_glean, check_features, check_telemetry, check_syntax]
+    checks = [check_imports, check_resources, check_pings, check_removed, check_prefs, check_settings, check_nimbus, check_cleartext, check_launcher_aliases, check_theme, check_palette_visibility, check_remote_experiments, check_search, check_glean, check_features, check_telemetry, check_syntax]
     selected_flags = [a for a in sys.argv[1:] if a.startswith("--")]
     selected = [a for a in sys.argv[1:] if not a.startswith("--")]
     for check in checks:

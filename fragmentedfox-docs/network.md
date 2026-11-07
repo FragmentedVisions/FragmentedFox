@@ -7,7 +7,7 @@ What the Android app can contact, as read from the code and defaults. This is a 
 | Feature | How |
 | --- | --- |
 | Telemetry (Glean) | `isTelemetryEnabled` is false |
-| Remote experiments (Nimbus) | `isExperimentationEnabled` follows telemetry, so off |
+| Remote experiments and rollouts (Nimbus) | the app is not given the Remote Settings service, so it never fetches them, and the experiments Mozilla bundled in the app are removed. See the correction below |
 | Studies and Normandy | prefs off |
 | Sponsored tiles (Contile) | `showContileFeature` false |
 | Pocket stories and sponsored stories | home screen sections default to false in `nimbus.fml.yaml` |
@@ -31,6 +31,10 @@ What the Android app can contact, as read from the code and defaults. This is a 
 | addons.mozilla.org | add-on search, install and update checks |
 | Mozilla account servers | only if you sign in to sync |
 | Mozilla crash-stats | only if you choose to send a crash report |
+
+## Correction: experiments and rollouts
+
+This page used to say remote experiments were off because `isExperimentationEnabled` follows telemetry. That was wrong. Mozilla split participation in two: experiments (studies) and rollouts ("Remote improvements"), and rollouts are decoupled from telemetry and on by default. On every foreground start the app fetched Mozilla's `nimbus-mobile-experiments` collection from Remote Settings without checking either setting, and it applied 11 experiments and rollouts bundled in `res/raw/initial_experiments.json` at first run: two tab groups rollouts, user surveys, a sports widget, the LongFox game, a marketing card change and a growth holdback group. It was found when an unfinished tab groups tab appeared in a build. Now `Components.kt` passes `null` as the Remote Settings service to Nimbus, so nothing is fetched, and the bundled file holds no experiments. Feature settings come from the defaults in `nimbus.fml.yaml` only. The Studies and Remote improvements screens still exist but have nothing to act on. `check-fork.py` fails if either change is undone, for example by an ESR merge.
 
 ## Telemetry
 

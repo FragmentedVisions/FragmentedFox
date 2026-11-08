@@ -253,6 +253,15 @@ def check_query_stripping():
             fail("settings", f"GeckoProvider.kt: {name} is not true")
 
 
+def check_licenses():
+    gradle = read(os.path.join(APP, "build.gradle"))
+    match = re.search(r"if \(([^\n]*)\) \{\s*apply plugin: 'com\.google\.android\.gms\.oss-licenses-plugin'", gradle)
+    if not match:
+        fail("licenses", "app/build.gradle: the oss-licenses plugin is no longer applied, so the libraries screen would be empty")
+    elif "MOZILLA_OFFICIAL" in match.group(1):
+        fail("licenses", "app/build.gradle: the oss-licenses plugin must not depend on MOZILLA_OFFICIAL, our builds never set it (see changes.md)")
+
+
 def check_hidden_settings():
     screen = read(os.path.join(APP, "src/main/java/org/mozilla/fenix/settings/datachoices/DataChoicesScreen.kt"))
     match = re.search(r"fun buildDataChoicesItems.*?\n}\n", screen, flags=re.S)
@@ -374,7 +383,7 @@ def normalise(section, message):
 
 
 def main():
-    checks = [check_imports, check_resources, check_pings, check_removed, check_prefs, check_settings, check_nimbus, check_cleartext, check_launcher_aliases, check_theme, check_palette_visibility, check_remote_experiments, check_query_stripping, check_hidden_settings, check_search, check_glean, check_features, check_telemetry, check_syntax]
+    checks = [check_imports, check_resources, check_pings, check_removed, check_prefs, check_settings, check_nimbus, check_cleartext, check_launcher_aliases, check_theme, check_palette_visibility, check_remote_experiments, check_query_stripping, check_licenses, check_hidden_settings, check_search, check_glean, check_features, check_telemetry, check_syntax]
     selected_flags = [a for a in sys.argv[1:] if a.startswith("--")]
     selected = [a for a in sys.argv[1:] if not a.startswith("--")]
     for check in checks:

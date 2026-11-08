@@ -25,4 +25,4 @@ The FragmentedFox and Fragmented Visions names and the fox artwork are reserved,
 
 ## Open points
 
-- The Android open source libraries screen is a placeholder because Google's licence plugin is only applied to official Mozilla builds (see `changes.md`).
+- The Android open source libraries screen was a placeholder because Google's licence plugin was only applied to official Mozilla builds. It is now applied to our builds, but this has not been built or checked on a phone yet (see `changes.md`).

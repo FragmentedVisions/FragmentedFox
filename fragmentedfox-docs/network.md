@@ -31,6 +31,8 @@ What the Android app can contact, as read from the code and defaults. This is a 
 | addons.mozilla.org | add-on search, install and update checks |
 | Mozilla account servers | only if you sign in to sync |
 | Mozilla crash-stats | only if you choose to send a crash report |
+| Mozilla Remote Settings attachments | the language data for on-device translation, downloaded the first time you translate a page between a pair of languages (the `translations-models-v2` and `translations-wasm-v2` collections). Translation is on in the toolbar and menu by default |
+| webcompat.com | only if you open Report broken site from the menu and submit a report |
 
 ## Link tracking parameters, referrers and ECH
 
@@ -49,6 +51,10 @@ Telemetry is compiled out. See [telemetry](./telemetry.md) for how that is enfor
 ## Cleartext
 
 Plain HTTP from the app's own Java code is refused except for localhost. Pages are covered by HTTPS-Only mode.
+
+## Wallpapers
+
+The app downloads wallpapers at start-up from `BuildConfig.WALLPAPER_URL`. That value comes from a `.wallpaper_url` file that our builds do not have, so it is empty and nothing is fetched.
 
 ## Not contacted on Android
 

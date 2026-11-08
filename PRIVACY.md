@@ -23,6 +23,8 @@ FragmentedFox is a browser. This page says what the Android app sends and where.
 | addons.mozilla.org | to find, install and update add-ons | when you use add-ons |
 | Mozilla account servers | to sync | only if you sign in |
 | Mozilla crash reports | to send a crash report | only if you choose to send one |
+| Mozilla language data | to translate a page on your device | the first time you translate between a pair of languages |
+| webcompat.com (Mozilla) | to send a broken-site report | only if you open Report broken site and submit one |
 
 Mozilla and Google run the services in that table. Their own privacy notices cover what they do with the requests they receive.
 

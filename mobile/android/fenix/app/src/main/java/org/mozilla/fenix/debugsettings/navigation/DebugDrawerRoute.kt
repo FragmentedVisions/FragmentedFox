@@ -95,10 +95,6 @@ enum class DebugDrawerRoute(
         route = "tab_process_tools",
         title = R.string.debug_drawer_tab_process_tools_title,
     ),
-    SportsWidgetTool(
-        route = "sports_widget_tool",
-        title = R.string.debug_drawer_sports_widget_tool_title,
-    ),
     ;
 
     companion object {
@@ -259,14 +255,6 @@ enum class DebugDrawerRoute(
                         content = {
                             TabProcessTools()
                         }
-                    }
-
-                    SportsWidgetTool -> {
-                        onClick = {
-                            appStore.dispatch(AppAction.SportsWidgetAction.DebugToolVisibilityChanged(visible = true))
-                            debugDrawerStore.dispatch(DebugDrawerAction.DrawerClosed)
-                        }
-                        content = {}
                     }
                 }
 

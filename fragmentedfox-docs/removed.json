@@ -32,7 +32,11 @@
     "org\\.mozilla\\.fenix\\.longfox",
     "LongFoxFeature",
     "longfoxEnabled",
-    "UpdateShowFoxPeekAnimation"
+    "UpdateShowFoxPeekAnimation",
+    "org\\.mozilla\\.fenix\\.home\\.sports",
+    "SportsWidget",
+    "WorldCupMatches",
+    "homepageSportsWidget"
   ],
   "permissions": [
     "com.adjust.preinstall.READ_PERMISSION"

@@ -2,10 +2,8 @@
 [imports] mobile/android/fenix/app/src/main/java/org/mozilla/fenix/HomeActivity.kt: unresolved import org.mozilla.fenix.crashes.CrashActionDispatcher
 [imports] mobile/android/fenix/app/src/main/java/org/mozilla/fenix/HomeActivity.kt: unresolved import org.mozilla.fenix.shortcut.NewTabShortcutIntentProcessor.Companion.ACTION_OPEN_PRIVATE_TAB
 [imports] mobile/android/fenix/app/src/main/java/org/mozilla/fenix/browser/StandardSnackbarErrorBinding.kt: unresolved import org.mozilla.fenix.compose.snackbar.SnackbarFactory
-[imports] mobile/android/fenix/app/src/main/java/org/mozilla/fenix/components/Core.kt: unresolved import org.mozilla.fenix.longfox.LongFoxFeature
 [imports] mobile/android/fenix/app/src/main/java/org/mozilla/fenix/home/PocketMiddleware.kt: unresolved import org.mozilla.fenix.datastore.SelectedPocketStoriesCategories
 [imports] mobile/android/fenix/app/src/main/java/org/mozilla/fenix/home/PocketMiddleware.kt: unresolved import org.mozilla.fenix.datastore.SelectedPocketStoriesCategories.SelectedPocketStoriesCategory
-[imports] mobile/android/fenix/app/src/main/java/org/mozilla/fenix/home/logo/LogoController.kt: unresolved import org.mozilla.fenix.longfox.LongFoxFeatureApi
 [imports] mobile/android/fenix/app/src/main/java/org/mozilla/fenix/iconpicker/ui/AppIconSelectionFragment.kt: unresolved import org.mozilla.fenix.iconpicker.AppIconUpdater
 [imports] mobile/android/fenix/app/src/main/java/org/mozilla/fenix/iconpicker/ui/AppIconSelectionFragment.kt: unresolved import org.mozilla.fenix.iconpicker.SearchWidgetsUpdater
 [imports] mobile/android/fenix/app/src/main/java/org/mozilla/fenix/settings/autofill/ui/AutofillSettingsScreen.kt: unresolved import org.mozilla.fenix.debugsettings.addresses.FakeCreditCardsAddressesStorage.Companion.generateCreditCard
@@ -19,7 +17,6 @@
 [imports] mobile/android/fenix/app/src/test/java/org/mozilla/fenix/browser/StandardSnackbarErrorBindingTest.kt: unresolved import org.mozilla.fenix.compose.snackbar.SnackbarFactory
 [imports] mobile/android/fenix/app/src/test/java/org/mozilla/fenix/home/PocketMiddlewareTest.kt: unresolved import org.mozilla.fenix.datastore.SelectedPocketStoriesCategories
 [imports] mobile/android/fenix/app/src/test/java/org/mozilla/fenix/home/PocketMiddlewareTest.kt: unresolved import org.mozilla.fenix.datastore.SelectedPocketStoriesCategories.SelectedPocketStoriesCategory
-[imports] mobile/android/fenix/app/src/test/java/org/mozilla/fenix/home/logo/LogoControllerTest.kt: unresolved import org.mozilla.fenix.longfox.LongFoxFeatureApi
 [imports] mobile/android/fenix/app/src/test/java/org/mozilla/fenix/settings/settingssearch/FenixRecentSettingsSearchesRepositoryTest.kt: unresolved import org.mozilla.fenix.settings.datastore.RecentSettingsSearches
 [resources] mobile/android/fenix/app/src/main/java/org/mozilla/fenix/trackingprotection/TrackersBlockedCard.kt: R.string.tap_to_play does not exist
 [resources] mobile/android/fenix/app/src/main/res/raw/keep.xml: @drawable/ic_onboarding_add_ons does not exist

@@ -86,8 +86,6 @@ internal sealed class HomepageState {
      * @property showPocketStoriesCarousel Whether to show the pocket stories section.
      * @property showCollections Whether to show the collections section.
      * @property showPrivacyReport Whether to show the privacy report section.
-     * @property longfoxEnabled Whether the longfox game is enabled.
-     * @property showLongfoxAnimation Whether to play the fox peek animation on the privacy report card.
      * @property trackersBlockedCount The number of trackers blocked for the privacy report.
      * @property sportsWidgetState State of the sports widget on the homepage.
      * @property headerState State related to the header of the homepage.
@@ -121,8 +119,6 @@ internal sealed class HomepageState {
         val showPocketStoriesCarousel: Boolean,
         val showCollections: Boolean,
         val showPrivacyReport: Boolean,
-        val longfoxEnabled: Boolean,
-        val showLongfoxAnimation: Boolean,
         val trackersBlockedCount: Int,
         val sportsWidgetState: SportsWidgetState,
         override val headerState: HeaderState,
@@ -247,8 +243,6 @@ internal sealed class HomepageState {
                     recommendationState.pocketStories.isNotEmpty() && !settings.privateModeAndStoriesEntryPointEnabled,
                 showCollections = settings.collections,
                 showPrivacyReport = settings.showPrivacyReportFeature,
-                longfoxEnabled = settings.longfoxEnabled,
-                showLongfoxAnimation = settings.longfoxEnabled && longfoxEntryPointReady,
                 trackersBlockedCount = blockedTrackersState.trackersBlockedCount,
                 sportsWidgetState = sportsWidgetState,
                 headerState = buildHeaderState(

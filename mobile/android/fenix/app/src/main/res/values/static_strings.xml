@@ -150,9 +150,6 @@
     <!-- Label for enabling Private Mode and Stories Entry Point -->
     <string name="preferences_debug_settings_private_mode_and_stories_entry_point" translatable="false">Enable Private Mode and Stories Entry Point</string>
 
-    <!-- longfox secret setting -->
-    <string name="preferences_debug_settings_enable_longfox" translatable="false">Enable Longfox</string>
-
     <!-- Search suggestions title for Firefox Suggest Online -->
     <string name="firefox_suggest_online_header" translatable="false" tools:ignore="BrandUsage">Firefox Suggest Online</string>
 

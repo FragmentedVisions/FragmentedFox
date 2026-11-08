@@ -128,7 +128,6 @@ import org.mozilla.fenix.gecko.GeckoProvider
 import org.mozilla.fenix.historymetadata.DefaultHistoryMetadataService
 import org.mozilla.fenix.historymetadata.HistoryMetadataMiddleware
 import org.mozilla.fenix.historymetadata.HistoryMetadataService
-import org.mozilla.fenix.longfox.LongFoxFeature
 import org.mozilla.fenix.media.MediaSessionService
 import org.mozilla.fenix.nimbus.FxNimbus
 import org.mozilla.fenix.perf.StrictModeManager
@@ -706,7 +705,6 @@ class Core(
 
     val tabGroupRepository by lazyMonitored { DefaultTabGroupRepository(context) }
 
-    val longFoxFeature by lazyMonitored { LongFoxFeature() }
 
     /**
      * Shared Preferences that encrypt/decrypt using Android KeyStore and lib-dataprotect for 23+

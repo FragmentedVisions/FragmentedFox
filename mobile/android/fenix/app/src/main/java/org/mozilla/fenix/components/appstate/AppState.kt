@@ -82,7 +82,6 @@ import org.mozilla.fenix.wallpapers.WallpaperState
  * @property isDefaultBrowser Whether Firefox is the default browser or not.
  * @property blockedTrackersState The [BlockedTrackersState] with data about blocked trackers.
  * @property sportsWidgetState The [sportsWidgetState] to display.
- * @property longfoxEntryPointReady Whether the fox peek animation should play on the next homepage view.
  */
 data class AppState(
     val isForeground: Boolean = true,
@@ -121,5 +120,4 @@ data class AppState(
     val isDefaultBrowser: Boolean = false,
     val blockedTrackersState: BlockedTrackersState = BlockedTrackersState(),
     val sportsWidgetState: SportsWidgetState = SportsWidgetState(),
-    val longfoxEntryPointReady: Boolean = false,
 ) : State

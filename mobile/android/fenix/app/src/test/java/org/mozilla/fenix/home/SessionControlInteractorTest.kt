@@ -17,7 +17,6 @@ import org.mozilla.fenix.browser.browsingmode.BrowsingMode
 import org.mozilla.fenix.components.appstate.AppState
 import org.mozilla.fenix.home.bookmarks.Bookmark
 import org.mozilla.fenix.home.bookmarks.controller.BookmarksController
-import org.mozilla.fenix.home.logo.LogoController
 import org.mozilla.fenix.home.logo.TrackingProtectionController
 import org.mozilla.fenix.home.pocket.PocketRecommendedStoriesCategory
 import org.mozilla.fenix.home.pocket.controller.PocketStoriesController
@@ -47,7 +46,6 @@ class SessionControlInteractorTest {
     private val topSiteController: TopSiteController = mockk(relaxed = true)
     private val privacyNoticeBannerController: PrivacyNoticeBannerController = mockk(relaxed = true)
     private val trackingProtectionController: TrackingProtectionController = mockk(relaxed = true)
-    private val logoController: LogoController = mockk(relaxed = true)
     private val sportsController: SportsController = mockk(relaxed = true)
 
     // Note: the recent visits tests are handled in [RecentVisitsInteractorTest] and [RecentVisitsControllerTest]
@@ -70,7 +68,6 @@ class SessionControlInteractorTest {
             topSiteController,
             privacyNoticeBannerController,
             trackingProtectionController,
-            logoController,
             sportsController,
         )
     }

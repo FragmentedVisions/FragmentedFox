@@ -111,7 +111,6 @@ import org.mozilla.fenix.ext.tabClosedUndoMessage
 import org.mozilla.fenix.home.bookmarks.BookmarksFeature
 import org.mozilla.fenix.home.bookmarks.controller.DefaultBookmarksController
 import org.mozilla.fenix.home.ext.showWallpaperOnboardingDialog
-import org.mozilla.fenix.home.logo.LogoController
 import org.mozilla.fenix.home.logo.TrackingProtectionController
 import org.mozilla.fenix.home.pocket.controller.DefaultPocketStoriesController
 import org.mozilla.fenix.home.privatebrowsing.controller.DefaultPrivateBrowsingController
@@ -1251,11 +1250,6 @@ class HomeFragment : Fragment() {
             trackingProtectionController = TrackingProtectionController(
                 navController = findNavController(),
                 currentSessionId = requireComponents.core.store.state.selectedTabId,
-            ),
-            logoController = LogoController(
-                longFoxFeature = requireComponents.core.longFoxFeature,
-                context = requireActivity(),
-                longFoxEnabled = requireComponents.settings.longfoxEnabled,
             ),
             sportsController = DefaultSportsController(
                 appStore = requireComponents.appStore,

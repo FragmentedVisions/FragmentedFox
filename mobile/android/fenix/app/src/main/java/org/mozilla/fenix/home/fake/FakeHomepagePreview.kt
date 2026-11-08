@@ -99,10 +99,6 @@ internal object FakeHomepagePreview {
             override fun onRemoveChecklistButtonClicked() { /* no op */ }
 
             override fun onPrivacyReportTapped() { /* no op */ }
-
-            override fun onLongfoxEntryPointClicked() { /* no op */ }
-
-            override fun onLongfoxEntryPointShown() { /* no op */ }
         }
 
     internal val sportsInteractor

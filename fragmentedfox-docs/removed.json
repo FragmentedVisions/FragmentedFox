@@ -28,7 +28,11 @@
     "alternative-app-launcher-icon",
     "SupportUtils\\.WHATS_NEW_URL",
     "SumoTopic\\.YOUR_RIGHTS",
-    "SumoTopic\\.HELP"
+    "SumoTopic\\.HELP",
+    "org\\.mozilla\\.fenix\\.longfox",
+    "LongFoxFeature",
+    "longfoxEnabled",
+    "UpdateShowFoxPeekAnimation"
   ],
   "permissions": [
     "com.adjust.preinstall.READ_PERMISSION"

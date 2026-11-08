@@ -150,7 +150,6 @@
   <!-- Shortcut action to open Passwords screen -->
   <string name="home_screen_shortcut_passwords">Hesla</string>
   <!-- Shortcut action to open uninstall survey -->
-  <string name="home_screen_shortcut_uninstall_survey">Odinstalovat, proč?</string>
   <!--
     Recent Tabs
 
@@ -292,9 +291,7 @@
   <!-- Browser menu label for navigating to the translation feature, which provides language translation options the current visited page -->
   <string name="browser_menu_translate_page_2">Přeložit stránku</string>
   <!-- Browser menu label for navigating to the summarization feature, which provides site summarization for the current visited page -->
-  <string name="browser_menu_summarize_page">Shrnutí stránky</string>
   <!-- Browser menu badge text for summarization feature -->
-  <string name="browser_menu_summarize_page_badge">Nové</string>
   <!-- Browser menu label for navigating to the Web Compat Reporter feature, which provides users the ability to send bug reports for broken sites. -->
   <string name="browser_menu_webcompat_reporter_2">Nahlásit nefunkční stránku</string>
   <!-- Browser menu label that is displayed when the current page has been translated by the translation feature. -->
@@ -338,7 +335,6 @@
   -->
   <string name="browser_toolbar_translate">Přeložit stránku</string>
   <!-- CFR description for the browser toolbar describing the "Shake to summarize feature" -->
-  <string name="browser_toolbar_summarize_cfr_description">Zatřeste zařízením pro shrnutí této stránky během několika sekund. ⚡️</string>
   <!--
     Translation Toolbar
 
@@ -356,7 +352,6 @@
 
     Toolbar title for the Page summaries settings fragment
   -->
-  <string name="preferences_page_summaries">Souhrny stránek</string>
   <!--
     AI Controls settings
 
@@ -386,7 +381,6 @@
   <!-- Link text to navigate to more translations settings -->
   <string name="ai_controls_more_translations_settings">Další nastavení překladu</string>
   <!-- Link text to navigate to more page summary settings -->
-  <string name="ai_controls_more_page_summary_settings">Další nastavení souhrnu stránek</string>
   <!-- Title for the voice search AI feature toggle -->
   <string name="ai_controls_voice_search_title">Hlasové vyhledávání</string>
   <!-- Description for the voice search AI feature toggle -->
@@ -530,13 +524,9 @@
   <!-- Onboarding label for 'Continue' button. -->
   <string name="onboarding_redesign_continue_button" tools:ignore="UnusedResources">Pokračovat</string>
   <!-- Marketing onboarding page title. 'Firefox' is intentionally hardcoded. -->
-  <string name="onboarding_marketing_redesign_title" tools:ignore="BrandUsage">Pomozte nám rozvíjet Firefox</string>
   <!-- Marketing onboarding page opt-out checkbox. Unchecking the box does not increase data collection. Our data practices remain the same. 'Mozilla' is intentionally hardcoded. -->
-  <string name="onboarding_marketing_redesign_opt_out_checkbox" tools:ignore="BrandUsage,UnusedResources">Podělte se s marketingovými partnery Mozilly o to, jak jste Firefox objevili a že ho používáte. Tyto údaje nejsou nikdy prodávány.</string>
   <!-- Marketing onboarding page clickable link text to "learn more" on how data is used. -->
-  <string name="onboarding_marketing_redesign_learn_more" tools:ignore="UnusedResources">Jak data používáme</string>
   <!-- Marketing onboarding page button label. Button to confirm choice and start browsing. -->
-  <string name="onboarding_marketing_redesign_positive_button" tools:ignore="UnusedResources">Potvrdit</string>
   <!-- Set to default browser onboarding redesign title. -->
   <string name="onboarding_redesign_set_default_browser_title" tools:ignore="UnusedResources">Získat automatickou ochranu proti sledování</string>
   <!-- Set to default browser onboarding redesign body. -->
@@ -550,11 +540,8 @@
   <!-- Sync onboarding redesign negative button text. -->
   <string name="onboarding_redesign_sync_negative_button" tools:ignore="UnusedResources">Teď ne</string>
   <!-- Marketing onboarding page title variant. “One last thing” refers to the final step or action in the onboarding process that we’re asking users to take before they can start using the browser. -->
-  <string name="onboarding_marketing_title_1" tools:ignore="UnusedResources">Jen jedna poslední věc</string>
   <!-- Marketing onboarding page body variant. 'Firefox' is intentionally hardcoded. -->
-  <string name="onboarding_marketing_body_1" tools:ignore="BrandUsage,UnusedResources">Podělte se s marketingovými partnery Mozilly o to, jak jste Firefox objevili a že ho používáte. Tyto údaje nejsou nikdy prodávány.</string>
   <!-- Marketing onboarding page button label variant. Button to confirm choice and start browsing. -->
-  <string name="onboarding_marketing_positive_button_1" tools:ignore="UnusedResources">Souhlasit a začít prohlížet</string>
   <!-- ==== Project "Nova" onboarding strings ==== -->
 
   <!-- "Continue" onboarding button. -->
@@ -619,46 +606,32 @@
   <!-- Sync onboarding button. -->
   <string name="nova_onboarding_sync_button">Spustit synchronizaci</string>
   <!-- Marketing onboarding title. -->
-  <string name="nova_onboarding_marketing_title">Pomozte nám vytvořit lepší internet</string>
   <!--
     Marketing onboarding body. 'Firefox' and 'Mozilla' are intentionally hardcoded.
     %1$s is replaced by an active link, using nova_onboarding_marketing_body_link_text as text (“How we use the data”).
   -->
-  <string name="nova_onboarding_marketing_body" tools:ignore="BrandUsage,UnusedResources">Podělte se s marketingovými partnery Mozilly o tom, jak jste objevili Firefox a že jej používáte. Tato data nejsou nikdy prodávána. %1$s</string>
   <!-- Marketing onboarding body. 'Firefox' and 'Mozilla' are intentionally hardcoded. -->
-  <string name="nova_onboarding_marketing_body_2" tools:ignore="BrandUsage">Podělte se s marketingovými partnery Mozilly o to, jak jste Firefox objevili a že ho používáte. Tyto údaje nejsou nikdy prodávány.</string>
   <!-- Marketing onboarding body. 'Firefox' and 'Mozilla' are intentionally hardcoded. -->
-  <string name="nova_onboarding_marketing_body_3" tools:ignore="BrandUsage,UnusedResources">Můžete nám pomoci oslovit více uživatelů tím, že umožníte Mozille informovat kanály, kde propagujeme Firefox, že jste jeho uživatelem.</string>
   <!--
     Marketing onboarding body. 'Firefox' and 'Mozilla' are intentionally hardcoded.
     “Platform you came from” refers to the external app, website, store, campaign, or other source that directed the user to Firefox.
   -->
-  <string name="nova_onboarding_marketing_body_4" tools:ignore="BrandUsage,UnusedResources">Pomůžete nám oslovit více lidí tím, že povolíte Mozille sdělovat platformě, odkud jste přišli, že používáte Firefox.</string>
   <!--
     Marketing onboarding body. 'Firefox' and 'Mozilla' are intentionally hardcoded.
     “Platform you came from” refers to the external app, website, store, campaign, or other source that directed the user to Firefox.
   -->
-  <string name="nova_onboarding_marketing_body_5" tools:ignore="BrandUsage,UnusedResources">Pomozte nám oslovit více lidí. Dovolte Mozille informovat platformu, odkud jste přišli, že používáte Firefox.</string>
   <!--
     Marketing onboarding body. 'Firefox' and 'Mozilla' are intentionally hardcoded.
     “Platform you came from” refers to the external app, website, store, campaign, or other source that directed the user to Firefox.
     %1$s is replaced by an active link, using nova_onboarding_marketing_body_link_text as text (“How we use the data”).
   -->
-  <string name="nova_onboarding_marketing_body_6" tools:ignore="BrandUsage,UnusedResources">Pomozte nám oslovit více lidí. Dovolte Mozille informovat platformu, odkud jste přišli, že používáte Firefox. %1$s</string>
   <!-- Marketing onboarding body link text. -->
-  <string name="nova_onboarding_marketing_body_link_text">Jak data používáme</string>
   <!-- Marketing onboarding body link text. -->
-  <string name="nova_onboarding_marketing_body_link_text_1">Zjistit více</string>
   <!-- Marketing onboarding primary button text. 'Firefox' is intentionally hardcoded. -->
-  <string name="nova_onboarding_marketing_primary_button_text" tools:ignore="BrandUsage,UnusedResources">Pomozte Firefoxu</string>
   <!-- Marketing onboarding primary button text. -->
-  <string name="nova_onboarding_marketing_primary_button_text_3">Ano</string>
   <!-- Marketing onboarding primary button text. -->
-  <string name="nova_onboarding_marketing_primary_button_text_2">Povolit a pokračovat</string>
   <!-- Marketing onboarding secondary button text. -->
-  <string name="nova_onboarding_marketing_secondary_button_text" tools:ignore="UnusedResources">Ne, děkuji</string>
   <!-- Marketing onboarding secondary button text. -->
-  <string name="nova_onboarding_marketing_secondary_button_text_2">Ne</string>
   <!-- Notifications onboarding title. 'Firefox' is intentionally hardcoded. -->
   <string name="nova_onboarding_notifications_title" tools:ignore="BrandUsage,UnusedResources">Oznámení vám pomáhají zůstat s Firefoxem ve větším bezpečí</string>
   <!-- Notifications onboarding subtitle. 'Firefox' is intentionally hardcoded. -->
@@ -751,7 +724,6 @@
   <!-- Preference link to Learn more about Firefox Suggest -->
   <string name="preference_search_learn_about_fx_suggest" tools:ignore="BrandUsage">Dozvědět se více o návrzích Firefoxu</string>
   <!-- Preference link to rating Fenix on the Play Store -->
-  <string name="preferences_rate">Ohodnotit na Google Play</string>
   <!--
     Preference linking to about page for Fenix
     %1$s is the name of the app (for example "Firefox").
@@ -1031,7 +1003,6 @@
   <!-- Title for the customize home screen section with sponsored shortcuts. -->
   <string name="customize_toggle_contile">Sponzorované zkratky</string>
   <!-- Title for the customize home screen section that toggles the Homepage sports widget. -->
-  <string name="customize_toggle_world_cup">Světový šampionát</string>
   <!--
     Wallpapers
 
@@ -1105,7 +1076,6 @@
   <!-- Title for the "Momo" themed alternative app icon variant in the icon picker screen. The app icon was created by artist @heyheymomodraws and features a unique hand-drawn style with a friendly fox. -->
   <string name="alternative_app_icon_option_momo">Momo</string>
   <!-- Subtitle for the "Momo" themed alternative app icon variant in the icon picker screen. The app icon was created by artist @heyheymomodraws and features a unique hand-drawn style with a friendly fox. -->
-  <string name="alternative_app_icon_option_momo_subtitle">Autor: @heyheymomodraws</string>
   <!-- Title for the "Cuddling" themed alternative app icon variant in the icon picker screen. The app icon features a playful design with an adorable aesthetic. -->
   <string name="alternative_app_icon_option_cuddling">Mazlení</string>
   <!-- Title for the "Flaming" themed alternative app icon variant in the icon picker screen. The app icon features a fiery design, with the Firefox logo surrounded by flames for a bold, energetic look. -->
@@ -1257,16 +1227,12 @@
   <string name="technical_data_category">Technická data</string>
   <string name="crash_reporting_description">Hlášení o pádech nám umožňují diagnostikovat a opravovat problémy s prohlížečem. Hlášení mohou obsahovat osobní nebo citlivé údaje.</string>
   <!-- Section title for campaign measurement in data collections screen -->
-  <string name="preferences_marketing_data_title">Měření kampaní</string>
   <!-- Preference switch for campaign measurement data (marketing data) collection -->
-  <string name="preferences_marketing_data_2">Údaje z měření kampaně</string>
   <!--
     Preference description for marketing data collection.
     Note: The words "Firefox" and "Mozilla" should NOT be translated. “That you use it” is to mean that the user is opting in to sharing that they are continuing to use Firefox after installing it; not that Firefox is tracking their “usage” or what they’re using it for.
   -->
-  <string name="preferences_marketing_data_description_4" tools:ignore="BrandUsage">Podělte se o to, jak jste Firefox objevili a že ho používáte, s partnery Mozilly v oblasti marketingových technologií.</string>
   <!-- Learn more link for marketing data preference -->
-  <string name="preferences_marketing_data_learn_more">Další informace o marketingových datech</string>
   <!-- Title for studies preferences -->
   <string name="preference_experiments_2">Studie</string>
   <!-- Summary for studies preferences -->
@@ -1352,7 +1318,6 @@
   <!-- Preference for switching tabs by swiping horizontally on the addressbar -->
   <string name="preference_gestures_swipe_toolbar_switch_tabs_2">Panely přepínat přejetím adresního řádku do stran</string>
   <!-- Preference for switching for the shake to summarize toggle in page summaries and customize settings -->
-  <string name="preferences_shake_to_summarize">Vytvořit souhrn zatřesením</string>
   <!--
     Library
 
@@ -1712,7 +1677,6 @@
   <!-- Tab group color: Purple -->
   <string name="tab_group_color_purple">Fialová</string>
   <!-- Tab group color: Violet -->
-  <string name="tab_group_color_violet">Fialová</string>
   <!-- Tab group color: Blue -->
   <string name="tab_group_color_blue">Modrá</string>
   <!-- Tab group color: Cyan -->
@@ -1969,9 +1933,7 @@
   <!-- The error message of the URL text field when an invalid URL has been entered. -->
   <string name="webcompat_reporter_url_error_invalid">Vložte prosím platnou adresu</string>
   <!-- The label/title of a field in the Web Compat Reporter feature for explaining a high-level reason why the site is broken. -->
-  <string name="webcompat_reporter_label_whats_broken_3">Co nefunguje?</string>
   <!-- Content description for the icon button that clears the selected broken site reason in the WebCompat Reporter. -->
-  <string name="webcompat_reporter_clear_reason_content_description">Vymazat vybraný důvod</string>
   <!-- The label/title of a field in the Web Compat Reporter feature for explaining a high-level reason why the site is broken. -->
   <string name="webcompat_reporter_label_whats_broken_2">Co je nefunkční?</string>
   <!-- The placeholder text for the dropdown where a user selects a high-level reason why the site is broken. -->
@@ -1981,13 +1943,11 @@
   <!-- The label/title of an optional field in the Web Compat Reporter feature for adding additional information. -->
   <string name="webcompat_reporter_label_description_2">Popište detailně problém, abyste nám pomohli problém prošetřit (volitelné)</string>
   <!-- The label/title of an optional field in the Web Compat Reporter feature for adding additional information. -->
-  <string name="webcompat_reporter_label_description">Popis problému (nepovinný)</string>
   <!-- The button text for navigating away from the feature to provide more information on the broken site's bug report. -->
   <string name="webcompat_reporter_add_more_info">Přidat další informace</string>
   <!-- The button text for the cancel button to leave the Web Compat Reporter feature. -->
   <string name="webcompat_reporter_cancel">Zrušit</string>
   <!-- The button text for the send button to submit the provided form data. -->
-  <string name="webcompat_reporter_send_report">Odeslat hlášení</string>
   <!-- The button text for the send button to submit the provided form data. -->
   <string name="webcompat_reporter_send">Odeslat</string>
   <!-- Text for a snackbar to confirm the successful submission of a WebCompat report. -->
@@ -1995,13 +1955,10 @@
   <!-- Placeholder text for the description field to prompt the user on what they should type. -->
   <string name="webcompat_reporter_problem_description_placeholder_text_2">Co se stalo? Co jste očekávali, že se stane? Uveďte prosím postup, jak problém reprodukovat.</string>
   <!-- Placeholder text for the description field to prompt the user on what they should type. -->
-  <string name="webcompat_reporter_problem_description_placeholder_text">Co se stalo? Co se mělo stát?</string>
   <!-- Label of the checkbox on the “Report broken site” screen for sending URLS blocked by Enhanced Tracking Protection. -->
   <string name="webcompat_reporter_etp_checkbox_text_2">Odeslat seznam položek blokovaných ochranou proti sledování</string>
   <!-- Label of the checkbox on the “Report broken site” screen for sending URLS blocked by Enhanced Tracking Protection. -->
-  <string name="webcompat_reporter_etp_checkbox_text">Odesílat adresy URL blokované ochranou proti sledování</string>
   <!-- Description text for the checkbox on the “Report broken site” screen for sending URLS blocked by Enhanced Tracking Protection. It informs the user when checked, the report will include the list of URLs that were blocked by Enhanced Tracking Protection on the current page. -->
-  <string name="webcompat_reporter_etp_checkbox_description">Rozšířená ochrana proti sledování může blokovat sledovací prvky a skripty, které některé webové stránky potřebují pro správné fungování.</string>
   <!-- The button text for the preview report button to view a preview of the report. -->
   <string name="webcompat_reporter_preview_report">Náhled hlášení</string>
   <!-- The title shown at the top of the WebCompat Report preview panel. This appears after the user taps the “Preview” button before sending a report. -->
@@ -2033,9 +1990,7 @@
   <!-- Broken site reason text for site asked to turn off ad blocker -->
   <string name="webcompat_reporter_reason_turn_off_adblocker">Stránka požádala o vypnutí blokování reklam</string>
   <!-- Broken site reason text for browser isn’t supported or blocked -->
-  <string name="webcompat_reporter_reason_notsupported_2">Prohlížeč není podporován nebo je blokován</string>
   <!-- Broken site reason text for the site being deceptive -->
-  <string name="webcompat_reporter_reason_site_is_deceptive">Tato stránka je klamavá</string>
   <!-- Broken site reason text for browser isn’t supported or blocked -->
   <string name="webcompat_reporter_reason_notsupported">Prohlížeč není podporován nebo je blokován</string>
   <!-- Broken site reason text for something else -->
@@ -2627,17 +2582,6 @@
     <item quantity="many">Zablokováno %d sledovacích prvků</item>
     <item quantity="other">Zablokováno %d sledovacích prvků</item>
   </plurals>
-  <plurals name="trackers_blocked_count">
-    <!--
-      Trackers blocked card on homepage
-
-      Text shown on the trackers blocked card. %d is the number of trackers blocked.
-    -->
-    <item quantity="one">Zablokován %d sledovací prvek</item>
-    <item quantity="few">Zablokovány %d sledovací prvky</item>
-    <item quantity="many">Zablokováno %d sledovacích prvků</item>
-    <item quantity="other">Zablokováno %d sledovacích prvků</item>
-  </plurals>
   <!-- Text shown on the trackers blocked card when no trackers have been blocked yet -->
   <string name="trackers_blocked_empty">Jste chráněni</string>
   <!-- Text shown below the trackers blocked card with typing animation -->
@@ -3193,7 +3137,6 @@
   <!-- The text for the "Cancel" button for cancelling adding, updating or deleting an address -->
   <string name="addresses_cancel_button">Zrušit</string>
   <!-- The text for the "Delete address" button for deleting an address -->
-  <string name="addressess_delete_address_button">Smazat adresu</string>
   <!-- The title for the "Delete address" confirmation dialog -->
   <string name="addressess_confirm_dialog_message_2">Smazat tuto adresu?</string>
   <!-- The text for the positive button on "Delete address" dialog -->
@@ -3751,7 +3694,6 @@
   -->
   <string name="protection_panel_banner_protected_no_blocked_trackers_description">Jste chráněni.</string>
   <!-- Description text for the protection panel banner when tracking protection is enabled. -->
-  <string name="protection_panel_banner_protected_description">Jste chráněni. Pokud něco zpozorujeme, dáme vám vědět.</string>
   <!-- Label text for the Enhanced Tracking Protection toggle. -->
   <string name="protection_panel_etp_toggle_label">Rozšířená ochrana proti sledování</string>
   <!-- Toggle if Enhanced Tracking Protection is turned on -->
@@ -3768,7 +3710,6 @@
   -->
   <string name="protection_panel_num_trackers_blocked">Zablokováno sledovacích prvků: %d</string>
   <!-- Text for when no trackers have been blocked. -->
-  <string name="protection_panel_no_trackers_blocked">Nebyly nalezeny žádné sledovací prvky</string>
   <!-- Text for when tracking protection is disabled and no trackers are blocked. -->
   <string name="protection_panel_etp_disabled_no_trackers_blocked">Sledovací prvky nejsou blokovány</string>
   <!-- Link text to navigate to privacy and security settings from the protection panel. -->
@@ -3779,13 +3720,11 @@
     Text for displaying the total number of trackers blocked in the trackers blocked panel.
     %d is a placeholder for the number of trackers blocked.
   -->
-  <string name="trackers_blocked_panel_total_num_trackers_blocked">Zablokováno sledovacích prvků: %d</string>
   <!--
     Text for displaying the number of trackers blocked for a specific tracker category in the trackers blocked panel.
     %s is a placeholder for the name of the tracker category.
     %d is a placeholder for the number of trackers blocked.
   -->
-  <string name="trackers_blocked_panel_categorical_num_trackers_blocked">%s: %d</string>
   <!--
     Description text for a dialog confirming whether the user wants to delete all data for current site.
     %s is a placeholder for the base domain of website.
@@ -3934,7 +3873,6 @@
 
     Title text for the uninstall survey dialog, asking the user for the reason they are removing the app
   -->
-  <string name="microsurvey_uninstall_survey_title">Na vaší zpětné vazbě záleží. Proč provádíte odinstalaci?</string>
   <!--
     Accessibility
 
@@ -4208,19 +4146,12 @@
 
     Title for a prompt asking the user about their experience using the app. %1$s is the name of the app (for example "Firefox").
   -->
-  <string name="review_prompt_pre_prompt_header">Co si myslíte o aplikaci %1$s?</string>
   <!-- Label for a button negatively rating the user's experience with the app -->
-  <string name="review_prompt_negative_button">Mám problémy</string>
   <!-- Label for a button positively rating the user's experience with the app -->
-  <string name="review_prompt_positive_button">Je skvělá!</string>
   <!-- Title for a prompt asking the user to rate the app on Google Play Store. %1$s is the name of the app (for example "Firefox"). -->
-  <string name="review_prompt_rate_header">Děkujeme, že máte aplikaci %1$s rádi. Máte chvilku na šíření lásky s hodnocením?</string>
   <!-- Label for a button proceeding to rate the app on Google Play Store. %1$s is the name of the app (for example "Firefox"). -->
-  <string name="review_prompt_rate_button">Hodnocení %1$s v Obchodu Play</string>
   <!-- Title for a prompt asking the user send us feedback. %1$s is the name of the app (for example "Firefox"). -->
-  <string name="review_prompt_feedback_header">Je nám líto, že nastaly problémy. Dejte nám vědět, jak můžeme aplikaci %1$s vylepšit.</string>
   <!-- Label for a button opening a feedback forum -->
-  <string name="review_prompt_feedback_button">Zanechat zpětné vazby</string>
   <!--
     Settings Search Strings
 
@@ -4290,87 +4221,46 @@
 
     Title text shown at the top of the sports widget country selector, encouraging the user to pick a national team to follow.
   -->
-  <string name="sports_widget_country_selector_title">Sledujte svůj tým</string>
   <!-- Section header for the North America region in the sports widget country selector. -->
-  <string name="sports_widget_confederation_north_america">Severní Amerika</string>
   <!-- Section header for the Africa confederation group in the sports widget country selector. -->
-  <string name="sports_widget_confederation_africa">Afrika</string>
   <!-- Section header for the Asia confederation group in the sports widget country selector. -->
-  <string name="sports_widget_confederation_asia">Asie</string>
   <!-- Section header for the CONCACAF confederation group in the sports widget country selector. "CONCACAF" is the abbreviation for "Confederation of North, Central America and Caribbean Association Football". -->
-  <string name="sports_widget_confederation_concacaf">CONCACAF</string>
   <!-- Section header for the Europe confederation group in the sports widget country selector. -->
-  <string name="sports_widget_confederation_europe">Evropa</string>
   <!-- Section header for the Oceania confederation group in the sports widget country selector. -->
-  <string name="sports_widget_confederation_oceania">Oceánie</string>
   <!-- Section header for the South America confederation group in the sports widget country selector. -->
-  <string name="sports_widget_confederation_south_america">Jižní Amerika</string>
   <!-- Country name for England in the sports widget. England cannot be resolved with the Android Intl APIs so it needs an explicit string. -->
-  <string name="sports_widget_country_england">Anglie</string>
   <!-- Country name for Scotland in the sports widget. Scotland cannot be resolved with the Android Intl APIs so it needs an explicit string. -->
-  <string name="sports_widget_country_scotland">Skotsko</string>
   <!-- Label shown on the sports widget scoreboard when a match is currently being played live. -->
-  <string name="sports_widget_match_live">ŽIVĚ</string>
   <!-- Title shown on the sports widget champion scoreboard row celebrating the soccer tournament winner. -->
-  <string name="sports_widget_champions_title">Mistrovství světa ve fotbale 2026</string>
   <!-- Title shown on the sports widget champion scoreboard celebrating the soccer tournament runners-up. Runners-up means second place. -->
-  <string name="sports_widget_runner_up_title" tools:ignore="UnusedResources">Druhé místo</string>
   <!-- Title shown on the sports widget champion scoreboard celebrating the soccer tournament third place winners. -->
-  <string name="sports_widget_third_place_title">Třetí místo</string>
   <!-- Round name shown on the sports widget for the Round of 32 stage in the soccer tournament. -->
-  <string name="sports_widget_round_of_32">Nejlepších 32</string>
   <!-- Round name shown on the sports widget for the Round of 16 stage in the soccer tournament. -->
-  <string name="sports_widget_round_of_16">Nejlepších 16</string>
   <!-- Round name shown on the sports widget for the quarter-finals stage in the soccer tournament. -->
-  <string name="sports_widget_quarter_final">Čtvrtfinále</string>
   <!-- Round name shown on the sports widget for the semi-finals stage in the soccer tournament. -->
-  <string name="sports_widget_semi_final">Semifinále</string>
   <!-- Round name shown on the sports widget for the final stage in the soccer tournament. -->
-  <string name="sports_widget_final">Finále</string>
   <!-- Round name shown on the sports widget for the bronze final stage in the soccer tournament. -->
-  <string name="sports_widget_bronze_final">O třetí místo</string>
   <!-- Sports widget error card message shown when match data fails to load. -->
-  <string name="sports_widget_error_load_failed" tools:ignore="UnusedResources">Informace o utkání nejsou momentálně k dispozici. Zkuste stránku za chvíli znovu načíst.</string>
   <!-- Sports widget error card message shown when the network connection is interrupted and live updates pause. -->
-  <string name="sports_widget_error_connection_interrupted" tools:ignore="UnusedResources">Spojení přerušeno — aktualizace pozastavena.</string>
   <!-- Sports widget action label to refresh match data after an error. -->
-  <string name="sports_widget_error_refresh">Obnovit</string>
   <!-- Sports widget group stage label for group A in the soccer tournament. -->
-  <string name="sports_widget_group_a">Skupina A</string>
   <!-- Sports widget group stage label for group B in the soccer tournament. -->
-  <string name="sports_widget_group_b">Skupina B</string>
   <!-- Sports widget group stage label for group C in the soccer tournament. -->
-  <string name="sports_widget_group_c">Skupina C</string>
   <!-- Sports widget group stage label for group D in the soccer tournament. -->
-  <string name="sports_widget_group_d">Skupina D</string>
   <!-- Sports widget group stage label for group E in the soccer tournament. -->
-  <string name="sports_widget_group_e">Skupina E</string>
   <!-- Sports widget group stage label for group F in the soccer tournament. -->
-  <string name="sports_widget_group_f">Skupina F</string>
   <!-- Sports widget group stage label for group G in the soccer tournament. -->
-  <string name="sports_widget_group_g">Skupina G</string>
   <!-- Sports widget group stage label for group H in the soccer tournament. -->
-  <string name="sports_widget_group_h">Skupina H</string>
   <!-- Sports widget group stage label for group I in the soccer tournament. -->
-  <string name="sports_widget_group_i">Skupina I</string>
   <!-- Sports widget group stage label for group J in the soccer tournament. -->
-  <string name="sports_widget_group_j">Skupina J</string>
   <!-- Sports widget group stage label for group K in the soccer tournament. -->
-  <string name="sports_widget_group_k">Skupina K</string>
   <!-- Sports widget group stage label for group L in the soccer tournament. -->
-  <string name="sports_widget_group_l">Skupina L</string>
   <!-- Sports widget button label to see match results. -->
-  <string name="sports_widget_see_results" tools:ignore="UnusedResources">Zobrazit výsledky</string>
   <!-- Sports widget button label to view details of a soccer match results. -->
-  <string name="sports_widget_view_match_details" tools:ignore="UnusedResources">Zobrazit podrobnosti o zápase</string>
   <!-- Sports widget section header for related soccer matches in the same group. -->
-  <string name="sports_widget_related_matches" tools:ignore="UnusedResources">Související zápasy</string>
   <!-- Sports widget section header for a list of upcoming soccer matches that have not yet started. -->
-  <string name="sports_widget_upcoming" tools:ignore="UnusedResources">Nadcházející</string>
   <!-- Sports widget match status suffix appended to match scores (e.g., "3 - 2 (Full time)") to indicate the match has been completed. -->
-  <string name="sports_widget_match_full_time_suffix">(Konec zápasu)</string>
   <!-- Sports widget match status to indicate the match has been completed. -->
-  <string name="sports_widget_match_full_time_2">Konec zápasu</string>
   <!--
     Sports widget card title encouraging the user to follow the soccer tournament. “Keep tabs on” is an informal expression
     meaning to stay updated on or regularly follow something (in this case, World Cup matches and updates).
@@ -4378,128 +4268,87 @@
     It suggests ongoing awareness rather than active monitoring or control. Not to be translated literally as physical “tabs”
     or tracking in a technical sense; the meaning is about staying informed.
   -->
-  <string name="sports_widget_card_title">Sledujte Mistrovství světa ve fotbale</string>
   <!-- Sports widget card description shown below the title on the homepage entry point. -->
-  <string name="sports_widget_card_description">Získejte živé informace o zápasech a další informace.</string>
   <!-- Sports widget menu item to change the selected team. -->
-  <string name="sports_widget_change_team">Změnit tým</string>
   <!-- Sports widget menu item to get a custom wallpaper for the widget. -->
-  <string name="sports_widget_get_custom_wallpaper">Získejte vlastní tapetu</string>
   <!-- Sports widget menu item to remove the widget from the homepage. -->
-  <string name="sports_widget_remove">Odebrat</string>
   <!-- Sports widget card title shown after a team is eliminated, asking if the user still wants to continue following the soccer tournament. -->
-  <string name="sports_widget_still_want_to_follow">Stále chcete sledovat?</string>
   <!-- Sports widget card description shown after a team is eliminated, suggesting to choose another team. -->
-  <string name="sports_widget_choose_another_team">Vyberte si jiný tým, abyste byli v obraze ohledně mistrovství světa.</string>
   <!-- Sports widget button label to follow another team after the current team is eliminated. -->
-  <string name="sports_widget_follow_another_team">Sledovat jiný tým</string>
   <!-- Sports widget card title shown before the soccer tournament begins on top of a timer that is counting down. -->
-  <string name="sports_widget_countdown_to_world_cup">Odpočítávání do Mistrovství světa</string>
   <!-- Sports widget button label that navigates the user to the full soccer tournament match schedule. -->
-  <string name="sports_widget_view_schedule">Zobrazit rozpis zápasů</string>
   <!-- Sports widget button label that dismisses the step of choosing a team to follow. -->
-  <string name="sports_widget_skip">Přeskočit</string>
   <!-- Sports widget match status label shown during halftime of a match. -->
-  <string name="sports_widget_halftime" tools:ignore="UnusedResources">Poločas</string>
   <!-- Sports widget match status label shown during extra time of a match. -->
-  <string name="sports_widget_extra_time">Prodloužení</string>
   <!-- Sports widget match status label shown during penalties of a match. -->
-  <string name="sports_widget_penalties">Penalty</string>
   <!--
     Sports widget countdown label for days. D is short for Day. The layout only allows for 1–2 characters:
     if there is an equivalent single character for your language, use that (e.g. T for German).
     Your translation will be automatically truncated at 2 characters to avoid layout issues.
   -->
-  <string name="sports_widget_countdown_days">D</string>
   <!--
     Sports widget countdown pill abbreviated label for hours. H is short for Hour. The layout only allows for 1–2 characters:
     if there is an equivalent single character for your language, use that (e.g. S for German).
     Your translation will be automatically truncated at 2 characters to avoid layout issues.
   -->
-  <string name="sports_widget_countdown_hours">H</string>
   <!--
     Sports widget countdown pill abbreviated label for minutes. M is short for Minute. The layout only allows for 1–2 characters:
     if there is an equivalent single character for your language, use that.
     Your translation will be automatically truncated at 2 characters to avoid layout issues
   -->
-  <string name="sports_widget_countdown_minutes">M</string>
   <!-- Content description (for accessibility, not displayed) for the close button on the sports widget team / country selector. -->
-  <string name="sports_widget_close_team_selection_sheet_content_description">Zavřít výběr týmu</string>
   <!-- Content description (for accessibility, not displayed) for the close button on the sports widget card. -->
-  <string name="sports_widget_close_content_description">Zavřít</string>
   <!-- Content description (for accessibility, not displayed) for the overflow (more options) menu button on the sports widget card. -->
-  <string name="sports_widget_more_options_content_description">Další možnosti</string>
   <!--
     Content description (for accessibility, not displayed) announcing the time remaining until the soccer tournament kickoff.
     %1$d is the number of days, %2$d is the number of hours, and %3$d is the number of minutes.
   -->
-  <string name="sports_widget_countdown_remaining_content_description">Zbývající čas. Dny: %1$d. Hodiny: %2$d. Minuty: %3$d.</string>
   <!-- Content description (for accessibility, not displayed)  for the action that navigates to the World Cup website. -->
-  <string name="sports_widget_go_to_world_cup_site_content_description" tools:ignore="UnusedResources">Přejít na stránky Mistrovství světa</string>
   <!--
     Content description (for accessibility, not displayed)  announcing an upcoming soccer match.
     %1$s is the home team name, %2$s is the away team name, %3$s is the match date, %4$s is the kickoff time.
   -->
-  <string name="sports_widget_upcoming_match_content_description">Nadcházející: %1$s versus %2$s, %3$s v %4$s</string>
   <!--
     Content description (for accessibility, not displayed) announcing a soccer match.
     %1$s is the home team name, %2$s is the away team name, %3$s is trailing context
     (e.g. formatted score "1 - 2 (Full time)", upcoming match info "Jun 19 5:00 PM",
     or a match status like "Full time").
   -->
-  <string name="sports_widget_match_content_description">%1$s - %2$s, %3$s</string>
   <!--
     Content description (for accessibility, not displayed)  used for the sports widget card header announcing a live match for a group or stage.
     %s is the soccer tournament group name or stage (e.g. Group A represented by sports_widget_group_a, Round of 32 represented by sports_widget_round_of_32,
     or Final represented by sports_widget_final).
   -->
-  <string name="sports_widget_live_game_content_description">%s, právě se hraje</string>
   <!--
     Content description (for accessibility, not displayed) announcing a live score.
     %1$s is the home team name, %2$d is the home team score, %3$s is the away team name, %4$d is the away team score,
     and %5$s is the match elapsed time (e.g. 72 minutes).
   -->
-  <string name="sports_widget_live_score_content_description">%1$s %2$d, %3$s %4$d, %5$s, naživo</string>
   <!--
     Content description (for accessibility, not displayed) announcing the elapsed minutes of a live match.
     %1$s is the clock value, which may be a plain number (e.g. "72") or include extra time (e.g. "90+3").
   -->
-  <string name="sports_widget_match_elapsed_minutes">Uplynulý čas v minutách: %1$s</string>
   <!--
     Content description (for accessibility, not displayed) for a paginated item.
     %1$s is the soccer tournament group name or stage (e.g. Group A represented by sports_widget_group_a, Round of 32 represented by sports_widget_round_of_32),
     %2$d is the current page number, and %3$d is the total number of pages.
   -->
-  <string name="sports_widget_page_position_content_description">%1$s, stránka %2$d z %3$d</string>
   <!--
     Content description (for accessibility, not displayed) for a page within the World Cup final results carousel.
     %1$d is the current page number, and %2$d is the total number of pages.
   -->
-  <string name="sports_widget_final_results_page_content_description" tools:ignore="UnusedResources">Konečné výsledky Mistrovství světa, stránka %1$d z %2$d</string>
   <!-- Content description (for accessibility, not displayed) for the World Cup final results page. -->
-  <string name="sports_widget_final_results_content_description">Konečné výsledky mistrovství světa</string>
   <!-- Content description (for accessibility, not displayed) for the remove button that removes the sports widget from the homepage. -->
-  <string name="sports_widget_remove_content_description" tools:ignore="UnusedResources">Odstranit Mistrovství světa z domovské stránky</string>
   <!-- Title shown on the sports widget immediately after the user has followed a team. %s is the selected team (e.g., "USA"). -->
-  <string name="sports_widget_team_followed_title">Sledujete: \n%s</string>
   <!-- Description shown on the sports widget immediately after the user has followed a team -->
-  <string name="sports_widget_team_followed_description">S blížícím se turnajem se sem vraťte pro informace o zápasech.</string>
   <!-- Sports widget match status label shown during first half of a match. -->
-  <string name="sports_widget_first_half" tools:ignore="UnusedResources">První poločas</string>
   <!-- Sports widget match status label shown during second half of a match. -->
-  <string name="sports_widget_second_half" tools:ignore="UnusedResources">Druhý poločas</string>
   <!-- Sports widget error card title shown when the user is offline. -->
-  <string name="sports_widget_error_connection_offline_title">Zdá se, že jste offline.</string>
   <!-- Sports widget error card description shown when the user is offline. -->
-  <string name="sports_widget_error_connection_offline_description">Zkontrolujte své připojení k internetu a zkuste to znovu.</string>
   <!-- Sports widget general group stage label in the soccer tournament. -->
-  <string name="sports_widget_group_stage">Skupinová fáze</string>
   <!-- Sports widget error card title shown when match data fails to load. -->
-  <string name="sports_widget_error_load_failed_title">Informace o zápasech nyní nejsou k dispozici.</string>
   <!-- Sports widget error card description shown when match data fails to load. -->
-  <string name="sports_widget_error_load_failed_description">Zkuste to za pár minut znovu.</string>
   <!-- Content description (for accessibility, not displayed) for teams which have not yet been determined in the match schedule. -->
-  <string name="sports_widget_team_to_be_determined">Tým bude upřesněn</string>
   <!-- ==== End of Terms of use popup prompt. ==== -->
 
   <!--
@@ -4569,7 +4418,6 @@
   <!-- The description text that is displayed in the confirmation dialog on the Firefox Labs screen for toggling "off" experimental features. %s is the name of the app (for example "Firefox Nightly") -->
   <string name="firefox_labs_feature_disable_dialog_message">Pro vypnutí této funkce restartujte %s.</string>
   <!-- Helper text shown beneath a Firefox Labs item when it is blocked from being turned on. -->
-  <string name="firefox_labs_feature_conflict">Funkci nelze vyzkoušet.</string>
   <!-- Text displayed on the Firefox Labs screen when there are no Labs experimental features present. -->
   <string name="firefox_labs_no_labs_available_description">Momentálně nemáte k dispozici žádné experimentální funkce</string>
 </resources>

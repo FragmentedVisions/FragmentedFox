@@ -333,7 +333,6 @@
   <!-- Preference Category for settings to Firefox Suggest -->
   <string name="preference_search_address_bar_fx_suggest" tools:ignore="BrandUsage">Aadressiriba - Firefox Suggest</string>
   <!-- Preference link to rating Fenix on the Play Store -->
-  <string name="preferences_rate">Hinda Google Plays</string>
   <!--
     Preference linking to about page for Fenix
     %1$s is the name of the app (for example "Firefox").
@@ -852,7 +851,6 @@
   <!-- The error message of the dropdown, prompting the user to select a high-level reason why the site is broken. -->
   <string name="webcompat_reporter_choose_reason_error">Palun vali põhjus</string>
   <!-- The label/title of an optional field in the Web Compat Reporter feature for adding additional information. -->
-  <string name="webcompat_reporter_label_description">Kirjelda probleemi (valikuline)</string>
   <!-- The button text for the cancel button to leave the Web Compat Reporter feature. -->
   <string name="webcompat_reporter_cancel">Loobu</string>
   <!-- The button text for the send button to submit the provided form data. -->
@@ -1272,15 +1270,6 @@
     <item quantity="one">%d jälitajat blokeeriti</item>
     <item quantity="other">%d jälitajat blokeeriti</item>
   </plurals>
-  <plurals name="trackers_blocked_count">
-    <!--
-      Trackers blocked card on homepage
-
-      Text shown on the trackers blocked card. %d is the number of trackers blocked.
-    -->
-    <item quantity="one">%d jälitajat blokeeriti</item>
-    <item quantity="other">%d jälitajat blokeeriti</item>
-  </plurals>
   <!-- Preference for enhanced tracking protection for the standard protection settings -->
   <string name="preference_enhanced_tracking_protection_standard_default_1">Tavaline (vaikimisi)</string>
   <!-- Preference description for enhanced tracking protection for the standard protection settings -->
@@ -1643,7 +1632,6 @@
   <!-- The text for the "Cancel" button for cancelling adding, updating or deleting an address -->
   <string name="addresses_cancel_button">Loobu</string>
   <!-- The text for the "Delete address" button for deleting an address -->
-  <string name="addressess_delete_address_button">Kustuta aadress</string>
   <!-- The title for the "Delete address" confirmation dialog -->
   <string name="addressess_confirm_dialog_message_2">Kas kustutada see aadress?</string>
   <!-- The text for the positive button on "Delete address" dialog -->
@@ -2004,19 +1992,12 @@
 
     Title for a prompt asking the user about their experience using the app. %1$s is the name of the app (for example "Firefox").
   -->
-  <string name="review_prompt_pre_prompt_header">Mida sa %1$sist arvad?</string>
   <!-- Label for a button negatively rating the user's experience with the app -->
-  <string name="review_prompt_negative_button">Mul on probleeme</string>
   <!-- Label for a button positively rating the user's experience with the app -->
-  <string name="review_prompt_positive_button">See on suurepärane!</string>
   <!-- Title for a prompt asking the user to rate the app on Google Play Store. %1$s is the name of the app (for example "Firefox"). -->
-  <string name="review_prompt_rate_header">Täname, et armastad %1$s\'i. Kas sul on hetk aega, et jagada armastust hinnanguga?</string>
   <!-- Label for a button proceeding to rate the app on Google Play Store. %1$s is the name of the app (for example "Firefox"). -->
-  <string name="review_prompt_rate_button">Hinda %1$si Play poes</string>
   <!-- Title for a prompt asking the user send us feedback. %1$s is the name of the app (for example "Firefox"). -->
-  <string name="review_prompt_feedback_header">Meil on kahju, et sul on probleeme. Anna meile teada, kuidas saaksime %1$si paremaks muuta.</string>
   <!-- Label for a button opening a feedback forum -->
-  <string name="review_prompt_feedback_button">Anna tagasisidet</string>
   <!-- Content description (not visible, for screen readers etc.) for the button to clear the search field for settings search -->
   <string name="content_description_settings_search_clear_search">Tühjenda otsing</string>
   <!-- Text of button allowing to clear history of recent searches done in the settings screen. -->
@@ -2026,6 +2007,5 @@
   <!-- ==== Experiment strings. ==== -->
 
   <!-- Sports widget menu item to remove the widget from the homepage. -->
-  <string name="sports_widget_remove">Eemalda</string>
   <!-- ==== End of Terms of use popup prompt. ==== -->
 </resources>

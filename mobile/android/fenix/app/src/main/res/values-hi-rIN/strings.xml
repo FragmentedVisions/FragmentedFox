@@ -192,7 +192,6 @@
   <!-- Preference for settings related to Search -->
   <string name="preferences_search">खोजें</string>
   <!-- Preference link to rating Fenix on the Play Store -->
-  <string name="preferences_rate">Google Play पर रेट करें</string>
   <!--
     Preference linking to about page for Fenix
     %1$s is the name of the app (for example "Firefox").

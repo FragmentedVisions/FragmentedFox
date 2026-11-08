@@ -244,7 +244,6 @@
   <!-- Browser menu label that the saves the currently visited page as a PDF -->
   <string name="browser_menu_save_as_pdf_2">Įrašyti PDF formatu</string>
   <!-- Browser menu badge text for summarization feature -->
-  <string name="browser_menu_summarize_page_badge">Nauja</string>
   <!-- Browser menu label for navigating to the Web Compat Reporter feature, which provides users the ability to send bug reports for broken sites. -->
   <string name="browser_menu_webcompat_reporter_2">Pranešti apie neveikiančią svetainę</string>
   <!-- Browser menu label that is displayed when the current page has been translated by the translation feature. -->
@@ -327,7 +326,6 @@
   <!-- Preference for settings related to Search -->
   <string name="preferences_search">Paieška</string>
   <!-- Preference link to rating Fenix on the Play Store -->
-  <string name="preferences_rate">Įvertinti per „Google Play“</string>
   <!--
     Preference linking to about page for Fenix
     %1$s is the name of the app (for example "Firefox").

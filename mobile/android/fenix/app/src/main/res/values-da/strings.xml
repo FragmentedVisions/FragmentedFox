@@ -150,7 +150,6 @@
   <!-- Shortcut action to open Passwords screen -->
   <string name="home_screen_shortcut_passwords">Adgangskoder</string>
   <!-- Shortcut action to open uninstall survey -->
-  <string name="home_screen_shortcut_uninstall_survey">Afinstaller, hvorfor?</string>
   <!--
     Recent Tabs
 
@@ -292,9 +291,7 @@
   <!-- Browser menu label for navigating to the translation feature, which provides language translation options the current visited page -->
   <string name="browser_menu_translate_page_2">Oversæt side</string>
   <!-- Browser menu label for navigating to the summarization feature, which provides site summarization for the current visited page -->
-  <string name="browser_menu_summarize_page">Sammenfat side</string>
   <!-- Browser menu badge text for summarization feature -->
-  <string name="browser_menu_summarize_page_badge">Ny</string>
   <!-- Browser menu label for navigating to the Web Compat Reporter feature, which provides users the ability to send bug reports for broken sites. -->
   <string name="browser_menu_webcompat_reporter_2">Rapporter problem med websted</string>
   <!-- Browser menu label that is displayed when the current page has been translated by the translation feature. -->
@@ -338,7 +335,6 @@
   -->
   <string name="browser_toolbar_translate">Oversæt side</string>
   <!-- CFR description for the browser toolbar describing the "Shake to summarize feature" -->
-  <string name="browser_toolbar_summarize_cfr_description">Ryst din enhed for at sammenfatte denne side på få sekunder. ⚡️</string>
   <!--
     Translation Toolbar
 
@@ -356,7 +352,6 @@
 
     Toolbar title for the Page summaries settings fragment
   -->
-  <string name="preferences_page_summaries">Sammenfatning af sider</string>
   <!--
     AI Controls settings
 
@@ -386,7 +381,6 @@
   <!-- Link text to navigate to more translations settings -->
   <string name="ai_controls_more_translations_settings">Flere indstillinger for oversættelse</string>
   <!-- Link text to navigate to more page summary settings -->
-  <string name="ai_controls_more_page_summary_settings">Flere indstillinger for sammenfatning af sider</string>
   <!-- Title for the voice search AI feature toggle -->
   <string name="ai_controls_voice_search_title">Stemme-søgning</string>
   <!-- Description for the voice search AI feature toggle -->
@@ -530,13 +524,9 @@
   <!-- Onboarding label for 'Continue' button. -->
   <string name="onboarding_redesign_continue_button" tools:ignore="UnusedResources">Fortsæt</string>
   <!-- Marketing onboarding page title. 'Firefox' is intentionally hardcoded. -->
-  <string name="onboarding_marketing_redesign_title" tools:ignore="BrandUsage">Hjælp os med at udvikle Firefox</string>
   <!-- Marketing onboarding page opt-out checkbox. Unchecking the box does not increase data collection. Our data practices remain the same. 'Mozilla' is intentionally hardcoded. -->
-  <string name="onboarding_marketing_redesign_opt_out_checkbox" tools:ignore="BrandUsage,UnusedResources">Del, hvordan du opdagede Firefox, og at du bruger appen med Mozillas partnere indenfor markedsføringsteknologi. Disse data vil aldrig blive solgt.</string>
   <!-- Marketing onboarding page clickable link text to "learn more" on how data is used. -->
-  <string name="onboarding_marketing_redesign_learn_more" tools:ignore="UnusedResources">Sådan bruger vi dataene</string>
   <!-- Marketing onboarding page button label. Button to confirm choice and start browsing. -->
-  <string name="onboarding_marketing_redesign_positive_button" tools:ignore="UnusedResources">Bekræft</string>
   <!-- Set to default browser onboarding redesign title. -->
   <string name="onboarding_redesign_set_default_browser_title" tools:ignore="UnusedResources">Få automatisk beskyttelse mod sporing som standard</string>
   <!-- Set to default browser onboarding redesign body. -->
@@ -550,11 +540,8 @@
   <!-- Sync onboarding redesign negative button text. -->
   <string name="onboarding_redesign_sync_negative_button" tools:ignore="UnusedResources">Ikke nu</string>
   <!-- Marketing onboarding page title variant. “One last thing” refers to the final step or action in the onboarding process that we’re asking users to take before they can start using the browser. -->
-  <string name="onboarding_marketing_title_1" tools:ignore="UnusedResources">En sidste ting</string>
   <!-- Marketing onboarding page body variant. 'Firefox' is intentionally hardcoded. -->
-  <string name="onboarding_marketing_body_1" tools:ignore="BrandUsage,UnusedResources">Del, hvordan du opdagede Firefox, og at du bruger appen med Mozillas partnere indenfor markedsføringsteknologi. Disse data vil aldrig blive solgt.</string>
   <!-- Marketing onboarding page button label variant. Button to confirm choice and start browsing. -->
-  <string name="onboarding_marketing_positive_button_1" tools:ignore="UnusedResources">Accepter og begynd at browse</string>
   <!-- ==== Project "Nova" onboarding strings ==== -->
 
   <!-- "Continue" onboarding button. -->
@@ -619,59 +606,42 @@
   <!-- Sync onboarding button. -->
   <string name="nova_onboarding_sync_button">Start synkronisering</string>
   <!-- Marketing onboarding title. -->
-  <string name="nova_onboarding_marketing_title">Hjælp os med at skabe et bedre internet</string>
   <!--
     Marketing onboarding body. 'Firefox' and 'Mozilla' are intentionally hardcoded.
     %1$s is replaced by an active link, using nova_onboarding_marketing_body_link_text as text (“How we use the data”).
   -->
-  <string name="nova_onboarding_marketing_body" tools:ignore="BrandUsage,UnusedResources">Del, hvordan du opdagede Firefox, og at du bruger appen med Mozillas partnere indenfor markedsføringsteknologi. Disse data vil aldrig blive solgt. %1$s</string>
   <!-- Marketing onboarding body. 'Firefox' and 'Mozilla' are intentionally hardcoded. -->
-  <string name="nova_onboarding_marketing_body_2" tools:ignore="BrandUsage">Del, hvordan du opdagede Firefox, og at du bruger appen med Mozillas partnere indenfor markedsføringsteknologi. Disse data vil aldrig blive solgt.</string>
   <!-- Marketing onboarding body. 'Firefox' and 'Mozilla' are intentionally hardcoded. -->
-  <string name="nova_onboarding_marketing_body_3" tools:ignore="BrandUsage,UnusedResources">Du kan hjælpe os med at nå ud til flere mennesker ved at give Mozilla tilladelse til at informere de kanaler, hvor vi promoverer Firefox, om at du er Firefox-bruger.</string>
   <!--
     Marketing onboarding body. 'Firefox' and 'Mozilla' are intentionally hardcoded.
     “Platform you came from” refers to the external app, website, store, campaign, or other source that directed the user to Firefox.
   -->
-  <string name="nova_onboarding_marketing_body_4" tools:ignore="BrandUsage,UnusedResources">Du kan hjælpe os med at nå ud til flere personer ved at give Mozilla tilladelse til at informere den platform, du kom fra, om, at du bruger Firefox.</string>
   <!--
     Marketing onboarding body. 'Firefox' and 'Mozilla' are intentionally hardcoded.
     “Platform you came from” refers to the external app, website, store, campaign, or other source that directed the user to Firefox.
   -->
-  <string name="nova_onboarding_marketing_body_5" tools:ignore="BrandUsage,UnusedResources">Hjælp os med at nå ud til flere mennesker ved at give Mozilla tilladelse til at informere den platform, du kommer fra, om, at du bruger Firefox.</string>
   <!--
     Marketing onboarding body. 'Firefox' and 'Mozilla' are intentionally hardcoded.
     “Platform you came from” refers to the external app, website, store, campaign, or other source that directed the user to Firefox.
     %1$s is replaced by an active link, using nova_onboarding_marketing_body_link_text as text (“How we use the data”).
   -->
-  <string name="nova_onboarding_marketing_body_6" tools:ignore="BrandUsage,UnusedResources">Hjælp os med at nå ud til flere mennesker ved at give Mozilla tilladelse til at informere den platform, du kom fra, om, at du bruger Firefox. %1$s</string>
   <!--
     Marketing onboarding body. 'Firefox' and 'Mozilla' are intentionally hardcoded.
     “Platform you came from” refers to the external app, website, store, campaign, or other source that directed the user to Firefox.
     %1$s is replaced by an active link, using nova_onboarding_marketing_body_link_text_1 as text (“Learn More”).
   -->
-  <string name="nova_onboarding_marketing_body_7" tools:ignore="BrandUsage">Du kan hjælpe os med at nå ud til flere personer ved at give Mozilla tilladelse til at informere den platform, du kom fra, om, at du bruger Firefox. %1$s</string>
   <!-- Marketing onboarding additional body text. 'Firefox' is intentionally hardcoded. -->
-  <string name="nova_onboarding_marketing_body_line_two" tools:ignore="BrandUsage">Firefox er stolt af at være uafhængig og vi sætter en ære i at forsvare det åbne internet mod teknologimonopoler.</string>
   <!--
     Marketing onboarding additional body text. 'Firefox' is intentionally hardcoded.
     “Allowing” refers to the main button “Allow and Continue”; the ask for the user is to allow communicating back to the platform.
   -->
-  <string name="nova_onboarding_marketing_body_line_three" tools:ignore="BrandUsage">Overvej at give tilladelse for at hjælpe Firefox med at få succes.</string>
   <!-- Marketing onboarding body link text. -->
-  <string name="nova_onboarding_marketing_body_link_text">Sådan bruger vi dataene</string>
   <!-- Marketing onboarding body link text. -->
-  <string name="nova_onboarding_marketing_body_link_text_1">Læs mere</string>
   <!-- Marketing onboarding primary button text. 'Firefox' is intentionally hardcoded. -->
-  <string name="nova_onboarding_marketing_primary_button_text" tools:ignore="BrandUsage,UnusedResources">Hjælp Firefox</string>
   <!-- Marketing onboarding primary button text. -->
-  <string name="nova_onboarding_marketing_primary_button_text_3">Ja</string>
   <!-- Marketing onboarding primary button text. -->
-  <string name="nova_onboarding_marketing_primary_button_text_2">Tillad og fortsæt</string>
   <!-- Marketing onboarding secondary button text. -->
-  <string name="nova_onboarding_marketing_secondary_button_text" tools:ignore="UnusedResources">Nej tak</string>
   <!-- Marketing onboarding secondary button text. -->
-  <string name="nova_onboarding_marketing_secondary_button_text_2">Nej</string>
   <!-- Notifications onboarding title. 'Firefox' is intentionally hardcoded. -->
   <string name="nova_onboarding_notifications_title" tools:ignore="BrandUsage,UnusedResources">Meddelelser gør dig mere sikker, når du bruger Firefox</string>
   <!-- Notifications onboarding subtitle. 'Firefox' is intentionally hardcoded. -->
@@ -762,7 +732,6 @@
   <!-- Preference link to Learn more about Firefox Suggest -->
   <string name="preference_search_learn_about_fx_suggest" tools:ignore="BrandUsage">Læs mere om Firefox-forslag</string>
   <!-- Preference link to rating Fenix on the Play Store -->
-  <string name="preferences_rate">Bedøm på Google Play</string>
   <!--
     Preference linking to about page for Fenix
     %1$s is the name of the app (for example "Firefox").
@@ -1042,7 +1011,6 @@
   <!-- Title for the customize home screen section with sponsored shortcuts. -->
   <string name="customize_toggle_contile">Sponsorerede genveje</string>
   <!-- Title for the customize home screen section that toggles the Homepage sports widget. -->
-  <string name="customize_toggle_world_cup">VM</string>
   <!--
     Wallpapers
 
@@ -1116,7 +1084,6 @@
   <!-- Title for the "Momo" themed alternative app icon variant in the icon picker screen. The app icon was created by artist @heyheymomodraws and features a unique hand-drawn style with a friendly fox. -->
   <string name="alternative_app_icon_option_momo">Momo</string>
   <!-- Subtitle for the "Momo" themed alternative app icon variant in the icon picker screen. The app icon was created by artist @heyheymomodraws and features a unique hand-drawn style with a friendly fox. -->
-  <string name="alternative_app_icon_option_momo_subtitle">Skabt af @heyheymomodraws</string>
   <!-- Title for the "Cuddling" themed alternative app icon variant in the icon picker screen. The app icon features a playful design with an adorable aesthetic. -->
   <string name="alternative_app_icon_option_cuddling">Omfavnende</string>
   <!-- Title for the "Flaming" themed alternative app icon variant in the icon picker screen. The app icon features a fiery design, with the Firefox logo surrounded by flames for a bold, energetic look. -->
@@ -1268,16 +1235,12 @@
   <string name="technical_data_category">Tekniske data</string>
   <string name="crash_reporting_description">Med fejlrapporter kan vi diagnosticere og løse problemer med browseren. Rapporter kan indeholde personlige eller følsomme data.</string>
   <!-- Section title for campaign measurement in data collections screen -->
-  <string name="preferences_marketing_data_title">Kampagnemåling</string>
   <!-- Preference switch for campaign measurement data (marketing data) collection -->
-  <string name="preferences_marketing_data_2">Kampagnemålingsdata</string>
   <!--
     Preference description for marketing data collection.
     Note: The words "Firefox" and "Mozilla" should NOT be translated. “That you use it” is to mean that the user is opting in to sharing that they are continuing to use Firefox after installing it; not that Firefox is tracking their “usage” or what they’re using it for.
   -->
-  <string name="preferences_marketing_data_description_4" tools:ignore="BrandUsage">Del, hvordan du opdagede Firefox, og at du bruger appen med Mozillas partnere indenfor markedsføringsteknologi.</string>
   <!-- Learn more link for marketing data preference -->
-  <string name="preferences_marketing_data_learn_more">Læs mere om markedsføringsdata</string>
   <!-- Title for studies preferences -->
   <string name="preference_experiments_2">Undersøgelser</string>
   <!-- Summary for studies preferences -->
@@ -1363,7 +1326,6 @@
   <!-- Preference for switching tabs by swiping horizontally on the addressbar -->
   <string name="preference_gestures_swipe_toolbar_switch_tabs_2">Stryg adresselinjen sidelæns for at skifte faneblade</string>
   <!-- Preference for switching for the shake to summarize toggle in page summaries and customize settings -->
-  <string name="preferences_shake_to_summarize">Ryst for at sammenfatte</string>
   <!--
     Library
 
@@ -1713,7 +1675,6 @@
   <!-- Tab group color: Purple -->
   <string name="tab_group_color_purple">Lilla</string>
   <!-- Tab group color: Violet -->
-  <string name="tab_group_color_violet">Violet</string>
   <!-- Tab group color: Blue -->
   <string name="tab_group_color_blue">Blå</string>
   <!-- Tab group color: Cyan -->
@@ -1968,13 +1929,9 @@
   <!-- The error message of the URL text field when an invalid URL has been entered. -->
   <string name="webcompat_reporter_url_error_invalid">Indtast en gyldig URL</string>
   <!-- The label/title of a field in the Web Compat Reporter feature for explaining a high-level reason why the site is broken. -->
-  <string name="webcompat_reporter_label_whats_broken_3">Hvad virker ikke?</string>
   <!-- Content description for the icon button that clears the selected broken site reason in the WebCompat Reporter. -->
-  <string name="webcompat_reporter_clear_reason_content_description">Ryd den valgte årsag</string>
   <!-- The error message of the description when the user selects "Something else" as the reason, but left the description empty or too short. -->
-  <string name="webcompat_reporter_description_error">Indtast mindst ti tegn</string>
   <!-- The label/title of a mandatory field in the Web Compat Reporter feature for adding additional information. -->
-  <string name="webcompat_reporter_label_mandatory_description">Beskriv problemet i detaljer for at hjælpe os med at undersøge det</string>
   <!-- The label/title of a field in the Web Compat Reporter feature for explaining a high-level reason why the site is broken. -->
   <string name="webcompat_reporter_label_whats_broken_2">Hvad virker ikke?</string>
   <!-- The placeholder text for the dropdown where a user selects a high-level reason why the site is broken. -->
@@ -1984,13 +1941,11 @@
   <!-- The label/title of an optional field in the Web Compat Reporter feature for adding additional information. -->
   <string name="webcompat_reporter_label_description_2">Beskriv problemet i detaljer for at hjælpe os med at undersøge det (valgfrit)</string>
   <!-- The label/title of an optional field in the Web Compat Reporter feature for adding additional information. -->
-  <string name="webcompat_reporter_label_description">Beskriv problemet (valgfrit)</string>
   <!-- The button text for navigating away from the feature to provide more information on the broken site's bug report. -->
   <string name="webcompat_reporter_add_more_info">Tilføj flere oplysninger</string>
   <!-- The button text for the cancel button to leave the Web Compat Reporter feature. -->
   <string name="webcompat_reporter_cancel">Annuller</string>
   <!-- The button text for the send button to submit the provided form data. -->
-  <string name="webcompat_reporter_send_report">Send rapport</string>
   <!-- The button text for the send button to submit the provided form data. -->
   <string name="webcompat_reporter_send">Send</string>
   <!-- Text for a snackbar to confirm the successful submission of a WebCompat report. -->
@@ -1998,13 +1953,10 @@
   <!-- Placeholder text for the description field to prompt the user on what they should type. -->
   <string name="webcompat_reporter_problem_description_placeholder_text_2">Hvad skete der? Hvad forventede du ville ske? Angiv trin til at genskabe problemet.</string>
   <!-- Placeholder text for the description field to prompt the user on what they should type. -->
-  <string name="webcompat_reporter_problem_description_placeholder_text">Hvad skete der? Hvad skulle der være sket?</string>
   <!-- Label of the checkbox on the “Report broken site” screen for sending URLS blocked by Enhanced Tracking Protection. -->
   <string name="webcompat_reporter_etp_checkbox_text_2">Send liste over elementer, der er blokeret af beskyttelse mod sporing</string>
   <!-- Label of the checkbox on the “Report broken site” screen for sending URLS blocked by Enhanced Tracking Protection. -->
-  <string name="webcompat_reporter_etp_checkbox_text">Send URL\'er blokeret af beskyttelse mod sporing</string>
   <!-- Description text for the checkbox on the “Report broken site” screen for sending URLS blocked by Enhanced Tracking Protection. It informs the user when checked, the report will include the list of URLs that were blocked by Enhanced Tracking Protection on the current page. -->
-  <string name="webcompat_reporter_etp_checkbox_description">Udvidet beskyttelse mod sporing kan blokere sporings-teknologier og scripts, som nogle websteder har brug for for at fungere korrekt.</string>
   <!-- The button text for the preview report button to view a preview of the report. -->
   <string name="webcompat_reporter_preview_report">Forhåndsvis rapport</string>
   <!-- The title shown at the top of the WebCompat Report preview panel. This appears after the user taps the “Preview” button before sending a report. -->
@@ -2036,9 +1988,7 @@
   <!-- Broken site reason text for site asked to turn off ad blocker -->
   <string name="webcompat_reporter_reason_turn_off_adblocker">Websted bad om at slå blokering af reklamer fra</string>
   <!-- Broken site reason text for browser isn’t supported or blocked -->
-  <string name="webcompat_reporter_reason_notsupported_2">Browseren blokeres eller understøttes ikke</string>
   <!-- Broken site reason text for the site being deceptive -->
-  <string name="webcompat_reporter_reason_site_is_deceptive">Dette websted er vildledende</string>
   <!-- Broken site reason text for browser isn’t supported or blocked -->
   <string name="webcompat_reporter_reason_notsupported">Browseren blokeres eller understøttes ikke</string>
   <!-- Broken site reason text for something else -->
@@ -2460,7 +2410,6 @@
   <!-- Preference for not taking the short survey. -->
   <string name="preferences_not_take_survey">Nej tak</string>
   <!-- Error message shown in a Toast when the system fails to trigger the device uninstallation prompt. -->
-  <string name="uninstall_survey_error_failed">Systemets afinstallationsprompt kunne ikke åbnes. Brug systemets afinstallationshandling direkte.</string>
   <!--
     Snackbar
 
@@ -2628,15 +2577,6 @@
       Text shown on the trackers blocked card. %d is the number of trackers blocked.
     -->
     <item quantity="one">%d forsøg på sporing blokeret</item>
-    <item quantity="other">%d forsøg på sporing blokeret</item>
-  </plurals>
-  <plurals name="trackers_blocked_count">
-    <!--
-      Trackers blocked card on homepage
-
-      Text shown on the trackers blocked card. %d is the number of trackers blocked.
-    -->
-    <item quantity="one">%dforsøg på sporing blokeret</item>
     <item quantity="other">%d forsøg på sporing blokeret</item>
   </plurals>
   <!-- Text shown on the trackers blocked card when no trackers have been blocked yet -->
@@ -3194,7 +3134,6 @@
   <!-- The text for the "Cancel" button for cancelling adding, updating or deleting an address -->
   <string name="addresses_cancel_button">Annuller</string>
   <!-- The text for the "Delete address" button for deleting an address -->
-  <string name="addressess_delete_address_button">Slet adresse</string>
   <!-- The title for the "Delete address" confirmation dialog -->
   <string name="addressess_confirm_dialog_message_2">Slet denne adresse?</string>
   <!-- The text for the positive button on "Delete address" dialog -->
@@ -3750,7 +3689,6 @@
   -->
   <string name="protection_panel_banner_protected_no_blocked_trackers_description">Du er beskyttet.</string>
   <!-- Description text for the protection panel banner when tracking protection is enabled. -->
-  <string name="protection_panel_banner_protected_description">Du er beskyttet. Vi giver dig besked, hvis vi opdager noget.</string>
   <!-- Label text for the Enhanced Tracking Protection toggle. -->
   <string name="protection_panel_etp_toggle_label">Udvidet beskyttelse mod sporing</string>
   <!-- Toggle if Enhanced Tracking Protection is turned on -->
@@ -3767,7 +3705,6 @@
   -->
   <string name="protection_panel_num_trackers_blocked">Forsøg på sporing blokeret: %d</string>
   <!-- Text for when no trackers have been blocked. -->
-  <string name="protection_panel_no_trackers_blocked">Ingen sporings-mekanismer fundet</string>
   <!-- Text for when tracking protection is disabled and no trackers are blocked. -->
   <string name="protection_panel_etp_disabled_no_trackers_blocked">Sporings-mekanismer er ikke blokeret</string>
   <!-- Link text to navigate to privacy and security settings from the protection panel. -->
@@ -3834,13 +3771,11 @@
     Text for displaying the total number of trackers blocked in the trackers blocked panel.
     %d is a placeholder for the number of trackers blocked.
   -->
-  <string name="trackers_blocked_panel_total_num_trackers_blocked">Forsøg på sporing blokeret: %d</string>
   <!--
     Text for displaying the number of trackers blocked for a specific tracker category in the trackers blocked panel.
     %s is a placeholder for the name of the tracker category.
     %d is a placeholder for the number of trackers blocked.
   -->
-  <string name="trackers_blocked_panel_categorical_num_trackers_blocked">%s: %d</string>
   <!--
     Description text for a dialog confirming whether the user wants to delete all data for current site.
     %s is a placeholder for the base domain of website.
@@ -3862,7 +3797,6 @@
   -->
   <string name="connection_security_panel_verified_by">Bekræftet af %s</string>
   <!-- Content description (not visible, for screen readers etc.) for the handle used to drag the protections dashboard to the bottom of the screen and close it. -->
-  <string name="tracker_protections_dashboard_close_handlebar_content_description">Luk oversigt</string>
   <!--
     Text for the connection security panel when the site uses a QWAC.
     %s is a placeholder for the organization for which the certificate was issued.
@@ -3991,21 +3925,13 @@
 
     Title text for the uninstall survey dialog, asking the user for the reason they are removing the app
   -->
-  <string name="microsurvey_uninstall_survey_title">Din feedback er vigtig. Hvorfor afinstallerer du?</string>
   <!-- Uninstall survey answer option -->
-  <string name="uninstall_survey_option_1_v2">Den er langsom eller upålidelig</string>
   <!-- Uninstall survey answer option -->
-  <string name="uninstall_survey_option_2_v2">Websteder virkede ikke korrekt</string>
   <!-- Uninstall survey answer option -->
-  <string name="uninstall_survey_option_3_v2">Manglende funktioner jeg har brug for</string>
   <!-- Uninstall survey answer option -->
-  <string name="uninstall_survey_option_4_v2">Videoer, filhentninger eller medier virkede ikke</string>
   <!-- Uninstall survey answer option -->
-  <string name="uninstall_survey_option_5_v2">Den er svær at bruge eller dårligt designet</string>
   <!-- Uninstall survey answer option -->
-  <string name="uninstall_survey_option_6_v2">Bekymringer om privatlivet eller sikkerhed</string>
   <!-- Button label shown at the bottom of the uninstall survey -->
-  <string name="uninstall_survey_button_label">Send feedback og afinstaller</string>
   <!--
     Accessibility
 
@@ -4279,19 +4205,12 @@
 
     Title for a prompt asking the user about their experience using the app. %1$s is the name of the app (for example "Firefox").
   -->
-  <string name="review_prompt_pre_prompt_header">Hvad synes du om %1$s?</string>
   <!-- Label for a button negatively rating the user's experience with the app -->
-  <string name="review_prompt_negative_button">Jeg har problemer</string>
   <!-- Label for a button positively rating the user's experience with the app -->
-  <string name="review_prompt_positive_button">Den er god!</string>
   <!-- Title for a prompt asking the user to rate the app on Google Play Store. %1$s is the name of the app (for example "Firefox"). -->
-  <string name="review_prompt_rate_header">Tak fordi du synes godt om %1$s. Har du et øjeblik til at dele din begejstring med en bedømmelse?</string>
   <!-- Label for a button proceeding to rate the app on Google Play Store. %1$s is the name of the app (for example "Firefox"). -->
-  <string name="review_prompt_rate_button">Bedøm %1$s i Play Butik</string>
   <!-- Title for a prompt asking the user send us feedback. %1$s is the name of the app (for example "Firefox"). -->
-  <string name="review_prompt_feedback_header">Vi beklager, at du har problemer. Fortæl os, hvordan vi kan forbedre %1$s.</string>
   <!-- Label for a button opening a feedback forum -->
-  <string name="review_prompt_feedback_button">Indsend feedback</string>
   <!--
     Settings Search Strings
 
@@ -4361,87 +4280,46 @@
 
     Title text shown at the top of the sports widget country selector, encouraging the user to pick a national team to follow.
   -->
-  <string name="sports_widget_country_selector_title">Følg dit hold</string>
   <!-- Section header for the North America region in the sports widget country selector. -->
-  <string name="sports_widget_confederation_north_america">Nordamerika</string>
   <!-- Section header for the Africa confederation group in the sports widget country selector. -->
-  <string name="sports_widget_confederation_africa">Afrika</string>
   <!-- Section header for the Asia confederation group in the sports widget country selector. -->
-  <string name="sports_widget_confederation_asia">Asien</string>
   <!-- Section header for the CONCACAF confederation group in the sports widget country selector. "CONCACAF" is the abbreviation for "Confederation of North, Central America and Caribbean Association Football". -->
-  <string name="sports_widget_confederation_concacaf">CONCACAF</string>
   <!-- Section header for the Europe confederation group in the sports widget country selector. -->
-  <string name="sports_widget_confederation_europe">Europa</string>
   <!-- Section header for the Oceania confederation group in the sports widget country selector. -->
-  <string name="sports_widget_confederation_oceania">Oceanien</string>
   <!-- Section header for the South America confederation group in the sports widget country selector. -->
-  <string name="sports_widget_confederation_south_america">Sydamerika</string>
   <!-- Country name for England in the sports widget. England cannot be resolved with the Android Intl APIs so it needs an explicit string. -->
-  <string name="sports_widget_country_england">England</string>
   <!-- Country name for Scotland in the sports widget. Scotland cannot be resolved with the Android Intl APIs so it needs an explicit string. -->
-  <string name="sports_widget_country_scotland">Skotland</string>
   <!-- Label shown on the sports widget scoreboard when a match is currently being played live. -->
-  <string name="sports_widget_match_live">LIVE</string>
   <!-- Title shown on the sports widget champion scoreboard row celebrating the soccer tournament winner. -->
-  <string name="sports_widget_champions_title">Verdensmestre 2026</string>
   <!-- Title shown on the sports widget champion scoreboard celebrating the soccer tournament runners-up. Runners-up means second place. -->
-  <string name="sports_widget_runner_up_title" tools:ignore="UnusedResources">Andenpladser</string>
   <!-- Title shown on the sports widget champion scoreboard celebrating the soccer tournament third place winners. -->
-  <string name="sports_widget_third_place_title">Tredjeplads</string>
   <!-- Round name shown on the sports widget for the Round of 32 stage in the soccer tournament. -->
-  <string name="sports_widget_round_of_32">Sekstendedelsfinaler</string>
   <!-- Round name shown on the sports widget for the Round of 16 stage in the soccer tournament. -->
-  <string name="sports_widget_round_of_16">Ottendedelsfinaler</string>
   <!-- Round name shown on the sports widget for the quarter-finals stage in the soccer tournament. -->
-  <string name="sports_widget_quarter_final">Kvartfinaler</string>
   <!-- Round name shown on the sports widget for the semi-finals stage in the soccer tournament. -->
-  <string name="sports_widget_semi_final">Semifinaler</string>
   <!-- Round name shown on the sports widget for the final stage in the soccer tournament. -->
-  <string name="sports_widget_final">Finale</string>
   <!-- Round name shown on the sports widget for the bronze final stage in the soccer tournament. -->
-  <string name="sports_widget_bronze_final">Bronzekamp</string>
   <!-- Sports widget error card message shown when match data fails to load. -->
-  <string name="sports_widget_error_load_failed" tools:ignore="UnusedResources">Kampoplysninger er ikke tilgængelige lige nu. Prøv at opdatere om et par minutter.</string>
   <!-- Sports widget error card message shown when the network connection is interrupted and live updates pause. -->
-  <string name="sports_widget_error_connection_interrupted" tools:ignore="UnusedResources">Forbindelse afbrudt — liveopdateringer sat på pause.</string>
   <!-- Sports widget action label to refresh match data after an error. -->
-  <string name="sports_widget_error_refresh">Opdater</string>
   <!-- Sports widget group stage label for group A in the soccer tournament. -->
-  <string name="sports_widget_group_a">Gruppe A</string>
   <!-- Sports widget group stage label for group B in the soccer tournament. -->
-  <string name="sports_widget_group_b">Gruppe B</string>
   <!-- Sports widget group stage label for group C in the soccer tournament. -->
-  <string name="sports_widget_group_c">Gruppe C</string>
   <!-- Sports widget group stage label for group D in the soccer tournament. -->
-  <string name="sports_widget_group_d">Gruppe D</string>
   <!-- Sports widget group stage label for group E in the soccer tournament. -->
-  <string name="sports_widget_group_e">Gruppe E</string>
   <!-- Sports widget group stage label for group F in the soccer tournament. -->
-  <string name="sports_widget_group_f">Gruppe F</string>
   <!-- Sports widget group stage label for group G in the soccer tournament. -->
-  <string name="sports_widget_group_g">Gruppe G</string>
   <!-- Sports widget group stage label for group H in the soccer tournament. -->
-  <string name="sports_widget_group_h">Gruppe H</string>
   <!-- Sports widget group stage label for group I in the soccer tournament. -->
-  <string name="sports_widget_group_i">Gruppe I</string>
   <!-- Sports widget group stage label for group J in the soccer tournament. -->
-  <string name="sports_widget_group_j">Gruppe J</string>
   <!-- Sports widget group stage label for group K in the soccer tournament. -->
-  <string name="sports_widget_group_k">Gruppe K</string>
   <!-- Sports widget group stage label for group L in the soccer tournament. -->
-  <string name="sports_widget_group_l">Gruppe L</string>
   <!-- Sports widget button label to see match results. -->
-  <string name="sports_widget_see_results" tools:ignore="UnusedResources">Se resultater</string>
   <!-- Sports widget button label to view details of a soccer match results. -->
-  <string name="sports_widget_view_match_details" tools:ignore="UnusedResources">Se kampdetaljer</string>
   <!-- Sports widget section header for related soccer matches in the same group. -->
-  <string name="sports_widget_related_matches" tools:ignore="UnusedResources">Relaterede kampe</string>
   <!-- Sports widget section header for a list of upcoming soccer matches that have not yet started. -->
-  <string name="sports_widget_upcoming" tools:ignore="UnusedResources">Kommende</string>
   <!-- Sports widget match status suffix appended to match scores (e.g., "3 - 2 (Full time)") to indicate the match has been completed. -->
-  <string name="sports_widget_match_full_time_suffix">(Færdigspillet)</string>
   <!-- Sports widget match status to indicate the match has been completed. -->
-  <string name="sports_widget_match_full_time_2">Færdigspillet</string>
   <!--
     Sports widget card title encouraging the user to follow the soccer tournament. “Keep tabs on” is an informal expression
     meaning to stay updated on or regularly follow something (in this case, World Cup matches and updates).
@@ -4449,128 +4327,87 @@
     It suggests ongoing awareness rather than active monitoring or control. Not to be translated literally as physical “tabs”
     or tracking in a technical sense; the meaning is about staying informed.
   -->
-  <string name="sports_widget_card_title">Hold øje med VM</string>
   <!-- Sports widget card description shown below the title on the homepage entry point. -->
-  <string name="sports_widget_card_description">Få direkte kampopdateringer og meget mere.</string>
   <!-- Sports widget menu item to change the selected team. -->
-  <string name="sports_widget_change_team">Skift hold</string>
   <!-- Sports widget menu item to get a custom wallpaper for the widget. -->
-  <string name="sports_widget_get_custom_wallpaper">Hent tilpassede baggrunde</string>
   <!-- Sports widget menu item to remove the widget from the homepage. -->
-  <string name="sports_widget_remove">Fjern</string>
   <!-- Sports widget card title shown after a team is eliminated, asking if the user still wants to continue following the soccer tournament. -->
-  <string name="sports_widget_still_want_to_follow">Vil du stadig følge med?</string>
   <!-- Sports widget card description shown after a team is eliminated, suggesting to choose another team. -->
-  <string name="sports_widget_choose_another_team">Vælg et andet hold for at holde trit med VM.</string>
   <!-- Sports widget button label to follow another team after the current team is eliminated. -->
-  <string name="sports_widget_follow_another_team">Følg et andet hold</string>
   <!-- Sports widget card title shown before the soccer tournament begins on top of a timer that is counting down. -->
-  <string name="sports_widget_countdown_to_world_cup">Nedtælling til VM</string>
   <!-- Sports widget button label that navigates the user to the full soccer tournament match schedule. -->
-  <string name="sports_widget_view_schedule">Se tidsplan</string>
   <!-- Sports widget button label that dismisses the step of choosing a team to follow. -->
-  <string name="sports_widget_skip">Spring over</string>
   <!-- Sports widget match status label shown during halftime of a match. -->
-  <string name="sports_widget_halftime" tools:ignore="UnusedResources">Halvleg</string>
   <!-- Sports widget match status label shown during extra time of a match. -->
-  <string name="sports_widget_extra_time">Forlænget spilletid</string>
   <!-- Sports widget match status label shown during penalties of a match. -->
-  <string name="sports_widget_penalties">Straffe</string>
   <!--
     Sports widget countdown label for days. D is short for Day. The layout only allows for 1–2 characters:
     if there is an equivalent single character for your language, use that (e.g. T for German).
     Your translation will be automatically truncated at 2 characters to avoid layout issues.
   -->
-  <string name="sports_widget_countdown_days">D</string>
   <!--
     Sports widget countdown pill abbreviated label for hours. H is short for Hour. The layout only allows for 1–2 characters:
     if there is an equivalent single character for your language, use that (e.g. S for German).
     Your translation will be automatically truncated at 2 characters to avoid layout issues.
   -->
-  <string name="sports_widget_countdown_hours">T</string>
   <!--
     Sports widget countdown pill abbreviated label for minutes. M is short for Minute. The layout only allows for 1–2 characters:
     if there is an equivalent single character for your language, use that.
     Your translation will be automatically truncated at 2 characters to avoid layout issues
   -->
-  <string name="sports_widget_countdown_minutes">M</string>
   <!-- Content description (for accessibility, not displayed) for the close button on the sports widget team / country selector. -->
-  <string name="sports_widget_close_team_selection_sheet_content_description">Luk holdudvælgelsesoversigten\u0020</string>
   <!-- Content description (for accessibility, not displayed) for the close button on the sports widget card. -->
-  <string name="sports_widget_close_content_description">Luk</string>
   <!-- Content description (for accessibility, not displayed) for the overflow (more options) menu button on the sports widget card. -->
-  <string name="sports_widget_more_options_content_description">Flere indstillinger</string>
   <!--
     Content description (for accessibility, not displayed) announcing the time remaining until the soccer tournament kickoff.
     %1$d is the number of days, %2$d is the number of hours, and %3$d is the number of minutes.
   -->
-  <string name="sports_widget_countdown_remaining_content_description">Resterende tid. Dage: %1$d. Timer: %2$d. Minutter: %3$d.</string>
   <!-- Content description (for accessibility, not displayed)  for the action that navigates to the World Cup website. -->
-  <string name="sports_widget_go_to_world_cup_site_content_description" tools:ignore="UnusedResources">Gå til VM-hjemmesiden</string>
   <!--
     Content description (for accessibility, not displayed)  announcing an upcoming soccer match.
     %1$s is the home team name, %2$s is the away team name, %3$s is the match date, %4$s is the kickoff time.
   -->
-  <string name="sports_widget_upcoming_match_content_description">Kommende: %1$s mod %2$s, %3$s kl. %4$s</string>
   <!--
     Content description (for accessibility, not displayed) announcing a soccer match.
     %1$s is the home team name, %2$s is the away team name, %3$s is trailing context
     (e.g. formatted score "1 - 2 (Full time)", upcoming match info "Jun 19 5:00 PM",
     or a match status like "Full time").
   -->
-  <string name="sports_widget_match_content_description">%1$s mod %2$s, %3$s</string>
   <!--
     Content description (for accessibility, not displayed)  used for the sports widget card header announcing a live match for a group or stage.
     %s is the soccer tournament group name or stage (e.g. Group A represented by sports_widget_group_a, Round of 32 represented by sports_widget_round_of_32,
     or Final represented by sports_widget_final).
   -->
-  <string name="sports_widget_live_game_content_description">%s, direkte kamp</string>
   <!--
     Content description (for accessibility, not displayed) announcing a live score.
     %1$s is the home team name, %2$d is the home team score, %3$s is the away team name, %4$d is the away team score,
     and %5$s is the match elapsed time (e.g. 72 minutes).
   -->
-  <string name="sports_widget_live_score_content_description">%1$s %2$d, %3$s %4$d, %5$s, direkte</string>
   <!--
     Content description (for accessibility, not displayed) announcing the elapsed minutes of a live match.
     %1$s is the clock value, which may be a plain number (e.g. "72") or include extra time (e.g. "90+3").
   -->
-  <string name="sports_widget_match_elapsed_minutes">Forløbet tid i minutter: %1$s</string>
   <!--
     Content description (for accessibility, not displayed) for a paginated item.
     %1$s is the soccer tournament group name or stage (e.g. Group A represented by sports_widget_group_a, Round of 32 represented by sports_widget_round_of_32),
     %2$d is the current page number, and %3$d is the total number of pages.
   -->
-  <string name="sports_widget_page_position_content_description">%1$s, side %2$d af %3$d</string>
   <!--
     Content description (for accessibility, not displayed) for a page within the World Cup final results carousel.
     %1$d is the current page number, and %2$d is the total number of pages.
   -->
-  <string name="sports_widget_final_results_page_content_description" tools:ignore="UnusedResources">Resultater af VM-slutrunden, side %1$d af %2$d</string>
   <!-- Content description (for accessibility, not displayed) for the World Cup final results page. -->
-  <string name="sports_widget_final_results_content_description">Resultaterne af VM-slutrunden</string>
   <!-- Content description (for accessibility, not displayed) for the remove button that removes the sports widget from the homepage. -->
-  <string name="sports_widget_remove_content_description" tools:ignore="UnusedResources">Fjern WM fra startsiden</string>
   <!-- Title shown on the sports widget immediately after the user has followed a team. %s is the selected team (e.g., "USA"). -->
-  <string name="sports_widget_team_followed_title">Følger: \n%s</string>
   <!-- Description shown on the sports widget immediately after the user has followed a team -->
-  <string name="sports_widget_team_followed_description">Kom tilbage senere for kampoplysninger, når turneringen nærmer sig.</string>
   <!-- Sports widget match status label shown during first half of a match. -->
-  <string name="sports_widget_first_half" tools:ignore="UnusedResources">Første halvleg</string>
   <!-- Sports widget match status label shown during second half of a match. -->
-  <string name="sports_widget_second_half" tools:ignore="UnusedResources">Anden halvleg</string>
   <!-- Sports widget error card title shown when the user is offline. -->
-  <string name="sports_widget_error_connection_offline_title">Det ser ud til, at du er offline.</string>
   <!-- Sports widget error card description shown when the user is offline. -->
-  <string name="sports_widget_error_connection_offline_description">Kontroller din internetforbindelse og prøv igen.</string>
   <!-- Sports widget general group stage label in the soccer tournament. -->
-  <string name="sports_widget_group_stage">Gruppespillet</string>
   <!-- Sports widget error card title shown when match data fails to load. -->
-  <string name="sports_widget_error_load_failed_title">Kampoplysninger er ikke tilgængelige lige nu.</string>
   <!-- Sports widget error card description shown when match data fails to load. -->
-  <string name="sports_widget_error_load_failed_description">Prøv at opdatere om et par minutter.</string>
   <!-- Content description (for accessibility, not displayed) for teams which have not yet been determined in the match schedule. -->
-  <string name="sports_widget_team_to_be_determined">Hold ikke fastlagt endnu</string>
   <!-- ==== End of Terms of use popup prompt. ==== -->
 
   <!--
@@ -4601,18 +4438,13 @@
     Title shown at the top of the camera screen, next to the close button, telling the
     user that the photo they capture will be sent to Google Lens for a visual search.
   -->
-  <string name="lens_camera_title_lens">Google Lens</string>
   <!--
     Title shown at the top of the camera screen, next to the close button, telling the
     user that the camera is being used to scan a QR code.
   -->
-  <string name="lens_camera_title_qr">QR-kode</string>
   <!-- Title for the Google Lens Search Settings page feature toggle -->
-  <string name="search_settings_google_lens_title">Aktiver Google Lens-søgning</string>
   <!-- Description for the Google Lens Search Settings page feature toggle -->
-  <string name="search_settings_google_lens_description">Sender billeder og fotos til Google til visuel søgning.</string>
   <!-- Caption shown under the Google Lens toggle clarifying when the feature is available -->
-  <string name="preferences_google_lens_availability_caption">Kun tilgængelig, når Google er aktiveret ovenfor og er din aktive søgetjeneste, mens du browser.</string>
   <!-- Title for the Google Lens AI feature toggle -->
   <string name="ai_controls_google_lens_title">Google Lens</string>
   <!-- Description for the Google Lens AI feature toggle -->
@@ -4660,7 +4492,6 @@
   <!-- The description text that is displayed in the confirmation dialog on the Firefox Labs screen for toggling "off" experimental features. %s is the name of the app (for example "Firefox Nightly") -->
   <string name="firefox_labs_feature_disable_dialog_message">Genstart %s for at slå denne funktion fra.</string>
   <!-- Helper text shown beneath a Firefox Labs item when it is blocked from being turned on. -->
-  <string name="firefox_labs_feature_conflict">Funktionen kan ikke prøves.</string>
   <!-- Text displayed on the Firefox Labs screen when there are no Labs experimental features present. -->
   <string name="firefox_labs_no_labs_available_description">Ingen eksperimentelle funktioner at afprøve lige nu</string>
 </resources>

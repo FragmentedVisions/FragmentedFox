@@ -209,7 +209,6 @@
   <!-- Preference for settings related to Search -->
   <string name="preferences_search">వెతకడం</string>
   <!-- Preference link to rating Fenix on the Play Store -->
-  <string name="preferences_rate">Google Playలో రేటు చేయండి</string>
   <!--
     Preference linking to about page for Fenix
     %1$s is the name of the app (for example "Firefox").
@@ -1175,7 +1174,6 @@
   <!-- The text for the "Cancel" button for cancelling adding, updating or deleting an address -->
   <string name="addresses_cancel_button">రద్దుచేయి</string>
   <!-- The text for the "Delete address" button for deleting an address -->
-  <string name="addressess_delete_address_button">చిరునామాను తొలగించు</string>
   <!-- The text for the positive button on "Delete address" dialog -->
   <string name="addressess_confirm_dialog_ok_button">తొలగించు</string>
   <!-- The text for the negative button on "Delete address" dialog -->

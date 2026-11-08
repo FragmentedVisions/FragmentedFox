@@ -150,7 +150,6 @@
   <!-- Shortcut action to open Passwords screen -->
   <string name="home_screen_shortcut_passwords">كلمات المرور</string>
   <!-- Shortcut action to open uninstall survey -->
-  <string name="home_screen_shortcut_uninstall_survey">إلغاء التثبيت، لمَ؟</string>
   <!--
     Recent Tabs
 
@@ -292,9 +291,7 @@
   <!-- Browser menu label for navigating to the translation feature, which provides language translation options the current visited page -->
   <string name="browser_menu_translate_page_2">ترجمة الصفحة</string>
   <!-- Browser menu label for navigating to the summarization feature, which provides site summarization for the current visited page -->
-  <string name="browser_menu_summarize_page">تلخيص الصفحة</string>
   <!-- Browser menu badge text for summarization feature -->
-  <string name="browser_menu_summarize_page_badge">جديد</string>
   <!-- Browser menu label for navigating to the Web Compat Reporter feature, which provides users the ability to send bug reports for broken sites. -->
   <string name="browser_menu_webcompat_reporter_2">الإبلاغ عن موقع مُعطَّل</string>
   <!-- Browser menu label that is displayed when the current page has been translated by the translation feature. -->
@@ -338,7 +335,6 @@
   -->
   <string name="browser_toolbar_translate">ترجِم الصفحة</string>
   <!-- CFR description for the browser toolbar describing the "Shake to summarize feature" -->
-  <string name="browser_toolbar_summarize_cfr_description">هزّ جهازك لتلخيص الصفحة في ثوانٍ معدودة. ⚡️</string>
   <!--
     Translation Toolbar
 
@@ -356,7 +352,6 @@
 
     Toolbar title for the Page summaries settings fragment
   -->
-  <string name="preferences_page_summaries">ملخصات الصفحات</string>
   <!--
     AI Controls settings
 
@@ -386,7 +381,6 @@
   <!-- Link text to navigate to more translations settings -->
   <string name="ai_controls_more_translations_settings">المزيد من إعدادات الترجمة</string>
   <!-- Link text to navigate to more page summary settings -->
-  <string name="ai_controls_more_page_summary_settings">المزيد من إعدادات ملخص الصفحة</string>
   <!-- Title for the voice search AI feature toggle -->
   <string name="ai_controls_voice_search_title">البحث الصوتي</string>
   <!-- Description for the voice search AI feature toggle -->
@@ -530,13 +524,9 @@
   <!-- Onboarding label for 'Continue' button. -->
   <string name="onboarding_redesign_continue_button" tools:ignore="UnusedResources">متابعة</string>
   <!-- Marketing onboarding page title. 'Firefox' is intentionally hardcoded. -->
-  <string name="onboarding_marketing_redesign_title" tools:ignore="BrandUsage">ساعدنا في تطوير Firefox</string>
   <!-- Marketing onboarding page opt-out checkbox. Unchecking the box does not increase data collection. Our data practices remain the same. 'Mozilla' is intentionally hardcoded. -->
-  <string name="onboarding_marketing_redesign_opt_out_checkbox" tools:ignore="BrandUsage,UnusedResources">شارك معلومات حول كيفية اكتشافك واستخدامك لـ Firefox مع شركاء Mozilla التسويقيين. نحن لا نبيع هذه البيانات أبداً.</string>
   <!-- Marketing onboarding page clickable link text to "learn more" on how data is used. -->
-  <string name="onboarding_marketing_redesign_learn_more" tools:ignore="UnusedResources">كيفية استخدامنا للبيانات</string>
   <!-- Marketing onboarding page button label. Button to confirm choice and start browsing. -->
-  <string name="onboarding_marketing_redesign_positive_button" tools:ignore="UnusedResources">تأكيد</string>
   <!-- Set to default browser onboarding redesign title. -->
   <string name="onboarding_redesign_set_default_browser_title" tools:ignore="UnusedResources">حماية تلقائية ضد التتبع، مفعلة مسبقاً</string>
   <!-- Set to default browser onboarding redesign body. -->
@@ -550,11 +540,8 @@
   <!-- Sync onboarding redesign negative button text. -->
   <string name="onboarding_redesign_sync_negative_button" tools:ignore="UnusedResources">ليس الآن</string>
   <!-- Marketing onboarding page title variant. “One last thing” refers to the final step or action in the onboarding process that we’re asking users to take before they can start using the browser. -->
-  <string name="onboarding_marketing_title_1" tools:ignore="UnusedResources">بقي أمر واحد فقط</string>
   <!-- Marketing onboarding page body variant. 'Firefox' is intentionally hardcoded. -->
-  <string name="onboarding_marketing_body_1" tools:ignore="BrandUsage,UnusedResources">شارك معلومات حول كيفية اكتشافك واستخدامك لـ Firefox مع شركاء Mozilla التسويقيين. نحن لا نبيع هذه البيانات أبداً.</string>
   <!-- Marketing onboarding page button label variant. Button to confirm choice and start browsing. -->
-  <string name="onboarding_marketing_positive_button_1" tools:ignore="UnusedResources">الموافقة وبدء التصفح</string>
   <!-- ==== Project "Nova" onboarding strings ==== -->
 
   <!-- "Continue" onboarding button. -->
@@ -619,52 +606,37 @@
   <!-- Sync onboarding button. -->
   <string name="nova_onboarding_sync_button">ابدأ المزامنة</string>
   <!-- Marketing onboarding title. -->
-  <string name="nova_onboarding_marketing_title">ساعدنا في بناء شبكة إنترنت أفضل</string>
   <!--
     Marketing onboarding body. 'Firefox' and 'Mozilla' are intentionally hardcoded.
     %1$s is replaced by an active link, using nova_onboarding_marketing_body_link_text as text (“How we use the data”).
   -->
-  <string name="nova_onboarding_marketing_body" tools:ignore="BrandUsage,UnusedResources">شارك معلومات حول كيفية اكتشافك واستخدامك لـ Firefox مع شركاء Mozilla التسويقيين. نحن لا نبيع هذه البيانات أبداً. %1$s</string>
   <!-- Marketing onboarding body. 'Firefox' and 'Mozilla' are intentionally hardcoded. -->
-  <string name="nova_onboarding_marketing_body_2" tools:ignore="BrandUsage">شارك معلومات حول كيفية اكتشافك واستخدامك لـ Firefox مع شركاء Mozilla التسويقيين. نحن لا نبيع هذه البيانات أبدًا.</string>
   <!-- Marketing onboarding body. 'Firefox' and 'Mozilla' are intentionally hardcoded. -->
-  <string name="nova_onboarding_marketing_body_3" tools:ignore="BrandUsage,UnusedResources">يمكنك مساعدتنا في الوصول إلى المزيد من الأشخاص من خلال السماح لـ Mozilla بإبلاغ القنوات التي نروج فيها لمتصفح Firefox بأنك مستخدم لمتصفح Firefox.</string>
   <!--
     Marketing onboarding body. 'Firefox' and 'Mozilla' are intentionally hardcoded.
     “Platform you came from” refers to the external app, website, store, campaign, or other source that directed the user to Firefox.
   -->
-  <string name="nova_onboarding_marketing_body_4" tools:ignore="BrandUsage,UnusedResources">يمكنك مساعدتنا في الوصول إلى المزيد من الأشخاص من خلال السماح لـ Mozilla بإبلاغ المنصة التي أتيت منها بأنك تستخدم Firefox.</string>
   <!--
     Marketing onboarding body. 'Firefox' and 'Mozilla' are intentionally hardcoded.
     “Platform you came from” refers to the external app, website, store, campaign, or other source that directed the user to Firefox.
   -->
-  <string name="nova_onboarding_marketing_body_5" tools:ignore="BrandUsage,UnusedResources">ساعدنا في الوصول إلى المزيد من الأشخاص من خلال السماح لـ Mozilla بإبلاغ المنصة التي أتيت منها بأنك تستخدم Firefox.</string>
   <!--
     Marketing onboarding body. 'Firefox' and 'Mozilla' are intentionally hardcoded.
     “Platform you came from” refers to the external app, website, store, campaign, or other source that directed the user to Firefox.
     %1$s is replaced by an active link, using nova_onboarding_marketing_body_link_text as text (“How we use the data”).
   -->
-  <string name="nova_onboarding_marketing_body_6" tools:ignore="BrandUsage,UnusedResources">ساعدنا في الوصول إلى المزيد من الأشخاص من خلال السماح لـ Mozilla بإبلاغ المنصة التي أتيت منها بأنك تستخدم Firefox. %1$s</string>
   <!--
     Marketing onboarding body. 'Firefox' and 'Mozilla' are intentionally hardcoded.
     “Platform you came from” refers to the external app, website, store, campaign, or other source that directed the user to Firefox.
     %1$s is replaced by an active link, using nova_onboarding_marketing_body_link_text_1 as text (“Learn More”).
   -->
-  <string name="nova_onboarding_marketing_body_7" tools:ignore="BrandUsage">يمكنك مساعدتنا في الوصول إلى المزيد من الأشخاص من خلال السماح لـMozilla بإبلاغ المنصة التي أتيت منها بأنك تستخدم Firefox. %1$s</string>
   <!-- Marketing onboarding additional body text. 'Firefox' is intentionally hardcoded. -->
-  <string name="nova_onboarding_marketing_body_line_two" tools:ignore="BrandUsage">يفخر Firefox باستقلاليته وتفانيه في الدفاع عن الإنترنت المفتوح ضد احتكارات التقنية.</string>
   <!-- Marketing onboarding body link text. -->
-  <string name="nova_onboarding_marketing_body_link_text">كيفية استخدامنا للبيانات</string>
   <!-- Marketing onboarding body link text. -->
-  <string name="nova_onboarding_marketing_body_link_text_1">اطّلع على المزيد</string>
   <!-- Marketing onboarding primary button text. 'Firefox' is intentionally hardcoded. -->
-  <string name="nova_onboarding_marketing_primary_button_text" tools:ignore="BrandUsage,UnusedResources">ساعد Firefox</string>
   <!-- Marketing onboarding primary button text. -->
-  <string name="nova_onboarding_marketing_primary_button_text_3">نعم</string>
   <!-- Marketing onboarding secondary button text. -->
-  <string name="nova_onboarding_marketing_secondary_button_text" tools:ignore="UnusedResources">لا، شكرًا</string>
   <!-- Marketing onboarding secondary button text. -->
-  <string name="nova_onboarding_marketing_secondary_button_text_2">لا</string>
   <!-- Notifications onboarding title. 'Firefox' is intentionally hardcoded. -->
   <string name="nova_onboarding_notifications_title" tools:ignore="BrandUsage,UnusedResources">تساعدك الإشعارات على البقاء أكثر أماناً مع Firefox</string>
   <!-- Notifications onboarding subtitle. 'Firefox' is intentionally hardcoded. -->
@@ -759,7 +731,6 @@
   <!-- Preference link to Learn more about Firefox Suggest -->
   <string name="preference_search_learn_about_fx_suggest" tools:ignore="BrandUsage">تعرف على المزيد حول اقتراحات Firefox</string>
   <!-- Preference link to rating Fenix on the Play Store -->
-  <string name="preferences_rate">قيّمه في متجر غوغل</string>
   <!--
     Preference linking to about page for Fenix
     %1$s is the name of the app (for example "Firefox").
@@ -1111,7 +1082,6 @@
   <!-- Title for the "Momo" themed alternative app icon variant in the icon picker screen. The app icon was created by artist @heyheymomodraws and features a unique hand-drawn style with a friendly fox. -->
   <string name="alternative_app_icon_option_momo">مومو</string>
   <!-- Subtitle for the "Momo" themed alternative app icon variant in the icon picker screen. The app icon was created by artist @heyheymomodraws and features a unique hand-drawn style with a friendly fox. -->
-  <string name="alternative_app_icon_option_momo_subtitle">من تصميم @heyheymomodraws</string>
   <!-- Title for the "Cuddling" themed alternative app icon variant in the icon picker screen. The app icon features a playful design with an adorable aesthetic. -->
   <string name="alternative_app_icon_option_cuddling">حضن دافئ</string>
   <!-- Title for the "Flaming" themed alternative app icon variant in the icon picker screen. The app icon features a fiery design, with the Firefox logo surrounded by flames for a bold, energetic look. -->
@@ -1263,16 +1233,12 @@
   <string name="technical_data_category">البيانات الفنية</string>
   <string name="crash_reporting_description">تتيح لنا تقارير الأعطال تشخيص مشكلات المتصفح وإصلاحها. وقد تتضمن التقارير بيانات شخصية أو حساسة.</string>
   <!-- Section title for campaign measurement in data collections screen -->
-  <string name="preferences_marketing_data_title">قياس الحملات</string>
   <!-- Preference switch for campaign measurement data (marketing data) collection -->
-  <string name="preferences_marketing_data_2">بيانات قياس الحملات</string>
   <!--
     Preference description for marketing data collection.
     Note: The words "Firefox" and "Mozilla" should NOT be translated. “That you use it” is to mean that the user is opting in to sharing that they are continuing to use Firefox after installing it; not that Firefox is tracking their “usage” or what they’re using it for.
   -->
-  <string name="preferences_marketing_data_description_4" tools:ignore="BrandUsage">شارك معلومات حول كيفية اكتشافك لـ Firefox وأنك تستخدمه مع شركاء Mozilla في مجال تكنولوجيا التسويق.</string>
   <!-- Learn more link for marketing data preference -->
-  <string name="preferences_marketing_data_learn_more">اعرف المزيد عن بيانات التسويق</string>
   <!-- Title for studies preferences -->
   <string name="preference_experiments_2">الدراسات</string>
   <!-- Summary for studies preferences -->
@@ -1358,7 +1324,6 @@
   <!-- Preference for switching tabs by swiping horizontally on the addressbar -->
   <string name="preference_gestures_swipe_toolbar_switch_tabs_2">مرّر شريط العنوان جانبًا للانتقال بين التبويبات</string>
   <!-- Preference for switching for the shake to summarize toggle in page summaries and customize settings -->
-  <string name="preferences_shake_to_summarize">هزّ للتلخيص</string>
   <!--
     Library
 
@@ -1728,7 +1693,6 @@
   <!-- Tab group color: Purple -->
   <string name="tab_group_color_purple">أرجواني</string>
   <!-- Tab group color: Violet -->
-  <string name="tab_group_color_violet">بنفسجي</string>
   <!-- Tab group color: Blue -->
   <string name="tab_group_color_blue">أزرق</string>
   <!-- Tab group color: Cyan -->
@@ -1987,13 +1951,9 @@
   <!-- The error message of the URL text field when an invalid URL has been entered. -->
   <string name="webcompat_reporter_url_error_invalid">يُرجى إدخال عنوان رابط سليم</string>
   <!-- The label/title of a field in the Web Compat Reporter feature for explaining a high-level reason why the site is broken. -->
-  <string name="webcompat_reporter_label_whats_broken_3">ما الذي لا يعمل؟</string>
   <!-- Content description for the icon button that clears the selected broken site reason in the WebCompat Reporter. -->
-  <string name="webcompat_reporter_clear_reason_content_description">امحُ السبب المحدّد</string>
   <!-- The error message of the description when the user selects "Something else" as the reason, but left the description empty or too short. -->
-  <string name="webcompat_reporter_description_error">يُرجى إدخال 10 أحرف على الأقل</string>
   <!-- The label/title of a mandatory field in the Web Compat Reporter feature for adding additional information. -->
-  <string name="webcompat_reporter_label_mandatory_description">صف المشكلة بالتفصيل لمساعدتنا في التحقيق فيها</string>
   <!-- The label/title of a field in the Web Compat Reporter feature for explaining a high-level reason why the site is broken. -->
   <string name="webcompat_reporter_label_whats_broken_2">ما الخلل؟</string>
   <!-- The placeholder text for the dropdown where a user selects a high-level reason why the site is broken. -->
@@ -2001,23 +1961,18 @@
   <!-- The error message of the dropdown, prompting the user to select a high-level reason why the site is broken. -->
   <string name="webcompat_reporter_choose_reason_error">يُرجى اختيار سبب</string>
   <!-- The label/title of an optional field in the Web Compat Reporter feature for adding additional information. -->
-  <string name="webcompat_reporter_label_description">صِف المشكلة (اختياري)</string>
   <!-- The button text for navigating away from the feature to provide more information on the broken site's bug report. -->
   <string name="webcompat_reporter_add_more_info">إضافة المزيد من المعلومات</string>
   <!-- The button text for the cancel button to leave the Web Compat Reporter feature. -->
   <string name="webcompat_reporter_cancel">إلغاء</string>
   <!-- The button text for the send button to submit the provided form data. -->
-  <string name="webcompat_reporter_send_report">أرسل البلاغ</string>
   <!-- The button text for the send button to submit the provided form data. -->
   <string name="webcompat_reporter_send">إرسال</string>
   <!-- Text for a snackbar to confirm the successful submission of a WebCompat report. -->
   <string name="webcompat_reporter_success_snackbar_text_2">أُرسل التقرير</string>
   <!-- Placeholder text for the description field to prompt the user on what they should type. -->
-  <string name="webcompat_reporter_problem_description_placeholder_text">ما الذي حدث؟ ما الذي كان ينبغي أن يحدث؟</string>
   <!-- Label of the checkbox on the “Report broken site” screen for sending URLS blocked by Enhanced Tracking Protection. -->
-  <string name="webcompat_reporter_etp_checkbox_text">إرسال روابط المواقع التي حظرتها خاصية الحماية من التعقب</string>
   <!-- Description text for the checkbox on the “Report broken site” screen for sending URLS blocked by Enhanced Tracking Protection. It informs the user when checked, the report will include the list of URLs that were blocked by Enhanced Tracking Protection on the current page. -->
-  <string name="webcompat_reporter_etp_checkbox_description">قد تمنع خاصية الحماية من التعقب بعض الروابط والبرمجيات النصية التي تحتاجها بعض المواقع لتعمل بشكل صحيح.</string>
   <!-- The button text for the preview report button to view a preview of the report. -->
   <string name="webcompat_reporter_preview_report">معاينة التقرير</string>
   <!-- The title shown at the top of the WebCompat Report preview panel. This appears after the user taps the “Preview” button before sending a report. -->
@@ -2049,9 +2004,7 @@
   <!-- Broken site reason text for site asked to turn off ad blocker -->
   <string name="webcompat_reporter_reason_turn_off_adblocker">طلب الموقع إيقاف مانع الإعلانات</string>
   <!-- Broken site reason text for browser isn’t supported or blocked -->
-  <string name="webcompat_reporter_reason_notsupported_2">المتصفح غير مدعوم أو حُظِر</string>
   <!-- Broken site reason text for the site being deceptive -->
-  <string name="webcompat_reporter_reason_site_is_deceptive">هذا الموقع مضلل</string>
   <!-- Broken site reason text for browser isn’t supported or blocked -->
   <string name="webcompat_reporter_reason_notsupported">المتصفح غير مدعوم أو تم حظره</string>
   <!-- Broken site reason text for something else -->
@@ -2473,7 +2426,6 @@
   <!-- Preference for not taking the short survey. -->
   <string name="preferences_not_take_survey">لا، شكرًا</string>
   <!-- Error message shown in a Toast when the system fails to trigger the device uninstallation prompt. -->
-  <string name="uninstall_survey_error_failed">فشل فتح نافذة إلغاء تثبيت النظام، يُرجى استخدام إجراء إلغاء تثبيت النظام مباشرةً.</string>
   <!--
     Snackbar
 
@@ -2634,19 +2586,6 @@
   <string name="preference_enhanced_tracking_protection_explanation_2">تحميك %s من العديد من المتعقّبات المعروفة التي تتعقب أنشطتك على الإنترنت.</string>
   <!-- Text displayed that links to website about enhanced tracking protection -->
   <string name="preference_enhanced_tracking_protection_explanation_learn_more">اطّلع على المزيد</string>
-  <plurals name="trackers_blocked_count">
-    <!--
-      Trackers blocked card on homepage
-
-      Text shown on the trackers blocked card. %d is the number of trackers blocked.
-    -->
-    <item quantity="zero">حُظر %d متعقّب</item>
-    <item quantity="one">حُظر %d متعقّب</item>
-    <item quantity="two">حُظر متعقّبين</item>
-    <item quantity="few">حُظر %d متعقّبات</item>
-    <item quantity="many">حُظر %d متعقّبًا</item>
-    <item quantity="other">حُظر %d متعقّب</item>
-  </plurals>
   <!-- Text shown on the trackers blocked card when no trackers have been blocked yet -->
   <string name="trackers_blocked_empty">أنت محمي</string>
   <!-- Text shown below the trackers blocked card with typing animation -->
@@ -3202,7 +3141,6 @@
   <!-- The text for the "Cancel" button for cancelling adding, updating or deleting an address -->
   <string name="addresses_cancel_button">إلغاء</string>
   <!-- The text for the "Delete address" button for deleting an address -->
-  <string name="addressess_delete_address_button">حذف العنوان</string>
   <!-- The title for the "Delete address" confirmation dialog -->
   <string name="addressess_confirm_dialog_message_2">حذف هذا العنوان؟</string>
   <!-- The text for the positive button on "Delete address" dialog -->
@@ -3741,7 +3679,6 @@
   -->
   <string name="protection_panel_banner_protected_title">%s في حالة تأهب</string>
   <!-- Description text for the protection panel banner when tracking protection is enabled. -->
-  <string name="protection_panel_banner_protected_description">أنت محمي. إذا لاحظنا أي شيء، سنُعلمك.</string>
   <!-- Label text for the Enhanced Tracking Protection toggle. -->
   <string name="protection_panel_etp_toggle_label">الحماية المحسّنة من التعقب</string>
   <!-- Toggle if Enhanced Tracking Protection is turned on -->
@@ -3758,7 +3695,6 @@
   -->
   <string name="protection_panel_num_trackers_blocked">المتعقّبات المحجوبة: %d</string>
   <!-- Text for when no trackers have been blocked. -->
-  <string name="protection_panel_no_trackers_blocked">لم يُعثر على أي متعقّبات</string>
   <!-- Text for when tracking protection is disabled and no trackers are blocked. -->
   <string name="protection_panel_etp_disabled_no_trackers_blocked">لا توجد أي متعقّبات محظورة</string>
   <!-- Link text to navigate to privacy and security settings from the protection panel. -->
@@ -3769,13 +3705,11 @@
     Text for displaying the total number of trackers blocked in the trackers blocked panel.
     %d is a placeholder for the number of trackers blocked.
   -->
-  <string name="trackers_blocked_panel_total_num_trackers_blocked">المتعقّبات المحجوبة: %d</string>
   <!--
     Text for displaying the number of trackers blocked for a specific tracker category in the trackers blocked panel.
     %s is a placeholder for the name of the tracker category.
     %d is a placeholder for the number of trackers blocked.
   -->
-  <string name="trackers_blocked_panel_categorical_num_trackers_blocked">%s: %d</string>
   <!--
     Description text for a dialog confirming whether the user wants to delete all data for current site.
     %s is a placeholder for the base domain of website.
@@ -3797,7 +3731,6 @@
   -->
   <string name="connection_security_panel_verified_by">تثبّت منها %s</string>
   <!-- Content description (not visible, for screen readers etc.) for the handle used to drag the protections dashboard to the bottom of the screen and close it. -->
-  <string name="tracker_protections_dashboard_close_handlebar_content_description">أغلِق لوحة المعلومات</string>
   <!--
     Text for the connection security panel when the site uses a QWAC.
     %s is a placeholder for the organization for which the certificate was issued.
@@ -3926,21 +3859,13 @@
 
     Title text for the uninstall survey dialog, asking the user for the reason they are removing the app
   -->
-  <string name="microsurvey_uninstall_survey_title">رأيك يهمنا. لماذا تقوم بإلغاء التثبيت؟</string>
   <!-- Uninstall survey answer option -->
-  <string name="uninstall_survey_option_1_v2">إنه بطيء أو غير مضمون</string>
   <!-- Uninstall survey answer option -->
-  <string name="uninstall_survey_option_2_v2">لم تعمل المواقع الإلكترونية بشكل صحيح</string>
   <!-- Uninstall survey answer option -->
-  <string name="uninstall_survey_option_3_v2">يفتقر الميزات التي أحتاجها</string>
   <!-- Uninstall survey answer option -->
-  <string name="uninstall_survey_option_4_v2">لم تعمل مقاطع الفيديو أو التنزيلات أو الوسائط</string>
   <!-- Uninstall survey answer option -->
-  <string name="uninstall_survey_option_5_v2">يصعب استخدامه أو تصميمه رديء</string>
   <!-- Uninstall survey answer option -->
-  <string name="uninstall_survey_option_6_v2">مخاوف تتعلق بالخصوصية أو الأمن</string>
   <!-- Button label shown at the bottom of the uninstall survey -->
-  <string name="uninstall_survey_button_label">أرسل ملاحظاتك وألغِ التثبيت</string>
   <!--
     Accessibility
 
@@ -4214,19 +4139,12 @@
 
     Title for a prompt asking the user about their experience using the app. %1$s is the name of the app (for example "Firefox").
   -->
-  <string name="review_prompt_pre_prompt_header">ما رأيك في %1$s؟</string>
   <!-- Label for a button negatively rating the user's experience with the app -->
-  <string name="review_prompt_negative_button">أواجه بعض المشاكل</string>
   <!-- Label for a button positively rating the user's experience with the app -->
-  <string name="review_prompt_positive_button">رائع!</string>
   <!-- Title for a prompt asking the user to rate the app on Google Play Store. %1$s is the name of the app (for example "Firefox"). -->
-  <string name="review_prompt_rate_header">نحن سعداء لأنه أعجبكم %1$s. هل لديكم لحظة لتشاركوا حبّكم هذا من خلال تقييم؟</string>
   <!-- Label for a button proceeding to rate the app on Google Play Store. %1$s is the name of the app (for example "Firefox"). -->
-  <string name="review_prompt_rate_button">تقييم %1$s على Play Store</string>
   <!-- Title for a prompt asking the user send us feedback. %1$s is the name of the app (for example "Firefox"). -->
-  <string name="review_prompt_feedback_header">نأسف لمواجهتكم بعض المشاكل. أخبرونا كيف يمكننا تحسين خدماتنا %1$s.</string>
   <!-- Label for a button opening a feedback forum -->
-  <string name="review_prompt_feedback_button">أخبرونا بآرائكم</string>
   <!--
     Settings Search Strings
 
@@ -4296,31 +4214,18 @@
 
     Title text shown at the top of the sports widget country selector, encouraging the user to pick a national team to follow.
   -->
-  <string name="sports_widget_country_selector_title">تابع فريقك</string>
   <!-- Section header for the North America region in the sports widget country selector. -->
-  <string name="sports_widget_confederation_north_america">أمريكا الشمالية</string>
   <!-- Section header for the Africa confederation group in the sports widget country selector. -->
-  <string name="sports_widget_confederation_africa">أفريقيا</string>
   <!-- Section header for the Asia confederation group in the sports widget country selector. -->
-  <string name="sports_widget_confederation_asia">آسيا</string>
   <!-- Section header for the CONCACAF confederation group in the sports widget country selector. "CONCACAF" is the abbreviation for "Confederation of North, Central America and Caribbean Association Football". -->
-  <string name="sports_widget_confederation_concacaf">كونكاكاف</string>
   <!-- Section header for the Europe confederation group in the sports widget country selector. -->
-  <string name="sports_widget_confederation_europe">أوروبا</string>
   <!-- Section header for the Oceania confederation group in the sports widget country selector. -->
-  <string name="sports_widget_confederation_oceania">أوقيانوسيا</string>
   <!-- Section header for the South America confederation group in the sports widget country selector. -->
-  <string name="sports_widget_confederation_south_america">أمريكا الجنوبية</string>
   <!-- Country name for England in the sports widget. England cannot be resolved with the Android Intl APIs so it needs an explicit string. -->
-  <string name="sports_widget_country_england">إنجلترا</string>
   <!-- Country name for Scotland in the sports widget. Scotland cannot be resolved with the Android Intl APIs so it needs an explicit string. -->
-  <string name="sports_widget_country_scotland">اسكتلندا</string>
   <!-- Sports widget menu item to remove the widget from the homepage. -->
-  <string name="sports_widget_remove">أزِل</string>
   <!-- Content description (for accessibility, not displayed) for the close button on the sports widget card. -->
-  <string name="sports_widget_close_content_description">أغلق</string>
   <!-- Content description (for accessibility, not displayed) for the overflow (more options) menu button on the sports widget card. -->
-  <string name="sports_widget_more_options_content_description">خيارات إضافية</string>
   <!-- ==== End of Terms of use popup prompt. ==== -->
 
   <!--
@@ -4351,18 +4256,13 @@
     Title shown at the top of the camera screen, next to the close button, telling the
     user that the photo they capture will be sent to Google Lens for a visual search.
   -->
-  <string name="lens_camera_title_lens">Google Lens</string>
   <!--
     Title shown at the top of the camera screen, next to the close button, telling the
     user that the camera is being used to scan a QR code.
   -->
-  <string name="lens_camera_title_qr">رمز QR</string>
   <!-- Title for the Google Lens Search Settings page feature toggle -->
-  <string name="search_settings_google_lens_title">فعّل خاصية Google Lens</string>
   <!-- Description for the Google Lens Search Settings page feature toggle -->
-  <string name="search_settings_google_lens_description">يرسل الصور إلى جوجل للبحث المرئي.</string>
   <!-- Caption shown under the Google Lens toggle clarifying when the feature is available -->
-  <string name="preferences_google_lens_availability_caption">متاح فقط عند تفعيل جوجل أعلاه ويكون محرك البحث النشط أثناء التصفح.</string>
   <!-- Title for the Google Lens AI feature toggle -->
   <string name="ai_controls_google_lens_title">Google Lens</string>
   <!-- Description for the Google Lens AI feature toggle -->
@@ -4401,7 +4301,6 @@
   <!-- The description text that is displayed in the confirmation dialog on the Firefox Labs screen for toggling "off" experimental features. %s is the name of the app (for example "Firefox Nightly") -->
   <string name="firefox_labs_feature_disable_dialog_message">لإيقاف تشغيل هذه الميزة، أعد تشغيل %s.</string>
   <!-- Helper text shown beneath a Firefox Labs item when it is blocked from being turned on. -->
-  <string name="firefox_labs_feature_conflict">هذه الميزة غير متاحة للتجربة.</string>
   <!-- Text displayed on the Firefox Labs screen when there are no Labs experimental features present. -->
   <string name="firefox_labs_no_labs_available_description">لا توجد ميزات تجريبية متاحة للتجربة حاليًا</string>
 </resources>

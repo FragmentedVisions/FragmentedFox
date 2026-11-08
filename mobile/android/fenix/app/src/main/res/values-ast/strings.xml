@@ -270,7 +270,6 @@
   <!-- Preference link to Learn more about Firefox Suggest -->
   <string name="preference_search_learn_about_fx_suggest" tools:ignore="BrandUsage">Saber más tocante a Firefox Suggest</string>
   <!-- Preference link to rating Fenix on the Play Store -->
-  <string name="preferences_rate">Valorar en Google Play</string>
   <!--
     Preference linking to about page for Fenix
     %1$s is the name of the app (for example "Firefox").

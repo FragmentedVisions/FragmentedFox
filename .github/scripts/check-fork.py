@@ -262,6 +262,18 @@ def check_licenses():
         fail("licenses", "app/build.gradle: the oss-licenses plugin must not depend on MOZILLA_OFFICIAL, our builds never set it (see changes.md)")
 
 
+def check_translations():
+    res = os.path.join(APP, "src/main/res")
+    pattern = r'<(?:string|plurals|string-array)\s+[^>]*?name="([^"]+)"'
+    defined = set()
+    for name in ("strings.xml", "static_strings.xml"):
+        defined |= set(re.findall(pattern, read(os.path.join(res, "values", name))))
+    for path in sorted(glob.glob(os.path.join(res, "values-*", "strings.xml"))):
+        extra = set(re.findall(pattern, read(path))) - defined
+        if extra:
+            fail("translations", f"{os.path.relpath(path, ROOT)}: {len(extra)} translated strings have no default, e.g. {sorted(extra)[0]}")
+
+
 def check_hidden_settings():
     screen = read(os.path.join(APP, "src/main/java/org/mozilla/fenix/settings/datachoices/DataChoicesScreen.kt"))
     match = re.search(r"fun buildDataChoicesItems.*?\n}\n", screen, flags=re.S)
@@ -383,7 +395,7 @@ def normalise(section, message):
 
 
 def main():
-    checks = [check_imports, check_resources, check_pings, check_removed, check_prefs, check_settings, check_nimbus, check_cleartext, check_launcher_aliases, check_theme, check_palette_visibility, check_remote_experiments, check_query_stripping, check_licenses, check_hidden_settings, check_search, check_glean, check_features, check_telemetry, check_syntax]
+    checks = [check_imports, check_resources, check_pings, check_removed, check_prefs, check_settings, check_nimbus, check_cleartext, check_launcher_aliases, check_theme, check_palette_visibility, check_remote_experiments, check_query_stripping, check_licenses, check_translations, check_hidden_settings, check_search, check_glean, check_features, check_telemetry, check_syntax]
     selected_flags = [a for a in sys.argv[1:] if a.startswith("--")]
     selected = [a for a in sys.argv[1:] if not a.startswith("--")]
     for check in checks:

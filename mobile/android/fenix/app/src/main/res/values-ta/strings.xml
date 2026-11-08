@@ -150,7 +150,6 @@
   <!-- Preference for settings related to Search -->
   <string name="preferences_search">தேடல்</string>
   <!-- Preference link to rating Fenix on the Play Store -->
-  <string name="preferences_rate">கூகுள் கடையில் மதிப்பிடுக</string>
   <!--
     Preference linking to about page for Fenix
     %1$s is the name of the app (for example "Firefox").

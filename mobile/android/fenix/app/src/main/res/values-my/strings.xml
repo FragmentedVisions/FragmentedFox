@@ -196,7 +196,6 @@
   <!-- Preference for settings related to Search -->
   <string name="preferences_search">ရှာဖွေပါ</string>
   <!-- Preference link to rating Fenix on the Play Store -->
-  <string name="preferences_rate">Google Play တွင်အဆင့်သတ်မှတ်ပါ</string>
   <!--
     Preference linking to about page for Fenix
     %1$s is the name of the app (for example "Firefox").

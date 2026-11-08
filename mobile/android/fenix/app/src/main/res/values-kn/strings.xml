@@ -124,7 +124,6 @@
   <!-- Preference for settings related to Search -->
   <string name="preferences_search">ಹುಡುಕು</string>
   <!-- Preference link to rating Fenix on the Play Store -->
-  <string name="preferences_rate">ಗೂಗಲ್‌ ಪ್ಲೇ ನಲ್ಲಿ ರೇಟ್ ಮಾಡಿ</string>
   <!--
     Preference linking to about page for Fenix
     %1$s is the name of the app (for example "Firefox").

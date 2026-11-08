@@ -58,12 +58,6 @@ object SettingsAppIconSelectors {
         description = "Momo app icon option",
         groups = listOf("appIconItems"),
     )
-    val MOMO_SUBTITLE = Selector(
-        strategy = SelectorStrategy.UIAUTOMATOR_WITH_TEXT,
-        value = getStringResource(R.string.alternative_app_icon_option_momo_subtitle),
-        description = "Momo app icon subtitle",
-        groups = listOf("appIconItems"),
-    )
     val COOL = Selector(
         strategy = SelectorStrategy.UIAUTOMATOR_WITH_TEXT,
         value = getStringResource(R.string.alternative_app_icon_option_cool),
@@ -207,7 +201,6 @@ object SettingsAppIconSelectors {
         FLAMING,
         MINIMAL,
         MOMO,
-        MOMO_SUBTITLE,
         COOL,
         SOLID_COLORS_SECTION,
         DEFAULT_ICON,

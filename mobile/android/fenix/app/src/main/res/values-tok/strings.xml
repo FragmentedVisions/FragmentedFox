@@ -350,7 +350,6 @@
   <!-- Preference link to Learn more about Firefox Suggest -->
   <string name="preference_search_learn_about_fx_suggest" tools:ignore="BrandUsage">o sona e ilo Firefox Suggest</string>
   <!-- Preference link to rating Fenix on the Play Store -->
-  <string name="preferences_rate">o pana e pilin lon ilo Google Play</string>
   <!--
     Preference linking to about page for Fenix
     %1$s is the name of the app (for example "Firefox").
@@ -494,7 +493,6 @@
   <!-- Title for the "Red" alternative app icon variant in the icon picker screen. -->
   <string name="alternative_app_icon_option_red">loje</string>
   <!-- Subtitle for the "Momo" themed alternative app icon variant in the icon picker screen. The app icon was created by artist @heyheymomodraws and features a unique hand-drawn style with a friendly fox. -->
-  <string name="alternative_app_icon_option_momo_subtitle">jan @heyheymomodraws li sitelen</string>
   <!--
     Add-ons general availability nimbus message
 
@@ -1321,7 +1319,6 @@
   <!-- The text for the "Cancel" button for cancelling adding, updating or deleting an address -->
   <string name="addresses_cancel_button">ala</string>
   <!-- The text for the "Delete address" button for deleting an address -->
-  <string name="addressess_delete_address_button">o weka e nimi ma</string>
   <!-- The title for the "Delete address" confirmation dialog -->
   <string name="addressess_confirm_dialog_message_2">sina wile ala wile weka e nimi ma?</string>
   <!-- The text for the positive button on "Delete address" dialog -->

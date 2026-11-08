@@ -187,7 +187,6 @@ class SettingsSubMenuCustomizeRobot {
             R.string.alternative_app_icon_option_flaming,
             R.string.alternative_app_icon_option_minimal,
             R.string.alternative_app_icon_option_momo,
-            R.string.alternative_app_icon_option_momo_subtitle,
             R.string.alternative_app_icon_option_cool,
             // Solid colors section
             R.string.alternative_app_icon_group_solid_colors,

@@ -252,4 +252,31 @@ write(RES + "/drawable/ic_firefox.xml", mark(108))
 write(RES + "/drawable/expressive_firefox.xml", mark(35))
 write(RES + "/drawable/ic_status_logo.xml", silhouette(24, "@android:color/white"))
 write(ICONS + "/mozac_ic_logo_firefox_24.xml", silhouette(24, "@color/mozac_ui_icons_fill"))
+
+
+def illustration(width, height):
+    # The fox without its disc, scaled to fit inside width x height dp without stretching.
+    s = min(width, height) / 256 * 0.92
+    ox = (width - 256 * s) / 2
+    oy = (height - 256 * s) / 2
+    tx = lambda x, y: (x * s + ox, y * s + oy)
+    body = ""
+    for pts, fill in polys:
+        body += path(poly_path(pts, tx), fill=fill, stroke="#050505", stroke_w=fmt(7 * s))
+    for d in eyes:
+        body += path(eye_path(d, tx), fill="#00FF88")
+    return vector(width, height, width, height, body)
+
+
+# Illustrations that were Mozilla's fox artwork. The names stay the same so Mozilla's code keeps
+# working and ESR merges stay small; only the pictures are ours.
+for name, folder, w, h in [
+    ("firefox_as_default_banner_illustration", "drawable-nodpi", 78, 53),
+    ("illustration_fox_box_inside_light", "drawable", 176, 160),
+    ("fox_exclamation_alert", "drawable", 200, 200),
+    ("fox_alert_crash_light", "drawable", 156, 137),
+    ("fox_alert_crash_dark", "drawable", 155, 137),
+    ("fox_ai_on_state", "drawable", 62, 63),
+]:
+    write(RES + f"/{folder}/{name}.xml", illustration(w, h))
 print("ok")

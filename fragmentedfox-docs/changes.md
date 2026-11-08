@@ -36,7 +36,7 @@ Not changed: Safe Browsing local list updates, search suggestions, and the add-o
 
 ## Removed from the Android app
 
-Removing a feature means deleting its code, resources, metrics, tests and dependencies. The VPN removal is in `Stable-Main` and has been built and installed. The SDK, summarizer and review prompt removals are on `NonStable--test` only and have not been built yet.
+Removing a feature means deleting its code, resources, metrics, tests and dependencies. All the removals below are in `Stable-Main`. They were built (Android build run 23, commit `08afc0a2e5`) and installed on a phone.
 
 - **Mozilla VPN (IP Protection):** the settings entry, menu item, toolbar pill, trust panel section, first-run prompt, snackbars, account sign-in hooks, navigation destinations, the `ip-protection` Nimbus feature, the Fenix dependency on `feature-ipprotection`, the strings in every language, the `vpn` Glean metrics and the matching tests. Left in place: the shared android-components and GeckoView VPN code, which nothing in the app uses, and entries for the deleted files in the lint and detekt baselines. `browser.ipProtection.enabled` is also false in `geckoview-prefs.js`.
 - **Third-party SDKs:** Adjust marketing attribution, the Google Play install referrer and advertising ID reader (and the Return to AMO handler that used the referrer), Firebase push (so web push and push-based Send Tab alerts are gone, and were already off without a Firebase config), Google Play Integrity, and Sentry crash reporting. Their dependencies, manifest entries, build tokens, debug screens, settings, Glean metrics, the `adjust-attribution` ping and tests are removed.
@@ -87,6 +87,8 @@ Checked in the app manifest: backups are off (`allowBackup=false`), the only exp
 
 ## Known gaps
 
+- The tracker counts on the privacy report disagree by a small number. The tab tray pill and the "since" footer show the all-time total, which the engine sums over every stored event type (`sumAllTrackingProtectionEvents`). The "this week" card adds up only four categories (cross-site cookies, social, fingerprinters and tracking content), and Mozilla's code leaves out other cookies, cryptominers and bounce trackers on purpose (`TrackersBlockedFeatureTest` covers this). So the pill can read higher than the card (14 against 13 was seen). This is Mozilla's behaviour and is in every build. Left alone to keep the change small; the fix would be to make the total count the same four categories.
+- Gradle prints a warning that two Kotlin plugin versions are in use. The version catalog (`gradle/libs.versions.toml`) sets Kotlin 2.3.21, but `mobile/android/gradle/plugins/apilint` and `nimbus-gradle-plugin` pin 2.3.10. This is how Mozilla ships this ESR, it does not fail the build, and it is left as is so it does not differ from Mozilla's code.
 - The Android home screen sports widget (tournament data from Mozilla's servers) is off by default on the release channel (`homepage-sports-widget`), so it makes no requests. It is on in nightly, beta and developer builds.
 - The Data collection screen and the first-run "Manage settings" dialog still show the technical data, daily usage and Studies switches. Turning "technical data" on starts Mozilla's experiments (Nimbus) over Remote Settings, though Glean uploads stay blocked by the build flag. Whether to hide them is undecided.
 - uBlock Origin and Privacy Badger overlap in what they block. Running both costs some memory and gives little extra protection, so one may be dropped later.

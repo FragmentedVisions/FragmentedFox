@@ -10,7 +10,7 @@ FragmentedFox is a private, independent fork of the Firefox browser from [Fragme
 
 ## Status
 
-Early and experimental. The Android app builds on GitHub Actions into a signed APK that installs and runs on a phone. It has had only light testing. The latest build passed and was checked on a phone, but the newest cleanups (listed below) came after it and are not built yet.
+Early and experimental. The Android app builds on GitHub Actions into a signed APK that installs and runs on a phone. It has had only light testing. The latest build (commit `08afc0a2e5`) passed and was checked on a phone. It has one known minor bug, listed under known gaps in [changes](./fragmentedfox-docs/changes.md).
 
 | Platform | Status |
 | --- | --- |
@@ -34,7 +34,7 @@ FragmentedFox follows Mozilla's [Extended Support Release](https://support.mozil
 
 ### Removed from the Android app
 
-Mozilla's VPN, the Adjust, Firebase, Google Play Integrity and Sentry SDKs, the page summarizer, the Play Store review prompt, the marketing data consent flow, the growth conversion and install attribution code, and the partner distribution code are removed, not just switched off. `Stable-Main` has the VPN removal. The rest is on `NonStable--test`. The growth tracking, marketing consent and attribution removals are the newest and are not built yet. Details are in [changes](./fragmentedfox-docs/changes.md), which also lists known gaps such as the missing network audit.
+Mozilla's VPN, the Adjust, Firebase, Google Play Integrity and Sentry SDKs, the page summarizer, the Play Store review prompt, the marketing data consent flow, the growth conversion and install attribution code, and the partner distribution code are removed, not just switched off. All of these removals are in `Stable-Main` and were built and checked on a phone. Details are in [changes](./fragmentedfox-docs/changes.md), which also lists known gaps such as the missing network audit.
 
 ## Branches
 
@@ -42,8 +42,8 @@ There are only two branches. All changes are made on `NonStable--test`, and buil
 
 | Branch | Purpose |
 | --- | --- |
-| `Stable-Main` | The default branch. The last state that was built and installed on a phone (commit `a82cf4a57c`). |
-| `NonStable--test` | Where all work happens. It includes everything in `Stable-Main` plus any newer changes. Its newest changes (DuckDuckGo search, the expanded toolbar, the fox icons, the app icon picker removal, cleartext and permission hardening and a cleanup pass) are being built and have not been checked on a phone yet. `Stable-Main` stays where it is until they have been. |
+| `Stable-Main` | The default branch. The last state that was built and installed on a phone (commit `08afc0a2e5`, Android build run 23). Anything after that commit is documentation only. |
+| `NonStable--test` | Where all work happens. It includes everything in `Stable-Main` plus any newer changes. Right now it has no code changes that `Stable-Main` lacks. `Stable-Main` only moves up after a build of the new changes has been checked on a phone. |
 
 ## Building
 

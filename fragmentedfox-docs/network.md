@@ -26,11 +26,17 @@ What the Android app can contact, as read from the code and defaults. This is a 
 | --- | --- |
 | Your search engine (DuckDuckGo by default) | search suggestions are on by default (`shouldShowSearchSuggestions`), so typed text is sent to the engine as you type. This is left on on purpose, and the user can turn it off in settings |
 | Quad9 (`dns.quad9.net`) | encrypted DNS, the default resolver |
-| Mozilla Remote Settings | tracker lists, certificate revocation filters, add-on blocklist, polled daily |
+| Mozilla Remote Settings | tracker lists, certificate revocation filters, add-on blocklist and the list of tracking link parameters to strip (`query-stripping`), polled daily |
 | Google Safe Browsing | phishing and malware list updates (hash prefixes only) |
 | addons.mozilla.org | add-on search, install and update checks |
 | Mozilla account servers | only if you sign in to sync |
 | Mozilla crash-stats | only if you choose to send a crash report |
+
+## Link tracking parameters, referrers and ECH
+
+- Tracking parameters (such as `fbclid` and `gclid`) are stripped from links in normal and private tabs (`GeckoProvider.kt`). The list is Mozilla's `query-stripping` collection from Remote Settings, which is not bundled, so nothing is stripped until the first sync. The release app has no setting for it.
+- Cross-site referrers carry the site name only, even when a page asks to send the full address, and trackers get none (`network.http.referer.XOriginTrimmingPolicy` 2 and `defaultPolicy.trackers` 1, in `geckoview-prefs.js`). Sending referrers to the same site only was not chosen because it breaks logins.
+- Encrypted Client Hello is on in the engine (`network.dns.echconfig.enabled` and `network.dns.http3_echconfig.enabled` are true and not overridden). It needs the encrypted DNS lookup to work and only helps for sites that publish an ECH key. DNS is "Quad9 first, then the phone's own DNS" (`network.trr.mode` 2), so during a fallback both are lost. To check on a phone, open `https://crypto.cloudflare.com/cdn-cgi/trace`: `sni=encrypted` means it works.
 
 ## Correction: experiments and rollouts
 

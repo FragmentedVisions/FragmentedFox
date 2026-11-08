@@ -393,3 +393,8 @@ pref("media.navigator.video.enabled", false);
 pref("media.peerconnection.ice.default_address_only", true);
 pref("media.peerconnection.ice.no_host", true);
 pref("media.peerconnection.enabled", false);
+
+// Send cross-site referrers as the origin only, even when a site asks for more, and none to trackers
+pref("network.http.referer.XOriginTrimmingPolicy", 2);
+pref("network.http.referer.defaultPolicy.trackers", 1);
+pref("network.http.referer.defaultPolicy.trackers.pbmode", 1);

@@ -101,8 +101,8 @@ object GeckoProvider {
                     context.components.settings.shouldEnableCookieBannerGlobalRules,
                     cookieBannerGlobalRulesSubFramesEnabled =
                     context.components.settings.shouldEnableCookieBannerGlobalRulesSubFrame,
-                    queryParameterStripping = false,
-                    queryParameterStrippingPrivateBrowsing = false,
+                    queryParameterStripping = true,
+                    queryParameterStrippingPrivateBrowsing = true,
                     queryParameterStrippingAllowList = "",
                     queryParameterStrippingStripList = "",
                     allowListBaselineTrackingProtection =

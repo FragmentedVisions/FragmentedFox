@@ -26,7 +26,10 @@
     "media.navigator.video.enabled": "false",
     "media.peerconnection.ice.default_address_only": "true",
     "media.peerconnection.ice.no_host": "true",
-    "browser.ipProtection.enabled": "false"
+    "browser.ipProtection.enabled": "false",
+    "network.http.referer.XOriginTrimmingPolicy": "2",
+    "network.http.referer.defaultPolicy.trackers": "1",
+    "network.http.referer.defaultPolicy.trackers.pbmode": "1"
   },
   "modules/libpref/init/all.js": {
     "datareporting.policy.dataSubmissionEnabled": "false",

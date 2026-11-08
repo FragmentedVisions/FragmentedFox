@@ -9,6 +9,7 @@ FragmentedFox is a browser. This page says what the Android app sends and where.
 - Sponsored shortcuts, sponsored stories, Pocket stories, ads and Firefox Suggest are off by default.
 - It does not download experiments, surveys or feature rollouts from Mozilla, and the ones Mozilla bundled in the app are removed, so Mozilla cannot switch features on in your copy.
 - WebRTC is off.
+- Tracking parameters are removed from links you open, and other sites only learn the name of the site you came from, never the page. Trackers get no referrer at all.
 
 ## What it does contact
 
@@ -17,7 +18,7 @@ FragmentedFox is a browser. This page says what the Android app sends and where.
 | The websites you visit | to load them | when you open a page |
 | Your search engine (DuckDuckGo by default) | to search, and to suggest results as you type | when you search. Suggestions can be turned off in settings |
 | Quad9 | encrypted DNS lookups, the default resolver | when you load pages. The resolver can be changed in settings |
-| Mozilla Remote Settings | tracker lists, certificate revocation lists, the add-on blocklist | about once a day |
+| Mozilla Remote Settings | tracker lists, the list of tracking link parameters to remove, certificate revocation lists, the add-on blocklist | about once a day |
 | Google Safe Browsing | phishing and malware list updates (hash prefixes only) | about once a day |
 | addons.mozilla.org | to find, install and update add-ons | when you use add-ons |
 | Mozilla account servers | to sync | only if you sign in |

@@ -17,6 +17,9 @@ on:
         description: "Export an encrypted backup of the Android signing key as a one day artifact"
         type: boolean
         default: false
+      traffic_run_id:
+        description: "Optional: an Android build run id to run on an emulator while recording which servers it contacts"
+        required: false
 
 jobs:
   check:
@@ -211,3 +214,61 @@ jobs:
           path: ${{ runner.temp }}/key-backup/fragmentedfox-signing-key.tar.gpg
           retention-days: 1
           if-no-files-found: error
+
+  traffic-capture:
+    if: inputs.traffic_run_id != ''
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    permissions:
+      contents: read
+      actions: read
+    env:
+      TRAFFIC_DIR: ${{ github.workspace }}/traffic
+      APK: ${{ github.workspace }}/apk/fenix-arm64-v8a-release.apk
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 1
+
+      - name: Download the APK
+        uses: actions/download-artifact@v7
+        with:
+          name: fragmentedfox-android
+          path: apk
+          run-id: ${{ inputs.traffic_run_id }}
+          github-token: ${{ github.token }}
+
+      - name: Install the capture tools
+        run: |
+          echo 'wireshark-common wireshark-common/install-setuid boolean false' | sudo debconf-set-selections
+          sudo apt-get update
+          sudo DEBIAN_FRONTEND=noninteractive apt-get install -y tshark
+          mkdir -p "$TRAFFIC_DIR"
+
+      - name: Enable KVM
+        run: |
+          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+          sudo udevadm control --reload-rules
+          sudo udevadm trigger --name-match=kvm
+
+      - name: Run the app on an emulator and record its network traffic
+        uses: reactivecircus/android-emulator-runner@v2.37.0
+        with:
+          api-level: 34
+          target: google_apis
+          arch: x86_64
+          disable-animations: true
+          emulator-options: -no-window -gpu swiftshader_indirect -no-snapshot -noaudio -no-boot-anim -tcpdump ${{ github.workspace }}/traffic/capture.pcap
+          script: bash .github/scripts/traffic-capture.sh
+
+      - name: List the servers it contacted
+        run: python3 -I .github/scripts/traffic-report.py "$TRAFFIC_DIR" "$TRAFFIC_DIR/capture.pcap"
+
+      - name: Keep the capture and screenshots
+        if: always()
+        uses: actions/upload-artifact@v6
+        with:
+          name: fragmentedfox-traffic
+          path: traffic
+          retention-days: 3
+          if-no-files-found: warn

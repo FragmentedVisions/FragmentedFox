@@ -354,6 +354,10 @@ def check_syntax():
             yaml.safe_load(read(path))
         except yaml.YAMLError as error:
             fail("syntax", f"{os.path.relpath(path, ROOT)}: {error}")
+    try:
+        json.loads(read(os.path.join(ROOT, "fragmentedfox-docs/expected-hosts.json")))
+    except ValueError as error:
+        fail("syntax", f"expected-hosts.json: {error}")
     import xml.dom.minidom
     for path in glob.glob(os.path.join(APP, "src/main/res/values/*.xml")) + glob.glob(os.path.join(APP, "src/main/res/xml/*.xml")) + [os.path.join(APP, "src/main/AndroidManifest.xml")]:
         try:

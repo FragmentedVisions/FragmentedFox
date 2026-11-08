@@ -51,6 +51,7 @@ The `Check FragmentedFox` workflow has options besides the guard, all started by
 
 - `run_id` (and `compare_run_id`) inspect the APK of a finished build without building anything: signature, alignment, manifest, permissions, launcher aliases, and every resource file the resource table points to. A second run id compares two builds.
 - `emulator` installs both builds on an Android emulator to see the exact install error.
+- `traffic_run_id` runs the build from that run on an Android emulator for about six minutes (one minute of the emulator alone, then a fresh start, a page load and the app in the background) and records every server it contacts. The report lists hosts the app contacted that the bare emulator did not, and fails if one of them is on the forbidden list in `expected-hosts.json` (Mozilla domains and known tracking services) and not on its allowed list. The capture shows server names and addresses only, not what was sent. It needs an emulator that can run arm64 apps and stops early if it cannot.
 - `backup_key` exports an encrypted backup of the signing key, see [signing](./signing.md).
 
 The scripts in `.github/scripts` that rewrite Mozilla's files are meant to be run again after an upgrade: `make-android-icons.py` (logo and picker icons) and `make-android-colors.py` (the Fragmented Visions palette).

@@ -1,0 +1,28 @@
+{
+  "allowed": [
+    "dns.quad9.net",
+    "example.org",
+    "firefox.settings.services.mozilla.com",
+    "firefox-settings-attachments.cdn.mozilla.net",
+    "content-signature-2.cdn.mozilla.net",
+    "safebrowsing.googleapis.com",
+    "duckduckgo.com"
+  ],
+  "forbidden": [
+    "mozilla.org",
+    "mozilla.com",
+    "mozilla.net",
+    "firefox.com",
+    "mozaws.net",
+    "getpocket.com",
+    "adjust.com",
+    "adjust.net",
+    "sentry.io",
+    "firebaseio.com",
+    "app-measurement.com",
+    "crashlytics.com",
+    "google-analytics.com",
+    "googletagmanager.com",
+    "doubleclick.net"
+  ]
+}

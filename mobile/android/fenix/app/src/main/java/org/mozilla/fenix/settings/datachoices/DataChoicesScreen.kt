@@ -179,9 +179,6 @@ internal fun DataChoicesUi(
 private fun buildDataChoicesItems(state: DataChoicesState): List<DataChoicesSectionKey> {
     return remember {
         buildList {
-            add(DataChoicesSectionKey.TECHNICAL_DATA)
-            add(DataChoicesSectionKey.STUDIES)
-            add(DataChoicesSectionKey.USAGE_DATA)
             add(DataChoicesSectionKey.CRASH_REPORTS)
         }
     }

@@ -30,7 +30,7 @@ Mozilla and Google run the services in that table. Their own privacy notices cov
 
 ## Settings you can change
 
-Settings has a data collection section. Its switches are off by default and, because telemetry is compiled out, switching them on does not make the app send telemetry.
+The data collection screen only has the crash report choice (ask, always send or never send). The telemetry, usage and studies switches were removed because telemetry is compiled out, so they would have done nothing.
 
 ## Changes
 

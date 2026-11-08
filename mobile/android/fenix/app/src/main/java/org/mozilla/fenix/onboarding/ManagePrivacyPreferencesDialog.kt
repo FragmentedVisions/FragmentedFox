@@ -75,10 +75,6 @@ fun ManagePrivacyPreferencesDialog(
 
                 Spacer(modifier = Modifier.height(16.dp))
 
-                UsageDataPreference(store, state.usageDataEnabled, onUsageDataLinkClick)
-
-                Spacer(modifier = Modifier.height(24.dp))
-
                 CrashReportingPreference(
                     store,
                     state.crashReportingEnabled,
@@ -133,46 +129,6 @@ private fun CrashReportingPreference(
         linkTextStates = listOf(
             LinkTextState(
                 text = stringResource(id = R.string.onboarding_preferences_dialog_crash_reporting_learn_more_2),
-                url = "",
-                onClick = { onLinkClick() },
-            ),
-        ),
-        style = FirefoxTheme.typography.caption,
-    )
-}
-
-@Composable
-private fun UsageDataPreference(
-    store: PrivacyPreferencesStore,
-    usageDataEnabled: Boolean,
-    onLinkClick: () -> Unit,
-) {
-    SwitchWithLabel(
-        label = stringResource(R.string.onboarding_preferences_dialog_usage_data_title),
-        checked = usageDataEnabled,
-        onCheckedChange = {
-            store.dispatch(
-                PrivacyPreferencesAction.UsageDataPreferenceUpdatedTo(it),
-            )
-        },
-        modifier = Modifier.wrapContentWidth(),
-        labelStyle = FirefoxTheme.typography.body2,
-    )
-
-    Spacer(modifier = Modifier.height(8.dp))
-
-    Text(
-        text = stringResource(R.string.onboarding_preferences_dialog_usage_data_description_2),
-        style = FirefoxTheme.typography.caption,
-    )
-
-    Spacer(modifier = Modifier.height(16.dp))
-
-    LinkText(
-        text = stringResource(R.string.onboarding_preferences_dialog_usage_data_learn_more_2),
-        linkTextStates = listOf(
-            LinkTextState(
-                text = stringResource(id = R.string.onboarding_preferences_dialog_usage_data_learn_more_2),
                 url = "",
                 onClick = { onLinkClick() },
             ),

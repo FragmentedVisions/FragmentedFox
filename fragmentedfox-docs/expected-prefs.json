@@ -29,7 +29,12 @@
     "browser.ipProtection.enabled": "false",
     "network.http.referer.XOriginTrimmingPolicy": "2",
     "network.http.referer.defaultPolicy.trackers": "1",
-    "network.http.referer.defaultPolicy.trackers.pbmode": "1"
+    "network.http.referer.defaultPolicy.trackers.pbmode": "1",
+    "security.ssl3.deprecated.rsa_des_ede3_sha": "false",
+    "security.ssl3.rsa_aes_128_sha": "false",
+    "security.ssl3.rsa_aes_256_sha": "false",
+    "security.ssl3.rsa_aes_128_gcm_sha256": "false",
+    "security.ssl3.rsa_aes_256_gcm_sha384": "false"
   },
   "modules/libpref/init/all.js": {
     "datareporting.policy.dataSubmissionEnabled": "false",

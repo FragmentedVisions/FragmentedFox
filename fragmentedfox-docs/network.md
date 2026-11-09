@@ -1,6 +1,6 @@
 # Network contacts
 
-What the Android app can contact, as read from the code and defaults. This is a code review, not a traffic capture. The Check workflow can record the traffic of a build on an emulator (`traffic_run_id`, see [building](building.md)); its results are not part of this page until it has been run and the output reviewed.
+What the Android app can contact, as read from the code and defaults. This is a code review, not a traffic capture. The Check workflow can record the traffic of a build on an emulator (`traffic_run_id`, see [building](building.md)); it has been run, but the capture saw nothing from the app, so its results are not part of this page (see building).
 
 ## Off by default
 

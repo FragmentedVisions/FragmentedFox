@@ -309,16 +309,6 @@
             column="129"/>
     </issue>
 
-    <issue
-        id="VectorRaster"
-        message="Limit vector icons sizes to 200×200 to keep icon drawing fast; see https://developer.android.com/studio/write/vector-asset-studio#when for more"
-        errorLine1="    android:width=&quot;244dp&quot;"
-        errorLine2="                   ~~~~~">
-        <location
-            file="src/main/res/drawable/ic_onboarding_marketing_redesign.xml"
-            line="5"
-            column="20"/>
-    </issue>
 
     <issue
         id="VectorRaster"
@@ -353,16 +343,6 @@
             column="128"/>
     </issue>
 
-    <issue
-        id="VectorRaster"
-        message="Limit vector icons sizes to 200×200 to keep icon drawing fast; see https://developer.android.com/studio/write/vector-asset-studio#when for more"
-        errorLine1="    android:width=&quot;263dp&quot;"
-        errorLine2="                   ~~~~~">
-        <location
-            file="src/main/res/drawable/ic_pick_a_theme.xml"
-            line="6"
-            column="20"/>
-    </issue>
 
     <issue
         id="VectorRaster"
@@ -540,16 +520,6 @@
             column="14"/>
     </issue>
 
-    <issue
-        id="DiscouragedApi"
-        message="Use of this function is discouraged because resource reflection makes it harder to perform build optimizations and compile-time verification of code. It is much more efficient to retrieve resources by identifier (e.g. `R.foo.bar`) than by name (e.g. `getIdentifier(&quot;bar&quot;, &quot;foo&quot;, null)`)."
-        errorLine1="        val resId = context.resources.getIdentifier(projectIdKey, &quot;string&quot;, context.packageName)"
-        errorLine2="                                      ~~~~~~~~~~~~~">
-        <location
-            file="src/main/java/org/mozilla/fenix/components/Push.kt"
-            line="38"
-            column="39"/>
-    </issue>
 
     <issue
         id="UnusedQuantity"
@@ -1013,16 +983,6 @@
             column="5"/>
     </issue>
 
-    <issue
-        id="Overdraw"
-        message="Possible overdraw: Root element paints background `?attr/scrimBackground` with a theme that also paints a background (inferred theme is `@style/NormalTheme`)"
-        errorLine1="    android:background=&quot;?attr/scrimBackground&quot;>"
-        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="src/main/res/layout/fragment_search_dialog.xml"
-            line="13"
-            column="5"/>
-    </issue>
 
     <issue
         id="Overdraw"
@@ -1248,71 +1208,11 @@
             file="src/main/res/drawable-xxhdpi"/>
     </issue>
 
-    <issue
-        id="ClickableViewAccessibility"
-        message="Custom view ``SearchDialogFragmentConstraintLayout`` has `setOnTouchListener` called on it but does not override `performClick`"
-        errorLine1="                binding.searchWrapper.setOnTouchListener { _, _ ->"
-        errorLine2="                ^">
-        <location
-            file="src/main/java/org/mozilla/fenix/search/SearchDialogFragment.kt"
-            line="411"
-            column="17"/>
-    </issue>
 
-    <issue
-        id="ClickableViewAccessibility"
-        message="`onTouch` lambda should call `View#performClick` when a click is detected"
-        errorLine1="                binding.searchWrapper.setOnTouchListener { _, _ ->"
-        errorLine2="                                                         ^">
-        <location
-            file="src/main/java/org/mozilla/fenix/search/SearchDialogFragment.kt"
-            line="411"
-            column="58"/>
-    </issue>
 
-    <issue
-        id="ClickableViewAccessibility"
-        message="Custom view ``SearchDialogFragmentConstraintLayout`` has `setOnTouchListener` called on it but does not override `performClick`"
-        errorLine1="                binding.searchWrapper.setOnTouchListener { _, _ ->"
-        errorLine2="                ^">
-        <location
-            file="src/main/java/org/mozilla/fenix/search/SearchDialogFragment.kt"
-            line="421"
-            column="17"/>
-    </issue>
 
-    <issue
-        id="ClickableViewAccessibility"
-        message="`onTouch` lambda should call `View#performClick` when a click is detected"
-        errorLine1="                binding.searchWrapper.setOnTouchListener { _, _ ->"
-        errorLine2="                                                         ^">
-        <location
-            file="src/main/java/org/mozilla/fenix/search/SearchDialogFragment.kt"
-            line="421"
-            column="58"/>
-    </issue>
 
-    <issue
-        id="ClickableViewAccessibility"
-        message="Custom view ``SearchDialogFragmentConstraintLayout`` has `setOnTouchListener` called on it but does not override `performClick`"
-        errorLine1="                binding.searchWrapper.setOnTouchListener { _, _ ->"
-        errorLine2="                ^">
-        <location
-            file="src/main/java/org/mozilla/fenix/search/SearchDialogFragment.kt"
-            line="427"
-            column="17"/>
-    </issue>
 
-    <issue
-        id="ClickableViewAccessibility"
-        message="`onTouch` lambda should call `View#performClick` when a click is detected"
-        errorLine1="                binding.searchWrapper.setOnTouchListener { _, _ ->"
-        errorLine2="                                                         ^">
-        <location
-            file="src/main/java/org/mozilla/fenix/search/SearchDialogFragment.kt"
-            line="427"
-            column="58"/>
-    </issue>
 
     <issue
         id="ContentDescription"
@@ -1450,32 +1350,12 @@
     <issue
         id="NoSystemCurrentTimeMillis"
         message="`System.currentTimeMillis()` must be injectable. Only permitted as a default value of a parameter on a top-level function or on a class."
-        errorLine1="        if (!System.currentTimeMillis().isAfterFirstWeekFromInstall(applicationContext) ||"
-        errorLine2="             ~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="src/main/java/org/mozilla/fenix/components/metrics/GrowthDataWorker.kt"
-            line="29"
-            column="14"/>
-    </issue>
-    <issue
-        id="NoSystemCurrentTimeMillis"
-        message="`System.currentTimeMillis()` must be injectable. Only permitted as a default value of a parameter on a top-level function or on a class."
         errorLine1="        val now = System.currentTimeMillis()"
         errorLine2="                  ~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/java/org/mozilla/fenix/historymetadata/HistoryMetadataService.kt"
             line="93"
             column="19"/>
-    </issue>
-    <issue
-        id="NoSystemCurrentTimeMillis"
-        message="`System.currentTimeMillis()` must be injectable. Only permitted as a default value of a parameter on a top-level function or on a class."
-        errorLine1="        currentTimeMillis: Long = System.currentTimeMillis(),"
-        errorLine2="                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="src/main/java/org/mozilla/fenix/ipprotection/IPProtectionManager.kt"
-            line="24"
-            column="35"/>
     </issue>
     <issue
         id="NoSystemCurrentTimeMillis"
@@ -1516,66 +1396,6 @@
             file="src/main/java/org/mozilla/fenix/components/menu/middleware/MenuDialogMiddleware.kt"
             line="452"
             column="45"/>
-    </issue>
-    <issue
-        id="NoSystemCurrentTimeMillis"
-        message="`System.currentTimeMillis()` must be injectable. Only permitted as a default value of a parameter on a top-level function or on a class."
-        errorLine1="            val currentTime = System.currentTimeMillis()"
-        errorLine2="                              ~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="src/main/java/org/mozilla/fenix/components/metrics/MetricsStorage.kt"
-            line="73"
-            column="31"/>
-    </issue>
-    <issue
-        id="NoSystemCurrentTimeMillis"
-        message="`System.currentTimeMillis()` must be injectable. Only permitted as a default value of a parameter on a top-level function or on a class."
-        errorLine1="                settings.resumeGrowthLastSent = System.currentTimeMillis()"
-        errorLine2="                                                ~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="src/main/java/org/mozilla/fenix/components/metrics/MetricsStorage.kt"
-            line="147"
-            column="49"/>
-    </issue>
-    <issue
-        id="NoSystemCurrentTimeMillis"
-        message="`System.currentTimeMillis()` must be injectable. Only permitted as a default value of a parameter on a top-level function or on a class."
-        errorLine1="                settings.uriLoadGrowthLastSent = System.currentTimeMillis()"
-        errorLine2="                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="src/main/java/org/mozilla/fenix/components/metrics/MetricsStorage.kt"
-            line="151"
-            column="50"/>
-    </issue>
-    <issue
-        id="NoSystemCurrentTimeMillis"
-        message="`System.currentTimeMillis()` must be injectable. Only permitted as a default value of a parameter on a top-level function or on a class."
-        errorLine1="        if (!settings.usageTimeGrowthSent &amp;&amp; System.currentTimeMillis().duringFirstDay()) {"
-        errorLine2="                                             ~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="src/main/java/org/mozilla/fenix/components/metrics/MetricsStorage.kt"
-            line="199"
-            column="46"/>
-    </issue>
-    <issue
-        id="NoSystemCurrentTimeMillis"
-        message="`System.currentTimeMillis()` must be injectable. Only permitted as a default value of a parameter on a top-level function or on a class."
-        errorLine1="    private fun Long.hasBeenMoreThanDaySince() = System.currentTimeMillis() - this > DAY_MILLIS"
-        errorLine2="                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="src/main/java/org/mozilla/fenix/components/metrics/MetricsStorage.kt"
-            line="327"
-            column="50"/>
-    </issue>
-    <issue
-        id="NoSystemCurrentTimeMillis"
-        message="`System.currentTimeMillis()` must be injectable. Only permitted as a default value of a parameter on a top-level function or on a class."
-        errorLine1="        val currentTime = System.currentTimeMillis()"
-        errorLine2="                          ~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="src/main/java/org/mozilla/fenix/components/metrics/MetricsStorage.kt"
-            line="357"
-            column="27"/>
     </issue>
     <issue
         id="NoSystemCurrentTimeMillis"
@@ -1756,16 +1576,6 @@
             file="src/main/java/org/mozilla/fenix/utils/Settings.kt"
             line="3153"
             column="46"/>
-    </issue>
-    <issue
-        id="NoSystemCurrentTimeMillis"
-        message="`System.currentTimeMillis()` must be injectable. Only permitted as a default value of a parameter on a top-level function or on a class."
-        errorLine1="                summarizeDurationMs = (System.currentTimeMillis() - sessionTelemetry.startTimeMillis).toInt(),"
-        errorLine2="                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="src/main/java/org/mozilla/fenix/summarization/SummarizationTelemetryMiddleware.kt"
-            line="170"
-            column="40"/>
     </issue>
     <issue
         id="NoSystemCurrentTimeMillis"

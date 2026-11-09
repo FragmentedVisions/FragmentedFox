@@ -60,6 +60,10 @@ The app downloads wallpapers at start-up from `BuildConfig.WALLPAPER_URL`. That 
 
 Several desktop prefs in `all.js` name Google or Mozilla URLs, such as the geolocation provider. They are not used by the Android app, which uses the system location service and asks the site permission first.
 
+## TLS versions and ciphers
+
+TLS 1.2 is the oldest version accepted and TLS 1.3 is preferred, as in Mozilla. SSL and TLS 1.0 and 1.1 are not accepted. In TLS 1.2 the Android app only offers ECDHE key exchange with AES-GCM or ChaCha20: 3DES, static RSA and CBC ciphers are turned off in `geckoview-prefs.js` (the prefs are named `security.ssl3.*` for historical reasons). A site that offers nothing else fails with a connection error. This is stricter than Mozilla and not tried on real sites yet. `check-fork.py` checks the eight prefs; the reasons and how to allow a cipher again are in [changes](./changes.md).
+
 ## Keeping this true
 
 `fragmentedfox-docs/expected-nimbus.json` holds the defaults above and `check-fork.py` fails if one flips back. After an ESR upgrade, check whether new Nimbus features or prefs have been added that contact a server.

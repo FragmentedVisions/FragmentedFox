@@ -399,9 +399,12 @@ pref("network.http.referer.XOriginTrimmingPolicy", 2);
 pref("network.http.referer.defaultPolicy.trackers", 1);
 pref("network.http.referer.defaultPolicy.trackers.pbmode", 1);
 
-// Turn off TLS 1.2 ciphers without forward secrecy: 3DES and static RSA key exchange
+// Turn off TLS 1.2 ciphers without forward secrecy (3DES, static RSA) and the CBC ciphers, leaving AEAD only
 pref("security.ssl3.deprecated.rsa_des_ede3_sha", false);
 pref("security.ssl3.rsa_aes_128_sha", false);
 pref("security.ssl3.rsa_aes_256_sha", false);
 pref("security.ssl3.rsa_aes_128_gcm_sha256", false);
 pref("security.ssl3.rsa_aes_256_gcm_sha384", false);
+pref("security.ssl3.ecdhe_rsa_aes_128_sha", false);
+pref("security.ssl3.ecdhe_rsa_aes_256_sha", false);
+pref("security.ssl3.ecdhe_ecdsa_aes_256_sha", false);

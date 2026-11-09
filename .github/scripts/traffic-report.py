@@ -60,6 +60,15 @@ def main():
     lines = ["# Traffic capture", ""]
     lines.append(f"Alive after first start: {open(os.path.join(out_dir, 'alive-after-start.txt')).read().strip()}, at the end: {open(os.path.join(out_dir, 'alive-at-end.txt')).read().strip()}")
     lines.append(f"Events in the capture: {len(events)}, hosts before the app: {len(baseline)}, hosts after: {len(app)}")
+    counts = {
+        "baseline": sum(1 for e in events if phases["baseline"] <= e[0] < phases["app"]),
+        "first start": sum(1 for e in events if phases["app"] <= e[0] < phases["url"]),
+        "page load": sum(1 for e in events if phases["url"] <= e[0] < phases["background"]),
+        "background": sum(1 for e in events if phases["background"] <= e[0] <= phases["end"] + 5),
+    }
+    lines.append("Events per phase: " + ", ".join(f"{k} {v}" for k, v in counts.items()))
+    page_seen = any(phases["url"] <= e[0] < phases["background"] and (e[3] == "example.org" or sni_by_ip.get(e[1]) == "example.org") for e in events)
+    lines.append(f"example.org seen while the page was opened: {'yes' if page_seen else 'no'}")
     lines += ["", "## Unexpected hosts (fail)", ""] + ([f"- {n}" for n in bad] or ["none"])
     lines += ["", "## Expected hosts", ""] + ([f"- {n}" for n in expected] or ["none"])
     lines += ["", "## Other hosts, to review", ""] + ([f"- {n}" for n in other] or ["none"])
@@ -72,6 +81,9 @@ def main():
         open(summary, "a").write(report)
     if not events:
         print("The capture is empty.")
+        return 1
+    if counts["first start"] + counts["page load"] == 0:
+        print("The capture saw nothing after the app started, including the page the script opened, so it cannot show what the app contacts. The result is not valid.")
         return 1
     return 1 if bad else 0
 

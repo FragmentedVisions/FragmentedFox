@@ -16,6 +16,15 @@ case "$ABIS" in
   *) echo "This emulator cannot run the arm64 build, so there is nothing to capture."; echo "no-arm64" > "$OUT/failed.txt"; exit 1 ;;
 esac
 
+echo "== network check from inside the emulator"
+{
+  echo "-- ping an address"; adb shell ping -c 2 -W 3 8.8.8.8
+  echo "-- ping a name"; adb shell ping -c 2 -W 3 example.org
+  echo "-- fetch over https"; adb shell "toybox nc -w 5 example.org 443 </dev/null; echo nc exit \$?"
+  echo "-- connectivity"; adb shell dumpsys connectivity | grep -i -E 'validated|state:' | head -6
+  echo "-- dns"; adb shell getprop net.dns1; adb shell settings get global private_dns_mode
+} 2>&1 | tee "$OUT/network-check.txt"
+
 echo "== 1. baseline, emulator only"
 BASELINE_START=$(date +%s)
 sleep 60
@@ -42,5 +51,7 @@ sleep 90
 END=$(date +%s)
 
 adb logcat -d > "$OUT/logcat.txt" 2>&1
+{ echo "-- connectivity at the end"; adb shell dumpsys connectivity | grep -i -E 'validated|state:' | head -6; } 2>&1 | tee -a "$OUT/network-check.txt"
+grep -i -E 'UnknownHost|ECONNREFUSED|ENETUNREACH|SocketTimeout|SSLHandshake|net::ERR|NS_ERROR_(UNKNOWN_HOST|NET|CONNECTION)' "$OUT/logcat.txt" | head -30 > "$OUT/app-network-errors.txt"
 if adb shell pidof "$PKG" | grep -q '[0-9]'; then echo yes > "$OUT/alive-at-end.txt"; else echo no > "$OUT/alive-at-end.txt"; fi
 printf '{"baseline":%s,"app":%s,"url":%s,"background":%s,"end":%s}\n' "$BASELINE_START" "$APP_START" "$URL_START" "$BACKGROUND_START" "$END" > "$OUT/phases.json"

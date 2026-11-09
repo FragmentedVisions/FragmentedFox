@@ -69,6 +69,15 @@ def main():
     lines.append("Events per phase: " + ", ".join(f"{k} {v}" for k, v in counts.items()))
     page_seen = any(phases["url"] <= e[0] < phases["background"] and (e[3] == "example.org" or sni_by_ip.get(e[1]) == "example.org") for e in events)
     lines.append(f"example.org seen while the page was opened: {'yes' if page_seen else 'no'}")
+    stamps = subprocess.run(["tshark", "-r", pcap, "-T", "fields", "-e", "frame.time_epoch"], capture_output=True, text=True).stdout.split()
+    if stamps:
+        lines.append(f"Packets in the capture file: {len(stamps)}, first at {float(stamps[0]) - phases['baseline']:.0f}s, last at {float(stamps[-1]) - phases['baseline']:.0f}s after the baseline started (the run lasted {phases['end'] - phases['baseline']}s)")
+    else:
+        lines.append("Packets in the capture file: 0")
+    for name, title in (("network-check.txt", "Network check from the emulator"), ("app-network-errors.txt", "Network errors the app logged")):
+        path = os.path.join(out_dir, name)
+        body = open(path).read().strip() if os.path.exists(path) else ""
+        lines += ["", f"## {title}", "", "```", body or "nothing", "```"]
     lines += ["", "## Unexpected hosts (fail)", ""] + ([f"- {n}" for n in bad] or ["none"])
     lines += ["", "## Expected hosts", ""] + ([f"- {n}" for n in expected] or ["none"])
     lines += ["", "## Other hosts, to review", ""] + ([f"- {n}" for n in other] or ["none"])

@@ -846,7 +846,6 @@
   <!-- Title Headers for data collection settings screen -->
   <string name="crash_reports_data_category">የብልሽት ሪፖርቶች</string>
   <string name="usage_data_category">የአጠቃቀም ውሂብ</string>
-  <string name="studies_data_category">ጥናቶች</string>
   <string name="technical_data_category">የቴክኒክ ውሂብ</string>
   <string name="crash_reporting_description">የብልሽት ሪፖርቶች በአሳሹ ላይ ችግሮችን እንድንመረምር እና እንድናስተካክል ያስችሉናል። ሪፖርቶች ግላዊ ወይም ሚስጥራዊ መረጃዎችን ሊያካትቱ ይችላሉ።</string>
   <!-- Section title for campaign measurement in data collections screen -->
@@ -857,9 +856,7 @@
   -->
   <!-- Learn more link for marketing data preference -->
   <!-- Title for studies preferences -->
-  <string name="preference_experiments_2">ጥናቶች</string>
   <!-- Summary for studies preferences -->
-  <string name="preference_experiments_summary_2" tools:ignore="BrandUsage">ሞዚላ ጥናቶችን እንዲጭን እና እንዲያሄድ ይፈቅዳል</string>
   <!-- Preference for reconnecting to FxA sync -->
   <string name="preferences_sync_sign_in_to_reconnect">ዳግም ለመገናኘት ይግቡ</string>
   <!-- Preference for removing FxA account -->
@@ -1027,11 +1024,8 @@
 
     Title of the remove studies button
   -->
-  <string name="studies_remove">አስወግድ</string>
   <!-- Title of the active section on the studies list -->
-  <string name="studies_active">ንቁ</string>
   <!-- Learn more link for studies, links to an article for more information about studies. -->
-  <string name="studies_learn_more">ተጨማሪ ይወቁ</string>
   <!--
     Title for the list of tabs in the current private session used by a11y services
     The %1$s will be replaced by the number of opened private tabs

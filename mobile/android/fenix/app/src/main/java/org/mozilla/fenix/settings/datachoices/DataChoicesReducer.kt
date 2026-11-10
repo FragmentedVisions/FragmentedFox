@@ -23,16 +23,11 @@ internal fun dataChoicesReducer(state: DataChoicesState, action: DataChoicesActi
         state.copy(
             telemetryEnabled = action.telemetryEnabled,
             usagePingEnabled = action.usagePingEnabled,
-            studiesEnabled = action.studiesEnabled,
             selectedCrashOption = action.crashReportOption,
         )
-    is StudiesLoaded -> {
-        state.copy(studiesEnabled = action.newValue)
-    }
     LearnMore.CrashLearnMoreClicked,
     LearnMore.TelemetryLearnMoreClicked,
     LearnMore.UsagePingLearnMoreClicked,
-    is ChoiceAction.StudiesClicked,
     is ViewCreated,
     -> { state }
 }

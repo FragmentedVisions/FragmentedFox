@@ -937,16 +937,13 @@
   <!-- Title Headers for data collection settings screen -->
   <string name="crash_reports_data_category">Ineqqisen n uɣelluy</string>
   <string name="usage_data_category">Isefka n useqdec</string>
-  <string name="studies_data_category">Leqraya</string>
   <string name="technical_data_category">Isefka itiknikanen</string>
   <string name="crash_reporting_description">Ineqqisen n uɣelluy ttaǧǧan-aɣ ad nesnined syen ad nṣeggem uguren akked yiminig. Ineqqisen zemren ad d-skecmen isefka udmawanen neɣ imḥulfa.</string>
   <!-- Section title for campaign measurement in data collections screen -->
   <!-- Preference switch for campaign measurement data (marketing data) collection -->
   <!-- Learn more link for marketing data preference -->
   <!-- Title for studies preferences -->
-  <string name="preference_experiments_2">Studies</string>
   <!-- Summary for studies preferences -->
-  <string name="preference_experiments_summary_2" tools:ignore="BrandUsage">Sireg Mozilla ad tesbedded sakin ad tseddu studies</string>
   <!--
     Turn On Sync Preferences
 
@@ -1146,11 +1143,8 @@
 
     Title of the remove studies button
   -->
-  <string name="studies_remove">Kkes</string>
   <!-- Title of the active section on the studies list -->
-  <string name="studies_active">Rmed</string>
   <!-- Learn more link for studies, links to an article for more information about studies. -->
-  <string name="studies_learn_more">Issin ugar</string>
   <!--
     Title for the list of tabs in the current private session used by a11y services
     The %1$s will be replaced by the number of opened private tabs

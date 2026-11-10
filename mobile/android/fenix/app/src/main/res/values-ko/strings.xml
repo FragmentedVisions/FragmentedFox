@@ -1164,7 +1164,6 @@
   <!-- Title Headers for data collection settings screen -->
   <string name="crash_reports_data_category">충돌 보고서</string>
   <string name="usage_data_category">사용 데이터</string>
-  <string name="studies_data_category">연구</string>
   <string name="technical_data_category">기술 데이터</string>
   <string name="crash_reporting_description">충돌 보고서를 통해 브라우저의 문제를 진단하고 고칠 수 있습니다. 보고서에는 개인 정보나 민감한 정보가 포함되어 있을 수 있습니다.</string>
   <!-- Section title for campaign measurement in data collections screen -->
@@ -1175,9 +1174,7 @@
   -->
   <!-- Learn more link for marketing data preference -->
   <!-- Title for studies preferences -->
-  <string name="preference_experiments_2">연구</string>
   <!-- Summary for studies preferences -->
-  <string name="preference_experiments_summary_2" tools:ignore="BrandUsage">Mozilla가 연구를 설치하고 실행하도록 허용</string>
   <!--
     Turn On Sync Preferences
 
@@ -1384,27 +1381,18 @@
 
     Title of the remove studies button
   -->
-  <string name="studies_remove">삭제</string>
   <!-- Title of the active section on the studies list -->
-  <string name="studies_active">활성화</string>
   <!-- Description for studies. Note: The word "Firefox" should NOT be translated -->
-  <string name="studies_description_4" tools:ignore="BrandUsage">Firefox는 기능을 테스트할 사용자를 무작위로 선택하여, 모두를 위해 품질을 향상시킵니다.</string>
   <!-- Title of the Studies data preference -->
-  <string name="studies_title_2">기능 연구 허용</string>
   <!-- Learn more link for studies, links to an article for more information about studies. -->
-  <string name="studies_learn_more">더 알아보기</string>
   <!--
     Remote Improvements (Rollouts)
 
     Title of the Remote Improvements (rollouts) data preference
   -->
-  <string name="remote_improvements_title">원격 개선 허용</string>
   <!-- Description for remote improvements. Note: The word "Firefox" should NOT be translated -->
-  <string name="remote_improvements_description" tools:ignore="BrandUsage">Firefox는 업데이트 사이에 기능, 성능 및 안정성을 개선할 것입니다. 변경 사항은 원격으로 적용됩니다.</string>
   <!-- Learn more link for remote improvements, links to an article for more information about rollouts. -->
-  <string name="remote_improvements_learn_more">더 알아보기</string>
   <!-- Title for remote improvements preference in Advanced settings -->
-  <string name="preferences_remote_improvements">원격 개선</string>
   <!--
     Sessions
 

@@ -14,7 +14,6 @@ internal data object ViewCreated : DataChoicesAction
 internal sealed class ChoiceAction : DataChoicesAction {
     data object TelemetryClicked : ChoiceAction()
     data object UsagePingClicked : ChoiceAction()
-    data object StudiesClicked : ChoiceAction()
     data object ScrolledToItem : ChoiceAction()
     data class ReportOptionClicked(val reportOption: CrashReportOption) : DataChoicesAction
 }
@@ -28,8 +27,5 @@ internal sealed class LearnMore : DataChoicesAction {
 internal data class SettingsLoaded(
     val telemetryEnabled: Boolean,
     val usagePingEnabled: Boolean,
-    val studiesEnabled: Boolean,
     val crashReportOption: CrashReportOption,
 ) : DataChoicesAction
-
-internal data class StudiesLoaded(val newValue: Boolean) : DataChoicesAction

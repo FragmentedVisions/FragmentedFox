@@ -1164,7 +1164,6 @@
   <!-- Title Headers for data collection settings screen -->
   <string name="crash_reports_data_category">รายงานข้อขัดข้อง</string>
   <string name="usage_data_category">ข้อมูลการใช้งาน</string>
-  <string name="studies_data_category">การศึกษา</string>
   <string name="technical_data_category">ข้อมูลทางเทคนิค</string>
   <string name="crash_reporting_description">รายงานข้อขัดข้องทำให้เราสามารถวินิจฉัยและแก้ไขปัญหาเกี่ยวกับเบราว์เซอร์ได้ รายงานอาจมีข้อมูลส่วนตัวหรือข้อมูลละเอียดอ่อน</string>
   <!-- Section title for campaign measurement in data collections screen -->
@@ -1175,9 +1174,7 @@
   -->
   <!-- Learn more link for marketing data preference -->
   <!-- Title for studies preferences -->
-  <string name="preference_experiments_2">การศึกษา</string>
   <!-- Summary for studies preferences -->
-  <string name="preference_experiments_summary_2" tools:ignore="BrandUsage">อนุญาตให้ Mozilla ติดตั้งและเรียกใช้การศึกษา</string>
   <!--
     Turn On Sync Preferences
 
@@ -1384,27 +1381,18 @@
 
     Title of the remove studies button
   -->
-  <string name="studies_remove">เอาออก</string>
   <!-- Title of the active section on the studies list -->
-  <string name="studies_active">ใช้งานอยู่</string>
   <!-- Description for studies. Note: The word "Firefox" should NOT be translated -->
-  <string name="studies_description_4" tools:ignore="BrandUsage">Firefox จะสุ่มผู้ใช้งานเพื่อทดลองฟีเจอร์ ซึ่งช่วยยกระดับคุณภาพให้กับผู้ใช้ทุกคน</string>
   <!-- Title of the Studies data preference -->
-  <string name="studies_title_2">อนุญาตให้ทำการทดสอบคุณสมบัติ</string>
   <!-- Learn more link for studies, links to an article for more information about studies. -->
-  <string name="studies_learn_more">เรียนรู้เพิ่มเติม</string>
   <!--
     Remote Improvements (Rollouts)
 
     Title of the Remote Improvements (rollouts) data preference
   -->
-  <string name="remote_improvements_title">อนุญาตการปรับปรุงทางไกล</string>
   <!-- Description for remote improvements. Note: The word "Firefox" should NOT be translated -->
-  <string name="remote_improvements_description" tools:ignore="BrandUsage">ระหว่างการอัปเดต Firefox จะปรับปรุงฟีเจอร์ การตอบสนอง และความเสถียร โดยการเปลี่ยนแปลงสามารถนำไปใช้จากระยะไกลได้</string>
   <!-- Learn more link for remote improvements, links to an article for more information about rollouts. -->
-  <string name="remote_improvements_learn_more">เรียนรู้เพิ่มเติม</string>
   <!-- Title for remote improvements preference in Advanced settings -->
-  <string name="preferences_remote_improvements">การปรับปรุงระยะไกล</string>
   <!--
     Sessions
 

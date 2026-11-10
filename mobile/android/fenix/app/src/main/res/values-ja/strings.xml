@@ -1136,7 +1136,6 @@
   <!-- Title Headers for data collection settings screen -->
   <string name="crash_reports_data_category">クラッシュレポート</string>
   <string name="usage_data_category">使用状況データ</string>
-  <string name="studies_data_category">調査</string>
   <string name="technical_data_category">技術データ</string>
   <string name="crash_reporting_description">クラッシュレポートが送信されることにより、ブラウザーの問題の診断と修正に役立てられます。レポートには個人情報や機密性の高い情報が含まれる場合があります。</string>
   <!-- Section title for campaign measurement in data collections screen -->
@@ -1147,9 +1146,7 @@
   -->
   <!-- Learn more link for marketing data preference -->
   <!-- Title for studies preferences -->
-  <string name="preference_experiments_2">調査</string>
   <!-- Summary for studies preferences -->
-  <string name="preference_experiments_summary_2" tools:ignore="BrandUsage">調査機能のインストールと実行を Mozilla に許可する</string>
   <!--
     Turn On Sync Preferences
 
@@ -1356,27 +1353,18 @@
 
     Title of the remove studies button
   -->
-  <string name="studies_remove">削除</string>
   <!-- Title of the active section on the studies list -->
-  <string name="studies_active">有効</string>
   <!-- Description for studies. Note: The word "Firefox" should NOT be translated -->
-  <string name="studies_description_4" tools:ignore="BrandUsage">Firefox がユーザーをランダムに選択して機能をテストし、全体の品質を向上させます。</string>
   <!-- Title of the Studies data preference -->
-  <string name="studies_title_2">機能の使用調査を許可する</string>
   <!-- Learn more link for studies, links to an article for more information about studies. -->
-  <string name="studies_learn_more">詳細情報</string>
   <!--
     Remote Improvements (Rollouts)
 
     Title of the Remote Improvements (rollouts) data preference
   -->
-  <string name="remote_improvements_title">リモートの機能向上を許可する</string>
   <!-- Description for remote improvements. Note: The word "Firefox" should NOT be translated -->
-  <string name="remote_improvements_description" tools:ignore="BrandUsage">Firefox の機能、パフォーマンス、安定性は更新ごとに向上しています。変更はリモートで適用されます。</string>
   <!-- Learn more link for remote improvements, links to an article for more information about rollouts. -->
-  <string name="remote_improvements_learn_more">詳細情報</string>
   <!-- Title for remote improvements preference in Advanced settings -->
-  <string name="preferences_remote_improvements">リモートの機能向上</string>
   <!--
     Sessions
 

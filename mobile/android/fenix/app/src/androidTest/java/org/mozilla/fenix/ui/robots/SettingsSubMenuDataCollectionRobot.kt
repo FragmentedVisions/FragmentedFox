@@ -39,7 +39,6 @@ class SettingsSubMenuDataCollectionRobot {
         composeTestRule: ComposeTestRule,
         isSendTechnicalDataEnabled: Boolean,
         isDailyUsagePingEnabled: Boolean,
-        studiesSummary: String,
         isAskBeforeSendingCrashReportsEnabled: Boolean = true,
         isAutomaticallySendCrashReportsEnabled: Boolean = false,
         isNeverSendCrashReportsEnabled: Boolean = false,
@@ -56,10 +55,6 @@ class SettingsSubMenuDataCollectionRobot {
             itemContainingText(getStringResource(R.string.preference_usage_data_2)),
             itemContainingText(getStringResource(R.string.preferences_usage_data_description_1)),
             itemWithDescription("Learn more about technical data Links available"),
-            // Studies section
-            itemContainingText(getStringResource(R.string.studies_data_category)),
-            itemContainingText(getStringResource(R.string.studies_title_2)),
-            itemContainingText(studiesSummary),
             // Usage data section
             itemContainingText(getStringResource(R.string.usage_data_category)),
             itemContainingText(getStringResource(R.string.preferences_daily_usage_ping_title)),
@@ -110,21 +105,6 @@ class SettingsSubMenuDataCollectionRobot {
         }
     }
 
-    fun verifyStudiesToggle(enabled: Boolean) {
-        Log.i(TAG, "verifyStudiesToggle: Trying to verify that the \"Studies\" toggle is checked: $enabled")
-        onView(withId(R.id.studies_switch))
-            .check(
-                matches(
-                    if (enabled) {
-                        isChecked()
-                    } else {
-                        isNotChecked()
-                    },
-                ),
-            )
-        Log.i(TAG, "verifyStudiesToggle: Verified that the \"Studies\" toggle is checked: $enabled")
-    }
-
     fun clickUsageAndTechnicalDataToggle(composeTestRule: ComposeTestRule) {
         Log.i(TAG, "clickUsageAndTechnicalDataToggle: Trying to click the \"Technical and interaction data\" toggle")
         composeTestRule.onNodeWithTag("data.collection.Send technical and interaction data.toggle", useUnmergedTree = true).performClick()
@@ -135,24 +115,6 @@ class SettingsSubMenuDataCollectionRobot {
         Log.i(TAG, "clickDailyUsagePingToggle: Trying to click the \"Daily usage ping\" toggle")
         composeTestRule.onNodeWithTag("data.collection.Daily usage ping.toggle", useUnmergedTree = true).performClick()
         Log.i(TAG, "clickDailyUsagePingToggle: Clicked the \"Daily usage ping\" toggle")
-    }
-
-    fun clickStudiesOption() {
-        Log.i(TAG, "clickStudiesOption: Trying to click the \"Studies\" option")
-        itemContainingText(getStringResource(R.string.studies_title_2)).click()
-        Log.i(TAG, "clickStudiesOption: Clicked the \"Studies\" option")
-    }
-
-    fun clickStudiesToggle() {
-        Log.i(TAG, "clickStudiesToggle: Trying to click the \"Studies\" toggle")
-        itemWithResId("$packageName:id/studies_switch").click()
-        Log.i(TAG, "clickStudiesToggle: Clicked the \"Studies\" toggle")
-    }
-
-    fun clickStudiesDialogOkButton() {
-        Log.i(TAG, "clickStudiesDialogOkButton: Trying to click the \"Studies\" dialog \"Ok\" button")
-        studiesDialogOkButton().click()
-        Log.i(TAG, "clickStudiesDialogOkButton: Clicked the \"Studies\" dialog \"Ok\" button")
     }
 
     fun verifyTheCrashReportsSection(composeTestRule: ComposeTestRule) {
@@ -208,5 +170,3 @@ class SettingsSubMenuDataCollectionRobot {
 }
 
 private fun goBackButton() = itemWithDescription("Navigate up")
-private fun studiesDialogOkButton() = onView(withId(android.R.id.button1)).inRoot(RootMatchers.isDialog())
-private fun studiesDialogCancelButton() = onView(withId(android.R.id.button2)).inRoot(RootMatchers.isDialog())

@@ -553,9 +553,7 @@
   <string name="preferences_daily_usage_ping_description" tools:ignore="BrandUsage">See aitab Mozillal aktiivsete kasutajate arvu \u0020hinnata.</string>
   <string name="preferences_daily_usage_ping_learn_more">Rohkem teavet igapäevasest kasutuspingust</string>
   <!-- Title for studies preferences -->
-  <string name="preference_experiments_2">Uuringud</string>
   <!-- Summary for studies preferences -->
-  <string name="preference_experiments_summary_2" tools:ignore="BrandUsage">Võimaldab Mozillal paigaldada ja käivitada uuringuid</string>
   <!-- Preference for reconnecting to FxA sync -->
   <string name="preferences_sync_sign_in_to_reconnect">Uue ühenduse loomiseks logi sisse</string>
   <!-- Preference for removing FxA account -->
@@ -697,11 +695,8 @@
 
     Title of the remove studies button
   -->
-  <string name="studies_remove">Eemalda</string>
   <!-- Title of the active section on the studies list -->
-  <string name="studies_active">Praegu toimuvad</string>
   <!-- Learn more link for studies, links to an article for more information about studies. -->
-  <string name="studies_learn_more">Rohkem teavet</string>
   <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->
   <string name="add_tab">Lisa kaart</string>
   <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->

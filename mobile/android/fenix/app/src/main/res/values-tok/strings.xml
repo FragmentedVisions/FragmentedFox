@@ -548,7 +548,6 @@
   <!-- Text displayed when there are no exceptions, with learn more link that brings users to a tracking protection SUMO page -->
   <string name="exceptions_empty_message_learn_more_link">o sona</string>
   <!-- Title for studies preferences -->
-  <string name="preference_experiments_2">sona pali</string>
   <!--
     Pairing Feature strings
 
@@ -686,9 +685,7 @@
 
     Title of the remove studies button
   -->
-  <string name="studies_remove">o weka</string>
   <!-- Learn more link for studies, links to an article for more information about studies. -->
-  <string name="studies_learn_more">o sona</string>
   <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->
   <string name="add_tab">o open e poki</string>
   <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->

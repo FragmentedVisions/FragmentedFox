@@ -391,9 +391,7 @@
   <!-- Text displayed when there are no exceptions, with learn more link that brings users to a tracking protection SUMO page -->
   <string name="exceptions_empty_message_learn_more_link">Kọ́ si</string>
   <!-- Title for studies preferences -->
-  <string name="preference_experiments_2">Àwọn àyẹ̀wò</string>
   <!-- Summary for studies preferences -->
-  <string name="preference_experiments_summary_2" tools:ignore="BrandUsage">Fàyègba Mozilla láàyè láti wọlé sórí ẹ̀rọ kó sì ṣe àwọn ayẹ̀wò</string>
   <!-- Preference for reconnecting to FxA sync -->
   <string name="preferences_sync_sign_in_to_reconnect">Wọlé láti tún-un sopọ̀</string>
   <!-- Preference for removing FxA account -->
@@ -525,11 +523,8 @@
 
     Title of the remove studies button
   -->
-  <string name="studies_remove">Yọ kúrò</string>
   <!-- Title of the active section on the studies list -->
-  <string name="studies_active">Tí ó ń ṣiṣẹ́</string>
   <!-- Learn more link for studies, links to an article for more information about studies. -->
-  <string name="studies_learn_more">Kọ́ si</string>
   <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->
   <string name="add_tab">Ṣàfikún táàbù</string>
   <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->

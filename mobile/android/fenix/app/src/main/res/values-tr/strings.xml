@@ -1165,7 +1165,6 @@
   <!-- Title Headers for data collection settings screen -->
   <string name="crash_reports_data_category">Çökme raporları</string>
   <string name="usage_data_category">Kullanım verileri</string>
-  <string name="studies_data_category">Araştırmalar</string>
   <string name="technical_data_category">Teknik veriler</string>
   <string name="crash_reporting_description">Çökme raporları tarayıcıyla ilgili sorunları tanılayıp düzeltmemizi sağlar. Raporlar kişisel veya hassas veriler içerebilir.</string>
   <!-- Section title for campaign measurement in data collections screen -->
@@ -1176,9 +1175,7 @@
   -->
   <!-- Learn more link for marketing data preference -->
   <!-- Title for studies preferences -->
-  <string name="preference_experiments_2">Araştırmalar</string>
   <!-- Summary for studies preferences -->
-  <string name="preference_experiments_summary_2" tools:ignore="BrandUsage">Mozilla’nın araştırmalar yükleyip çalıştırmasına izin verir</string>
   <!--
     Turn On Sync Preferences
 
@@ -1385,27 +1382,18 @@
 
     Title of the remove studies button
   -->
-  <string name="studies_remove">Kaldır</string>
   <!-- Title of the active section on the studies list -->
-  <string name="studies_active">Etkin</string>
   <!-- Description for studies. Note: The word "Firefox" should NOT be translated -->
-  <string name="studies_description_4" tools:ignore="BrandUsage">Firefox rastgele bazı kullanıcıları seçerek yeni özellikleri test eder. Böylece herkes için kaliteyi artırabiliriz.</string>
   <!-- Title of the Studies data preference -->
-  <string name="studies_title_2">Özellik araştırmalarına izin ver</string>
   <!-- Learn more link for studies, links to an article for more information about studies. -->
-  <string name="studies_learn_more">Daha fazla bilgi al</string>
   <!--
     Remote Improvements (Rollouts)
 
     Title of the Remote Improvements (rollouts) data preference
   -->
-  <string name="remote_improvements_title">Uzaktan iyileştirmelere izin ver</string>
   <!-- Description for remote improvements. Note: The word "Firefox" should NOT be translated -->
-  <string name="remote_improvements_description" tools:ignore="BrandUsage">Firefox her güncellemede özellikleri, performansı ve kararlılığı iyileştirecektir. Değişiklikler uzaktan uygulanır.</string>
   <!-- Learn more link for remote improvements, links to an article for more information about rollouts. -->
-  <string name="remote_improvements_learn_more">Daha fazla bilgi al</string>
   <!-- Title for remote improvements preference in Advanced settings -->
-  <string name="preferences_remote_improvements">Uzaktan geliştirmeler</string>
   <!--
     Sessions
 

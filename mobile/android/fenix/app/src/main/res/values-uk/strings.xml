@@ -1166,7 +1166,6 @@
   <!-- Title Headers for data collection settings screen -->
   <string name="crash_reports_data_category">Звіти про збої</string>
   <string name="usage_data_category">Дані про використання</string>
-  <string name="studies_data_category">Дослідження</string>
   <string name="technical_data_category">Технічні дані</string>
   <string name="crash_reporting_description">Звіти про збої дозволяють нам діагностувати й усувати проблеми з браузером. Вони можуть містити особисті або конфіденційні дані.</string>
   <!-- Section title for campaign measurement in data collections screen -->
@@ -1177,9 +1176,7 @@
   -->
   <!-- Learn more link for marketing data preference -->
   <!-- Title for studies preferences -->
-  <string name="preference_experiments_2">Дослідження</string>
   <!-- Summary for studies preferences -->
-  <string name="preference_experiments_summary_2" tools:ignore="BrandUsage">Дозволяє Mozilla встановлювати та запускати дослідження</string>
   <!--
     Turn On Sync Preferences
 
@@ -1386,27 +1383,18 @@
 
     Title of the remove studies button
   -->
-  <string name="studies_remove">Вилучити</string>
   <!-- Title of the active section on the studies list -->
-  <string name="studies_active">Активні</string>
   <!-- Description for studies. Note: The word "Firefox" should NOT be translated -->
-  <string name="studies_description_4" tools:ignore="BrandUsage">Firefox випадково вибирає користувачів для тестування функцій, покращуючи якість для всіх.</string>
   <!-- Title of the Studies data preference -->
-  <string name="studies_title_2">Дозволити дослідження функцій</string>
   <!-- Learn more link for studies, links to an article for more information about studies. -->
-  <string name="studies_learn_more">Докладніше</string>
   <!--
     Remote Improvements (Rollouts)
 
     Title of the Remote Improvements (rollouts) data preference
   -->
-  <string name="remote_improvements_title">Дозволити віддалені покращення</string>
   <!-- Description for remote improvements. Note: The word "Firefox" should NOT be translated -->
-  <string name="remote_improvements_description" tools:ignore="BrandUsage">Firefox покращує функції, продуктивність і стабільність з кожним оновленням. Зміни застосовуються віддалено.</string>
   <!-- Learn more link for remote improvements, links to an article for more information about rollouts. -->
-  <string name="remote_improvements_learn_more">Докладніше</string>
   <!-- Title for remote improvements preference in Advanced settings -->
-  <string name="preferences_remote_improvements">Віддалені покращення</string>
   <!--
     Sessions
 

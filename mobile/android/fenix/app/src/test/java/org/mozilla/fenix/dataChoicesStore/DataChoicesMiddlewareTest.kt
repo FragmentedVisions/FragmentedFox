@@ -1,15 +1,10 @@
 package org.mozilla.fenix.dataChoicesStore
 
-import androidx.navigation.NavController
-import androidx.navigation.NavDestination
-import androidx.navigation.NavDirections
-import androidx.navigation.NavOptions
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import io.mockk.coEvery
 import io.mockk.coVerify
 import io.mockk.every
 import io.mockk.mockk
-import io.mockk.slot
 import io.mockk.verify
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.test.runTest
@@ -21,7 +16,6 @@ import org.junit.Assert.assertEquals
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
-import org.mozilla.fenix.R
 import org.mozilla.fenix.components.metrics.MetricController
 import org.mozilla.fenix.components.metrics.MetricServiceType
 import org.mozilla.fenix.crashes.SettingsCrashReportCache
@@ -41,7 +35,6 @@ class DataChoicesMiddlewareTest {
     private lateinit var nimbus: NimbusApi
     private lateinit var engine: Engine
     private lateinit var metrics: MetricController
-    private lateinit var nav: NavController
     private lateinit var crashReportCache: SettingsCrashReportCache
     private lateinit var crashReporter: CrashReporter
 
@@ -51,7 +44,6 @@ class DataChoicesMiddlewareTest {
         nimbus = mockk(relaxed = true)
         engine = mockk(relaxUnitFun = true)
         metrics = mockk(relaxUnitFun = true)
-        nav = mockk(relaxUnitFun = true)
         crashReportCache = mockk(relaxed = true)
         crashReporter = mockk(relaxed = true)
     }
@@ -71,7 +63,6 @@ class DataChoicesMiddlewareTest {
 
         assertEquals(false, store.state.telemetryEnabled)
         assertEquals(false, store.state.usagePingEnabled)
-        assertEquals(false, store.state.studiesEnabled)
         assertEquals(CrashReportOption.Auto, store.state.selectedCrashOption)
     }
 
@@ -119,25 +110,6 @@ class DataChoicesMiddlewareTest {
         }
 
     @Test
-    fun `when studies is clicked then navigation to the studies screen is triggered`() = runTest {
-        val destination = mockk<NavDestination>()
-        every { destination.id } returns R.id.dataChoicesFragment
-        every { nav.currentDestination } returns destination
-
-        val store = makeStore(this)
-        store.dispatch(ChoiceAction.StudiesClicked)
-
-        val directionsCaptor = slot<NavDirections>()
-        verify { nav.navigate(capture(directionsCaptor), isNull<NavOptions>()) }
-
-        val capturedDirections = directionsCaptor.captured
-        assertEquals(
-            R.id.action_dataChoicesFragment_to_studiesFragment,
-            capturedDirections.actionId,
-        )
-    }
-
-    @Test
     fun `when learn more is clicked then the corresponding help topic callback is invoked`() =
         runTest {
             var invokedTopic: SupportUtils.SumoTopic? = null
@@ -166,7 +138,6 @@ class DataChoicesMiddlewareTest {
                 engine = engine,
                 metrics = metrics,
                 crashReporter = crashReporter,
-                navController = nav,
                 crashReportCache = crashReportCache,
                 scope = scope,
             ),

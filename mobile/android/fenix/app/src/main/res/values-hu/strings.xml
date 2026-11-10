@@ -1165,7 +1165,6 @@
   <!-- Title Headers for data collection settings screen -->
   <string name="crash_reports_data_category">Összeomlás-jelentések</string>
   <string name="usage_data_category">Használati adatok</string>
-  <string name="studies_data_category">Tanulmányok</string>
   <string name="technical_data_category">Műszaki adatok</string>
   <string name="crash_reporting_description">Az összeomlás-jelentések lehetővé teszik számunkra, hogy diagnosztizáljuk és megoldjuk a böngészőhibákat. A jelentések személyes vagy bizalmas adatokat tartalmazhatnak.</string>
   <!-- Section title for campaign measurement in data collections screen -->
@@ -1176,9 +1175,7 @@
   -->
   <!-- Learn more link for marketing data preference -->
   <!-- Title for studies preferences -->
-  <string name="preference_experiments_2">Tanulmányok</string>
   <!-- Summary for studies preferences -->
-  <string name="preference_experiments_summary_2" tools:ignore="BrandUsage">Engedélyezés, hogy a Mozilla tanulmányokat telepítsen és futtasson</string>
   <!--
     Turn On Sync Preferences
 
@@ -1385,27 +1382,18 @@
 
     Title of the remove studies button
   -->
-  <string name="studies_remove">Eltávolítás</string>
   <!-- Title of the active section on the studies list -->
-  <string name="studies_active">Aktív</string>
   <!-- Description for studies. Note: The word "Firefox" should NOT be translated -->
-  <string name="studies_description_4" tools:ignore="BrandUsage">A Firefox véletlenszerűen választja ki a felhasználókat a funkciók teszteléséhez, ami mindenki számára javítja a minőséget.</string>
   <!-- Title of the Studies data preference -->
-  <string name="studies_title_2">Funkciótanulmányok engedélyezése</string>
   <!-- Learn more link for studies, links to an article for more information about studies. -->
-  <string name="studies_learn_more">További tudnivalók</string>
   <!--
     Remote Improvements (Rollouts)
 
     Title of the Remote Improvements (rollouts) data preference
   -->
-  <string name="remote_improvements_title">Távoli fejlesztések engedélyezése</string>
   <!-- Description for remote improvements. Note: The word "Firefox" should NOT be translated -->
-  <string name="remote_improvements_description" tools:ignore="BrandUsage">A Firefox funkciókat, teljesítményt és stabilitást érintő módosításokat fog telepíteni a frissítések között. A módosítások távolról vannak alkalmazva.</string>
   <!-- Learn more link for remote improvements, links to an article for more information about rollouts. -->
-  <string name="remote_improvements_learn_more">További tudnivalók</string>
   <!-- Title for remote improvements preference in Advanced settings -->
-  <string name="preferences_remote_improvements">Távoli fejlesztések</string>
   <!--
     Sessions
 

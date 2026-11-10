@@ -1165,7 +1165,6 @@
   <!-- Title Headers for data collection settings screen -->
   <string name="crash_reports_data_category">Վթարի զեկույցներ</string>
   <string name="usage_data_category">Օգտագործման տվյալներ</string>
-  <string name="studies_data_category">Ուսումնասիրություններ</string>
   <string name="technical_data_category">Տեխնիկական տվյալներ</string>
   <string name="crash_reporting_description">Վթարների զեկույցները մեզ թույլ են տալիս ախտորոշել և շտկել դիտարկիչի հետ կապված խնդիրները: Զեկույցները կարող են ներառել անձնական կամ զգայուն տվյալներ:</string>
   <!-- Section title for campaign measurement in data collections screen -->
@@ -1176,9 +1175,7 @@
   -->
   <!-- Learn more link for marketing data preference -->
   <!-- Title for studies preferences -->
-  <string name="preference_experiments_2">Ուսումնասիրություններ</string>
   <!-- Summary for studies preferences -->
-  <string name="preference_experiments_summary_2" tools:ignore="BrandUsage">Թույլ է տալիս Mozilla-ին տեղադրել և իրականացնել ուսումնասիրություններ</string>
   <!--
     Turn On Sync Preferences
 
@@ -1385,27 +1382,18 @@
 
     Title of the remove studies button
   -->
-  <string name="studies_remove">Հեռացնել</string>
   <!-- Title of the active section on the studies list -->
-  <string name="studies_active">Գործուն</string>
   <!-- Description for studies. Note: The word "Firefox" should NOT be translated -->
-  <string name="studies_description_4" tools:ignore="BrandUsage">Firefox-ը պատահականորեն ընտրում է օգտատերերին՝ գործառույթները փորձարկելու համար, ինչը բարելավում է որակը բոլորի համար։</string>
   <!-- Title of the Studies data preference -->
-  <string name="studies_title_2">Թույլատրել յուրահատկությունների ուսումնասիրությունները</string>
   <!-- Learn more link for studies, links to an article for more information about studies. -->
-  <string name="studies_learn_more">Իմանալ ավելին</string>
   <!--
     Remote Improvements (Rollouts)
 
     Title of the Remote Improvements (rollouts) data preference
   -->
-  <string name="remote_improvements_title">Թույլատրել հեռակա բարելավումներ</string>
   <!-- Description for remote improvements. Note: The word "Firefox" should NOT be translated -->
-  <string name="remote_improvements_description" tools:ignore="BrandUsage">Firefox-ը կբարելավի գործառույթները, կատարողականությունը և կայունությունը թարմացումների միջև ընկած ժամանակահատվածում: Փոփոխությունները կիրառվում են հեռակա կարգով:</string>
   <!-- Learn more link for remote improvements, links to an article for more information about rollouts. -->
-  <string name="remote_improvements_learn_more">Իմանալ ավելին</string>
   <!-- Title for remote improvements preference in Advanced settings -->
-  <string name="preferences_remote_improvements">Հեռակա բարելավումներ</string>
   <!--
     Sessions
 

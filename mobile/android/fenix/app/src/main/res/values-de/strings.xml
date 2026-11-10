@@ -1165,7 +1165,6 @@
   <!-- Title Headers for data collection settings screen -->
   <string name="crash_reports_data_category">Absturzberichte</string>
   <string name="usage_data_category">Nutzungsdaten</string>
-  <string name="studies_data_category">Studien</string>
   <string name="technical_data_category">Technische Daten</string>
   <string name="crash_reporting_description">Absturzberichte ermöglichen es uns, Probleme mit dem Browser zu diagnostizieren und zu beheben. Die Meldungen können persönliche oder sensible Daten enthalten.</string>
   <!-- Section title for campaign measurement in data collections screen -->
@@ -1176,9 +1175,7 @@
   -->
   <!-- Learn more link for marketing data preference -->
   <!-- Title for studies preferences -->
-  <string name="preference_experiments_2">Studien</string>
   <!-- Summary for studies preferences -->
-  <string name="preference_experiments_summary_2" tools:ignore="BrandUsage">Ermöglicht Mozilla die Installation und Durchführung von Studien</string>
   <!--
     Turn On Sync Preferences
 
@@ -1385,27 +1382,18 @@
 
     Title of the remove studies button
   -->
-  <string name="studies_remove">Entfernen</string>
   <!-- Title of the active section on the studies list -->
-  <string name="studies_active">Aktiv</string>
   <!-- Description for studies. Note: The word "Firefox" should NOT be translated -->
-  <string name="studies_description_4" tools:ignore="BrandUsage">Firefox wählt zufällig Nutzer aus, um Funktionen zu testen, was die Qualität für alle Nutzer verbessert.</string>
   <!-- Title of the Studies data preference -->
-  <string name="studies_title_2">Funktionsstudien zulassen</string>
   <!-- Learn more link for studies, links to an article for more information about studies. -->
-  <string name="studies_learn_more">Weitere Informationen</string>
   <!--
     Remote Improvements (Rollouts)
 
     Title of the Remote Improvements (rollouts) data preference
   -->
-  <string name="remote_improvements_title">Verbesserungen per Fernzugriff zulassen</string>
   <!-- Description for remote improvements. Note: The word "Firefox" should NOT be translated -->
-  <string name="remote_improvements_description" tools:ignore="BrandUsage">Firefox wird die Funktionen, Leistung und Stabilität zwischen den Updates verbessern. Änderungen per Fernzugriff angewendet.</string>
   <!-- Learn more link for remote improvements, links to an article for more information about rollouts. -->
-  <string name="remote_improvements_learn_more">Weitere Informationen</string>
   <!-- Title for remote improvements preference in Advanced settings -->
-  <string name="preferences_remote_improvements">Verbesserungen per Fernzugriff</string>
   <!--
     Sessions
 

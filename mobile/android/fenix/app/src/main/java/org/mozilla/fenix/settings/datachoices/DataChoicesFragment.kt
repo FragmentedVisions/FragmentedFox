@@ -10,7 +10,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.compose.content
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.navArgs
 import org.mozilla.fenix.e2e.SystemInsetsPaddedFragment
 import org.mozilla.fenix.ext.components
@@ -42,7 +41,6 @@ class DataChoicesFragment : Fragment(), SystemInsetsPaddedFragment {
                                 engine = context.components.core.engine,
                                 metrics = context.components.analytics.metrics,
                                 crashReporter = context.components.analytics.crashReporter,
-                                navController = view?.findNavController(),
                             ),
                         ),
                     )

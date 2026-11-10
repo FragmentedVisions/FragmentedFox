@@ -282,9 +282,6 @@ def check_hidden_settings():
     dialog = read(os.path.join(APP, "src/main/java/org/mozilla/fenix/onboarding/ManagePrivacyPreferencesDialog.kt"))
     if "UsageDataPreference(" in dialog:
         fail("settings", "ManagePrivacyPreferencesDialog.kt: the usage data switch does nothing and must stay removed")
-    prefs = read(os.path.join(APP, "src/main/res/xml/preferences.xml"))
-    if not re.search(r'pref_key_remote_improvements"[^>]*isPreferenceVisible="false"', prefs, flags=re.S):
-        fail("settings", "preferences.xml: Remote improvements must stay hidden, rollouts are not fetched")
 
 
 def check_search():

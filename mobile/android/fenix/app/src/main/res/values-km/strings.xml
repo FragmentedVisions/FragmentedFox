@@ -848,13 +848,10 @@
   <!-- Title Headers for data collection settings screen -->
   <string name="crash_reports_data_category">របាយការណ៍​គាំង</string>
   <string name="usage_data_category">ទិន្នន័យនៃការប្រើប្រាស់</string>
-  <string name="studies_data_category">ការសិក្សា</string>
   <string name="technical_data_category">ទិន្នន័យបច្ចេកទេស</string>
   <!-- Learn more link for marketing data preference -->
   <!-- Title for studies preferences -->
-  <string name="preference_experiments_2">ការសិក្សា</string>
   <!-- Summary for studies preferences -->
-  <string name="preference_experiments_summary_2" tools:ignore="BrandUsage">អនុញ្ញាតឱ្យ Mozilla ដំឡើងនិងដំណើរការសិក្សា</string>
   <!--
     Turn On Sync Preferences
 
@@ -1019,13 +1016,9 @@
 
     Title of the remove studies button
   -->
-  <string name="studies_remove">យកចេញ</string>
   <!-- Title of the active section on the studies list -->
-  <string name="studies_active">សកម្ម</string>
   <!-- Learn more link for studies, links to an article for more information about studies. -->
-  <string name="studies_learn_more">ស្វែងយល់​បន្ថែម</string>
   <!-- Learn more link for remote improvements, links to an article for more information about rollouts. -->
-  <string name="remote_improvements_learn_more">ស្វែងយល់​បន្ថែម</string>
   <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->
   <string name="add_tab">បន្ថែមផ្ទាំង</string>
   <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->

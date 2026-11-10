@@ -745,13 +745,6 @@
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right" />
         <action
-            android:id="@+id/action_settingsFragment_to_remoteImprovementsFragment"
-            app:destination="@id/remoteImprovementsFragment"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right" />
-        <action
             android:id="@+id/action_settingsFragment_to_tabsSettingsFragment"
             app:destination="@id/tabsSettingsFragment"
             app:enterAnim="@anim/slide_in_right"
@@ -858,24 +851,12 @@
         android:id="@+id/dataChoicesFragment"
         android:name="org.mozilla.fenix.settings.datachoices.DataChoicesFragment"
         android:label="@string/preferences_data_collection">
-        <action
-            android:id="@+id/action_dataChoicesFragment_to_studiesFragment"
-            app:destination="@id/studiesFragment"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right"
-            app:popUpTo="@id/dataChoicesFragment" />
         <argument
             android:name="preference_to_scroll_to"
             android:defaultValue="@null"
             app:argType="string"
             app:nullable="true" />
     </fragment>
-    <fragment
-        android:id="@+id/studiesFragment"
-        android:name="org.mozilla.fenix.settings.studies.StudiesFragment"
-        android:label="@string/preference_experiments_2" />
     <fragment
         android:id="@+id/sitePermissionsFragment"
         android:name="org.mozilla.fenix.settings.sitepermissions.SiteSettingsFragment"
@@ -1100,9 +1081,6 @@
     <fragment
         android:id="@+id/linkSharingFragment"
         android:name="org.mozilla.fenix.settings.LinkSharingFragment" />
-    <fragment
-        android:id="@+id/remoteImprovementsFragment"
-        android:name="org.mozilla.fenix.settings.RemoteImprovementsFragment" />
     <fragment
         android:id="@+id/deleteBrowsingDataFragment"
         android:name="org.mozilla.fenix.settings.deletebrowsingdata.DeleteBrowsingDataFragment"

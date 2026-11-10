@@ -1165,7 +1165,6 @@
   <!-- Title Headers for data collection settings screen -->
   <string name="crash_reports_data_category">Гузоришҳо дар бораи вайронӣ</string>
   <string name="usage_data_category">Маълумоти истифодабарӣ</string>
-  <string name="studies_data_category">Омӯзишҳо</string>
   <string name="technical_data_category">Маълумоти техникӣ</string>
   <string name="crash_reporting_description">Гузоришҳо дар бораи вайронӣ ба мо барои ташхис ва ислоҳ кардани хатоҳои браузер имкон медиҳанд. Гузоришҳо метавонанд маълумоти шахсӣ ва махфиро дар бар гиранд.</string>
   <!-- Section title for campaign measurement in data collections screen -->
@@ -1176,9 +1175,7 @@
   -->
   <!-- Learn more link for marketing data preference -->
   <!-- Title for studies preferences -->
-  <string name="preference_experiments_2">Таҳқиқҳо</string>
   <!-- Summary for studies preferences -->
-  <string name="preference_experiments_summary_2" tools:ignore="BrandUsage">Ба Mozilla иҷозат медиҳад, ки таҳқиқҳоро насб ва иҷро кунад</string>
   <!--
     Turn On Sync Preferences
 
@@ -1385,27 +1382,18 @@
 
     Title of the remove studies button
   -->
-  <string name="studies_remove">Тоза кардан</string>
   <!-- Title of the active section on the studies list -->
-  <string name="studies_active">Фаъол</string>
   <!-- Description for studies. Note: The word "Firefox" should NOT be translated -->
-  <string name="studies_description_4" tools:ignore="BrandUsage">Барномаи «Firefox» корбаронро ба таври тасодуфӣ барои санҷиши хусусиятҳо интихоб мекунад, зеро ки ин амал сифати низомро барои ҳама беҳтар месозад.</string>
   <!-- Title of the Studies data preference -->
-  <string name="studies_title_2">Иҷозат додан ба омӯзиши хусусиятҳо</string>
   <!-- Learn more link for studies, links to an article for more information about studies. -->
-  <string name="studies_learn_more">Маълумоти бештар</string>
   <!--
     Remote Improvements (Rollouts)
 
     Title of the Remote Improvements (rollouts) data preference
   -->
-  <string name="remote_improvements_title">Иҷозат додани такмилдиҳии дурдаст</string>
   <!-- Description for remote improvements. Note: The word "Firefox" should NOT be translated -->
-  <string name="remote_improvements_description" tools:ignore="BrandUsage">Барномаи «Firefox» хусусиятҳо, самаранокӣ ва кори устувори низомро байни навсозиҳо беҳтар мекунад. Тағйирот ба таври дурдаст татбиқ карда мешавад.</string>
   <!-- Learn more link for remote improvements, links to an article for more information about rollouts. -->
-  <string name="remote_improvements_learn_more">Маълумоти бештар</string>
   <!-- Title for remote improvements preference in Advanced settings -->
-  <string name="preferences_remote_improvements">Такмилдиҳии дурдаст</string>
   <!--
     Sessions
 

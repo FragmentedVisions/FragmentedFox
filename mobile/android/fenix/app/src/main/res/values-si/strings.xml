@@ -670,9 +670,7 @@
   <!-- Text displayed when there are no exceptions, with learn more link that brings users to a tracking protection SUMO page -->
   <string name="exceptions_empty_message_learn_more_link">තව දැනගන්න</string>
   <!-- Title for studies preferences -->
-  <string name="preference_experiments_2">අධ්‍යන</string>
   <!-- Summary for studies preferences -->
-  <string name="preference_experiments_summary_2" tools:ignore="BrandUsage">මොස්ල්ලා සඳහා අධ්‍යන ස්ථාපනයට හා ධාවනයට ඉඩ දෙන්න</string>
   <!-- Preference for reconnecting to FxA sync -->
   <string name="preferences_sync_sign_in_to_reconnect">යළි සබැඳීමට පිවිසෙන්න</string>
   <!-- Preference for removing FxA account -->
@@ -834,11 +832,8 @@
 
     Title of the remove studies button
   -->
-  <string name="studies_remove">ඉවත් කරන්න</string>
   <!-- Title of the active section on the studies list -->
-  <string name="studies_active">සක්‍රිය</string>
   <!-- Learn more link for studies, links to an article for more information about studies. -->
-  <string name="studies_learn_more">තව දැනගන්න</string>
   <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->
   <string name="add_tab">පටිත්තක් යොදන්න</string>
   <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->

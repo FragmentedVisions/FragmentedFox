@@ -43,7 +43,6 @@ import mozilla.components.lib.state.ext.observeAsComposableState
 import org.mozilla.fenix.R
 import org.mozilla.fenix.compose.list.RadioButtonListItem
 import org.mozilla.fenix.compose.list.SwitchListItem
-import org.mozilla.fenix.compose.list.TextListItem
 import org.mozilla.fenix.compose.settings.SettingsSectionHeader
 import org.mozilla.fenix.settings.settingssearch.PreferenceFileInformation
 import org.mozilla.fenix.settings.settingssearch.SettingsSearchItem
@@ -54,7 +53,6 @@ import org.mozilla.fenix.theme.Theme
 
 private enum class DataChoicesSectionKey {
     TECHNICAL_DATA,
-    STUDIES,
     USAGE_DATA,
     CRASH_REPORTS,
 }
@@ -63,7 +61,7 @@ private enum class DataChoicesSectionKey {
  * Composable function that renders the Data Choices settings screen.
  *
  * This screen allows the user to view and modify their preferences related to telemetry,
- * crash reporting, usage data, and participation in studies.
+ * crash reporting and usage data.
  *
  * @param store The [DataChoicesStore] used to manage and access the [DataChoicesState]
  **/
@@ -78,7 +76,6 @@ internal fun DataChoicesScreen(
         store.dispatch(ChoiceAction.ReportOptionClicked(newValue))
     }
     val onScrolledToItem = { store.dispatch(ChoiceAction.ScrolledToItem) }
-    val onStudiesClick: () -> Unit = { store.dispatch(ChoiceAction.StudiesClicked) }
     val learnMoreTechnicalData: () -> Unit = { store.dispatch(LearnMore.TelemetryLearnMoreClicked) }
     val learnMoreDailyUsage: () -> Unit = { store.dispatch(LearnMore.UsagePingLearnMoreClicked) }
     val learnMoreCrashReport: () -> Unit = { store.dispatch(LearnMore.CrashLearnMoreClicked) }
@@ -86,7 +83,6 @@ internal fun DataChoicesScreen(
     Surface {
         DataChoicesUi(
             state = state,
-            onStudiesClick = onStudiesClick,
             onTelemetryToggle = onTelemetryToggle,
             onUsagePingToggle = onUsagePingToggle,
             onCrashOptionSelected = onCrashOptionSelected,
@@ -102,7 +98,6 @@ internal fun DataChoicesScreen(
 @Composable
 internal fun DataChoicesUi(
     state: DataChoicesState,
-    onStudiesClick: () -> Unit,
     onTelemetryToggle: () -> Unit,
     onUsagePingToggle: () -> Unit,
     onCrashOptionSelected: (CrashReportOption) -> Unit,
@@ -146,11 +141,6 @@ internal fun DataChoicesUi(
                     isToggled = state.telemetryEnabled,
                     onToggleChanged = onTelemetryToggle,
                     onLearnMoreClicked = learnMoreTechnicalData,
-                )
-                DataChoicesSectionKey.STUDIES -> StudiesSection(
-                    studiesEnabled = state.studiesEnabled,
-                    sectionEnabled = state.telemetryEnabled,
-                    onClick = onStudiesClick,
                 )
                 DataChoicesSectionKey.USAGE_DATA -> TogglePreferenceSection(
                     categoryTitle = stringResource(R.string.usage_data_category),
@@ -293,40 +283,6 @@ private fun TogglePreferenceSection(
 }
 
 /**
- * Composable section that displays the user's participation status in studies or experiments.
- *
- * @param studiesEnabled Whether the user is currently enrolled in studies.
- *                       Affects the summary text shown in the section.
- * @param sectionEnabled Whether the section is interactive. If false, the section is visually disabled
- *                       and does not respond to clicks.
- * @param onClick Callback invoked when the section is clicked (if enabled).
- */
-@Composable
-@Suppress("CognitiveComplexMethod")
-private fun StudiesSection(
-    studiesEnabled: Boolean = true,
-    sectionEnabled: Boolean = true,
-    onClick: () -> Unit,
-) {
-    Column(
-        verticalArrangement = Arrangement.spacedBy(16.dp),
-        modifier = Modifier.fillMaxWidth(),
-    ) {
-        SettingsSectionHeader(
-            text = stringResource(R.string.studies_data_category),
-            modifier = Modifier.padding(horizontal = FirefoxTheme.layout.space.dynamic200),
-        )
-
-        TextListItem(
-            label = stringResource(R.string.studies_title_2),
-            description = stringResource(if (studiesEnabled) R.string.studies_on else R.string.studies_off),
-            enabled = sectionEnabled,
-            onClick = onClick,
-        )
-    }
-}
-
-/**
  * Composable that displays a "Learn More" text link.
  *
  * @param onLearnMoreClicked Callback invoked when the user clicks the link.
@@ -379,7 +335,6 @@ private fun DataChoicesTelemetryDisabledPreview(
         DataChoicesScreen(
             store = DataChoicesStore(
                 initialState = DataChoicesState(
-                    studiesEnabled = false,
                     telemetryEnabled = false,
                 ),
             ),
@@ -401,14 +356,6 @@ object DataChoicesSearchProvider : SettingsSearchProvider {
                     titleRes = R.string.preference_usage_data_2,
                     summaryRes = R.string.preferences_usage_data_description_1,
                     key = DataChoicesSectionKey.TECHNICAL_DATA,
-                ),
-            )
-            add(
-                buildSearchItem(
-                    context = context,
-                    titleRes = R.string.studies_title_2,
-                    summaryRes = null,
-                    key = DataChoicesSectionKey.STUDIES,
                 ),
             )
             add(

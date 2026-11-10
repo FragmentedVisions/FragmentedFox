@@ -66,7 +66,7 @@ class SyncDebugFragment : PreferenceFragmentCompat(), SystemInsetsPaddedFragment
         }
         requirePreference<Preference>(R.string.pref_key_sync_debug_quit).let { pref ->
             pref.onPreferenceClickListener = OnPreferenceClickListener {
-                // Copied from StudiesView. This feels like a dramatic way to
+                // This feels like a dramatic way to
                 // quit, is there a better way?
                 exitProcess(0)
             }

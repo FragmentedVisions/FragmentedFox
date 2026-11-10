@@ -448,9 +448,7 @@
   <!-- Text displayed when there are no exceptions, with learn more link that brings users to a tracking protection SUMO page -->
   <string name="exceptions_empty_message_learn_more_link">Saber más</string>
   <!-- Title for studies preferences -->
-  <string name="preference_experiments_2">Estudios</string>
   <!-- Summary for studies preferences -->
-  <string name="preference_experiments_summary_2" tools:ignore="BrandUsage">Permite a Mozilla qu\'instale o execute estudios</string>
   <!-- Preference for reconnecting to FxA sync -->
   <string name="preferences_sync_sign_in_to_reconnect">Aniciar la sesión pa volver conectar</string>
   <!-- Preference for removing FxA account -->
@@ -602,9 +600,7 @@
 
     Title of the remove studies button
   -->
-  <string name="studies_remove">Quitar</string>
   <!-- Learn more link for studies, links to an article for more information about studies. -->
-  <string name="studies_learn_more">Saber más</string>
   <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->
   <string name="add_tab">Amestar una llingüeta</string>
   <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->

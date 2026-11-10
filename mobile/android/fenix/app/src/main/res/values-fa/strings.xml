@@ -889,9 +889,7 @@
   -->
   <!-- Learn more link for marketing data preference -->
   <!-- Title for studies preferences -->
-  <string name="preference_experiments_2">مطالعات</string>
   <!-- Summary for studies preferences -->
-  <string name="preference_experiments_summary_2" tools:ignore="BrandUsage">به موزیلا اجازه دهید تا افزونه‌های مطالعاتی را نصب و اجرا کند</string>
   <!--
     Turn On Sync Preferences
 
@@ -1075,11 +1073,8 @@
 
     Title of the remove studies button
   -->
-  <string name="studies_remove">حذف</string>
   <!-- Title of the active section on the studies list -->
-  <string name="studies_active">فعال</string>
   <!-- Learn more link for studies, links to an article for more information about studies. -->
-  <string name="studies_learn_more">بیشتر بدانید</string>
   <!--
     Title for the list of tabs in the current private session used by a11y services
     The %1$s will be replaced by the number of opened private tabs

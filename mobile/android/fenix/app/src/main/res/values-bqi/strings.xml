@@ -1165,7 +1165,6 @@
   <!-- Title Headers for data collection settings screen -->
   <string name="crash_reports_data_category">گوزارشا خراوی</string>
   <string name="usage_data_category">داده یل و کار گرؽڌه</string>
-  <string name="studies_data_category">خۊندنیا</string>
   <string name="technical_data_category">داده یل فنی</string>
   <string name="crash_reporting_description">گوزارشا خراوی و ایما هیاری اده تا موشکلا گشت گر ن تشخیس دیم وو رفع کۊنیم. گوزارشا گاشڌ داده یل سیخومی یا هساس ایسا ن منسووݩ داشته بۊن.</string>
   <!-- Section title for campaign measurement in data collections screen -->
@@ -1176,9 +1175,7 @@
   -->
   <!-- Learn more link for marketing data preference -->
   <!-- Title for studies preferences -->
-  <string name="preference_experiments_2">خۊندنیا</string>
   <!-- Summary for studies preferences -->
-  <string name="preference_experiments_summary_2" tools:ignore="BrandUsage">مۊزیلا ن بهلین تا وردنی یل خۊندنی ن بپرنه وو ر ونه</string>
   <!--
     Turn On Sync Preferences
 
@@ -1385,27 +1382,18 @@
 
     Title of the remove studies button
   -->
-  <string name="studies_remove">پاک کردن</string>
   <!-- Title of the active section on the studies list -->
-  <string name="studies_active">فعال</string>
   <!-- Description for studies. Note: The word "Firefox" should NOT be translated -->
-  <string name="studies_description_4" tools:ignore="BrandUsage">Firefox و هالت تساڌۊفی منتورا ن سی آزمایش ویژیی یل پسند اکونه، ک ای کار کیفیت ن سی پوی وا روء ابره.</string>
   <!-- Title of the Studies data preference -->
-  <string name="studies_title_2">هشتن خۊندنیا ویژیی</string>
   <!-- Learn more link for studies, links to an article for more information about studies. -->
-  <string name="studies_learn_more">قلوه دووسته بۊین</string>
   <!--
     Remote Improvements (Rollouts)
 
     Title of the Remote Improvements (rollouts) data preference
   -->
-  <string name="remote_improvements_title">امکووݩ بؽڌر وابیڌن ز ره دیر</string>
   <!-- Description for remote improvements. Note: The word "Firefox" should NOT be translated -->
-  <string name="remote_improvements_description" tools:ignore="BrandUsage">Firefox ویژیی یل، کارایی وو پایداری ن منجا ورۊ رسۊویا بؽڌر اکونه، آلشتکاریا ز ره دیر ائمال ابۊن.</string>
   <!-- Learn more link for remote improvements, links to an article for more information about rollouts. -->
-  <string name="remote_improvements_learn_more">قلوه دووسته بۊین</string>
   <!-- Title for remote improvements preference in Advanced settings -->
-  <string name="preferences_remote_improvements">بؽڌر وابیڌنا ز ره دیر</string>
   <!--
     Sessions
 

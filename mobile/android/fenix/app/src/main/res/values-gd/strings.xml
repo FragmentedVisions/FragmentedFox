@@ -1048,7 +1048,6 @@
   <!-- Title Headers for data collection settings screen -->
   <string name="crash_reports_data_category">Aithisgean tuislidh</string>
   <string name="usage_data_category">Dàta cleachdaidh</string>
-  <string name="studies_data_category">Rannsachadh</string>
   <string name="technical_data_category">Dàta teicnigeach</string>
   <string name="crash_reporting_description">Ma chuireas tu aithisgean tuislidh thugainn, bidh e nas fhasa dhuinn diagnosachd a dhèanamh air duilgheasan sa bhrabhsair is an cur ceart. Dh’fhaoidte gum bi dàta pearsanta no dìomhair sna h-aithisgean seo.</string>
   <!-- Section title for campaign measurement in data collections screen -->
@@ -1059,9 +1058,7 @@
   -->
   <!-- Learn more link for marketing data preference -->
   <!-- Title for studies preferences -->
-  <string name="preference_experiments_2">Rannsachadh</string>
   <!-- Summary for studies preferences -->
-  <string name="preference_experiments_summary_2" tools:ignore="BrandUsage">Leig le Mozilla rannsachadh a stàladh is a ruith an-còmhnaidh</string>
   <!--
     Turn On Sync Preferences
 
@@ -1263,27 +1260,18 @@
 
     Title of the remove studies button
   -->
-  <string name="studies_remove">Thoir air falbh</string>
   <!-- Title of the active section on the studies list -->
-  <string name="studies_active">Gnìomhach</string>
   <!-- Description for studies. Note: The word "Firefox" should NOT be translated -->
-  <string name="studies_description_4" tools:ignore="BrandUsage">Taghaidh Firefox cleachdaichean air thuaiream is bheir e dhaibh cothrom gleusan a chur fo dheuchainn, rud a nì e nas fheàrr dhan a h-uile duine.</string>
   <!-- Title of the Studies data preference -->
-  <string name="studies_title_2">Ceadaich obair-rannsachaidh air gleusan</string>
   <!-- Learn more link for studies, links to an article for more information about studies. -->
-  <string name="studies_learn_more">Barrachd fiosrachaidh</string>
   <!--
     Remote Improvements (Rollouts)
 
     Title of the Remote Improvements (rollouts) data preference
   -->
-  <string name="remote_improvements_title">Ceadaich leasachadh cèin</string>
   <!-- Description for remote improvements. Note: The word "Firefox" should NOT be translated -->
-  <string name="remote_improvements_description" tools:ignore="BrandUsage">Bheir Firefox piseach air gleusan, dèanadas is seasmhachd fiù eadar tionndaidhean ùra. Thèid na h-atharraichean seo a chur an sàs o chèin.</string>
   <!-- Learn more link for remote improvements, links to an article for more information about rollouts. -->
-  <string name="remote_improvements_learn_more">Barrachd fiosrachaidh</string>
   <!-- Title for remote improvements preference in Advanced settings -->
-  <string name="preferences_remote_improvements">Leasachadh cèin</string>
   <!--
     Sessions
 

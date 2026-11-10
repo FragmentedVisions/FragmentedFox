@@ -1165,7 +1165,6 @@
   <!-- Title Headers for data collection settings screen -->
   <string name="crash_reports_data_category">Kaatumisilmoitukset</string>
   <string name="usage_data_category">Käyttötiedot</string>
-  <string name="studies_data_category">Tutkimukset</string>
   <string name="technical_data_category">Tekniset tiedot</string>
   <string name="crash_reporting_description">Kaatumisilmoitusten avulla voimme diagnosoida ja korjata selaimen ongelmia. Ilmoitukset voivat sisältää henkilökohtaisia tai arkaluonteisia tietoja.</string>
   <!-- Section title for campaign measurement in data collections screen -->
@@ -1176,9 +1175,7 @@
   -->
   <!-- Learn more link for marketing data preference -->
   <!-- Title for studies preferences -->
-  <string name="preference_experiments_2">Tutkimukset</string>
   <!-- Summary for studies preferences -->
-  <string name="preference_experiments_summary_2" tools:ignore="BrandUsage">Salli Mozillan asentaa ja suorittaa tutkimuksia</string>
   <!--
     Turn On Sync Preferences
 
@@ -1385,27 +1382,18 @@
 
     Title of the remove studies button
   -->
-  <string name="studies_remove">Poista</string>
   <!-- Title of the active section on the studies list -->
-  <string name="studies_active">Käynnissä</string>
   <!-- Description for studies. Note: The word "Firefox" should NOT be translated -->
-  <string name="studies_description_4" tools:ignore="BrandUsage">Firefox valitsee satunnaisesti käyttäjiä testaamaan ominaisuuksia, mikä parantaa laatua kaikille.</string>
   <!-- Title of the Studies data preference -->
-  <string name="studies_title_2">Salli ominaisuustutkimukset</string>
   <!-- Learn more link for studies, links to an article for more information about studies. -->
-  <string name="studies_learn_more">Lue lisää</string>
   <!--
     Remote Improvements (Rollouts)
 
     Title of the Remote Improvements (rollouts) data preference
   -->
-  <string name="remote_improvements_title">Salli etäparannukset</string>
   <!-- Description for remote improvements. Note: The word "Firefox" should NOT be translated -->
-  <string name="remote_improvements_description" tools:ignore="BrandUsage">Firefox parantaa ominaisuuksia, suorituskykyä ja vakautta päivitysten välillä. Muutokset otetaan käyttöön etänä.</string>
   <!-- Learn more link for remote improvements, links to an article for more information about rollouts. -->
-  <string name="remote_improvements_learn_more">Lue lisää</string>
   <!-- Title for remote improvements preference in Advanced settings -->
-  <string name="preferences_remote_improvements">Etäparannukset</string>
   <!--
     Sessions
 

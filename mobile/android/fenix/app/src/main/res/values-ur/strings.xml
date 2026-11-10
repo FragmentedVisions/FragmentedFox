@@ -326,9 +326,7 @@
   <!-- Text displayed when there are no exceptions, with learn more link that brings users to a tracking protection SUMO page -->
   <string name="exceptions_empty_message_learn_more_link">مزید سیکھیں</string>
   <!-- Title for studies preferences -->
-  <string name="preference_experiments_2">مطالعہ</string>
   <!-- Summary for studies preferences -->
-  <string name="preference_experiments_summary_2" tools:ignore="BrandUsage">Mozilla کو مطالعے انسٹال اور چلانے کی اجازت دیتا ہے</string>
   <!-- Preference for reconnecting to FxA sync -->
   <string name="preferences_sync_sign_in_to_reconnect">دوبارہ جڑنے کے لیئے سائن ان کریں</string>
   <!-- Preference for removing FxA account -->
@@ -458,11 +456,8 @@
 
     Title of the remove studies button
   -->
-  <string name="studies_remove">ہٹائیں</string>
   <!-- Title of the active section on the studies list -->
-  <string name="studies_active">فعال</string>
   <!-- Learn more link for studies, links to an article for more information about studies. -->
-  <string name="studies_learn_more">مزید سیکھیں</string>
   <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->
   <string name="add_tab">ٹيب کا اضافہ کريں</string>
   <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->

@@ -613,9 +613,7 @@
   <!-- Text displayed when there are no exceptions, with learn more link that brings users to a tracking protection SUMO page -->
   <string name="exceptions_empty_message_learn_more_link">Tetamäx ch\'aqa\' chik</string>
   <!-- Title for studies preferences -->
-  <string name="preference_experiments_2">Taq tijonïk</string>
   <!-- Summary for studies preferences -->
-  <string name="preference_experiments_summary_2" tools:ignore="BrandUsage">Taya\' q\'ij chi ri Mozilla nuyäk chuqa\' nub\'än taq tijonïk</string>
   <!-- Preference for reconnecting to FxA sync -->
   <string name="preferences_sync_sign_in_to_reconnect">Titikirisäx molojri\'ïl richin nok chik</string>
   <!-- Preference for removing FxA account -->
@@ -764,11 +762,8 @@
 
     Title of the remove studies button
   -->
-  <string name="studies_remove">Tiyuj</string>
   <!-- Title of the active section on the studies list -->
-  <string name="studies_active">Tzijïl</string>
   <!-- Learn more link for studies, links to an article for more information about studies. -->
-  <string name="studies_learn_more">Tetamäx ch\'aqa\' chik</string>
   <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->
   <string name="add_tab">Titz\'aqatisäx ruwi\'</string>
   <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->

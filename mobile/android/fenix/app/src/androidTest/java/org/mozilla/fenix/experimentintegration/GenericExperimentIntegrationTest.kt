@@ -37,32 +37,6 @@ class GenericExperimentIntegrationTest {
     }
 
     @Test
-    fun disableStudiesViaStudiesToggle() {
-        homeScreen(composeTestRule) {
-        }.openThreeDotMenu {
-        }.clickSettingsButton {
-        }.openExperimentsMenu {
-            verifyExperimentEnrolled(experimentName)
-        }.goBack {
-        }.openSettingsSubMenuDataCollection {
-            clickStudiesOption()
-            verifyStudiesToggle(true)
-            clickStudiesToggle()
-        }
-    }
-
-    @Test
-    fun verifyStudiesAreDisabled() {
-        homeScreen(composeTestRule) {
-        }.openThreeDotMenu {
-        }.clickSettingsButton {
-        }.openSettingsSubMenuDataCollection {
-            clickStudiesOption()
-            verifyStudiesToggle(false)
-        }
-    }
-
-    @Test
     fun testExperimentEnrolled() {
         homeScreen(composeTestRule) {
         }.openThreeDotMenu {

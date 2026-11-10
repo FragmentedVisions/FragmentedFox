@@ -870,7 +870,6 @@
   <!-- Title Headers for data collection settings screen -->
   <string name="crash_reports_data_category">Signalijazzioni di scasciu</string>
   <string name="usage_data_category">Dati d’usu</string>
-  <string name="studies_data_category">Studi</string>
   <string name="technical_data_category">Dati tècnici</string>
   <string name="crash_reporting_description">I papelli dî scasci ni cunzèntinu di diagnusticari e abbirsari i prubblemi dû navicaturi. I papelli ponnu cuntèniri dati pirsunali o sinzìbbili.</string>
   <!-- Section title for campaign measurement in data collections screen -->
@@ -881,9 +880,7 @@
   -->
   <!-- Learn more link for marketing data preference -->
   <!-- Title for studies preferences -->
-  <string name="preference_experiments_2">Studi</string>
   <!-- Summary for studies preferences -->
-  <string name="preference_experiments_summary_2" tools:ignore="BrandUsage">Pirmetti a Mozilla di nzitari e abbiari studi</string>
   <!-- Preference for reconnecting to FxA sync -->
   <string name="preferences_sync_sign_in_to_reconnect">Trasi pi cullijàriti arrè</string>
   <!-- Preference for removing FxA account -->
@@ -1065,11 +1062,8 @@
 
     Title of the remove studies button
   -->
-  <string name="studies_remove">Leva</string>
   <!-- Title of the active section on the studies list -->
-  <string name="studies_active">Attivi</string>
   <!-- Learn more link for studies, links to an article for more information about studies. -->
-  <string name="studies_learn_more">Cchiù nfurmazzioni</string>
   <!--
     Sessions
 

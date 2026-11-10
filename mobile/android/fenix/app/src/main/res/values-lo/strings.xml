@@ -1013,7 +1013,6 @@
   <!-- Title Headers for data collection settings screen -->
   <string name="crash_reports_data_category">ລາຍງານຂໍ້ຂັດຂ້ອງ</string>
   <string name="usage_data_category">ຂໍ້ມູນການນໍາໃຊ້</string>
-  <string name="studies_data_category">ການສຶກສາ</string>
   <string name="technical_data_category">ຂໍ້ມູນດ້ານເຕັກນິກ</string>
   <string name="crash_reporting_description">ບົດລາຍງານການຂັດຂ້ອງອະນຸຍາດໃຫ້ພວກເຮົາວິນິດໄສ ແລະ ແກ້ໄຂບັນຫາກັບຕົວທ່ອງເວັບ. ບົດລາຍງານອາດຈະປະກອບມີຂໍ້ມູນສ່ວນຕົວ ຫຼື ຂໍ້ມູນທີ່ລະອຽດອ່ອນ.</string>
   <!-- Section title for campaign measurement in data collections screen -->
@@ -1024,9 +1023,7 @@
   -->
   <!-- Learn more link for marketing data preference -->
   <!-- Title for studies preferences -->
-  <string name="preference_experiments_2">ການສຶກສາ</string>
   <!-- Summary for studies preferences -->
-  <string name="preference_experiments_summary_2" tools:ignore="BrandUsage">ອະນຸຍາດໃຫ້ Mozilla ຕິດຕັ້ງ ແລະ ເປີດໃຊ້ການສຶກສາ</string>
   <!--
     Turn On Sync Preferences
 
@@ -1216,11 +1213,8 @@
 
     Title of the remove studies button
   -->
-  <string name="studies_remove">ລຶບ</string>
   <!-- Title of the active section on the studies list -->
-  <string name="studies_active">​ເປີດໃຊ້ງານ</string>
   <!-- Learn more link for studies, links to an article for more information about studies. -->
-  <string name="studies_learn_more">ຮຽນຮູ້ເພີ່ມເຕີມ</string>
   <!--
     Sessions
 

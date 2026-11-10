@@ -1138,7 +1138,6 @@
   <!-- Title Headers for data collection settings screen -->
   <string name="crash_reports_data_category">يىمىرىلىش دوكلاتى</string>
   <string name="usage_data_category">ئىشلىتىش سانلىق مەلۇماتى</string>
-  <string name="studies_data_category">تەتقىقات</string>
   <string name="technical_data_category">تېخنىكىلىق سانلىق مەلۇمات</string>
   <string name="crash_reporting_description">يىمىرىلىش دوكلاتى توركۆرگۈگە دىياگنوز قۇيۇپ ۋە ئۇنى ئوڭشاشقا يول قويىدۇ. دوكلات شەخسىي ياكى سەزگۈر ئۇچۇرلارنى ئۆز ئىچىگە ئېلىشى مۇمكىن.</string>
   <!-- Section title for campaign measurement in data collections screen -->
@@ -1149,9 +1148,7 @@
   -->
   <!-- Learn more link for marketing data preference -->
   <!-- Title for studies preferences -->
-  <string name="preference_experiments_2">تەتقىقات</string>
   <!-- Summary for studies preferences -->
-  <string name="preference_experiments_summary_2" tools:ignore="BrandUsage">Mozilla نىڭ تەتقىقاتىنى ئورنىتىپ ۋە ئىجرا قىلىشىغا يول قويىدۇ</string>
   <!--
     Turn On Sync Preferences
 
@@ -1358,27 +1355,18 @@
 
     Title of the remove studies button
   -->
-  <string name="studies_remove">چىقىرىۋەت</string>
   <!-- Title of the active section on the studies list -->
-  <string name="studies_active">ئاكتىپ</string>
   <!-- Description for studies. Note: The word "Firefox" should NOT be translated -->
-  <string name="studies_description_4" tools:ignore="BrandUsage">Firefox ئىقتىدارنى سىناش ئۈچۈن ئىشلەتكۈچىنى تاسادىپىي تاللايدۇ، بۇ ھەممەيلەن ئۈچۈن سۈپىتىنى ياخشىلايدۇ.</string>
   <!-- Title of the Studies data preference -->
-  <string name="studies_title_2">ئىقتىدار تەتقىقاتىغا يول قويىدۇ</string>
   <!-- Learn more link for studies, links to an article for more information about studies. -->
-  <string name="studies_learn_more">تەپسىلاتى</string>
   <!--
     Remote Improvements (Rollouts)
 
     Title of the Remote Improvements (rollouts) data preference
   -->
-  <string name="remote_improvements_title">يىراقتىن ياخشىلاشقا يول قويىدۇ</string>
   <!-- Description for remote improvements. Note: The word "Firefox" should NOT be translated -->
-  <string name="remote_improvements_description" tools:ignore="BrandUsage">Firefox يېڭى نەشرى ئېلان قىلىنىشتىن ئىلگىرى، ئىقتىدارى، ئۈنۈمى ۋە مۇقىملىقىنى ياخشىلايدۇ. يىراقتىن قوللىنىشنى ئۆزگەرتىدۇ.</string>
   <!-- Learn more link for remote improvements, links to an article for more information about rollouts. -->
-  <string name="remote_improvements_learn_more">مول بىلىم</string>
   <!-- Title for remote improvements preference in Advanced settings -->
-  <string name="preferences_remote_improvements">يىراقتىن ياخشىلاش</string>
   <!--
     Sessions
 

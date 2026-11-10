@@ -1011,14 +1011,11 @@
   <!-- Title Headers for data collection settings screen -->
   <string name="crash_reports_data_category">തകരാർ വിവരങ്ങൾ</string>
   <string name="usage_data_category">ഉപയോഗ ഡാറ്റ</string>
-  <string name="studies_data_category">പഠനങ്ങൾ</string>
   <string name="technical_data_category">സാങ്കേതിക ഡാറ്റ</string>
   <string name="crash_reporting_description">തകൎച്ച റിപ്പോർട്ടുകൾ ഞങ്ങൾക്കു് അന്വേഷിയന്ത്രത്തിന്റെ കൂടെയുള്ള എല്ലാ പ്രശ്നങ്ങളെ കണ്ടുപിടിക്കാനും പരിഹരിക്കാനും സഹായിക്കുന്നു. റിപ്പോർട്ടുകളിൽ തനതായ അല്ലെങ്കിൽ സൂക്ഷിച്ചുവയ്ക്കാനുള്ള ദത്തയും ഉൾപ്പെടാം.</string>
   <!-- Learn more link for marketing data preference -->
   <!-- Title for studies preferences -->
-  <string name="preference_experiments_2">പഠനങ്ങൾ</string>
   <!-- Summary for studies preferences -->
-  <string name="preference_experiments_summary_2" tools:ignore="BrandUsage">പഠനങ്ങൾ സ്ഥാപിക്കാനും പ്രവർത്തിപ്പിക്കാനും മോസില്ലയെ അനുവദിക്കും</string>
   <!--
     Turn On Sync Preferences
 
@@ -1222,23 +1219,16 @@
 
     Title of the remove studies button
   -->
-  <string name="studies_remove">മാറ്റുക</string>
   <!-- Title of the active section on the studies list -->
-  <string name="studies_active">സജീവം</string>
   <!-- Title of the Studies data preference -->
-  <string name="studies_title_2">സവിശേഷതപഠനങ്ങൾ അനുവദിക്കുക</string>
   <!-- Learn more link for studies, links to an article for more information about studies. -->
-  <string name="studies_learn_more">കൂടുതലറിയുക</string>
   <!--
     Remote Improvements (Rollouts)
 
     Title of the Remote Improvements (rollouts) data preference
   -->
-  <string name="remote_improvements_title">അകന്നേറിയ മെച്ചപ്പെടുത്തലുകൾ അനുവദിക്കുക</string>
   <!-- Learn more link for remote improvements, links to an article for more information about rollouts. -->
-  <string name="remote_improvements_learn_more">കൂടുതല്‍ അറിയുക</string>
   <!-- Title for remote improvements preference in Advanced settings -->
-  <string name="preferences_remote_improvements">അകന്നേറിയ മെച്ചപ്പെടുത്തലുകൾ</string>
   <!--
     Sessions
 

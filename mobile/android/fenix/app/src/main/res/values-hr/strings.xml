@@ -1145,7 +1145,6 @@
   <!-- Title Headers for data collection settings screen -->
   <string name="crash_reports_data_category">Izvještaji o prekidu rada programa</string>
   <string name="usage_data_category">Podaci o korištenju</string>
-  <string name="studies_data_category">Istraživanja</string>
   <string name="technical_data_category">Tehnički podaci</string>
   <string name="crash_reporting_description">Izvještaji o prekidu rada programa nam pomažu dijagnosticirati i riješiti probleme s preglednikom. Izvještaji mogu uključivati osobne ili osjetljive podatke.</string>
   <!-- Section title for campaign measurement in data collections screen -->
@@ -1156,9 +1155,7 @@
   -->
   <!-- Learn more link for marketing data preference -->
   <!-- Title for studies preferences -->
-  <string name="preference_experiments_2">Istraživanja</string>
   <!-- Summary for studies preferences -->
-  <string name="preference_experiments_summary_2" tools:ignore="BrandUsage">Omogućuje Mozilli instalaciju i pokretanje istraživanja</string>
   <!--
     Turn On Sync Preferences
 
@@ -1365,27 +1362,18 @@
 
     Title of the remove studies button
   -->
-  <string name="studies_remove">Ukloni</string>
   <!-- Title of the active section on the studies list -->
-  <string name="studies_active">Aktivne</string>
   <!-- Description for studies. Note: The word "Firefox" should NOT be translated -->
-  <string name="studies_description_4" tools:ignore="BrandUsage">Firefox nasumično bira korisnike za testiranje funkcija, što poboljšava kvalitetu za sve.</string>
   <!-- Title of the Studies data preference -->
-  <string name="studies_title_2">Dopusti istraživanja funkcija</string>
   <!-- Learn more link for studies, links to an article for more information about studies. -->
-  <string name="studies_learn_more">Saznaj više</string>
   <!--
     Remote Improvements (Rollouts)
 
     Title of the Remote Improvements (rollouts) data preference
   -->
-  <string name="remote_improvements_title">Dopusti daljinska poboljšanja</string>
   <!-- Description for remote improvements. Note: The word "Firefox" should NOT be translated -->
-  <string name="remote_improvements_description" tools:ignore="BrandUsage">Firefox će poboljšati funkcije, performanse i stabilnost između aktualiziranja. Promjene se primjenjuju daljinski.</string>
   <!-- Learn more link for remote improvements, links to an article for more information about rollouts. -->
-  <string name="remote_improvements_learn_more">Saznaj više</string>
   <!-- Title for remote improvements preference in Advanced settings -->
-  <string name="preferences_remote_improvements">Daljinska poboljšanja</string>
   <!--
     Sessions
 

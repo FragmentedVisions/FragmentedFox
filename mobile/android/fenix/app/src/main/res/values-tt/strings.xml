@@ -709,9 +709,7 @@
   <string name="preferences_daily_usage_ping_title">Көндәлек куллану пингы</string>
   <string name="preferences_daily_usage_ping_description" tools:ignore="BrandUsage">Бу Mozilla-га актив кулланучылар санын бәяләргә ярдәм итә.</string>
   <!-- Title for studies preferences -->
-  <string name="preference_experiments_2">Тикшеренүләр</string>
   <!-- Summary for studies preferences -->
-  <string name="preference_experiments_summary_2" tools:ignore="BrandUsage">Mozilla-га тикшеренүләр урнаштырырга һәм үткәрергә рөхсәт итү</string>
   <!-- Preference for reconnecting to FxA sync -->
   <string name="preferences_sync_sign_in_to_reconnect">Яңадан тоташу өчен керегез</string>
   <!-- Preference for removing FxA account -->
@@ -878,13 +876,9 @@
 
     Title of the remove studies button
   -->
-  <string name="studies_remove">Бетерү</string>
   <!-- Title of the active section on the studies list -->
-  <string name="studies_active">Актив</string>
   <!-- Learn more link for studies, links to an article for more information about studies. -->
-  <string name="studies_learn_more">Күбрәк белү</string>
   <!-- Learn more link for remote improvements, links to an article for more information about rollouts. -->
-  <string name="remote_improvements_learn_more">Күбрәк белү</string>
   <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->
   <string name="add_tab">Таб өстәү</string>
   <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->

@@ -69,21 +69,17 @@ class SettingsPrivacyTest {
         }.openThreeDotMenu {
         }.clickSettingsButton {
         }.openSettingsSubMenuDataCollection {
-            // Studies depends on the telemetry switch,  if telemetry is off studies will be
-            // turned off as well, and will require the app to be restarted.
             // Daily usage ping should default to telemetry pref value
             verifyDataCollectionView(
                 composeTestRule,
                 isSendTechnicalDataEnabled = true,
                 isDailyUsagePingEnabled = true,
-                studiesSummary = "On",
             )
             clickUsageAndTechnicalDataToggle(composeTestRule)
             verifyDataCollectionView(
                 composeTestRule,
                 isSendTechnicalDataEnabled = false,
                 isDailyUsagePingEnabled = true,
-                studiesSummary = "Off",
             )
         }
     }

@@ -1164,7 +1164,6 @@
   <!-- Title Headers for data collection settings screen -->
   <string name="crash_reports_data_category">Trình báo cáo lỗi</string>
   <string name="usage_data_category">Dữ liệu sử dụng</string>
-  <string name="studies_data_category">Nghiên cứu</string>
   <string name="technical_data_category">Dữ liệu kỹ thuật</string>
   <string name="crash_reporting_description">Báo cáo sự cố cho phép chúng tôi chẩn đoán và khắc phục sự cố với trình duyệt. Báo cáo có thể bao gồm dữ liệu cá nhân hoặc dữ liệu nhạy cảm.</string>
   <!-- Section title for campaign measurement in data collections screen -->
@@ -1175,9 +1174,7 @@
   -->
   <!-- Learn more link for marketing data preference -->
   <!-- Title for studies preferences -->
-  <string name="preference_experiments_2">Nghiên cứu</string>
   <!-- Summary for studies preferences -->
-  <string name="preference_experiments_summary_2" tools:ignore="BrandUsage">Cho phép Mozilla cài đặt và chạy các nghiên cứu</string>
   <!--
     Turn On Sync Preferences
 
@@ -1384,27 +1381,18 @@
 
     Title of the remove studies button
   -->
-  <string name="studies_remove">Xóa</string>
   <!-- Title of the active section on the studies list -->
-  <string name="studies_active">Hoạt động</string>
   <!-- Description for studies. Note: The word "Firefox" should NOT be translated -->
-  <string name="studies_description_4" tools:ignore="BrandUsage">Firefox chọn ngẫu nhiên người dùng để thử nghiệm các tính năng, từ đó nâng cao chất lượng cho tất cả mọi người.</string>
   <!-- Title of the Studies data preference -->
-  <string name="studies_title_2">Cho phép chạy nghiên cứu các tính năng</string>
   <!-- Learn more link for studies, links to an article for more information about studies. -->
-  <string name="studies_learn_more">Tìm hiểu thêm</string>
   <!--
     Remote Improvements (Rollouts)
 
     Title of the Remote Improvements (rollouts) data preference
   -->
-  <string name="remote_improvements_title">Cho phép cải tiến từ xa</string>
   <!-- Description for remote improvements. Note: The word "Firefox" should NOT be translated -->
-  <string name="remote_improvements_description" tools:ignore="BrandUsage">Firefox sẽ cải thiện các tính năng, hiệu năng và độ ổn định giữa các bản cập nhật. Các thay đổi được áp dụng từ xa.</string>
   <!-- Learn more link for remote improvements, links to an article for more information about rollouts. -->
-  <string name="remote_improvements_learn_more">Tìm hiểu thêm</string>
   <!-- Title for remote improvements preference in Advanced settings -->
-  <string name="preferences_remote_improvements">Cải tiến từ xa</string>
   <!--
     Sessions
 

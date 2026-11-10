@@ -453,9 +453,7 @@
   <!-- Text displayed when there are no exceptions, with learn more link that brings users to a tracking protection SUMO page -->
   <string name="exceptions_empty_message_learn_more_link">Tolıǵıraq úyreniw</string>
   <!-- Title for studies preferences -->
-  <string name="preference_experiments_2">Izertlewler</string>
   <!-- Summary for studies preferences -->
-  <string name="preference_experiments_summary_2" tools:ignore="BrandUsage">Mozillaǵa izleniwlerdi ornatıw hám júrgiziwge ruqsat beredi</string>
   <!-- Preference for reconnecting to FxA sync -->
   <string name="preferences_sync_sign_in_to_reconnect">Qayta jalǵanıw ushın sistemaǵa kiriń</string>
   <!-- Preference for removing FxA account -->
@@ -617,11 +615,8 @@
 
     Title of the remove studies button
   -->
-  <string name="studies_remove">Alıp taslaw</string>
   <!-- Title of the active section on the studies list -->
-  <string name="studies_active">Aktiv</string>
   <!-- Learn more link for studies, links to an article for more information about studies. -->
-  <string name="studies_learn_more">Tolıǵıraq úyreniw</string>
   <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->
   <string name="add_tab">Bet qosıw</string>
   <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->

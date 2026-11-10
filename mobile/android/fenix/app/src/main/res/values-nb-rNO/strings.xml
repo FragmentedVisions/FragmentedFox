@@ -1165,7 +1165,6 @@
   <!-- Title Headers for data collection settings screen -->
   <string name="crash_reports_data_category">Krasjrapporter</string>
   <string name="usage_data_category">Bruksdata</string>
-  <string name="studies_data_category">Undersøkelser</string>
   <string name="technical_data_category">Tekniske data</string>
   <string name="crash_reporting_description">Krasjrapporter lar oss diagnostisere og fikse problemer med nettleseren. Rapporter kan inneholde personlige eller sensitive data.</string>
   <!-- Section title for campaign measurement in data collections screen -->
@@ -1176,9 +1175,7 @@
   -->
   <!-- Learn more link for marketing data preference -->
   <!-- Title for studies preferences -->
-  <string name="preference_experiments_2">Undersøkelse</string>
   <!-- Summary for studies preferences -->
-  <string name="preference_experiments_summary_2" tools:ignore="BrandUsage">Tillater Mozilla å installere og kjøre undersøkelser</string>
   <!--
     Turn On Sync Preferences
 
@@ -1385,27 +1382,18 @@
 
     Title of the remove studies button
   -->
-  <string name="studies_remove">Fjern</string>
   <!-- Title of the active section on the studies list -->
-  <string name="studies_active">Aktiv</string>
   <!-- Description for studies. Note: The word "Firefox" should NOT be translated -->
-  <string name="studies_description_4" tools:ignore="BrandUsage">Firefox velger tilfeldige brukere for å teste funksjoner, noe som forbedrer kvaliteten for alle.</string>
   <!-- Title of the Studies data preference -->
-  <string name="studies_title_2">Tillat funksjonsundersøkelser</string>
   <!-- Learn more link for studies, links to an article for more information about studies. -->
-  <string name="studies_learn_more">Les mer</string>
   <!--
     Remote Improvements (Rollouts)
 
     Title of the Remote Improvements (rollouts) data preference
   -->
-  <string name="remote_improvements_title">Tillat eksterne forbedringer</string>
   <!-- Description for remote improvements. Note: The word "Firefox" should NOT be translated -->
-  <string name="remote_improvements_description" tools:ignore="BrandUsage">Firefox vil forbedre funksjoner, ytelse og stabilitet mellom oppdateringer. Endringer implementeres eksternt.</string>
   <!-- Learn more link for remote improvements, links to an article for more information about rollouts. -->
-  <string name="remote_improvements_learn_more">Les mer</string>
   <!-- Title for remote improvements preference in Advanced settings -->
-  <string name="preferences_remote_improvements">Eksterne forbedringer</string>
   <!--
     Sessions
 

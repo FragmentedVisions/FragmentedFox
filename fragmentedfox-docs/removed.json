@@ -36,7 +36,11 @@
     "org\\.mozilla\\.fenix\\.home\\.sports",
     "SportsWidget",
     "WorldCupMatches",
-    "homepageSportsWidget"
+    "homepageSportsWidget",
+    "org\\.mozilla\\.fenix\\.settings\\.studies",
+    "RemoteImprovementsFragment",
+    "pref_key_remote_improvements",
+    "StudiesClicked"
   ],
   "permissions": [
     "com.adjust.preinstall.READ_PERMISSION"

@@ -1153,7 +1153,6 @@
   <!-- Title Headers for data collection settings screen -->
   <string name="crash_reports_data_category">Hrunskýrslur</string>
   <string name="usage_data_category">Notkunargögn</string>
-  <string name="studies_data_category">Rannsóknir</string>
   <string name="technical_data_category">Tæknilegar upplýsingar</string>
   <string name="crash_reporting_description">Hrunskýrslur gera okkur kleift að greina og laga vandamál með vafrann. Slíkar skýrslur geta innihaldið persónuleg eða viðkvæm gögn.</string>
   <!-- Section title for campaign measurement in data collections screen -->
@@ -1164,9 +1163,7 @@
   -->
   <!-- Learn more link for marketing data preference -->
   <!-- Title for studies preferences -->
-  <string name="preference_experiments_2">Kannanir</string>
   <!-- Summary for studies preferences -->
-  <string name="preference_experiments_summary_2" tools:ignore="BrandUsage">Leyfir Mozilla að setja upp og keyra rannsóknir</string>
   <!--
     Turn On Sync Preferences
 
@@ -1373,27 +1370,18 @@
 
     Title of the remove studies button
   -->
-  <string name="studies_remove">Fjarlægja</string>
   <!-- Title of the active section on the studies list -->
-  <string name="studies_active">Virkt</string>
   <!-- Description for studies. Note: The word "Firefox" should NOT be translated -->
-  <string name="studies_description_4" tools:ignore="BrandUsage">Firefox velur notendur af handahófi til að prófa ýmsa eiginleika, sem bætir gæðin fyrir alla.</string>
   <!-- Title of the Studies data preference -->
-  <string name="studies_title_2">Leyfa rannsóknir varðandi eiginleika</string>
   <!-- Learn more link for studies, links to an article for more information about studies. -->
-  <string name="studies_learn_more">Frekari upplýsingar</string>
   <!--
     Remote Improvements (Rollouts)
 
     Title of the Remote Improvements (rollouts) data preference
   -->
-  <string name="remote_improvements_title">Leyfa fjarstýrðar endurbætur</string>
   <!-- Description for remote improvements. Note: The word "Firefox" should NOT be translated -->
-  <string name="remote_improvements_description" tools:ignore="BrandUsage">Firefox mun bæta eiginleika, afköst og stöðugleika milli uppfærslna. Breytingar verða framkvæmdar fjartengt.</string>
   <!-- Learn more link for remote improvements, links to an article for more information about rollouts. -->
-  <string name="remote_improvements_learn_more">Frekari upplýsingar</string>
   <!-- Title for remote improvements preference in Advanced settings -->
-  <string name="preferences_remote_improvements">Fjartengdar endurbætur</string>
   <!--
     Sessions
 

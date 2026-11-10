@@ -722,9 +722,7 @@
   <!-- Text displayed when there are no exceptions, with learn more link that brings users to a tracking protection SUMO page -->
   <string name="exceptions_empty_message_learn_more_link">Zêdetir bizane</string>
   <!-- Title for studies preferences -->
-  <string name="preference_experiments_2">Lêkolîn</string>
   <!-- Summary for studies preferences -->
-  <string name="preference_experiments_summary_2" tools:ignore="BrandUsage">Destûrê bide Mozillayê ku lêkolînan saz bike û bimeşîne</string>
   <!-- Preference for reconnecting to FxA sync -->
   <string name="preferences_sync_sign_in_to_reconnect">Ji bo dîsa girê bibî, têkeve</string>
   <!-- Preference for removing FxA account -->
@@ -886,11 +884,8 @@
 
     Title of the remove studies button
   -->
-  <string name="studies_remove">Rake</string>
   <!-- Title of the active section on the studies list -->
-  <string name="studies_active">Çalak</string>
   <!-- Learn more link for studies, links to an article for more information about studies. -->
-  <string name="studies_learn_more">Zêdetir bizane</string>
   <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->
   <string name="add_tab">Hilpekînê tevlî bike</string>
   <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->

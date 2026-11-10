@@ -126,7 +126,6 @@
     <!-- Text for turn on auto close tabs button in the auto-close dialog of the inactive tabs. -->
     <string name="tab_tray_inactive_turn_on_auto_close_button_2">Turn on auto-close</string>
 
-
     <!-- Home screen icons - Long press shortcuts -->
     <!-- Shortcut action to open new tab -->
     <string name="home_screen_shortcut_open_new_tab_2">New tab</string>
@@ -301,7 +300,6 @@
     <!-- Content description for the translate toolbar action that closes the translations toolbar. -->
     <string name="translation_toolbar_close_action">Dismiss message</string>
 
-
     <!-- AI Controls settings -->
     <!-- Title for the AI controls settings screen -->
     <string name="preferences_ai_controls">AI controls</string>
@@ -446,11 +444,8 @@
     <!-- "Continue" onboarding button. -->
     <string name="nova_onboarding_continue_button">Continue</string>
 
-
     <!-- "Not now" onboarding button. -->
     <string name="nova_onboarding_negative_button">Not now</string>
-
-
 
     <!-- Terms of use (ToU) onboarding subtitle. -->
     <string name="nova_onboarding_tou_subtitle">Private by design.\nYours by default.</string>
@@ -502,10 +497,6 @@
     <!-- Toolbar selection onboarding "bottom" option label. -->
     <string name="nova_onboarding_toolbar_selection_bottom_label">Bottom</string>
 
-
-
-
-
     <!-- Sync onboarding title. -->
     <string name="nova_onboarding_sync_title">Instantly pick up where you left off</string>
 
@@ -514,21 +505,6 @@
 
     <!-- Sync onboarding button. -->
     <string name="nova_onboarding_sync_button">Start syncing</string>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     <!-- Notifications onboarding title. 'Firefox' is intentionally hardcoded. -->
     <string name="nova_onboarding_notifications_title" tools:ignore="BrandUsage,UnusedResources">Notifications help you stay safer with FragmentedFox</string>
@@ -548,7 +524,6 @@
     <!-- "Add search widget" onboarding button. 'Firefox' is intentionally hardcoded. -->
     <string name="nova_onboarding_add_search_widget_button" tools:ignore="BrandUsage">Add FragmentedFox widget</string>
 
-
     <!-- Customize prompt onboarding body.
         %1$s is replaced by the product name (for example "Firefox"),
         %2$,d is replaced by the number of trackers blocked. The comma represents the thousand
@@ -558,9 +533,6 @@
         <item quantity="one">%1$s blocked %2$,d tracker while you roamed the web.</item>
         <item quantity="other">%1$s blocked %2$,d trackers while you roamed the web.</item>
     </plurals>
-
-
-
 
     <!-- ==== End of Project "Nova" onboarding strings ==== -->
 
@@ -970,7 +942,6 @@
     <!-- Error message snackbar shown after the user tried to apply the new icon but the Android OS threw an error while updating existing app shortcuts (e.g. private mode shortcut) -->
     <string name="shortcuts_update_error">Failed to update the app icon. Remove existing shortcuts and try again.</string>
 
-
     <!-- Extension process crash dialog to user -->
     <!-- Title of the extension crash dialog shown to the user when enough errors have occurred with extensions and they need to be temporarily disabled -->
     <string name="extension_process_crash_dialog_title">Extensions are temporarily disabled</string>
@@ -1071,17 +1042,9 @@
     <!-- Title Headers for data collection settings screen -->
     <string name="crash_reports_data_category">Crash Reports</string>
     <string name="usage_data_category">Usage data</string>
-    <string name="studies_data_category">Studies</string>
     <string name="technical_data_category">Technical Data</string>
 
-
     <string name="crash_reporting_description">Crash reports allow us to diagnose and fix issues with the browser. Reports may include personal or sensitive data.</string>
-
-
-    <!-- Title for studies preferences -->
-    <string name="preference_experiments_2">Studies</string>
-    <!-- Summary for studies preferences -->
-    <string name="preference_experiments_summary_2">Allows Mozilla to install and run studies</string>
 
     <!-- Turn On Sync Preferences -->
     <!-- Header of the Sign in preference view -->
@@ -1262,28 +1225,6 @@
     <string name="preferences_keep_media_tabs_active_summary">A tab that is playing sound or video keeps running after you switch away from it.</string>
     <!-- Title of inactive tabs preference -->
     <string name="preferences_inactive_tabs_title">Tabs you haven’t viewed for two weeks get moved to the inactive section.</string>
-
-    <!-- Studies -->
-    <!-- Title of the remove studies button -->
-    <string name="studies_remove">Remove</string>
-    <!-- Title of the active section on the studies list -->
-    <string name="studies_active">Active</string>
-    <!-- Description for studies. Note: The word "Firefox" should NOT be translated -->
-    <string name="studies_description_4" tools:ignore="BrandUsage">Firefox randomly selects users to test features, which improves quality for everyone.</string>
-    <!-- Title of the Studies data preference -->
-    <string name="studies_title_2">Allow feature studies</string>
-    <!-- Learn more link for studies, links to an article for more information about studies. -->
-    <string name="studies_learn_more">Learn more</string>
-
-    <!-- Remote Improvements (Rollouts) -->
-    <!-- Title of the Remote Improvements (rollouts) data preference -->
-    <string name="remote_improvements_title">Allow remote improvements</string>
-    <!-- Description for remote improvements. Note: The word "Firefox" should NOT be translated -->
-    <string name="remote_improvements_description" tools:ignore="BrandUsage">Firefox will improve features, performance, and stability between updates. Changes applied remotely.</string>
-    <!-- Learn more link for remote improvements, links to an article for more information about rollouts. -->
-    <string name="remote_improvements_learn_more">Learn more</string>
-    <!-- Title for remote improvements preference in Advanced settings -->
-    <string name="preferences_remote_improvements">Remote improvements</string>
 
     <!-- Sessions -->
     <!-- Title for the list of tabs in the current normal session used by a11y services
@@ -1576,7 +1517,6 @@
     <string name="download_delete_dialog_cancel">Cancel</string>
     <!-- Alert dialog confirmation before deleting a single download item or many download items, this is the positive action. -->
     <string name="download_delete_dialog_confirm">Confirm</string>
-
 
     <!-- Title for the alert dialog confirmation before renaming a download item. -->
     <string name="download_rename_dialog_title">Rename file</string>
@@ -2658,7 +2598,6 @@
     <!-- The message displayed when there was an error with the email mask or Firefox Account services. -->
     <string name="email_masks_error_retrieving_masks">Email masks aren’t available right now. Try again in a few minutes.</string>
 
-
     <!-- Autofill -->
     <!-- Preference and title for managing the autofill settings -->
     <string name="preferences_autofill">Autofill</string>
@@ -3110,7 +3049,6 @@
     %1$s is the size in kilobytes or megabytes of the language file. -->
     <string name="translations_download_language_file_dialog_title">Download language in data saving mode (%1$s)?</string>
 
-
     <!-- Translations options dialog -->
     <!-- Title of the translation options dialog that allows a user to set their translation options for the site the user is currently on. -->
     <string name="translation_option_bottom_sheet_title_heading">Translation options</string>
@@ -3491,7 +3429,6 @@
     <!-- The title of the button for deleting in the debug drawer all addresses. -->
     <string name="debug_drawer_delete_all_credit_cards">Delete all credit cards</string>
 
-
     <!-- Debug drawer "contextual feature recommendation" (CFR) tools -->
     <!-- The title of the CFR Tools feature in the Debug Drawer -->
     <string name="debug_drawer_cfr_tools_title">CFR Tools</string>
@@ -3539,7 +3476,6 @@
     <!-- Beta Label Component !-->
     <!-- Text shown as a label or tag to indicate a feature or area is still undergoing active development. Note that here "Beta" should not be translated, as it is used as an icon styled element. -->
     <string name="beta_feature">BETA</string>
-
 
     <!-- TextField Design System Component -->
 
@@ -3707,7 +3643,6 @@
 
     <!-- Link text for terms_of_use_prompt_body_line_two_alternative that links to a site with more information about the Terms of Use -->
     <string name="terms_of_use_prompt_body_line_two_alternative_link" tools:ignore="UnusedResources">here</string>
-
 
     <!-- Privacy notice homepage banner -->
     <!-- A message we show the user on the homepage when there is a new version of the privacy notice. 'Firefox' is intentionally hardcoded.

@@ -1165,7 +1165,6 @@
   <!-- Title Headers for data collection settings screen -->
   <string name="crash_reports_data_category">Informes de fallada</string>
   <string name="usage_data_category">Dades d’ús</string>
-  <string name="studies_data_category">Estudis</string>
   <string name="technical_data_category">Dades tècniques</string>
   <string name="crash_reporting_description">Els informes de fallada permeten diagnosticar i solucionar problemes del navegador. Els informes poden incloure dades personals o confidencials.</string>
   <!-- Section title for campaign measurement in data collections screen -->
@@ -1176,9 +1175,7 @@
   -->
   <!-- Learn more link for marketing data preference -->
   <!-- Title for studies preferences -->
-  <string name="preference_experiments_2">Estudis</string>
   <!-- Summary for studies preferences -->
-  <string name="preference_experiments_summary_2" tools:ignore="BrandUsage">Permet a Mozilla instal·lar i executar estudis</string>
   <!--
     Turn On Sync Preferences
 
@@ -1385,27 +1382,18 @@
 
     Title of the remove studies button
   -->
-  <string name="studies_remove">Elimina</string>
   <!-- Title of the active section on the studies list -->
-  <string name="studies_active">Actius</string>
   <!-- Description for studies. Note: The word "Firefox" should NOT be translated -->
-  <string name="studies_description_4" tools:ignore="BrandUsage">El Firefox selecciona usuaris aleatòriament per a provar funcions i poder millorar-ne la qualitat per a tothom.</string>
   <!-- Title of the Studies data preference -->
-  <string name="studies_title_2">Permet estudis de funcionalitat</string>
   <!-- Learn more link for studies, links to an article for more information about studies. -->
-  <string name="studies_learn_more">Més informació</string>
   <!--
     Remote Improvements (Rollouts)
 
     Title of the Remote Improvements (rollouts) data preference
   -->
-  <string name="remote_improvements_title">Permet les millores remotes</string>
   <!-- Description for remote improvements. Note: The word "Firefox" should NOT be translated -->
-  <string name="remote_improvements_description" tools:ignore="BrandUsage">El Firefox millorarà les funcions, el rendiment i l’estabilitat entre actualitzacions. Els canvis apliquen de forma remota.</string>
   <!-- Learn more link for remote improvements, links to an article for more information about rollouts. -->
-  <string name="remote_improvements_learn_more">Més informació</string>
   <!-- Title for remote improvements preference in Advanced settings -->
-  <string name="preferences_remote_improvements">Millores remotes</string>
   <!--
     Sessions
 

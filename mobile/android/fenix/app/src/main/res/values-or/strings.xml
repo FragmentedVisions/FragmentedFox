@@ -107,7 +107,6 @@
   <!-- Option for auto closing tabs that will auto close tabs after one month -->
   <string name="close_tabs_after_one_month">ଗୋଟେ ମାସ ପରେ</string>
   <!-- Title of the active section on the studies list -->
-  <string name="studies_active">ସକ୍ରିୟ</string>
   <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->
   <string name="add_tab">ଟ୍ୟାବ ଯୋଡ଼ନ୍ତୁ</string>
   <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->

@@ -996,16 +996,13 @@
   <!-- Title Headers for data collection settings screen -->
   <string name="crash_reports_data_category">Cправаздачы аб збоях</string>
   <string name="usage_data_category">Даныя аб выкарыстанні</string>
-  <string name="studies_data_category">Даследаванні</string>
   <string name="technical_data_category">Тэхнічныя дадзеныя</string>
   <string name="crash_reporting_description">Справаздачы аб збоях дазваляюць нам дыягнаставаць і\u00a0выпраўляць праблемы з\u00a0браўзерам. Справаздачы могуць уключаць асабістыя або канфідэнцыяльныя звесткі.</string>
   <!-- Section title for campaign measurement in data collections screen -->
   <!-- Preference switch for campaign measurement data (marketing data) collection -->
   <!-- Learn more link for marketing data preference -->
   <!-- Title for studies preferences -->
-  <string name="preference_experiments_2">Даследаванні</string>
   <!-- Summary for studies preferences -->
-  <string name="preference_experiments_summary_2" tools:ignore="BrandUsage">Дазволіць Mozilla ўсталёўваць і запускаць даследаванні</string>
   <!--
     Turn On Sync Preferences
 
@@ -1199,13 +1196,9 @@
 
     Title of the remove studies button
   -->
-  <string name="studies_remove">Выдаліць</string>
   <!-- Title of the active section on the studies list -->
-  <string name="studies_active">Актыўнае</string>
   <!-- Learn more link for studies, links to an article for more information about studies. -->
-  <string name="studies_learn_more">Даведацца больш</string>
   <!-- Learn more link for remote improvements, links to an article for more information about rollouts. -->
-  <string name="remote_improvements_learn_more">Падрабязней</string>
   <!--
     Title for the list of tabs in the current private session used by a11y services
     The %1$s will be replaced by the number of opened private tabs

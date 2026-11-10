@@ -1162,7 +1162,6 @@
   <!-- Title Headers for data collection settings screen -->
   <string name="crash_reports_data_category">Hutsegite-txostenak</string>
   <string name="usage_data_category">Erabilpen-datuak</string>
-  <string name="studies_data_category">Esperimentuak</string>
   <string name="technical_data_category">Datu teknikoak</string>
   <string name="crash_reporting_description">Hutsegite-txostenek nabigatzailearen arazoak diagnostikatu eta konpontzen laguntzen digute. Txostenek datu pertsonal edo kontuzkoak izan litzakete.</string>
   <!-- Section title for campaign measurement in data collections screen -->
@@ -1173,9 +1172,7 @@
   -->
   <!-- Learn more link for marketing data preference -->
   <!-- Title for studies preferences -->
-  <string name="preference_experiments_2">Esperimentuak</string>
   <!-- Summary for studies preferences -->
-  <string name="preference_experiments_summary_2" tools:ignore="BrandUsage">Mozillari esperimentuak instalatu eta exekutatzea baimentzen du</string>
   <!--
     Turn On Sync Preferences
 
@@ -1382,27 +1379,18 @@
 
     Title of the remove studies button
   -->
-  <string name="studies_remove">Kendu</string>
   <!-- Title of the active section on the studies list -->
-  <string name="studies_active">Aktibo</string>
   <!-- Description for studies. Note: The word "Firefox" should NOT be translated -->
-  <string name="studies_description_4" tools:ignore="BrandUsage">Firefoxek ausaz aukeratzen ditu erabiltzaileak eginbideak proba ditzaten, horrela mundu guztiarentzat kalitatea hobetzeko.</string>
   <!-- Title of the Studies data preference -->
-  <string name="studies_title_2">Baimendu eginbideen esperimentuak</string>
   <!-- Learn more link for studies, links to an article for more information about studies. -->
-  <string name="studies_learn_more">Argibide gehiago</string>
   <!--
     Remote Improvements (Rollouts)
 
     Title of the Remote Improvements (rollouts) data preference
   -->
-  <string name="remote_improvements_title">Baimendu urruneko hobekuntzak</string>
   <!-- Description for remote improvements. Note: The word "Firefox" should NOT be translated -->
-  <string name="remote_improvements_description" tools:ignore="BrandUsage">Eguneraketen artean eginbideak, errendimendua eta egonkortasuna hobetuko ditu Firefoxek. Aldaketak urrunetik aplikatzen dira.</string>
   <!-- Learn more link for remote improvements, links to an article for more information about rollouts. -->
-  <string name="remote_improvements_learn_more">Argibide gehiago</string>
   <!-- Title for remote improvements preference in Advanced settings -->
-  <string name="preferences_remote_improvements">Urruneko hobekuntzak</string>
   <!--
     Sessions
 

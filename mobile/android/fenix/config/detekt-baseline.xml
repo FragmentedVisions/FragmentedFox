@@ -597,8 +597,6 @@
     <ID>UndocumentedPublicClass:StartupActivityLog.kt$StartupActivityLog.LogEntry$AppStarted : LogEntry</ID>
     <ID>UndocumentedPublicClass:StartupActivityLog.kt$StartupActivityLog.LogEntry$AppStopped : LogEntry</ID>
     <ID>UndocumentedPublicClass:StartupTypeTelemetry.kt$StartupTypeTelemetry$StartupTypeLifecycleObserver : DefaultLifecycleObserver</ID>
-    <ID>UndocumentedPublicClass:StudiesInteractor.kt$StudiesInteractor</ID>
-    <ID>UndocumentedPublicClass:StudiesView.kt$StudiesView : StudiesAdapterDelegate</ID>
     <ID>UndocumentedPublicClass:SupportUtils.kt$SupportUtils</ID>
     <ID>UndocumentedPublicClass:SupportUtils.kt$SupportUtils$MozillaPage</ID>
     <ID>UndocumentedPublicClass:SupportUtils.kt$SupportUtils$SumoTopic</ID>
@@ -838,7 +836,6 @@
     <ID>UndocumentedPublicFunction:StartupTypeTelemetry.kt$StartupTypeTelemetry$fun attachOnHomeActivityOnCreate(lifecycle: Lifecycle)</ID>
     <ID>UndocumentedPublicFunction:StorageStatsMetrics.kt$StorageStatsMetrics$@OptIn(DelicateCoroutinesApi::class) // GlobalScope usage fun report(context: Context)</ID>
     <ID>UndocumentedPublicFunction:StorageStatsMetrics.kt$StorageStatsMetrics$@VisibleForTesting(otherwise = PRIVATE) @WorkerThread // queryStatsForUid fun reportSync(context: Context)</ID>
-    <ID>UndocumentedPublicFunction:StudiesView.kt$StudiesView$@Suppress("TooGenericExceptionCaught", "ApplySharedPref") fun bind()</ID>
     <ID>UndocumentedPublicFunction:SupportUtils.kt$SupportUtils$fun createAuthCustomTabIntent(context: Context, url: String): Intent</ID>
     <ID>UndocumentedPublicFunction:SupportUtils.kt$SupportUtils$fun createCustomTabIntent(context: Context, url: String): Intent</ID>
     <ID>UndocumentedPublicFunction:SupportUtils.kt$SupportUtils$fun getMozillaPageUrl(page: MozillaPage, locale: Locale = Locale.getDefault()): String</ID>

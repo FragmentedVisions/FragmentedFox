@@ -403,11 +403,8 @@
 
     Title of the remove studies button
   -->
-  <string name="studies_remove">हटाउनुहोस्</string>
   <!-- Title of the active section on the studies list -->
-  <string name="studies_active">सक्रिय</string>
   <!-- Learn more link for studies, links to an article for more information about studies. -->
-  <string name="studies_learn_more">थप जान्नुहोस्</string>
   <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->
   <string name="add_tab">ट्याब थप्नुहोस्</string>
   <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->

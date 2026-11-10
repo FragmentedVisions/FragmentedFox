@@ -6,7 +6,6 @@ import org.junit.Test
 import org.mozilla.fenix.settings.datachoices.ChoiceAction
 import org.mozilla.fenix.settings.datachoices.DataChoicesState
 import org.mozilla.fenix.settings.datachoices.SettingsLoaded
-import org.mozilla.fenix.settings.datachoices.StudiesLoaded
 import org.mozilla.fenix.settings.datachoices.dataChoicesReducer
 
 class DataChoicesReducerTest {
@@ -14,7 +13,6 @@ class DataChoicesReducerTest {
     private val defaultState = DataChoicesState(
         telemetryEnabled = false,
         usagePingEnabled = false,
-        studiesEnabled = false,
         selectedCrashOption = CrashReportOption.Ask,
     )
 
@@ -44,20 +42,11 @@ class DataChoicesReducerTest {
         val action = SettingsLoaded(
             telemetryEnabled = true,
             usagePingEnabled = true,
-            studiesEnabled = true,
             crashReportOption = CrashReportOption.Never,
         )
         val after = dataChoicesReducer(defaultState, action)
         assertEquals(true, after.telemetryEnabled)
         assertEquals(true, after.usagePingEnabled)
-        assertEquals(true, after.studiesEnabled)
         assertEquals(CrashReportOption.Never, after.selectedCrashOption)
-    }
-
-    @Test
-    fun `when studies are loaded then studiesEnabled is updated`() {
-        val before = defaultState.copy(studiesEnabled = false)
-        val after = dataChoicesReducer(before, StudiesLoaded(newValue = true))
-        assertEquals(true, after.studiesEnabled)
     }
 }

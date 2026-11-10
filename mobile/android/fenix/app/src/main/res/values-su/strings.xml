@@ -658,9 +658,7 @@
   <!-- Text displayed when there are no exceptions, with learn more link that brings users to a tracking protection SUMO page -->
   <string name="exceptions_empty_message_learn_more_link">Lenyepan</string>
   <!-- Title for studies preferences -->
-  <string name="preference_experiments_2">Studi</string>
   <!-- Summary for studies preferences -->
-  <string name="preference_experiments_summary_2" tools:ignore="BrandUsage">Ngidinan Mozilla masang jeung ngajalankeun studi</string>
   <!-- Preference for reconnecting to FxA sync -->
   <string name="preferences_sync_sign_in_to_reconnect">Asup pikeun nyambungkeun deui</string>
   <!-- Preference for removing FxA account -->
@@ -824,11 +822,8 @@
 
     Title of the remove studies button
   -->
-  <string name="studies_remove">Piceun</string>
   <!-- Title of the active section on the studies list -->
-  <string name="studies_active">Aktip</string>
   <!-- Learn more link for studies, links to an article for more information about studies. -->
-  <string name="studies_learn_more">Lenyepan</string>
   <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->
   <string name="add_tab">Tambah tab</string>
   <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->

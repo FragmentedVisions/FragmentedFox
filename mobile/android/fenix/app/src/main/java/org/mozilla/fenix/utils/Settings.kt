@@ -622,16 +622,6 @@ class Settings(
     )
 
     /**
-     * Controls whether the user is opted into rollouts (remote improvements).
-     * Rollouts are completely decoupled from telemetry and experiments, so users
-     * can receive feature updates regardless of their telemetry or experiment settings.
-     */
-    var isRolloutsEnabled by booleanPreference(
-        key = appContext.getPreferenceKey(R.string.pref_key_rollouts),
-        default = { appContext.components.nimbus.sdk.rolloutParticipation },
-    )
-
-    /**
      * Timestamp in milliseconds when the "Set as default browser" system prompt was requested.
      * Used to calculate the response time and detect if the prompt was automatically suppressed
      * by the system (e.g., when "Don't ask again" is active).

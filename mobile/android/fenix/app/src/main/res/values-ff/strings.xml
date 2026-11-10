@@ -462,7 +462,6 @@
   <!-- Title of inactive tabs preference -->
   <string name="preferences_inactive_tabs_title">Tabbe ɗe a yillaaki e nder jonte ɗiɗi maa ndirtine to lowre dooyorde toh.</string>
   <!-- Title of the active section on the studies list -->
-  <string name="studies_active">Ena hurmi</string>
   <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->
   <string name="add_tab">Ɓeydu tabbere</string>
   <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->

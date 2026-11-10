@@ -4,7 +4,6 @@
 
 package org.mozilla.fenix.settings.datachoices
 
-import androidx.navigation.NavController
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -14,11 +13,9 @@ import mozilla.components.lib.crash.store.CrashReportOption
 import mozilla.components.lib.state.Middleware
 import mozilla.components.lib.state.Store
 import mozilla.components.service.nimbus.NimbusApi
-import org.mozilla.fenix.R
 import org.mozilla.fenix.components.metrics.MetricController
 import org.mozilla.fenix.components.metrics.MetricServiceType
 import org.mozilla.fenix.crashes.SettingsCrashReportCache
-import org.mozilla.fenix.ext.nav
 import org.mozilla.fenix.settings.SupportUtils
 import org.mozilla.fenix.utils.Settings
 
@@ -30,7 +27,6 @@ internal class DataChoicesMiddleware(
     private val metrics: MetricController,
     private val crashReporter: CrashReporter,
     private val learnMoreClicked: (sumoTopic: SupportUtils.SumoTopic) -> Unit,
-    private val navController: NavController?,
     private val crashReportCache: SettingsCrashReportCache = SettingsCrashReportCache(settings),
     private val scope: CoroutineScope = CoroutineScope(Dispatchers.IO),
 ) : Middleware<DataChoicesState, DataChoicesAction> {
@@ -48,21 +44,15 @@ internal class DataChoicesMiddleware(
                     SettingsLoaded(
                         telemetryEnabled = settings.isTelemetryEnabled,
                         usagePingEnabled = settings.isDailyUsagePingEnabled,
-                        studiesEnabled = settings.isExperimentationEnabled,
                         crashReportOption = crashReportCache.getReportOption(),
                     ),
                 )
             }
             is ChoiceAction.TelemetryClicked -> {
                 updateTelemetryChoice()
-                store.dispatch(StudiesLoaded(settings.isExperimentationEnabled))
             }
             is ChoiceAction.UsagePingClicked -> {
                 updateUsageChoice()
-            }
-            is ChoiceAction.StudiesClicked -> {
-                val navAction = DataChoicesFragmentDirections.actionDataChoicesFragmentToStudiesFragment()
-                navController?.nav(R.id.dataChoicesFragment, navAction)
             }
             is ChoiceAction.ReportOptionClicked -> scope.launch {
                 updateCrashChoice(action.reportOption)
@@ -77,7 +67,6 @@ internal class DataChoicesMiddleware(
             LearnMore.UsagePingLearnMoreClicked -> {
                 learnMoreClicked(SupportUtils.SumoTopic.USAGE_PING_SETTINGS)
             }
-            is StudiesLoaded -> {}
             is SettingsLoaded -> {}
             is ChoiceAction.ScrolledToItem -> {}
         }

@@ -945,7 +945,6 @@
   <!-- Title Headers for data collection settings screen -->
   <string name="crash_reports_data_category">Izvještaji o padu programa</string>
   <string name="usage_data_category">Podaci o korištenju</string>
-  <string name="studies_data_category">Studije</string>
   <string name="technical_data_category">Tehnički podaci</string>
   <string name="crash_reporting_description">Izvještaji o padu programa nam omogućavaju da dijagnosticiramo i popravimo probleme s pretraživačem. Izvještaji mogu uključivati lične ili osjetljive podatke.</string>
   <!-- Section title for campaign measurement in data collections screen -->
@@ -956,9 +955,7 @@
   -->
   <!-- Learn more link for marketing data preference -->
   <!-- Title for studies preferences -->
-  <string name="preference_experiments_2">Studije</string>
   <!-- Summary for studies preferences -->
-  <string name="preference_experiments_summary_2" tools:ignore="BrandUsage">Dozvoljava Mozilla-i da instalira i pokrene studije</string>
   <!--
     Turn On Sync Preferences
 
@@ -1148,11 +1145,8 @@
 
     Title of the remove studies button
   -->
-  <string name="studies_remove">Ukloni</string>
   <!-- Title of the active section on the studies list -->
-  <string name="studies_active">Aktivno</string>
   <!-- Learn more link for studies, links to an article for more information about studies. -->
-  <string name="studies_learn_more">Saznajte više</string>
   <!--
     Sessions
 

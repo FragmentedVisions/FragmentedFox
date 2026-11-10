@@ -798,13 +798,10 @@
   <string name="exceptions_empty_message_description">An nemedennoù a laosk acʼhanocʼh da ziweredekaat ar gwarez heuliañ evit lecʼhiennoù ʼzo.</string>
   <!-- Text displayed when there are no exceptions, with learn more link that brings users to a tracking protection SUMO page -->
   <string name="exceptions_empty_message_learn_more_link">Gouzout hirocʼh</string>
-  <string name="studies_data_category">Studioù</string>
   <string name="technical_data_category">Roadennoù teknikel</string>
   <string name="crash_reporting_description">Gant an danevelloù sac’hañ e c’hallomp kempenn ar c’hudennoù er merdeer. An danevelloù a c’hall kaout roadennoù personel pe kizidik eno.</string>
   <!-- Title for studies preferences -->
-  <string name="preference_experiments_2">Studioù</string>
   <!-- Summary for studies preferences -->
-  <string name="preference_experiments_summary_2" tools:ignore="BrandUsage">Aotren Mozilla da staliañ ha da luskañ studioù</string>
   <!-- Preference for reconnecting to FxA sync -->
   <string name="preferences_sync_sign_in_to_reconnect">Kennaskit en-dro</string>
   <!-- Preference for removing FxA account -->
@@ -972,11 +969,8 @@
 
     Title of the remove studies button
   -->
-  <string name="studies_remove">Dilemel</string>
   <!-- Title of the active section on the studies list -->
-  <string name="studies_active">Oberiant</string>
   <!-- Learn more link for studies, links to an article for more information about studies. -->
-  <string name="studies_learn_more">Gouzout hiroc’h</string>
   <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->
   <string name="add_tab">Ouzhpennañ un ivinell</string>
   <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->

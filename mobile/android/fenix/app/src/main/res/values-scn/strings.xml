@@ -758,16 +758,6 @@
   <!-- Dialog button text for cancelling app icon change -->
   <string name="restart_warning_dialog_button_negative">Sfai</string>
   <!--
-    Add-ons general availability nimbus message
-
-    Title of the Nimbus message for extension general availability
-  -->
-  <string name="addon_ga_message_title_2" tools:ignore="UnusedResources">Sunnu dispunìbbili stinneri novi</string>
-  <!-- Body of the Nimbus message for add-ons general availability. 'Firefox' intentionally hardcoded here -->
-  <string name="addon_ga_message_body" tools:ignore="BrandUsage,UnusedResources">Scopri cchiù assai di centu stinneri novi chi ti pirmèttinu di pirsunalizzari Firefox.</string>
-  <!-- Button text of the Nimbus message for extensions general availability. -->
-  <string name="addon_ga_message_button_2" tools:ignore="UnusedResources">Scopri i stinneri</string>
-  <!--
     Extension process crash dialog to user
 
     Title of the extension crash dialog shown to the user when enough errors have occurred with extensions and they need to be temporarily disabled
@@ -1036,8 +1026,6 @@
   <string name="close_tabs_after_one_week">Doppu na simana</string>
   <!-- Option for auto closing tabs that will auto close tabs after one month -->
   <string name="close_tabs_after_one_month">Doppu un misi</string>
-  <!-- Title of preference that allows a user to specify the auto-close settings for open tabs -->
-  <string name="preference_auto_close_tabs" tools:ignore="UnusedResources">Chiuji ’n autumàticu i schedi graputi</string>
   <!--
     Opening screen
 
@@ -1687,8 +1675,6 @@
   <string name="sync_add_new_device_connect_button">Culleja n’autru dispusitivu…</string>
   <!-- A message template for the shared link with a footer. %1$s is the shared link, %2$s is the app name (e.g. Firefox) and %3$s is a download link for the app. -->
   <string name="sent_from_firefox_template" tools:ignore="UnusedResources">%1$s\n\nMannatu di %2$s 🦊 Prova u navicaturi mòbbili: %3$s</string>
-  <!-- A short message template for the shared link with a footer. %1$s is the shared link, %2$s is the app name (e.g. Firefox) and %3$s is a download link for the app. -->
-  <string name="sent_from_firefox_template_short" tools:ignore="UnusedResources">%1$s\n\nMannatu di %2$s 🦊 %3$s</string>
   <!--
     Notifications
 
@@ -2079,8 +2065,6 @@
   <string name="about_privacy_notice">Abbisu di privatizza</string>
   <!-- About page link text to open know your rights link -->
   <string name="about_know_your_rights">Canusci i to diritti</string>
-  <!-- About page link text to open terms of use link -->
-  <string name="about_terms_of_use" tools:ignore="UnusedResources">Tèrmini di sirbizzu</string>
   <!-- About page link text to open licensing information link -->
   <string name="about_licensing_information">Nfurmazzioni ncapu â licenza</string>
   <!-- About page link text to open a screen with libraries that are used -->
@@ -2423,10 +2407,6 @@
   <string name="saved_login_password_required_2">Metti na chiavi</string>
   <!-- The error message in add login view when username field is blank. -->
   <string name="saved_login_username_required_2">Metti un nomu utenti</string>
-  <!-- The error message in add login view when hostname field is blank. -->
-  <string name="saved_login_hostname_required" tools:ignore="UnusedResources">Nomu dû sirburi ubbligatoriu</string>
-  <!-- The error message in add login view when hostname field is blank. -->
-  <string name="saved_login_hostname_required_2" tools:ignore="UnusedResources">Metti nu nnirizzu</string>
   <!-- Voice search button content description -->
   <string name="voice_search_content_description">Risciduta vucali</string>
   <!-- Voice search prompt description displayed after the user presses the voice search button -->
@@ -2511,16 +2491,6 @@
   <string name="inactive_tabs_expand_content_description">Allarga schedi fermi</string>
   <!-- Content description for collapsing the inactive tabs section. -->
   <string name="inactive_tabs_collapse_content_description">Cumprimi schedi fermi</string>
-  <!--
-    Inactive tabs auto-close message in the tabs tray
-
-    The header text of the auto-close message when the user is asked if they want to turn on the auto-closing of inactive tabs.
-  -->
-  <string name="inactive_tabs_auto_close_message_header" tools:ignore="UnusedResources">Chiùjiri ’n autumàticu doppu un misi?</string>
-  <!-- A description below the header to notify the user what the inactive tabs auto-close feature is. -->
-  <string name="inactive_tabs_auto_close_message_description" tools:ignore="BrandUsage,UnusedResources">Firefox po chiùjiri i schedi chi nun vidisti nna l’ùrtimu misi.</string>
-  <!-- A call to action below the description to allow the user to turn on the auto closing of inactive tabs. -->
-  <string name="inactive_tabs_auto_close_message_action" tools:ignore="UnusedResources">ATTIVA CHIUJUTA AUTUMÀTICA</string>
   <!-- Text for the snackbar to confirm auto-close is enabled for inactive tabs -->
   <string name="inactive_tabs_auto_close_message_snackbar">Chiujuta autumàtica attiva</string>
   <!--
@@ -2928,16 +2898,6 @@
   <string name="debug_drawer_tab_tools_tab_creation_tool_button_text_inactive">Junci ê schedi fermi</string>
   <!-- The button text to add tabs to the private tab group in the tab creation tool. -->
   <string name="debug_drawer_tab_tools_tab_creation_tool_button_text_private">Junci ê schedi privati</string>
-  <!--
-    Microsurvey
-    Note: Some strings are marked as unused as they are referenced via the Nimbus experimentation
-    platform and have no persistent reference in code
-
-    Prompt view
-
-    The microsurvey prompt title. Note: The word "Firefox" should NOT be translated
-  -->
-  <string name="micro_survey_prompt_title" tools:ignore="BrandUsage,UnusedResources">Ajùtani a fari megghiu Firefox. Cci voli sulu un minutu.</string>
   <!-- The continue button label -->
   <string name="micro_survey_continue_button_label" tools:ignore="UnusedResources">Cuntinua</string>
   <!--
@@ -2950,8 +2910,6 @@
   <string name="micro_survey_privacy_notice_2">Abbisu di privatizza</string>
   <!-- The submit button label text -->
   <string name="micro_survey_submit_button_label">Manna</string>
-  <!-- The survey completion header -->
-  <string name="micro_survey_survey_header_confirmation" tools:ignore="UnusedResources">Ntirbista cumpleta</string>
   <!-- The survey completion confirmation text -->
   <string name="micro_survey_feedback_confirmation">Grazzi pî to pinzeri!</string>
   <!-- Option for likert scale -->
@@ -2966,24 +2924,10 @@
   <string name="likert_scale_option_5" tools:ignore="UnusedResources">Assai dissatisfatu/a</string>
   <!-- Option for likert scale -->
   <string name="likert_scale_option_6" tools:ignore="UnusedResources">Nun l’usu</string>
-  <!-- Option for likert scale. Note: The word "Firefox" should NOT be translated. -->
-  <string name="likert_scale_option_7" tools:ignore="BrandUsage,UnusedResources">Nun fazzu risciduti cu Firefox</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_8" tools:ignore="UnusedResources">Nun usu a sincrunizzazzioni</string>
   <!-- Text shown in prompt for printing microsurvey. "sec" It's an abbreviation for "second". Note: The word "Firefox" should NOT be translated. -->
   <string name="microsurvey_prompt_printing_title" tools:ignore="BrandUsage,UnusedResources">Ajùtani a fari megghiu Firefox. Cci voli sulu un minutu</string>
-  <!-- Text shown in prompt for search microsurvey. Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_prompt_search_title" tools:ignore="BrandUsage,UnusedResources">Ajùtani a fari megghiu i risciduti nni Firefox. Cci voli sulu un minutu</string>
-  <!-- Text shown in prompt for sync microsurvey. Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_prompt_sync_title" tools:ignore="BrandUsage,UnusedResources">Ajùtani a fari megghiu a sincrunizzazzioni nni Firefox. Cci voli sulu un minutu</string>
   <!-- Text shown in the survey title for printing microsurvey. Note: The word "Firefox" should NOT be translated. -->
   <string name="microsurvey_survey_printing_title" tools:ignore="BrandUsage,UnusedResources">Quantu sì satisfatu/a dâ stampa di Firefox?</string>
-  <!-- Text shown in the survey title for homepage microsurvey. Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_homepage_title" tools:ignore="BrandUsage,UnusedResources">Quantu sì satisfatu/a dâ pàggina mastra di Firefox?</string>
-  <!-- Text shown in the survey title for search experience microsurvey. Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_search_title" tools:ignore="BrandUsage,UnusedResources">Quantu sì satisfatu/a dâ spirienza di risciduta di Firefox?</string>
-  <!-- Text shown in the survey title for sync experience microsurvey. Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_sync_title" tools:ignore="BrandUsage,UnusedResources">Quantu sì satisfatu/a dâ spirienza di scinrunizzazzioni di Firefox?</string>
   <!--
     Accessibility
 
@@ -3086,40 +3030,6 @@
     Text shown as a label or tag to indicate a feature or area is still undergoing active development. Note that here "Beta" should not be translated, as it is used as an icon styled element.
   -->
   <string name="beta_feature">BETA</string>
-  <!--
-    Root certificate expiration warnings
-
-    These strings for homepage cards and push notifications to be pushed to users running outdated versions of Firefox. We want to encourage these users to update to the latest version so their extensions and other features don't stop working when Firefox's old root certificate expires on 2025-03-14. For more information, see this SUMO article: https://support.mozilla.org/kb/root-certificate-expiration !
-
-    Homepage card button to open Google Play Store. "Update" is a verb.
-  -->
-  <string name="certificate_warning_homepage_card_update_now_button" tools:ignore="UnusedResources">Attualizza ora</string>
-  <!-- Homepage card title about old Firefox version. "Update" is a verb. Note: The word "Firefox" should NOT be translated. -->
-  <string name="certificate_warning_homepage_card_hca1_title" tools:ignore="BrandUsage,UnusedResources">Attualizza u to navicaturi Firefox</string>
-  <!-- Homepage card message about old Firefox version -->
-  <string name="certificate_warning_homepage_card_hca1_message" tools:ignore="UnusedResources">Un cirtificatu principali sta scadennu, causannu u bloccu di certi carattarìstichi jornu 14 di marzu.</string>
-  <!-- Homepage card title about old Firefox version. "Update" is a verb. -->
-  <string name="certificate_warning_homepage_card_hcr1_title" tools:ignore="UnusedResources">Attualizza prima dû 14 di marzu</string>
-  <!-- Homepage card message about old Firefox version. Note: The word "Firefox" should NOT be translated. -->
-  <string name="certificate_warning_homepage_card_hcr1_message" tools:ignore="BrandUsage,UnusedResources">Un cirtificatu principali sta scadennu, causannu u bloccu dâ to virsioni di Firefox.</string>
-  <!-- Homepage card title about old Firefox version -->
-  <string name="certificate_warning_homepage_card_hcw2_title" tools:ignore="UnusedResources">Arristaru cchiù picca di 7 jorna p’attualizzari</string>
-  <!-- Homepage card message about old Firefox version. Note: The word "Firefox" should NOT be translated. -->
-  <string name="certificate_warning_homepage_card_hcw2_message" tools:ignore="BrandUsage,UnusedResources">U 14 di marzu, i juncitini e autri carattirìstichi di Firefox accàbbanu di funziunari picchì scadi un cirtificatu principali.</string>
-  <!-- Homepage card title about old Firefox version. Note: The word "Firefox" should NOT be translated. -->
-  <string name="certificate_warning_homepage_card_hcw3_title" tools:ignore="BrandUsage,UnusedResources">Ùrtima pussibbilità pi cuntinuari a usari Firefox</string>
-  <!-- Homepage card message about old Firefox version. Note: The word "Firefox" should NOT be translated. -->
-  <string name="certificate_warning_homepage_card_hcw3_message" tools:ignore="BrandUsage,UnusedResources">A to virsioni di Firefox nun funziona cchiù dû 14 di marzu, picchì scadi un cirtificatu principali.</string>
-  <!-- Push notification title about old Firefox version. "Update" is a noun. -->
-  <string name="certificate_warning_push_notification_update_recommended_title" tools:ignore="UnusedResources">Attualizzu cunzigghiatu</string>
-  <!-- Push notification message about old Firefox version -->
-  <string name="certificate_warning_push_notification_pnr1_message" tools:ignore="UnusedResources">I juncitini e certi carattarìstichi nun funziònanu cchiù dû 14 di marzu.</string>
-  <!-- Push notification title about old Firefox version. Note: The word "Firefox" should NOT be translated. -->
-  <string name="certificate_warning_push_notification_pnw2_title" tools:ignore="BrandUsage,UnusedResources">Stai usannu na virsioni vecchia di Firefox</string>
-  <!-- Push notification message about old Firefox version. "Update" is a verb. -->
-  <string name="certificate_warning_push_notification_pnw2_message" tools:ignore="UnusedResources">Attualizza prima dû 14 di marzu pi cuntinuari a usari i juncitini e autri carattarìstichi.</string>
-  <!-- Push notification message about old Firefox version -->
-  <string name="certificate_warning_push_notification_pnw3_message" tools:ignore="UnusedResources">Certi carattarìstichi nun funziònanu cchiù di dumani.</string>
   <!-- TextField Design System Component -->
 
   <!--

@@ -736,16 +736,6 @@
   <!-- Title for the "Gradients" group of alternative app icon variants in the icon picker screen. This group contains icons with gradient backgrounds inspired by natural light conditions. -->
   <string name="alternative_app_icon_group_gradients">ቅልቅል ቀለሞች</string>
   <!--
-    Add-ons general availability nimbus message
-
-    Title of the Nimbus message for extension general availability
-  -->
-  <string name="addon_ga_message_title_2" tools:ignore="UnusedResources">አዲስ ቅጥያዎች አሁን ይገኛሉ</string>
-  <!-- Body of the Nimbus message for add-ons general availability. 'Firefox' intentionally hardcoded here -->
-  <string name="addon_ga_message_body" tools:ignore="BrandUsage,UnusedResources">Firefoxን የራስዎ ለማድረግ የሚያስችሉዎትን 100+ አዲስ ቅጥያዎችን ይመልከቱ።</string>
-  <!-- Button text of the Nimbus message for extensions general availability. -->
-  <string name="addon_ga_message_button_2" tools:ignore="UnusedResources">ቅጥያዎችን ያስሱ</string>
-  <!--
     Extension process crash dialog to user
 
     Title of the extension crash dialog shown to the user when enough errors have occurred with extensions and they need to be temporarily disabled
@@ -998,8 +988,6 @@
   <string name="close_tabs_after_one_week">ከአንድ ሳምንት በኋላ</string>
   <!-- Option for auto closing tabs that will auto close tabs after one month -->
   <string name="close_tabs_after_one_month">ከአንድ ወር በኋላ</string>
-  <!-- Title of preference that allows a user to specify the auto-close settings for open tabs -->
-  <string name="preference_auto_close_tabs" tools:ignore="UnusedResources">ክፍት ትሮችን በራስ-ሰር ዝጋ</string>
   <!--
     Opening screen
 
@@ -1626,8 +1614,6 @@
   <string name="sync_add_new_device_connect_button">ሌላ መሳሪያ ያገናኙ…</string>
   <!-- A message template for the shared link with a footer. %1$s is the shared link, %2$s is the app name (e.g. Firefox) and %3$s is a download link for the app. -->
   <string name="sent_from_firefox_template" tools:ignore="UnusedResources">%1$s\n\nከ%2$s የተላከ 🦊 የሞባይል አሳሹን ይሞክሩ፡- %3$s</string>
-  <!-- A short message template for the shared link with a footer. %1$s is the shared link, %2$s is the app name (e.g. Firefox) and %3$s is a download link for the app. -->
-  <string name="sent_from_firefox_template_short" tools:ignore="UnusedResources">%1$s\n\nከ%2$s 🦊 %3$s የተላከ</string>
   <!--
     Notifications
 
@@ -2008,8 +1994,6 @@
   <string name="about_privacy_notice">የግላዊነት ማሳወቂያ</string>
   <!-- About page link text to open know your rights link -->
   <string name="about_know_your_rights">መብቶትን ይወቁ</string>
-  <!-- About page link text to open terms of use link -->
-  <string name="about_terms_of_use" tools:ignore="UnusedResources">የአጠቃቀም መመሪያ</string>
   <!-- About page link text to open licensing information link -->
   <string name="about_licensing_information">የፈቃድ መረጃ</string>
   <!-- About page link text to open a screen with libraries that are used -->
@@ -2348,10 +2332,6 @@
   <string name="saved_login_password_required_2">የይለፍ ቃል ያስገቡ</string>
   <!-- The error message in add login view when username field is blank. -->
   <string name="saved_login_username_required_2">የተጠቃሚ ስም ያስገቡ</string>
-  <!-- The error message in add login view when hostname field is blank. -->
-  <string name="saved_login_hostname_required" tools:ignore="UnusedResources">የአስተናጋጅ ስም ያስፈልጋል</string>
-  <!-- The error message in add login view when hostname field is blank. -->
-  <string name="saved_login_hostname_required_2" tools:ignore="UnusedResources">የድር አድራሻ ያስገቡ</string>
   <!-- Voice search button content description -->
   <string name="voice_search_content_description">የድምጽ ፍለጋ</string>
   <!-- Voice search prompt description displayed after the user presses the voice search button -->
@@ -2430,16 +2410,6 @@
   <string name="inactive_tabs_expand_content_description">የቦዘኑ ትሮችን ዘርጋ</string>
   <!-- Content description for collapsing the inactive tabs section. -->
   <string name="inactive_tabs_collapse_content_description">የቦዘኑ ትሮችን ሰብስብ</string>
-  <!--
-    Inactive tabs auto-close message in the tabs tray
-
-    The header text of the auto-close message when the user is asked if they want to turn on the auto-closing of inactive tabs.
-  -->
-  <string name="inactive_tabs_auto_close_message_header" tools:ignore="UnusedResources">ከአንድ ወር በኋላ በራስ-ሰር ይዘጋ?</string>
-  <!-- A description below the header to notify the user what the inactive tabs auto-close feature is. -->
-  <string name="inactive_tabs_auto_close_message_description" tools:ignore="BrandUsage,UnusedResources">Firefox ባለፈው ወር ውስጥ ያላዩዋቸውን ትሮች ሊዘጋ ይችላል።</string>
-  <!-- A call to action below the description to allow the user to turn on the auto closing of inactive tabs. -->
-  <string name="inactive_tabs_auto_close_message_action" tools:ignore="UnusedResources">ራስ-ሰር ዝጋን ያብሩ</string>
   <!-- Text for the snackbar to confirm auto-close is enabled for inactive tabs -->
   <string name="inactive_tabs_auto_close_message_snackbar">በራስ-ሰር መዝጋት ነቅቷል</string>
   <!--
@@ -2837,16 +2807,6 @@
   <string name="debug_drawer_tab_tools_tab_creation_tool_button_text_inactive">ወደ ቦዘኑ ትሮች ያክሉ</string>
   <!-- The button text to add tabs to the private tab group in the tab creation tool. -->
   <string name="debug_drawer_tab_tools_tab_creation_tool_button_text_private">ወደ የግል ትሮች ያክሉ</string>
-  <!--
-    Microsurvey
-    Note: Some strings are marked as unused as they are referenced via the Nimbus experimentation
-    platform and have no persistent reference in code
-
-    Prompt view
-
-    The microsurvey prompt title. Note: The word "Firefox" should NOT be translated
-  -->
-  <string name="micro_survey_prompt_title" tools:ignore="BrandUsage,UnusedResources">Firefoxን የተሻለ እንድናደርግ ይርዱን። አንድ ደቂቃ ብቻ ነው የሚወስደው።</string>
   <!-- The continue button label -->
   <string name="micro_survey_continue_button_label" tools:ignore="UnusedResources">ቀጥል</string>
   <!--
@@ -2859,8 +2819,6 @@
   <string name="micro_survey_privacy_notice_2">የግላዊነት ማስታወቂያ</string>
   <!-- The submit button label text -->
   <string name="micro_survey_submit_button_label">አስገባ</string>
-  <!-- The survey completion header -->
-  <string name="micro_survey_survey_header_confirmation" tools:ignore="UnusedResources">የዳሰሳ ጥናት ተጠናቅቋል</string>
   <!-- The survey completion confirmation text -->
   <string name="micro_survey_feedback_confirmation">ለአስተያየትዎ እናመሰግናለን!</string>
   <!-- Option for likert scale -->
@@ -2875,24 +2833,10 @@
   <string name="likert_scale_option_5" tools:ignore="UnusedResources">በጣም አልረካም</string>
   <!-- Option for likert scale -->
   <string name="likert_scale_option_6" tools:ignore="UnusedResources">እኔ አልጠቀምበትም</string>
-  <!-- Option for likert scale. Note: The word "Firefox" should NOT be translated. -->
-  <string name="likert_scale_option_7" tools:ignore="BrandUsage,UnusedResources">ፍለጋን በFirefox አልጠቀምም</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_8" tools:ignore="UnusedResources">ማመሳሰልን አልጠቀምም</string>
   <!-- Text shown in prompt for printing microsurvey. "sec" It's an abbreviation for "second". Note: The word "Firefox" should NOT be translated. -->
   <string name="microsurvey_prompt_printing_title" tools:ignore="BrandUsage,UnusedResources">በFirefox ማተምን የተሻለ ለማድረግ ያግዙ። አንድ ሰከንድ ብቻ ነው የሚወስደው</string>
-  <!-- Text shown in prompt for search microsurvey. Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_prompt_search_title" tools:ignore="BrandUsage,UnusedResources">በFirefox ውስጥ ፍለጋን የተሻለ ለማድረግ ያግዙ። አንድ ደቂቃ ብቻ ነው የሚወስደው</string>
-  <!-- Text shown in prompt for sync microsurvey. Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_prompt_sync_title" tools:ignore="BrandUsage,UnusedResources">በFirefox ውስጥ ማመሳሰልን የተሻለ ለማድረግ ያግዙ። አንድ ደቂቃ ብቻ ነው የሚወስደው</string>
   <!-- Text shown in the survey title for printing microsurvey. Note: The word "Firefox" should NOT be translated. -->
   <string name="microsurvey_survey_printing_title" tools:ignore="BrandUsage,UnusedResources">በFirefox ውስጥ በማተም ምን ያህል ረክተዋል?</string>
-  <!-- Text shown in the survey title for homepage microsurvey. Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_homepage_title" tools:ignore="BrandUsage,UnusedResources">በFirefox መነሻ ገጽዎ ምን ያህል ረክተዋል?</string>
-  <!-- Text shown in the survey title for search experience microsurvey. Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_search_title" tools:ignore="BrandUsage,UnusedResources">በFirefox ውስጥ ባለው የፍለጋ ልምድ ምን ያህል ረክተዋል?</string>
-  <!-- Text shown in the survey title for sync experience microsurvey. Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_sync_title" tools:ignore="BrandUsage,UnusedResources">በFirefox ውስጥ ባለው የማመሳሰል ልምድ ምን ያህል ረክተዋል?</string>
   <!--
     Accessibility
 
@@ -2975,26 +2919,6 @@
     Text shown as a label or tag to indicate a feature or area is still undergoing active development. Note that here "Beta" should not be translated, as it is used as an icon styled element.
   -->
   <string name="beta_feature">BETA</string>
-  <!--
-    Root certificate expiration warnings
-
-    These strings for homepage cards and push notifications to be pushed to users running outdated versions of Firefox. We want to encourage these users to update to the latest version so their extensions and other features don't stop working when Firefox's old root certificate expires on 2025-03-14. For more information, see this SUMO article: https://support.mozilla.org/kb/root-certificate-expiration !
-
-    Homepage card button to open Google Play Store. "Update" is a verb.
-  -->
-  <string name="certificate_warning_homepage_card_update_now_button" tools:ignore="UnusedResources">አሁን አዘምን</string>
-  <!-- Homepage card title about old Firefox version. "Update" is a verb. Note: The word "Firefox" should NOT be translated. -->
-  <string name="certificate_warning_homepage_card_hca1_title" tools:ignore="BrandUsage,UnusedResources">የFኢረፎሽ ማሰሻዎን ያዘምኑ</string>
-  <!-- Homepage card message about old Firefox version -->
-  <string name="certificate_warning_homepage_card_hca1_message" tools:ignore="UnusedResources">የዋና ሰርተፍኬት ጊዜው ያበቃል፣ ይህም አንዳንድ ባህሪያት ማርች 14 ላይ መስራት እንዲያቆሙ ያደርጋል።</string>
-  <!-- Homepage card title about old Firefox version. "Update" is a verb. -->
-  <string name="certificate_warning_homepage_card_hcr1_title" tools:ignore="UnusedResources">ከማርች 14 በፊት ያዘምኑ</string>
-  <!-- Homepage card title about old Firefox version. Note: The word "Firefox" should NOT be translated. -->
-  <string name="certificate_warning_homepage_card_hcw3_title" tools:ignore="BrandUsage,UnusedResources">የእርስዎን Firefox ለማቆየት የመጨረሻው ዕድል</string>
-  <!-- Push notification title about old Firefox version. "Update" is a noun. -->
-  <string name="certificate_warning_push_notification_update_recommended_title" tools:ignore="UnusedResources">ማዘመን ይመከራል</string>
-  <!-- Push notification title about old Firefox version. Note: The word "Firefox" should NOT be translated. -->
-  <string name="certificate_warning_push_notification_pnw2_title" tools:ignore="BrandUsage,UnusedResources">የቆየ የFirefox ስሪት ላይ ነዎት</string>
   <!-- TextField Design System Component -->
 
   <!--

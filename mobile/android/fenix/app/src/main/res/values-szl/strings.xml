@@ -608,8 +608,6 @@
   <string name="close_tabs_after_one_week">Po tydniu</string>
   <!-- Option for auto closing tabs that will auto close tabs after one month -->
   <string name="close_tabs_after_one_month">Po miesiōncu</string>
-  <!-- Title of preference that allows a user to specify the auto-close settings for open tabs -->
-  <string name="preference_auto_close_tabs" tools:ignore="UnusedResources">Autōmatyczne zawiyranie ôtwartych kart</string>
   <!--
     Opening screen
 

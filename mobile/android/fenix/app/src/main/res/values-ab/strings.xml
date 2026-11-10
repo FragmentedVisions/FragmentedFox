@@ -576,16 +576,6 @@
   <!-- Wallpaper onboarding dialog learn more button text. The button navigates to the wallpaper settings screen. -->
   <string name="wallpapers_onboarding_dialog_explore_more_button_text">Егьырҭ аҭӡамцқәа рбара</string>
   <!--
-    Add-ons general availability nimbus message
-
-    Title of the Nimbus message for extension general availability
-  -->
-  <string name="addon_ga_message_title_2" tools:ignore="UnusedResources">Анарҭбаара ҿыцқәа ыҟоуп</string>
-  <!-- Body of the Nimbus message for add-ons general availability. 'Firefox' intentionally hardcoded here -->
-  <string name="addon_ga_message_body" tools:ignore="BrandUsage,UnusedResources">Еилышәкаа анарҭбаара ҿыцқәа 100 инареиҳаны, Firefox шәхатәы ҟаҵара алзыршо.</string>
-  <!-- Button text of the Nimbus message for extensions general availability. -->
-  <string name="addon_ga_message_button_2" tools:ignore="UnusedResources">Анарҭбаарақәа раартра</string>
-  <!--
     Extension process crash dialog to user
 
     Title of the extension crash dialog shown to the user when enough errors have occurred with extensions and they need to be temporarily disabled
@@ -809,8 +799,6 @@
   <string name="close_tabs_after_one_week">Мчыбжьык ашьҭахь</string>
   <!-- Option for auto closing tabs that will auto close tabs after one month -->
   <string name="close_tabs_after_one_month">Мызкы ашьҭахь</string>
-  <!-- Title of preference that allows a user to specify the auto-close settings for open tabs -->
-  <string name="preference_auto_close_tabs" tools:ignore="UnusedResources">Иаарту абларҭақәа автоматла аркра</string>
   <!--
     Opening screen
 
@@ -1834,10 +1822,6 @@
   <string name="saved_login_password_required_2">Иҭажәгал шәмаӡажәа</string>
   <!-- The error message in add login view when username field is blank. -->
   <string name="saved_login_username_required_2">Иҭажәгал ухы иаурхәо ахьӡ</string>
-  <!-- The error message in add login view when hostname field is blank. -->
-  <string name="saved_login_hostname_required" tools:ignore="UnusedResources">Иҭажәгал асервер ахьӡ</string>
-  <!-- The error message in add login view when hostname field is blank. -->
-  <string name="saved_login_hostname_required_2" tools:ignore="UnusedResources">Иҭажәгал ауеб адрес</string>
   <!-- Voice search button content description -->
   <string name="voice_search_content_description">Бжьыла аԥшаара</string>
   <!-- Voice search prompt description displayed after the user presses the voice search button -->
@@ -1916,16 +1900,6 @@
   <string name="inactive_tabs_expand_content_description">Иактивым абларҭақәа рҭбаара</string>
   <!-- Content description for collapsing the inactive tabs section. -->
   <string name="inactive_tabs_collapse_content_description">Иактивым абларҭақәа реидкылара</string>
-  <!--
-    Inactive tabs auto-close message in the tabs tray
-
-    The header text of the auto-close message when the user is asked if they want to turn on the auto-closing of inactive tabs.
-  -->
-  <string name="inactive_tabs_auto_close_message_header" tools:ignore="UnusedResources">Мызкы ашьҭахь автоматла иаркуама?</string>
-  <!-- A description below the header to notify the user what the inactive tabs auto-close feature is. -->
-  <string name="inactive_tabs_auto_close_message_description" tools:ignore="BrandUsage,UnusedResources">Firefox иҳаҩсыз амзазы узҭамлаз анҵамҭақәа аркра алшоит.</string>
-  <!-- A call to action below the description to allow the user to turn on the auto closing of inactive tabs. -->
-  <string name="inactive_tabs_auto_close_message_action" tools:ignore="UnusedResources">АВТОМАТИКА ААРКЫРА АУРТ</string>
   <!-- Text for the snackbar to confirm auto-close is enabled for inactive tabs -->
   <string name="inactive_tabs_auto_close_message_snackbar">Автоматтә аркра аус ауеит</string>
   <!--
@@ -2252,16 +2226,6 @@
   <string name="debug_drawer_tab_tools_tab_creation_tool_button_text_inactive">Иактивым абларҭақәа рахь иацҵатәуп</string>
   <!-- The button text to add tabs to the private tab group in the tab creation tool. -->
   <string name="debug_drawer_tab_tools_tab_creation_tool_button_text_private">Ихатәу абларҭақәа рахь иацҵатәуп</string>
-  <!--
-    Microsurvey
-    Note: Some strings are marked as unused as they are referenced via the Nimbus experimentation
-    platform and have no persistent reference in code
-
-    Prompt view
-
-    The microsurvey prompt title. Note: The word "Firefox" should NOT be translated
-  -->
-  <string name="micro_survey_prompt_title" tools:ignore="BrandUsage,UnusedResources">Firefox аиӷьтәра ҳацхраа. Минуҭк ауп иаҭаххо.</string>
   <!-- The continue button label -->
   <string name="micro_survey_continue_button_label" tools:ignore="UnusedResources">Ацҵара</string>
   <!--
@@ -2274,8 +2238,6 @@
   <string name="micro_survey_privacy_notice_2">Амаӡаратә рдырраҭара</string>
   <!-- The submit button label text -->
   <string name="micro_survey_submit_button_label">Ашьҭра</string>
-  <!-- The survey completion header -->
-  <string name="micro_survey_survey_header_confirmation" tools:ignore="UnusedResources">Аҭҵаара хыркәшоуп</string>
   <!-- The survey completion confirmation text -->
   <string name="micro_survey_feedback_confirmation">Иҭабуп шәгәаанагаразы!</string>
   <!-- Option for likert scale -->
@@ -2290,24 +2252,10 @@
   <string name="likert_scale_option_5" tools:ignore="UnusedResources">Зынӡакгьы угәы ҟанаҵом</string>
   <!-- Option for likert scale -->
   <string name="likert_scale_option_6" tools:ignore="UnusedResources">Сара уи схы иасырхәом</string>
-  <!-- Option for likert scale. Note: The word "Firefox" should NOT be translated. -->
-  <string name="likert_scale_option_7" tools:ignore="BrandUsage,UnusedResources">Сара аԥшаара схы иасырхәом Firefox аҟны</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_8" tools:ignore="UnusedResources">Сара асинхрон схы иасырхәом</string>
   <!-- Text shown in prompt for printing microsurvey. "sec" It's an abbreviation for "second". Note: The word "Firefox" should NOT be translated. -->
   <string name="microsurvey_prompt_printing_title" tools:ignore="BrandUsage,UnusedResources">Firefox аҟны акьыԥхьра аиӷьтәраҿы ацхыраара. Секундк ауп иаҭаххо</string>
-  <!-- Text shown in prompt for search microsurvey. Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_prompt_search_title" tools:ignore="BrandUsage,UnusedResources">Firefox аԥшаара еиӷьны аҟаҵараҿы ацхыраара. Минуҭк ауп иаҭаххо</string>
-  <!-- Text shown in prompt for sync microsurvey. Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_prompt_sync_title" tools:ignore="BrandUsage,UnusedResources">Firefox аҟны асинхронизациа аиӷьтәразы ацхыраара. Минуҭк ауп иаҭаххо</string>
   <!-- Text shown in the survey title for printing microsurvey. Note: The word "Firefox" should NOT be translated. -->
   <string name="microsurvey_survey_printing_title" tools:ignore="BrandUsage,UnusedResources">Шаҟа угәы иақәшәозеи Firefox ала акьыԥхьра?</string>
-  <!-- Text shown in the survey title for homepage microsurvey. Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_homepage_title" tools:ignore="BrandUsage,UnusedResources">Шаҟа угәы иақәшәозеи Firefox ахатә даҟьа?</string>
-  <!-- Text shown in the survey title for search experience microsurvey. Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_search_title" tools:ignore="BrandUsage,UnusedResources">Шаҟа угәы иақәшәозеи Firefox аԥшаара?</string>
-  <!-- Text shown in the survey title for sync experience microsurvey. Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_sync_title" tools:ignore="BrandUsage,UnusedResources">Шаҟа угәы иақәшәозеи Firefox аҟны асинхронизациа?</string>
   <!--
     Accessibility
 

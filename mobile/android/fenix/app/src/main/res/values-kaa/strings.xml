@@ -578,8 +578,6 @@
   <string name="close_tabs_after_one_week">Bir hápteden keyin</string>
   <!-- Option for auto closing tabs that will auto close tabs after one month -->
   <string name="close_tabs_after_one_month">Bir aydan keyin</string>
-  <!-- Title of preference that allows a user to specify the auto-close settings for open tabs -->
-  <string name="preference_auto_close_tabs" tools:ignore="UnusedResources">Ashıq betlerdi avtomat tárizde jabıw</string>
   <!--
     Opening screen
 
@@ -1419,8 +1417,6 @@
   <string name="dialog_delete_positive">Óshiriw</string>
   <!-- Negative action of a dialog asking to delete login -->
   <string name="dialog_delete_negative">Biykarlaw</string>
-  <!-- The error message in add login view when hostname field is blank. -->
-  <string name="saved_login_hostname_required" tools:ignore="UnusedResources">Server atı talap etiledi</string>
   <!-- Voice search button content description -->
   <string name="voice_search_content_description">Dawıslı izlew</string>
   <!-- Voice search prompt description displayed after the user presses the voice search button -->
@@ -1487,16 +1483,6 @@
   <string name="inactive_tabs_expand_content_description">Aktiv emes betkerdi keńeytiw</string>
   <!-- Content description for collapsing the inactive tabs section. -->
   <string name="inactive_tabs_collapse_content_description">Aktiv emes betleri qısqartıw</string>
-  <!--
-    Inactive tabs auto-close message in the tabs tray
-
-    The header text of the auto-close message when the user is asked if they want to turn on the auto-closing of inactive tabs.
-  -->
-  <string name="inactive_tabs_auto_close_message_header" tools:ignore="UnusedResources">Bir aydan soń avtomat tárizde jabılsın ba?</string>
-  <!-- A description below the header to notify the user what the inactive tabs auto-close feature is. -->
-  <string name="inactive_tabs_auto_close_message_description" tools:ignore="BrandUsage,UnusedResources">Firefox ótken ayda kórilmegen betlerdi jabıwı múmkin.</string>
-  <!-- A call to action below the description to allow the user to turn on the auto closing of inactive tabs. -->
-  <string name="inactive_tabs_auto_close_message_action" tools:ignore="UnusedResources">AVTOMAT TÁRIZDE JABÍWDÍ QOSÍW</string>
   <!-- Text for the snackbar to confirm auto-close is enabled for inactive tabs -->
   <string name="inactive_tabs_auto_close_message_snackbar">Avtomat tárizde jabıw iske túsirilgen</string>
   <!--

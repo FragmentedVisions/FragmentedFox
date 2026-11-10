@@ -484,14 +484,6 @@
   <string name="onboarding_term_of_service_line_three" tools:ignore="BrandUsage">Nabigatzailea hobetzen laguntzeko, Firefoxek diagnostiko- eta interakzio-datuak bidaltzen ditu Mozillara. %1$s</string>
   <!-- Used as text for the link in onboarding_term_of_service_line_three. -->
   <string name="onboarding_term_of_service_line_three_link_text">Kudeatu</string>
-  <!-- Terms of use (ToU) onboarding redesign title. -->
-  <string name="onboarding_redesign_tou_title" tools:ignore="UnusedResources">Abiarazi Androideko benetako nabigatzailea</string>
-  <!-- Terms of use (ToU) first subheader. -->
-  <string name="onboarding_redesign_tou_subheader_one" tools:ignore="UnusedResources">Kargatu guneak di-da</string>
-  <!-- Terms of use (ToU) second subheader. -->
-  <string name="onboarding_redesign_tou_subheader_two" tools:ignore="UnusedResources">Jarraipenaren babes automatikoa</string>
-  <!-- Terms of use (ToU) third subheader. -->
-  <string name="onboarding_redesign_tou_subheader_three" tools:ignore="UnusedResources">Pertsonalizatzeko milaka aukera</string>
   <!--
     Terms of use (ToU) first body text. %1$s is replaced by an active link,
     using onboarding_redesign_tou_body_one_link_text as text (“Firefox Terms of Use”).
@@ -513,28 +505,12 @@
   <string name="onboarding_redesign_tou_body_three" tools:ignore="BrandUsage,UnusedResources">Nabigatzailea hobetzen laguntzeko, Firefoxek diagnostiko- eta interakzio-datuak bidaltzen ditu Mozillara. %1$s</string>
   <!-- Used as text for the link in onboarding_redesign_tou_body_three. -->
   <string name="onboarding_redesign_tou_body_three_link_text" tools:ignore="UnusedResources">Kudeatu ezarpenak</string>
-  <!-- Terms of use (ToU) onboarding page continue button label. -->
-  <string name="onboarding_redesign_tou_agree_and_continue_button_label" tools:ignore="UnusedResources">Jarraitu</string>
-  <!-- Onboarding header for the toolbar selection card. -->
-  <string name="onboarding_redesign_customize_toolbar_title" tools:ignore="UnusedResources">Non nahi duzu helbide-barra egotea?</string>
-  <!-- Onboarding label for 'Continue' button. -->
-  <string name="onboarding_redesign_continue_button" tools:ignore="UnusedResources">Jarraitu</string>
   <!-- Marketing onboarding page title. 'Firefox' is intentionally hardcoded. -->
   <!-- Marketing onboarding page opt-out checkbox. Unchecking the box does not increase data collection. Our data practices remain the same. 'Mozilla' is intentionally hardcoded. -->
   <!-- Marketing onboarding page clickable link text to "learn more" on how data is used. -->
   <!-- Marketing onboarding page button label. Button to confirm choice and start browsing. -->
-  <!-- Set to default browser onboarding redesign title. -->
-  <string name="onboarding_redesign_set_default_browser_title" tools:ignore="UnusedResources">Eskuratu jarraipenaren babes automatikoa lehenespenez</string>
-  <!-- Set to default browser onboarding redesign body. -->
-  <string name="onboarding_redesign_set_default_browser_body" tools:ignore="UnusedResources">Behin sakatzeak laguntzen du enpresek zure klikak espiatzea gelditzen.</string>
-  <!-- Sync onboarding redesign title. 'Firefox' is intentionally hardcoded. -->
-  <string name="onboarding_redesign_sync_title" tools:ignore="BrandUsage,UnusedResources">Sinkronizatu Firefox darabilzun edozein lekutan</string>
-  <!-- Sync onboarding redesign body. -->
-  <string name="onboarding_redesign_sync_body" tools:ignore="UnusedResources">Eskuratu laster-markak, fitxak eta pasahitzak edozein gailutan. Denak zifratzearekin babestuta.</string>
   <!-- Sync onboarding redesign positive button text. -->
   <string name="onboarding_redesign_sync_positive_button" tools:ignore="UnusedResources">Hasi sinkronizatzen</string>
-  <!-- Sync onboarding redesign negative button text. -->
-  <string name="onboarding_redesign_sync_negative_button" tools:ignore="UnusedResources">Une honetan ez</string>
   <!-- Marketing onboarding page title variant. “One last thing” refers to the final step or action in the onboarding process that we’re asking users to take before they can start using the browser. -->
   <!-- Marketing onboarding page body variant. 'Firefox' is intentionally hardcoded. -->
   <!-- Marketing onboarding page button label variant. Button to confirm choice and start browsing. -->
@@ -542,14 +518,8 @@
 
   <!-- "Continue" onboarding button. -->
   <string name="nova_onboarding_continue_button">Jarraitu</string>
-  <!-- "Continue browsing" onboarding button. -->
-  <string name="nova_onboarding_continue_browsing_button" tools:ignore="UnusedResources">Jarraitu nabigatzen</string>
   <!-- "Not now" onboarding button. -->
   <string name="nova_onboarding_negative_button">Une honetan ez</string>
-  <!-- "Skip" onboarding button. -->
-  <string name="nova_onboarding_skip_button" tools:ignore="UnusedResources">Saltatu</string>
-  <!-- Terms of use (ToU) onboarding title. -->
-  <string name="nova_onboarding_tou_title" tools:ignore="UnusedResources">Presta zaitez libre ibiltzeko</string>
   <!-- Terms of use (ToU) onboarding subtitle. -->
   <string name="nova_onboarding_tou_subtitle">Bizkorra, segurua eta ez zaitu salduko.\nNabigatzea hobeagoa da orain.</string>
   <!--
@@ -574,8 +544,6 @@
   <!-- Terms of use (ToU) onboarding body line three link text for nova_onboarding_tou_body_line_3. -->
   <string name="nova_onboarding_tou_body_line_3_link_text">Kudeatu ezarpenak</string>
   <!-- "Set to default" onboarding title. -->
-  <string name="nova_onboarding_set_to_default_title" tools:ignore="UnusedResources">Esan agur jarraipen-elementu beldurgarriei</string>
-  <!-- "Set to default" onboarding title. -->
   <string name="nova_onboarding_set_to_default_title_2">Ireki zure lotura guztiak integratutako pribatutasunarekin</string>
   <!-- "Set to default" onboarding subtitle. -->
   <string name="nova_onboarding_set_to_default_subtitle">Zure datuak babestu eta enpresek zure klikak espiatzetik automatikoki blokeatzen ditugu.</string>
@@ -587,14 +555,6 @@
   <string name="nova_onboarding_toolbar_selection_top_label">Goian</string>
   <!-- Toolbar selection onboarding "bottom" option label. -->
   <string name="nova_onboarding_toolbar_selection_bottom_label">Behean</string>
-  <!-- Theme selection onboarding title. -->
-  <string name="nova_onboarding_theme_selection_title" tools:ignore="UnusedResources">Aukeratu zure itxura</string>
-  <!-- Theme selection onboarding "automatic" option label. -->
-  <string name="nova_onboarding_theme_selection_automatic_label" tools:ignore="UnusedResources">Automatikoa</string>
-  <!-- Theme selection onboarding "light" option label. -->
-  <string name="nova_onboarding_theme_selection_light_label" tools:ignore="UnusedResources">Argia</string>
-  <!-- Theme selection onboarding "dark" option label. -->
-  <string name="nova_onboarding_theme_selection_dark_label" tools:ignore="UnusedResources">Iluna</string>
   <!-- Sync onboarding title. -->
   <string name="nova_onboarding_sync_title">Jarraitu utzi zenuen tokitik</string>
   <!-- Sync onboarding subtitle. -->
@@ -648,8 +608,6 @@
   <string name="nova_onboarding_add_search_widget_subtitle" tools:ignore="BrandUsage">Hasi bilaketa bakoitza zure telefonoaren hasierako pantailatik eta jakin seguru zaudela Firefoxen babes automatikoekin.</string>
   <!-- "Add search widget" onboarding button. 'Firefox' is intentionally hardcoded. -->
   <string name="nova_onboarding_add_search_widget_button" tools:ignore="BrandUsage">Gehitu Firefox widget-a</string>
-  <!-- Customize prompt onboarding title. -->
-  <string name="nova_onboarding_customize_prompt_title" tools:ignore="UnusedResources">Pertsonalizatzeko erraza eta pribatuagoa sakatze bakoitzean</string>
   <plurals name="nova_onboarding_customize_prompt_body" tools:ignore="UnusedResources">
     <!--
       Customize prompt onboarding body.
@@ -661,12 +619,6 @@
     <item quantity="one">Jarraipen-elementu %2$,d blokeatu du %1$s(e)k webean harat-honat zenbiltzan bitartean.</item>
     <item quantity="other">%2$,d jarraipen-elementu blokeatu ditu %1$s(e)k webean harat-honat zenbiltzan bitartean.</item>
   </plurals>
-  <!-- Customize prompt onboarding positive button. -->
-  <string name="nova_onboarding_customize_prompt_positive_button" tools:ignore="UnusedResources">Hasi pertsonalizatzen</string>
-  <!-- App icon onboarding title. -->
-  <string name="nova_onboarding_app_icon_prompt_title" tools:ignore="UnusedResources">Hautatu aplikazio-ikono pertsonalizatua</string>
-  <!-- App icon onboarding body. -->
-  <string name="nova_onboarding_app_icon_prompt_body" tools:ignore="UnusedResources">Eman zure hasierako pantailari ukitu pertsonalizatua.</string>
   <!-- ==== End of Project "Nova" onboarding strings ==== -->
 
   <!--
@@ -911,11 +863,6 @@
   <string name="preferences_category_file_storage">Fitxategien biltegiratzea</string>
   <!-- Preference title for downloads default location. -->
   <string name="preferences_downloads_default_location_title">Deskargen kokapen lehenetsia</string>
-  <!--
-    Message shown as the summary of the download location preference when the
-    app has lost the permission to access a previously selected custom folder.
-  -->
-  <string name="preference_downloads_folder_permission_lost" tools:ignore="UnusedResources">Ez daukazu karpeta hau erabiltzeko baimenik. Probatu beste bat aukeratzen.</string>
   <!-- Preference title for choosing an app to handle downloads -->
   <string name="preferences_choose_app_for_downloads">Kudeatu deskargak beste aplikazio batekin</string>
   <!-- Preference category for deleting or removing downloads -->
@@ -1102,16 +1049,6 @@
   <string name="restart_warning_dialog_button_negative">Utzi</string>
   <!-- Error message snackbar shown after the user tried to apply the new icon but the Android OS threw an error while updating existing app shortcuts (e.g. private mode shortcut) -->
   <string name="shortcuts_update_error">Huts egin du aplikazioaren ikonoa eguneratzean. Kendu lehendik dauden lasterbideak eta saiatu berriro.</string>
-  <!--
-    Add-ons general availability nimbus message
-
-    Title of the Nimbus message for extension general availability
-  -->
-  <string name="addon_ga_message_title_2" tools:ignore="UnusedResources">Hedapen berriak erabilgarri orain</string>
-  <!-- Body of the Nimbus message for add-ons general availability. 'Firefox' intentionally hardcoded here -->
-  <string name="addon_ga_message_body" tools:ignore="BrandUsage,UnusedResources">Eman begiratua Firefox zure egiten lagunduko dizuten 100 gehigarri berri baino gehiagori.</string>
-  <!-- Button text of the Nimbus message for extensions general availability. -->
-  <string name="addon_ga_message_button_2" tools:ignore="UnusedResources">Arakatu hedapenak</string>
   <!--
     Extension process crash dialog to user
 
@@ -1404,8 +1341,6 @@
   <string name="close_tabs_after_one_week">Astebete ondoren</string>
   <!-- Option for auto closing tabs that will auto close tabs after one month -->
   <string name="close_tabs_after_one_month">Hilabete ondoren</string>
-  <!-- Title of preference that allows a user to specify the auto-close settings for open tabs -->
-  <string name="preference_auto_close_tabs" tools:ignore="UnusedResources">Automatikoki itxi irekitako fitxak</string>
   <!-- Content description (not visible, for screen readers etc.): Close tab button -->
   <string name="tab_manager_close_tabs">Itxi</string>
   <!--
@@ -2366,8 +2301,6 @@
   <string name="sync_add_new_device_connect_button">Konektatu beste gailu bat…</string>
   <!-- A message template for the shared link with a footer. %1$s is the shared link, %2$s is the app name (e.g. Firefox) and %3$s is a download link for the app. -->
   <string name="sent_from_firefox_template" tools:ignore="UnusedResources">%1$s\n\n%2$s 🦊 bidez bidalia. Probatu mugikorrerako nabigatzailea: %3$s</string>
-  <!-- A short message template for the shared link with a footer. %1$s is the shared link, %2$s is the app name (e.g. Firefox) and %3$s is a download link for the app. -->
-  <string name="sent_from_firefox_template_short" tools:ignore="UnusedResources">%1$s\n\n%2$s 🦊 bidez bidalia %3$s</string>
   <!--
     Notifications
 
@@ -2802,8 +2735,6 @@
   <string name="about_privacy_notice">Pribatutasun-oharra</string>
   <!-- About page link text to open know your rights link -->
   <string name="about_know_your_rights">Ezagutu zure eskubideak</string>
-  <!-- About page link text to open terms of use link -->
-  <string name="about_terms_of_use" tools:ignore="UnusedResources">Erabilera-baldintzak</string>
   <!-- About page link text to open licensing information link -->
   <string name="about_licensing_information">Lizentziaren informazioa</string>
   <!-- About page link text to open a screen with libraries that are used -->
@@ -3218,10 +3149,6 @@
   <string name="saved_login_password_required_2">Idatzi pasahitz bat</string>
   <!-- The error message in add login view when username field is blank. -->
   <string name="saved_login_username_required_2">Idatzi erabiltzaile-izen bat</string>
-  <!-- The error message in add login view when hostname field is blank. -->
-  <string name="saved_login_hostname_required" tools:ignore="UnusedResources">Ostalari-izena behar da</string>
-  <!-- The error message in add login view when hostname field is blank. -->
-  <string name="saved_login_hostname_required_2" tools:ignore="UnusedResources">Idatzi web helbide bat</string>
   <!-- Voice search button content description -->
   <string name="voice_search_content_description">Ahots bidezko bilaketa</string>
   <!-- Voice search prompt description displayed after the user presses the voice search button -->
@@ -3326,16 +3253,6 @@
   <string name="inactive_tabs_expand_content_description">Zabaldu fitxa inaktiboak</string>
   <!-- Content description for collapsing the inactive tabs section. -->
   <string name="inactive_tabs_collapse_content_description">Tolestu fitxa inaktiboak</string>
-  <!--
-    Inactive tabs auto-close message in the tabs tray
-
-    The header text of the auto-close message when the user is asked if they want to turn on the auto-closing of inactive tabs.
-  -->
-  <string name="inactive_tabs_auto_close_message_header" tools:ignore="UnusedResources">Automatikoki itxi hilabete ondoren?</string>
-  <!-- A description below the header to notify the user what the inactive tabs auto-close feature is. -->
-  <string name="inactive_tabs_auto_close_message_description" tools:ignore="BrandUsage,UnusedResources">Azken hilabetean ikusi ez dituzun fitxak itxi ditzake Firefoxek.</string>
-  <!-- A call to action below the description to allow the user to turn on the auto closing of inactive tabs. -->
-  <string name="inactive_tabs_auto_close_message_action" tools:ignore="UnusedResources">AKTIBATU AUTOMATIKOKI IXTEA</string>
   <!-- Text for the snackbar to confirm auto-close is enabled for inactive tabs -->
   <string name="inactive_tabs_auto_close_message_snackbar">Automatikoki ixtea gaituta</string>
   <!--
@@ -3840,16 +3757,6 @@
   <string name="debug_drawer_tab_tools_tab_creation_tool_button_text_inactive">Gehitu fitxa inaktiboetara</string>
   <!-- The button text to add tabs to the private tab group in the tab creation tool. -->
   <string name="debug_drawer_tab_tools_tab_creation_tool_button_text_private">Gehitu fitxa pribatuetara</string>
-  <!--
-    Microsurvey
-    Note: Some strings are marked as unused as they are referenced via the Nimbus experimentation
-    platform and have no persistent reference in code
-
-    Prompt view
-
-    The microsurvey prompt title. Note: The word "Firefox" should NOT be translated
-  -->
-  <string name="micro_survey_prompt_title" tools:ignore="BrandUsage,UnusedResources">Lagun iezaguzu Firefox hobetzen. Minutu bat bakarrik izango da.</string>
   <!-- The continue button label -->
   <string name="micro_survey_continue_button_label" tools:ignore="UnusedResources">Jarraitu</string>
   <!--
@@ -3862,8 +3769,6 @@
   <string name="micro_survey_privacy_notice_2">Pribatutasun-oharra</string>
   <!-- The submit button label text -->
   <string name="micro_survey_submit_button_label">Bidali</string>
-  <!-- The survey completion header -->
-  <string name="micro_survey_survey_header_confirmation" tools:ignore="UnusedResources">Inkesta burututa</string>
   <!-- The survey completion confirmation text -->
   <string name="micro_survey_feedback_confirmation">Eskerrik asko zure iritziagatik!</string>
   <!-- Option for likert scale -->
@@ -3878,36 +3783,10 @@
   <string name="likert_scale_option_5" tools:ignore="UnusedResources">Oso kontentagaitz</string>
   <!-- Option for likert scale -->
   <string name="likert_scale_option_6" tools:ignore="UnusedResources">Ez dut erabiltzen</string>
-  <!-- Option for likert scale. Note: The word "Firefox" should NOT be translated. -->
-  <string name="likert_scale_option_7" tools:ignore="BrandUsage,UnusedResources">Ez du bilatzailea erabiltzen Firefoxen</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_8" tools:ignore="UnusedResources">Ez dut sync erabiltzen</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_slow_or_buggy" tools:ignore="UnusedResources">Mantsoa edo akastuna da</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_features_hard_to_find_or_missing" tools:ignore="UnusedResources">Eginbideak bilatzeko zailak edo falta egin dira</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_confusing_or_hard_to_use" tools:ignore="UnusedResources">Nahasgarria edo erabiltzeko zaila da</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_its_okay" tools:ignore="UnusedResources">Ongi dago baina ez da beste nabigatzaileak baino hobea</string>
-  <!-- Option for likert scale. Note: The word "Firefox" should NOT be translated. -->
-  <string name="likert_scale_option_i_plan_to_keep_using" tools:ignore="BrandUsage,UnusedResources">Nire asmoa Firefox erabiltzen jarraitzea da</string>
   <!-- Text shown in prompt for printing microsurvey. "sec" It's an abbreviation for "second". Note: The word "Firefox" should NOT be translated. -->
   <string name="microsurvey_prompt_printing_title" tools:ignore="BrandUsage,UnusedResources">Lagundu Firefoxen inprimatzeko eginbidea hobetzen. Momentutxo bat bakarrik izango da</string>
-  <!-- Text shown in prompt for search microsurvey. Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_prompt_search_title" tools:ignore="BrandUsage,UnusedResources">Lagundu Firefoxeko bilaketa hobetzen. Minutu bat bakarrik izango da</string>
-  <!-- Text shown in prompt for sync microsurvey. Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_prompt_sync_title" tools:ignore="BrandUsage,UnusedResources">Lagundu Firefoxeko sinkronizazioa hobetzen. Minutu bat bakarrik izango da</string>
   <!-- Text shown in the survey title for printing microsurvey. Note: The word "Firefox" should NOT be translated. -->
   <string name="microsurvey_survey_printing_title" tools:ignore="BrandUsage,UnusedResources">Zenbateraino zaude gustura Firefoxen inprimatzeko eginbidearekin?</string>
-  <!-- Text shown in the survey title for homepage microsurvey. Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_homepage_title" tools:ignore="BrandUsage,UnusedResources">Zenbateraino zaude pozik zure Firefoxen hasiera-orriarekin?</string>
-  <!-- Text shown in the survey title for search experience microsurvey. Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_search_title" tools:ignore="BrandUsage,UnusedResources">Zenbateraino zaude gustura Firefoxen bilaketaren esperientziarekin?</string>
-  <!-- Text shown in the survey title for sync experience microsurvey. Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_sync_title" tools:ignore="BrandUsage,UnusedResources">Zenbateraino zaude gustura Firefoxen sinkronizatzeko esperientziarekin?</string>
-  <!-- Text shown in the survey title for 'describe your experience so far' microsurvey. Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_describe_your_experience_title" tools:ignore="BrandUsage,UnusedResources">Lagun iezaguzu Firefox hobetzen. Zerk deskribatzen du ondoen zure orain arteko esperientzia?</string>
   <!--
     Accessibility
 
@@ -4022,40 +3901,6 @@
     Text shown as a label or tag to indicate a feature or area is still undergoing active development. Note that here "Beta" should not be translated, as it is used as an icon styled element.
   -->
   <string name="beta_feature">BETA</string>
-  <!--
-    Root certificate expiration warnings
-
-    These strings for homepage cards and push notifications to be pushed to users running outdated versions of Firefox. We want to encourage these users to update to the latest version so their extensions and other features don't stop working when Firefox's old root certificate expires on 2025-03-14. For more information, see this SUMO article: https://support.mozilla.org/kb/root-certificate-expiration !
-
-    Homepage card button to open Google Play Store. "Update" is a verb.
-  -->
-  <string name="certificate_warning_homepage_card_update_now_button" tools:ignore="UnusedResources">Eguneratu orain</string>
-  <!-- Homepage card title about old Firefox version. "Update" is a verb. Note: The word "Firefox" should NOT be translated. -->
-  <string name="certificate_warning_homepage_card_hca1_title" tools:ignore="BrandUsage,UnusedResources">Eguneratu Firefox nabigatzailea</string>
-  <!-- Homepage card message about old Firefox version -->
-  <string name="certificate_warning_homepage_card_hca1_message" tools:ignore="UnusedResources">Erro-ziurtagiri bat martxoaren 14an iraungiko da, zenbait eginbide ez ibiltzea eraginez.</string>
-  <!-- Homepage card title about old Firefox version. "Update" is a verb. -->
-  <string name="certificate_warning_homepage_card_hcr1_title" tools:ignore="UnusedResources">Eguneratu martxoaren 14a baino lehen</string>
-  <!-- Homepage card message about old Firefox version. Note: The word "Firefox" should NOT be translated. -->
-  <string name="certificate_warning_homepage_card_hcr1_message" tools:ignore="BrandUsage,UnusedResources">Erro-ziurtagiri bat iraungi egingo da, Firefoxen zure bertsioa ondo ez ibiltzea eraginez.</string>
-  <!-- Homepage card title about old Firefox version -->
-  <string name="certificate_warning_homepage_card_hcw2_title" tools:ignore="UnusedResources">7 egun baino gutxiago eguneratzeko</string>
-  <!-- Homepage card message about old Firefox version. Note: The word "Firefox" should NOT be translated. -->
-  <string name="certificate_warning_homepage_card_hcw2_message" tools:ignore="BrandUsage,UnusedResources">Martxoaren 14tik aurrera, gehigarriak eta Firefoxen bestelako eginbideak ez dira ibiliko erro-ziurtagiria iraungi egingo delako.</string>
-  <!-- Homepage card title about old Firefox version. Note: The word "Firefox" should NOT be translated. -->
-  <string name="certificate_warning_homepage_card_hcw3_title" tools:ignore="BrandUsage,UnusedResources">Azken aukera zure Firefox mantentzeko</string>
-  <!-- Homepage card message about old Firefox version. Note: The word "Firefox" should NOT be translated. -->
-  <string name="certificate_warning_homepage_card_hcw3_message" tools:ignore="BrandUsage,UnusedResources">Firefoxen zure bertsioa ez da ondo ibiliko martxoaren 14tik aurrera, erro-ziurtagiri bat iraungi egingo delako.</string>
-  <!-- Push notification title about old Firefox version. "Update" is a noun. -->
-  <string name="certificate_warning_push_notification_update_recommended_title" tools:ignore="UnusedResources">Eguneratzea gomendatuta</string>
-  <!-- Push notification message about old Firefox version -->
-  <string name="certificate_warning_push_notification_pnr1_message" tools:ignore="UnusedResources">Gehigarriak eta zenbait eginbide ez dira ibiliko martxoaren 14tik aurrera.</string>
-  <!-- Push notification title about old Firefox version. Note: The word "Firefox" should NOT be translated. -->
-  <string name="certificate_warning_push_notification_pnw2_title" tools:ignore="BrandUsage,UnusedResources">Firefoxen bertsio zahar batean zaude</string>
-  <!-- Push notification message about old Firefox version. "Update" is a verb. -->
-  <string name="certificate_warning_push_notification_pnw2_message" tools:ignore="UnusedResources">Eguneratu martxoaren 14a aurretik gehigarriak eta bestelako eginbideak erabiltzen jarraitzeko.</string>
-  <!-- Push notification message about old Firefox version -->
-  <string name="certificate_warning_push_notification_pnw3_message" tools:ignore="UnusedResources">Zenbait eginbide ez dira ibiliko bihartik aurrera.</string>
   <!-- TextField Design System Component -->
 
   <!--

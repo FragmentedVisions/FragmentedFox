@@ -485,14 +485,6 @@
   <string name="onboarding_term_of_service_line_three" tools:ignore="BrandUsage">為了幫助改善瀏覽器，Firefox 會將除錯與互動資料傳送回 Mozilla。%1$s</string>
   <!-- Used as text for the link in onboarding_term_of_service_line_three. -->
   <string name="onboarding_term_of_service_line_three_link_text">管理</string>
-  <!-- Terms of use (ToU) onboarding redesign title. -->
-  <string name="onboarding_redesign_tou_title" tools:ignore="UnusedResources">啟動終極版 Android 瀏覽器</string>
-  <!-- Terms of use (ToU) first subheader. -->
-  <string name="onboarding_redesign_tou_subheader_one" tools:ignore="UnusedResources">網站載入光速快</string>
-  <!-- Terms of use (ToU) second subheader. -->
-  <string name="onboarding_redesign_tou_subheader_two" tools:ignore="UnusedResources">自動開啟追蹤保護</string>
-  <!-- Terms of use (ToU) third subheader. -->
-  <string name="onboarding_redesign_tou_subheader_three" tools:ignore="UnusedResources">數以千計的客製化功能</string>
   <!--
     Terms of use (ToU) first body text. %1$s is replaced by an active link,
     using onboarding_redesign_tou_body_one_link_text as text (“Firefox Terms of Use”).
@@ -514,28 +506,12 @@
   <string name="onboarding_redesign_tou_body_three" tools:ignore="BrandUsage,UnusedResources">為了幫助改善瀏覽器，Firefox 會將除錯與互動資料傳送回 Mozilla。%1$s</string>
   <!-- Used as text for the link in onboarding_redesign_tou_body_three. -->
   <string name="onboarding_redesign_tou_body_three_link_text" tools:ignore="UnusedResources">管理設定</string>
-  <!-- Terms of use (ToU) onboarding page continue button label. -->
-  <string name="onboarding_redesign_tou_agree_and_continue_button_label" tools:ignore="UnusedResources">繼續</string>
-  <!-- Onboarding header for the toolbar selection card. -->
-  <string name="onboarding_redesign_customize_toolbar_title" tools:ignore="UnusedResources">您想將網址列放在哪裡？</string>
-  <!-- Onboarding label for 'Continue' button. -->
-  <string name="onboarding_redesign_continue_button" tools:ignore="UnusedResources">繼續</string>
   <!-- Marketing onboarding page title. 'Firefox' is intentionally hardcoded. -->
   <!-- Marketing onboarding page opt-out checkbox. Unchecking the box does not increase data collection. Our data practices remain the same. 'Mozilla' is intentionally hardcoded. -->
   <!-- Marketing onboarding page clickable link text to "learn more" on how data is used. -->
   <!-- Marketing onboarding page button label. Button to confirm choice and start browsing. -->
-  <!-- Set to default browser onboarding redesign title. -->
-  <string name="onboarding_redesign_set_default_browser_title" tools:ignore="UnusedResources">預設開啟自動追蹤保護</string>
-  <!-- Set to default browser onboarding redesign body. -->
-  <string name="onboarding_redesign_set_default_browser_body" tools:ignore="UnusedResources">只要輕鬆一點，就可以幫助防止大企業追蹤您在網路上的點擊。</string>
-  <!-- Sync onboarding redesign title. 'Firefox' is intentionally hardcoded. -->
-  <string name="onboarding_redesign_sync_title" tools:ignore="BrandUsage,UnusedResources">同步所有使用 Firefox 的裝置</string>
-  <!-- Sync onboarding redesign body. -->
-  <string name="onboarding_redesign_sync_body" tools:ignore="UnusedResources">在任何裝置中都能有相同的書籤、分頁與密碼，全部都經加密保護。</string>
   <!-- Sync onboarding redesign positive button text. -->
   <string name="onboarding_redesign_sync_positive_button" tools:ignore="UnusedResources">開始同步</string>
-  <!-- Sync onboarding redesign negative button text. -->
-  <string name="onboarding_redesign_sync_negative_button" tools:ignore="UnusedResources">現在不要</string>
   <!-- Marketing onboarding page title variant. “One last thing” refers to the final step or action in the onboarding process that we’re asking users to take before they can start using the browser. -->
   <!-- Marketing onboarding page body variant. 'Firefox' is intentionally hardcoded. -->
   <!-- Marketing onboarding page button label variant. Button to confirm choice and start browsing. -->
@@ -543,14 +519,8 @@
 
   <!-- "Continue" onboarding button. -->
   <string name="nova_onboarding_continue_button">繼續</string>
-  <!-- "Continue browsing" onboarding button. -->
-  <string name="nova_onboarding_continue_browsing_button" tools:ignore="UnusedResources">繼續上網</string>
   <!-- "Not now" onboarding button. -->
   <string name="nova_onboarding_negative_button">現在不要</string>
-  <!-- "Skip" onboarding button. -->
-  <string name="nova_onboarding_skip_button" tools:ignore="UnusedResources">略過</string>
-  <!-- Terms of use (ToU) onboarding title. -->
-  <string name="nova_onboarding_tou_title" tools:ignore="UnusedResources">準備好自由奔跑</string>
   <!-- Terms of use (ToU) onboarding subtitle. -->
   <string name="nova_onboarding_tou_subtitle">快速、安全、絕不把您賣掉。\n上網功能變得更棒了。</string>
   <!--
@@ -575,8 +545,6 @@
   <!-- Terms of use (ToU) onboarding body line three link text for nova_onboarding_tou_body_line_3. -->
   <string name="nova_onboarding_tou_body_line_3_link_text">管理設定</string>
   <!-- "Set to default" onboarding title. -->
-  <string name="nova_onboarding_set_to_default_title" tools:ignore="UnusedResources">跟怪怪的追蹤器說再見</string>
-  <!-- "Set to default" onboarding title. -->
   <string name="nova_onboarding_set_to_default_title_2">透過內建隱私權保護的瀏覽器開啟所有鏈結</string>
   <!-- "Set to default" onboarding subtitle. -->
   <string name="nova_onboarding_set_to_default_subtitle">我們會保護您的資料，並自動防止企業偷窺您的點擊行為。</string>
@@ -588,14 +556,6 @@
   <string name="nova_onboarding_toolbar_selection_top_label">頂端</string>
   <!-- Toolbar selection onboarding "bottom" option label. -->
   <string name="nova_onboarding_toolbar_selection_bottom_label">底部</string>
-  <!-- Theme selection onboarding title. -->
-  <string name="nova_onboarding_theme_selection_title" tools:ignore="UnusedResources">挑選佈景主題</string>
-  <!-- Theme selection onboarding "automatic" option label. -->
-  <string name="nova_onboarding_theme_selection_automatic_label" tools:ignore="UnusedResources">自動</string>
-  <!-- Theme selection onboarding "light" option label. -->
-  <string name="nova_onboarding_theme_selection_light_label" tools:ignore="UnusedResources">亮色</string>
-  <!-- Theme selection onboarding "dark" option label. -->
-  <string name="nova_onboarding_theme_selection_dark_label" tools:ignore="UnusedResources">暗色</string>
   <!-- Sync onboarding title. -->
   <string name="nova_onboarding_sync_title">立即從結束的地方繼續</string>
   <!-- Sync onboarding subtitle. -->
@@ -651,8 +611,6 @@
   <string name="nova_onboarding_add_search_widget_subtitle" tools:ignore="BrandUsage">每次都從手機主畫面開始搜尋，讓 Firefox 的自動保護功能全程挺你。</string>
   <!-- "Add search widget" onboarding button. 'Firefox' is intentionally hardcoded. -->
   <string name="nova_onboarding_add_search_widget_button" tools:ignore="BrandUsage">新增 Firefox 小工具</string>
-  <!-- Customize prompt onboarding title. -->
-  <string name="nova_onboarding_customize_prompt_title" tools:ignore="UnusedResources">輕鬆自訂，每次點擊都更有隱私</string>
   <plurals name="nova_onboarding_customize_prompt_body" tools:ignore="UnusedResources">
     <!--
       Customize prompt onboarding body.
@@ -664,12 +622,6 @@
     <item quantity="one">在您上網時，%1$s 封鎖了 %2$,d 組追蹤器。</item>
     <item quantity="other">在您上網時，%1$s 封鎖了 %2$,d 組追蹤器。</item>
   </plurals>
-  <!-- Customize prompt onboarding positive button. -->
-  <string name="nova_onboarding_customize_prompt_positive_button" tools:ignore="UnusedResources">開始自訂</string>
-  <!-- App icon onboarding title. -->
-  <string name="nova_onboarding_app_icon_prompt_title" tools:ignore="UnusedResources">挑選自訂應用程式圖示</string>
-  <!-- App icon onboarding body. -->
-  <string name="nova_onboarding_app_icon_prompt_body" tools:ignore="UnusedResources">為您的主畫面加上個人風格。</string>
   <!-- ==== End of Project "Nova" onboarding strings ==== -->
 
   <!--
@@ -914,11 +866,6 @@
   <string name="preferences_category_file_storage">檔案儲存空間</string>
   <!-- Preference title for downloads default location. -->
   <string name="preferences_downloads_default_location_title">預設下載位置</string>
-  <!--
-    Message shown as the summary of the download location preference when the
-    app has lost the permission to access a previously selected custom folder.
-  -->
-  <string name="preference_downloads_folder_permission_lost" tools:ignore="UnusedResources">您沒有使用此資料夾的權限，請改選其他資料夾。</string>
   <!-- Preference title for choosing an app to handle downloads -->
   <string name="preferences_choose_app_for_downloads">使用另一套應用程式管理下載項目</string>
   <!-- Preference category for deleting or removing downloads -->
@@ -1105,16 +1052,6 @@
   <string name="restart_warning_dialog_button_negative">取消</string>
   <!-- Error message snackbar shown after the user tried to apply the new icon but the Android OS threw an error while updating existing app shortcuts (e.g. private mode shortcut) -->
   <string name="shortcuts_update_error">應用程式圖示更新失敗，請移除現有的捷徑後再試一次。</string>
-  <!--
-    Add-ons general availability nimbus message
-
-    Title of the Nimbus message for extension general availability
-  -->
-  <string name="addon_ga_message_title_2" tools:ignore="UnusedResources">已推出新的擴充套件</string>
-  <!-- Body of the Nimbus message for add-ons general availability. 'Firefox' intentionally hardcoded here -->
-  <string name="addon_ga_message_body" tools:ignore="BrandUsage,UnusedResources">看看超過 100 套能讓 Firefox 有您的風格的全新擴充套件。</string>
-  <!-- Button text of the Nimbus message for extensions general availability. -->
-  <string name="addon_ga_message_button_2" tools:ignore="UnusedResources">探索擴充套件</string>
   <!--
     Extension process crash dialog to user
 
@@ -1407,8 +1344,6 @@
   <string name="close_tabs_after_one_week">1 週後</string>
   <!-- Option for auto closing tabs that will auto close tabs after one month -->
   <string name="close_tabs_after_one_month">1 個月後</string>
-  <!-- Title of preference that allows a user to specify the auto-close settings for open tabs -->
-  <string name="preference_auto_close_tabs" tools:ignore="UnusedResources">自動關閉分頁</string>
   <!-- Content description (not visible, for screen readers etc.): Close tab button -->
   <string name="tab_manager_close_tabs">關閉</string>
   <!--
@@ -2367,8 +2302,6 @@
   <string name="sync_add_new_device_connect_button">連結其他裝置…</string>
   <!-- A message template for the shared link with a footer. %1$s is the shared link, %2$s is the app name (e.g. Firefox) and %3$s is a download link for the app. -->
   <string name="sent_from_firefox_template" tools:ignore="UnusedResources">%1$s\n\n此訊息是使用 %2$s 🦊傳送。來試用行動瀏覽器：%3$s</string>
-  <!-- A short message template for the shared link with a footer. %1$s is the shared link, %2$s is the app name (e.g. Firefox) and %3$s is a download link for the app. -->
-  <string name="sent_from_firefox_template_short" tools:ignore="UnusedResources">%1$s\n\n此訊息是使用 %2$s 🦊傳送 %3$s</string>
   <!--
     Notifications
 
@@ -2803,8 +2736,6 @@
   <string name="about_privacy_notice">隱私權公告</string>
   <!-- About page link text to open know your rights link -->
   <string name="about_know_your_rights">了解您的權利</string>
-  <!-- About page link text to open terms of use link -->
-  <string name="about_terms_of_use" tools:ignore="UnusedResources">使用條款</string>
   <!-- About page link text to open licensing information link -->
   <string name="about_licensing_information">授權資訊</string>
   <!-- About page link text to open a screen with libraries that are used -->
@@ -3219,10 +3150,6 @@
   <string name="saved_login_password_required_2">輸入密碼</string>
   <!-- The error message in add login view when username field is blank. -->
   <string name="saved_login_username_required_2">輸入使用者名稱</string>
-  <!-- The error message in add login view when hostname field is blank. -->
-  <string name="saved_login_hostname_required" tools:ignore="UnusedResources">必須輸入主機名稱</string>
-  <!-- The error message in add login view when hostname field is blank. -->
-  <string name="saved_login_hostname_required_2" tools:ignore="UnusedResources">輸入網址</string>
   <!-- Voice search button content description -->
   <string name="voice_search_content_description">語音搜尋</string>
   <!-- Voice search prompt description displayed after the user presses the voice search button -->
@@ -3327,16 +3254,6 @@
   <string name="inactive_tabs_expand_content_description">展開閒置分頁</string>
   <!-- Content description for collapsing the inactive tabs section. -->
   <string name="inactive_tabs_collapse_content_description">摺疊閒置分頁</string>
-  <!--
-    Inactive tabs auto-close message in the tabs tray
-
-    The header text of the auto-close message when the user is asked if they want to turn on the auto-closing of inactive tabs.
-  -->
-  <string name="inactive_tabs_auto_close_message_header" tools:ignore="UnusedResources">等一個月後再自動關閉？</string>
-  <!-- A description below the header to notify the user what the inactive tabs auto-close feature is. -->
-  <string name="inactive_tabs_auto_close_message_description" tools:ignore="BrandUsage,UnusedResources">Firefox 可自動關閉您超過一個月未檢視的分頁。</string>
-  <!-- A call to action below the description to allow the user to turn on the auto closing of inactive tabs. -->
-  <string name="inactive_tabs_auto_close_message_action" tools:ignore="UnusedResources">開啟自動關閉分頁功能</string>
   <!-- Text for the snackbar to confirm auto-close is enabled for inactive tabs -->
   <string name="inactive_tabs_auto_close_message_snackbar">已開啟分頁自動關閉功能</string>
   <!--
@@ -3834,16 +3751,6 @@
   <string name="debug_drawer_tab_tools_tab_creation_tool_button_text_inactive">新增至閒置分頁</string>
   <!-- The button text to add tabs to the private tab group in the tab creation tool. -->
   <string name="debug_drawer_tab_tools_tab_creation_tool_button_text_private">新增至隱私瀏覽分頁</string>
-  <!--
-    Microsurvey
-    Note: Some strings are marked as unused as they are referenced via the Nimbus experimentation
-    platform and have no persistent reference in code
-
-    Prompt view
-
-    The microsurvey prompt title. Note: The word "Firefox" should NOT be translated
-  -->
-  <string name="micro_survey_prompt_title" tools:ignore="BrandUsage,UnusedResources">請幫助我們讓 Firefox 變得更好，僅需一分鐘即可完成問卷。</string>
   <!-- The continue button label -->
   <string name="micro_survey_continue_button_label" tools:ignore="UnusedResources">繼續</string>
   <!--
@@ -3856,8 +3763,6 @@
   <string name="micro_survey_privacy_notice_2">隱私權公告</string>
   <!-- The submit button label text -->
   <string name="micro_survey_submit_button_label">送出</string>
-  <!-- The survey completion header -->
-  <string name="micro_survey_survey_header_confirmation" tools:ignore="UnusedResources">填寫完成</string>
   <!-- The survey completion confirmation text -->
   <string name="micro_survey_feedback_confirmation">感謝您的意見回饋！</string>
   <!-- Option for likert scale -->
@@ -3872,36 +3777,10 @@
   <string name="likert_scale_option_5" tools:ignore="UnusedResources">非常不滿意</string>
   <!-- Option for likert scale -->
   <string name="likert_scale_option_6" tools:ignore="UnusedResources">我沒有使用</string>
-  <!-- Option for likert scale. Note: The word "Firefox" should NOT be translated. -->
-  <string name="likert_scale_option_7" tools:ignore="BrandUsage,UnusedResources">我不使用 Firefox 的搜尋功能</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_8" tools:ignore="UnusedResources">我沒有使用 Sync</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_slow_or_buggy" tools:ignore="UnusedResources">速度慢，或很容易故障</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_features_hard_to_find_or_missing" tools:ignore="UnusedResources">很難找到功能，或缺少某些功能</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_confusing_or_hard_to_use" tools:ignore="UnusedResources">讓人困惑，或者很難使用</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_its_okay" tools:ignore="UnusedResources">還可以，但沒有比其他瀏覽器好</string>
-  <!-- Option for likert scale. Note: The word "Firefox" should NOT be translated. -->
-  <string name="likert_scale_option_i_plan_to_keep_using" tools:ignore="BrandUsage,UnusedResources">我會繼續使用 Firefox</string>
   <!-- Text shown in prompt for printing microsurvey. "sec" It's an abbreviation for "second". Note: The word "Firefox" should NOT be translated. -->
   <string name="microsurvey_prompt_printing_title" tools:ignore="BrandUsage,UnusedResources">幫助讓 Firefox 的列印功能變得更棒，只需幾秒鐘</string>
-  <!-- Text shown in prompt for search microsurvey. Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_prompt_search_title" tools:ignore="BrandUsage,UnusedResources">請幫助我們讓 Firefox 的搜尋功能變得更好，僅需一分鐘即可完成問卷</string>
-  <!-- Text shown in prompt for sync microsurvey. Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_prompt_sync_title" tools:ignore="BrandUsage,UnusedResources">請幫助我們讓 Firefox 的同步功能變得更好，僅需一分鐘即可完成問卷</string>
   <!-- Text shown in the survey title for printing microsurvey. Note: The word "Firefox" should NOT be translated. -->
   <string name="microsurvey_survey_printing_title" tools:ignore="BrandUsage,UnusedResources">請問您對 Firefox 的列印功能有多滿意？</string>
-  <!-- Text shown in the survey title for homepage microsurvey. Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_homepage_title" tools:ignore="BrandUsage,UnusedResources">您對 Firefox 首頁有多滿意？</string>
-  <!-- Text shown in the survey title for search experience microsurvey. Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_search_title" tools:ignore="BrandUsage,UnusedResources">您對 Firefox 的搜尋體驗滿意嗎？</string>
-  <!-- Text shown in the survey title for sync experience microsurvey. Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_sync_title" tools:ignore="BrandUsage,UnusedResources">您對 Firefox 的同步功能使用體驗滿意嗎？</string>
-  <!-- Text shown in the survey title for 'describe your experience so far' microsurvey. Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_describe_your_experience_title" tools:ignore="BrandUsage,UnusedResources">請幫助我們改進 Firefox。下列選項當中哪一項最符合您目前為止的使用體驗？</string>
   <!--
     Uninstall Survey
 
@@ -4028,40 +3907,6 @@
     Text shown as a label or tag to indicate a feature or area is still undergoing active development. Note that here "Beta" should not be translated, as it is used as an icon styled element.
   -->
   <string name="beta_feature">BETA</string>
-  <!--
-    Root certificate expiration warnings
-
-    These strings for homepage cards and push notifications to be pushed to users running outdated versions of Firefox. We want to encourage these users to update to the latest version so their extensions and other features don't stop working when Firefox's old root certificate expires on 2025-03-14. For more information, see this SUMO article: https://support.mozilla.org/kb/root-certificate-expiration !
-
-    Homepage card button to open Google Play Store. "Update" is a verb.
-  -->
-  <string name="certificate_warning_homepage_card_update_now_button" tools:ignore="UnusedResources">立即更新</string>
-  <!-- Homepage card title about old Firefox version. "Update" is a verb. Note: The word "Firefox" should NOT be translated. -->
-  <string name="certificate_warning_homepage_card_hca1_title" tools:ignore="BrandUsage,UnusedResources">更新 Firefox 瀏覽器</string>
-  <!-- Homepage card message about old Firefox version -->
-  <string name="certificate_warning_homepage_card_hca1_message" tools:ignore="UnusedResources">有一張根憑證即將過期，將導致某些功能於 3 月 14 日後無法運作。</string>
-  <!-- Homepage card title about old Firefox version. "Update" is a verb. -->
-  <string name="certificate_warning_homepage_card_hcr1_title" tools:ignore="UnusedResources">請於 3 月 14 日前更新</string>
-  <!-- Homepage card message about old Firefox version. Note: The word "Firefox" should NOT be translated. -->
-  <string name="certificate_warning_homepage_card_hcr1_message" tools:ignore="BrandUsage,UnusedResources">有一張根憑證即將過期，將導致您的 Firefox 於 3 月 14 日後無法正常運作。</string>
-  <!-- Homepage card title about old Firefox version -->
-  <string name="certificate_warning_homepage_card_hcw2_title" tools:ignore="UnusedResources">更新時間剩下不到 7 天</string>
-  <!-- Homepage card message about old Firefox version. Note: The word "Firefox" should NOT be translated. -->
-  <string name="certificate_warning_homepage_card_hcw2_message" tools:ignore="BrandUsage,UnusedResources">由於根憑證即將失效，3 月 14 日起，附加元件與其他 Firefox 功能將停止運作。</string>
-  <!-- Homepage card title about old Firefox version. Note: The word "Firefox" should NOT be translated. -->
-  <string name="certificate_warning_homepage_card_hcw3_title" tools:ignore="BrandUsage,UnusedResources">保留 Firefox 的最後機會</string>
-  <!-- Homepage card message about old Firefox version. Note: The word "Firefox" should NOT be translated. -->
-  <string name="certificate_warning_homepage_card_hcw3_message" tools:ignore="BrandUsage,UnusedResources">因為根憑證即將失效，3 月 14 日後，您的 Firefox 版本將無法再正常運作。</string>
-  <!-- Push notification title about old Firefox version. "Update" is a noun. -->
-  <string name="certificate_warning_push_notification_update_recommended_title" tools:ignore="UnusedResources">建議更新</string>
-  <!-- Push notification message about old Firefox version -->
-  <string name="certificate_warning_push_notification_pnr1_message" tools:ignore="UnusedResources">附加元件與部分其他功能，將於 3 月 14 日起停止運作。</string>
-  <!-- Push notification title about old Firefox version. Note: The word "Firefox" should NOT be translated. -->
-  <string name="certificate_warning_push_notification_pnw2_title" tools:ignore="BrandUsage,UnusedResources">您使用的是舊版的 Firefox</string>
-  <!-- Push notification message about old Firefox version. "Update" is a verb. -->
-  <string name="certificate_warning_push_notification_pnw2_message" tools:ignore="UnusedResources">請於 3 月 14 日前更新，以繼續使用附加元件與其他功能。</string>
-  <!-- Push notification message about old Firefox version -->
-  <string name="certificate_warning_push_notification_pnw3_message" tools:ignore="UnusedResources">某些功能將於明天失效。</string>
   <!-- TextField Design System Component -->
 
   <!--

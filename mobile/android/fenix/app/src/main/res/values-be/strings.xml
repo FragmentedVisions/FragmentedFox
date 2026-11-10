@@ -437,14 +437,6 @@
   <string name="onboarding_term_of_service_line_three" tools:ignore="BrandUsage">Для паляпшэння браўзера Firefox дасылае тэхнічныя дадзеныя і звесткі аб узаемадзеянні ў Mozilla. %1$s</string>
   <!-- Used as text for the link in onboarding_term_of_service_line_three. -->
   <string name="onboarding_term_of_service_line_three_link_text">Кіраваць</string>
-  <!-- Terms of use (ToU) onboarding redesign title. -->
-  <string name="onboarding_redesign_tou_title" tools:ignore="UnusedResources">Запусціце найлепшы браўзер для Android</string>
-  <!-- Terms of use (ToU) first subheader. -->
-  <string name="onboarding_redesign_tou_subheader_one" tools:ignore="UnusedResources">Бліскавічная загрузка сайтаў</string>
-  <!-- Terms of use (ToU) second subheader. -->
-  <string name="onboarding_redesign_tou_subheader_two" tools:ignore="UnusedResources">Аўтаматычная ахова ад сачэння</string>
-  <!-- Terms of use (ToU) third subheader. -->
-  <string name="onboarding_redesign_tou_subheader_three" tools:ignore="UnusedResources">Тысячы налад</string>
   <!--
     Terms of use (ToU) first body text. %1$s is replaced by an active link,
     using onboarding_redesign_tou_body_one_link_text as text (“Firefox Terms of Use”).
@@ -461,39 +453,19 @@
   <string name="onboarding_redesign_tou_body_two_link_text" tools:ignore="UnusedResources">Паведамленне аб прыватнасці</string>
   <!-- Used as text for the link in onboarding_redesign_tou_body_three. -->
   <string name="onboarding_redesign_tou_body_three_link_text" tools:ignore="UnusedResources">Кіраваць наладамі</string>
-  <!-- Terms of use (ToU) onboarding page continue button label. -->
-  <string name="onboarding_redesign_tou_agree_and_continue_button_label" tools:ignore="UnusedResources">Працягнуць</string>
-  <!-- Onboarding header for the toolbar selection card. -->
-  <string name="onboarding_redesign_customize_toolbar_title" tools:ignore="UnusedResources">Дзе змясціць адрасны радок?</string>
-  <!-- Onboarding label for 'Continue' button. -->
-  <string name="onboarding_redesign_continue_button" tools:ignore="UnusedResources">Працягнуць</string>
   <!-- Marketing onboarding page title. 'Firefox' is intentionally hardcoded. -->
   <!-- Marketing onboarding page clickable link text to "learn more" on how data is used. -->
   <!-- Marketing onboarding page button label. Button to confirm choice and start browsing. -->
-  <!-- Set to default browser onboarding redesign title. -->
-  <string name="onboarding_redesign_set_default_browser_title" tools:ignore="UnusedResources">Атрымайце стандартную аўтаматычную абарону ад адсочвання</string>
-  <!-- Set to default browser onboarding redesign body. -->
-  <string name="onboarding_redesign_set_default_browser_body" tools:ignore="UnusedResources">Адно націсканне — і кампаніі не будуць за вамі сачыць.</string>
-  <!-- Sync onboarding redesign title. 'Firefox' is intentionally hardcoded. -->
-  <string name="onboarding_redesign_sync_title" tools:ignore="BrandUsage,UnusedResources">Сінхранізацыя ўсюды, дзе вы карыстаецеся Firefox</string>
-  <!-- Sync onboarding redesign body. -->
-  <string name="onboarding_redesign_sync_body" tools:ignore="UnusedResources">Атрымлівайце закладкі, укладкі і паролі на любой прыладзе. Усё абаронена шыфраваннем.</string>
   <!-- Sync onboarding redesign positive button text. -->
   <string name="onboarding_redesign_sync_positive_button" tools:ignore="UnusedResources">Пачаць сінхранізацыю</string>
-  <!-- Sync onboarding redesign negative button text. -->
-  <string name="onboarding_redesign_sync_negative_button" tools:ignore="UnusedResources">Не зараз</string>
   <!-- Marketing onboarding page title variant. “One last thing” refers to the final step or action in the onboarding process that we’re asking users to take before they can start using the browser. -->
   <!-- Marketing onboarding page button label variant. Button to confirm choice and start browsing. -->
   <!-- ==== Project "Nova" onboarding strings ==== -->
 
   <!-- "Continue" onboarding button. -->
   <string name="nova_onboarding_continue_button">Працягнуць</string>
-  <!-- "Continue browsing" onboarding button. -->
-  <string name="nova_onboarding_continue_browsing_button" tools:ignore="UnusedResources">Працягнуць прагляд</string>
   <!-- "Not now" onboarding button. -->
   <string name="nova_onboarding_negative_button">Не зараз</string>
-  <!-- "Skip" onboarding button. -->
-  <string name="nova_onboarding_skip_button" tools:ignore="UnusedResources">Прапусціць</string>
   <!-- Terms of use (ToU) onboarding subtitle. -->
   <string name="nova_onboarding_tou_subtitle">Хуткі, бяспечны і ніколі вас не прадасць.\nКарыстацца сецівам стала яшчэ лепш.</string>
   <!--
@@ -518,8 +490,6 @@
   <!-- Terms of use (ToU) onboarding body line three link text for nova_onboarding_tou_body_line_3. -->
   <string name="nova_onboarding_tou_body_line_3_link_text">Кіраваць наладамі</string>
   <!-- "Set to default" onboarding title. -->
-  <string name="nova_onboarding_set_to_default_title" tools:ignore="UnusedResources">Развітайцеся са шпіёнскімі трэкерамі</string>
-  <!-- "Set to default" onboarding title. -->
   <string name="nova_onboarding_set_to_default_title_2">Адкрывайце кожную спасылку прыватна</string>
   <!-- "Set to default" onboarding subtitle. -->
   <string name="nova_onboarding_set_to_default_subtitle">Мы абараняем вашы дадзеныя і аўтаматычна прадухіляем карпаратыўны шпіянаж за вашымі клікамі.</string>
@@ -531,14 +501,6 @@
   <string name="nova_onboarding_toolbar_selection_top_label">Уверсе</string>
   <!-- Toolbar selection onboarding "bottom" option label. -->
   <string name="nova_onboarding_toolbar_selection_bottom_label">Унізе</string>
-  <!-- Theme selection onboarding title. -->
-  <string name="nova_onboarding_theme_selection_title" tools:ignore="UnusedResources">Выберыце тэму</string>
-  <!-- Theme selection onboarding "automatic" option label. -->
-  <string name="nova_onboarding_theme_selection_automatic_label" tools:ignore="UnusedResources">Аўтаматычна</string>
-  <!-- Theme selection onboarding "light" option label. -->
-  <string name="nova_onboarding_theme_selection_light_label" tools:ignore="UnusedResources">Светлая</string>
-  <!-- Theme selection onboarding "dark" option label. -->
-  <string name="nova_onboarding_theme_selection_dark_label" tools:ignore="UnusedResources">Цёмная</string>
   <!-- Sync onboarding title. -->
   <string name="nova_onboarding_sync_title">Маментальна працягвайце з таго месца, дзе спыніліся</string>
   <!-- Sync onboarding button. -->
@@ -930,16 +892,6 @@
   <!-- Dialog button text for cancelling app icon change -->
   <string name="restart_warning_dialog_button_negative">Скасаваць</string>
   <!--
-    Add-ons general availability nimbus message
-
-    Title of the Nimbus message for extension general availability
-  -->
-  <string name="addon_ga_message_title_2" tools:ignore="UnusedResources">Даступныя новыя пашырэнні</string>
-  <!-- Body of the Nimbus message for add-ons general availability. 'Firefox' intentionally hardcoded here -->
-  <string name="addon_ga_message_body" tools:ignore="BrandUsage,UnusedResources">Азнаёмцеся з больш за 100 новых пашырэнняў, якія дазваляюць зрабіць Firefox вашым уласным.</string>
-  <!-- Button text of the Nimbus message for extensions general availability. -->
-  <string name="addon_ga_message_button_2" tools:ignore="UnusedResources">Знайсці пашырэнні</string>
-  <!--
     Extension process crash dialog to user
 
     Title of the extension crash dialog shown to the user when enough errors have occurred with extensions and they need to be temporarily disabled
@@ -1206,8 +1158,6 @@
   <string name="close_tabs_after_one_week">Праз тыдзень</string>
   <!-- Option for auto closing tabs that will auto close tabs after one month -->
   <string name="close_tabs_after_one_month">Праз месяц</string>
-  <!-- Title of preference that allows a user to specify the auto-close settings for open tabs -->
-  <string name="preference_auto_close_tabs" tools:ignore="UnusedResources">Аўтаматычна закрываць адкрытыя карткі</string>
   <!-- Content description (not visible, for screen readers etc.): Close tab button -->
   <string name="tab_manager_close_tabs">Закрыць</string>
   <!--
@@ -2260,8 +2210,6 @@
   <string name="about_privacy_notice">Паведамленне аб прыватнасці</string>
   <!-- About page link text to open know your rights link -->
   <string name="about_know_your_rights">Ведай свае правы</string>
-  <!-- About page link text to open terms of use link -->
-  <string name="about_terms_of_use" tools:ignore="UnusedResources">Умовы выкарыстання</string>
   <!-- About page link text to open licensing information link -->
   <string name="about_licensing_information">Звесткі пра ліцэнзію</string>
   <!-- About page link text to open a screen with libraries that are used -->
@@ -2636,10 +2584,6 @@
   <string name="saved_login_password_required_2">Увядзіце пароль</string>
   <!-- The error message in add login view when username field is blank. -->
   <string name="saved_login_username_required_2">Увядзіце імя карыстальніка</string>
-  <!-- The error message in add login view when hostname field is blank. -->
-  <string name="saved_login_hostname_required" tools:ignore="UnusedResources">Патрабуецца імя хоста</string>
-  <!-- The error message in add login view when hostname field is blank. -->
-  <string name="saved_login_hostname_required_2" tools:ignore="UnusedResources">Увядзіце вэб-адрас</string>
   <!-- Voice search button content description -->
   <string name="voice_search_content_description">Галасавы пошук</string>
   <!-- Voice search prompt description displayed after the user presses the voice search button -->
@@ -2727,16 +2671,6 @@
   <string name="inactive_tabs_expand_content_description">Разгарнуць неактыўныя карткі</string>
   <!-- Content description for collapsing the inactive tabs section. -->
   <string name="inactive_tabs_collapse_content_description">Згарнуць неактыўныя карткі</string>
-  <!--
-    Inactive tabs auto-close message in the tabs tray
-
-    The header text of the auto-close message when the user is asked if they want to turn on the auto-closing of inactive tabs.
-  -->
-  <string name="inactive_tabs_auto_close_message_header" tools:ignore="UnusedResources">Аўтаматычна закрываць праз месяц?</string>
-  <!-- A description below the header to notify the user what the inactive tabs auto-close feature is. -->
-  <string name="inactive_tabs_auto_close_message_description" tools:ignore="BrandUsage,UnusedResources">Firefox можа закрываць карткі, якія вы не праглядалі за апошні месяц.</string>
-  <!-- A call to action below the description to allow the user to turn on the auto closing of inactive tabs. -->
-  <string name="inactive_tabs_auto_close_message_action" tools:ignore="UnusedResources">УКЛЮЧЫЦЬ АЎТАЗАКРЫЦЦЁ</string>
   <!-- Text for the snackbar to confirm auto-close is enabled for inactive tabs -->
   <string name="inactive_tabs_auto_close_message_snackbar">Аўтазакрыццё ўключана</string>
   <!--
@@ -3076,8 +3010,6 @@
   <string name="micro_survey_privacy_notice_2">Паведамленне аб прыватнасці</string>
   <!-- The submit button label text -->
   <string name="micro_survey_submit_button_label">Падаць</string>
-  <!-- The survey completion header -->
-  <string name="micro_survey_survey_header_confirmation" tools:ignore="UnusedResources">Апытанне завершана</string>
   <!-- The survey completion confirmation text -->
   <string name="micro_survey_feedback_confirmation">Дзякуй за ваш водгук!</string>
   <!-- Option for likert scale -->
@@ -3092,10 +3024,6 @@
   <string name="likert_scale_option_5" tools:ignore="UnusedResources">Вельмі незадаволены</string>
   <!-- Option for likert scale -->
   <string name="likert_scale_option_6" tools:ignore="UnusedResources">Я ёй не карыстаюся</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_8" tools:ignore="UnusedResources">Я не выкарыстоўваю сінхранізацыю</string>
-  <!-- Text shown in the survey title for homepage microsurvey. Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_homepage_title" tools:ignore="BrandUsage,UnusedResources">Наколькі вы задаволены сваёй хатняй старонкай Firefox?</string>
   <!--
     Accessibility
 
@@ -3162,20 +3090,6 @@
     Text shown as a label or tag to indicate a feature or area is still undergoing active development. Note that here "Beta" should not be translated, as it is used as an icon styled element.
   -->
   <string name="beta_feature">BETA</string>
-  <!--
-    Root certificate expiration warnings
-
-    These strings for homepage cards and push notifications to be pushed to users running outdated versions of Firefox. We want to encourage these users to update to the latest version so their extensions and other features don't stop working when Firefox's old root certificate expires on 2025-03-14. For more information, see this SUMO article: https://support.mozilla.org/kb/root-certificate-expiration !
-
-    Homepage card button to open Google Play Store. "Update" is a verb.
-  -->
-  <string name="certificate_warning_homepage_card_update_now_button" tools:ignore="UnusedResources">Абнавіць зараз</string>
-  <!-- Homepage card title about old Firefox version. "Update" is a verb. Note: The word "Firefox" should NOT be translated. -->
-  <string name="certificate_warning_homepage_card_hca1_title" tools:ignore="BrandUsage,UnusedResources">Абнавіце свой браўзер Firefox</string>
-  <!-- Push notification title about old Firefox version. "Update" is a noun. -->
-  <string name="certificate_warning_push_notification_update_recommended_title" tools:ignore="UnusedResources">Рэкамендуецца абнавіць</string>
-  <!-- Push notification title about old Firefox version. Note: The word "Firefox" should NOT be translated. -->
-  <string name="certificate_warning_push_notification_pnw2_title" tools:ignore="BrandUsage,UnusedResources">Вы карыстаецеся састарэлай версіяй Firefox</string>
   <!-- TextField Design System Component -->
 
   <!-- Title for the setup checklist feature when the state is 'completed' -->

@@ -1094,8 +1094,6 @@
   <string name="certificate_info_verified_by">توثیق کردہ برائے: %1$s</string>
   <!-- Positive action of a dialog asking to delete -->
   <string name="dialog_delete_positive">حذف کریں</string>
-  <!-- The error message in add login view when hostname field is blank. -->
-  <string name="saved_login_hostname_required" tools:ignore="UnusedResources">میزبان نام درکار ہے۔</string>
   <!-- Voice search button content description -->
   <string name="voice_search_content_description">آواز کے ذریعے تلاش کریں</string>
   <!-- Voice search prompt description displayed after the user presses the voice search button -->
@@ -1138,12 +1136,6 @@
   <string name="inactive_tabs_title">غیر فعال ٹیبز</string>
   <!-- Content description for closing all inactive tabs -->
   <string name="inactive_tabs_delete_all">تمام غیر فعال ٹیبز کو بند کریں۔</string>
-  <!--
-    Inactive tabs auto-close message in the tabs tray
-
-    The header text of the auto-close message when the user is asked if they want to turn on the auto-closing of inactive tabs.
-  -->
-  <string name="inactive_tabs_auto_close_message_header" tools:ignore="UnusedResources">ایک ماہ کے بعد خودکار بند کریں ؟</string>
   <!-- Content description radio buttons with a link to more information -->
   <string name="radio_preference_info_content_description">تفصیلات کے لیے کلک کریں</string>
   <!-- Content description for the action bar "up" button -->

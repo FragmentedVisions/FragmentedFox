@@ -427,8 +427,6 @@
   <string name="close_tabs_after_one_week">Caggal yontere wootere</string>
   <!-- Option for auto closing tabs that will auto close tabs after one month -->
   <string name="close_tabs_after_one_month">Caggal lewru wooturu</string>
-  <!-- Title of preference that allows a user to specify the auto-close settings for open tabs -->
-  <string name="preference_auto_close_tabs" tools:ignore="UnusedResources">Uddu tabbe udditiiɗe e jaajol</string>
   <!--
     Opening screen
 
@@ -952,8 +950,6 @@
   <string name="confirm_clear_permission_site">Aɗa yananaa yiɗde momtude ɗee jamirooje e ɗee lowe?</string>
   <!-- Positive action of a dialog asking to delete -->
   <string name="dialog_delete_positive">Momtu</string>
-  <!-- The error message in add login view when hostname field is blank. -->
-  <string name="saved_login_hostname_required" tools:ignore="UnusedResources">Innde lowre ena waɗɗii</string>
   <!-- Voice search button content description -->
   <string name="voice_search_content_description">Njiilaw sawto</string>
   <!-- Voice search prompt description displayed after the user presses the voice search button -->
@@ -982,14 +978,6 @@
   <string name="top_sites_menu_settings">Teelte</string>
   <!-- Label text displayed for a sponsored top site. -->
   <string name="top_sites_sponsored_label">Barjinaaɗi</string>
-  <!--
-    Inactive tabs auto-close message in the tabs tray
-
-    The header text of the auto-close message when the user is asked if they want to turn on the auto-closing of inactive tabs.
-  -->
-  <string name="inactive_tabs_auto_close_message_header" tools:ignore="UnusedResources">Uddu e jaajol caggal lewru?</string>
-  <!-- A description below the header to notify the user what the inactive tabs auto-close feature is. -->
-  <string name="inactive_tabs_auto_close_message_description" tools:ignore="BrandUsage,UnusedResources">Firefox ena waawi uddude tabbe ɗe a yillaaki e lewru ɓennundu nduu.</string>
   <!-- Text indicating that the Pocket story that also displays this text is a sponsored story by other 3rd party entity. -->
   <string name="pocket_stories_sponsor_indication">Barjinaaɗi</string>
   <!-- Translations feature -->

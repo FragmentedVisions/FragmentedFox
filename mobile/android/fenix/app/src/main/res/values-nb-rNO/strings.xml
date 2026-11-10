@@ -485,14 +485,6 @@
   <string name="onboarding_term_of_service_line_three" tools:ignore="BrandUsage">For å hjelpe til med å forbedre nettleseren sender Firefox diagnose- og interaksjonsdata til Mozilla. %1$s</string>
   <!-- Used as text for the link in onboarding_term_of_service_line_three. -->
   <string name="onboarding_term_of_service_line_three_link_text">Behandle</string>
-  <!-- Terms of use (ToU) onboarding redesign title. -->
-  <string name="onboarding_redesign_tou_title" tools:ignore="UnusedResources">Start den ultimate Android-nettleseren</string>
-  <!-- Terms of use (ToU) first subheader. -->
-  <string name="onboarding_redesign_tou_subheader_one" tools:ignore="UnusedResources">Laster inn nettsteder lynraskt</string>
-  <!-- Terms of use (ToU) second subheader. -->
-  <string name="onboarding_redesign_tou_subheader_two" tools:ignore="UnusedResources">Automatisk sporingsbeskyttelse</string>
-  <!-- Terms of use (ToU) third subheader. -->
-  <string name="onboarding_redesign_tou_subheader_three" tools:ignore="UnusedResources">Tusenvis av tilpasninger</string>
   <!--
     Terms of use (ToU) first body text. %1$s is replaced by an active link,
     using onboarding_redesign_tou_body_one_link_text as text (“Firefox Terms of Use”).
@@ -514,28 +506,12 @@
   <string name="onboarding_redesign_tou_body_three" tools:ignore="BrandUsage,UnusedResources">For å hjelpe til med å forbedre nettleseren sender Firefox diagnose- og interaksjonsdata til Mozilla. %1$s</string>
   <!-- Used as text for the link in onboarding_redesign_tou_body_three. -->
   <string name="onboarding_redesign_tou_body_three_link_text" tools:ignore="UnusedResources">Behandle innstillinger</string>
-  <!-- Terms of use (ToU) onboarding page continue button label. -->
-  <string name="onboarding_redesign_tou_agree_and_continue_button_label" tools:ignore="UnusedResources">Fortsett</string>
-  <!-- Onboarding header for the toolbar selection card. -->
-  <string name="onboarding_redesign_customize_toolbar_title" tools:ignore="UnusedResources">Hvor vil du ha adresselinjen din?</string>
-  <!-- Onboarding label for 'Continue' button. -->
-  <string name="onboarding_redesign_continue_button" tools:ignore="UnusedResources">Fortsett</string>
   <!-- Marketing onboarding page title. 'Firefox' is intentionally hardcoded. -->
   <!-- Marketing onboarding page opt-out checkbox. Unchecking the box does not increase data collection. Our data practices remain the same. 'Mozilla' is intentionally hardcoded. -->
   <!-- Marketing onboarding page clickable link text to "learn more" on how data is used. -->
   <!-- Marketing onboarding page button label. Button to confirm choice and start browsing. -->
-  <!-- Set to default browser onboarding redesign title. -->
-  <string name="onboarding_redesign_set_default_browser_title" tools:ignore="UnusedResources">Få automatisk sporingsbeskyttelse som standard</string>
-  <!-- Set to default browser onboarding redesign body. -->
-  <string name="onboarding_redesign_set_default_browser_body" tools:ignore="UnusedResources">Ett trykk hindrer selskaper i å spionere på klikkene dine.</string>
-  <!-- Sync onboarding redesign title. 'Firefox' is intentionally hardcoded. -->
-  <string name="onboarding_redesign_sync_title" tools:ignore="BrandUsage,UnusedResources">Synkroniser alle steder der du bruker Firefox</string>
-  <!-- Sync onboarding redesign body. -->
-  <string name="onboarding_redesign_sync_body" tools:ignore="UnusedResources">Få bokmerker, faner og passord på hvilken som helst enhet. Alt er beskyttet med kryptering.</string>
   <!-- Sync onboarding redesign positive button text. -->
   <string name="onboarding_redesign_sync_positive_button" tools:ignore="UnusedResources">Start synkronisering</string>
-  <!-- Sync onboarding redesign negative button text. -->
-  <string name="onboarding_redesign_sync_negative_button" tools:ignore="UnusedResources">Ikke nå</string>
   <!-- Marketing onboarding page title variant. “One last thing” refers to the final step or action in the onboarding process that we’re asking users to take before they can start using the browser. -->
   <!-- Marketing onboarding page body variant. 'Firefox' is intentionally hardcoded. -->
   <!-- Marketing onboarding page button label variant. Button to confirm choice and start browsing. -->
@@ -543,14 +519,8 @@
 
   <!-- "Continue" onboarding button. -->
   <string name="nova_onboarding_continue_button">Fortsett</string>
-  <!-- "Continue browsing" onboarding button. -->
-  <string name="nova_onboarding_continue_browsing_button" tools:ignore="UnusedResources">Fortsett nettlesing</string>
   <!-- "Not now" onboarding button. -->
   <string name="nova_onboarding_negative_button">Ikke nå</string>
-  <!-- "Skip" onboarding button. -->
-  <string name="nova_onboarding_skip_button" tools:ignore="UnusedResources">Hopp over</string>
-  <!-- Terms of use (ToU) onboarding title. -->
-  <string name="nova_onboarding_tou_title" tools:ignore="UnusedResources">Gjør deg klar for frihet</string>
   <!-- Terms of use (ToU) onboarding subtitle. -->
   <string name="nova_onboarding_tou_subtitle">Raskt, trygt og uten å selge deg ut.\nSurfing ble nettopp bedre.</string>
   <!--
@@ -575,8 +545,6 @@
   <!-- Terms of use (ToU) onboarding body line three link text for nova_onboarding_tou_body_line_3. -->
   <string name="nova_onboarding_tou_body_line_3_link_text">Behandle innstillinger</string>
   <!-- "Set to default" onboarding title. -->
-  <string name="nova_onboarding_set_to_default_title" tools:ignore="UnusedResources">Si farvel til skumle sporere</string>
-  <!-- "Set to default" onboarding title. -->
   <string name="nova_onboarding_set_to_default_title_2">Åpne alle lenkene dine med innebygd personvern</string>
   <!-- "Set to default" onboarding subtitle. -->
   <string name="nova_onboarding_set_to_default_subtitle">Vi beskytter dine data og blokkerer automatisk selskaper fra å spionere på dine klikk.</string>
@@ -588,14 +556,6 @@
   <string name="nova_onboarding_toolbar_selection_top_label">Topp</string>
   <!-- Toolbar selection onboarding "bottom" option label. -->
   <string name="nova_onboarding_toolbar_selection_bottom_label">Bunn</string>
-  <!-- Theme selection onboarding title. -->
-  <string name="nova_onboarding_theme_selection_title" tools:ignore="UnusedResources">Velg ditt tema</string>
-  <!-- Theme selection onboarding "automatic" option label. -->
-  <string name="nova_onboarding_theme_selection_automatic_label" tools:ignore="UnusedResources">Automatisk</string>
-  <!-- Theme selection onboarding "light" option label. -->
-  <string name="nova_onboarding_theme_selection_light_label" tools:ignore="UnusedResources">Lyst</string>
-  <!-- Theme selection onboarding "dark" option label. -->
-  <string name="nova_onboarding_theme_selection_dark_label" tools:ignore="UnusedResources">Mørkt</string>
   <!-- Sync onboarding title. -->
   <string name="nova_onboarding_sync_title">Fortsett umiddelbart der du sluttet</string>
   <!-- Sync onboarding subtitle. -->
@@ -651,8 +611,6 @@
   <string name="nova_onboarding_add_search_widget_subtitle" tools:ignore="BrandUsage">Start hvert søk fra telefonens startskjerm, og vit at Firefox sin automatiske beskyttelser passer på deg.</string>
   <!-- "Add search widget" onboarding button. 'Firefox' is intentionally hardcoded. -->
   <string name="nova_onboarding_add_search_widget_button" tools:ignore="BrandUsage">Legg til Firefox-widget</string>
-  <!-- Customize prompt onboarding title. -->
-  <string name="nova_onboarding_customize_prompt_title" tools:ignore="UnusedResources">Enkel å tilpasse og mer privat med hvert trykk</string>
   <plurals name="nova_onboarding_customize_prompt_body" tools:ignore="UnusedResources">
     <!--
       Customize prompt onboarding body.
@@ -664,12 +622,6 @@
     <item quantity="one">%1$s blokkerte %2$,d sporer mens du surfet på nettet.</item>
     <item quantity="other">%1$s blokkerte %2$,d sporere mens du surfet på nettet.</item>
   </plurals>
-  <!-- Customize prompt onboarding positive button. -->
-  <string name="nova_onboarding_customize_prompt_positive_button" tools:ignore="UnusedResources">Begynn å tilpasse</string>
-  <!-- App icon onboarding title. -->
-  <string name="nova_onboarding_app_icon_prompt_title" tools:ignore="UnusedResources">Velg et tilpasset appikon</string>
-  <!-- App icon onboarding body. -->
-  <string name="nova_onboarding_app_icon_prompt_body" tools:ignore="UnusedResources">Gi startskjermen et personlig preg.</string>
   <!-- ==== End of Project "Nova" onboarding strings ==== -->
 
   <!--
@@ -914,11 +866,6 @@
   <string name="preferences_category_file_storage">Fillagring</string>
   <!-- Preference title for downloads default location. -->
   <string name="preferences_downloads_default_location_title">Standard nedlastingsplassering</string>
-  <!--
-    Message shown as the summary of the download location preference when the
-    app has lost the permission to access a previously selected custom folder.
-  -->
-  <string name="preference_downloads_folder_permission_lost" tools:ignore="UnusedResources">Du har ikke tillatelse til å bruke denne mappen. Prøv å velge en annen.</string>
   <!-- Preference title for choosing an app to handle downloads -->
   <string name="preferences_choose_app_for_downloads">Behandle nedlastinger med en annen app</string>
   <!-- Preference category for deleting or removing downloads -->
@@ -1105,16 +1052,6 @@
   <string name="restart_warning_dialog_button_negative">Avbryt</string>
   <!-- Error message snackbar shown after the user tried to apply the new icon but the Android OS threw an error while updating existing app shortcuts (e.g. private mode shortcut) -->
   <string name="shortcuts_update_error">Kunne ikke oppdatere appikonet. Fjern eksisterende snarveier og prøv igjen.</string>
-  <!--
-    Add-ons general availability nimbus message
-
-    Title of the Nimbus message for extension general availability
-  -->
-  <string name="addon_ga_message_title_2" tools:ignore="UnusedResources">Nye utvidelser nå tilgjengelig</string>
-  <!-- Body of the Nimbus message for add-ons general availability. 'Firefox' intentionally hardcoded here -->
-  <string name="addon_ga_message_body" tools:ignore="BrandUsage,UnusedResources">Sjekk ut 100+ nye utvidelser som lar deg gjøre Firefox til din egen.</string>
-  <!-- Button text of the Nimbus message for extensions general availability. -->
-  <string name="addon_ga_message_button_2" tools:ignore="UnusedResources">Utforsk utvidelser</string>
   <!--
     Extension process crash dialog to user
 
@@ -1407,8 +1344,6 @@
   <string name="close_tabs_after_one_week">Etter en uke</string>
   <!-- Option for auto closing tabs that will auto close tabs after one month -->
   <string name="close_tabs_after_one_month">Etter en måned</string>
-  <!-- Title of preference that allows a user to specify the auto-close settings for open tabs -->
-  <string name="preference_auto_close_tabs" tools:ignore="UnusedResources">Lukk åpne faner automatisk</string>
   <!-- Content description (not visible, for screen readers etc.): Close tab button -->
   <string name="tab_manager_close_tabs">Lukk</string>
   <!--
@@ -2370,8 +2305,6 @@
   <string name="sync_add_new_device_connect_button">Koble til en annen enhet…</string>
   <!-- A message template for the shared link with a footer. %1$s is the shared link, %2$s is the app name (e.g. Firefox) and %3$s is a download link for the app. -->
   <string name="sent_from_firefox_template" tools:ignore="UnusedResources">%1$s\n\nSendt fra %2$s Prøv den mobile nettleseren: %3$s</string>
-  <!-- A short message template for the shared link with a footer. %1$s is the shared link, %2$s is the app name (e.g. Firefox) and %3$s is a download link for the app. -->
-  <string name="sent_from_firefox_template_short" tools:ignore="UnusedResources">%1$s\n\nSendt fra %2$s 🦊 %3$s</string>
   <!--
     Notifications
 
@@ -2807,8 +2740,6 @@
   <string name="about_privacy_notice">Personvernerklæring</string>
   <!-- About page link text to open know your rights link -->
   <string name="about_know_your_rights">Kjenn dine rettigheter</string>
-  <!-- About page link text to open terms of use link -->
-  <string name="about_terms_of_use" tools:ignore="UnusedResources">Bruksvilkår</string>
   <!-- About page link text to open licensing information link -->
   <string name="about_licensing_information">Lisensinformasjon</string>
   <!-- About page link text to open a screen with libraries that are used -->
@@ -3223,10 +3154,6 @@
   <string name="saved_login_password_required_2">Skriv inn et passord</string>
   <!-- The error message in add login view when username field is blank. -->
   <string name="saved_login_username_required_2">Skriv inn et brukernavn</string>
-  <!-- The error message in add login view when hostname field is blank. -->
-  <string name="saved_login_hostname_required" tools:ignore="UnusedResources">Servernavn påkrevd</string>
-  <!-- The error message in add login view when hostname field is blank. -->
-  <string name="saved_login_hostname_required_2" tools:ignore="UnusedResources">Skriv inn en nettadresse</string>
   <!-- Voice search button content description -->
   <string name="voice_search_content_description">Stemmesøk</string>
   <!-- Voice search prompt description displayed after the user presses the voice search button -->
@@ -3331,16 +3258,6 @@
   <string name="inactive_tabs_expand_content_description">Utvid inaktive faner</string>
   <!-- Content description for collapsing the inactive tabs section. -->
   <string name="inactive_tabs_collapse_content_description">Fold sammen inaktive faner</string>
-  <!--
-    Inactive tabs auto-close message in the tabs tray
-
-    The header text of the auto-close message when the user is asked if they want to turn on the auto-closing of inactive tabs.
-  -->
-  <string name="inactive_tabs_auto_close_message_header" tools:ignore="UnusedResources">Lukk automatisk etter en måned?</string>
-  <!-- A description below the header to notify the user what the inactive tabs auto-close feature is. -->
-  <string name="inactive_tabs_auto_close_message_description" tools:ignore="BrandUsage,UnusedResources">Firefox kan lukke faner du ikke har sett den siste måneden.</string>
-  <!-- A call to action below the description to allow the user to turn on the auto closing of inactive tabs. -->
-  <string name="inactive_tabs_auto_close_message_action" tools:ignore="UnusedResources">SLÅ PÅ AUTOLUKKING</string>
   <!-- Text for the snackbar to confirm auto-close is enabled for inactive tabs -->
   <string name="inactive_tabs_auto_close_message_snackbar">Automatisk lukking aktivert</string>
   <!--
@@ -3846,16 +3763,6 @@
   <string name="debug_drawer_tab_tools_tab_creation_tool_button_text_inactive">Legg til inaktive faner</string>
   <!-- The button text to add tabs to the private tab group in the tab creation tool. -->
   <string name="debug_drawer_tab_tools_tab_creation_tool_button_text_private">Legg til private faner</string>
-  <!--
-    Microsurvey
-    Note: Some strings are marked as unused as they are referenced via the Nimbus experimentation
-    platform and have no persistent reference in code
-
-    Prompt view
-
-    The microsurvey prompt title. Note: The word "Firefox" should NOT be translated
-  -->
-  <string name="micro_survey_prompt_title" tools:ignore="BrandUsage,UnusedResources">Hjelp oss å gjøre Firefox bedre. Det tar bare et minutt.</string>
   <!-- The continue button label -->
   <string name="micro_survey_continue_button_label" tools:ignore="UnusedResources">Fortsett</string>
   <!--
@@ -3868,8 +3775,6 @@
   <string name="micro_survey_privacy_notice_2">Personvernerklæring</string>
   <!-- The submit button label text -->
   <string name="micro_survey_submit_button_label">Send</string>
-  <!-- The survey completion header -->
-  <string name="micro_survey_survey_header_confirmation" tools:ignore="UnusedResources">Undersøkelsen er fullført</string>
   <!-- The survey completion confirmation text -->
   <string name="micro_survey_feedback_confirmation">Takk for tilbakemeldingen!</string>
   <!-- Option for likert scale -->
@@ -3884,36 +3789,10 @@
   <string name="likert_scale_option_5" tools:ignore="UnusedResources">Veldig misfornøyd</string>
   <!-- Option for likert scale -->
   <string name="likert_scale_option_6" tools:ignore="UnusedResources">Jeg bruker den ikke</string>
-  <!-- Option for likert scale. Note: The word "Firefox" should NOT be translated. -->
-  <string name="likert_scale_option_7" tools:ignore="BrandUsage,UnusedResources">Jeg bruker ikke søk på Firefox</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_8" tools:ignore="UnusedResources">Jeg bruker ikke synkronisering</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_slow_or_buggy" tools:ignore="UnusedResources">Det er tregt eller fullt av feil</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_features_hard_to_find_or_missing" tools:ignore="UnusedResources">Funksjoner er vanskelige å finne eller mangler</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_confusing_or_hard_to_use" tools:ignore="UnusedResources">Det er forvirrende eller vanskelig å bruke</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_its_okay" tools:ignore="UnusedResources">Det er greit, men ikke bedre enn andre nettlesere</string>
-  <!-- Option for likert scale. Note: The word "Firefox" should NOT be translated. -->
-  <string name="likert_scale_option_i_plan_to_keep_using" tools:ignore="BrandUsage,UnusedResources">Jeg planlegger å fortsette å bruke Firefox</string>
   <!-- Text shown in prompt for printing microsurvey. "sec" It's an abbreviation for "second". Note: The word "Firefox" should NOT be translated. -->
   <string name="microsurvey_prompt_printing_title" tools:ignore="BrandUsage,UnusedResources">Bidra til å gjøre utskrifter i Firefox bedre. Det tar bare et sekund</string>
-  <!-- Text shown in prompt for search microsurvey. Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_prompt_search_title" tools:ignore="BrandUsage,UnusedResources">Bidra til å gjøre søk i Firefox bedre. Det tar bare et minutt</string>
-  <!-- Text shown in prompt for sync microsurvey. Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_prompt_sync_title" tools:ignore="BrandUsage,UnusedResources">Bidra til å gjøre synkronisering i Firefox bedre. Det tar bare et minutt</string>
   <!-- Text shown in the survey title for printing microsurvey. Note: The word "Firefox" should NOT be translated. -->
   <string name="microsurvey_survey_printing_title" tools:ignore="BrandUsage,UnusedResources">Hvor fornøyd er du med utskrifter i Firefox?</string>
-  <!-- Text shown in the survey title for homepage microsurvey. Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_homepage_title" tools:ignore="BrandUsage,UnusedResources">Hvor fornøyd er du med startsiden til Firefox?</string>
-  <!-- Text shown in the survey title for search experience microsurvey. Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_search_title" tools:ignore="BrandUsage,UnusedResources">Hvor fornøyd er du med søkeopplevelsen i Firefox?</string>
-  <!-- Text shown in the survey title for sync experience microsurvey. Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_sync_title" tools:ignore="BrandUsage,UnusedResources">Hvor fornøyd er du med synkroniseringsopplevelsen i Firefox?</string>
-  <!-- Text shown in the survey title for 'describe your experience so far' microsurvey. Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_describe_your_experience_title" tools:ignore="BrandUsage,UnusedResources">Hjelp oss med å forbedre Firefox. Hva beskriver best opplevelsen din så langt?</string>
   <!--
     Uninstall Survey
 
@@ -4034,40 +3913,6 @@
     Text shown as a label or tag to indicate a feature or area is still undergoing active development. Note that here "Beta" should not be translated, as it is used as an icon styled element.
   -->
   <string name="beta_feature">BETA</string>
-  <!--
-    Root certificate expiration warnings
-
-    These strings for homepage cards and push notifications to be pushed to users running outdated versions of Firefox. We want to encourage these users to update to the latest version so their extensions and other features don't stop working when Firefox's old root certificate expires on 2025-03-14. For more information, see this SUMO article: https://support.mozilla.org/kb/root-certificate-expiration !
-
-    Homepage card button to open Google Play Store. "Update" is a verb.
-  -->
-  <string name="certificate_warning_homepage_card_update_now_button" tools:ignore="UnusedResources">Oppdater nå</string>
-  <!-- Homepage card title about old Firefox version. "Update" is a verb. Note: The word "Firefox" should NOT be translated. -->
-  <string name="certificate_warning_homepage_card_hca1_title" tools:ignore="BrandUsage,UnusedResources">Oppdater din Firefox-nettleser</string>
-  <!-- Homepage card message about old Firefox version -->
-  <string name="certificate_warning_homepage_card_hca1_message" tools:ignore="UnusedResources">Et rotsertifikat vil utløpe, noe som fører til at enkelte funksjoner slutter å fungere 14. mars.</string>
-  <!-- Homepage card title about old Firefox version. "Update" is a verb. -->
-  <string name="certificate_warning_homepage_card_hcr1_title" tools:ignore="UnusedResources">Oppdater før 14. mars</string>
-  <!-- Homepage card message about old Firefox version. Note: The word "Firefox" should NOT be translated. -->
-  <string name="certificate_warning_homepage_card_hcr1_message" tools:ignore="BrandUsage,UnusedResources">Et rotsertifikat vil utløpe, noe som fører til at din versjon av Firefox slutter å fungere som den skal.</string>
-  <!-- Homepage card title about old Firefox version -->
-  <string name="certificate_warning_homepage_card_hcw2_title" tools:ignore="UnusedResources">Mindre enn 7 dager igjen å oppdatere</string>
-  <!-- Homepage card message about old Firefox version. Note: The word "Firefox" should NOT be translated. -->
-  <string name="certificate_warning_homepage_card_hcw2_message" tools:ignore="BrandUsage,UnusedResources">14. mars slutter tillegg og andre Firefox-funksjoner å fungere fordi et rotsertifikat utløper.</string>
-  <!-- Homepage card title about old Firefox version. Note: The word "Firefox" should NOT be translated. -->
-  <string name="certificate_warning_homepage_card_hcw3_title" tools:ignore="BrandUsage,UnusedResources">Siste sjanse til å beholde Firefox</string>
-  <!-- Homepage card message about old Firefox version. Note: The word "Firefox" should NOT be translated. -->
-  <string name="certificate_warning_homepage_card_hcw3_message" tools:ignore="BrandUsage,UnusedResources">Din versjon av Firefox slutter å fungere som den skal 14. mars fordi et rotsertifikat utløper.</string>
-  <!-- Push notification title about old Firefox version. "Update" is a noun. -->
-  <string name="certificate_warning_push_notification_update_recommended_title" tools:ignore="UnusedResources">Oppdatering anbefales</string>
-  <!-- Push notification message about old Firefox version -->
-  <string name="certificate_warning_push_notification_pnr1_message" tools:ignore="UnusedResources">Tillegg og enkelte funksjoner slutter å fungere 14. mars.</string>
-  <!-- Push notification title about old Firefox version. Note: The word "Firefox" should NOT be translated. -->
-  <string name="certificate_warning_push_notification_pnw2_title" tools:ignore="BrandUsage,UnusedResources">Du bruker en eldre versjon av Firefox</string>
-  <!-- Push notification message about old Firefox version. "Update" is a verb. -->
-  <string name="certificate_warning_push_notification_pnw2_message" tools:ignore="UnusedResources">Oppdater før 14. mars for å fortsette å bruke utvidelser og andre funksjoner.</string>
-  <!-- Push notification message about old Firefox version -->
-  <string name="certificate_warning_push_notification_pnw3_message" tools:ignore="UnusedResources">Noen funksjoner slutter å fungere i morgen.</string>
   <!-- TextField Design System Component -->
 
   <!--

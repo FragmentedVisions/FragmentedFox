@@ -452,8 +452,6 @@
   <string name="close_tabs_after_one_week">Dimpués d\'una semana</string>
   <!-- Option for auto closing tabs that will auto close tabs after one month -->
   <string name="close_tabs_after_one_month">Dimpués d\'un mes</string>
-  <!-- Title of preference that allows a user to specify the auto-close settings for open tabs -->
-  <string name="preference_auto_close_tabs" tools:ignore="UnusedResources">Auto-tancar pestanyas ubiertas</string>
   <!-- Option for always opening the homepage when re-opening the app -->
   <string name="opening_screen_homepage">Pachina d’inicio</string>
   <!-- Option for always opening the user's last-open tab when re-opening the app -->

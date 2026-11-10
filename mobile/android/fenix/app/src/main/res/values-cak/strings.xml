@@ -302,8 +302,6 @@
   <string name="onboarding_redesign_tou_body_one" tools:ignore="UnusedResources">Toq nasamajij chik el, naya\' atzij chi ke ri %1$s.</string>
   <!-- Used as text for the link in onboarding_redesign_tou_body_one. -->
   <string name="onboarding_redesign_tou_body_one_link_text" tools:ignore="BrandUsage,UnusedResources">Rojqanem rokisaxik Firefox</string>
-  <!-- Onboarding label for 'Continue' button. -->
-  <string name="onboarding_redesign_continue_button" tools:ignore="UnusedResources">Titikïr chik el</string>
   <!-- ==== Project "Nova" onboarding strings ==== -->
 
   <!-- ==== End of Project "Nova" onboarding strings ==== -->
@@ -544,8 +542,6 @@
   <string name="wallpapers_onboarding_dialog_body_text">Tacha\' jun rupam ruwäch richin nak\'üt awi\'.</string>
   <!-- Wallpaper onboarding dialog learn more button text. The button navigates to the wallpaper settings screen. -->
   <string name="wallpapers_onboarding_dialog_explore_more_button_text">Kekanöx ch\'aqa\' rupam ruwäch</string>
-  <!-- Body of the Nimbus message for add-ons general availability. 'Firefox' intentionally hardcoded here -->
-  <string name="addon_ga_message_body" tools:ignore="BrandUsage,UnusedResources">Ke\'awila\' +100 k\'ak\'a\' taq k\'amal ri nikiya\' q\'ij chawe\' nawichinaj Firefox.</string>
   <!--
     Account Preferences
 
@@ -737,8 +733,6 @@
   <string name="close_tabs_after_one_week">Jun wuq\'ij tik\'o</string>
   <!-- Option for auto closing tabs that will auto close tabs after one month -->
   <string name="close_tabs_after_one_month">Jun ik\' tik\'o</string>
-  <!-- Title of preference that allows a user to specify the auto-close settings for open tabs -->
-  <string name="preference_auto_close_tabs" tools:ignore="UnusedResources">Ketz\'apïx kiyon ri jaqäl taq ruwi\'</string>
   <!-- Option for always opening the homepage when re-opening the app -->
   <string name="opening_screen_homepage">Ruxaq tikirib\'äl</string>
   <!-- Option for always opening the user's last-open tab when re-opening the app -->
@@ -1642,8 +1636,6 @@
   <string name="saved_login_password_required_2">Titz\'ib\'äx jun ewan tzij</string>
   <!-- The error message in add login view when username field is blank. -->
   <string name="saved_login_username_required_2">Titz\'ib\'äx jun ewan rutzij okisaxel</string>
-  <!-- The error message in add login view when hostname field is blank. -->
-  <string name="saved_login_hostname_required" tools:ignore="UnusedResources">Najowäx rub\'i\' ruk\'u\'x k\'amb\'ey</string>
   <!-- Voice search button content description -->
   <string name="voice_search_content_description">Tikanöx chi ch\'ab\'äl</string>
   <!-- Voice search prompt description displayed after the user presses the voice search button -->
@@ -1696,16 +1688,6 @@
   <string name="inactive_tabs_expand_content_description">Kerik\' chupun taq ruwi\'</string>
   <!-- Content description for collapsing the inactive tabs section. -->
   <string name="inactive_tabs_collapse_content_description">Kek\'ol chupun taq ruwi\'</string>
-  <!--
-    Inactive tabs auto-close message in the tabs tray
-
-    The header text of the auto-close message when the user is asked if they want to turn on the auto-closing of inactive tabs.
-  -->
-  <string name="inactive_tabs_auto_close_message_header" tools:ignore="UnusedResources">¿La ruyonil nitz\'apïx chi rij jun ik\'?</string>
-  <!-- A description below the header to notify the user what the inactive tabs auto-close feature is. -->
-  <string name="inactive_tabs_auto_close_message_description" tools:ignore="BrandUsage,UnusedResources">Firefox nitikïr yerutz\'apij taq ruxaq man e\'atz\'eton ta pa ri ruk\'isib\'äl ik\'.</string>
-  <!-- A call to action below the description to allow the user to turn on the auto closing of inactive tabs. -->
-  <string name="inactive_tabs_auto_close_message_action" tools:ignore="UnusedResources">TITZIJ RUYON NICHUPUTÄJ</string>
   <!-- Text for the snackbar to confirm auto-close is enabled for inactive tabs -->
   <string name="inactive_tabs_auto_close_message_snackbar">Tzijïl ruyon nitz\'apitäj</string>
   <!--

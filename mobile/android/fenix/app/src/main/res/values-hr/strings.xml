@@ -480,14 +480,6 @@
   <string name="onboarding_term_of_service_line_three" tools:ignore="BrandUsage">Kako bi poboljšao preglednik, Firefox šalje dijagnostičke podatke i podatke o interakciji Mozilli. %1$s</string>
   <!-- Used as text for the link in onboarding_term_of_service_line_three. -->
   <string name="onboarding_term_of_service_line_three_link_text">Upravljaj</string>
-  <!-- Terms of use (ToU) onboarding redesign title. -->
-  <string name="onboarding_redesign_tou_title" tools:ignore="UnusedResources">Pokreni ultimativni Android preglednik</string>
-  <!-- Terms of use (ToU) first subheader. -->
-  <string name="onboarding_redesign_tou_subheader_one" tools:ignore="UnusedResources">Učitavaj stranice munjevitom brzinom</string>
-  <!-- Terms of use (ToU) second subheader. -->
-  <string name="onboarding_redesign_tou_subheader_two" tools:ignore="UnusedResources">Automatska zaštita od praćenja</string>
-  <!-- Terms of use (ToU) third subheader. -->
-  <string name="onboarding_redesign_tou_subheader_three" tools:ignore="UnusedResources">Tisuće načina za prilagođavanje</string>
   <!--
     Terms of use (ToU) first body text. %1$s is replaced by an active link,
     using onboarding_redesign_tou_body_one_link_text as text (“Firefox Terms of Use”).
@@ -509,28 +501,12 @@
   <string name="onboarding_redesign_tou_body_three" tools:ignore="BrandUsage,UnusedResources">Kako bismo poboljšali preglednik, Firefox šalje dijagnostičke podatke i podatke o interakciji Mozilli. %1$s</string>
   <!-- Used as text for the link in onboarding_redesign_tou_body_three. -->
   <string name="onboarding_redesign_tou_body_three_link_text" tools:ignore="UnusedResources">Upravljaj postavkama</string>
-  <!-- Terms of use (ToU) onboarding page continue button label. -->
-  <string name="onboarding_redesign_tou_agree_and_continue_button_label" tools:ignore="UnusedResources">Nastavi</string>
-  <!-- Onboarding header for the toolbar selection card. -->
-  <string name="onboarding_redesign_customize_toolbar_title" tools:ignore="UnusedResources">Gdje želiš postaviti adresnu traku?</string>
-  <!-- Onboarding label for 'Continue' button. -->
-  <string name="onboarding_redesign_continue_button" tools:ignore="UnusedResources">Nastavi</string>
   <!-- Marketing onboarding page title. 'Firefox' is intentionally hardcoded. -->
   <!-- Marketing onboarding page opt-out checkbox. Unchecking the box does not increase data collection. Our data practices remain the same. 'Mozilla' is intentionally hardcoded. -->
   <!-- Marketing onboarding page clickable link text to "learn more" on how data is used. -->
   <!-- Marketing onboarding page button label. Button to confirm choice and start browsing. -->
-  <!-- Set to default browser onboarding redesign title. -->
-  <string name="onboarding_redesign_set_default_browser_title" tools:ignore="UnusedResources">Automatska zaštita od praćenja je standardno uključena</string>
-  <!-- Set to default browser onboarding redesign body. -->
-  <string name="onboarding_redesign_set_default_browser_body" tools:ignore="UnusedResources">Jednim dodirom spriječi da druge kompanije prate tvoje klikove.</string>
-  <!-- Sync onboarding redesign title. 'Firefox' is intentionally hardcoded. -->
-  <string name="onboarding_redesign_sync_title" tools:ignore="BrandUsage,UnusedResources">Sinkroniziraj podatke gdje kod koristiš Firefox</string>
-  <!-- Sync onboarding redesign body. -->
-  <string name="onboarding_redesign_sync_body" tools:ignore="UnusedResources">Preuzmi zabilješke, kartice i lozinke na bilo kojem uređaju. Sve je zaštićeno šifriranjem.</string>
   <!-- Sync onboarding redesign positive button text. -->
   <string name="onboarding_redesign_sync_positive_button" tools:ignore="UnusedResources">Započni sinkronizaciju</string>
-  <!-- Sync onboarding redesign negative button text. -->
-  <string name="onboarding_redesign_sync_negative_button" tools:ignore="UnusedResources">Ne sada</string>
   <!-- Marketing onboarding page title variant. “One last thing” refers to the final step or action in the onboarding process that we’re asking users to take before they can start using the browser. -->
   <!-- Marketing onboarding page body variant. 'Firefox' is intentionally hardcoded. -->
   <!-- Marketing onboarding page button label variant. Button to confirm choice and start browsing. -->
@@ -538,14 +514,8 @@
 
   <!-- "Continue" onboarding button. -->
   <string name="nova_onboarding_continue_button">Nastavi</string>
-  <!-- "Continue browsing" onboarding button. -->
-  <string name="nova_onboarding_continue_browsing_button" tools:ignore="UnusedResources">Nastavi pregledavati</string>
   <!-- "Not now" onboarding button. -->
   <string name="nova_onboarding_negative_button">Ne sada</string>
-  <!-- "Skip" onboarding button. -->
-  <string name="nova_onboarding_skip_button" tools:ignore="UnusedResources">Preskoči</string>
-  <!-- Terms of use (ToU) onboarding title. -->
-  <string name="nova_onboarding_tou_title" tools:ignore="UnusedResources">Spremi se za slobodu</string>
   <!-- Terms of use (ToU) onboarding subtitle. -->
   <string name="nova_onboarding_tou_subtitle">Brzo, sigurno i neće te izdati.\nPregledavanje je upravo postalo bolje.</string>
   <!--
@@ -570,8 +540,6 @@
   <!-- Terms of use (ToU) onboarding body line three link text for nova_onboarding_tou_body_line_3. -->
   <string name="nova_onboarding_tou_body_line_3_link_text">Upravljaj postavkama</string>
   <!-- "Set to default" onboarding title. -->
-  <string name="nova_onboarding_set_to_default_title" tools:ignore="UnusedResources">Riješi se jezivih programa za praćenje</string>
-  <!-- "Set to default" onboarding title. -->
   <string name="nova_onboarding_set_to_default_title_2">Otvori sve svoje poveznice s ugrađenom privatnosti</string>
   <!-- "Set to default" onboarding subtitle. -->
   <string name="nova_onboarding_set_to_default_subtitle">Štitimo tvoje podatke i automatski blokiramo tvrtke od špijuniranja tvojih klikova.</string>
@@ -583,14 +551,6 @@
   <string name="nova_onboarding_toolbar_selection_top_label">Gore</string>
   <!-- Toolbar selection onboarding "bottom" option label. -->
   <string name="nova_onboarding_toolbar_selection_bottom_label">Dolje</string>
-  <!-- Theme selection onboarding title. -->
-  <string name="nova_onboarding_theme_selection_title" tools:ignore="UnusedResources">Odaberi temu</string>
-  <!-- Theme selection onboarding "automatic" option label. -->
-  <string name="nova_onboarding_theme_selection_automatic_label" tools:ignore="UnusedResources">Automatska</string>
-  <!-- Theme selection onboarding "light" option label. -->
-  <string name="nova_onboarding_theme_selection_light_label" tools:ignore="UnusedResources">Svijetla</string>
-  <!-- Theme selection onboarding "dark" option label. -->
-  <string name="nova_onboarding_theme_selection_dark_label" tools:ignore="UnusedResources">Tamna</string>
   <!-- Sync onboarding title. -->
   <string name="nova_onboarding_sync_title">Nastavi tamo gdje si stao/la</string>
   <!-- Sync onboarding subtitle. -->
@@ -632,8 +592,6 @@
   <string name="nova_onboarding_add_search_widget_subtitle" tools:ignore="BrandUsage">Započni svaku pretragu s početnog ekrana svog telefona i znaj da te Firefoxove automatske zaštite uvijek štite.</string>
   <!-- "Add search widget" onboarding button. 'Firefox' is intentionally hardcoded. -->
   <string name="nova_onboarding_add_search_widget_button" tools:ignore="BrandUsage">Dodaj Firefoxov widget</string>
-  <!-- Customize prompt onboarding title. -->
-  <string name="nova_onboarding_customize_prompt_title" tools:ignore="UnusedResources">Jednostavno prilagođavanje i privatnije sa svakim dodirom</string>
   <plurals name="nova_onboarding_customize_prompt_body" tools:ignore="UnusedResources">
     <!--
       Customize prompt onboarding body.
@@ -646,12 +604,6 @@
     <item quantity="few">%1$s je blokirao %2$,d programa za praćenje tijekom tvog lutanja webom.</item>
     <item quantity="other">%1$s je blokirao %2$,d programa za praćenje tijekom tvog lutanja webom.</item>
   </plurals>
-  <!-- Customize prompt onboarding positive button. -->
-  <string name="nova_onboarding_customize_prompt_positive_button" tools:ignore="UnusedResources">Započni prilagođavanje</string>
-  <!-- App icon onboarding title. -->
-  <string name="nova_onboarding_app_icon_prompt_title" tools:ignore="UnusedResources">Odaberi prilagođenu ikonu aplikacije</string>
-  <!-- App icon onboarding body. -->
-  <string name="nova_onboarding_app_icon_prompt_body" tools:ignore="UnusedResources">Daj svojem početnom zaslonu svoj osobni štih.</string>
   <!-- ==== End of Project "Nova" onboarding strings ==== -->
 
   <!--
@@ -896,11 +848,6 @@
   <string name="preferences_category_file_storage">Spremište datoteka</string>
   <!-- Preference title for downloads default location. -->
   <string name="preferences_downloads_default_location_title">Standardno mjesto za preuzimanja</string>
-  <!--
-    Message shown as the summary of the download location preference when the
-    app has lost the permission to access a previously selected custom folder.
-  -->
-  <string name="preference_downloads_folder_permission_lost" tools:ignore="UnusedResources">Nemaš dozvole za korištenje ove mape. Odaberi jednu drugu mapu.</string>
   <!-- Preference title for choosing an app to handle downloads -->
   <string name="preferences_choose_app_for_downloads">Upravljaj preuzimanjima pomoću jedne druge aplikacije</string>
   <!-- Preference category for deleting or removing downloads -->
@@ -1085,16 +1032,6 @@
   <string name="restart_warning_dialog_button_negative">Odustani</string>
   <!-- Error message snackbar shown after the user tried to apply the new icon but the Android OS threw an error while updating existing app shortcuts (e.g. private mode shortcut) -->
   <string name="shortcuts_update_error">Mijenjanje ikone aplikacije nije uspjelo. Ukloni postojeće prečace i pokušaj ponovo.</string>
-  <!--
-    Add-ons general availability nimbus message
-
-    Title of the Nimbus message for extension general availability
-  -->
-  <string name="addon_ga_message_title_2" tools:ignore="UnusedResources">Dostupna su nova proširenja</string>
-  <!-- Body of the Nimbus message for add-ons general availability. 'Firefox' intentionally hardcoded here -->
-  <string name="addon_ga_message_body" tools:ignore="BrandUsage,UnusedResources">Pogledaj više od 100 novih proširenja koja omogućuju prilagoditi Firefox.</string>
-  <!-- Button text of the Nimbus message for extensions general availability. -->
-  <string name="addon_ga_message_button_2" tools:ignore="UnusedResources">Istraži dodatke</string>
   <!--
     Extension process crash dialog to user
 
@@ -1387,8 +1324,6 @@
   <string name="close_tabs_after_one_week">Nakon jednog tjedna</string>
   <!-- Option for auto closing tabs that will auto close tabs after one month -->
   <string name="close_tabs_after_one_month">Nakon jednog mjeseca</string>
-  <!-- Title of preference that allows a user to specify the auto-close settings for open tabs -->
-  <string name="preference_auto_close_tabs" tools:ignore="UnusedResources">Automatski zatvaraj otvorene kartice</string>
   <!-- Content description (not visible, for screen readers etc.): Close tab button -->
   <string name="tab_manager_close_tabs">Zatvori</string>
   <!--
@@ -2329,8 +2264,6 @@
   <string name="sync_add_new_device_connect_button">Poveži jedan drugi uređaj …</string>
   <!-- A message template for the shared link with a footer. %1$s is the shared link, %2$s is the app name (e.g. Firefox) and %3$s is a download link for the app. -->
   <string name="sent_from_firefox_template" tools:ignore="UnusedResources">%1$s\n\nPoslano od aplikacije %2$s 🦊 Isprobaj mobilni preglednik: %3$s</string>
-  <!-- A short message template for the shared link with a footer. %1$s is the shared link, %2$s is the app name (e.g. Firefox) and %3$s is a download link for the app. -->
-  <string name="sent_from_firefox_template_short" tools:ignore="UnusedResources">%1$s\n\nPoslano od aplikacije %2$s 🦊 %3$s</string>
   <!--
     Notifications
 
@@ -2756,8 +2689,6 @@
   <string name="about_privacy_notice">Napomene o privatnosti</string>
   <!-- About page link text to open know your rights link -->
   <string name="about_know_your_rights">Poznaj svoja prava</string>
-  <!-- About page link text to open terms of use link -->
-  <string name="about_terms_of_use" tools:ignore="UnusedResources">Uvjeti korištenja</string>
   <!-- About page link text to open licensing information link -->
   <string name="about_licensing_information">Informacije o licenciranju</string>
   <!-- About page link text to open a screen with libraries that are used -->
@@ -3170,10 +3101,6 @@
   <string name="saved_login_password_required_2">Upiši lozinku</string>
   <!-- The error message in add login view when username field is blank. -->
   <string name="saved_login_username_required_2">Upiši korisničko ime</string>
-  <!-- The error message in add login view when hostname field is blank. -->
-  <string name="saved_login_hostname_required" tools:ignore="UnusedResources">Domena je potrebna</string>
-  <!-- The error message in add login view when hostname field is blank. -->
-  <string name="saved_login_hostname_required_2" tools:ignore="UnusedResources">Upiši web adresu</string>
   <!-- Voice search button content description -->
   <string name="voice_search_content_description">Glasovno pretraživanje</string>
   <!-- Voice search prompt description displayed after the user presses the voice search button -->
@@ -3272,16 +3199,6 @@
   <string name="inactive_tabs_expand_content_description">Rasklopi neaktivne kartice</string>
   <!-- Content description for collapsing the inactive tabs section. -->
   <string name="inactive_tabs_collapse_content_description">Sklopi neaktivne kartice</string>
-  <!--
-    Inactive tabs auto-close message in the tabs tray
-
-    The header text of the auto-close message when the user is asked if they want to turn on the auto-closing of inactive tabs.
-  -->
-  <string name="inactive_tabs_auto_close_message_header" tools:ignore="UnusedResources">Automatski zatvoriti nakon jednog mjeseca?</string>
-  <!-- A description below the header to notify the user what the inactive tabs auto-close feature is. -->
-  <string name="inactive_tabs_auto_close_message_description" tools:ignore="BrandUsage,UnusedResources">Firefox može zatvoriti kartice koje nisu pregledane posljednjih mjesec dana.</string>
-  <!-- A call to action below the description to allow the user to turn on the auto closing of inactive tabs. -->
-  <string name="inactive_tabs_auto_close_message_action" tools:ignore="UnusedResources">UKLJUČI AUTOMATSKO ZATVARANJE</string>
   <!-- Text for the snackbar to confirm auto-close is enabled for inactive tabs -->
   <string name="inactive_tabs_auto_close_message_snackbar">Automatsko zatvaranje ukljčeno</string>
   <!--
@@ -3717,16 +3634,6 @@
   <string name="debug_drawer_tab_tools_tab_creation_tool_button_text_inactive">Dodaj grupi neaktivnih kartica</string>
   <!-- The button text to add tabs to the private tab group in the tab creation tool. -->
   <string name="debug_drawer_tab_tools_tab_creation_tool_button_text_private">Dodaj grupi privatnih kartica</string>
-  <!--
-    Microsurvey
-    Note: Some strings are marked as unused as they are referenced via the Nimbus experimentation
-    platform and have no persistent reference in code
-
-    Prompt view
-
-    The microsurvey prompt title. Note: The word "Firefox" should NOT be translated
-  -->
-  <string name="micro_survey_prompt_title" tools:ignore="BrandUsage,UnusedResources">Pomogni nam poboljšati Firefox. Traje samo jednu minutu.</string>
   <!-- The continue button label -->
   <string name="micro_survey_continue_button_label" tools:ignore="UnusedResources">Nastavi</string>
   <!--
@@ -3739,8 +3646,6 @@
   <string name="micro_survey_privacy_notice_2">Napomene o privatnosti</string>
   <!-- The submit button label text -->
   <string name="micro_survey_submit_button_label">Pošalji</string>
-  <!-- The survey completion header -->
-  <string name="micro_survey_survey_header_confirmation" tools:ignore="UnusedResources">Anketa dovršena</string>
   <!-- The survey completion confirmation text -->
   <string name="micro_survey_feedback_confirmation">Hvala ti na povratnim informacijama!</string>
   <!-- Option for likert scale -->
@@ -3755,36 +3660,10 @@
   <string name="likert_scale_option_5" tools:ignore="UnusedResources">Vrlo nezadovoljan</string>
   <!-- Option for likert scale -->
   <string name="likert_scale_option_6" tools:ignore="UnusedResources">Ne koristim je</string>
-  <!-- Option for likert scale. Note: The word "Firefox" should NOT be translated. -->
-  <string name="likert_scale_option_7" tools:ignore="BrandUsage,UnusedResources">Ne koristim pretragu na Firefoxu</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_8" tools:ignore="UnusedResources">Ne koristim sinkronizaciju</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_slow_or_buggy" tools:ignore="UnusedResources">Sporo je ili sadrži greške</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_features_hard_to_find_or_missing" tools:ignore="UnusedResources">Funkcije se teško pronalaze ili nedostaju</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_confusing_or_hard_to_use" tools:ignore="UnusedResources">Zbunjujuće ie ili se teško koristiti</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_its_okay" tools:ignore="UnusedResources">U redu je, ali nije bolje od drugih preglednika</string>
-  <!-- Option for likert scale. Note: The word "Firefox" should NOT be translated. -->
-  <string name="likert_scale_option_i_plan_to_keep_using" tools:ignore="BrandUsage,UnusedResources">Planiram i dalje koristiti Firefox</string>
   <!-- Text shown in prompt for printing microsurvey. "sec" It's an abbreviation for "second". Note: The word "Firefox" should NOT be translated. -->
   <string name="microsurvey_prompt_printing_title" tools:ignore="BrandUsage,UnusedResources">Pomogni nam poboljšati Firefox. Traje samo jednu sekundu</string>
-  <!-- Text shown in prompt for search microsurvey. Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_prompt_search_title" tools:ignore="BrandUsage,UnusedResources">Pomogni poboljšati pretraživanje u Firefoxu. Traje samo jednu minutu</string>
-  <!-- Text shown in prompt for sync microsurvey. Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_prompt_sync_title" tools:ignore="BrandUsage,UnusedResources">Pomogni poboljšati sinkronizaciju u Firefoxu. Traje samo jednu minutu</string>
   <!-- Text shown in the survey title for printing microsurvey. Note: The word "Firefox" should NOT be translated. -->
   <string name="microsurvey_survey_printing_title" tools:ignore="BrandUsage,UnusedResources">Koliko si zadovoljan/na s ispisom u Firefoxu?</string>
-  <!-- Text shown in the survey title for homepage microsurvey. Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_homepage_title" tools:ignore="BrandUsage,UnusedResources">Koliko si zadovoljan/na sa svojom početnom Firefox stranicom?</string>
-  <!-- Text shown in the survey title for search experience microsurvey. Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_search_title" tools:ignore="BrandUsage,UnusedResources">Koliko si zadovoljan/na s pretraživanjem u Firefoxu?</string>
-  <!-- Text shown in the survey title for sync experience microsurvey. Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_sync_title" tools:ignore="BrandUsage,UnusedResources">Koliko si zadovoljan/na sa sinkronizacijom u Firefoxu?</string>
-  <!-- Text shown in the survey title for 'describe your experience so far' microsurvey. Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_describe_your_experience_title" tools:ignore="BrandUsage,UnusedResources">Pomogni nam poboljšati Firefox. Što najbolje opisuje tvoje dosadašnje iskustvo?</string>
   <!--
     Accessibility
 
@@ -3899,40 +3778,6 @@
     Text shown as a label or tag to indicate a feature or area is still undergoing active development. Note that here "Beta" should not be translated, as it is used as an icon styled element.
   -->
   <string name="beta_feature">BETA</string>
-  <!--
-    Root certificate expiration warnings
-
-    These strings for homepage cards and push notifications to be pushed to users running outdated versions of Firefox. We want to encourage these users to update to the latest version so their extensions and other features don't stop working when Firefox's old root certificate expires on 2025-03-14. For more information, see this SUMO article: https://support.mozilla.org/kb/root-certificate-expiration !
-
-    Homepage card button to open Google Play Store. "Update" is a verb.
-  -->
-  <string name="certificate_warning_homepage_card_update_now_button" tools:ignore="UnusedResources">Aktualiziraj sada</string>
-  <!-- Homepage card title about old Firefox version. "Update" is a verb. Note: The word "Firefox" should NOT be translated. -->
-  <string name="certificate_warning_homepage_card_hca1_title" tools:ignore="BrandUsage,UnusedResources">Aktualiziraj Firefox preglednika</string>
-  <!-- Homepage card message about old Firefox version -->
-  <string name="certificate_warning_homepage_card_hca1_message" tools:ignore="UnusedResources">Jedan korijenski certifikat će isteći, zbog čega će 14. ožujka neke funkcije prestati raditi.</string>
-  <!-- Homepage card title about old Firefox version. "Update" is a verb. -->
-  <string name="certificate_warning_homepage_card_hcr1_title" tools:ignore="UnusedResources">Aktualiziraj prije 14. ožujka</string>
-  <!-- Homepage card message about old Firefox version. Note: The word "Firefox" should NOT be translated. -->
-  <string name="certificate_warning_homepage_card_hcr1_message" tools:ignore="BrandUsage,UnusedResources">Jedan korijenski certifikat će isteći, zbog čega će Firefox prestati ispravno raditi.</string>
-  <!-- Homepage card title about old Firefox version -->
-  <string name="certificate_warning_homepage_card_hcw2_title" tools:ignore="UnusedResources">Za aktualiziranje je preostalo manje od 7 dana</string>
-  <!-- Homepage card message about old Firefox version. Note: The word "Firefox" should NOT be translated. -->
-  <string name="certificate_warning_homepage_card_hcw2_message" tools:ignore="BrandUsage,UnusedResources">14. ožujka će dodaci i druge Firefox funkcije prestati raditi jer jedan korijenski certifikat isteče.</string>
-  <!-- Homepage card title about old Firefox version. Note: The word "Firefox" should NOT be translated. -->
-  <string name="certificate_warning_homepage_card_hcw3_title" tools:ignore="BrandUsage,UnusedResources">Zadnja prilika da zadržiš svoj Firefox</string>
-  <!-- Homepage card message about old Firefox version. Note: The word "Firefox" should NOT be translated. -->
-  <string name="certificate_warning_homepage_card_hcw3_message" tools:ignore="BrandUsage,UnusedResources">Tvoja će Firefox verzija prestati ispravno raditi 14. ožujka jer jedan korijenski certifikat isteče.</string>
-  <!-- Push notification title about old Firefox version. "Update" is a noun. -->
-  <string name="certificate_warning_push_notification_update_recommended_title" tools:ignore="UnusedResources">Preporučuje se aktualiziranje</string>
-  <!-- Push notification message about old Firefox version -->
-  <string name="certificate_warning_push_notification_pnr1_message" tools:ignore="UnusedResources">Dodaci i neke funkcije će prestati raditi 14. ožujka.</string>
-  <!-- Push notification title about old Firefox version. Note: The word "Firefox" should NOT be translated. -->
-  <string name="certificate_warning_push_notification_pnw2_title" tools:ignore="BrandUsage,UnusedResources">Koristiš stariju Firefox verziju</string>
-  <!-- Push notification message about old Firefox version. "Update" is a verb. -->
-  <string name="certificate_warning_push_notification_pnw2_message" tools:ignore="UnusedResources">Za daljnje korištenje dodataka i drugih funkcija, aktualiziraj prije 14. ožujka.</string>
-  <!-- Push notification message about old Firefox version -->
-  <string name="certificate_warning_push_notification_pnw3_message" tools:ignore="UnusedResources">Neke funkcije će sutra prestati raditi.</string>
   <!-- TextField Design System Component -->
 
   <!--

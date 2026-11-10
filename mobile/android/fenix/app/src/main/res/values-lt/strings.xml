@@ -292,14 +292,8 @@
 
   <!-- "Continue" onboarding button. -->
   <string name="nova_onboarding_continue_button">Tęsti</string>
-  <!-- "Continue browsing" onboarding button. -->
-  <string name="nova_onboarding_continue_browsing_button" tools:ignore="UnusedResources">Tęsti naršymą</string>
   <!-- "Not now" onboarding button. -->
   <string name="nova_onboarding_negative_button">Ne dabar</string>
-  <!-- "Skip" onboarding button. -->
-  <string name="nova_onboarding_skip_button" tools:ignore="UnusedResources">Praleisti</string>
-  <!-- Terms of use (ToU) onboarding title. -->
-  <string name="nova_onboarding_tou_title" tools:ignore="UnusedResources">Pasiruoškite laisvei</string>
   <!-- Terms of use (ToU) onboarding subtitle. -->
   <string name="nova_onboarding_tou_subtitle">Sparti, saugi ir jūsų neišduos. Naršymas tapo geresnis.</string>
   <!-- ==== End of Project "Nova" onboarding strings ==== -->
@@ -575,8 +569,6 @@
   <string name="close_tabs_after_one_week">Po vienos savaitės</string>
   <!-- Option for auto closing tabs that will auto close tabs after one month -->
   <string name="close_tabs_after_one_month">Po vieno mėnesio</string>
-  <!-- Title of preference that allows a user to specify the auto-close settings for open tabs -->
-  <string name="preference_auto_close_tabs" tools:ignore="UnusedResources">Automatiškai užverti korteles</string>
   <!--
     Opening screen
 
@@ -1284,8 +1276,6 @@
   <string name="certificate_info_verified_by">Tai liudija: %1$s</string>
   <!-- Positive action of a dialog asking to delete -->
   <string name="dialog_delete_positive">Pašalinti</string>
-  <!-- The error message in add login view when hostname field is blank. -->
-  <string name="saved_login_hostname_required" tools:ignore="UnusedResources">Serverio vardas privalomas</string>
   <!-- Voice search button content description -->
   <string name="voice_search_content_description">Paieška balsu</string>
   <!-- Voice search prompt description displayed after the user presses the voice search button -->
@@ -1338,16 +1328,6 @@
   <string name="inactive_tabs_title">Neaktyvios kortelės</string>
   <!-- Content description for closing all inactive tabs -->
   <string name="inactive_tabs_delete_all">Užverti visas neaktyvias korteles</string>
-  <!--
-    Inactive tabs auto-close message in the tabs tray
-
-    The header text of the auto-close message when the user is asked if they want to turn on the auto-closing of inactive tabs.
-  -->
-  <string name="inactive_tabs_auto_close_message_header" tools:ignore="UnusedResources">Užverti automatiškai po mėnesio?</string>
-  <!-- A description below the header to notify the user what the inactive tabs auto-close feature is. -->
-  <string name="inactive_tabs_auto_close_message_description" tools:ignore="BrandUsage,UnusedResources">„Firefox“ gali užverti korteles, kuriomis paskutinį mėnesį nesinaudojote.</string>
-  <!-- A call to action below the description to allow the user to turn on the auto closing of inactive tabs. -->
-  <string name="inactive_tabs_auto_close_message_action" tools:ignore="UnusedResources">ĮJUNGTI AUTOMATINĮ UŽVĖRIMĄ</string>
   <!-- Text for the snackbar to confirm auto-close is enabled for inactive tabs -->
   <string name="inactive_tabs_auto_close_message_snackbar">Automatinis užvėrimas įjungtas</string>
   <!-- Default browser card text -->

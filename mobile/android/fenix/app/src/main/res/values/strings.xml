@@ -423,14 +423,6 @@
     <!-- Used as text for the link in onboarding_term_of_service_line_three. -->
     <string name="onboarding_term_of_service_line_three_link_text">Manage</string>
 
-    <!-- Terms of use (ToU) onboarding redesign title. -->
-    <string name="onboarding_redesign_tou_title" tools:ignore="UnusedResources">Launch the ultimate Android browser</string>
-    <!-- Terms of use (ToU) first subheader. -->
-    <string name="onboarding_redesign_tou_subheader_one" tools:ignore="UnusedResources">Load sites lightning fast</string>
-    <!-- Terms of use (ToU) second subheader. -->
-    <string name="onboarding_redesign_tou_subheader_two" tools:ignore="UnusedResources">Automatic tracking protection</string>
-    <!-- Terms of use (ToU) third subheader. -->
-    <string name="onboarding_redesign_tou_subheader_three" tools:ignore="UnusedResources">Thousands of customizations</string>
     <!-- Terms of use (ToU) first body text. %1$s is replaced by an active link,
         using onboarding_redesign_tou_body_one_link_text as text (“Firefox Terms of Use”). -->
     <string name="onboarding_redesign_tou_body_one" tools:ignore="UnusedResources">By continuing, you agree to the %1$s.</string>
@@ -446,41 +438,19 @@
     <string name="onboarding_redesign_tou_body_three" tools:ignore="BrandUsage,UnusedResources">To help improve the browser, Firefox sends diagnostic and interaction data to Mozilla. %1$s</string>
     <!-- Used as text for the link in onboarding_redesign_tou_body_three. -->
     <string name="onboarding_redesign_tou_body_three_link_text" tools:ignore="UnusedResources">Manage Settings</string>
-    <!-- Terms of use (ToU) onboarding page continue button label. -->
-    <string name="onboarding_redesign_tou_agree_and_continue_button_label" tools:ignore="UnusedResources">Continue</string>
-    <!-- Onboarding header for the toolbar selection card. -->
-    <string name="onboarding_redesign_customize_toolbar_title" tools:ignore="UnusedResources">Where do you want your address bar?</string>
-    <!-- Onboarding label for 'Continue' button. -->
-    <string name="onboarding_redesign_continue_button" tools:ignore="UnusedResources">Continue</string>
-    <!-- Set to default browser onboarding redesign title. -->
-    <string name="onboarding_redesign_set_default_browser_title" tools:ignore="UnusedResources">Get automatic tracking protection by default</string>
-    <!-- Set to default browser onboarding redesign body. -->
-    <string name="onboarding_redesign_set_default_browser_body" tools:ignore="UnusedResources">One tap helps stop companies spying on your clicks.</string>
-    <!-- Sync onboarding redesign title. 'Firefox' is intentionally hardcoded. -->
-    <string name="onboarding_redesign_sync_title" tools:ignore="BrandUsage,UnusedResources">Sync everywhere you use Firefox</string>
-    <!-- Sync onboarding redesign body. -->
-    <string name="onboarding_redesign_sync_body" tools:ignore="UnusedResources">Get bookmarks, tabs, and passwords on any device. All protected with encryption.</string>
     <!-- Sync onboarding redesign positive button text. -->
     <string name="onboarding_redesign_sync_positive_button" tools:ignore="UnusedResources">Start syncing</string>
-    <!-- Sync onboarding redesign negative button text. -->
-    <string name="onboarding_redesign_sync_negative_button" tools:ignore="UnusedResources">Not now</string>
 
     <!-- ==== Project "Nova" onboarding strings ==== -->
 
     <!-- "Continue" onboarding button. -->
     <string name="nova_onboarding_continue_button">Continue</string>
 
-    <!-- "Continue browsing" onboarding button. -->
-    <string name="nova_onboarding_continue_browsing_button" tools:ignore="UnusedResources">Continue browsing</string>
 
     <!-- "Not now" onboarding button. -->
     <string name="nova_onboarding_negative_button">Not now</string>
 
-    <!-- "Skip" onboarding button. -->
-    <string name="nova_onboarding_skip_button" tools:ignore="UnusedResources">Skip</string>
 
-    <!-- Terms of use (ToU) onboarding title. -->
-    <string name="nova_onboarding_tou_title" tools:ignore="UnusedResources">Get ready to run free</string>
 
     <!-- Terms of use (ToU) onboarding subtitle. -->
     <string name="nova_onboarding_tou_subtitle">Private by design.\nYours by default.</string>
@@ -515,8 +485,6 @@
     <string name="default_extensions_not_now">Not now</string>
 
     <!-- "Set to default" onboarding title. -->
-    <string name="nova_onboarding_set_to_default_title" tools:ignore="UnusedResources">Say goodbye to creepy trackers</string>
-    <!-- "Set to default" onboarding title. -->
     <string name="nova_onboarding_set_to_default_title_2">Open all your links with built-in privacy</string>
 
     <!-- "Set to default" onboarding subtitle. -->
@@ -534,17 +502,9 @@
     <!-- Toolbar selection onboarding "bottom" option label. -->
     <string name="nova_onboarding_toolbar_selection_bottom_label">Bottom</string>
 
-    <!-- Theme selection onboarding title. -->
-    <string name="nova_onboarding_theme_selection_title" tools:ignore="UnusedResources">Pick your theme</string>
 
-    <!-- Theme selection onboarding "automatic" option label. -->
-    <string name="nova_onboarding_theme_selection_automatic_label" tools:ignore="UnusedResources">Automatic</string>
 
-    <!-- Theme selection onboarding "light" option label. -->
-    <string name="nova_onboarding_theme_selection_light_label" tools:ignore="UnusedResources">Light</string>
 
-    <!-- Theme selection onboarding "dark" option label. -->
-    <string name="nova_onboarding_theme_selection_dark_label" tools:ignore="UnusedResources">Dark</string>
 
     <!-- Sync onboarding title. -->
     <string name="nova_onboarding_sync_title">Instantly pick up where you left off</string>
@@ -588,8 +548,6 @@
     <!-- "Add search widget" onboarding button. 'Firefox' is intentionally hardcoded. -->
     <string name="nova_onboarding_add_search_widget_button" tools:ignore="BrandUsage">Add FragmentedFox widget</string>
 
-    <!-- Customize prompt onboarding title. -->
-    <string name="nova_onboarding_customize_prompt_title" tools:ignore="UnusedResources">Easy to customize and more private with every tap</string>
 
     <!-- Customize prompt onboarding body.
         %1$s is replaced by the product name (for example "Firefox"),
@@ -601,14 +559,8 @@
         <item quantity="other">%1$s blocked %2$,d trackers while you roamed the web.</item>
     </plurals>
 
-    <!-- Customize prompt onboarding positive button. -->
-    <string name="nova_onboarding_customize_prompt_positive_button" tools:ignore="UnusedResources">Start customizing</string>
 
-    <!-- App icon onboarding title. -->
-    <string name="nova_onboarding_app_icon_prompt_title" tools:ignore="UnusedResources">Pick a custom app icon</string>
 
-    <!-- App icon onboarding body. -->
-    <string name="nova_onboarding_app_icon_prompt_body" tools:ignore="UnusedResources">Give your home screen a personal touch.</string>
 
     <!-- ==== End of Project "Nova" onboarding strings ==== -->
 
@@ -842,9 +794,6 @@
     <string name="preferences_category_file_storage">File storage</string>
     <!-- Preference title for downloads default location. -->
     <string name="preferences_downloads_default_location_title">Default download location</string>
-    <!-- Message shown as the summary of the download location preference when the
-           app has lost the permission to access a previously selected custom folder. -->
-    <string name="preference_downloads_folder_permission_lost" tools:ignore="UnusedResources">You don’t have permission to use this folder. Try choosing a different one.</string>
     <!-- Preference title for choosing an app to handle downloads -->
     <string name="preferences_choose_app_for_downloads">Manage downloads with another app</string>
 
@@ -1021,13 +970,6 @@
     <!-- Error message snackbar shown after the user tried to apply the new icon but the Android OS threw an error while updating existing app shortcuts (e.g. private mode shortcut) -->
     <string name="shortcuts_update_error">Failed to update the app icon. Remove existing shortcuts and try again.</string>
 
-    <!-- Add-ons general availability nimbus message-->
-    <!-- Title of the Nimbus message for extension general availability-->
-    <string name="addon_ga_message_title_2" tools:ignore="UnusedResources">New extensions now available</string>
-    <!-- Body of the Nimbus message for add-ons general availability. 'Firefox' intentionally hardcoded here-->
-    <string name="addon_ga_message_body" tools:ignore="BrandUsage,UnusedResources">Check out 100+ new extensions that let you make FragmentedFox your own.</string>
-    <!-- Button text of the Nimbus message for extensions general availability. -->
-    <string name="addon_ga_message_button_2" tools:ignore="UnusedResources">Explore extensions</string>
 
     <!-- Extension process crash dialog to user -->
     <!-- Title of the extension crash dialog shown to the user when enough errors have occurred with extensions and they need to be temporarily disabled -->
@@ -1278,8 +1220,6 @@
     <string name="close_tabs_after_one_week">After one week</string>
     <!-- Option for auto closing tabs that will auto close tabs after one month -->
     <string name="close_tabs_after_one_month">After one month</string>
-    <!-- Title of preference that allows a user to specify the auto-close settings for open tabs -->
-    <string name="preference_auto_close_tabs" tools:ignore="UnusedResources">Auto-close open tabs</string>
     <!-- Content description (not visible, for screen readers etc.): Close tab button -->
     <string name="tab_manager_close_tabs">Close</string>
 
@@ -1310,7 +1250,6 @@
     <!-- Inactive tabs -->
     <!-- Category header of a preference that allows a user to enable or disable the inactive tabs feature -->
     <string name="preferences_inactive_tabs">Move old tabs to inactive</string>
-    <!-- Title of inactive tabs preference -->
     <!-- Header for the settings that limit how many tabs stay running in the background -->
     <string name="preferences_background_tabs">Background tabs</string>
     <!-- Title of the switch that keeps only the two most recent tabs running -->
@@ -1321,6 +1260,7 @@
     <string name="preferences_keep_media_tabs_active_title">Keep tabs playing media active</string>
     <!-- Summary of the switch that lets tabs playing media keep running -->
     <string name="preferences_keep_media_tabs_active_summary">A tab that is playing sound or video keeps running after you switch away from it.</string>
+    <!-- Title of inactive tabs preference -->
     <string name="preferences_inactive_tabs_title">Tabs you haven’t viewed for two weeks get moved to the inactive section.</string>
 
     <!-- Studies -->
@@ -2150,8 +2090,6 @@
     <string name="sync_add_new_device_connect_button">Connect Another Device…</string>
     <!-- A message template for the shared link with a footer. %1$s is the shared link, %2$s is the app name (e.g. Firefox) and %3$s is a download link for the app. -->
     <string name="sent_from_firefox_template" tools:ignore="UnusedResources">%1$s\n\nSent from %2$s 🦊 Try the mobile browser: %3$s</string>
-    <!-- A short message template for the shared link with a footer. %1$s is the shared link, %2$s is the app name (e.g. Firefox) and %3$s is a download link for the app. -->
-    <string name="sent_from_firefox_template_short" tools:ignore="UnusedResources">%1$s\n\nSent from %2$s 🦊 %3$s</string>
 
     <!-- Notifications -->
     <!-- Text shown in the notification that pops up to remind the user that a private browsing session is active. -->
@@ -2283,7 +2221,6 @@
     <!-- text to display in the snackbar once account is signed-in -->
     <string name="onboarding_firefox_account_sync_is_on">Sync is on</string>
 
-    <!-- Onboarding theme -->
     <!-- Text shown in snackbar when multiple tabs have been sent to device -->
     <string name="sync_sent_tabs_snackbar_2">Tabs sent</string>
     <!-- Text shown in snackbar when one tab has been sent to device  -->
@@ -2557,8 +2494,6 @@
     <string name="about_privacy_notice">Privacy notice</string>
     <!-- About page link text to open know your rights link -->
     <string name="about_know_your_rights">Know your rights</string>
-    <!-- About page link text to open terms of use link -->
-    <string name="about_terms_of_use" tools:ignore="UnusedResources">Terms of Use</string>
     <!-- About page link text to open licensing information link -->
     <string name="about_licensing_information">Licensing information</string>
     <!-- About page link text to open a screen with libraries that are used -->
@@ -2972,10 +2907,6 @@
     <string name="saved_login_password_required_2">Enter a password</string>
     <!--  The error message in add login view when username field is blank. -->
     <string name="saved_login_username_required_2">Enter a username</string>
-    <!--  The error message in add login view when hostname field is blank. -->
-    <string name="saved_login_hostname_required" tools:ignore="UnusedResources">Hostname required</string>
-    <!--  The error message in add login view when hostname field is blank. -->
-    <string name="saved_login_hostname_required_2" tools:ignore="UnusedResources">Enter a web address</string>
     <!-- Voice search button content description  -->
     <string name="voice_search_content_description">Voice search</string>
     <!-- Voice search prompt description displayed after the user presses the voice search button -->
@@ -3072,12 +3003,6 @@
     <string name="inactive_tabs_collapse_content_description">Collapse inactive tabs</string>
 
     <!-- Inactive tabs auto-close message in the tabs tray -->
-    <!-- The header text of the auto-close message when the user is asked if they want to turn on the auto-closing of inactive tabs. -->
-    <string name="inactive_tabs_auto_close_message_header" tools:ignore="UnusedResources">Auto-close after one month?</string>
-    <!-- A description below the header to notify the user what the inactive tabs auto-close feature is. -->
-    <string name="inactive_tabs_auto_close_message_description" tools:ignore="BrandUsage,UnusedResources">FragmentedFox can close tabs you haven’t viewed over the past month.</string>
-    <!-- A call to action below the description to allow the user to turn on the auto closing of inactive tabs. -->
-    <string name="inactive_tabs_auto_close_message_action" tools:ignore="UnusedResources">TURN ON AUTO CLOSE</string>
     <!-- Text for the snackbar to confirm auto-close is enabled for inactive tabs -->
     <string name="inactive_tabs_auto_close_message_snackbar">Auto-close enabled</string>
 
@@ -3498,8 +3423,6 @@
         Note: Some strings are marked as unused as they are referenced via the Nimbus experimentation
         platform and have no persistent reference in code -->
     <!-- Prompt view -->
-    <!-- The microsurvey prompt title. Note: The word "Firefox" should NOT be translated -->
-    <string name="micro_survey_prompt_title" tools:ignore="BrandUsage,UnusedResources">Help us make Firefox better. It only takes a minute.</string>
     <!-- The continue button label -->
     <string name="micro_survey_continue_button_label" tools:ignore="UnusedResources">Continue</string>
     <!-- Survey view -->
@@ -3509,8 +3432,6 @@
     <string name="micro_survey_privacy_notice_2">Privacy notice</string>
     <!-- The submit button label text -->
     <string name="micro_survey_submit_button_label">Submit</string>
-    <!-- The survey completion header -->
-    <string name="micro_survey_survey_header_confirmation" tools:ignore="UnusedResources">Survey complete</string>
     <!-- The survey completion confirmation text -->
     <string name="micro_survey_feedback_confirmation">Thanks for your feedback!</string>
     <!-- Option for likert scale -->
@@ -3525,36 +3446,10 @@
     <string name="likert_scale_option_5" tools:ignore="UnusedResources">Very dissatisfied</string>
     <!-- Option for likert scale -->
     <string name="likert_scale_option_6" tools:ignore="UnusedResources">I don’t use it</string>
-    <!-- Option for likert scale. Note: The word "Firefox" should NOT be translated. -->
-    <string name="likert_scale_option_7" tools:ignore="BrandUsage,UnusedResources">I don’t use search on Firefox</string>
-    <!-- Option for likert scale -->
-    <string name="likert_scale_option_8" tools:ignore="UnusedResources">I don’t use sync</string>
-    <!-- Option for likert scale -->
-    <string name="likert_scale_option_slow_or_buggy" tools:ignore="UnusedResources">It’s slow or buggy</string>
-    <!-- Option for likert scale -->
-    <string name="likert_scale_option_features_hard_to_find_or_missing" tools:ignore="UnusedResources">Features are hard to find or missing</string>
-    <!-- Option for likert scale -->
-    <string name="likert_scale_option_confusing_or_hard_to_use" tools:ignore="UnusedResources">It’s confusing or hard to use</string>
-    <!-- Option for likert scale -->
-    <string name="likert_scale_option_its_okay" tools:ignore="UnusedResources">It’s okay, but not better than other browsers</string>
-    <!-- Option for likert scale. Note: The word "Firefox" should NOT be translated. -->
-    <string name="likert_scale_option_i_plan_to_keep_using" tools:ignore="BrandUsage,UnusedResources">I plan to keep using Firefox</string>
     <!-- Text shown in prompt for printing microsurvey. "sec" It's an abbreviation for "second". Note: The word "Firefox" should NOT be translated. -->
     <string name="microsurvey_prompt_printing_title" tools:ignore="BrandUsage,UnusedResources">Help make printing in Firefox better. It only takes a sec</string>
-    <!-- Text shown in prompt for search microsurvey. Note: The word "Firefox" should NOT be translated. -->
-    <string name="microsurvey_prompt_search_title" tools:ignore="BrandUsage,UnusedResources">Help make search in Firefox better. It only takes a minute</string>
-    <!-- Text shown in prompt for sync microsurvey. Note: The word "Firefox" should NOT be translated. -->
-    <string name="microsurvey_prompt_sync_title" tools:ignore="BrandUsage,UnusedResources">Help make sync in Firefox better. It only takes a minute</string>
     <!-- Text shown in the survey title for printing microsurvey. Note: The word "Firefox" should NOT be translated. -->
     <string name="microsurvey_survey_printing_title" tools:ignore="BrandUsage,UnusedResources">How satisfied are you with printing in Firefox?</string>
-    <!-- Text shown in the survey title for homepage microsurvey. Note: The word "Firefox" should NOT be translated. -->
-    <string name="microsurvey_homepage_title" tools:ignore="BrandUsage,UnusedResources">How satisfied are you with your Firefox homepage?</string>
-    <!-- Text shown in the survey title for search experience microsurvey. Note: The word "Firefox" should NOT be translated. -->
-    <string name="microsurvey_search_title" tools:ignore="BrandUsage,UnusedResources">How satisfied are you with the search experience in Firefox?</string>
-    <!-- Text shown in the survey title for sync experience microsurvey. Note: The word "Firefox" should NOT be translated. -->
-    <string name="microsurvey_sync_title" tools:ignore="BrandUsage,UnusedResources">How satisfied are you with the sync experience in Firefox?</string>
-    <!-- Text shown in the survey title for 'describe your experience so far' microsurvey. Note: The word "Firefox" should NOT be translated. -->
-    <string name="microsurvey_describe_your_experience_title" tools:ignore="BrandUsage,UnusedResources">Help us improve Firefox. Which best describes your experience so far?</string>
     <!-- Accessibility -->
     <!-- Content description for the survey application icon. Note: The word "Firefox" should NOT be translated.  -->
     <string name="microsurvey_app_icon_content_description" tools:ignore="BrandUsage">FragmentedFox logo</string>
@@ -3645,36 +3540,6 @@
     <!-- Text shown as a label or tag to indicate a feature or area is still undergoing active development. Note that here "Beta" should not be translated, as it is used as an icon styled element. -->
     <string name="beta_feature">BETA</string>
 
-    <!-- Root certificate expiration warnings -->
-    <!-- These strings for homepage cards and push notifications to be pushed to users running outdated versions of Firefox. We want to encourage these users to update to the latest version so their extensions and other features don't stop working when Firefox's old root certificate expires on 2025-03-14. For more information, see this SUMO article: https://support.mozilla.org/kb/root-certificate-expiration !-->
-    <!-- Homepage card button to open Google Play Store. "Update" is a verb. -->
-    <string name="certificate_warning_homepage_card_update_now_button" tools:ignore="UnusedResources">Update now</string>
-    <!-- Homepage card title about old Firefox version. "Update" is a verb. Note: The word "Firefox" should NOT be translated. -->
-    <string name="certificate_warning_homepage_card_hca1_title" tools:ignore="BrandUsage,UnusedResources">Update your Firefox browser</string>
-    <!-- Homepage card message about old Firefox version -->
-    <string name="certificate_warning_homepage_card_hca1_message" tools:ignore="UnusedResources">A root certificate will expire, causing some features to stop working on March 14.</string>
-    <!-- Homepage card title about old Firefox version. "Update" is a verb. -->
-    <string name="certificate_warning_homepage_card_hcr1_title" tools:ignore="UnusedResources">Update before March 14</string>
-    <!-- Homepage card message about old Firefox version. Note: The word "Firefox" should NOT be translated. -->
-    <string name="certificate_warning_homepage_card_hcr1_message" tools:ignore="BrandUsage,UnusedResources">A root certificate will expire, causing your version of Firefox to stop working properly.</string>
-    <!-- Homepage card title about old Firefox version -->
-    <string name="certificate_warning_homepage_card_hcw2_title" tools:ignore="UnusedResources">Less than 7 days to left to update</string>
-    <!-- Homepage card message about old Firefox version. Note: The word "Firefox" should NOT be translated. -->
-    <string name="certificate_warning_homepage_card_hcw2_message" tools:ignore="BrandUsage,UnusedResources">On March 14, add-ons and other Firefox features will stop working because a root certificate is expiring.</string>
-    <!-- Homepage card title about old Firefox version. Note: The word "Firefox" should NOT be translated. -->
-    <string name="certificate_warning_homepage_card_hcw3_title" tools:ignore="BrandUsage,UnusedResources">Last chance to keep your Firefox</string>
-    <!-- Homepage card message about old Firefox version. Note: The word "Firefox" should NOT be translated. -->
-    <string name="certificate_warning_homepage_card_hcw3_message" tools:ignore="BrandUsage,UnusedResources">Your version of Firefox will stop working properly on March 14 because a root certificate is expiring.</string>
-    <!-- Push notification title about old Firefox version. "Update" is a noun. -->
-    <string name="certificate_warning_push_notification_update_recommended_title" tools:ignore="UnusedResources">Update recommended</string>
-    <!-- Push notification message about old Firefox version -->
-    <string name="certificate_warning_push_notification_pnr1_message" tools:ignore="UnusedResources">Add-ons and some features will stop working on March 14.</string>
-    <!-- Push notification title about old Firefox version. Note: The word "Firefox" should NOT be translated. -->
-    <string name="certificate_warning_push_notification_pnw2_title" tools:ignore="BrandUsage,UnusedResources">You’re on an older version of Firefox</string>
-    <!-- Push notification message about old Firefox version. "Update" is a verb. -->
-    <string name="certificate_warning_push_notification_pnw2_message" tools:ignore="UnusedResources">Update before March 14 to keep using add-ons and other features.</string>
-    <!-- Push notification message about old Firefox version -->
-    <string name="certificate_warning_push_notification_pnw3_message" tools:ignore="UnusedResources">Some features will stop working tomorrow.</string>
 
     <!-- TextField Design System Component -->
 

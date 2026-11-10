@@ -485,14 +485,6 @@
   <string name="onboarding_term_of_service_line_three" tools:ignore="BrandUsage">Για τη βελτίωση του προγράμματος περιήγησης, το Firefox στέλνει δεδομένα διάγνωσης και αλληλεπίδρασης στη Mozilla. %1$s</string>
   <!-- Used as text for the link in onboarding_term_of_service_line_three. -->
   <string name="onboarding_term_of_service_line_three_link_text">Διαχείριση</string>
-  <!-- Terms of use (ToU) onboarding redesign title. -->
-  <string name="onboarding_redesign_tou_title" tools:ignore="UnusedResources">Εκκινήστε το απόλυτο πρόγραμμα περιήγησης για Android</string>
-  <!-- Terms of use (ToU) first subheader. -->
-  <string name="onboarding_redesign_tou_subheader_one" tools:ignore="UnusedResources">Αστραπιαία φόρτωση ιστοτόπων</string>
-  <!-- Terms of use (ToU) second subheader. -->
-  <string name="onboarding_redesign_tou_subheader_two" tools:ignore="UnusedResources">Αυτόματη προστασία από καταγραφή</string>
-  <!-- Terms of use (ToU) third subheader. -->
-  <string name="onboarding_redesign_tou_subheader_three" tools:ignore="UnusedResources">Χιλιάδες προσαρμογές</string>
   <!--
     Terms of use (ToU) first body text. %1$s is replaced by an active link,
     using onboarding_redesign_tou_body_one_link_text as text (“Firefox Terms of Use”).
@@ -514,28 +506,12 @@
   <string name="onboarding_redesign_tou_body_three" tools:ignore="BrandUsage,UnusedResources">Για τη βελτίωση του προγράμματος περιήγησης, το Firefox στέλνει δεδομένα διάγνωσης και \u0020αλληλεπίδρασης στη Mozilla. %1$s</string>
   <!-- Used as text for the link in onboarding_redesign_tou_body_three. -->
   <string name="onboarding_redesign_tou_body_three_link_text" tools:ignore="UnusedResources">Διαχείριση ρυθμίσεων</string>
-  <!-- Terms of use (ToU) onboarding page continue button label. -->
-  <string name="onboarding_redesign_tou_agree_and_continue_button_label" tools:ignore="UnusedResources">Συνέχεια</string>
-  <!-- Onboarding header for the toolbar selection card. -->
-  <string name="onboarding_redesign_customize_toolbar_title" tools:ignore="UnusedResources">Πού θέλετε τη γραμμή διευθύνσεών σας;</string>
-  <!-- Onboarding label for 'Continue' button. -->
-  <string name="onboarding_redesign_continue_button" tools:ignore="UnusedResources">Συνέχεια</string>
   <!-- Marketing onboarding page title. 'Firefox' is intentionally hardcoded. -->
   <!-- Marketing onboarding page opt-out checkbox. Unchecking the box does not increase data collection. Our data practices remain the same. 'Mozilla' is intentionally hardcoded. -->
   <!-- Marketing onboarding page clickable link text to "learn more" on how data is used. -->
   <!-- Marketing onboarding page button label. Button to confirm choice and start browsing. -->
-  <!-- Set to default browser onboarding redesign title. -->
-  <string name="onboarding_redesign_set_default_browser_title" tools:ignore="UnusedResources">Λάβετε αυτόματη προστασία από καταγραφή από προεπιλογή</string>
-  <!-- Set to default browser onboarding redesign body. -->
-  <string name="onboarding_redesign_set_default_browser_body" tools:ignore="UnusedResources">Ένα πάτημα εμποδίζει τις εταιρείες να κατασκοπεύουν τα κλικ σας.</string>
-  <!-- Sync onboarding redesign title. 'Firefox' is intentionally hardcoded. -->
-  <string name="onboarding_redesign_sync_title" tools:ignore="BrandUsage,UnusedResources">Συγχρονισμός όπου κι αν χρησιμοποιείτε το Firefox</string>
-  <!-- Sync onboarding redesign body. -->
-  <string name="onboarding_redesign_sync_body" tools:ignore="UnusedResources">Πάρτε τους σελιδοδείκτες, τις καρτέλες και τους κωδικούς πρόσβασής σας σε κάθε συσκευή. Όλα προστατεύονται με κρυπτογράφηση.</string>
   <!-- Sync onboarding redesign positive button text. -->
   <string name="onboarding_redesign_sync_positive_button" tools:ignore="UnusedResources">Έναρξη συγχρονισμού</string>
-  <!-- Sync onboarding redesign negative button text. -->
-  <string name="onboarding_redesign_sync_negative_button" tools:ignore="UnusedResources">Όχι τώρα</string>
   <!-- Marketing onboarding page title variant. “One last thing” refers to the final step or action in the onboarding process that we’re asking users to take before they can start using the browser. -->
   <!-- Marketing onboarding page body variant. 'Firefox' is intentionally hardcoded. -->
   <!-- Marketing onboarding page button label variant. Button to confirm choice and start browsing. -->
@@ -543,14 +519,8 @@
 
   <!-- "Continue" onboarding button. -->
   <string name="nova_onboarding_continue_button">Συνέχεια</string>
-  <!-- "Continue browsing" onboarding button. -->
-  <string name="nova_onboarding_continue_browsing_button" tools:ignore="UnusedResources">Συνέχεια περιήγησης</string>
   <!-- "Not now" onboarding button. -->
   <string name="nova_onboarding_negative_button">Όχι τώρα</string>
-  <!-- "Skip" onboarding button. -->
-  <string name="nova_onboarding_skip_button" tools:ignore="UnusedResources">Παράλειψη</string>
-  <!-- Terms of use (ToU) onboarding title. -->
-  <string name="nova_onboarding_tou_title" tools:ignore="UnusedResources">Ετοιμαστείτε για ελεύθερη περιήγηση</string>
   <!-- Terms of use (ToU) onboarding subtitle. -->
   <string name="nova_onboarding_tou_subtitle">Είναι γρήγορο, ασφαλές και δεν θα σας ξεπουλήσει.\nΗ περιήγηση μόλις έγινε καλύτερη.</string>
   <!--
@@ -575,8 +545,6 @@
   <!-- Terms of use (ToU) onboarding body line three link text for nova_onboarding_tou_body_line_3. -->
   <string name="nova_onboarding_tou_body_line_3_link_text">Διαχείριση ρυθμίσεων</string>
   <!-- "Set to default" onboarding title. -->
-  <string name="nova_onboarding_set_to_default_title" tools:ignore="UnusedResources">Πείτε αντίο στους παρεμβατικούς ιχνηλάτες</string>
-  <!-- "Set to default" onboarding title. -->
   <string name="nova_onboarding_set_to_default_title_2">Ανοίξτε όλους τους συνδέσμους σας με ενσωματωμένο απόρρητο</string>
   <!-- "Set to default" onboarding subtitle. -->
   <string name="nova_onboarding_set_to_default_subtitle">Προστατεύουμε τα δεδομένα σας και εμποδίζουμε αυτόματα τις εταιρείες από το να κατασκοπεύουν τα κλικ σας.</string>
@@ -588,14 +556,6 @@
   <string name="nova_onboarding_toolbar_selection_top_label">Πάνω</string>
   <!-- Toolbar selection onboarding "bottom" option label. -->
   <string name="nova_onboarding_toolbar_selection_bottom_label">Κάτω</string>
-  <!-- Theme selection onboarding title. -->
-  <string name="nova_onboarding_theme_selection_title" tools:ignore="UnusedResources">Επιλέξτε το θέμα σας</string>
-  <!-- Theme selection onboarding "automatic" option label. -->
-  <string name="nova_onboarding_theme_selection_automatic_label" tools:ignore="UnusedResources">Αυτόματο</string>
-  <!-- Theme selection onboarding "light" option label. -->
-  <string name="nova_onboarding_theme_selection_light_label" tools:ignore="UnusedResources">Ανοιχτόχρωμο</string>
-  <!-- Theme selection onboarding "dark" option label. -->
-  <string name="nova_onboarding_theme_selection_dark_label" tools:ignore="UnusedResources">Σκουρόχρωμο</string>
   <!-- Sync onboarding title. -->
   <string name="nova_onboarding_sync_title">Συνεχίστε άμεσα από εκεί που σταματήσατε</string>
   <!-- Sync onboarding subtitle. -->
@@ -651,8 +611,6 @@
   <string name="nova_onboarding_add_search_widget_subtitle" tools:ignore="BrandUsage">Ξεκινήστε κάθε αναζήτηση από την αρχική οθόνη του τηλεφώνου σας με την αυτόματη προστασία του Firefox.</string>
   <!-- "Add search widget" onboarding button. 'Firefox' is intentionally hardcoded. -->
   <string name="nova_onboarding_add_search_widget_button" tools:ignore="BrandUsage">Προσθήκη γραφικού στοιχείου Firefox</string>
-  <!-- Customize prompt onboarding title. -->
-  <string name="nova_onboarding_customize_prompt_title" tools:ignore="UnusedResources">Εύκολο στην προσαρμογή και πιο ιδιωτικό με κάθε πάτημα</string>
   <plurals name="nova_onboarding_customize_prompt_body" tools:ignore="UnusedResources">
     <!--
       Customize prompt onboarding body.
@@ -664,12 +622,6 @@
     <item quantity="one">Το %1$s απέκλεισε %2$,d ιχνηλάτη κατά την περιαγωγή σας στο διαδίκτυο.</item>
     <item quantity="other">Το %1$s απέκλεισε %2$,d ιχνηλάτες κατά την περιαγωγή σας στο διαδίκτυο.</item>
   </plurals>
-  <!-- Customize prompt onboarding positive button. -->
-  <string name="nova_onboarding_customize_prompt_positive_button" tools:ignore="UnusedResources">Έναρξη προσαρμογής</string>
-  <!-- App icon onboarding title. -->
-  <string name="nova_onboarding_app_icon_prompt_title" tools:ignore="UnusedResources">Επιλέξτε ένα προσαρμοσμένο εικονίδιο εφαρμογής</string>
-  <!-- App icon onboarding body. -->
-  <string name="nova_onboarding_app_icon_prompt_body" tools:ignore="UnusedResources">Δώστε μια προσωπική πινελιά στην αρχική σας οθόνη.</string>
   <!-- ==== End of Project "Nova" onboarding strings ==== -->
 
   <!--
@@ -914,11 +866,6 @@
   <string name="preferences_category_file_storage">Αποθήκευση αρχείων</string>
   <!-- Preference title for downloads default location. -->
   <string name="preferences_downloads_default_location_title">Προεπιλεγμένη τοποθεσία λήψης</string>
-  <!--
-    Message shown as the summary of the download location preference when the
-    app has lost the permission to access a previously selected custom folder.
-  -->
-  <string name="preference_downloads_folder_permission_lost" tools:ignore="UnusedResources">Δεν έχετε δικαίωμα χρήσης αυτού του φακέλου. Δοκιμάστε να επιλέξετε έναν άλλο.</string>
   <!-- Preference title for choosing an app to handle downloads -->
   <string name="preferences_choose_app_for_downloads">Διαχείριση λήψεων με άλλη εφαρμογή</string>
   <!-- Preference category for deleting or removing downloads -->
@@ -1105,16 +1052,6 @@
   <string name="restart_warning_dialog_button_negative">Ακύρωση</string>
   <!-- Error message snackbar shown after the user tried to apply the new icon but the Android OS threw an error while updating existing app shortcuts (e.g. private mode shortcut) -->
   <string name="shortcuts_update_error">Αποτυχία ενημέρωσης του εικονιδίου εφαρμογής. Αφαιρέστε τις υπάρχουσες συντομεύσεις και δοκιμάστε ξανά.</string>
-  <!--
-    Add-ons general availability nimbus message
-
-    Title of the Nimbus message for extension general availability
-  -->
-  <string name="addon_ga_message_title_2" tools:ignore="UnusedResources">Διατίθενται τώρα νέες επεκτάσεις</string>
-  <!-- Body of the Nimbus message for add-ons general availability. 'Firefox' intentionally hardcoded here -->
-  <string name="addon_ga_message_body" tools:ignore="BrandUsage,UnusedResources">Δείτε 100+ νέες επεκτάσεις που σας επιτρέπουν να κάνετε το Firefox δικό σας.</string>
-  <!-- Button text of the Nimbus message for extensions general availability. -->
-  <string name="addon_ga_message_button_2" tools:ignore="UnusedResources">Εξερεύνηση επεκτάσεων</string>
   <!--
     Extension process crash dialog to user
 
@@ -1407,8 +1344,6 @@
   <string name="close_tabs_after_one_week">Μετά από μία εβδομάδα</string>
   <!-- Option for auto closing tabs that will auto close tabs after one month -->
   <string name="close_tabs_after_one_month">Μετά από έναν μήνα</string>
-  <!-- Title of preference that allows a user to specify the auto-close settings for open tabs -->
-  <string name="preference_auto_close_tabs" tools:ignore="UnusedResources">Αυτόματο κλείσιμο ανοικτών καρτελών</string>
   <!-- Content description (not visible, for screen readers etc.): Close tab button -->
   <string name="tab_manager_close_tabs">Κλείσιμο</string>
   <!--
@@ -2370,8 +2305,6 @@
   <string name="sync_add_new_device_connect_button">Σύνδεση άλλης συσκευής…</string>
   <!-- A message template for the shared link with a footer. %1$s is the shared link, %2$s is the app name (e.g. Firefox) and %3$s is a download link for the app. -->
   <string name="sent_from_firefox_template" tools:ignore="UnusedResources">%1$s\n\nΑπεστάλη από το %2$s 🦊 Δοκιμάστε το: %3$s</string>
-  <!-- A short message template for the shared link with a footer. %1$s is the shared link, %2$s is the app name (e.g. Firefox) and %3$s is a download link for the app. -->
-  <string name="sent_from_firefox_template_short" tools:ignore="UnusedResources">%1$s\n\nΑπεστάλη από το %2$s 🦊 %3$s</string>
   <!--
     Notifications
 
@@ -2807,8 +2740,6 @@
   <string name="about_privacy_notice">Σημείωση απορρήτου</string>
   <!-- About page link text to open know your rights link -->
   <string name="about_know_your_rights">Μάθετε τα δικαιώματά σας</string>
-  <!-- About page link text to open terms of use link -->
-  <string name="about_terms_of_use" tools:ignore="UnusedResources">Όροι χρήσης</string>
   <!-- About page link text to open licensing information link -->
   <string name="about_licensing_information">Πληροφορίες άδειας</string>
   <!-- About page link text to open a screen with libraries that are used -->
@@ -3223,10 +3154,6 @@
   <string name="saved_login_password_required_2">Εισαγάγετε έναν κωδικό πρόσβασης</string>
   <!-- The error message in add login view when username field is blank. -->
   <string name="saved_login_username_required_2">Εισαγάγετε ένα όνομα χρήστη</string>
-  <!-- The error message in add login view when hostname field is blank. -->
-  <string name="saved_login_hostname_required" tools:ignore="UnusedResources">Απαιτείται όνομα κεντρικού υπολογιστή</string>
-  <!-- The error message in add login view when hostname field is blank. -->
-  <string name="saved_login_hostname_required_2" tools:ignore="UnusedResources">Εισαγάγετε μια διεύθυνση ιστού</string>
   <!-- Voice search button content description -->
   <string name="voice_search_content_description">Φωνητική αναζήτηση</string>
   <!-- Voice search prompt description displayed after the user presses the voice search button -->
@@ -3331,16 +3258,6 @@
   <string name="inactive_tabs_expand_content_description">Ανάπτυξη ανενεργών καρτελών</string>
   <!-- Content description for collapsing the inactive tabs section. -->
   <string name="inactive_tabs_collapse_content_description">Σύμπτυξη ανενεργών καρτελών</string>
-  <!--
-    Inactive tabs auto-close message in the tabs tray
-
-    The header text of the auto-close message when the user is asked if they want to turn on the auto-closing of inactive tabs.
-  -->
-  <string name="inactive_tabs_auto_close_message_header" tools:ignore="UnusedResources">Αυτόματο κλείσιμο μετά από έναν μήνα;</string>
-  <!-- A description below the header to notify the user what the inactive tabs auto-close feature is. -->
-  <string name="inactive_tabs_auto_close_message_description" tools:ignore="BrandUsage,UnusedResources">Το Firefox μπορεί να κλείσει τις καρτέλες που δεν έχετε προβάλει τον περασμένο μήνα.</string>
-  <!-- A call to action below the description to allow the user to turn on the auto closing of inactive tabs. -->
-  <string name="inactive_tabs_auto_close_message_action" tools:ignore="UnusedResources">ΕΝΕΡΓΟΠΟΙΗΣΗ ΑΥΤΟΜΑΤΟΥ ΚΛΕΙΣΙΜΑΤΟΣ</string>
   <!-- Text for the snackbar to confirm auto-close is enabled for inactive tabs -->
   <string name="inactive_tabs_auto_close_message_snackbar">Το αυτόματο κλείσιμο ενεργοποιήθηκε</string>
   <!--
@@ -3846,16 +3763,6 @@
   <string name="debug_drawer_tab_tools_tab_creation_tool_button_text_inactive">Προσθήκη στις ανενεργές καρτέλες</string>
   <!-- The button text to add tabs to the private tab group in the tab creation tool. -->
   <string name="debug_drawer_tab_tools_tab_creation_tool_button_text_private">Προσθήκη στις ιδιωτικές καρτέλες</string>
-  <!--
-    Microsurvey
-    Note: Some strings are marked as unused as they are referenced via the Nimbus experimentation
-    platform and have no persistent reference in code
-
-    Prompt view
-
-    The microsurvey prompt title. Note: The word "Firefox" should NOT be translated
-  -->
-  <string name="micro_survey_prompt_title" tools:ignore="BrandUsage,UnusedResources">Βοηθήστε μας να κάνουμε το Firefox καλύτερο. Χρειάζεται μόνο ένα λεπτό.</string>
   <!-- The continue button label -->
   <string name="micro_survey_continue_button_label" tools:ignore="UnusedResources">Συνέχεια</string>
   <!--
@@ -3868,8 +3775,6 @@
   <string name="micro_survey_privacy_notice_2">Σημείωση απορρήτου</string>
   <!-- The submit button label text -->
   <string name="micro_survey_submit_button_label">Υποβολή</string>
-  <!-- The survey completion header -->
-  <string name="micro_survey_survey_header_confirmation" tools:ignore="UnusedResources">Η έρευνα ολοκληρώθηκε</string>
   <!-- The survey completion confirmation text -->
   <string name="micro_survey_feedback_confirmation">Ευχαριστούμε για τα σχόλιά σας!</string>
   <!-- Option for likert scale -->
@@ -3884,36 +3789,10 @@
   <string name="likert_scale_option_5" tools:ignore="UnusedResources">Πολύ δυσαρεστημένος/-η</string>
   <!-- Option for likert scale -->
   <string name="likert_scale_option_6" tools:ignore="UnusedResources">Δεν το χρησιμοποιώ</string>
-  <!-- Option for likert scale. Note: The word "Firefox" should NOT be translated. -->
-  <string name="likert_scale_option_7" tools:ignore="BrandUsage,UnusedResources">Δεν χρησιμοποιώ την αναζήτηση στο Firefox</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_8" tools:ignore="UnusedResources">Δεν χρησιμοποιώ τον συγχρονισμό</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_slow_or_buggy" tools:ignore="UnusedResources">Είναι αργό ή προβληματικό</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_features_hard_to_find_or_missing" tools:ignore="UnusedResources">Οι λειτουργίες είναι δύσκολο να βρεθούν ή λείπουν</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_confusing_or_hard_to_use" tools:ignore="UnusedResources">Μπερδεύει ή είναι δύσχρηστο</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_its_okay" tools:ignore="UnusedResources">Είναι καλό, αλλά όχι καλύτερο από άλλα προγράμματα περιήγησης</string>
-  <!-- Option for likert scale. Note: The word "Firefox" should NOT be translated. -->
-  <string name="likert_scale_option_i_plan_to_keep_using" tools:ignore="BrandUsage,UnusedResources">Σκοπεύω να συνεχίσω να χρησιμοποιώ το Firefox</string>
   <!-- Text shown in prompt for printing microsurvey. "sec" It's an abbreviation for "second". Note: The word "Firefox" should NOT be translated. -->
   <string name="microsurvey_prompt_printing_title" tools:ignore="BrandUsage,UnusedResources">Συμβάλλετε στη βελτίωση της εκτύπωσης στο Firefox. Θα χρειαστεί μόνο ένα δευτερόλεπτο</string>
-  <!-- Text shown in prompt for search microsurvey. Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_prompt_search_title" tools:ignore="BrandUsage,UnusedResources">Βοηθήστε μας να κάνουμε την αναζήτηση στο Firefox καλύτερη. Χρειάζεται μόνο ένα λεπτό</string>
-  <!-- Text shown in prompt for sync microsurvey. Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_prompt_sync_title" tools:ignore="BrandUsage,UnusedResources">Βοηθήστε μας να κάνουμε τον συγχρονισμό στο Firefox καλύτερο. Χρειάζεται μόνο ένα λεπτό</string>
   <!-- Text shown in the survey title for printing microsurvey. Note: The word "Firefox" should NOT be translated. -->
   <string name="microsurvey_survey_printing_title" tools:ignore="BrandUsage,UnusedResources">Πόσο ικανοποιημένοι είστε με την εκτύπωση στο Firefox;</string>
-  <!-- Text shown in the survey title for homepage microsurvey. Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_homepage_title" tools:ignore="BrandUsage,UnusedResources">Πόσο ικανοποιημένοι είστε με την αρχική σελίδα του Firefox;</string>
-  <!-- Text shown in the survey title for search experience microsurvey. Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_search_title" tools:ignore="BrandUsage,UnusedResources">Πόσο ικανοποιημένοι είστε με την εμπειρία αναζήτησης στο Firefox;</string>
-  <!-- Text shown in the survey title for sync experience microsurvey. Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_sync_title" tools:ignore="BrandUsage,UnusedResources">Πόσο ικανοποιημένοι είστε με την εμπειρία συγχρονισμού στο Firefox;</string>
-  <!-- Text shown in the survey title for 'describe your experience so far' microsurvey. Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_describe_your_experience_title" tools:ignore="BrandUsage,UnusedResources">Βοηθήστε μας να βελτιώσουμε το Firefox. Τι περιγράφει καλύτερα την εμπειρία σας μέχρι στιγμής;</string>
   <!--
     Uninstall Survey
 
@@ -4034,40 +3913,6 @@
     Text shown as a label or tag to indicate a feature or area is still undergoing active development. Note that here "Beta" should not be translated, as it is used as an icon styled element.
   -->
   <string name="beta_feature">BETA</string>
-  <!--
-    Root certificate expiration warnings
-
-    These strings for homepage cards and push notifications to be pushed to users running outdated versions of Firefox. We want to encourage these users to update to the latest version so their extensions and other features don't stop working when Firefox's old root certificate expires on 2025-03-14. For more information, see this SUMO article: https://support.mozilla.org/kb/root-certificate-expiration !
-
-    Homepage card button to open Google Play Store. "Update" is a verb.
-  -->
-  <string name="certificate_warning_homepage_card_update_now_button" tools:ignore="UnusedResources">Ενημέρωση τώρα</string>
-  <!-- Homepage card title about old Firefox version. "Update" is a verb. Note: The word "Firefox" should NOT be translated. -->
-  <string name="certificate_warning_homepage_card_hca1_title" tools:ignore="BrandUsage,UnusedResources">Ενημερώστε το πρόγραμμα περιήγησης Firefox σας</string>
-  <!-- Homepage card message about old Firefox version -->
-  <string name="certificate_warning_homepage_card_hca1_message" tools:ignore="UnusedResources">Ένα πιστοποιητικό ρίζας θα λήξει στις 14 Μαρτίου, προκαλώντας διακοπή λειτουργίας ορισμένων λειτουργιών.</string>
-  <!-- Homepage card title about old Firefox version. "Update" is a verb. -->
-  <string name="certificate_warning_homepage_card_hcr1_title" tools:ignore="UnusedResources">Κάντε ενημέρωση πριν από τις 14 Μαρτίου.</string>
-  <!-- Homepage card message about old Firefox version. Note: The word "Firefox" should NOT be translated. -->
-  <string name="certificate_warning_homepage_card_hcr1_message" tools:ignore="BrandUsage,UnusedResources">Ένα πιστοποιητικό ρίζας θα λήξει, προκαλώντας διακοπή λειτουργίας της έκδοσης Firefox σας.</string>
-  <!-- Homepage card title about old Firefox version -->
-  <string name="certificate_warning_homepage_card_hcw2_title" tools:ignore="UnusedResources">Απομένουν λιγότερες από 7 ημέρες για την ενημέρωση</string>
-  <!-- Homepage card message about old Firefox version. Note: The word "Firefox" should NOT be translated. -->
-  <string name="certificate_warning_homepage_card_hcw2_message" tools:ignore="BrandUsage,UnusedResources">Στις 14 Μαρτίου, τα πρόσθετα και άλλες λειτουργίες του Firefox θα σταματήσουν να λειτουργούν επειδή ένα πιστοποιητικό ρίζας θα λήξει.</string>
-  <!-- Homepage card title about old Firefox version. Note: The word "Firefox" should NOT be translated. -->
-  <string name="certificate_warning_homepage_card_hcw3_title" tools:ignore="BrandUsage,UnusedResources">Τελευταία ευκαιρία για να διατηρήσετε το Firefox σας</string>
-  <!-- Homepage card message about old Firefox version. Note: The word "Firefox" should NOT be translated. -->
-  <string name="certificate_warning_homepage_card_hcw3_message" tools:ignore="BrandUsage,UnusedResources">Η έκδοση του Firefox σας θα σταματήσει να λειτουργεί σωστά στις 14 Μαρτίου, επειδή ένα πιστοποιητικό ρίζας θα λήξει.</string>
-  <!-- Push notification title about old Firefox version. "Update" is a noun. -->
-  <string name="certificate_warning_push_notification_update_recommended_title" tools:ignore="UnusedResources">Προτείνεται ενημέρωση</string>
-  <!-- Push notification message about old Firefox version -->
-  <string name="certificate_warning_push_notification_pnr1_message" tools:ignore="UnusedResources">Τα πρόσθετα και ορισμένες λειτουργίες θα σταματήσουν να λειτουργούν στις 14 Μαρτίου.</string>
-  <!-- Push notification title about old Firefox version. Note: The word "Firefox" should NOT be translated. -->
-  <string name="certificate_warning_push_notification_pnw2_title" tools:ignore="BrandUsage,UnusedResources">Διαθέτετε μια παλαιότερη έκδοση του Firefox</string>
-  <!-- Push notification message about old Firefox version. "Update" is a verb. -->
-  <string name="certificate_warning_push_notification_pnw2_message" tools:ignore="UnusedResources">Κάντε ενημέρωση πριν τις 14 Μαρτίου για να συνεχίσετε να χρησιμοποιείτε τα πρόσθετα και άλλες λειτουργίες.</string>
-  <!-- Push notification message about old Firefox version -->
-  <string name="certificate_warning_push_notification_pnw3_message" tools:ignore="UnusedResources">Ορισμένες λειτουργίες θα σταματήσουν να λειτουργούν αύριο.</string>
   <!-- TextField Design System Component -->
 
   <!--

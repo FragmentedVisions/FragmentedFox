@@ -435,18 +435,12 @@
   <string name="onboarding_redesign_tou_body_three" tools:ignore="BrandUsage,UnusedResources">Akken ad tεawneḍ deg usnerni iminig, Firefox ad yazen isefka n tawassna akked umyigew ɣer Mozilla. %1$s</string>
   <!-- Used as text for the link in onboarding_redesign_tou_body_three. -->
   <string name="onboarding_redesign_tou_body_three_link_text" tools:ignore="UnusedResources">Sefrek iɣewwaren</string>
-  <!-- Terms of use (ToU) onboarding page continue button label. -->
-  <string name="onboarding_redesign_tou_agree_and_continue_button_label" tools:ignore="UnusedResources">Kemmel</string>
-  <!-- Onboarding label for 'Continue' button. -->
-  <string name="onboarding_redesign_continue_button" tools:ignore="UnusedResources">Kemmel</string>
   <!-- Marketing onboarding page title. 'Firefox' is intentionally hardcoded. -->
   <!-- Marketing onboarding page opt-out checkbox. Unchecking the box does not increase data collection. Our data practices remain the same. 'Mozilla' is intentionally hardcoded. -->
   <!-- Marketing onboarding page clickable link text to "learn more" on how data is used. -->
   <!-- Marketing onboarding page button label. Button to confirm choice and start browsing. -->
   <!-- Sync onboarding redesign positive button text. -->
   <string name="onboarding_redesign_sync_positive_button" tools:ignore="UnusedResources">Bdu amtawi</string>
-  <!-- Sync onboarding redesign negative button text. -->
-  <string name="onboarding_redesign_sync_negative_button" tools:ignore="UnusedResources">Mačči tura</string>
   <!-- Marketing onboarding page title variant. “One last thing” refers to the final step or action in the onboarding process that we’re asking users to take before they can start using the browser. -->
   <!-- Marketing onboarding page body variant. 'Firefox' is intentionally hardcoded. -->
   <!-- Marketing onboarding page button label variant. Button to confirm choice and start browsing. -->
@@ -831,16 +825,6 @@
   <!-- Dialog button text for cancelling app icon change -->
   <string name="restart_warning_dialog_button_negative">Sefsex</string>
   <!--
-    Add-ons general availability nimbus message
-
-    Title of the Nimbus message for extension general availability
-  -->
-  <string name="addon_ga_message_title_2" tools:ignore="UnusedResources">Llan akka tura isiɣzaf imaynuten</string>
-  <!-- Body of the Nimbus message for add-ons general availability. 'Firefox' intentionally hardcoded here -->
-  <string name="addon_ga_message_body" tools:ignore="BrandUsage,UnusedResources">Snirem ugar n 100 yisiɣzaf imaynuten ara ak·akem-yeǧǧen ad tsagneḍ Firefox.</string>
-  <!-- Button text of the Nimbus message for extensions general availability. -->
-  <string name="addon_ga_message_button_2" tools:ignore="UnusedResources">Snirem isiɣzaf</string>
-  <!--
     Extension process crash dialog to user
 
     Title of the extension crash dialog shown to the user when enough errors have occurred with extensions and they need to be temporarily disabled
@@ -1121,8 +1105,6 @@
   <string name="close_tabs_after_one_week">Seld yiwen n umalas</string>
   <!-- Option for auto closing tabs that will auto close tabs after one month -->
   <string name="close_tabs_after_one_month">Seld yiwen n waggur</string>
-  <!-- Title of preference that allows a user to specify the auto-close settings for open tabs -->
-  <string name="preference_auto_close_tabs" tools:ignore="UnusedResources">Amdal awurman n waccaren yeldin</string>
   <!-- Content description (not visible, for screen readers etc.): Close tab button -->
   <string name="tab_manager_close_tabs">Mdel</string>
   <!--
@@ -1771,8 +1753,6 @@
   <string name="sync_add_new_device_connect_button">Qqen ibenk-nniḍen…</string>
   <!-- A message template for the shared link with a footer. %1$s is the shared link, %2$s is the app name (e.g. Firefox) and %3$s is a download link for the app. -->
   <string name="sent_from_firefox_template" tools:ignore="UnusedResources">%1$s\n\nYettwazen sɣur %2$s 🦊 Ԑreḍ iminig aziraz: %3$s</string>
-  <!-- A short message template for the shared link with a footer. %1$s is the shared link, %2$s is the app name (e.g. Firefox) and %3$s is a download link for the app. -->
-  <string name="sent_from_firefox_template_short" tools:ignore="UnusedResources">%1$s\n\nYettwazen sɣur %2$s 🦊%3$s</string>
   <!--
     Notifications
 
@@ -2157,8 +2137,6 @@
   <string name="about_privacy_notice">Tasertit n tbaḍnit</string>
   <!-- About page link text to open know your rights link -->
   <string name="about_know_your_rights">Issin izerfan-ik</string>
-  <!-- About page link text to open terms of use link -->
-  <string name="about_terms_of_use" tools:ignore="UnusedResources">Tiwtilin n useqdec</string>
   <!-- About page link text to open licensing information link -->
   <string name="about_licensing_information">Talɣut n turagt</string>
   <!-- About page link text to open a screen with libraries that are used -->
@@ -2531,10 +2509,6 @@
   <string name="saved_login_password_required_2">Sekcem awal uffir</string>
   <!-- The error message in add login view when username field is blank. -->
   <string name="saved_login_username_required_2">Sekcem isem n useqdac</string>
-  <!-- The error message in add login view when hostname field is blank. -->
-  <string name="saved_login_hostname_required" tools:ignore="UnusedResources">Asenneftaɣ yettwasra</string>
-  <!-- The error message in add login view when hostname field is blank. -->
-  <string name="saved_login_hostname_required_2" tools:ignore="UnusedResources">Sekcem tansa web</string>
   <!-- Voice search button content description -->
   <string name="voice_search_content_description">Anadi s taɣect</string>
   <!-- Voice search prompt description displayed after the user presses the voice search button -->
@@ -2624,16 +2598,6 @@
   <string name="inactive_tabs_expand_content_description">Snefli accaren irarmuden</string>
   <!-- Content description for collapsing the inactive tabs section. -->
   <string name="inactive_tabs_collapse_content_description">Fneẓ accaren irurmiden</string>
-  <!--
-    Inactive tabs auto-close message in the tabs tray
-
-    The header text of the auto-close message when the user is asked if they want to turn on the auto-closing of inactive tabs.
-  -->
-  <string name="inactive_tabs_auto_close_message_header" tools:ignore="UnusedResources">Amdal awurman seld yiwen wayyur?</string>
-  <!-- A description below the header to notify the user what the inactive tabs auto-close feature is. -->
-  <string name="inactive_tabs_auto_close_message_description" tools:ignore="BrandUsage,UnusedResources">Firefox izmer ad imdel accaren i twalaḍ aggur iɛeddan.</string>
-  <!-- A call to action below the description to allow the user to turn on the auto closing of inactive tabs. -->
-  <string name="inactive_tabs_auto_close_message_action" tools:ignore="UnusedResources">RMED AMDAL AWURMAN</string>
   <!-- Text for the snackbar to confirm auto-close is enabled for inactive tabs -->
   <string name="inactive_tabs_auto_close_message_snackbar">Amdal awurman yermed</string>
   <!--
@@ -3043,16 +3007,6 @@
   <string name="debug_drawer_tab_tools_tab_creation_tool_button_text_inactive">Rnu ɣer waccaren irurmiden</string>
   <!-- The button text to add tabs to the private tab group in the tab creation tool. -->
   <string name="debug_drawer_tab_tools_tab_creation_tool_button_text_private">Rnu ɣer waccaren usligen</string>
-  <!--
-    Microsurvey
-    Note: Some strings are marked as unused as they are referenced via the Nimbus experimentation
-    platform and have no persistent reference in code
-
-    Prompt view
-
-    The microsurvey prompt title. Note: The word "Firefox" should NOT be translated
-  -->
-  <string name="micro_survey_prompt_title" tools:ignore="BrandUsage,UnusedResources">Ԑawen-aɣ ad nesnerni Firefox ugar. Aya ad yeṭṭef cwiṭ n wakud.</string>
   <!-- The continue button label -->
   <string name="micro_survey_continue_button_label" tools:ignore="UnusedResources">Kemmel</string>
   <!--
@@ -3065,8 +3019,6 @@
   <string name="micro_survey_privacy_notice_2">Tasertit n tbaḍnit</string>
   <!-- The submit button label text -->
   <string name="micro_survey_submit_button_label">Azen</string>
-  <!-- The survey completion header -->
-  <string name="micro_survey_survey_header_confirmation" tools:ignore="UnusedResources">Aḥedqis yemmed</string>
   <!-- The survey completion confirmation text -->
   <string name="micro_survey_feedback_confirmation">Tanemmirt ɣef tekti yinek!</string>
   <!-- Option for likert scale -->
@@ -3081,24 +3033,10 @@
   <string name="likert_scale_option_5" tools:ignore="UnusedResources">Texseṛ-as akk nniya</string>
   <!-- Option for likert scale -->
   <string name="likert_scale_option_6" tools:ignore="UnusedResources">Ur t-sseqdaceɣ ara</string>
-  <!-- Option for likert scale. Note: The word "Firefox" should NOT be translated. -->
-  <string name="likert_scale_option_7" tools:ignore="BrandUsage,UnusedResources">Ur sseqdaceɣ ara anadi ɣef Firefox</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_8" tools:ignore="UnusedResources">Ur sseqdaceɣ ara amtawi</string>
   <!-- Text shown in prompt for printing microsurvey. "sec" It's an abbreviation for "second". Note: The word "Firefox" should NOT be translated. -->
   <string name="microsurvey_prompt_printing_title" tools:ignore="BrandUsage,UnusedResources">Ɛawen-aɣ ad nesnerni asiggez deg Firefox. Aya ad yeṭṭef cwiṭ kan n wakud</string>
-  <!-- Text shown in prompt for search microsurvey. Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_prompt_search_title" tools:ignore="BrandUsage,UnusedResources">Ԑawen-aɣ ad nerr anadi deg Firefox igerrez ugar. Aya ad yeṭṭef cwiṭ n wakud.</string>
-  <!-- Text shown in prompt for sync microsurvey. Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_prompt_sync_title" tools:ignore="BrandUsage,UnusedResources">Ԑawen-aɣ ad nerr amtawi deg Firefox igerrez ugar. Aya ad yeṭṭef cwiṭ n wakud.</string>
   <!-- Text shown in the survey title for printing microsurvey. Note: The word "Firefox" should NOT be translated. -->
   <string name="microsurvey_survey_printing_title" tools:ignore="BrandUsage,UnusedResources">Tumreḍ s usiggez deg Firefox?</string>
-  <!-- Text shown in the survey title for homepage microsurvey. Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_homepage_title" tools:ignore="BrandUsage,UnusedResources">Tumreḍ s usebtar-ik agejdan n Firefox?</string>
-  <!-- Text shown in the survey title for search experience microsurvey. Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_search_title" tools:ignore="BrandUsage,UnusedResources">Tumreḍ s unadi ɣef Firefox?</string>
-  <!-- Text shown in the survey title for sync experience microsurvey. Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_sync_title" tools:ignore="BrandUsage,UnusedResources">Tumreḍ s umtawi deg Firefox?</string>
   <!--
     Accessibility
 
@@ -3199,30 +3137,6 @@
     Text shown as a label or tag to indicate a feature or area is still undergoing active development. Note that here "Beta" should not be translated, as it is used as an icon styled element.
   -->
   <string name="beta_feature">BETA</string>
-  <!--
-    Root certificate expiration warnings
-
-    These strings for homepage cards and push notifications to be pushed to users running outdated versions of Firefox. We want to encourage these users to update to the latest version so their extensions and other features don't stop working when Firefox's old root certificate expires on 2025-03-14. For more information, see this SUMO article: https://support.mozilla.org/kb/root-certificate-expiration !
-
-    Homepage card button to open Google Play Store. "Update" is a verb.
-  -->
-  <string name="certificate_warning_homepage_card_update_now_button" tools:ignore="UnusedResources">Leqqem tura</string>
-  <!-- Homepage card title about old Firefox version. "Update" is a verb. Note: The word "Firefox" should NOT be translated. -->
-  <string name="certificate_warning_homepage_card_hca1_title" tools:ignore="BrandUsage,UnusedResources">Leqqem iminig-ik Firefox</string>
-  <!-- Homepage card title about old Firefox version. "Update" is a verb. -->
-  <string name="certificate_warning_homepage_card_hcr1_title" tools:ignore="UnusedResources">Leqqem send 14 seg meɣres</string>
-  <!-- Homepage card title about old Firefox version -->
-  <string name="certificate_warning_homepage_card_hcw2_title" tools:ignore="UnusedResources">Ur wwiḍen ara 7 n wussan akken ad truḥeḍ ɣer uleqqem</string>
-  <!-- Homepage card title about old Firefox version. Note: The word "Firefox" should NOT be translated. -->
-  <string name="certificate_warning_homepage_card_hcw3_title" tools:ignore="BrandUsage,UnusedResources">Tagnit taneggarut i ukemmel n useqdec n Firefox</string>
-  <!-- Homepage card message about old Firefox version. Note: The word "Firefox" should NOT be translated. -->
-  <string name="certificate_warning_homepage_card_hcw3_message" tools:ignore="BrandUsage,UnusedResources">Lqem-inek·inem n Firefox ad yeḥbes, ur iteddu ara, akken iwata ass n 14 di meɣres acku aselkin aẓar ad immet.</string>
-  <!-- Push notification title about old Firefox version. "Update" is a noun. -->
-  <string name="certificate_warning_push_notification_update_recommended_title" tools:ignore="UnusedResources">Yettwasra lqem</string>
-  <!-- Push notification title about old Firefox version. Note: The word "Firefox" should NOT be translated. -->
-  <string name="certificate_warning_push_notification_pnw2_title" tools:ignore="BrandUsage,UnusedResources">Aql-ak tesseqdaceḍ lqem aqbuṛ n Firefox.</string>
-  <!-- Push notification message about old Firefox version -->
-  <string name="certificate_warning_push_notification_pnw3_message" tools:ignore="UnusedResources">Kra n tmahilin ad ḥebsent, ur teddunt ara, azekka.</string>
   <!-- TextField Design System Component -->
 
   <!--

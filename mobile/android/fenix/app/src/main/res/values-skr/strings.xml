@@ -579,16 +579,6 @@
   <!-- Wallpaper onboarding dialog learn more button text. The button navigates to the wallpaper settings screen. -->
   <string name="wallpapers_onboarding_dialog_explore_more_button_text">ٻئے وال پیپر پھلورو</string>
   <!--
-    Add-ons general availability nimbus message
-
-    Title of the Nimbus message for extension general availability
-  -->
-  <string name="addon_ga_message_title_2" tools:ignore="UnusedResources">نویاں ایکسٹنشناں ہݨ دستیاب ہن</string>
-  <!-- Body of the Nimbus message for add-ons general availability. 'Firefox' intentionally hardcoded here -->
-  <string name="addon_ga_message_body" tools:ignore="BrandUsage,UnusedResources">100+ نویں ایکٹنشن ݙیکھو جہڑی تُہاکوں فائر فاکس کوں آپݨاں بݨاوݨ ݙیوِن۔</string>
-  <!-- Button text of the Nimbus message for extensions general availability. -->
-  <string name="addon_ga_message_button_2" tools:ignore="UnusedResources">ایکسٹنشناں پھلورو</string>
-  <!--
     Extension process crash dialog to user
 
     Title of the extension crash dialog shown to the user when enough errors have occurred with extensions and they need to be temporarily disabled
@@ -812,8 +802,6 @@
   <string name="close_tabs_after_one_week">ہک ہفتے بعد</string>
   <!-- Option for auto closing tabs that will auto close tabs after one month -->
   <string name="close_tabs_after_one_month">ہک مہینے بعد</string>
-  <!-- Title of preference that allows a user to specify the auto-close settings for open tabs -->
-  <string name="preference_auto_close_tabs" tools:ignore="UnusedResources">کھلے ٹیباں کوں خودکار بند کرو</string>
   <!--
     Opening screen
 
@@ -1852,10 +1840,6 @@
   <string name="saved_login_password_required_2">پاس ورڈ درج کرو</string>
   <!-- The error message in add login view when username field is blank. -->
   <string name="saved_login_username_required_2">ورتݨ ناں درج کرو</string>
-  <!-- The error message in add login view when hostname field is blank. -->
-  <string name="saved_login_hostname_required" tools:ignore="UnusedResources">ہوسٹ ناں ضروری ہے</string>
-  <!-- The error message in add login view when hostname field is blank. -->
-  <string name="saved_login_hostname_required_2" tools:ignore="UnusedResources">ویب پتہ درج کرو</string>
   <!-- Voice search button content description -->
   <string name="voice_search_content_description">آواز نال ڳولݨ</string>
   <!-- Voice search prompt description displayed after the user presses the voice search button -->
@@ -1934,16 +1918,6 @@
   <string name="inactive_tabs_expand_content_description">غیرفعال ٹیباں ودھاؤ</string>
   <!-- Content description for collapsing the inactive tabs section. -->
   <string name="inactive_tabs_collapse_content_description">غیرفعال ٹیباں کٹھی کرو</string>
-  <!--
-    Inactive tabs auto-close message in the tabs tray
-
-    The header text of the auto-close message when the user is asked if they want to turn on the auto-closing of inactive tabs.
-  -->
-  <string name="inactive_tabs_auto_close_message_header" tools:ignore="UnusedResources">ہک مہینے بعد آپݨے آپ بند کروں؟</string>
-  <!-- A description below the header to notify the user what the inactive tabs auto-close feature is. -->
-  <string name="inactive_tabs_auto_close_message_description" tools:ignore="BrandUsage,UnusedResources">جہڑے ٹیب تساں پہلے مہینے دے دوران کائنی ݙٹھے، انہاں کوں فائرفوکس بند کر سڳدے۔</string>
-  <!-- A call to action below the description to allow the user to turn on the auto closing of inactive tabs. -->
-  <string name="inactive_tabs_auto_close_message_action" tools:ignore="UnusedResources">خود بخود بند کرݨ چالو کرو</string>
   <!-- Text for the snackbar to confirm auto-close is enabled for inactive tabs -->
   <string name="inactive_tabs_auto_close_message_snackbar">آپݨے آپ بند تھیوݨ فعال تھی ڳیا</string>
   <!--
@@ -2270,16 +2244,6 @@
   <string name="debug_drawer_tab_tools_tab_creation_tool_button_text_inactive">غیر فعال ٹیباں وچ شامل کرو</string>
   <!-- The button text to add tabs to the private tab group in the tab creation tool. -->
   <string name="debug_drawer_tab_tools_tab_creation_tool_button_text_private">نجی ٹیب وچ شامل کرو</string>
-  <!--
-    Microsurvey
-    Note: Some strings are marked as unused as they are referenced via the Nimbus experimentation
-    platform and have no persistent reference in code
-
-    Prompt view
-
-    The microsurvey prompt title. Note: The word "Firefox" should NOT be translated
-  -->
-  <string name="micro_survey_prompt_title" tools:ignore="BrandUsage,UnusedResources">فائرفوکس کوں چنگیرا بݨاوݨ کیتے ساݙی مدد کرو۔ ایں کیتے صرف ہک منٹ لڳسی۔</string>
   <!-- The continue button label -->
   <string name="micro_survey_continue_button_label" tools:ignore="UnusedResources">جاری</string>
   <!--
@@ -2292,8 +2256,6 @@
   <string name="micro_survey_privacy_notice_2">رازداری نوٹس</string>
   <!-- The submit button label text -->
   <string name="micro_survey_submit_button_label">جمع کرواؤ</string>
-  <!-- The survey completion header -->
-  <string name="micro_survey_survey_header_confirmation" tools:ignore="UnusedResources">سروے مکمل</string>
   <!-- The survey completion confirmation text -->
   <string name="micro_survey_feedback_confirmation">تہاݙے فیڈبیک تے تھورائت ہیں!</string>
   <!-- Option for likert scale -->
@@ -2308,24 +2270,10 @@
   <string name="likert_scale_option_5" tools:ignore="UnusedResources">ݙاڈھا غیرتسلی بخش</string>
   <!-- Option for likert scale -->
   <string name="likert_scale_option_6" tools:ignore="UnusedResources">میں ایں کوں کائنی ورتیندا</string>
-  <!-- Option for likert scale. Note: The word "Firefox" should NOT be translated. -->
-  <string name="likert_scale_option_7" tools:ignore="BrandUsage,UnusedResources">میں Firefox تے کائنی ڳولیندا</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_8" tools:ignore="UnusedResources">میں ہم وقت کرݨ کائنی ورتیندا</string>
   <!-- Text shown in prompt for printing microsurvey. "sec" It's an abbreviation for "second". Note: The word "Firefox" should NOT be translated. -->
   <string name="microsurvey_prompt_printing_title" tools:ignore="BrandUsage,UnusedResources">فائرفوکس وچ پرنٹنگ کوں چنگیرا بݨاوݨ کیتے ساݙی مدد کرو۔ ایں کیتے صرف ہک سیکنڈ لڳسی۔</string>
-  <!-- Text shown in prompt for search microsurvey. Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_prompt_search_title" tools:ignore="BrandUsage,UnusedResources">فائرفوکس وچ چنگیرا ڳولݨ کیتے ساݙی مدد کرو۔ ایں کیتے صرف ہک منٹ لڳسی۔</string>
-  <!-- Text shown in prompt for sync microsurvey. Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_prompt_sync_title" tools:ignore="BrandUsage,UnusedResources">فائرفوکس وچ چنگیرا ہم وقت بݨاوݨ کیتے ساݙی مدد کرو۔ ایں کیتے صرف ہک منٹ لڳسی۔</string>
   <!-- Text shown in the survey title for printing microsurvey. Note: The word "Firefox" should NOT be translated. -->
   <string name="microsurvey_survey_printing_title" tools:ignore="BrandUsage,UnusedResources">تساں Firefox وچ چھاپݨ نال چوکھے مطمئن ہو؟</string>
-  <!-- Text shown in the survey title for homepage microsurvey. Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_homepage_title" tools:ignore="BrandUsage,UnusedResources">تساں آپݨے Firefox مکھ پنے نال چوکھے مطمئن ہو؟</string>
-  <!-- Text shown in the survey title for search experience microsurvey. Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_search_title" tools:ignore="BrandUsage,UnusedResources">تساں Firefox وچ ڳولݨ دے تجربے نال چوکھے مطمئن ہو؟</string>
-  <!-- Text shown in the survey title for sync experience microsurvey. Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_sync_title" tools:ignore="BrandUsage,UnusedResources">تساں Firefox وچ ہم وقت کرݨ دے تجربے نال چوکھے مطمئن ہو؟</string>
   <!--
     Accessibility
 
@@ -2390,14 +2338,6 @@
     Text shown as a label or tag to indicate a feature or area is still undergoing active development. Note that here "Beta" should not be translated, as it is used as an icon styled element.
   -->
   <string name="beta_feature">BETA</string>
-  <!--
-    Root certificate expiration warnings
-
-    These strings for homepage cards and push notifications to be pushed to users running outdated versions of Firefox. We want to encourage these users to update to the latest version so their extensions and other features don't stop working when Firefox's old root certificate expires on 2025-03-14. For more information, see this SUMO article: https://support.mozilla.org/kb/root-certificate-expiration !
-
-    Homepage card button to open Google Play Store. "Update" is a verb.
-  -->
-  <string name="certificate_warning_homepage_card_update_now_button" tools:ignore="UnusedResources">ہݨ ابڈیٹ کرو</string>
   <!-- TextField Design System Component -->
 
   <!-- ==== Terms of use pop up prompt ==== -->

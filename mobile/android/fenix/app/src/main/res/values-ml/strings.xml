@@ -450,10 +450,6 @@
   <string name="onboarding_term_of_service_line_three" tools:ignore="BrandUsage">അന്വേഷിയന്ത്രത്തിനെ മെച്ചപ്പെുടത്താൻ ഫയർഫോക്സു് മോസില്ലക്കു് നിദാനനിർണയനീയും ഇടപാടുനീയ ദത്ത അയയ്ക്കാരുണ്ടു്. %1$s</string>
   <!-- Used as text for the link in onboarding_term_of_service_line_three. -->
   <string name="onboarding_term_of_service_line_three_link_text">കൈകാര്യം ചെയ്യുക</string>
-  <!-- Terms of use (ToU) first subheader. -->
-  <string name="onboarding_redesign_tou_subheader_one" tools:ignore="UnusedResources">മിന്നൽ വിരവോടെ വെബ്ബിടങ്ങൾ ലഭ്യമാക്കുക</string>
-  <!-- Terms of use (ToU) second subheader. -->
-  <string name="onboarding_redesign_tou_subheader_two" tools:ignore="UnusedResources">താനെ പിന്തുടൎച്ച പരിരക്ഷണം</string>
   <!--
     Terms of use (ToU) first body text. %1$s is replaced by an active link,
     using onboarding_redesign_tou_body_one_link_text as text (“Firefox Terms of Use”).
@@ -465,37 +461,19 @@
   <string name="onboarding_redesign_tou_body_two_link_text" tools:ignore="UnusedResources">സ്വകാര്യത അറിയിപ്പു്</string>
   <!-- Used as text for the link in onboarding_redesign_tou_body_three. -->
   <string name="onboarding_redesign_tou_body_three_link_text" tools:ignore="UnusedResources">ക്രമീകരണങ്ങൾ നിയന്ത്രിക്കുക</string>
-  <!-- Terms of use (ToU) onboarding page continue button label. -->
-  <string name="onboarding_redesign_tou_agree_and_continue_button_label" tools:ignore="UnusedResources">തുടരുക</string>
-  <!-- Onboarding header for the toolbar selection card. -->
-  <string name="onboarding_redesign_customize_toolbar_title" tools:ignore="UnusedResources">താങ്ങൾക്കു വിലാസപ്പട്ട എവിടെയാണു വേണ്ടതു് ?</string>
-  <!-- Onboarding label for 'Continue' button. -->
-  <string name="onboarding_redesign_continue_button" tools:ignore="UnusedResources">തുടരുക</string>
   <!-- Marketing onboarding page title. 'Firefox' is intentionally hardcoded. -->
   <!-- Marketing onboarding page clickable link text to "learn more" on how data is used. -->
   <!-- Marketing onboarding page button label. Button to confirm choice and start browsing. -->
-  <!-- Set to default browser onboarding redesign title. -->
-  <string name="onboarding_redesign_set_default_browser_title" tools:ignore="UnusedResources">താനെ പിന്തുടൎച്ച പരിരക്ഷണം തനിമട്ടായി നേടൂ.\u0020</string>
-  <!-- Sync onboarding redesign title. 'Firefox' is intentionally hardcoded. -->
-  <string name="onboarding_redesign_sync_title" tools:ignore="BrandUsage,UnusedResources">ഫയൎഫോക്സ് ഉപയോഗിക്കുന്നയെല്ലായിടത്തും സമന്വയിപ്പിക്കുക</string>
-  <!-- Sync onboarding redesign body. -->
-  <string name="onboarding_redesign_sync_body" tools:ignore="UnusedResources">ഏതുപകരണത്തിലും അടയാളക്കുറിപ്പുകളും ടാബുകളും ഒളിവാക്കുകളും നേടുക. എല്ലാം രൂപമാറ്റത്തിലൂടെ പരിരക്ഷിച്ചിരിക്കുന്നതു്.\u0020</string>
   <!-- Sync onboarding redesign positive button text. -->
   <string name="onboarding_redesign_sync_positive_button" tools:ignore="UnusedResources">സമന്വയിപ്പിക്കാൻ തുടങ്ങുക</string>
-  <!-- Sync onboarding redesign negative button text. -->
-  <string name="onboarding_redesign_sync_negative_button" tools:ignore="UnusedResources">ഇപ്പോഴല്ല</string>
   <!-- Marketing onboarding page title variant. “One last thing” refers to the final step or action in the onboarding process that we’re asking users to take before they can start using the browser. -->
   <!-- Marketing onboarding page button label variant. Button to confirm choice and start browsing. -->
   <!-- ==== Project "Nova" onboarding strings ==== -->
 
   <!-- "Continue" onboarding button. -->
   <string name="nova_onboarding_continue_button">തുടരുക</string>
-  <!-- "Continue browsing" onboarding button. -->
-  <string name="nova_onboarding_continue_browsing_button" tools:ignore="UnusedResources">തിരയൽ തുടരുക</string>
   <!-- "Not now" onboarding button. -->
   <string name="nova_onboarding_negative_button">ഇപ്പോഴല്ല</string>
-  <!-- "Skip" onboarding button. -->
-  <string name="nova_onboarding_skip_button" tools:ignore="UnusedResources">ഒഴിവാക്കുക</string>
   <!--
     Terms of use (ToU) onboarding body line one.
     %1$s is replaced by an active link, using nova_onboarding_tou_body_line_1_link_text as text (“Firefox Terms of Use”).
@@ -518,8 +496,6 @@
   <!-- Terms of use (ToU) onboarding body line three link text for nova_onboarding_tou_body_line_3. -->
   <string name="nova_onboarding_tou_body_line_3_link_text">ക്രമീകരണങ്ങൾ കൈകാര്യം ചെയ്യുക</string>
   <!-- "Set to default" onboarding title. -->
-  <string name="nova_onboarding_set_to_default_title" tools:ignore="UnusedResources">പിന്തുടൎച്ചയന്ത്രങ്ങളോടു വിട പറഞ്ഞേറു്</string>
-  <!-- "Set to default" onboarding title. -->
   <string name="nova_onboarding_set_to_default_title_2">ഉൾപ്പണിഞ്ഞ സ്വകാര്യതത്തോടെ എല്ലാ കണ്ണികളും തുറക്കുക</string>
   <!-- "Set to default" onboarding button. -->
   <string name="nova_onboarding_set_to_default_button">തനിമട്ടായ അന്വേഷിയായി വയ്ക്കുക</string>
@@ -529,14 +505,6 @@
   <string name="nova_onboarding_toolbar_selection_top_label">മുകള്‍ഭാഗം</string>
   <!-- Toolbar selection onboarding "bottom" option label. -->
   <string name="nova_onboarding_toolbar_selection_bottom_label">കീഴ്ഭാഗം</string>
-  <!-- Theme selection onboarding title. -->
-  <string name="nova_onboarding_theme_selection_title" tools:ignore="UnusedResources">അലങ്കാരം തിരഞ്ഞെടുക്കുക</string>
-  <!-- Theme selection onboarding "automatic" option label. -->
-  <string name="nova_onboarding_theme_selection_automatic_label" tools:ignore="UnusedResources">തന്നെത്താനെ</string>
-  <!-- Theme selection onboarding "light" option label. -->
-  <string name="nova_onboarding_theme_selection_light_label" tools:ignore="UnusedResources">തെളിച്ചം</string>
-  <!-- Theme selection onboarding "dark" option label. -->
-  <string name="nova_onboarding_theme_selection_dark_label" tools:ignore="UnusedResources">ഇരുളിമ</string>
   <!-- Sync onboarding title. -->
   <string name="nova_onboarding_sync_title">താങ്ങൾ നിറുത്തിയയിടത്തിൽ നിന്നു് ഉടൻ തുടങ്ങുക</string>
   <!-- Sync onboarding subtitle. -->
@@ -554,10 +522,6 @@
   <string name="nova_onboarding_notifications_button">അറിയിപ്പുകൾ തുടങ്ങിവയ്ക്കുക</string>
   <!-- "Add search widget" onboarding title. -->
   <string name="nova_onboarding_add_search_widget_title">ഓരോ തിരച്ചിലും ഇനിയും സ്വകാര്യമാക്കുക</string>
-  <!-- Customize prompt onboarding positive button. -->
-  <string name="nova_onboarding_customize_prompt_positive_button" tools:ignore="UnusedResources">ഇഷ്ടാനുസൃതമാക്കൽ തുടങ്ങുക</string>
-  <!-- App icon onboarding title. -->
-  <string name="nova_onboarding_app_icon_prompt_title" tools:ignore="UnusedResources">ഇഷ്ടാനുസൃത പ്രയോഗയടയാളം തിരഞ്ഞെടുക്കുക</string>
   <!-- ==== End of Project "Nova" onboarding strings ==== -->
 
   <!--
@@ -775,11 +739,6 @@
   <string name="preferences_category_file_storage">ഫയൽ സംഭരണം</string>
   <!-- Preference title for downloads default location. -->
   <string name="preferences_downloads_default_location_title">തനിമട്ടു് ഇറക്കിവയ്ക്കലിടം</string>
-  <!--
-    Message shown as the summary of the download location preference when the
-    app has lost the permission to access a previously selected custom folder.
-  -->
-  <string name="preference_downloads_folder_permission_lost" tools:ignore="UnusedResources">ഈ അറ ഉപയോഗിക്കാൻ താങ്ങൾക്കനുവാദമില്ല. മറ്റൊരെണ്ണം തിരഞ്ഞെടുത്തുനോക്കു്.</string>
   <!-- Preference title for choosing an app to handle downloads -->
   <string name="preferences_choose_app_for_downloads">മറ്റൊരു പ്രയോഗംവഴി ഇറക്കിവയ്ക്കലുകൾ കൈകാര്യം ചെയ്യുക</string>
   <!-- Preference category for deleting or removing downloads -->
@@ -947,16 +906,6 @@
   <string name="restart_warning_dialog_button_negative">റദ്ദാക്കുക</string>
   <!-- Error message snackbar shown after the user tried to apply the new icon but the Android OS threw an error while updating existing app shortcuts (e.g. private mode shortcut) -->
   <string name="shortcuts_update_error">പ്രയോഗയടയാളം പുതുക്കാൻ കഴിഞ്ഞില്ല. നിലവിലുള്ള കുറുക്കുവഴികൾ മാറ്റിയിട്ടു വീണ്ടും ശ്രമിക്കുക.</string>
-  <!--
-    Add-ons general availability nimbus message
-
-    Title of the Nimbus message for extension general availability
-  -->
-  <string name="addon_ga_message_title_2" tools:ignore="UnusedResources">പുതിയ വിപുലീകരണങ്ങൾ ഇപ്പോൾ ലഭ്യമാണ്</string>
-  <!-- Body of the Nimbus message for add-ons general availability. 'Firefox' intentionally hardcoded here -->
-  <string name="addon_ga_message_body" tools:ignore="BrandUsage,UnusedResources">ഫയൎഫോക്സു് ഇഷ്ടാനുസൃതമാക്കാൻ ഉപയോഗിക്കാവുന്ന 100+ പുതിയ വിപുലീകരണങ്ങൾ ആരായുക.</string>
-  <!-- Button text of the Nimbus message for extensions general availability. -->
-  <string name="addon_ga_message_button_2" tools:ignore="UnusedResources">വിപുലീകരണങ്ങൾ കാണുക</string>
   <!--
     Extension process crash dialog to user
 
@@ -1232,8 +1181,6 @@
   <string name="close_tabs_after_one_week">ഒരാഴ്ചയ്ക്ക് ശേഷം</string>
   <!-- Option for auto closing tabs that will auto close tabs after one month -->
   <string name="close_tabs_after_one_month">ഒരു മാസത്തിനുശേഷം</string>
-  <!-- Title of preference that allows a user to specify the auto-close settings for open tabs -->
-  <string name="preference_auto_close_tabs" tools:ignore="UnusedResources">തുറന്നിരിക്കുന്ന ടാബുകൾ തനിയെ അടയ്ക്കുക</string>
   <!-- Content description (not visible, for screen readers etc.): Close tab button -->
   <string name="tab_manager_close_tabs">അടയ്ക്കുക</string>
   <!--
@@ -2112,8 +2059,6 @@
   <string name="sync_add_new_device_connect_button">മറ്റൊരു ഉപകരണം ബന്ധിപ്പിക്കുക…</string>
   <!-- A message template for the shared link with a footer. %1$s is the shared link, %2$s is the app name (e.g. Firefox) and %3$s is a download link for the app. -->
   <string name="sent_from_firefox_template" tools:ignore="UnusedResources">%1$s\n\n%2$s-ൽ നിന്നു് അയച്ചു 🦊മൊബൈൽ അന്വേഷിയന്ത്രം ഉപയോഗിച്ചു നോക്കുക: %3$s</string>
-  <!-- A short message template for the shared link with a footer. %1$s is the shared link, %2$s is the app name (e.g. Firefox) and %3$s is a download link for the app. -->
-  <string name="sent_from_firefox_template_short" tools:ignore="UnusedResources">%1$s\n\n%2$s ൽ നിന്ന് അയച്ചു 🦊 %3$s</string>
   <!--
     Notifications
 
@@ -2518,8 +2463,6 @@
   <string name="about_privacy_notice">സ്വകാര്യതാ അറിയിപ്പ്</string>
   <!-- About page link text to open know your rights link -->
   <string name="about_know_your_rights">നിങ്ങളുടെ അവകാശങ്ങള്‍ അറിയുക</string>
-  <!-- About page link text to open terms of use link -->
-  <string name="about_terms_of_use" tools:ignore="UnusedResources">ഉപയോഗനിബന്ധനകള്‍</string>
   <!-- About page link text to open licensing information link -->
   <string name="about_licensing_information">ലൈസന്‍സ് വിവരം</string>
   <!-- About page link text to open a screen with libraries that are used -->
@@ -2926,10 +2869,6 @@
   <string name="saved_login_password_required_2">ഒളിവാക്കു് ഇടുക</string>
   <!-- The error message in add login view when username field is blank. -->
   <string name="saved_login_username_required_2">ഉപയോക്തൃപ്പേരു് ഇടുക</string>
-  <!-- The error message in add login view when hostname field is blank. -->
-  <string name="saved_login_hostname_required" tools:ignore="UnusedResources">ഹോസ്റ്റ് നാമം ആവശ്യമാണ്</string>
-  <!-- The error message in add login view when hostname field is blank. -->
-  <string name="saved_login_hostname_required_2" tools:ignore="UnusedResources">ഒരു വെബുവിലാസം നല്കുക</string>
   <!-- Voice search button content description -->
   <string name="voice_search_content_description">ശബ്ദം ഉപയോഗിചു് തിരയുക</string>
   <!-- Voice search prompt description displayed after the user presses the voice search button -->
@@ -3034,16 +2973,6 @@
   <string name="inactive_tabs_expand_content_description">നിഷ്ക്രിയ ടാബുകൾ വലുതാക്കുക</string>
   <!-- Content description for collapsing the inactive tabs section. -->
   <string name="inactive_tabs_collapse_content_description">നിഷ്ക്രിയ ടാബുകൾ ചെറുതാക്കുക</string>
-  <!--
-    Inactive tabs auto-close message in the tabs tray
-
-    The header text of the auto-close message when the user is asked if they want to turn on the auto-closing of inactive tabs.
-  -->
-  <string name="inactive_tabs_auto_close_message_header" tools:ignore="UnusedResources">ഒരു മാസത്തിന് ശേഷം തന്നെതാനെ അടയ്ക്കണോ?</string>
-  <!-- A description below the header to notify the user what the inactive tabs auto-close feature is. -->
-  <string name="inactive_tabs_auto_close_message_description" tools:ignore="BrandUsage,UnusedResources">കഴിഞ്ഞ ഒരു മാസത്തോളമായി താങ്ങൾ ശ്രദ്ധിക്കാത്ത ടാബുകൾ ഫയർഫോക്സിന് അടയ്ക്കാനാവും.</string>
-  <!-- A call to action below the description to allow the user to turn on the auto closing of inactive tabs. -->
-  <string name="inactive_tabs_auto_close_message_action" tools:ignore="UnusedResources">താനെയടക്കൽ അണയ്ക്കുക</string>
   <!-- Text for the snackbar to confirm auto-close is enabled for inactive tabs -->
   <string name="inactive_tabs_auto_close_message_snackbar">തന്നെതാനെ അടയ്ക്കൽ പ്രവർത്തനക്ഷമമാക്കി</string>
   <!--
@@ -3514,16 +3443,6 @@
   <string name="debug_drawer_tab_tools_tab_creation_tool_button_text_inactive">നിഷ്ക്രിയ ടാബുകളിലേക്ക് ചേർക്കുക</string>
   <!-- The button text to add tabs to the private tab group in the tab creation tool. -->
   <string name="debug_drawer_tab_tools_tab_creation_tool_button_text_private">സ്വകാര്യ ടാബുകളിലേക്കു് ചേർക്കുക</string>
-  <!--
-    Microsurvey
-    Note: Some strings are marked as unused as they are referenced via the Nimbus experimentation
-    platform and have no persistent reference in code
-
-    Prompt view
-
-    The microsurvey prompt title. Note: The word "Firefox" should NOT be translated
-  -->
-  <string name="micro_survey_prompt_title" tools:ignore="BrandUsage,UnusedResources">ഫയർഫോക്സിനു് മെച്ചപെടുത്താൻ സഹായിക്കുക. ഇതു് ചെയ്യാൻ വെറും ഒരു നിമിഷം എടുക്കും</string>
   <!-- The continue button label -->
   <string name="micro_survey_continue_button_label" tools:ignore="UnusedResources">തുടരുക</string>
   <!--
@@ -3536,8 +3455,6 @@
   <string name="micro_survey_privacy_notice_2">സ്വകാര്യതാ അറിയിപ്പ്</string>
   <!-- The submit button label text -->
   <string name="micro_survey_submit_button_label">സമർപ്പിക്കുക</string>
-  <!-- The survey completion header -->
-  <string name="micro_survey_survey_header_confirmation" tools:ignore="UnusedResources">കണക്കെടുപ്പു് അവസാനിച്ചു</string>
   <!-- The survey completion confirmation text -->
   <string name="micro_survey_feedback_confirmation">താങ്കളുടെ പ്രതികരണത്തിനു് നന്ദി</string>
   <!-- Option for likert scale -->
@@ -3552,24 +3469,10 @@
   <string name="likert_scale_option_5" tools:ignore="UnusedResources">തീരെ സന്തുഷ്ടമായില്ല</string>
   <!-- Option for likert scale -->
   <string name="likert_scale_option_6" tools:ignore="UnusedResources">ഞാൻ ഉപയോഗിക്കാരില്ല</string>
-  <!-- Option for likert scale. Note: The word "Firefox" should NOT be translated. -->
-  <string name="likert_scale_option_7" tools:ignore="BrandUsage,UnusedResources">ഞാൻ ഫൈയർഫോക്സിൽ തിരയൽ ഉപയോഗിക്കാരില്ല</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_8" tools:ignore="UnusedResources">ഞാൻ സമന്വയം ഉപയോഗിക്കാരില്ല</string>
   <!-- Text shown in prompt for printing microsurvey. "sec" It's an abbreviation for "second". Note: The word "Firefox" should NOT be translated. -->
   <string name="microsurvey_prompt_printing_title" tools:ignore="BrandUsage,UnusedResources">ഫയർഫോക്സിൽ അച്ചടിപ്പു് മെച്ചപെടുത്താൻ സഹായിക്കുക. ഇതു് ചെയ്യാൻ വെറും ഒരു നിമിഷം എടുക്കും</string>
-  <!-- Text shown in prompt for search microsurvey. Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_prompt_search_title" tools:ignore="BrandUsage,UnusedResources">ഫയർഫോക്സിൽ തിരച്ചിൽ മെച്ചപെടുത്താൻ സഹായിക്കുക. ഇതു് ചെയ്യാൻ വെറും ഒരു നിമിഷം എടുക്കും</string>
-  <!-- Text shown in prompt for sync microsurvey. Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_prompt_sync_title" tools:ignore="BrandUsage,UnusedResources">ഫയർഫോക്സിൽ സമന്വയം മെച്ചപെടുത്താൻ സഹായിക്കുക. ഇതു് ചെയ്യാൻ വെറും ഒരു നിമിഷം എടുക്കും</string>
   <!-- Text shown in the survey title for printing microsurvey. Note: The word "Firefox" should NOT be translated. -->
   <string name="microsurvey_survey_printing_title" tools:ignore="BrandUsage,UnusedResources">ഫയർഫോക്സിൽ അച്ചടിപ്പുക്കൂടെ താങ്ങൾക്കു് എത്രത്തോളം സംതൃപ്തിയുണ്ട്?</string>
-  <!-- Text shown in the survey title for homepage microsurvey. Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_homepage_title" tools:ignore="BrandUsage,UnusedResources">ഫയർഫോക്സു് ആമുഖതാൾ കൊണ്ടു് താങ്ങൾക്കു് എത്രത്തോളം സംതൃപ്തിയുണ്ട്?</string>
-  <!-- Text shown in the survey title for search experience microsurvey. Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_search_title" tools:ignore="BrandUsage,UnusedResources">ഫയർഫോക്സു് തിരച്ചിൽ അനുഭവം കൊണ്ടു് താങ്ങൾക്കു് എത്രത്തോളം സംതൃപ്തിയുണ്ട്?</string>
-  <!-- Text shown in the survey title for sync experience microsurvey. Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_sync_title" tools:ignore="BrandUsage,UnusedResources">ഫയർഫോക്സു് സമന്വയ അനുഭവം കൊണ്ടു് താങ്ങൾക്കു് എത്രത്തോളം സംതൃപ്തിയുണ്ട്?</string>
   <!--
     Accessibility
 
@@ -3664,40 +3567,6 @@
     Text shown as a label or tag to indicate a feature or area is still undergoing active development. Note that here "Beta" should not be translated, as it is used as an icon styled element.
   -->
   <string name="beta_feature">ബീറ്റ</string>
-  <!--
-    Root certificate expiration warnings
-
-    These strings for homepage cards and push notifications to be pushed to users running outdated versions of Firefox. We want to encourage these users to update to the latest version so their extensions and other features don't stop working when Firefox's old root certificate expires on 2025-03-14. For more information, see this SUMO article: https://support.mozilla.org/kb/root-certificate-expiration !
-
-    Homepage card button to open Google Play Store. "Update" is a verb.
-  -->
-  <string name="certificate_warning_homepage_card_update_now_button" tools:ignore="UnusedResources">ഉടന്‍ പുതുക്കുക</string>
-  <!-- Homepage card title about old Firefox version. "Update" is a verb. Note: The word "Firefox" should NOT be translated. -->
-  <string name="certificate_warning_homepage_card_hca1_title" tools:ignore="BrandUsage,UnusedResources">താങ്ങളുടെ ഫയർഫോക്സു് അന്വേഷിയേ പുതുക്കുക</string>
-  <!-- Homepage card message about old Firefox version -->
-  <string name="certificate_warning_homepage_card_hca1_message" tools:ignore="UnusedResources">ഒരു മൂലപ്രമാണുപത്രം കാലഹരണപ്പെടും, അതുക്കൊണ്ടു് മാർച്ച് 14-ന് ചില സവിശേഷതകൾ പ്രവർത്തിക്കുന്നത് നിർത്തും.</string>
-  <!-- Homepage card title about old Firefox version. "Update" is a verb. -->
-  <string name="certificate_warning_homepage_card_hcr1_title" tools:ignore="UnusedResources">മാർച്ച് 14-ന് മുമ്പ് പുതുക്കുക</string>
-  <!-- Homepage card message about old Firefox version. Note: The word "Firefox" should NOT be translated. -->
-  <string name="certificate_warning_homepage_card_hcr1_message" tools:ignore="BrandUsage,UnusedResources">ഒരു മൂലപ്രമാണുപത്രം കാലഹരണപ്പെടും, അതുക്കൊണ്ടു് താങ്ങളുടെ ഫയർഫോക്സു് പതിപ്പു് പ്രവർത്തിക്കുന്നത് നിർത്തും.</string>
-  <!-- Homepage card title about old Firefox version -->
-  <string name="certificate_warning_homepage_card_hcw2_title" tools:ignore="UnusedResources">പുതുക്കാൻ ഇനി 7 ദിവസങ്ങൾ പോലും ഇല്ല</string>
-  <!-- Homepage card message about old Firefox version. Note: The word "Firefox" should NOT be translated. -->
-  <string name="certificate_warning_homepage_card_hcw2_message" tools:ignore="BrandUsage,UnusedResources">വേർപ്രമാണപത്രം കാലഹരണപ്പെടുന്നതിനാൽ മാർച്ച് 14-ന്, ആഡ്-ഓണുകളും മറ്റ് സവിഷേതകളും ഫീച്ചറുകളും പ്രവർത്തിക്കുന്നത് നിർത്തും.</string>
-  <!-- Homepage card title about old Firefox version. Note: The word "Firefox" should NOT be translated. -->
-  <string name="certificate_warning_homepage_card_hcw3_title" tools:ignore="BrandUsage,UnusedResources">താങ്ങളുടെ ഫയർഫോക്സു് നിലനിർത്താനുള്ള അവസാന അവസരം</string>
-  <!-- Homepage card message about old Firefox version. Note: The word "Firefox" should NOT be translated. -->
-  <string name="certificate_warning_homepage_card_hcw3_message" tools:ignore="BrandUsage,UnusedResources">വേർപ്രമാണപത്രം കാലഹരണപ്പെടുന്നതിനാൽ താങ്ങളുടെ ഫയർഫോക്സു് പതിപ്പ് മാർച്ച് 14-ന് ശരിയായി പ്രവർത്തിക്കുന്നത് നിർത്തും.</string>
-  <!-- Push notification title about old Firefox version. "Update" is a noun. -->
-  <string name="certificate_warning_push_notification_update_recommended_title" tools:ignore="UnusedResources">പുതുക്കൽ ചെയ്താൽ നല്ലതായിരുന്നു</string>
-  <!-- Push notification message about old Firefox version -->
-  <string name="certificate_warning_push_notification_pnr1_message" tools:ignore="UnusedResources">ആഡ്-ഓണുകളും മറ്റു് ചില വിശേഷതൾ 14-൹ മാർച്ചിനു് പ്രവർത്തിക്കുന്നത് നിർത്തും.</string>
-  <!-- Push notification title about old Firefox version. Note: The word "Firefox" should NOT be translated. -->
-  <string name="certificate_warning_push_notification_pnw2_title" tools:ignore="BrandUsage,UnusedResources">താങ്ങൾ ഫയർഫോക്സിന്റെ ഒരു പഴയ പതിപ്പിലാണു്</string>
-  <!-- Push notification message about old Firefox version. "Update" is a verb. -->
-  <string name="certificate_warning_push_notification_pnw2_message" tools:ignore="UnusedResources">ആഡ് ഓണുകളും മറ്റു് സവിശേഷതളും ഉപയോഗിച്ചതിരിക്കാൻ 14-൹ മാർച്ചിന്റെ മുമ്പു് പുതുക്കൽ ചെയ്യുക</string>
-  <!-- Push notification message about old Firefox version -->
-  <string name="certificate_warning_push_notification_pnw3_message" tools:ignore="UnusedResources">ചില സവിശേഷതകൾ നാളെ പ്രവർത്തിക്കാൻ നിർത്തും.</string>
   <!-- TextField Design System Component -->
 
   <!--

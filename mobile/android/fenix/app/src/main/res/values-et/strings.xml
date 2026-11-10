@@ -662,8 +662,6 @@
   <string name="close_tabs_after_one_week">Ühe nädala pärast</string>
   <!-- Option for auto closing tabs that will auto close tabs after one month -->
   <string name="close_tabs_after_one_month">Ühe kuu pärast</string>
-  <!-- Title of preference that allows a user to specify the auto-close settings for open tabs -->
-  <string name="preference_auto_close_tabs" tools:ignore="UnusedResources">Kaartide automaatne sulgemine</string>
   <!--
     Opening screen
 
@@ -1722,8 +1720,6 @@
   <string name="saved_login_password_required_2">Sisesta parool</string>
   <!-- The error message in add login view when username field is blank. -->
   <string name="saved_login_username_required_2">Sisesta kasutajanimi</string>
-  <!-- The error message in add login view when hostname field is blank. -->
-  <string name="saved_login_hostname_required" tools:ignore="UnusedResources">Saidi aadress on nõutud</string>
   <!-- Voice search button content description -->
   <string name="voice_search_content_description">Häälotsing</string>
   <!-- Voice search prompt description displayed after the user presses the voice search button -->
@@ -1798,16 +1794,6 @@
   <string name="inactive_tabs_expand_content_description">Laienda mitteaktiivsed kaardid</string>
   <!-- Content description for collapsing the inactive tabs section. -->
   <string name="inactive_tabs_collapse_content_description">Ahenda mitteaktiivsed kaardid</string>
-  <!--
-    Inactive tabs auto-close message in the tabs tray
-
-    The header text of the auto-close message when the user is asked if they want to turn on the auto-closing of inactive tabs.
-  -->
-  <string name="inactive_tabs_auto_close_message_header" tools:ignore="UnusedResources">Kas sulgeda automaatselt kuu aja pärast?</string>
-  <!-- A description below the header to notify the user what the inactive tabs auto-close feature is. -->
-  <string name="inactive_tabs_auto_close_message_description" tools:ignore="BrandUsage,UnusedResources">Firefox saab sulgeda kaardid, mida sa pole viimase kuu jooksul vaadanud.</string>
-  <!-- A call to action below the description to allow the user to turn on the auto closing of inactive tabs. -->
-  <string name="inactive_tabs_auto_close_message_action" tools:ignore="UnusedResources">LÜLITA SISSE AUTOMAATNE SULGEMINE</string>
   <!-- Text for the snackbar to confirm auto-close is enabled for inactive tabs -->
   <string name="inactive_tabs_auto_close_message_snackbar">Automaatne sulgemine on lubatud</string>
   <!-- Title for search suggestions when Google is the default search suggestion engine. -->

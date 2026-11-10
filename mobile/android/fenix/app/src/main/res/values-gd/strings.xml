@@ -428,14 +428,6 @@
   <string name="onboarding_term_of_service_line_three" tools:ignore="BrandUsage">Airson piseach a thoirt air a’ bhrabhsair, cuiridh Firefox dàta diagnosachd is dàta eadar-ghabhalach gu Mozilla. %1$s</string>
   <!-- Used as text for the link in onboarding_term_of_service_line_three. -->
   <string name="onboarding_term_of_service_line_three_link_text">Stiùirich</string>
-  <!-- Terms of use (ToU) onboarding redesign title. -->
-  <string name="onboarding_redesign_tou_title" tools:ignore="UnusedResources">Cuir gu dol gràinne-mhullaich nam brabhsairean Android</string>
-  <!-- Terms of use (ToU) first subheader. -->
-  <string name="onboarding_redesign_tou_subheader_one" tools:ignore="UnusedResources">Luchdaichidh seo làraichean cho luath ri seabhag</string>
-  <!-- Terms of use (ToU) second subheader. -->
-  <string name="onboarding_redesign_tou_subheader_two" tools:ignore="UnusedResources">Dìon fèin-obrachail o thracadh</string>
-  <!-- Terms of use (ToU) third subheader. -->
-  <string name="onboarding_redesign_tou_subheader_three" tools:ignore="UnusedResources">Mìle dòigh air a ghnàthachadh</string>
   <!--
     Terms of use (ToU) first body text. %1$s is replaced by an active link,
     using onboarding_redesign_tou_body_one_link_text as text (“Firefox Terms of Use”).
@@ -457,28 +449,12 @@
   <string name="onboarding_redesign_tou_body_three" tools:ignore="BrandUsage,UnusedResources">Airson piseach a thoirt air a’ bhrabhsair, cuiridh Firefox dàta diagnosachd is dàta eadar-ghabhalach gu Mozilla. %1$s</string>
   <!-- Used as text for the link in onboarding_redesign_tou_body_three. -->
   <string name="onboarding_redesign_tou_body_three_link_text" tools:ignore="UnusedResources">Stiùirich na roghainnean</string>
-  <!-- Terms of use (ToU) onboarding page continue button label. -->
-  <string name="onboarding_redesign_tou_agree_and_continue_button_label" tools:ignore="UnusedResources">Lean air adhart</string>
-  <!-- Onboarding header for the toolbar selection card. -->
-  <string name="onboarding_redesign_customize_toolbar_title" tools:ignore="UnusedResources">Càit a bheil thu ag iarraidh bàr an t-seòlaidh agad?</string>
-  <!-- Onboarding label for 'Continue' button. -->
-  <string name="onboarding_redesign_continue_button" tools:ignore="UnusedResources">Lean air adhart</string>
   <!-- Marketing onboarding page title. 'Firefox' is intentionally hardcoded. -->
   <!-- Marketing onboarding page opt-out checkbox. Unchecking the box does not increase data collection. Our data practices remain the same. 'Mozilla' is intentionally hardcoded. -->
   <!-- Marketing onboarding page clickable link text to "learn more" on how data is used. -->
   <!-- Marketing onboarding page button label. Button to confirm choice and start browsing. -->
-  <!-- Set to default browser onboarding redesign title. -->
-  <string name="onboarding_redesign_set_default_browser_title" tools:ignore="UnusedResources">Faigh dìon o thracadh fèin-obrachail</string>
-  <!-- Set to default browser onboarding redesign body. -->
-  <string name="onboarding_redesign_set_default_browser_body" tools:ignore="UnusedResources">Aon ghnogag agus cumaidh sin companaidhean o bhith a’ cumail sùil air na bhriogas tu air.</string>
-  <!-- Sync onboarding redesign title. 'Firefox' is intentionally hardcoded. -->
-  <string name="onboarding_redesign_sync_title" tools:ignore="BrandUsage,UnusedResources">Dèan sioncronachadh àite sam bith a chleachdas tu Firefox</string>
-  <!-- Sync onboarding redesign body. -->
-  <string name="onboarding_redesign_sync_body" tools:ignore="UnusedResources">Faigh na comharran-lìn, tabaichean is faclan-faire agad air uidheam sam bith. Gach rud fo dhìon crioptachaidh.</string>
   <!-- Sync onboarding redesign positive button text. -->
   <string name="onboarding_redesign_sync_positive_button" tools:ignore="UnusedResources">Tòisich air sioncronachadh</string>
-  <!-- Sync onboarding redesign negative button text. -->
-  <string name="onboarding_redesign_sync_negative_button" tools:ignore="UnusedResources">Chan ann an-dràsta</string>
   <!-- Marketing onboarding page title variant. “One last thing” refers to the final step or action in the onboarding process that we’re asking users to take before they can start using the browser. -->
   <!-- Marketing onboarding page body variant. 'Firefox' is intentionally hardcoded. -->
   <!-- Marketing onboarding page button label variant. Button to confirm choice and start browsing. -->
@@ -488,8 +464,6 @@
   <string name="nova_onboarding_continue_button">Lean air adhart</string>
   <!-- "Not now" onboarding button. -->
   <string name="nova_onboarding_negative_button">Chan ann an-dràsta</string>
-  <!-- Terms of use (ToU) onboarding title. -->
-  <string name="nova_onboarding_tou_title" tools:ignore="UnusedResources">Falbh air lìon le làn-saorsa</string>
   <!-- Terms of use (ToU) onboarding subtitle. -->
   <string name="nova_onboarding_tou_subtitle">Luath, sàbhailte agus cha reic e d’ anam.\nBrabhsadh nas fheàrr.</string>
   <!--
@@ -514,8 +488,6 @@
   <!-- Terms of use (ToU) onboarding body line three link text for nova_onboarding_tou_body_line_3. -->
   <string name="nova_onboarding_tou_body_line_3_link_text">Stiùirich na roghainnean</string>
   <!-- "Set to default" onboarding title. -->
-  <string name="nova_onboarding_set_to_default_title" tools:ignore="UnusedResources">Fàg soraidh slàn aig na tracaichean iargalta</string>
-  <!-- "Set to default" onboarding title. -->
   <string name="nova_onboarding_set_to_default_title_2">Fogail ceangal sam bith ann an àrainneachd phrìobhaideach</string>
   <!-- "Set to default" onboarding subtitle. -->
   <string name="nova_onboarding_set_to_default_subtitle">Dìonaidh sinn an dàta agad is sinne a’ bacadh companaidhean o bhith a’ cumail sùil air a’ bhriogadh a nì thu o thùs.</string>
@@ -527,14 +499,6 @@
   <string name="nova_onboarding_toolbar_selection_top_label">Aig a’ bhàrr</string>
   <!-- Toolbar selection onboarding "bottom" option label. -->
   <string name="nova_onboarding_toolbar_selection_bottom_label">Aig a’ bhonn</string>
-  <!-- Theme selection onboarding title. -->
-  <string name="nova_onboarding_theme_selection_title" tools:ignore="UnusedResources">Tagh ùrlar dhut</string>
-  <!-- Theme selection onboarding "automatic" option label. -->
-  <string name="nova_onboarding_theme_selection_automatic_label" tools:ignore="UnusedResources">Gu fèin-obrachail</string>
-  <!-- Theme selection onboarding "light" option label. -->
-  <string name="nova_onboarding_theme_selection_light_label" tools:ignore="UnusedResources">Soilleir</string>
-  <!-- Theme selection onboarding "dark" option label. -->
-  <string name="nova_onboarding_theme_selection_dark_label" tools:ignore="UnusedResources">Dorcha</string>
   <!-- Sync onboarding title. -->
   <string name="nova_onboarding_sync_title">Lean ort far an do stad thu roimhe sa bhad</string>
   <!-- Sync onboarding subtitle. -->
@@ -797,11 +761,6 @@
   <string name="preferences_category_file_storage">Stòras nam faidhlichean</string>
   <!-- Preference title for downloads default location. -->
   <string name="preferences_downloads_default_location_title">An t-ionad bunaiteach airson na luchdaicheas tu a-nuas</string>
-  <!--
-    Message shown as the summary of the download location preference when the
-    app has lost the permission to access a previously selected custom folder.
-  -->
-  <string name="preference_downloads_folder_permission_lost" tools:ignore="UnusedResources">Chan eil cead agad am pasgan seo a chleachdadh. Tagh fear eile.</string>
   <!-- Preference title for choosing an app to handle downloads -->
   <string name="preferences_choose_app_for_downloads">Stiùirich na luchdaidhean a-nuas le aplacaid eile</string>
   <!-- Preference for enabling gecko engine logs -->
@@ -976,16 +935,6 @@
   <string name="restart_warning_dialog_button_negative">Sguir dheth</string>
   <!-- Error message snackbar shown after the user tried to apply the new icon but the Android OS threw an error while updating existing app shortcuts (e.g. private mode shortcut) -->
   <string name="shortcuts_update_error">Cha b’ urrainn dhuinn ìomhaigheag na h-aplacaid ùrachadh. Thoir air falbh ath-ghoirid làithreach sam bith ’s feuch ris a-rithist.</string>
-  <!--
-    Add-ons general availability nimbus message
-
-    Title of the Nimbus message for extension general availability
-  -->
-  <string name="addon_ga_message_title_2" tools:ignore="UnusedResources">Tha leudachain ùra ri am faighinn</string>
-  <!-- Body of the Nimbus message for add-ons general availability. 'Firefox' intentionally hardcoded here -->
-  <string name="addon_ga_message_body" tools:ignore="BrandUsage,UnusedResources">Tha barrachd air ceud leudachan ann leis an doir thu dreach pearsanta air Firefox.</string>
-  <!-- Button text of the Nimbus message for extensions general availability. -->
-  <string name="addon_ga_message_button_2" tools:ignore="UnusedResources">Rùraich na leudachain</string>
   <!--
     Extension process crash dialog to user
 
@@ -1273,8 +1222,6 @@
   <string name="close_tabs_after_one_week">An dèidh seachdaine</string>
   <!-- Option for auto closing tabs that will auto close tabs after one month -->
   <string name="close_tabs_after_one_month">An dèidh mìos</string>
-  <!-- Title of preference that allows a user to specify the auto-close settings for open tabs -->
-  <string name="preference_auto_close_tabs" tools:ignore="UnusedResources">Dùin tabaichean fosgailte gu fèin-obrachail</string>
   <!-- Content description (not visible, for screen readers etc.): Close tab button -->
   <string name="tab_manager_close_tabs">Dùin</string>
   <!--
@@ -2060,8 +2007,6 @@
   <string name="sync_add_new_device_connect_button">Ceangail uidheam eile ris…</string>
   <!-- A message template for the shared link with a footer. %1$s is the shared link, %2$s is the app name (e.g. Firefox) and %3$s is a download link for the app. -->
   <string name="sent_from_firefox_template" tools:ignore="UnusedResources">%1$s\n\nAir a chur o %2$s 🦊Feuch am brabhsair mobile: %3$s</string>
-  <!-- A short message template for the shared link with a footer. %1$s is the shared link, %2$s is the app name (e.g. Firefox) and %3$s is a download link for the app. -->
-  <string name="sent_from_firefox_template_short" tools:ignore="UnusedResources">%1$s\n\nAir a chur o %2$s 🦊 %3$s</string>
   <!--
     Notifications
 
@@ -2486,8 +2431,6 @@
   <string name="about_privacy_notice">Aithris na prìobhaideachd</string>
   <!-- About page link text to open know your rights link -->
   <string name="about_know_your_rights">Bi eòlach air do chòraichean</string>
-  <!-- About page link text to open terms of use link -->
-  <string name="about_terms_of_use" tools:ignore="UnusedResources">Teirmichean a’ chleachdaidh</string>
   <!-- About page link text to open licensing information link -->
   <string name="about_licensing_information">Fiosrachadh a’ cheadachais</string>
   <!-- About page link text to open a screen with libraries that are used -->
@@ -2900,10 +2843,6 @@
   <string name="saved_login_password_required_2">Cuir a-steach facal-faire</string>
   <!-- The error message in add login view when username field is blank. -->
   <string name="saved_login_username_required_2">Cuir a-steach ainm-cleachdaiche</string>
-  <!-- The error message in add login view when hostname field is blank. -->
-  <string name="saved_login_hostname_required" tools:ignore="UnusedResources">Tha feum air ainm òstair</string>
-  <!-- The error message in add login view when hostname field is blank. -->
-  <string name="saved_login_hostname_required_2" tools:ignore="UnusedResources">Cuir a-steach seòladh-lìn</string>
   <!-- Voice search button content description -->
   <string name="voice_search_content_description">Lorg-gutha</string>
   <!-- Voice search prompt description displayed after the user presses the voice search button -->
@@ -2998,16 +2937,6 @@
   <string name="inactive_tabs_expand_content_description">Leudaich na tabaichean neo-ghnìomhach</string>
   <!-- Content description for collapsing the inactive tabs section. -->
   <string name="inactive_tabs_collapse_content_description">Co-theannaich na tabaichean neo-ghnìomhach</string>
-  <!--
-    Inactive tabs auto-close message in the tabs tray
-
-    The header text of the auto-close message when the user is asked if they want to turn on the auto-closing of inactive tabs.
-  -->
-  <string name="inactive_tabs_auto_close_message_header" tools:ignore="UnusedResources">A bheil thu airson an dùnadh an dèidh mìos?</string>
-  <!-- A description below the header to notify the user what the inactive tabs auto-close feature is. -->
-  <string name="inactive_tabs_auto_close_message_description" tools:ignore="BrandUsage,UnusedResources">Dùnaidh Firefox tabaichean nach tug thu sùil orra thairis air a’ mhìos seo chaidh.</string>
-  <!-- A call to action below the description to allow the user to turn on the auto closing of inactive tabs. -->
-  <string name="inactive_tabs_auto_close_message_action" tools:ignore="UnusedResources">CUIR GLEUS AN FHÈIN-DÙNAIDH AIR</string>
   <!-- Text for the snackbar to confirm auto-close is enabled for inactive tabs -->
   <string name="inactive_tabs_auto_close_message_snackbar">Tha an dùnadh fèin-obrachail an comas</string>
   <!--
@@ -3433,16 +3362,6 @@
   <string name="debug_drawer_tab_tools_tab_creation_tool_button_text_inactive">Cuir ris na tabaichean neo-ghnìomhach</string>
   <!-- The button text to add tabs to the private tab group in the tab creation tool. -->
   <string name="debug_drawer_tab_tools_tab_creation_tool_button_text_private">Cuir ris na tabaichean prìobhaideach</string>
-  <!--
-    Microsurvey
-    Note: Some strings are marked as unused as they are referenced via the Nimbus experimentation
-    platform and have no persistent reference in code
-
-    Prompt view
-
-    The microsurvey prompt title. Note: The word "Firefox" should NOT be translated
-  -->
-  <string name="micro_survey_prompt_title" tools:ignore="BrandUsage,UnusedResources">Cuidich leinn a’ leasachadh Firefox. Cha doir e ach mionaid.</string>
   <!-- The continue button label -->
   <string name="micro_survey_continue_button_label" tools:ignore="UnusedResources">Lean air adhart</string>
   <!--
@@ -3455,8 +3374,6 @@
   <string name="micro_survey_privacy_notice_2">Aithris na prìobhaideachd</string>
   <!-- The submit button label text -->
   <string name="micro_survey_submit_button_label">Cuir a-null</string>
-  <!-- The survey completion header -->
-  <string name="micro_survey_survey_header_confirmation" tools:ignore="UnusedResources">Tha an t-suirbhidh air a choileanadh</string>
   <!-- The survey completion confirmation text -->
   <string name="micro_survey_feedback_confirmation">Mòran taing airson do bheachdan a chur thugainn!</string>
   <!-- Option for likert scale -->
@@ -3471,36 +3388,10 @@
   <string name="likert_scale_option_5" tools:ignore="UnusedResources">Glè mhì-riaraichte</string>
   <!-- Option for likert scale -->
   <string name="likert_scale_option_6" tools:ignore="UnusedResources">Cha chleachd mi e</string>
-  <!-- Option for likert scale. Note: The word "Firefox" should NOT be translated. -->
-  <string name="likert_scale_option_7" tools:ignore="BrandUsage,UnusedResources">Cha dèan mi lorg ann am Firefox</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_8" tools:ignore="UnusedResources">Cha chleachd mi gleus an t-sioncronachaidh</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_slow_or_buggy" tools:ignore="UnusedResources">Tha e slaodach no mearachdach</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_features_hard_to_find_or_missing" tools:ignore="UnusedResources">Tha na gleusan doirbh ri lorg no a dhìth</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_confusing_or_hard_to_use" tools:ignore="UnusedResources">Tha e tro chèile no doiribh ri chleachdadh</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_its_okay" tools:ignore="UnusedResources">Tha e ceart gu leòr ach chan eil e nas fheàrr na brabhsairean eile</string>
-  <!-- Option for likert scale. Note: The word "Firefox" should NOT be translated. -->
-  <string name="likert_scale_option_i_plan_to_keep_using" tools:ignore="BrandUsage,UnusedResources">Tha mi am beachd Firefox a chumail</string>
   <!-- Text shown in prompt for printing microsurvey. "sec" It's an abbreviation for "second". Note: The word "Firefox" should NOT be translated. -->
   <string name="microsurvey_prompt_printing_title" tools:ignore="BrandUsage,UnusedResources">Cuidich leinn a’ leasachadh clò-bhualadh ann am Firefox. Cha doir e ach mionaid.</string>
-  <!-- Text shown in prompt for search microsurvey. Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_prompt_search_title" tools:ignore="BrandUsage,UnusedResources">Cuidich leinn a’ leasachadh gleus an luirg ann am Firefox. Cha doir e ach mionaid.</string>
-  <!-- Text shown in prompt for sync microsurvey. Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_prompt_sync_title" tools:ignore="BrandUsage,UnusedResources">Cuidich leinn a’ leasachadh gleus an t-sioncronachaidh ann am Firefox. Cha doir e ach mionaid.</string>
   <!-- Text shown in the survey title for printing microsurvey. Note: The word "Firefox" should NOT be translated. -->
   <string name="microsurvey_survey_printing_title" tools:ignore="BrandUsage,UnusedResources">Dè cho riaraichte ’s a tha thu leis a’ chlò-bhualadh ann am Firefox?</string>
-  <!-- Text shown in the survey title for homepage microsurvey. Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_homepage_title" tools:ignore="BrandUsage,UnusedResources">Dè cho riaraichte ’s a tha thu leis an duilleag-dhachaigh ann am Firefox?</string>
-  <!-- Text shown in the survey title for search experience microsurvey. Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_search_title" tools:ignore="BrandUsage,UnusedResources">Dè cho riaraichte ’s a tha thu leis a’ ghleus luirg ùr ann am Firefox?</string>
-  <!-- Text shown in the survey title for sync experience microsurvey. Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_sync_title" tools:ignore="BrandUsage,UnusedResources">Dè cho riaraichte ’s a tha thu le gleus an t-sioncronachaidh ann am Firefox?</string>
-  <!-- Text shown in the survey title for 'describe your experience so far' microsurvey. Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_describe_your_experience_title" tools:ignore="BrandUsage,UnusedResources">Cuidich leinn le bhith a’ toirt piseach air Firefox. Ciamar a dh’èirich leat leis gu ruige seo?</string>
   <!--
     Accessibility
 
@@ -3615,40 +3506,6 @@
     Text shown as a label or tag to indicate a feature or area is still undergoing active development. Note that here "Beta" should not be translated, as it is used as an icon styled element.
   -->
   <string name="beta_feature">Beta</string>
-  <!--
-    Root certificate expiration warnings
-
-    These strings for homepage cards and push notifications to be pushed to users running outdated versions of Firefox. We want to encourage these users to update to the latest version so their extensions and other features don't stop working when Firefox's old root certificate expires on 2025-03-14. For more information, see this SUMO article: https://support.mozilla.org/kb/root-certificate-expiration !
-
-    Homepage card button to open Google Play Store. "Update" is a verb.
-  -->
-  <string name="certificate_warning_homepage_card_update_now_button" tools:ignore="UnusedResources">Ùraich an-dràsta</string>
-  <!-- Homepage card title about old Firefox version. "Update" is a verb. Note: The word "Firefox" should NOT be translated. -->
-  <string name="certificate_warning_homepage_card_hca1_title" tools:ignore="BrandUsage,UnusedResources">Ùraich am Firefox agad</string>
-  <!-- Homepage card message about old Firefox version -->
-  <string name="certificate_warning_homepage_card_hca1_message" tools:ignore="UnusedResources">Tha teisteanas root agad a dh’fhalbhas an ùine air air a’ 14mh latha dhen Mhàrt agus chan obraich cuid a ghleusan tuilleadh ri linn sin.</string>
-  <!-- Homepage card title about old Firefox version. "Update" is a verb. -->
-  <string name="certificate_warning_homepage_card_hcr1_title" tools:ignore="UnusedResources">Ùraich ron 14mh latha dhen Mhàrt</string>
-  <!-- Homepage card message about old Firefox version. Note: The word "Firefox" should NOT be translated. -->
-  <string name="certificate_warning_homepage_card_hcr1_message" tools:ignore="BrandUsage,UnusedResources">Tha teisteanas root agad a dh’fhalbhas an ùine air agus chan obraich an tionndadh agadsa dhe Firefox tuilleadh ri linn sin.</string>
-  <!-- Homepage card title about old Firefox version -->
-  <string name="certificate_warning_homepage_card_hcw2_title" tools:ignore="UnusedResources">Nas lugha na 7 làithean air fhàgail airson ùrachadh</string>
-  <!-- Homepage card message about old Firefox version. Note: The word "Firefox" should NOT be translated. -->
-  <string name="certificate_warning_homepage_card_hcw2_message" tools:ignore="BrandUsage,UnusedResources">Chan obraich tuilleadain is gleusan Firefox eile tuilleadh a-mach on 14mh latha dhen Mhàrt a chionn ’s gu bheil an ùine a’ falbh air teisteanas root.</string>
-  <!-- Homepage card title about old Firefox version. Note: The word "Firefox" should NOT be translated. -->
-  <string name="certificate_warning_homepage_card_hcw3_title" tools:ignore="BrandUsage,UnusedResources">An cothrom mu dheireadh am Firefox agad ùrachadh</string>
-  <!-- Homepage card message about old Firefox version. Note: The word "Firefox" should NOT be translated. -->
-  <string name="certificate_warning_homepage_card_hcw3_message" tools:ignore="BrandUsage,UnusedResources">Chan obraich an tionndadh agadsa dhe Firefox tuilleadh a-mach on 14mh latha dhen Mhàrt a chionn ’s gu bheil an ùine a’ falbh air teisteanas root.</string>
-  <!-- Push notification title about old Firefox version. "Update" is a noun. -->
-  <string name="certificate_warning_push_notification_update_recommended_title" tools:ignore="UnusedResources">Mholamaid dhut ùrachadh</string>
-  <!-- Push notification message about old Firefox version -->
-  <string name="certificate_warning_push_notification_pnr1_message" tools:ignore="UnusedResources">Chan obraich na tuilleadain agus cuid a ghleusan tuilleadh a-mach on 14mh latha dhen Mhàrt.</string>
-  <!-- Push notification title about old Firefox version. Note: The word "Firefox" should NOT be translated. -->
-  <string name="certificate_warning_push_notification_pnw2_title" tools:ignore="BrandUsage,UnusedResources">Tha thu a’ cleachdadh tionndadh seann-tionndadh dhe Firefox</string>
-  <!-- Push notification message about old Firefox version. "Update" is a verb. -->
-  <string name="certificate_warning_push_notification_pnw2_message" tools:ignore="UnusedResources">Ùraich ron 14mh latha dhen Mhàrt e airson ’s gun obraich na tuilleadain is gleusan eile fhathast.</string>
-  <!-- Push notification message about old Firefox version -->
-  <string name="certificate_warning_push_notification_pnw3_message" tools:ignore="UnusedResources">Chan obraich cuid a ghleusan tuilleadh o màireach.</string>
   <!-- TextField Design System Component -->
 
   <!--

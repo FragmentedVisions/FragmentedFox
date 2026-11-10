@@ -329,20 +329,10 @@
   <string name="onboarding_term_of_service_line_three_link_text">Идарә итү</string>
   <!-- Used as text for the link in onboarding_redesign_tou_body_one. -->
   <string name="onboarding_redesign_tou_body_one_link_text" tools:ignore="BrandUsage,UnusedResources">Firefox куллану шартлары</string>
-  <!-- Terms of use (ToU) onboarding page continue button label. -->
-  <string name="onboarding_redesign_tou_agree_and_continue_button_label" tools:ignore="UnusedResources">Дәвам итү</string>
-  <!-- Onboarding label for 'Continue' button. -->
-  <string name="onboarding_redesign_continue_button" tools:ignore="UnusedResources">Дәвам итү</string>
   <!-- ==== Project "Nova" onboarding strings ==== -->
 
   <!-- Toolbar selection onboarding "bottom" option label. -->
   <string name="nova_onboarding_toolbar_selection_bottom_label">Аста</string>
-  <!-- Theme selection onboarding "automatic" option label. -->
-  <string name="nova_onboarding_theme_selection_automatic_label" tools:ignore="UnusedResources">Автоматик</string>
-  <!-- Theme selection onboarding "light" option label. -->
-  <string name="nova_onboarding_theme_selection_light_label" tools:ignore="UnusedResources">Ачык</string>
-  <!-- Theme selection onboarding "dark" option label. -->
-  <string name="nova_onboarding_theme_selection_dark_label" tools:ignore="UnusedResources">Караңгы</string>
   <!-- Notifications onboarding title. 'Firefox' is intentionally hardcoded. -->
   <string name="nova_onboarding_notifications_title" tools:ignore="BrandUsage,UnusedResources">Искәртүләр Сезгә Firefox белән иминлерәк булып калырга ярдәм итә</string>
   <!-- Notifications onboarding button. -->
@@ -628,14 +618,6 @@
   <!-- Dialog button text for cancelling app icon change -->
   <string name="restart_warning_dialog_button_negative">Баш тарту</string>
   <!--
-    Add-ons general availability nimbus message
-
-    Title of the Nimbus message for extension general availability
-  -->
-  <string name="addon_ga_message_title_2" tools:ignore="UnusedResources">Хәзер яңа киңәйтүләр бар</string>
-  <!-- Button text of the Nimbus message for extensions general availability. -->
-  <string name="addon_ga_message_button_2" tools:ignore="UnusedResources">Киңәйтүләрне карау</string>
-  <!--
     Extension process crash dialog to user
 
     Title of the extension crash dialog shown to the user when enough errors have occurred with extensions and they need to be temporarily disabled
@@ -857,8 +839,6 @@
   <string name="close_tabs_after_one_week">Бер атнадан соң</string>
   <!-- Option for auto closing tabs that will auto close tabs after one month -->
   <string name="close_tabs_after_one_month">Бер айдан соң</string>
-  <!-- Title of preference that allows a user to specify the auto-close settings for open tabs -->
-  <string name="preference_auto_close_tabs" tools:ignore="UnusedResources">Ачык табларны автматик рәвештә оябу</string>
   <!-- Content description (not visible, for screen readers etc.): Close tab button -->
   <string name="tab_manager_close_tabs">Ябу</string>
   <!--
@@ -1626,8 +1606,6 @@
   <string name="about_privacy_notice">Хосусыйлык аңлатмасы</string>
   <!-- About page link text to open know your rights link -->
   <string name="about_know_your_rights">Хокукларыгызны белегез</string>
-  <!-- About page link text to open terms of use link -->
-  <string name="about_terms_of_use" tools:ignore="UnusedResources">Куллану шартлары</string>
   <!-- About page link text to open licensing information link -->
   <string name="about_licensing_information">Лицензия турында мәгълүмат</string>
   <!-- About page link text to open a screen with libraries that are used -->
@@ -1946,10 +1924,6 @@
   <string name="saved_login_password_required_2">Серсүз кертегез</string>
   <!-- The error message in add login view when username field is blank. -->
   <string name="saved_login_username_required_2">Кулланучы исемен кертегез</string>
-  <!-- The error message in add login view when hostname field is blank. -->
-  <string name="saved_login_hostname_required" tools:ignore="UnusedResources">Хост исеме кирәк</string>
-  <!-- The error message in add login view when hostname field is blank. -->
-  <string name="saved_login_hostname_required_2" tools:ignore="UnusedResources">Веб-адресын кертегез</string>
   <!-- Voice search button content description -->
   <string name="voice_search_content_description">Тавышлы эзләү</string>
   <!-- Voice search prompt description displayed after the user presses the voice search button -->
@@ -2022,16 +1996,6 @@
   <string name="inactive_tabs_expand_content_description">Актив булмаган табларны ачып салу</string>
   <!-- Content description for collapsing the inactive tabs section. -->
   <string name="inactive_tabs_collapse_content_description">Актив булмаган табларны төрү</string>
-  <!--
-    Inactive tabs auto-close message in the tabs tray
-
-    The header text of the auto-close message when the user is asked if they want to turn on the auto-closing of inactive tabs.
-  -->
-  <string name="inactive_tabs_auto_close_message_header" tools:ignore="UnusedResources">Бер айдан соң үзлегеннән ябылсынмы?</string>
-  <!-- A description below the header to notify the user what the inactive tabs auto-close feature is. -->
-  <string name="inactive_tabs_auto_close_message_description" tools:ignore="BrandUsage,UnusedResources">Firefox соңгы айда каралмаган табларны яба ала.</string>
-  <!-- A call to action below the description to allow the user to turn on the auto closing of inactive tabs. -->
-  <string name="inactive_tabs_auto_close_message_action" tools:ignore="UnusedResources">АВТОЯБУНЫ КАБЫЗУ</string>
   <!-- Text for the snackbar to confirm auto-close is enabled for inactive tabs -->
   <string name="inactive_tabs_auto_close_message_snackbar">Автоябу кабызылды</string>
   <!--
@@ -2313,16 +2277,6 @@
   <string name="debug_drawer_tab_tools_tab_creation_tool_button_text_inactive">Актив булмаган табларга өстәү</string>
   <!-- The button text to add tabs to the private tab group in the tab creation tool. -->
   <string name="debug_drawer_tab_tools_tab_creation_tool_button_text_private">Хосусый табларга өстәү</string>
-  <!--
-    Microsurvey
-    Note: Some strings are marked as unused as they are referenced via the Nimbus experimentation
-    platform and have no persistent reference in code
-
-    Prompt view
-
-    The microsurvey prompt title. Note: The word "Firefox" should NOT be translated
-  -->
-  <string name="micro_survey_prompt_title" tools:ignore="BrandUsage,UnusedResources">Безгә Firefox-ны яхшыртырга ярдәм итегез. Моңа берничә минут кына кирәк.</string>
   <!-- The continue button label -->
   <string name="micro_survey_continue_button_label" tools:ignore="UnusedResources">Дәвам итү</string>
   <!--
@@ -2335,8 +2289,6 @@
   <string name="micro_survey_privacy_notice_2">Хосусыйлык аңлатмасы</string>
   <!-- The submit button label text -->
   <string name="micro_survey_submit_button_label">Җибәрү</string>
-  <!-- The survey completion header -->
-  <string name="micro_survey_survey_header_confirmation" tools:ignore="UnusedResources">Сораулык тәмамланды</string>
   <!-- The survey completion confirmation text -->
   <string name="micro_survey_feedback_confirmation">Фикерегез өчен рәхмәт!</string>
   <!-- Option for likert scale -->
@@ -2351,16 +2303,8 @@
   <string name="likert_scale_option_5" tools:ignore="UnusedResources">Бик начар</string>
   <!-- Option for likert scale -->
   <string name="likert_scale_option_6" tools:ignore="UnusedResources">Мин аны кулланмыйм</string>
-  <!-- Option for likert scale. Note: The word "Firefox" should NOT be translated. -->
-  <string name="likert_scale_option_7" tools:ignore="BrandUsage,UnusedResources">Мин Firefox-та эзләү кулланмыйм</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_8" tools:ignore="UnusedResources">Мин синхронлауны кулланмыйм</string>
   <!-- Text shown in prompt for printing microsurvey. "sec" It's an abbreviation for "second". Note: The word "Firefox" should NOT be translated. -->
   <string name="microsurvey_prompt_printing_title" tools:ignore="BrandUsage,UnusedResources">Безгә Firefox эчендәге бастыруны яхшыртырга ярдәм итегез. Моңа берничә секунд кына кирәк</string>
-  <!-- Text shown in prompt for search microsurvey. Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_prompt_search_title" tools:ignore="BrandUsage,UnusedResources">Безгә Firefox эчендәге эзләүне яхшыртырга ярдәм итегез. Моңа берничә минут кына кирәк</string>
-  <!-- Text shown in prompt for sync microsurvey. Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_prompt_sync_title" tools:ignore="BrandUsage,UnusedResources">Безгә Firefox эчендәге синхронлауны яхшыртырга ярдәм итегез. Моңа берничә минут кына кирәк</string>
   <!--
     Accessibility
 
@@ -2437,14 +2381,6 @@
     Text shown as a label or tag to indicate a feature or area is still undergoing active development. Note that here "Beta" should not be translated, as it is used as an icon styled element.
   -->
   <string name="beta_feature">BETA</string>
-  <!--
-    Root certificate expiration warnings
-
-    These strings for homepage cards and push notifications to be pushed to users running outdated versions of Firefox. We want to encourage these users to update to the latest version so their extensions and other features don't stop working when Firefox's old root certificate expires on 2025-03-14. For more information, see this SUMO article: https://support.mozilla.org/kb/root-certificate-expiration !
-
-    Homepage card button to open Google Play Store. "Update" is a verb.
-  -->
-  <string name="certificate_warning_homepage_card_update_now_button" tools:ignore="UnusedResources">Хәзер яңарту</string>
   <!-- TextField Design System Component -->
 
   <!--

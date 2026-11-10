@@ -430,14 +430,6 @@
   <string name="onboarding_term_of_service_line_three" tools:ignore="BrandUsage">Që të ndihmoni të përmirësohet shfletuesi, Firefox-i dërgon te Mozilla të dhëna diagnostikimesh dhe ndërveprimesh. %1$s</string>
   <!-- Used as text for the link in onboarding_term_of_service_line_three. -->
   <string name="onboarding_term_of_service_line_three_link_text">Administrojini</string>
-  <!-- Terms of use (ToU) onboarding redesign title. -->
-  <string name="onboarding_redesign_tou_title" tools:ignore="UnusedResources">Vini në punë shfletuesin përfundimtar për Android</string>
-  <!-- Terms of use (ToU) first subheader. -->
-  <string name="onboarding_redesign_tou_subheader_one" tools:ignore="UnusedResources">Ngarkoni sajte rrufeshëm</string>
-  <!-- Terms of use (ToU) second subheader. -->
-  <string name="onboarding_redesign_tou_subheader_two" tools:ignore="UnusedResources">Mbrojtje e automatizuar nga gjurmimi</string>
-  <!-- Terms of use (ToU) third subheader. -->
-  <string name="onboarding_redesign_tou_subheader_three" tools:ignore="UnusedResources">Mijëra përshtatje</string>
   <!--
     Terms of use (ToU) first body text. %1$s is replaced by an active link,
     using onboarding_redesign_tou_body_one_link_text as text (“Firefox Terms of Use”).
@@ -459,28 +451,12 @@
   <string name="onboarding_redesign_tou_body_three" tools:ignore="BrandUsage,UnusedResources">Që të ndihmoni të përmirësohet shfletuesi, Firefox-i dërgon te Mozilla të dhëna diagnostikimesh dhe ndërveprimesh. %1$s</string>
   <!-- Used as text for the link in onboarding_redesign_tou_body_three. -->
   <string name="onboarding_redesign_tou_body_three_link_text" tools:ignore="UnusedResources">Administroni Rregullime</string>
-  <!-- Terms of use (ToU) onboarding page continue button label. -->
-  <string name="onboarding_redesign_tou_agree_and_continue_button_label" tools:ignore="UnusedResources">Vazhdo</string>
-  <!-- Onboarding header for the toolbar selection card. -->
-  <string name="onboarding_redesign_customize_toolbar_title" tools:ignore="UnusedResources">Ku doni të vendoset shtylla e adresave?</string>
-  <!-- Onboarding label for 'Continue' button. -->
-  <string name="onboarding_redesign_continue_button" tools:ignore="UnusedResources">Vazhdo</string>
   <!-- Marketing onboarding page title. 'Firefox' is intentionally hardcoded. -->
   <!-- Marketing onboarding page opt-out checkbox. Unchecking the box does not increase data collection. Our data practices remain the same. 'Mozilla' is intentionally hardcoded. -->
   <!-- Marketing onboarding page clickable link text to "learn more" on how data is used. -->
   <!-- Marketing onboarding page button label. Button to confirm choice and start browsing. -->
-  <!-- Set to default browser onboarding redesign title. -->
-  <string name="onboarding_redesign_set_default_browser_title" tools:ignore="UnusedResources">Merrni si parazgjedhje mbrojtje të automatizuar nga gjurmimet</string>
-  <!-- Set to default browser onboarding redesign body. -->
-  <string name="onboarding_redesign_set_default_browser_body" tools:ignore="UnusedResources">Një prekje ndihmon të ndalen shoqëritë të spiunojnë klikimet tuaja.</string>
-  <!-- Sync onboarding redesign title. 'Firefox' is intentionally hardcoded. -->
-  <string name="onboarding_redesign_sync_title" tools:ignore="BrandUsage,UnusedResources">Njëkohësojeni kudo ku përdorni Firefox-in</string>
-  <!-- Sync onboarding redesign body. -->
-  <string name="onboarding_redesign_sync_body" tools:ignore="UnusedResources">Merrni në cilëndo pajisje faqerojtësit, skedat dhe fjalëkalimet. Gjithçka e mbrojtur me fshehtëzim.</string>
   <!-- Sync onboarding redesign positive button text. -->
   <string name="onboarding_redesign_sync_positive_button" tools:ignore="UnusedResources">Fillo njëkohësim</string>
-  <!-- Sync onboarding redesign negative button text. -->
-  <string name="onboarding_redesign_sync_negative_button" tools:ignore="UnusedResources">Jo tani</string>
   <!-- Marketing onboarding page title variant. “One last thing” refers to the final step or action in the onboarding process that we’re asking users to take before they can start using the browser. -->
   <!-- Marketing onboarding page body variant. 'Firefox' is intentionally hardcoded. -->
   <!-- Marketing onboarding page button label variant. Button to confirm choice and start browsing. -->
@@ -488,14 +464,8 @@
 
   <!-- "Continue" onboarding button. -->
   <string name="nova_onboarding_continue_button">Vazhdo</string>
-  <!-- "Continue browsing" onboarding button. -->
-  <string name="nova_onboarding_continue_browsing_button" tools:ignore="UnusedResources">Vazhdoni shfletimin</string>
   <!-- "Not now" onboarding button. -->
   <string name="nova_onboarding_negative_button">Jo tani</string>
-  <!-- "Skip" onboarding button. -->
-  <string name="nova_onboarding_skip_button" tools:ignore="UnusedResources">Anashkaloje</string>
-  <!-- Terms of use (ToU) onboarding title. -->
-  <string name="nova_onboarding_tou_title" tools:ignore="UnusedResources">Bëhuni gati të rendi të lirë</string>
   <!-- Terms of use (ToU) onboarding subtitle. -->
   <string name="nova_onboarding_tou_subtitle">I shpejtë, i parrezik dhe që s’do t’ju shesë.\nShfletimi sapo u bë më i mirë.</string>
   <!--
@@ -520,8 +490,6 @@
   <!-- Terms of use (ToU) onboarding body line three link text for nova_onboarding_tou_body_line_3. -->
   <string name="nova_onboarding_tou_body_line_3_link_text">Administroni rregullime</string>
   <!-- "Set to default" onboarding title. -->
-  <string name="nova_onboarding_set_to_default_title" tools:ignore="UnusedResources">U thoni lamtumirë gjurmuesve të shpifur</string>
-  <!-- "Set to default" onboarding title. -->
   <string name="nova_onboarding_set_to_default_title_2">Hapini krejt lidhjet tuaja me privatësi që brenda</string>
   <!-- "Set to default" onboarding subtitle. -->
   <string name="nova_onboarding_set_to_default_subtitle">Ne i mbrojmë të dhënat tuaja dhe bllokojmë automatikisht shoqëri për të mos ju spiunuar përmes klikimeve tuaja.</string>
@@ -533,14 +501,6 @@
   <string name="nova_onboarding_toolbar_selection_top_label">Krye</string>
   <!-- Toolbar selection onboarding "bottom" option label. -->
   <string name="nova_onboarding_toolbar_selection_bottom_label">Poshtë</string>
-  <!-- Theme selection onboarding title. -->
-  <string name="nova_onboarding_theme_selection_title" tools:ignore="UnusedResources">Zgjidhni temën tuaj</string>
-  <!-- Theme selection onboarding "automatic" option label. -->
-  <string name="nova_onboarding_theme_selection_automatic_label" tools:ignore="UnusedResources">Vetvetiu</string>
-  <!-- Theme selection onboarding "light" option label. -->
-  <string name="nova_onboarding_theme_selection_light_label" tools:ignore="UnusedResources">E çelët</string>
-  <!-- Theme selection onboarding "dark" option label. -->
-  <string name="nova_onboarding_theme_selection_dark_label" tools:ignore="UnusedResources">E errët</string>
   <!-- Sync onboarding title. -->
   <string name="nova_onboarding_sync_title">Vazhdoni menjëherë atje ku e latë</string>
   <!-- Sync onboarding subtitle. -->
@@ -565,8 +525,6 @@
   <string name="nova_onboarding_add_search_widget_subtitle" tools:ignore="BrandUsage">Niseni çdo kërkim nga skena e kreut e telefonit tua dhe dijeni se mbrojtjet e automatizuara të Firefox-it ju mbrojnë krahët.</string>
   <!-- "Add search widget" onboarding button. 'Firefox' is intentionally hardcoded. -->
   <string name="nova_onboarding_add_search_widget_button" tools:ignore="BrandUsage">Shtoni “widget” Firefox-i</string>
-  <!-- Customize prompt onboarding title. -->
-  <string name="nova_onboarding_customize_prompt_title" tools:ignore="UnusedResources">I kollajtë të përshtatesh dhe më privat, me çdo prekje</string>
   <plurals name="nova_onboarding_customize_prompt_body" tools:ignore="UnusedResources">
     <!--
       Customize prompt onboarding body.
@@ -578,12 +536,6 @@
     <item quantity="one">%1$s bllokoi %2$,d gjurmues teksa endeshit në internet.</item>
     <item quantity="other">%1$s bllokoi %2$,d gjurmues teksa endeshit në internet.</item>
   </plurals>
-  <!-- Customize prompt onboarding positive button. -->
-  <string name="nova_onboarding_customize_prompt_positive_button" tools:ignore="UnusedResources">Filloni ta përshtatni</string>
-  <!-- App icon onboarding title. -->
-  <string name="nova_onboarding_app_icon_prompt_title" tools:ignore="UnusedResources">Zgjidhni një ikonë vetjake për aplikacionin</string>
-  <!-- App icon onboarding body. -->
-  <string name="nova_onboarding_app_icon_prompt_body" tools:ignore="UnusedResources">Jepini skenës tuaj të kreut një ton personal.</string>
   <!-- ==== End of Project "Nova" onboarding strings ==== -->
 
   <!--
@@ -822,11 +774,6 @@
   <string name="preferences_category_file_storage">Depozitim kartelash</string>
   <!-- Preference title for downloads default location. -->
   <string name="preferences_downloads_default_location_title">Vendndodhje parazgjedhje shkarkimesh</string>
-  <!--
-    Message shown as the summary of the download location preference when the
-    app has lost the permission to access a previously selected custom folder.
-  -->
-  <string name="preference_downloads_folder_permission_lost" tools:ignore="UnusedResources">S’keni leje të përdorni këtë dosje. Provoni të zgjidhni një tjetër.</string>
   <!-- Preference title for choosing an app to handle downloads -->
   <string name="preferences_choose_app_for_downloads">Administroni shkarkime me aplikacion tjetër</string>
   <!-- Preference for enabling gecko engine logs -->
@@ -999,16 +946,6 @@
   <string name="restart_warning_dialog_button_negative">Anuloje</string>
   <!-- Error message snackbar shown after the user tried to apply the new icon but the Android OS threw an error while updating existing app shortcuts (e.g. private mode shortcut) -->
   <string name="shortcuts_update_error">S’u arrit të përditësohej ikona e aplikacionit. Hiqni shkurtore ekzistuese dhe riprovoni.</string>
-  <!--
-    Add-ons general availability nimbus message
-
-    Title of the Nimbus message for extension general availability
-  -->
-  <string name="addon_ga_message_title_2" tools:ignore="UnusedResources">Ka të gatshme zgjerime të reja</string>
-  <!-- Body of the Nimbus message for add-ons general availability. 'Firefox' intentionally hardcoded here -->
-  <string name="addon_ga_message_body" tools:ignore="BrandUsage,UnusedResources">Shihni mbi 100 zgjerime të reja që ju lejojnë ta bëni Firefox-in si e doni.</string>
-  <!-- Button text of the Nimbus message for extensions general availability. -->
-  <string name="addon_ga_message_button_2" tools:ignore="UnusedResources">Eksploroni zgjerime</string>
   <!--
     Extension process crash dialog to user
 
@@ -1296,8 +1233,6 @@
   <string name="close_tabs_after_one_week">Pas një jave</string>
   <!-- Option for auto closing tabs that will auto close tabs after one month -->
   <string name="close_tabs_after_one_month">Pas një muaji</string>
-  <!-- Title of preference that allows a user to specify the auto-close settings for open tabs -->
-  <string name="preference_auto_close_tabs" tools:ignore="UnusedResources">Vetëmbyll skeda të hapura</string>
   <!-- Content description (not visible, for screen readers etc.): Close tab button -->
   <string name="tab_manager_close_tabs">Mbylle</string>
   <!--
@@ -2095,8 +2030,6 @@
   <string name="sync_add_new_device_connect_button">Lidhni Tjetër Pajisje…</string>
   <!-- A message template for the shared link with a footer. %1$s is the shared link, %2$s is the app name (e.g. Firefox) and %3$s is a download link for the app. -->
   <string name="sent_from_firefox_template" tools:ignore="UnusedResources">%1$s\n\nDërguar nga %2$s 🦊 Provoni shfletuesin për celular: %3$s</string>
-  <!-- A short message template for the shared link with a footer. %1$s is the shared link, %2$s is the app name (e.g. Firefox) and %3$s is a download link for the app. -->
-  <string name="sent_from_firefox_template_short" tools:ignore="UnusedResources">%1$s\n\nDërguar nga %2$s 🦊 %3$s</string>
   <!--
     Notifications
 
@@ -2521,8 +2454,6 @@
   <string name="about_privacy_notice">Shënim privatësie</string>
   <!-- About page link text to open know your rights link -->
   <string name="about_know_your_rights">Njihni të drejtat tuaja</string>
-  <!-- About page link text to open terms of use link -->
-  <string name="about_terms_of_use" tools:ignore="UnusedResources">Kushte Përdorimi</string>
   <!-- About page link text to open licensing information link -->
   <string name="about_licensing_information">Hollësi licencimi</string>
   <!-- About page link text to open a screen with libraries that are used -->
@@ -2933,10 +2864,6 @@
   <string name="saved_login_password_required_2">Jepni një fjalëkalim</string>
   <!-- The error message in add login view when username field is blank. -->
   <string name="saved_login_username_required_2">Jepni emër përdoruesi</string>
-  <!-- The error message in add login view when hostname field is blank. -->
-  <string name="saved_login_hostname_required" tools:ignore="UnusedResources">Lypset strehëemër</string>
-  <!-- The error message in add login view when hostname field is blank. -->
-  <string name="saved_login_hostname_required_2" tools:ignore="UnusedResources">Jepni një adresë web</string>
   <!-- Voice search button content description -->
   <string name="voice_search_content_description">Kërkim zanor</string>
   <!-- Voice search prompt description displayed after the user presses the voice search button -->
@@ -3031,16 +2958,6 @@
   <string name="inactive_tabs_expand_content_description">Zgjero skeda joaktive</string>
   <!-- Content description for collapsing the inactive tabs section. -->
   <string name="inactive_tabs_collapse_content_description">Tkurr skeda joaktive</string>
-  <!--
-    Inactive tabs auto-close message in the tabs tray
-
-    The header text of the auto-close message when the user is asked if they want to turn on the auto-closing of inactive tabs.
-  -->
-  <string name="inactive_tabs_auto_close_message_header" tools:ignore="UnusedResources">Të vetëmbyllen pas një muaji?</string>
-  <!-- A description below the header to notify the user what the inactive tabs auto-close feature is. -->
-  <string name="inactive_tabs_auto_close_message_description" tools:ignore="BrandUsage,UnusedResources">Firefox-i mund të mbyllë skedat që s’i keni parë gjatë muajit të kaluar.</string>
-  <!-- A call to action below the description to allow the user to turn on the auto closing of inactive tabs. -->
-  <string name="inactive_tabs_auto_close_message_action" tools:ignore="UnusedResources">AKTIVIZONI VETËMBYLLJEN</string>
   <!-- Text for the snackbar to confirm auto-close is enabled for inactive tabs -->
   <string name="inactive_tabs_auto_close_message_snackbar">Vetëmbyllje e aktivizuar</string>
   <!--
@@ -3466,16 +3383,6 @@
   <string name="debug_drawer_tab_tools_tab_creation_tool_button_text_inactive">Shtoje te skeda joaktive</string>
   <!-- The button text to add tabs to the private tab group in the tab creation tool. -->
   <string name="debug_drawer_tab_tools_tab_creation_tool_button_text_private">Shtoje te skeda private</string>
-  <!--
-    Microsurvey
-    Note: Some strings are marked as unused as they are referenced via the Nimbus experimentation
-    platform and have no persistent reference in code
-
-    Prompt view
-
-    The microsurvey prompt title. Note: The word "Firefox" should NOT be translated
-  -->
-  <string name="micro_survey_prompt_title" tools:ignore="BrandUsage,UnusedResources">Ndihmonani ta bëjmë më të mirë Firefox-in. Do vetëm një minutë.</string>
   <!-- The continue button label -->
   <string name="micro_survey_continue_button_label" tools:ignore="UnusedResources">Vazhdoni</string>
   <!--
@@ -3488,8 +3395,6 @@
   <string name="micro_survey_privacy_notice_2">Shënim mbi privatësinë</string>
   <!-- The submit button label text -->
   <string name="micro_survey_submit_button_label">Parashtroje</string>
-  <!-- The survey completion header -->
-  <string name="micro_survey_survey_header_confirmation" tools:ignore="UnusedResources">Pyetësor i plotësuar</string>
   <!-- The survey completion confirmation text -->
   <string name="micro_survey_feedback_confirmation">Faleminderit për përshtypjet tuaja!</string>
   <!-- Option for likert scale -->
@@ -3504,36 +3409,10 @@
   <string name="likert_scale_option_5" tools:ignore="UnusedResources">Shumë i Pakënaqur</string>
   <!-- Option for likert scale -->
   <string name="likert_scale_option_6" tools:ignore="UnusedResources">S’e përdor</string>
-  <!-- Option for likert scale. Note: The word "Firefox" should NOT be translated. -->
-  <string name="likert_scale_option_7" tools:ignore="BrandUsage,UnusedResources">S’përdor kërkim në Firefox</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_8" tools:ignore="UnusedResources">S’e përdor njëkohësimin</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_slow_or_buggy" tools:ignore="UnusedResources">Është i ngadaltë, ose me të meta</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_features_hard_to_find_or_missing" tools:ignore="UnusedResources">Është e zorshme të gjesh veçoritë, ose mungojnë</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_confusing_or_hard_to_use" tools:ignore="UnusedResources">Është i ngatërruar, ose i vështirë për t’u përdorur</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_its_okay" tools:ignore="UnusedResources">Është në rregull, por jo më mirë se shfletuesit e tjerë</string>
-  <!-- Option for likert scale. Note: The word "Firefox" should NOT be translated. -->
-  <string name="likert_scale_option_i_plan_to_keep_using" tools:ignore="BrandUsage,UnusedResources">Kam në plan të vazhdoj të përdor Firefox-in</string>
   <!-- Text shown in prompt for printing microsurvey. "sec" It's an abbreviation for "second". Note: The word "Firefox" should NOT be translated. -->
   <string name="microsurvey_prompt_printing_title" tools:ignore="BrandUsage,UnusedResources">Ndihmoni të përmirësojmë shtypjen në Firefox. Ha vetëm një sekondë</string>
-  <!-- Text shown in prompt for search microsurvey. Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_prompt_search_title" tools:ignore="BrandUsage,UnusedResources">Ndihmoni të përmirësohet kërkimi në Firefox. Do vetëm një minutë</string>
-  <!-- Text shown in prompt for sync microsurvey. Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_prompt_sync_title" tools:ignore="BrandUsage,UnusedResources">Ndihmoni të përmirësohet njëkohësimi në Firefox. Do vetëm një minutë</string>
   <!-- Text shown in the survey title for printing microsurvey. Note: The word "Firefox" should NOT be translated. -->
   <string name="microsurvey_survey_printing_title" tools:ignore="BrandUsage,UnusedResources">Sa të kënaqur jeni me shtypjen në Firefox?</string>
-  <!-- Text shown in the survey title for homepage microsurvey. Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_homepage_title" tools:ignore="BrandUsage,UnusedResources">Sa të kënaqur jeni me faqen hyrëse të Firefox-it?</string>
-  <!-- Text shown in the survey title for search experience microsurvey. Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_search_title" tools:ignore="BrandUsage,UnusedResources">Sa të kënaqur jeni me kërkimin në Firefox?</string>
-  <!-- Text shown in the survey title for sync experience microsurvey. Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_sync_title" tools:ignore="BrandUsage,UnusedResources">Sa të kënaqur jeni nga funksionimi i njëkohësimit në Firefox?</string>
-  <!-- Text shown in the survey title for 'describe your experience so far' microsurvey. Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_describe_your_experience_title" tools:ignore="BrandUsage,UnusedResources">Ndihmonani të përmirësojmë Firefox-in. CiIa e përshkruan më mirë rastin tuaj deri tani?</string>
   <!--
     Accessibility
 
@@ -3646,40 +3525,6 @@
     Text shown as a label or tag to indicate a feature or area is still undergoing active development. Note that here "Beta" should not be translated, as it is used as an icon styled element.
   -->
   <string name="beta_feature">BETA</string>
-  <!--
-    Root certificate expiration warnings
-
-    These strings for homepage cards and push notifications to be pushed to users running outdated versions of Firefox. We want to encourage these users to update to the latest version so their extensions and other features don't stop working when Firefox's old root certificate expires on 2025-03-14. For more information, see this SUMO article: https://support.mozilla.org/kb/root-certificate-expiration !
-
-    Homepage card button to open Google Play Store. "Update" is a verb.
-  -->
-  <string name="certificate_warning_homepage_card_update_now_button" tools:ignore="UnusedResources">Përditësojeni tani</string>
-  <!-- Homepage card title about old Firefox version. "Update" is a verb. Note: The word "Firefox" should NOT be translated. -->
-  <string name="certificate_warning_homepage_card_hca1_title" tools:ignore="BrandUsage,UnusedResources">Përditësoni shfletuesin tuaj Firefox</string>
-  <!-- Homepage card message about old Firefox version -->
-  <string name="certificate_warning_homepage_card_hca1_message" tools:ignore="UnusedResources">Do të skadojë një dëshmi rrënjë, duke bërë që disa nga veçoritë të reshtin së funksionuari më 14 mars.</string>
-  <!-- Homepage card title about old Firefox version. "Update" is a verb. -->
-  <string name="certificate_warning_homepage_card_hcr1_title" tools:ignore="UnusedResources">Përditësojeni para 14 marsit</string>
-  <!-- Homepage card message about old Firefox version. Note: The word "Firefox" should NOT be translated. -->
-  <string name="certificate_warning_homepage_card_hcr1_message" tools:ignore="BrandUsage,UnusedResources">Do të skadojë një dëshmi rrënjë, duke bërë që versioni juaj i Firefox-it të reshtë së funksionuari si duhet.</string>
-  <!-- Homepage card title about old Firefox version -->
-  <string name="certificate_warning_homepage_card_hcw2_title" tools:ignore="UnusedResources">Më pak se 7 ditë për ta përditësuar</string>
-  <!-- Homepage card message about old Firefox version. Note: The word "Firefox" should NOT be translated. -->
-  <string name="certificate_warning_homepage_card_hcw2_message" tools:ignore="BrandUsage,UnusedResources">Më 14 mars, shtesa dhe veçori të tjera të Firefox-it do të reshtin së funksionuari, për shkak të skadimit të një dëshmie rrënjë.</string>
-  <!-- Homepage card title about old Firefox version. Note: The word "Firefox" should NOT be translated. -->
-  <string name="certificate_warning_homepage_card_hcw3_title" tools:ignore="BrandUsage,UnusedResources">Shansi juaj i fundit të mbani Firefox-in tuaj</string>
-  <!-- Homepage card message about old Firefox version. Note: The word "Firefox" should NOT be translated. -->
-  <string name="certificate_warning_homepage_card_hcw3_message" tools:ignore="BrandUsage,UnusedResources">Versioni juaj i Firefox-it do të reshtë së funksionuari më 14 mars, ngaqë po skadon një dëshmi rrënjë.</string>
-  <!-- Push notification title about old Firefox version. "Update" is a noun. -->
-  <string name="certificate_warning_push_notification_update_recommended_title" tools:ignore="UnusedResources">Këshillohet përditësimi</string>
-  <!-- Push notification message about old Firefox version -->
-  <string name="certificate_warning_push_notification_pnr1_message" tools:ignore="UnusedResources">Shtesa dhe disa veçori do të reshtin së funksionuari më 14 mars.</string>
-  <!-- Push notification title about old Firefox version. Note: The word "Firefox" should NOT be translated. -->
-  <string name="certificate_warning_push_notification_pnw2_title" tools:ignore="BrandUsage,UnusedResources">Jeni me një version të vjetër të Firefox-it</string>
-  <!-- Push notification message about old Firefox version. "Update" is a verb. -->
-  <string name="certificate_warning_push_notification_pnw2_message" tools:ignore="UnusedResources">Që të vazhdoni të përdorni shtesa dhe veçori të tjera, përditësojeni para 14 marsit.</string>
-  <!-- Push notification message about old Firefox version -->
-  <string name="certificate_warning_push_notification_pnw3_message" tools:ignore="UnusedResources">Disa veçori do të reshtin së funksionuari nesër.</string>
   <!-- TextField Design System Component -->
 
   <!--

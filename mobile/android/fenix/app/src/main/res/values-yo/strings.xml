@@ -492,8 +492,6 @@
   <string name="close_tabs_after_one_week">Lẹ́yìn ọ̀sẹ̀ kan</string>
   <!-- Option for auto closing tabs that will auto close tabs after one month -->
   <string name="close_tabs_after_one_month">Lẹ́yìn oṣù kan</string>
-  <!-- Title of preference that allows a user to specify the auto-close settings for open tabs -->
-  <string name="preference_auto_close_tabs" tools:ignore="UnusedResources">Pa àwọn táàbù tó wà ní ṣíṣí sílẹ̀ dé láìfọwọ́paádé</string>
   <!--
     Opening screen
 
@@ -1298,8 +1296,6 @@
   <string name="dialog_delete_positive">Parẹ́</string>
   <!-- Negative action of a dialog asking to delete login -->
   <string name="dialog_delete_negative">Paárẹ́</string>
-  <!-- The error message in add login view when hostname field is blank. -->
-  <string name="saved_login_hostname_required" tools:ignore="UnusedResources">A nílò orúkọ nẹ́tíwọọ̀kì kọ̀m̀pútà</string>
   <!-- Voice search button content description -->
   <string name="voice_search_content_description">Ìwádìí olóhùn</string>
   <!-- Voice search prompt description displayed after the user presses the voice search button -->
@@ -1366,16 +1362,6 @@
   <string name="inactive_tabs_expand_content_description">Fẹ àwọn táàbù tí ò ṣiṣẹ́</string>
   <!-- Content description for collapsing the inactive tabs section. -->
   <string name="inactive_tabs_collapse_content_description">Pa àwọn táàbù tí ò ṣiṣẹ́ dé</string>
-  <!--
-    Inactive tabs auto-close message in the tabs tray
-
-    The header text of the auto-close message when the user is asked if they want to turn on the auto-closing of inactive tabs.
-  -->
-  <string name="inactive_tabs_auto_close_message_header" tools:ignore="UnusedResources">Tì-fúnra-ẹ̀ lẹ́yìn oṣù kan?</string>
-  <!-- A description below the header to notify the user what the inactive tabs auto-close feature is. -->
-  <string name="inactive_tabs_auto_close_message_description" tools:ignore="BrandUsage,UnusedResources">Firefox lè ti àwọn táàbù tí oò tíì yẹ̀wò ní oṣù tó kọjá.</string>
-  <!-- A call to action below the description to allow the user to turn on the auto closing of inactive tabs. -->
-  <string name="inactive_tabs_auto_close_message_action" tools:ignore="UnusedResources">TAN TÌ-FÚNRA-Ẹ̀</string>
   <!-- Text for the snackbar to confirm auto-close is enabled for inactive tabs -->
   <string name="inactive_tabs_auto_close_message_snackbar">Tí-fúnra-ẹ̀ ti di ṣíṣe</string>
   <!--

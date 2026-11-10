@@ -378,8 +378,6 @@
   <string name="close_tabs_after_one_week">एक हप्ता पछि</string>
   <!-- Option for auto closing tabs that will auto close tabs after one month -->
   <string name="close_tabs_after_one_month">एक महिना पछि</string>
-  <!-- Title of preference that allows a user to specify the auto-close settings for open tabs -->
-  <string name="preference_auto_close_tabs" tools:ignore="UnusedResources">खुला ट्याबहरु स्वतः बन्द गर्नुहोस्</string>
   <!--
     Opening screen
 

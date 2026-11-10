@@ -426,8 +426,6 @@
   <string name="close_tabs_after_one_week">एक हफ्ते के बाद</string>
   <!-- Option for auto closing tabs that will auto close tabs after one month -->
   <string name="close_tabs_after_one_month">एक महीने बाद</string>
-  <!-- Title of preference that allows a user to specify the auto-close settings for open tabs -->
-  <string name="preference_auto_close_tabs" tools:ignore="UnusedResources">खुले टैब को स्वतः बंद करें</string>
   <!--
     Opening screen
 
@@ -1124,12 +1122,6 @@
   <string name="inactive_tabs_title">निष्क्रिय टैब</string>
   <!-- Content description for closing all inactive tabs -->
   <string name="inactive_tabs_delete_all">सभी निष्क्रिय टैब बंद करें</string>
-  <!--
-    Inactive tabs auto-close message in the tabs tray
-
-    The header text of the auto-close message when the user is asked if they want to turn on the auto-closing of inactive tabs.
-  -->
-  <string name="inactive_tabs_auto_close_message_header" tools:ignore="UnusedResources">एक महीने के बाद स्वत: बंद करें?</string>
   <!-- Text for the snackbar to confirm auto-close is enabled for inactive tabs -->
   <string name="inactive_tabs_auto_close_message_snackbar">स्वत: बंद सक्षम हैं</string>
   <!-- Content description radio buttons with a link to more information -->

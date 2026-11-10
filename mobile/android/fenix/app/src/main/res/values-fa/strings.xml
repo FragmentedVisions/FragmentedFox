@@ -418,8 +418,6 @@
   <string name="onboarding_term_of_service_line_three" tools:ignore="BrandUsage">برای کمک به بهبود مرورگر، Firefox داده‌های تشخیصی و تعاملات را به Mozilla ارسال می‌کند. %1$s</string>
   <!-- Used as text for the link in onboarding_term_of_service_line_three. -->
   <string name="onboarding_term_of_service_line_three_link_text">مدیریت</string>
-  <!-- Terms of use (ToU) onboarding redesign title. -->
-  <string name="onboarding_redesign_tou_title" tools:ignore="UnusedResources">راه‌اندازی مرورگر نهایی اندروید</string>
   <!--
     Terms of use (ToU) first body text. %1$s is replaced by an active link,
     using onboarding_redesign_tou_body_one_link_text as text (“Firefox Terms of Use”).
@@ -429,17 +427,9 @@
   <string name="onboarding_redesign_tou_body_one_link_text" tools:ignore="BrandUsage,UnusedResources">شرایط استفاده از Firefox</string>
   <!-- Used as text for the link in onboarding_redesign_tou_body_three. -->
   <string name="onboarding_redesign_tou_body_three_link_text" tools:ignore="UnusedResources">مدیریت تنظیمات</string>
-  <!-- Terms of use (ToU) onboarding page continue button label. -->
-  <string name="onboarding_redesign_tou_agree_and_continue_button_label" tools:ignore="UnusedResources">ادامه</string>
-  <!-- Onboarding header for the toolbar selection card. -->
-  <string name="onboarding_redesign_customize_toolbar_title" tools:ignore="UnusedResources">می‌خواهید نوار آدرس شما کجا باشد؟</string>
-  <!-- Onboarding label for 'Continue' button. -->
-  <string name="onboarding_redesign_continue_button" tools:ignore="UnusedResources">ادامه</string>
   <!-- Marketing onboarding page button label. Button to confirm choice and start browsing. -->
   <!-- Sync onboarding redesign positive button text. -->
   <string name="onboarding_redesign_sync_positive_button" tools:ignore="UnusedResources">آغاز همگام‌سازی</string>
-  <!-- Sync onboarding redesign negative button text. -->
-  <string name="onboarding_redesign_sync_negative_button" tools:ignore="UnusedResources">اکنون نه</string>
   <!-- Marketing onboarding page title variant. “One last thing” refers to the final step or action in the onboarding process that we’re asking users to take before they can start using the browser. -->
   <!-- Marketing onboarding page body variant. 'Firefox' is intentionally hardcoded. -->
   <!-- Marketing onboarding page button label variant. Button to confirm choice and start browsing. -->
@@ -787,16 +777,6 @@
   <!-- Dialog button text for cancelling app icon change -->
   <string name="restart_warning_dialog_button_negative">انصراف</string>
   <!--
-    Add-ons general availability nimbus message
-
-    Title of the Nimbus message for extension general availability
-  -->
-  <string name="addon_ga_message_title_2" tools:ignore="UnusedResources">افزونه‌های جدید اکنون در دسترس هستند</string>
-  <!-- Body of the Nimbus message for add-ons general availability. 'Firefox' intentionally hardcoded here -->
-  <string name="addon_ga_message_body" tools:ignore="BrandUsage,UnusedResources">بیش از 100 افزونه جدید را بررسی کنید که به شما امکان می دهد Firefox را متعلق به خود کنید.</string>
-  <!-- Button text of the Nimbus message for extensions general availability. -->
-  <string name="addon_ga_message_button_2" tools:ignore="UnusedResources">کاوش افزونه‌ها</string>
-  <!--
     Extension process crash dialog to user
 
     Title of the extension crash dialog shown to the user when enough errors have occurred with extensions and they need to be temporarily disabled
@@ -1054,8 +1034,6 @@
   <string name="close_tabs_after_one_week">بعد از یک هفته</string>
   <!-- Option for auto closing tabs that will auto close tabs after one month -->
   <string name="close_tabs_after_one_month">بعد از یک ماه</string>
-  <!-- Title of preference that allows a user to specify the auto-close settings for open tabs -->
-  <string name="preference_auto_close_tabs" tools:ignore="UnusedResources">بستن خودکار زبانه‌های باز</string>
   <!-- Content description (not visible, for screen readers etc.): Close tab button -->
   <string name="tab_manager_close_tabs">بستن</string>
   <!--
@@ -1660,8 +1638,6 @@
   <string name="sync_add_new_device_connect_button">اتصال به دستگاه دیگر…</string>
   <!-- A message template for the shared link with a footer. %1$s is the shared link, %2$s is the app name (e.g. Firefox) and %3$s is a download link for the app. -->
   <string name="sent_from_firefox_template" tools:ignore="UnusedResources">%1$s\n\nاز %2$s فرستاده شده است 🦊 مرورگر همراه را امتحان کنید: %3$s</string>
-  <!-- A short message template for the shared link with a footer. %1$s is the shared link, %2$s is the app name (e.g. Firefox) and %3$s is a download link for the app. -->
-  <string name="sent_from_firefox_template_short" tools:ignore="UnusedResources">%1$s\n\nاز %2$s فرستاده شده است 🦊 %3$s</string>
   <!--
     Notifications
 
@@ -2052,8 +2028,6 @@
   <string name="about_privacy_notice">اطلاعیه حریم‌شخصی</string>
   <!-- About page link text to open know your rights link -->
   <string name="about_know_your_rights">حقوق خود را بدانید</string>
-  <!-- About page link text to open terms of use link -->
-  <string name="about_terms_of_use" tools:ignore="UnusedResources">شرایط استفاده</string>
   <!-- About page link text to open licensing information link -->
   <string name="about_licensing_information">اطلاعات مجوز</string>
   <!-- About page link text to open a screen with libraries that are used -->
@@ -2388,10 +2362,6 @@
   <string name="saved_login_password_required_2">یک گذرواژه وارد کنید</string>
   <!-- The error message in add login view when username field is blank. -->
   <string name="saved_login_username_required_2">یک نام‌کاربری وارد کنید</string>
-  <!-- The error message in add login view when hostname field is blank. -->
-  <string name="saved_login_hostname_required" tools:ignore="UnusedResources">نام میزبان مورد نیاز است</string>
-  <!-- The error message in add login view when hostname field is blank. -->
-  <string name="saved_login_hostname_required_2" tools:ignore="UnusedResources">یک نشانی وب وارد کنید</string>
   <!-- Voice search button content description -->
   <string name="voice_search_content_description">جست‌وجوی صوتی</string>
   <!-- Voice search prompt description displayed after the user presses the voice search button -->
@@ -2470,16 +2440,6 @@
   <string name="inactive_tabs_expand_content_description">گسترش زبانه‌های غیرفعال</string>
   <!-- Content description for collapsing the inactive tabs section. -->
   <string name="inactive_tabs_collapse_content_description">جمع کردن زبانه‌های غیرفعال</string>
-  <!--
-    Inactive tabs auto-close message in the tabs tray
-
-    The header text of the auto-close message when the user is asked if they want to turn on the auto-closing of inactive tabs.
-  -->
-  <string name="inactive_tabs_auto_close_message_header" tools:ignore="UnusedResources">بعد از یک ماه، به صورت خودکار بسته شود؟</string>
-  <!-- A description below the header to notify the user what the inactive tabs auto-close feature is. -->
-  <string name="inactive_tabs_auto_close_message_description" tools:ignore="BrandUsage,UnusedResources">‏Firefox می‌تواند زبانه‌هایی را که در ماه گذشته مشاهده نکرده‌اید؛ ببندد.</string>
-  <!-- A call to action below the description to allow the user to turn on the auto closing of inactive tabs. -->
-  <string name="inactive_tabs_auto_close_message_action" tools:ignore="UnusedResources">فعّال‌سازی بستن خودکار</string>
   <!-- Text for the snackbar to confirm auto-close is enabled for inactive tabs -->
   <string name="inactive_tabs_auto_close_message_snackbar">بستن خودکار، فعّال شد</string>
   <!--
@@ -2866,16 +2826,6 @@
   <string name="debug_drawer_tab_tools_tab_creation_tool_button_text_inactive">افزودن به زبانه‌های غیرفعال</string>
   <!-- The button text to add tabs to the private tab group in the tab creation tool. -->
   <string name="debug_drawer_tab_tools_tab_creation_tool_button_text_private">افزودن به زبانه‌های خصوصی</string>
-  <!--
-    Microsurvey
-    Note: Some strings are marked as unused as they are referenced via the Nimbus experimentation
-    platform and have no persistent reference in code
-
-    Prompt view
-
-    The microsurvey prompt title. Note: The word "Firefox" should NOT be translated
-  -->
-  <string name="micro_survey_prompt_title" tools:ignore="BrandUsage,UnusedResources">به ما کمک کنید Firefox را بهتر کنیم. فقط یک دقیقه طول می‌کشد.</string>
   <!-- The continue button label -->
   <string name="micro_survey_continue_button_label" tools:ignore="UnusedResources">ادامه</string>
   <!--
@@ -2888,8 +2838,6 @@
   <string name="micro_survey_privacy_notice_2">نکات حفظ محرمانگی</string>
   <!-- The submit button label text -->
   <string name="micro_survey_submit_button_label">ارسال</string>
-  <!-- The survey completion header -->
-  <string name="micro_survey_survey_header_confirmation" tools:ignore="UnusedResources">نظرسنجی کامل شد</string>
   <!-- The survey completion confirmation text -->
   <string name="micro_survey_feedback_confirmation">با تشکر از بازخورد شما!</string>
   <!-- Option for likert scale -->
@@ -2904,24 +2852,10 @@
   <string name="likert_scale_option_5" tools:ignore="UnusedResources">بسیار ناراضی</string>
   <!-- Option for likert scale -->
   <string name="likert_scale_option_6" tools:ignore="UnusedResources">از آن استفاده نمی‌کنم</string>
-  <!-- Option for likert scale. Note: The word "Firefox" should NOT be translated. -->
-  <string name="likert_scale_option_7" tools:ignore="BrandUsage,UnusedResources">من در Firefox از جستجو استفاده نمی‌کنم</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_8" tools:ignore="UnusedResources">من از همگام‌سازی استفاده نمی‌کنم</string>
   <!-- Text shown in prompt for printing microsurvey. "sec" It's an abbreviation for "second". Note: The word "Firefox" should NOT be translated. -->
   <string name="microsurvey_prompt_printing_title" tools:ignore="BrandUsage,UnusedResources">به بهبود چاپ در Firefox کمک کنید. فقط چند ثانیه طول می‌کشد</string>
-  <!-- Text shown in prompt for search microsurvey. Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_prompt_search_title" tools:ignore="BrandUsage,UnusedResources">به بهبود جستجو در Firefox کمک کنید. فقط یک دقیقه طول می‌کشد</string>
-  <!-- Text shown in prompt for sync microsurvey. Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_prompt_sync_title" tools:ignore="BrandUsage,UnusedResources">به بهبود همگام‌سازی در Firefox کمک کنید. فقط یک دقیقه طول می‌کشد</string>
   <!-- Text shown in the survey title for printing microsurvey. Note: The word "Firefox" should NOT be translated. -->
   <string name="microsurvey_survey_printing_title" tools:ignore="BrandUsage,UnusedResources">چقدر از چاپ در Firefox راضی هستید؟</string>
-  <!-- Text shown in the survey title for homepage microsurvey. Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_homepage_title" tools:ignore="BrandUsage,UnusedResources">چقدر از صفحه اصلی Firefox راضی هستید؟</string>
-  <!-- Text shown in the survey title for search experience microsurvey. Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_search_title" tools:ignore="BrandUsage,UnusedResources">چقدر از تجربه جستجو در Firefox راضی هستید؟</string>
-  <!-- Text shown in the survey title for sync experience microsurvey. Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_sync_title" tools:ignore="BrandUsage,UnusedResources">چقدر از تجربه همگام‌سازی در Firefox راضی هستید؟</string>
   <!--
     Accessibility
 
@@ -3016,40 +2950,6 @@
     Text shown as a label or tag to indicate a feature or area is still undergoing active development. Note that here "Beta" should not be translated, as it is used as an icon styled element.
   -->
   <string name="beta_feature">BETA</string>
-  <!--
-    Root certificate expiration warnings
-
-    These strings for homepage cards and push notifications to be pushed to users running outdated versions of Firefox. We want to encourage these users to update to the latest version so their extensions and other features don't stop working when Firefox's old root certificate expires on 2025-03-14. For more information, see this SUMO article: https://support.mozilla.org/kb/root-certificate-expiration !
-
-    Homepage card button to open Google Play Store. "Update" is a verb.
-  -->
-  <string name="certificate_warning_homepage_card_update_now_button" tools:ignore="UnusedResources">هم‌اکنون به‌روزرسانی کنید</string>
-  <!-- Homepage card title about old Firefox version. "Update" is a verb. Note: The word "Firefox" should NOT be translated. -->
-  <string name="certificate_warning_homepage_card_hca1_title" tools:ignore="BrandUsage,UnusedResources">مرورگر Firefox خود را به‌روز کنید</string>
-  <!-- Homepage card message about old Firefox version -->
-  <string name="certificate_warning_homepage_card_hca1_message" tools:ignore="UnusedResources">یک گواهی ریشه منقضی خواهد شد، باعث می‌شود برخی ویژگی‌ها در ۱۴ مارس متوقف شوند.</string>
-  <!-- Homepage card title about old Firefox version. "Update" is a verb. -->
-  <string name="certificate_warning_homepage_card_hcr1_title" tools:ignore="UnusedResources">قبل از ۱۴ مارس به‌روزرسانی کنید</string>
-  <!-- Homepage card message about old Firefox version. Note: The word "Firefox" should NOT be translated. -->
-  <string name="certificate_warning_homepage_card_hcr1_message" tools:ignore="BrandUsage,UnusedResources">یک گواهی ریشه منقضی خواهد شد، باعث می‌شود نگارش شما از Firefox به درستی کار نکند.</string>
-  <!-- Homepage card title about old Firefox version -->
-  <string name="certificate_warning_homepage_card_hcw2_title" tools:ignore="UnusedResources">کمتر از ۷ روز تا به‌روزرسانی باقی‌مانده است</string>
-  <!-- Homepage card message about old Firefox version. Note: The word "Firefox" should NOT be translated. -->
-  <string name="certificate_warning_homepage_card_hcw2_message" tools:ignore="BrandUsage,UnusedResources">در ۱۴ مارس، برافزاها و سایر ویژگی‌های Firefox متوقف خواهند شد زیرا یک گواهی ریشه منقضی می‌شود.</string>
-  <!-- Homepage card title about old Firefox version. Note: The word "Firefox" should NOT be translated. -->
-  <string name="certificate_warning_homepage_card_hcw3_title" tools:ignore="BrandUsage,UnusedResources">آخرین فرصت برای حفظ Firefox شما</string>
-  <!-- Homepage card message about old Firefox version. Note: The word "Firefox" should NOT be translated. -->
-  <string name="certificate_warning_homepage_card_hcw3_message" tools:ignore="BrandUsage,UnusedResources">نگارش شما از Firefox به دلیل منقضی شدن یک گواهی ریشه به درستی کار نخواهد کرد.</string>
-  <!-- Push notification title about old Firefox version. "Update" is a noun. -->
-  <string name="certificate_warning_push_notification_update_recommended_title" tools:ignore="UnusedResources">به‌روزرسانی توصیه می‌شود</string>
-  <!-- Push notification message about old Firefox version -->
-  <string name="certificate_warning_push_notification_pnr1_message" tools:ignore="UnusedResources">برافزاها و برخی ویژگی‌ها در ۱۴ مارس متوقف خواهند شد.</string>
-  <!-- Push notification title about old Firefox version. Note: The word "Firefox" should NOT be translated. -->
-  <string name="certificate_warning_push_notification_pnw2_title" tools:ignore="BrandUsage,UnusedResources">شما از یک نگارش قدیمی Firefox استفاده می‌کنید</string>
-  <!-- Push notification message about old Firefox version. "Update" is a verb. -->
-  <string name="certificate_warning_push_notification_pnw2_message" tools:ignore="UnusedResources">قبل از ۱۴ مارس به‌روزرسانی کنید تا به استفاده از برافزاها و سایر ویژگی‌ها ادامه دهید.</string>
-  <!-- Push notification message about old Firefox version -->
-  <string name="certificate_warning_push_notification_pnw3_message" tools:ignore="UnusedResources">برخی ویژگی‌ها فردا متوقف خواهند شد.</string>
   <!-- TextField Design System Component -->
 
   <!--

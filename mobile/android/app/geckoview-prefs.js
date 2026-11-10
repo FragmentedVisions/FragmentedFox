@@ -408,3 +408,6 @@ pref("security.ssl3.rsa_aes_256_gcm_sha384", false);
 pref("security.ssl3.ecdhe_rsa_aes_128_sha", false);
 pref("security.ssl3.ecdhe_rsa_aes_256_sha", false);
 pref("security.ssl3.ecdhe_ecdsa_aes_256_sha", false);
+
+// Turn off TLS 1.3 early data (0-RTT), which a network attacker can replay
+pref("security.tls.enable_0rtt_data", false);

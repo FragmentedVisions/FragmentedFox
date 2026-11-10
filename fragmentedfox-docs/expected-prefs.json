@@ -37,7 +37,8 @@
     "security.ssl3.rsa_aes_256_gcm_sha384": "false",
     "security.ssl3.ecdhe_rsa_aes_128_sha": "false",
     "security.ssl3.ecdhe_rsa_aes_256_sha": "false",
-    "security.ssl3.ecdhe_ecdsa_aes_256_sha": "false"
+    "security.ssl3.ecdhe_ecdsa_aes_256_sha": "false",
+    "security.tls.enable_0rtt_data": "false"
   },
   "modules/libpref/init/all.js": {
     "datareporting.policy.dataSubmissionEnabled": "false",

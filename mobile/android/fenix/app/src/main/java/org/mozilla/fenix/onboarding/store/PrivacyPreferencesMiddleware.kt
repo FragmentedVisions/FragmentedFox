@@ -31,17 +31,9 @@ class PrivacyPreferencesMiddleware(
                 )
             }
 
-            is PrivacyPreferencesAction.UsageDataPreferenceUpdatedTo -> {
-                repository.setPreference(
-                    type = PreferenceType.UsageData,
-                    enabled = action.enabled,
-                )
-            }
-
             // no-ops
             is PrivacyPreferencesAction.Init,
             is PrivacyPreferencesAction.CrashReportingLearnMore,
-            is PrivacyPreferencesAction.UsageDataUserLearnMore,
             -> {}
         }
     }

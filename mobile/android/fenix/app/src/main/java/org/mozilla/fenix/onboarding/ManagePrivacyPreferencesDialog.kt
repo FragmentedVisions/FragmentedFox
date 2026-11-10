@@ -54,7 +54,6 @@ fun ManagePrivacyPreferencesDialog(
     store: PrivacyPreferencesStore,
     onDismissRequest: () -> Unit,
     onCrashReportingLinkClick: () -> Unit,
-    onUsageDataLinkClick: () -> Unit,
 ) {
     val state by store.stateFlow.collectAsState()
 

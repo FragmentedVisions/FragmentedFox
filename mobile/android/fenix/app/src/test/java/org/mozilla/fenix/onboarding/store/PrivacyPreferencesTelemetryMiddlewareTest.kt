@@ -49,23 +49,6 @@ class PrivacyPreferencesTelemetryMiddlewareTest {
     }
 
     @Test
-    fun `GIVEN usage data enabled action WHEN middleware is invoked THEN the corresponding telemetry is sent`() {
-        assertNull(Onboarding.privacyPreferencesModalUsageDataEnabled.testGetValue())
-
-        middleware.invoke(
-            store = mockk(),
-            {},
-            PrivacyPreferencesAction.UsageDataPreferenceUpdatedTo(true),
-        )
-
-        val event = Onboarding.privacyPreferencesModalUsageDataEnabled.testGetValue()
-        assertNotNull(event)
-        assertEquals(1, event.size)
-        val result = event.single().extra?.getValue("value").toBoolean()
-        assertTrue(result)
-    }
-
-    @Test
     fun `GIVEN crash reporting learn more action WHEN middleware is invoked THEN the corresponding telemetry is sent`() {
         assertNull(Onboarding.privacyPreferencesModalCrashReportingLearnMore.testGetValue())
 
@@ -76,21 +59,6 @@ class PrivacyPreferencesTelemetryMiddlewareTest {
         )
 
         val event = Onboarding.privacyPreferencesModalCrashReportingLearnMore.testGetValue()
-        assertNotNull(event)
-        assertEquals(1, event.size)
-    }
-
-    @Test
-    fun `GIVEN usage data learn more action WHEN middleware is invoked THEN the corresponding telemetry is sent`() {
-        assertNull(Onboarding.privacyPreferencesModalUsageDataLearnMore.testGetValue())
-
-        middleware.invoke(
-            store = mockk(),
-            {},
-            PrivacyPreferencesAction.UsageDataUserLearnMore,
-        )
-
-        val event = Onboarding.privacyPreferencesModalUsageDataLearnMore.testGetValue()
         assertNotNull(event)
         assertEquals(1, event.size)
     }

@@ -13,11 +13,9 @@ import mozilla.components.lib.state.Store
  * Represents the state of privacy preferences.
  *
  * @property crashReportingEnabled Whether automatic crash reporting is enabled.
- * @property usageDataEnabled Whether usage data collection is enabled.
  */
 data class PrivacyPreferencesState(
     val crashReportingEnabled: Boolean = false,
-    val usageDataEnabled: Boolean = true,
 ) : State
 
 /**
@@ -37,21 +35,9 @@ sealed class PrivacyPreferencesAction : Action {
     data class CrashReportingPreferenceUpdatedTo(val enabled: Boolean) : PrivacyPreferencesAction()
 
     /**
-     * [PrivacyPreferencesAction] to update the usage data preference value to [enabled].
-     *
-     * @property enabled Flag to indicate whether the usage data option is enabled.
-     */
-    data class UsageDataPreferenceUpdatedTo(val enabled: Boolean) : PrivacyPreferencesAction()
-
-    /**
      * [PrivacyPreferencesAction] indicates the crash reporting option "learn more" link was used.
      */
     data object CrashReportingLearnMore : PrivacyPreferencesAction()
-
-    /**
-     * [PrivacyPreferencesAction] indicates the usage data option "learn more" link was used.
-     */
-    data object UsageDataUserLearnMore : PrivacyPreferencesAction()
 }
 
 /**
@@ -65,14 +51,10 @@ internal object PrivacyPreferencesReducer {
         return when (action) {
             is PrivacyPreferencesAction.Init,
             is PrivacyPreferencesAction.CrashReportingLearnMore,
-            is PrivacyPreferencesAction.UsageDataUserLearnMore,
             -> state
 
             is PrivacyPreferencesAction.CrashReportingPreferenceUpdatedTo ->
                 state.copy(crashReportingEnabled = action.enabled)
-
-            is PrivacyPreferencesAction.UsageDataPreferenceUpdatedTo ->
-                state.copy(usageDataEnabled = action.enabled)
         }
     }
 }

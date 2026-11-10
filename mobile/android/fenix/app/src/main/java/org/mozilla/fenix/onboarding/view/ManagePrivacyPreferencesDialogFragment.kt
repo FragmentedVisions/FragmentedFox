@@ -32,7 +32,6 @@ import org.mozilla.fenix.theme.FirefoxTheme
 class ManagePrivacyPreferencesDialogFragment : DialogFragment() {
 
     private val crashReportingUrl by lazy { sumoUrlFor(SupportUtils.SumoTopic.CRASH_REPORTS) }
-    private val usageDataUrl by lazy { sumoUrlFor(SupportUtils.SumoTopic.TECHNICAL_AND_INTERACTION_DATA) }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -41,13 +40,10 @@ class ManagePrivacyPreferencesDialogFragment : DialogFragment() {
     ): View {
         val repository = DefaultPrivacyPreferencesRepository(
             settings = requireComponents.settings,
-            nimbusSdk = requireComponents.nimbus.sdk,
-            crashReporter = requireComponents.analytics.crashReporter,
         )
         val store by fragmentStore(
             PrivacyPreferencesState(
                 crashReportingEnabled = repository.getPreference(PreferenceType.CrashReporting),
-                usageDataEnabled = repository.getPreference(PreferenceType.UsageData),
             ),
         ) {
             PrivacyPreferencesStore(
@@ -72,10 +68,6 @@ class ManagePrivacyPreferencesDialogFragment : DialogFragment() {
                     onCrashReportingLinkClick = {
                         store.dispatch(PrivacyPreferencesAction.CrashReportingLearnMore)
                         launchSandboxCustomTab(requireContext(), crashReportingUrl)
-                    },
-                    onUsageDataLinkClick = {
-                        store.dispatch(PrivacyPreferencesAction.UsageDataUserLearnMore)
-                        launchSandboxCustomTab(requireContext(), usageDataUrl)
                     },
                 )
             }

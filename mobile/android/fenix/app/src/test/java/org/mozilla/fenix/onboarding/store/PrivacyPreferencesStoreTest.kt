@@ -21,7 +21,6 @@ class PrivacyPreferencesStoreTest {
         store.dispatch(PrivacyPreferencesAction.Init)
         assertEquals(state, store.state)
         assertFalse(state.crashReportingEnabled)
-        assertTrue(state.usageDataEnabled)
     }
 
     @Test
@@ -37,46 +36,16 @@ class PrivacyPreferencesStoreTest {
     }
 
     @Test
-    fun `WHEN the usage data updated action is dispatched THEN the state is updated to match`() {
-        val store = PrivacyPreferencesStore(initialState = PrivacyPreferencesState())
-        assertTrue(store.state.usageDataEnabled)
-
-        store.dispatch(PrivacyPreferencesAction.UsageDataPreferenceUpdatedTo(false))
-        assertFalse(store.state.usageDataEnabled)
-
-        store.dispatch(PrivacyPreferencesAction.UsageDataPreferenceUpdatedTo(true))
-        assertTrue(store.state.usageDataEnabled)
-    }
-
-    @Test
-    fun `WHEN the usage data learn more action is dispatched THEN the state is unchanged`() {
-        val state = PrivacyPreferencesState()
-        val store = PrivacyPreferencesStore(initialState = state)
-
-        assertEquals(state, store.state)
-        assertFalse(state.crashReportingEnabled)
-        assertTrue(state.usageDataEnabled)
-
-        store.dispatch(PrivacyPreferencesAction.UsageDataUserLearnMore)
-
-        assertEquals(state, store.state)
-        assertFalse(state.crashReportingEnabled)
-        assertTrue(state.usageDataEnabled)
-    }
-
-    @Test
     fun `WHEN the crash reporting learn more action is dispatched THEN the state is unchanged`() {
         val state = PrivacyPreferencesState()
         val store = PrivacyPreferencesStore(initialState = state)
 
         assertEquals(state, store.state)
         assertFalse(state.crashReportingEnabled)
-        assertTrue(state.usageDataEnabled)
 
         store.dispatch(PrivacyPreferencesAction.CrashReportingLearnMore)
 
         assertEquals(state, store.state)
         assertFalse(state.crashReportingEnabled)
-        assertTrue(state.usageDataEnabled)
     }
 }

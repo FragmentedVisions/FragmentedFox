@@ -30,25 +30,6 @@ class PrivacyPreferencesMiddlewareTest {
     }
 
     @Test
-    fun `WHEN data usage update action is invoked THEN new value is set in repository`() {
-        var dataUsageEnabled = true
-        val middleware = PrivacyPreferencesMiddleware(
-            repository = object : PrivacyPreferencesRepository {
-                override fun getPreference(type: PreferenceType) = false
-
-                override fun setPreference(type: PreferenceType, enabled: Boolean) {
-                    dataUsageEnabled = enabled
-                }
-            },
-        )
-
-        val updatedDataUsageEnabled = !dataUsageEnabled
-        middleware.invoke(store = mockk(), {}, PrivacyPreferencesAction.UsageDataPreferenceUpdatedTo(enabled = updatedDataUsageEnabled))
-
-        assertEquals(updatedDataUsageEnabled, dataUsageEnabled)
-    }
-
-    @Test
     fun `WHEN crash reporting update action is invoked THEN new value is set in repository`() {
         var crashReportEnabled = true
         val middleware = PrivacyPreferencesMiddleware(
@@ -62,17 +43,9 @@ class PrivacyPreferencesMiddlewareTest {
         )
 
         val updatedCrashReportEnabled = !crashReportEnabled
-        middleware.invoke(store = mockk(), {}, PrivacyPreferencesAction.UsageDataPreferenceUpdatedTo(enabled = updatedCrashReportEnabled))
+        middleware.invoke(store = mockk(), {}, PrivacyPreferencesAction.CrashReportingPreferenceUpdatedTo(enabled = updatedCrashReportEnabled))
 
         assertEquals(updatedCrashReportEnabled, crashReportEnabled)
-    }
-
-    @Test
-    fun `GIVEN usage data learn more called WHEN middleware is invoked THEN the repo is unchanged`() {
-        val action = PrivacyPreferencesAction.UsageDataUserLearnMore
-        middleware.invoke(store = mockk(), {}, action)
-
-        confirmVerified(repository)
     }
 
     @Test

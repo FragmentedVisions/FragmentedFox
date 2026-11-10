@@ -33,26 +33,9 @@ class PrivacyPreferencesTelemetryMiddleware(
                     ),
                 )
 
-            is PrivacyPreferencesAction.UsageDataPreferenceUpdatedTo ->
-                Onboarding.privacyPreferencesModalUsageDataEnabled.record(
-                    Onboarding.PrivacyPreferencesModalUsageDataEnabledExtra(
-                        onboardingReason = OnboardingReason.NEW_USER.value,
-                        value = action.enabled,
-                        installSource = installSource,
-                    ),
-                )
-
             is PrivacyPreferencesAction.CrashReportingLearnMore ->
                 Onboarding.privacyPreferencesModalCrashReportingLearnMore.record(
                     extra = Onboarding.PrivacyPreferencesModalCrashReportingLearnMoreExtra(
-                        onboardingReason = OnboardingReason.NEW_USER.value,
-                        installSource = installSource,
-                    ),
-                )
-
-            is PrivacyPreferencesAction.UsageDataUserLearnMore ->
-                Onboarding.privacyPreferencesModalUsageDataLearnMore.record(
-                    extra = Onboarding.PrivacyPreferencesModalUsageDataLearnMoreExtra(
                         onboardingReason = OnboardingReason.NEW_USER.value,
                         installSource = installSource,
                     ),

@@ -1,6 +1,6 @@
 # Telemetry and what the app can send
 
-FragmentedFox is built without Mozilla's telemetry (`TELEMETRY` is off in `build.gradle`). The Settings switches for it still exist, but they cannot make the app upload anything. This page records how that is enforced and one leak that was found and fixed.
+FragmentedFox is built without Mozilla's telemetry (`TELEMETRY` is off in `build.gradle`). The Settings and first-run screens no longer have switches for usage or technical data, and nothing in the app can make it upload. This page records how that is enforced and one leak that was found and fixed.
 
 ## What is blocked, and where
 
@@ -33,6 +33,6 @@ Reviewed pings that ignore the collection setting: `onboarding-opt-out` (gated, 
 
 If the check reports a new ping, find out where it is submitted, make sure that code only runs when `BuildConfig.TELEMETRY` is on, and then add the ping to `REVIEWED_UNCONDITIONAL_PINGS` in `check-fork.py` and to the list above.
 
-## Still possible by user choice
+## Nothing left to turn on
 
-Turning on "Usage and technical data" in Settings starts Mozilla's experiments (Nimbus) over Remote Settings. It does not upload telemetry. See [changes](./changes.md) for the open question about hiding these switches.
+The switches that used to start Mozilla's experiments (Nimbus) over Remote Settings, "Usage and technical data", "daily usage" and the Studies screen, are deleted, so no setting can start them. The `isTelemetryEnabled` and `isDailyUsagePingEnabled` preferences still exist in `Settings.kt` and default to the values the guards above expect.

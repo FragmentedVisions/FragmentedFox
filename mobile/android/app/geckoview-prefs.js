@@ -411,3 +411,6 @@ pref("security.ssl3.ecdhe_ecdsa_aes_256_sha", false);
 
 // Turn off TLS 1.3 early data (0-RTT), which a network attacker can replay
 pref("security.tls.enable_0rtt_data", false);
+
+// Refuse servers that do not support secure renegotiation (RFC 5746)
+pref("security.ssl.require_safe_negotiation", true);

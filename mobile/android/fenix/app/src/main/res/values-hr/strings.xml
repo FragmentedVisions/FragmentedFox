@@ -464,9 +464,6 @@
   <!-- Button text to reopen firefox after the crash is processed %s is the name of the app (for example "Firefox") -->
   <string name="startup_crash_restart">Ponovo otvori %s</string>
   <!-- Title for the usage data option in the privacy preferences dialog shown during onboarding. Note: The word "Mozilla" should NOT be translated. -->
-  <string name="onboarding_preferences_dialog_usage_data_title" tools:ignore="BrandUsage">Šalji tehničke podatke i podatke o interakciji Mozilli</string>
-  <string name="onboarding_preferences_dialog_usage_data_description_2" tools:ignore="BrandUsage">Podaci o tvom uređaju, hardverskoj konfiguraciji i načinu na koji koristiš Firefox pomažu poboljšati funkcije, performansu i stabilnost za sve.</string>
-  <string name="onboarding_preferences_dialog_usage_data_learn_more_2">Saznaj više</string>
   <!-- Positive button label for the privacy preferences dialog shown during onboarding. -->
   <string name="onboarding_preferences_dialog_positive_button">Gotovo</string>
   <!-- Terms of service onboarding title card label. 'Firefox' intentionally hardcoded here -->
@@ -2529,7 +2526,6 @@
   <!-- Text shown on the trackers blocked card when no trackers have been blocked yet -->
   <string name="trackers_blocked_empty">Zaštićen/a si</string>
   <!-- Text shown below the trackers blocked card with typing animation -->
-  <string name="help_catch_trackers">Pomogni u hvatanju programa za praćenje</string>
   <!-- Preference for enhanced tracking protection for the standard protection settings -->
   <string name="preference_enhanced_tracking_protection_standard_default_1">Standardno (zadano)</string>
   <!-- Preference description for enhanced tracking protection for the standard protection settings -->

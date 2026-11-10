@@ -296,7 +296,6 @@
   <string name="onboarding_preferences_dialog_crash_reporting_title">බිඳවැටුම් වාර්තා ස්වයංක්‍රීයව යවන්න</string>
   <!-- Learn more link for the crash reporting option in the privacy preferences dialog shown during onboarding. -->
   <string name="onboarding_preferences_dialog_crash_reporting_learn_more_2">තව දැනගන්න</string>
-  <string name="onboarding_preferences_dialog_usage_data_learn_more_2">තව දැනගන්න</string>
   <!-- Positive button label for the privacy preferences dialog shown during onboarding. -->
   <string name="onboarding_preferences_dialog_positive_button">අහවරයි</string>
   <!-- Terms of service onboarding title card label. 'Firefox' intentionally hardcoded here -->

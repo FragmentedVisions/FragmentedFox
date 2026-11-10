@@ -243,7 +243,6 @@
   <string name="startup_crash_negative">آ خا منت واری</string>
   <!-- Button text to reopen firefox after the crash is processed %s is the name of the app (for example "Firefox") -->
   <string name="startup_crash_restart">ولدا مل %s</string>
-  <string name="onboarding_preferences_dialog_usage_data_learn_more_2">پین ہیل کبو</string>
   <!-- Positive button label for the privacy preferences dialog shown during onboarding. -->
   <string name="onboarding_preferences_dialog_positive_button">مس</string>
   <!-- Terms of service onboarding title card label. 'Firefox' intentionally hardcoded here -->

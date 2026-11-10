@@ -20,7 +20,6 @@ import androidx.compose.ui.unit.dp
 import mozilla.components.compose.base.utils.ColorStop
 import mozilla.components.compose.base.utils.LinearGradientBrush
 import mozilla.components.ui.colors.FragmentedFoxColors
-import mozilla.components.ui.colors.NovaColors
 
 private const val CFR_GRADIENT_ANGLE = 135f
 private const val ACCENT_GRADIENT_ANGLE = 96f

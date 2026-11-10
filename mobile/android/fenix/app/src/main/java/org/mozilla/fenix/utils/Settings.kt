@@ -882,6 +882,22 @@ class Settings(
     )
 
     /**
+     * Indicates if only the selected tab and the most recently used other tab stay active.
+     */
+    var limitBackgroundTabs by booleanPreference(
+        appContext.getPreferenceKey(R.string.pref_key_limit_background_tabs),
+        default = true,
+    )
+
+    /**
+     * Indicates if tabs that are playing media stay active when [limitBackgroundTabs] is on.
+     */
+    var keepMediaTabsActive by booleanPreference(
+        appContext.getPreferenceKey(R.string.pref_key_keep_media_tabs_active),
+        default = false,
+    )
+
+    /**
      * Indicates if the user has completed successfully first translation.
      */
     var showFirstTimeTranslation: Boolean by booleanPreference(

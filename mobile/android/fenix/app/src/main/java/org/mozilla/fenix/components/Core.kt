@@ -392,6 +392,10 @@ class Core(
                 HistoryMetadataMiddleware(historyMetadataService),
                 ProtectionsDashboardMiddleware(protectionsStorage),
                 SessionPrioritizationMiddleware(),
+                BackgroundTabsLimitMiddleware(
+                    isEnabled = { context.components.settings.limitBackgroundTabs },
+                    keepMediaTabsActive = { context.components.settings.keepMediaTabsActive },
+                ),
                 SaveToPDFMiddleware(context),
                 FxSuggestFactsMiddleware(),
                 FileUploadsDirCleanerMiddleware(fileUploadsDirCleaner),

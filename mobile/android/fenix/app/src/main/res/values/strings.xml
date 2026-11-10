@@ -1315,6 +1315,16 @@
     <!-- Category header of a preference that allows a user to enable or disable the inactive tabs feature -->
     <string name="preferences_inactive_tabs">Move old tabs to inactive</string>
     <!-- Title of inactive tabs preference -->
+    <!-- Header for the settings that limit how many tabs stay running in the background -->
+    <string name="preferences_background_tabs">Background tabs</string>
+    <!-- Title of the switch that keeps only the two most recent tabs running -->
+    <string name="preferences_limit_background_tabs_title">Keep only the 2 latest tabs active</string>
+    <!-- Summary of the switch that keeps only the two most recent tabs running -->
+    <string name="preferences_limit_background_tabs_summary">Older tabs are shut down and reload when you open them. They run no scripts and make no connections in the meantime.</string>
+    <!-- Title of the switch that lets tabs playing media keep running -->
+    <string name="preferences_keep_media_tabs_active_title">Keep tabs playing media active</string>
+    <!-- Summary of the switch that lets tabs playing media keep running -->
+    <string name="preferences_keep_media_tabs_active_summary">A tab that is playing sound or video keeps running after you switch away from it.</string>
     <string name="preferences_inactive_tabs_title">Tabs you haven’t viewed for two weeks get moved to the inactive section.</string>
 
     <!-- Studies -->

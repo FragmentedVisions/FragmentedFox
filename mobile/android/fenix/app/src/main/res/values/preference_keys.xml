@@ -419,6 +419,8 @@
     <string name="pref_key_camera_permissions_needed" translatable="false">pref_key_camera_permissions_needed</string>
     <string name="pref_key_inactive_tabs_category" translatable="false">pref_key_inactive_tabs_category</string>
     <string name="pref_key_inactive_tabs" translatable="false">pref_key_inactive_tabs</string>
+    <string name="pref_key_limit_background_tabs" translatable="false">pref_key_limit_background_tabs</string>
+    <string name="pref_key_keep_media_tabs_active" translatable="false">pref_key_keep_media_tabs_active</string>
 
     <string name="pref_key_return_to_browser" translatable="false">pref_key_return_to_browser</string>
     <string name="pref_key_show_menu_banner" translatable="false">pref_key_show_menu_banner</string>

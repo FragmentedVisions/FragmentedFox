@@ -58,6 +58,24 @@
             android:title="@string/preferences_inactive_tabs_title"/>
     </androidx.preference.PreferenceCategory>
 
+    <androidx.preference.PreferenceCategory
+        android:layout="@layout/preference_cat_style"
+        android:title="@string/preferences_background_tabs"
+        app:allowDividerAbove="true"
+        app:iconSpaceReserved="false">
+        <SwitchPreferenceCompat
+            android:defaultValue="true"
+            android:key="@string/pref_key_limit_background_tabs"
+            android:summary="@string/preferences_limit_background_tabs_summary"
+            android:title="@string/preferences_limit_background_tabs_title" />
+
+        <SwitchPreferenceCompat
+            android:defaultValue="false"
+            android:key="@string/pref_key_keep_media_tabs_active"
+            android:summary="@string/preferences_keep_media_tabs_active_summary"
+            android:title="@string/preferences_keep_media_tabs_active_title" />
+    </androidx.preference.PreferenceCategory>
+
     <androidx.preference.SwitchPreferenceCompat
         android:defaultValue="true"
         android:key="@string/pref_key_privacy_report_tab_manager"

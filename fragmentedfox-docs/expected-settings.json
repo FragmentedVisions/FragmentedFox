@@ -3,6 +3,8 @@
   "shouldUseHttpsOnly": "true",
   "shouldUseHttpsOnlyInAllTabs": "true",
   "showContileFeature": "false",
+  "limitBackgroundTabs": "true",
+  "keepMediaTabsActive": "false",
   "trrMode": "DOH_SETTINGS_INCREASED",
   "dohProviderUrl": "QUAD9_URI",
   "toolbarSimpleShortcutKey": "{ ShortcutType.NONE.value }"

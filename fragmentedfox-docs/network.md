@@ -62,7 +62,7 @@ Several desktop prefs in `all.js` name Google or Mozilla URLs, such as the geolo
 
 ## TLS versions and ciphers
 
-TLS 1.2 is the oldest version accepted and TLS 1.3 is preferred, as in Mozilla. SSL and TLS 1.0 and 1.1 are not accepted. In TLS 1.2 the Android app only offers ECDHE key exchange with AES-GCM or ChaCha20: 3DES, static RSA and CBC ciphers are turned off in `geckoview-prefs.js` (the prefs are named `security.ssl3.*` for historical reasons). A site that offers nothing else fails with a connection error. This is stricter than Mozilla and not tried on real sites yet. `check-fork.py` checks the eight prefs; the reasons and how to allow a cipher again are in [changes](./changes.md).
+TLS 1.2 is the oldest version accepted and TLS 1.3 is preferred, as in Mozilla. SSL and TLS 1.0 and 1.1 are not accepted. In TLS 1.2 the Android app only offers ECDHE key exchange with AES-GCM or ChaCha20: 3DES, static RSA and CBC ciphers are turned off in `geckoview-prefs.js` (the prefs are named `security.ssl3.*` for historical reasons). A site that offers nothing else fails with a connection error. This is stricter than Mozilla. It is in build 28 (commit `785f561242`), in daily use without connection problems so far. `check-fork.py` checks the eight prefs; the reasons and how to allow a cipher again are in [changes](./changes.md).
 
 ## Keeping this true
 

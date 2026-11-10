@@ -10,7 +10,7 @@ FragmentedFox is a private, independent fork of the Firefox browser from [Fragme
 
 ## Status
 
-Early and experimental. The Android app builds on GitHub Actions into a signed APK that installs and runs on a phone. It has had only light testing. The latest build (commit `08afc0a2e5`) passed and was checked on a phone. It has one known minor bug, listed under known gaps in [changes](./fragmentedfox-docs/changes.md).
+Early and experimental. The Android app builds on GitHub Actions into a signed APK that installs and runs on a phone. It has had only light testing. The latest build (build 28, commit `785f561242`) passed and is in daily use on a phone. It has one known minor bug, listed under known gaps in [changes](./fragmentedfox-docs/changes.md).
 
 | Platform | Status |
 | --- | --- |
@@ -28,7 +28,7 @@ FragmentedFox follows Mozilla's [Extended Support Release](https://support.mozil
 - Sponsored content on the new tab page, Pocket recommendations on Android, sponsored tiles and the VPN, pin and Firefox Focus promos are off.
 - Captive portal and connectivity checks, link prefetching and remote download checks are off.
 - HTTPS-Only mode is on, and DNS is encrypted by default (Quad9, falling back to normal DNS).
-- TLS 1.2 connections only use ciphers with forward secrecy and authenticated encryption (ECDHE with AES-GCM or ChaCha20). 3DES, static RSA and CBC ciphers are off, so a few older sites that offer nothing else will not connect. This is not built or tried on sites yet. See [changes](./fragmentedfox-docs/changes.md).
+- TLS 1.2 connections only use ciphers with forward secrecy and authenticated encryption (ECDHE with AES-GCM or ChaCha20). 3DES, static RSA and CBC ciphers are off, so a few older sites that offer nothing else will not connect. It is in build 28 (commit `785f561242`), which is in daily use. See [changes](./fragmentedfox-docs/changes.md).
 - WebRTC is left out of the build and switched off in the prefs.
 - On first run the Android app offers to install uBlock Origin and Privacy Badger, and only does so if you accept.
 - Its own name, icons, wordmark, vendor (`FragmentedVisions`) and Android application ID (`com.fragmentedvisions.fragmentedfox`).
@@ -43,7 +43,7 @@ There are only two branches. All changes are made on `NonStable--test`, and buil
 
 | Branch | Purpose |
 | --- | --- |
-| `Stable-Main` | The default branch. The last state that was built and installed on a phone (commit `08afc0a2e5`, Android build run 23). Anything after that commit is documentation only. |
+| `Stable-Main` | The default branch. The last state that was built and installed on a phone (build 28, commit `785f561242`, Android build run 42578909699). Anything after that commit is documentation only. |
 | `NonStable--test` | Where all work happens. It includes everything in `Stable-Main` plus any newer changes. Right now it has no code changes that `Stable-Main` lacks. `Stable-Main` only moves up after a build of the new changes has been checked on a phone. |
 
 ## Building

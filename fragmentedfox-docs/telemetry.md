@@ -35,4 +35,4 @@ If the check reports a new ping, find out where it is submitted, make sure that 
 
 ## Nothing left to turn on
 
-The switches that used to start Mozilla's experiments (Nimbus) over Remote Settings, "Usage and technical data", "daily usage" and the Studies screen, are deleted, so no setting can start them. The `isTelemetryEnabled` and `isDailyUsagePingEnabled` preferences still exist in `Settings.kt` and default to the values the guards above expect.
+The switches that used to start Mozilla's experiments (Nimbus) over Remote Settings, "Usage and technical data", "daily usage" and the Studies screen, are deleted, so no setting can start them. The `isTelemetryEnabled` and `isDailyUsagePingEnabled` preferences still exist in `Settings.kt`; `check-fork.py` checks that `isTelemetryEnabled` defaults to false.

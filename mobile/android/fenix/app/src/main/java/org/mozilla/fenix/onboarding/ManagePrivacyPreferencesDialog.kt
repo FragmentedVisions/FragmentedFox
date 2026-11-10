@@ -222,6 +222,6 @@ private fun ManagePrivacyPreferencesDialogPreview(
     @PreviewParameter(PreviewThemeProvider::class) theme: Theme,
 ) {
     FirefoxTheme(theme) {
-        ManagePrivacyPreferencesDialog(PrivacyPreferencesStore(), {}, {}, {})
+        ManagePrivacyPreferencesDialog(PrivacyPreferencesStore(), {}, {})
     }
 }

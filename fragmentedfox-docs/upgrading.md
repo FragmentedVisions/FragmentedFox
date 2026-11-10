@@ -1,6 +1,13 @@
 # Upgrading to a new Mozilla ESR release
 
-FragmentedFox is a small set of commits on top of a Mozilla ESR release tag. Upgrading means moving those commits onto the new tag.
+FragmentedFox is built on a Mozilla ESR release tag. Upgrading means building the same tree on the new tag.
+
+FragmentedFox splits the tree in two when upgrading:
+
+- **App layer, ours:** `mobile/android/fenix`, `mobile/android/android-components`, the FragmentedFox branding folders, `fragmentedfox-docs` and `.github`. These are copied over from our branch unchanged. Mozilla's changes to them are not merged, so we can rewrite or delete anything here without making upgrades harder.
+- **Everything else, Mozilla's:** this comes from the new tag. The few files outside the app layer that we changed (prefs, branding hooks, build configuration, about 20 files) are merged three ways between the old base tag, our branch and the new tag.
+
+The old base tag is recorded in `fragmentedfox-docs/esr-base.txt`.
 
 1. Add Mozilla's repository once:
 
@@ -20,19 +27,19 @@ FragmentedFox is a small set of commits on top of a Mozilla ESR release tag. Upg
    git fetch --depth=1 mozilla tag FIREFOX_153_7_0esr_RELEASE --no-tags
    ```
 
-4. Create a branch from it and cherry-pick the FragmentedFox commits from the current branch:
+4. Build the upgrade branch from it:
 
    ```bash
-   git checkout -b upgrade-153-7 FETCH_HEAD
-   git cherry-pick <first-fragmentedfox-commit>^..NonStable--test
+   python3 .github/scripts/upgrade-esr.py FIREFOX_153_7_0esr_RELEASE --branch upgrade-153-7
    ```
 
-   The feature removals (VPN, SDKs, summarizer, review prompt) are commits too and come along with the range. Upstream changes to the files they delete will show up as modify/delete conflicts. Delete the file again and check nothing new references it.
-5. Fix any conflicts. Pref files change between releases, so when `firefox.js`, `all.js` or `brandings.ftl` conflict, take Mozilla's version and re-apply each value change by exact match. Check that every changed pref still exists.
-6. Re-apply the colours with `python3 .github/scripts/make-android-colors.py` (see [changes](./changes.md)). It rewrites Mozilla's colour files and fails loudly if one no longer looks the way it expects. Then run `python3 .github/scripts/check-fork.py`. Its telemetry check also fails if Mozilla added a ping that ignores the collection setting; see [telemetry](./telemetry.md) before adding it to the reviewed list. After an upgrade it reports any pref or default that Mozilla changed under us, and any code that now points at something that moved. It also fails if a translated string has no default left, which happens when Mozilla adds translations for a string FragmentedFox removed: delete those entries. When the licence plugin, the fox artwork, the TLS cipher prefs or the sports widget removal conflict, re-apply them by the notes in [changes](./changes.md) and [licensing](./licensing.md). Then run the Android and Linux builds from the new branch and check the result.
-7. Prune `mobile/android/fenix/app/lint-baseline.xml` of entries whose file no longer exists, so it does not hide new warnings in moved code.
-8. Use the new branch as `NonStable--test`, and keep the old one until the new build is verified. Once a build from it succeeds and the app has been checked on a phone, move `Stable-Main` up to it.
+   The script prints how many files it merged and lists any with conflicts. Conflict markers are committed in those files: check out the branch, fix them and commit. It also writes the new tag into `esr-base.txt`. To test the script, run it against the current base tag with `--check`: it must report `tree equals ours: True`.
+5. Fix what Mozilla's new engine broke in the app layer. The app is not merged, so GeckoView or android-components API changes show up as build errors. Pref files change between releases too, so check that every pref in `expected-prefs.json` still exists. If Mozilla's new release adds translations for strings we removed, run `python3 .github/scripts/check-fork.py`: it fails on them, and the fix is to delete those entries.
+6. Look through Mozilla's changes to the app layer between the two tags (`git diff <old-tag> <new-tag> -- mobile/android/fenix mobile/android/android-components`) and bring over security fixes and other changes worth having by hand.
+7. Re-apply the colours with `python3 .github/scripts/make-android-colors.py` if Mozilla changed its colour files (see [changes](./changes.md)), then run `python3 .github/scripts/check-fork.py`. Its telemetry check also fails if Mozilla added a ping that ignores the collection setting; see [telemetry](./telemetry.md) before adding it to the reviewed list. Then run the Android and Linux builds from the new branch and check the result.
+8. Prune `mobile/android/fenix/app/lint-baseline.xml` of entries whose file no longer exists, so it does not hide new warnings in moved code.
+9. Use the new branch as `NonStable--test`, and keep the old one until the new build is verified. Once a build from it succeeds and the app has been checked on a phone, move `Stable-Main` up to it.
 
 Use only ESR release tags, not the moving `esr153` branch tip. Mozilla publishes security advisories for each release at https://www.mozilla.org/security/advisories/.
 
-When Mozilla moves ESR to a new major version (for example ESR 153 to the next one), expect larger conflicts in the Android app and the branding directories.
+When Mozilla moves ESR to a new major version (for example ESR 153 to the next one), expect more build errors in the app layer where GeckoView and android-components changed, and more three-way conflicts in the branding and configuration files.

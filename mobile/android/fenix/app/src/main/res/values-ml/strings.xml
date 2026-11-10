@@ -997,21 +997,14 @@
   <!-- Text displayed when there are no exceptions, with learn more link that brings users to a tracking protection SUMO page -->
   <string name="exceptions_empty_message_learn_more_link">കൂടുതല്‍ അറിയുക</string>
   <!-- Preference switch for usage and technical data collection -->
-  <string name="preference_usage_data_2">സാങ്കേതിയും ഇടപാടുനീയ ദത്ത അയയ്ക്കുക</string>
   <!-- Preference switch for usage and technical learn more link in new compose -->
-  <string name="preference_usage_data_learn_more_2">സാങ്കേതികദത്തയെപ്പറ്റി കൂടുതലറിയുക</string>
   <!-- Preference switch for daily usage ping data collection -->
-  <string name="preferences_daily_usage_ping_title">പ്രതിദിന ഉപയോഗ പിംഗ്</string>
-  <string name="preferences_daily_usage_ping_description" tools:ignore="BrandUsage">സജീവ ഉപയോക്താക്കളുടെ കണക്കെടുക്കാൻ ഇതു് മോസ്സില്ലയെ സഹായിക്കുന്നു.</string>
-  <string name="preferences_daily_usage_ping_learn_more">നാൾത്തോറ ഉപയോഗ പിംഗിനെ കുറിച്ച് കൂടുതലറിയുക</string>
   <!-- Title for the crash reporting option in the privacy preferences dialog shown during onboarding. -->
   <string name="crash_reporting_snack_bar_message">അറിയിപ്പയച്ചു</string>
   <!-- Text for sumo link to learn more about crash reports in data collection screen -->
   <string name="preferences_crashes_learn_more">തകർച്ചവിവരങ്ങളെക്കുറിച്ചു കൂടുതലറിയുക</string>
   <!-- Title Headers for data collection settings screen -->
   <string name="crash_reports_data_category">തകരാർ വിവരങ്ങൾ</string>
-  <string name="usage_data_category">ഉപയോഗ ഡാറ്റ</string>
-  <string name="technical_data_category">സാങ്കേതിക ഡാറ്റ</string>
   <string name="crash_reporting_description">തകൎച്ച റിപ്പോർട്ടുകൾ ഞങ്ങൾക്കു് അന്വേഷിയന്ത്രത്തിന്റെ കൂടെയുള്ള എല്ലാ പ്രശ്നങ്ങളെ കണ്ടുപിടിക്കാനും പരിഹരിക്കാനും സഹായിക്കുന്നു. റിപ്പോർട്ടുകളിൽ തനതായ അല്ലെങ്കിൽ സൂക്ഷിച്ചുവയ്ക്കാനുള്ള ദത്തയും ഉൾപ്പെടാം.</string>
   <!-- Learn more link for marketing data preference -->
   <!-- Title for studies preferences -->

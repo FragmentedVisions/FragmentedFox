@@ -1150,23 +1150,15 @@
   <!-- Text displayed when there are no exceptions, with learn more link that brings users to a tracking protection SUMO page -->
   <string name="exceptions_empty_message_learn_more_link">מידע נוסף</string>
   <!-- Preference switch for usage and technical data collection -->
-  <string name="preference_usage_data_2">שליחת נתונים טכניים ונתוני אינטראקציה</string>
   <!-- Preference switch for usage and technical learn more link in new compose -->
-  <string name="preference_usage_data_learn_more_2">מידע נוסף על נתונים טכניים</string>
   <!-- Preference description for marketing data collection. Note: The words "Firefox" should NOT be translated -->
-  <string name="preferences_usage_data_description_1" tools:ignore="BrandUsage">נתונים על המכשיר שלך, תצורת החומרה ואופן השימוש בדפדפן מסייעים לנו לשפר את היכולות, הביצועים והיציבות של Firefox.</string>
   <!-- Preference switch for daily usage ping data collection -->
-  <string name="preferences_daily_usage_ping_title">פינג שימוש יומי</string>
-  <string name="preferences_daily_usage_ping_description" tools:ignore="BrandUsage">זה מסייע ל־Mozilla להעריך כמה יש משתמשים פעילים.</string>
-  <string name="preferences_daily_usage_ping_learn_more">מידע נוסף על פינג שימוש יומי</string>
   <!-- Title for the crash reporting option in the privacy preferences dialog shown during onboarding. -->
   <string name="crash_reporting_snack_bar_message">הדיווח נשלח</string>
   <!-- Text for sumo link to learn more about crash reports in data collection screen -->
   <string name="preferences_crashes_learn_more">מידע נוסף על דיווחי קריסה</string>
   <!-- Title Headers for data collection settings screen -->
   <string name="crash_reports_data_category">דיווחי קריסה</string>
-  <string name="usage_data_category">נתוני שימוש</string>
-  <string name="technical_data_category">נתונים טכניים</string>
   <string name="crash_reporting_description">דיווחי קריסה מאפשרים לנו לאבחן ולתקן בעיות בדפדפן. דיווחים עשויים לכלול נתונים אישיים או רגישים.</string>
   <!-- Section title for campaign measurement in data collections screen -->
   <!-- Preference switch for campaign measurement data (marketing data) collection -->

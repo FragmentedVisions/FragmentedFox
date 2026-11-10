@@ -1148,23 +1148,15 @@
   <!-- Text displayed when there are no exceptions, with learn more link that brings users to a tracking protection SUMO page -->
   <string name="exceptions_empty_message_learn_more_link">Tìm hiểu thêm</string>
   <!-- Preference switch for usage and technical data collection -->
-  <string name="preference_usage_data_2">Gửi dữ liệu kỹ thuật và tương tác</string>
   <!-- Preference switch for usage and technical learn more link in new compose -->
-  <string name="preference_usage_data_learn_more_2">Tìm hiểu thêm về dữ liệu kỹ thuật</string>
   <!-- Preference description for marketing data collection. Note: The words "Firefox" should NOT be translated -->
-  <string name="preferences_usage_data_description_1" tools:ignore="BrandUsage">Dữ liệu về thiết bị, cấu hình phần cứng và cách sử dụng của bạn giúp chúng tôi cải thiện các tính năng, hiệu suất và độ ổn định của Firefox.</string>
   <!-- Preference switch for daily usage ping data collection -->
-  <string name="preferences_daily_usage_ping_title">Ping sử dụng hàng ngày</string>
-  <string name="preferences_daily_usage_ping_description" tools:ignore="BrandUsage">Điều này giúp Mozilla ước tính số người dùng đang hoạt động.</string>
-  <string name="preferences_daily_usage_ping_learn_more">Tìm hiểu thêm về ping sử dụng hàng ngày</string>
   <!-- Title for the crash reporting option in the privacy preferences dialog shown during onboarding. -->
   <string name="crash_reporting_snack_bar_message">Đã gửi báo cáo</string>
   <!-- Text for sumo link to learn more about crash reports in data collection screen -->
   <string name="preferences_crashes_learn_more">Tìm hiểu thêm về báo cáo sự cố</string>
   <!-- Title Headers for data collection settings screen -->
   <string name="crash_reports_data_category">Trình báo cáo lỗi</string>
-  <string name="usage_data_category">Dữ liệu sử dụng</string>
-  <string name="technical_data_category">Dữ liệu kỹ thuật</string>
   <string name="crash_reporting_description">Báo cáo sự cố cho phép chúng tôi chẩn đoán và khắc phục sự cố với trình duyệt. Báo cáo có thể bao gồm dữ liệu cá nhân hoặc dữ liệu nhạy cảm.</string>
   <!-- Section title for campaign measurement in data collections screen -->
   <!-- Preference switch for campaign measurement data (marketing data) collection -->

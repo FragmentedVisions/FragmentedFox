@@ -903,19 +903,12 @@
   <!-- Text displayed when there are no exceptions, with learn more link that brings users to a tracking protection SUMO page -->
   <string name="exceptions_empty_message_learn_more_link">Ne saber mai</string>
   <!-- Preference switch for usage and technical data collection -->
-  <string name="preference_usage_data_2">Enviar de dondas tecnicas e d’interaccion</string>
   <!-- Preference description for marketing data collection. Note: The words "Firefox" should NOT be translated -->
-  <string name="preferences_usage_data_description_1" tools:ignore="BrandUsage">Donadas a prepaus de vòstre aparelh, la configuracion materiala e l’utilizacion nos ajudan a melhorar las caracteristicas, la performança, e l’estabilitat de Firefox.</string>
   <!-- Preference switch for daily usage ping data collection -->
-  <string name="preferences_daily_usage_ping_title">Ping d’usatge jornalièr</string>
-  <string name="preferences_daily_usage_ping_description" tools:ignore="BrandUsage">Aquò ajuda a Mozilla a estimar los utilizaires actius.</string>
-  <string name="preferences_daily_usage_ping_learn_more">Ne saber mai tocant lo ping d’usatge jornalièr</string>
   <!-- Text for sumo link to learn more about crash reports in data collection screen -->
   <string name="preferences_crashes_learn_more">Ne saber mai suls rapòrts de plantatge</string>
   <!-- Title Headers for data collection settings screen -->
   <string name="crash_reports_data_category">Rapòrts de plantatge</string>
-  <string name="usage_data_category">Donadas d’utilizacion</string>
-  <string name="technical_data_category">Donadas tecnicas</string>
   <string name="crash_reporting_description">\u0020Los rapòrts de plantatge nos permeton de diagnosticar e de corregir de problèmas amb lo navegador. Los rapòrts pòdon conténer de donadas personalas o sensiblas.\u0020</string>
   <!-- Section title for campaign measurement in data collections screen -->
   <!-- Preference switch for campaign measurement data (marketing data) collection -->

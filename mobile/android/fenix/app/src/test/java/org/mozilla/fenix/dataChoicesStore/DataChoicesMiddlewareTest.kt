@@ -3,21 +3,14 @@ package org.mozilla.fenix.dataChoicesStore
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import io.mockk.coEvery
 import io.mockk.coVerify
-import io.mockk.every
 import io.mockk.mockk
-import io.mockk.verify
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.test.runTest
-import mozilla.components.concept.engine.Engine
-import mozilla.components.lib.crash.CrashReporter
 import mozilla.components.lib.crash.store.CrashReportOption
-import mozilla.components.service.nimbus.NimbusApi
 import org.junit.Assert.assertEquals
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
-import org.mozilla.fenix.components.metrics.MetricController
-import org.mozilla.fenix.components.metrics.MetricServiceType
 import org.mozilla.fenix.crashes.SettingsCrashReportCache
 import org.mozilla.fenix.settings.SupportUtils
 import org.mozilla.fenix.settings.datachoices.ChoiceAction
@@ -32,27 +25,16 @@ import org.mozilla.fenix.utils.Settings
 class DataChoicesMiddlewareTest {
 
     private lateinit var settings: Settings
-    private lateinit var nimbus: NimbusApi
-    private lateinit var engine: Engine
-    private lateinit var metrics: MetricController
     private lateinit var crashReportCache: SettingsCrashReportCache
-    private lateinit var crashReporter: CrashReporter
 
     @Before
     fun setup() {
         settings = mockk(relaxed = true)
-        nimbus = mockk(relaxed = true)
-        engine = mockk(relaxUnitFun = true)
-        metrics = mockk(relaxUnitFun = true)
         crashReportCache = mockk(relaxed = true)
-        crashReporter = mockk(relaxed = true)
     }
 
     @Test
     fun `when the view is created then the current state is loaded from cache`() = runTest {
-        every { settings.isTelemetryEnabled } returns false
-        every { settings.isDailyUsagePingEnabled } returns false
-        every { settings.isExperimentationEnabled } returns false
         coEvery { crashReportCache.getReportOption() } returns CrashReportOption.Auto
 
         val store = makeStore(this)
@@ -61,40 +43,7 @@ class DataChoicesMiddlewareTest {
 
         testScheduler.advanceUntilIdle()
 
-        assertEquals(false, store.state.telemetryEnabled)
-        assertEquals(false, store.state.usagePingEnabled)
         assertEquals(CrashReportOption.Auto, store.state.selectedCrashOption)
-    }
-
-    @Test
-    fun `when telemetry is clicked then telemetry and experimentation are toggled and components are notified`() =
-        runTest {
-            every { settings.isTelemetryEnabled } returns true
-            every { settings.isExperimentationEnabled } returns true
-
-            val store = makeStore(this)
-
-            store.dispatch(ChoiceAction.TelemetryClicked)
-
-            verify { settings.isTelemetryEnabled = false }
-            assertEquals(false, store.state.telemetryEnabled)
-            verify { settings.isExperimentationEnabled = false }
-            verify { metrics.stop(MetricServiceType.Data) }
-            verify { crashReporter.setTelemetryEnabled(false) }
-            verify { nimbus.resetTelemetryIdentifiers() }
-            verify { engine.notifyTelemetryPrefChanged(false) }
-        }
-
-    @Test
-    fun `when usage ping is clicked then daily usage ping is toggled`() = runTest {
-        every { settings.isDailyUsagePingEnabled } returns true
-        val store = makeStore(this)
-
-        store.dispatch(ChoiceAction.UsagePingClicked)
-
-        verify { settings.isDailyUsagePingEnabled = false }
-        assertEquals(false, store.state.usagePingEnabled)
-        verify { metrics.stop(MetricServiceType.UsageReporting) }
     }
 
     @Test
@@ -115,14 +64,8 @@ class DataChoicesMiddlewareTest {
             var invokedTopic: SupportUtils.SumoTopic? = null
             val store = makeStore(scope = this) { topic -> invokedTopic = topic }
 
-            store.dispatch(LearnMore.TelemetryLearnMoreClicked)
-            assertEquals(SupportUtils.SumoTopic.TECHNICAL_AND_INTERACTION_DATA, invokedTopic)
-
             store.dispatch(LearnMore.CrashLearnMoreClicked)
             assertEquals(SupportUtils.SumoTopic.CRASH_REPORTS, invokedTopic)
-
-            store.dispatch(LearnMore.UsagePingLearnMoreClicked)
-            assertEquals(SupportUtils.SumoTopic.USAGE_PING_SETTINGS, invokedTopic)
         }
 
     private fun makeStore(
@@ -134,10 +77,6 @@ class DataChoicesMiddlewareTest {
             DataChoicesMiddleware(
                 settings = settings,
                 learnMoreClicked = learnMoreClicked,
-                nimbusSdk = nimbus,
-                engine = engine,
-                metrics = metrics,
-                crashReporter = crashReporter,
                 crashReportCache = crashReportCache,
                 scope = scope,
             ),

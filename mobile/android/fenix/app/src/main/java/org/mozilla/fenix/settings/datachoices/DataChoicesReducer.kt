@@ -5,14 +5,6 @@
 package org.mozilla.fenix.settings.datachoices
 
 internal fun dataChoicesReducer(state: DataChoicesState, action: DataChoicesAction) = when (action) {
-    is ChoiceAction.TelemetryClicked -> {
-        state.copy(
-            telemetryEnabled = !state.telemetryEnabled,
-        )
-    }
-    is ChoiceAction.UsagePingClicked -> {
-        state.copy(usagePingEnabled = !state.usagePingEnabled)
-    }
     is ChoiceAction.ReportOptionClicked -> {
         state.copy(selectedCrashOption = action.reportOption)
     }
@@ -21,13 +13,9 @@ internal fun dataChoicesReducer(state: DataChoicesState, action: DataChoicesActi
     }
     is SettingsLoaded ->
         state.copy(
-            telemetryEnabled = action.telemetryEnabled,
-            usagePingEnabled = action.usagePingEnabled,
             selectedCrashOption = action.crashReportOption,
         )
     LearnMore.CrashLearnMoreClicked,
-    LearnMore.TelemetryLearnMoreClicked,
-    LearnMore.UsagePingLearnMoreClicked,
     is ViewCreated,
     -> { state }
 }

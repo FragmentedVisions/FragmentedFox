@@ -545,13 +545,8 @@
   <!-- Text displayed when there are no exceptions, with learn more link that brings users to a tracking protection SUMO page -->
   <string name="exceptions_empty_message_learn_more_link">Rohkem teavet</string>
   <!-- Preference switch for usage and technical data collection -->
-  <string name="preference_usage_data_2">Saadetakse tehnilisi ja interaktsiooniandmeid</string>
   <!-- Preference description for marketing data collection. Note: The words "Firefox" should NOT be translated -->
-  <string name="preferences_usage_data_description_1" tools:ignore="BrandUsage">Andmed sinu seadme, riistvara konfiguratsiooni ja kasutuse kohta aitavad meil Firefoxi funktsioone, jõudlust ja stabiilsust täiustada.</string>
   <!-- Preference switch for daily usage ping data collection -->
-  <string name="preferences_daily_usage_ping_title">Igapäevane kasutusping</string>
-  <string name="preferences_daily_usage_ping_description" tools:ignore="BrandUsage">See aitab Mozillal aktiivsete kasutajate arvu \u0020hinnata.</string>
-  <string name="preferences_daily_usage_ping_learn_more">Rohkem teavet igapäevasest kasutuspingust</string>
   <!-- Title for studies preferences -->
   <!-- Summary for studies preferences -->
   <!-- Preference for reconnecting to FxA sync -->

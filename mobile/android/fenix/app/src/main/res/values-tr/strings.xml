@@ -1149,23 +1149,15 @@
   <!-- Text displayed when there are no exceptions, with learn more link that brings users to a tracking protection SUMO page -->
   <string name="exceptions_empty_message_learn_more_link">Daha fazla bilgi al</string>
   <!-- Preference switch for usage and technical data collection -->
-  <string name="preference_usage_data_2">Teknik verileri ve etkileşim verilerini gönder</string>
   <!-- Preference switch for usage and technical learn more link in new compose -->
-  <string name="preference_usage_data_learn_more_2">Teknik veriler hakkında daha fazla bilgi alın</string>
   <!-- Preference description for marketing data collection. Note: The words "Firefox" should NOT be translated -->
-  <string name="preferences_usage_data_description_1" tools:ignore="BrandUsage">Cihazınız, donanım yapılandırmanız ve kullanımınızla ilgili veriler Firefox’un özelliklerini, performansını ve kararlılığını geliştirmemize yardımcı olur.</string>
   <!-- Preference switch for daily usage ping data collection -->
-  <string name="preferences_daily_usage_ping_title">Günlük kullanım ping’i</string>
-  <string name="preferences_daily_usage_ping_description" tools:ignore="BrandUsage">Bu sayede Mozilla aktif kullanıcı sayısını tahmin edebilir.</string>
-  <string name="preferences_daily_usage_ping_learn_more">Günlük kullanım ping’i hakkında bilgi alın</string>
   <!-- Title for the crash reporting option in the privacy preferences dialog shown during onboarding. -->
   <string name="crash_reporting_snack_bar_message">Rapor gönderildi</string>
   <!-- Text for sumo link to learn more about crash reports in data collection screen -->
   <string name="preferences_crashes_learn_more">Çökme raporları hakkında bilgi alın</string>
   <!-- Title Headers for data collection settings screen -->
   <string name="crash_reports_data_category">Çökme raporları</string>
-  <string name="usage_data_category">Kullanım verileri</string>
-  <string name="technical_data_category">Teknik veriler</string>
   <string name="crash_reporting_description">Çökme raporları tarayıcıyla ilgili sorunları tanılayıp düzeltmemizi sağlar. Raporlar kişisel veya hassas veriler içerebilir.</string>
   <!-- Section title for campaign measurement in data collections screen -->
   <!-- Preference switch for campaign measurement data (marketing data) collection -->

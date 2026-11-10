@@ -837,18 +837,13 @@
   <!-- Text displayed when there are no exceptions, with learn more link that brings users to a tracking protection SUMO page -->
   <string name="exceptions_empty_message_learn_more_link">ស្វែងយល់​បន្ថែម</string>
   <!-- Preference switch for usage and technical data collection -->
-  <string name="preference_usage_data_2">ផ្ញើទិន្នន័យបច្ចេកទេស និងអន្តរកម្ម</string>
   <!-- Preference switch for usage and technical learn more link in new compose -->
-  <string name="preference_usage_data_learn_more_2">សស្វែងយល់បន្ថែមអំពីទិន្នន័យបច្ចេកទេស</string>
-  <string name="preferences_daily_usage_ping_learn_more">ស្វែងយល់បន្ថែមអំពីការប្រើប្រាស់ភីងប្រចាំថ្ងៃ</string>
   <!-- Title for the crash reporting option in the privacy preferences dialog shown during onboarding. -->
   <string name="crash_reporting_snack_bar_message">ផ្ញើរាយការណ៍</string>
   <!-- Text for sumo link to learn more about crash reports in data collection screen -->
   <string name="preferences_crashes_learn_more">ស្វែងយល់បន្ថែមអំពីរបាយការណ៍គាំង</string>
   <!-- Title Headers for data collection settings screen -->
   <string name="crash_reports_data_category">របាយការណ៍​គាំង</string>
-  <string name="usage_data_category">ទិន្នន័យនៃការប្រើប្រាស់</string>
-  <string name="technical_data_category">ទិន្នន័យបច្ចេកទេស</string>
   <!-- Learn more link for marketing data preference -->
   <!-- Title for studies preferences -->
   <!-- Summary for studies preferences -->

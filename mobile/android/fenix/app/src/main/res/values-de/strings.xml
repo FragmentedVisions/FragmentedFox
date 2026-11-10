@@ -1149,23 +1149,15 @@
   <!-- Text displayed when there are no exceptions, with learn more link that brings users to a tracking protection SUMO page -->
   <string name="exceptions_empty_message_learn_more_link">Weitere Informationen</string>
   <!-- Preference switch for usage and technical data collection -->
-  <string name="preference_usage_data_2">Technische Daten und Interaktionsdaten senden</string>
   <!-- Preference switch for usage and technical learn more link in new compose -->
-  <string name="preference_usage_data_learn_more_2">Weitere Informationen zu technischen Daten</string>
   <!-- Preference description for marketing data collection. Note: The words "Firefox" should NOT be translated -->
-  <string name="preferences_usage_data_description_1" tools:ignore="BrandUsage">Daten über Ihr Gerät, Hardware-Konfiguration und Nutzung helfen uns, Funktionen, Leistung und Stabilität von Firefox zu verbessern.</string>
   <!-- Preference switch for daily usage ping data collection -->
-  <string name="preferences_daily_usage_ping_title">Täglicher Nutzungs-Ping</string>
-  <string name="preferences_daily_usage_ping_description" tools:ignore="BrandUsage">Dies hilft Mozilla, aktive Benutzer zu schätzen.</string>
-  <string name="preferences_daily_usage_ping_learn_more">Erfahren Sie mehr über den täglichen Nutzungs-Ping</string>
   <!-- Title for the crash reporting option in the privacy preferences dialog shown during onboarding. -->
   <string name="crash_reporting_snack_bar_message">Bericht gesendet</string>
   <!-- Text for sumo link to learn more about crash reports in data collection screen -->
   <string name="preferences_crashes_learn_more">Weitere Informationen über Absturzberichte</string>
   <!-- Title Headers for data collection settings screen -->
   <string name="crash_reports_data_category">Absturzberichte</string>
-  <string name="usage_data_category">Nutzungsdaten</string>
-  <string name="technical_data_category">Technische Daten</string>
   <string name="crash_reporting_description">Absturzberichte ermöglichen es uns, Probleme mit dem Browser zu diagnostizieren und zu beheben. Die Meldungen können persönliche oder sensible Daten enthalten.</string>
   <!-- Section title for campaign measurement in data collections screen -->
   <!-- Preference switch for campaign measurement data (marketing data) collection -->

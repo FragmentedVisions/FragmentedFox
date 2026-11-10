@@ -1023,16 +1023,6 @@
     <string name="exceptions_empty_message_description">Exceptions let you disable tracking protection for selected sites.</string>
     <!-- Text displayed when there are no exceptions, with learn more link that brings users to a tracking protection SUMO page -->
     <string name="exceptions_empty_message_learn_more_link">Learn more</string>
-    <!-- Preference switch for usage and technical data collection -->
-    <string name="preference_usage_data_2">Send technical and interaction data</string>
-    <!-- Preference switch for usage and technical learn more link in new compose -->
-    <string name="preference_usage_data_learn_more_2">Learn more about technical data</string>
-    <!-- Preference description for marketing data collection. Note: The words "Firefox" should NOT be translated -->
-    <string name="preferences_usage_data_description_1" tools:ignore="BrandUsage">Data about your device, hardware configuration, and usage helps us improve Firefox features, performance, and stability.</string>
-    <!-- Preference switch for daily usage ping data collection -->
-    <string name="preferences_daily_usage_ping_title">Daily usage ping</string>
-    <string name="preferences_daily_usage_ping_description">This helps Mozilla to estimate active users.</string>
-    <string name="preferences_daily_usage_ping_learn_more">Learn more about daily usage ping</string>
 
     <!-- Title for the crash reporting option in the privacy preferences dialog shown during onboarding. -->
     <string name="crash_reporting_snack_bar_message">Report sent</string>
@@ -1041,8 +1031,6 @@
 
     <!-- Title Headers for data collection settings screen -->
     <string name="crash_reports_data_category">Crash Reports</string>
-    <string name="usage_data_category">Usage data</string>
-    <string name="technical_data_category">Technical Data</string>
 
     <string name="crash_reporting_description">Crash reports allow us to diagnose and fix issues with the browser. Reports may include personal or sensitive data.</string>
 

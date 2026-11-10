@@ -1122,23 +1122,15 @@
   <!-- Text displayed when there are no exceptions, with learn more link that brings users to a tracking protection SUMO page -->
   <string name="exceptions_empty_message_learn_more_link">تەپسىلاتى</string>
   <!-- Preference switch for usage and technical data collection -->
-  <string name="preference_usage_data_2">تېخنىكىلىق ۋە تەسىرلىشىش سانلىق مەلۇماتىنى يوللايدۇ</string>
   <!-- Preference switch for usage and technical learn more link in new compose -->
-  <string name="preference_usage_data_learn_more_2">تېخنىكىلىق سانلىق مەلۇمات ھەققىدىكى مول بىلىم</string>
   <!-- Preference description for marketing data collection. Note: The words "Firefox" should NOT be translated -->
-  <string name="preferences_usage_data_description_1" tools:ignore="BrandUsage">ئۈسكۈنە، قاتتىق دېتال سەپلىمىسى ۋە ئىشلىتىش ھەققىدىكى سانلىق مەلۇمات، Firefox نىڭ ئىقتىدارى، ئۈنۈمى ۋە مۇقىملىقىنى ياخشىلىشىمىزغا ياردەم بېرىدۇ.</string>
   <!-- Preference switch for daily usage ping data collection -->
-  <string name="preferences_daily_usage_ping_title">كۈندىلىك ئىشلىتىلىش مىقدارى</string>
-  <string name="preferences_daily_usage_ping_description" tools:ignore="BrandUsage">بۇ سانلىق مەلۇمات Mozilla نىڭ ئاكتىپ ئىشلەتكۈچىنىڭ سانىنى مۆلچەرلىشىگە ياردەم بېرىدۇ.</string>
-  <string name="preferences_daily_usage_ping_learn_more">كۈندىلىك ئىشلىتىلىش مىقدارى ھەققىدە تېخىمۇ كۆپ بىلدۈرگۈ</string>
   <!-- Title for the crash reporting option in the privacy preferences dialog shown during onboarding. -->
   <string name="crash_reporting_snack_bar_message">دوكلات يوللاندى</string>
   <!-- Text for sumo link to learn more about crash reports in data collection screen -->
   <string name="preferences_crashes_learn_more">يىمىرىلىش دوكلاتى ھەققىدىكى تەپسىلات</string>
   <!-- Title Headers for data collection settings screen -->
   <string name="crash_reports_data_category">يىمىرىلىش دوكلاتى</string>
-  <string name="usage_data_category">ئىشلىتىش سانلىق مەلۇماتى</string>
-  <string name="technical_data_category">تېخنىكىلىق سانلىق مەلۇمات</string>
   <string name="crash_reporting_description">يىمىرىلىش دوكلاتى توركۆرگۈگە دىياگنوز قۇيۇپ ۋە ئۇنى ئوڭشاشقا يول قويىدۇ. دوكلات شەخسىي ياكى سەزگۈر ئۇچۇرلارنى ئۆز ئىچىگە ئېلىشى مۇمكىن.</string>
   <!-- Section title for campaign measurement in data collections screen -->
   <!-- Preference switch for campaign measurement data (marketing data) collection -->

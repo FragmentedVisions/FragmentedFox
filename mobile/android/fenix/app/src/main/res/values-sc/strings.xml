@@ -940,21 +940,14 @@
   <!-- Text displayed when there are no exceptions, with learn more link that brings users to a tracking protection SUMO page -->
   <string name="exceptions_empty_message_learn_more_link">Àteras informatziones</string>
   <!-- Preference switch for usage and technical data collection -->
-  <string name="preference_usage_data_2">Imbia datos tècnicos e de interatzione</string>
   <!-- Preference switch for usage and technical learn more link in new compose -->
-  <string name="preference_usage_data_learn_more_2">Àteras informatziones in pitzus de is datos tècnicos</string>
   <!-- Preference switch for daily usage ping data collection -->
-  <string name="preferences_daily_usage_ping_title">Ping de impreu diàriu</string>
-  <string name="preferences_daily_usage_ping_description" tools:ignore="BrandUsage">Custu agiudat a Mozilla a valutare is utentes ativos.</string>
-  <string name="preferences_daily_usage_ping_learn_more">Àteras informatziones a subra de su ping de impreu diàriu</string>
   <!-- Title for the crash reporting option in the privacy preferences dialog shown during onboarding. -->
   <string name="crash_reporting_snack_bar_message">Informe imbiadu</string>
   <!-- Text for sumo link to learn more about crash reports in data collection screen -->
   <string name="preferences_crashes_learn_more">Àteras informatziones in pitzus de is informes de faddinas</string>
   <!-- Title Headers for data collection settings screen -->
   <string name="crash_reports_data_category">Informes de faddinas</string>
-  <string name="usage_data_category">Datos de impreu</string>
-  <string name="technical_data_category">Datos tècnicos</string>
   <string name="crash_reporting_description">Is informes de faddinas nos agiudant a agatare e arrangiare is faddinas de su navigadore. Is informes podent incluire datos personale o sensìbiles.</string>
   <!-- Title for studies preferences -->
   <!-- Summary for studies preferences -->

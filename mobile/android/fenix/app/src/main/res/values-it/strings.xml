@@ -1149,23 +1149,15 @@
   <!-- Text displayed when there are no exceptions, with learn more link that brings users to a tracking protection SUMO page -->
   <string name="exceptions_empty_message_learn_more_link">Ulteriori informazioni</string>
   <!-- Preference switch for usage and technical data collection -->
-  <string name="preference_usage_data_2">Invia dati tecnici e di interazione</string>
   <!-- Preference switch for usage and technical learn more link in new compose -->
-  <string name="preference_usage_data_learn_more_2">Ulteriori informazioni sui dati tecnici</string>
   <!-- Preference description for marketing data collection. Note: The words "Firefox" should NOT be translated -->
-  <string name="preferences_usage_data_description_1" tools:ignore="BrandUsage">I dati relativi al tuo dispositivo, alla sua configurazione hardware e all’utilizzo ci aiutano a migliorare funzionalità, prestazioni e stabilità di Firefox.</string>
   <!-- Preference switch for daily usage ping data collection -->
-  <string name="preferences_daily_usage_ping_title">Ping di utilizzo giornaliero</string>
-  <string name="preferences_daily_usage_ping_description" tools:ignore="BrandUsage">Questo consente a Mozilla di stimare il numero di utenti attivi.</string>
-  <string name="preferences_daily_usage_ping_learn_more">Ulteriori informazioni sul ping di utilizzo giornaliero</string>
   <!-- Title for the crash reporting option in the privacy preferences dialog shown during onboarding. -->
   <string name="crash_reporting_snack_bar_message">Segnalazione inviata</string>
   <!-- Text for sumo link to learn more about crash reports in data collection screen -->
   <string name="preferences_crashes_learn_more">Ulteriori informazioni sulle segnalazioni di arresto anomalo</string>
   <!-- Title Headers for data collection settings screen -->
   <string name="crash_reports_data_category">Segnalazioni di arresto anomalo</string>
-  <string name="usage_data_category">Dati di utilizzo</string>
-  <string name="technical_data_category">Dati tecnici</string>
   <string name="crash_reporting_description">Le segnalazioni di arresto anomalo ci consentono di diagnosticare e risolvere problemi con il browser. Le segnalazioni possono includere dati personali o sensibili.</string>
   <!-- Section title for campaign measurement in data collections screen -->
   <!-- Preference switch for campaign measurement data (marketing data) collection -->

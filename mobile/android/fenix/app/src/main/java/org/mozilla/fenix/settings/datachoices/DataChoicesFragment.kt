@@ -37,10 +37,6 @@ class DataChoicesFragment : Fragment(), SystemInsetsPaddedFragment {
                             DataChoicesMiddleware(
                                 settings = context.components.settings,
                                 learnMoreClicked = ::learnMoreClicked,
-                                nimbusSdk = context.components.nimbus.sdk,
-                                engine = context.components.core.engine,
-                                metrics = context.components.analytics.metrics,
-                                crashReporter = context.components.analytics.crashReporter,
                             ),
                         ),
                     )

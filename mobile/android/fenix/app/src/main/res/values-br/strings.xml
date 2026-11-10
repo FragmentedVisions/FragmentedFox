@@ -798,7 +798,6 @@
   <string name="exceptions_empty_message_description">An nemedennoù a laosk acʼhanocʼh da ziweredekaat ar gwarez heuliañ evit lecʼhiennoù ʼzo.</string>
   <!-- Text displayed when there are no exceptions, with learn more link that brings users to a tracking protection SUMO page -->
   <string name="exceptions_empty_message_learn_more_link">Gouzout hirocʼh</string>
-  <string name="technical_data_category">Roadennoù teknikel</string>
   <string name="crash_reporting_description">Gant an danevelloù sac’hañ e c’hallomp kempenn ar c’hudennoù er merdeer. An danevelloù a c’hall kaout roadennoù personel pe kizidik eno.</string>
   <!-- Title for studies preferences -->
   <!-- Summary for studies preferences -->

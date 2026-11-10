@@ -11,24 +11,8 @@ import org.mozilla.fenix.settings.datachoices.dataChoicesReducer
 class DataChoicesReducerTest {
 
     private val defaultState = DataChoicesState(
-        telemetryEnabled = false,
-        usagePingEnabled = false,
         selectedCrashOption = CrashReportOption.Ask,
     )
-
-    @Test
-    fun `when telemetry is clicked then the state of telemetry is toggled`() {
-        val before = defaultState.copy(telemetryEnabled = false)
-        val after = dataChoicesReducer(before, ChoiceAction.TelemetryClicked)
-        assertEquals(true, after.telemetryEnabled)
-    }
-
-    @Test
-    fun `when usage ping is clicked then usagePingEnabled is toggled`() {
-        val before = defaultState.copy(usagePingEnabled = false)
-        val after = dataChoicesReducer(before, ChoiceAction.UsagePingClicked)
-        assertEquals(true, after.usagePingEnabled)
-    }
 
     @Test
     fun `when a crash report option is selected then the selectedCrashOption is updated`() {
@@ -40,13 +24,9 @@ class DataChoicesReducerTest {
     @Test
     fun `when settings are loaded then the entire settings state is replaced`() {
         val action = SettingsLoaded(
-            telemetryEnabled = true,
-            usagePingEnabled = true,
             crashReportOption = CrashReportOption.Never,
         )
         val after = dataChoicesReducer(defaultState, action)
-        assertEquals(true, after.telemetryEnabled)
-        assertEquals(true, after.usagePingEnabled)
         assertEquals(CrashReportOption.Never, after.selectedCrashOption)
     }
 }

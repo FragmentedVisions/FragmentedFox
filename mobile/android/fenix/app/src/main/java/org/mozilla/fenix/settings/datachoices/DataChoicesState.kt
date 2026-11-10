@@ -10,15 +10,11 @@ import mozilla.components.lib.state.State
 /**
  * Represents the state of the data collections screen
  *
- * @property telemetryEnabled Whether telemetry data collection is enabled.
- * @property usagePingEnabled Whether usage pings are sent.
  * @property selectedCrashOption The user's selected preference for handling crash reports.
  * @property itemToScrollTo Optional title of the settings item to scroll to upon opening
  * the data choices settings screen.
  */
 internal data class DataChoicesState(
-    val telemetryEnabled: Boolean = true,
-    val usagePingEnabled: Boolean = true,
     val selectedCrashOption: CrashReportOption = CrashReportOption.Ask,
     val itemToScrollTo: String? = null,
 ) : State

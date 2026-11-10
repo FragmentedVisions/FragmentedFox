@@ -31,7 +31,6 @@ import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.semantics.testTag
 import androidx.compose.ui.semantics.testTagsAsResourceId
 import androidx.compose.ui.text.style.TextDecoration
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.compose.ui.unit.dp
 import kotlinx.coroutines.launch
@@ -42,7 +41,6 @@ import mozilla.components.lib.crash.store.CrashReportOption
 import mozilla.components.lib.state.ext.observeAsComposableState
 import org.mozilla.fenix.R
 import org.mozilla.fenix.compose.list.RadioButtonListItem
-import org.mozilla.fenix.compose.list.SwitchListItem
 import org.mozilla.fenix.compose.settings.SettingsSectionHeader
 import org.mozilla.fenix.settings.settingssearch.PreferenceFileInformation
 import org.mozilla.fenix.settings.settingssearch.SettingsSearchItem
@@ -52,16 +50,13 @@ import org.mozilla.fenix.theme.PreviewThemeProvider
 import org.mozilla.fenix.theme.Theme
 
 private enum class DataChoicesSectionKey {
-    TECHNICAL_DATA,
-    USAGE_DATA,
     CRASH_REPORTS,
 }
 
 /**
  * Composable function that renders the Data Choices settings screen.
  *
- * This screen allows the user to view and modify their preferences related to telemetry,
- * crash reporting and usage data.
+ * This screen allows the user to view and modify their crash reporting preferences.
  *
  * @param store The [DataChoicesStore] used to manage and access the [DataChoicesState]
  **/
@@ -70,40 +65,27 @@ internal fun DataChoicesScreen(
     store: DataChoicesStore,
 ) {
     val state by store.observeAsComposableState { it }
-    val onTelemetryToggle: () -> Unit = { store.dispatch(ChoiceAction.TelemetryClicked) }
-    val onUsagePingToggle: () -> Unit = { store.dispatch(ChoiceAction.UsagePingClicked) }
     val onCrashOptionSelected: (CrashReportOption) -> Unit = { newValue ->
         store.dispatch(ChoiceAction.ReportOptionClicked(newValue))
     }
     val onScrolledToItem = { store.dispatch(ChoiceAction.ScrolledToItem) }
-    val learnMoreTechnicalData: () -> Unit = { store.dispatch(LearnMore.TelemetryLearnMoreClicked) }
-    val learnMoreDailyUsage: () -> Unit = { store.dispatch(LearnMore.UsagePingLearnMoreClicked) }
     val learnMoreCrashReport: () -> Unit = { store.dispatch(LearnMore.CrashLearnMoreClicked) }
 
     Surface {
         DataChoicesUi(
             state = state,
-            onTelemetryToggle = onTelemetryToggle,
-            onUsagePingToggle = onUsagePingToggle,
             onCrashOptionSelected = onCrashOptionSelected,
             onScrolledToItem = onScrolledToItem,
-            learnMoreTechnicalData = learnMoreTechnicalData,
-            learnMoreDailyUsage = learnMoreDailyUsage,
             learnMoreCrashReport = learnMoreCrashReport,
         )
     }
 }
 
-@Suppress("LongParameterList")
 @Composable
 internal fun DataChoicesUi(
     state: DataChoicesState,
-    onTelemetryToggle: () -> Unit,
-    onUsagePingToggle: () -> Unit,
     onCrashOptionSelected: (CrashReportOption) -> Unit,
     onScrolledToItem: () -> Unit,
-    learnMoreTechnicalData: () -> Unit,
-    learnMoreDailyUsage: () -> Unit,
     learnMoreCrashReport: () -> Unit,
 ) {
     val lazyListState = rememberLazyListState()
@@ -133,24 +115,6 @@ internal fun DataChoicesUi(
             key = { it },
         ) { section ->
             when (section) {
-                DataChoicesSectionKey.TECHNICAL_DATA -> TogglePreferenceSection(
-                    categoryTitle = stringResource(R.string.technical_data_category),
-                    preferenceTitle = stringResource(R.string.preference_usage_data_2),
-                    preferenceSummary = stringResource(R.string.preferences_usage_data_description_1),
-                    learnMoreText = stringResource(R.string.preference_usage_data_learn_more_2),
-                    isToggled = state.telemetryEnabled,
-                    onToggleChanged = onTelemetryToggle,
-                    onLearnMoreClicked = learnMoreTechnicalData,
-                )
-                DataChoicesSectionKey.USAGE_DATA -> TogglePreferenceSection(
-                    categoryTitle = stringResource(R.string.usage_data_category),
-                    preferenceTitle = stringResource(R.string.preferences_daily_usage_ping_title),
-                    preferenceSummary = stringResource(R.string.preferences_daily_usage_ping_description),
-                    learnMoreText = stringResource(R.string.preferences_daily_usage_ping_learn_more),
-                    isToggled = state.usagePingEnabled,
-                    onToggleChanged = onUsagePingToggle,
-                    onLearnMoreClicked = learnMoreDailyUsage,
-                )
                 DataChoicesSectionKey.CRASH_REPORTS -> CrashReportsSection(
                     learnMoreText = stringResource(R.string.preferences_crashes_learn_more),
                     selectedOption = state.selectedCrashOption,
@@ -231,58 +195,6 @@ private fun CrashReportsSection(
 }
 
 /**
- * Composable section that displays a toggleable user preference with a title, summary,
- * and an optional "Learn More" link.
- *
- * @param categoryTitle The title of the category this preference belongs to (usually shown above the preference).
- * @param preferenceTitle The title of the individual preference.
- * @param preferenceSummary A brief description explaining what the preference does.
- * @param learnMoreText The text shown for the "Learn More" link.
- * @param isToggled Whether the preference toggle is currently enabled (on) or disabled (off).
- * @param onToggleChanged Callback invoked when the toggle state changes.
- * @param onLearnMoreClicked Callback invoked when the "Learn More" link is clicked.
- */
-@Composable
-private fun TogglePreferenceSection(
-    categoryTitle: String,
-    preferenceTitle: String,
-    preferenceSummary: String,
-    learnMoreText: String,
-    isToggled: Boolean,
-    onToggleChanged: () -> Unit,
-    onLearnMoreClicked: () -> Unit,
-) {
-    Column(
-        modifier = Modifier.fillMaxWidth(),
-    ) {
-        SettingsSectionHeader(
-            text = categoryTitle,
-            modifier = Modifier.padding(horizontal = FirefoxTheme.layout.space.dynamic200),
-        )
-
-        Spacer(modifier = Modifier.height(16.dp))
-
-        SwitchListItem(
-            label = preferenceTitle,
-            checked = isToggled,
-            modifier = Modifier.semantics {
-                testTag = "data.collection.$preferenceTitle.toggle"
-                testTagsAsResourceId = true
-            },
-            maxLabelLines = Int.MAX_VALUE,
-            description = preferenceSummary,
-            maxDescriptionLines = Int.MAX_VALUE,
-            showSwitchAfter = true,
-            onClick = { onToggleChanged() },
-        )
-
-        Spacer(modifier = Modifier.height(16.dp))
-
-        LearnMoreLink(onLearnMoreClicked, learnMoreText)
-    }
-}
-
-/**
  * Composable that displays a "Learn More" text link.
  *
  * @param onLearnMoreClicked Callback invoked when the user clicks the link.
@@ -326,22 +238,6 @@ private fun DataChoicesPreview(
     }
 }
 
-@Preview
-@Composable
-private fun DataChoicesTelemetryDisabledPreview(
-    @PreviewParameter(PreviewThemeProvider::class) theme: Theme,
-) {
-    FirefoxTheme(theme) {
-        DataChoicesScreen(
-            store = DataChoicesStore(
-                initialState = DataChoicesState(
-                    telemetryEnabled = false,
-                ),
-            ),
-        )
-    }
-}
-
 /**
  * Provides [SettingsSearchItem]s for the Data Choices settings screen for use in settings search.
  */
@@ -350,22 +246,6 @@ object DataChoicesSearchProvider : SettingsSearchProvider {
 
     override fun getSearchItems(context: Context): List<SettingsSearchItem> {
         return buildList {
-            add(
-                buildSearchItem(
-                    context = context,
-                    titleRes = R.string.preference_usage_data_2,
-                    summaryRes = R.string.preferences_usage_data_description_1,
-                    key = DataChoicesSectionKey.TECHNICAL_DATA,
-                ),
-            )
-            add(
-                buildSearchItem(
-                    context = context,
-                    titleRes = R.string.preferences_daily_usage_ping_title,
-                    summaryRes = R.string.preferences_daily_usage_ping_description,
-                    key = DataChoicesSectionKey.USAGE_DATA,
-                ),
-            )
             add(
                 buildSearchItem(
                     context = context,

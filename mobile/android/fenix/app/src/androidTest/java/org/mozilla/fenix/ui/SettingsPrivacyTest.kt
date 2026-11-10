@@ -69,18 +69,7 @@ class SettingsPrivacyTest {
         }.openThreeDotMenu {
         }.clickSettingsButton {
         }.openSettingsSubMenuDataCollection {
-            // Daily usage ping should default to telemetry pref value
-            verifyDataCollectionView(
-                composeTestRule,
-                isSendTechnicalDataEnabled = true,
-                isDailyUsagePingEnabled = true,
-            )
-            clickUsageAndTechnicalDataToggle(composeTestRule)
-            verifyDataCollectionView(
-                composeTestRule,
-                isSendTechnicalDataEnabled = false,
-                isDailyUsagePingEnabled = true,
-            )
+            verifyDataCollectionView(composeTestRule)
         }
     }
 
@@ -110,19 +99,6 @@ class SettingsPrivacyTest {
             verifyAllSystemNotificationsToggleState(true)
             verifyPrivateBrowsingSystemNotificationsToggleState(true)
             exitMenu(DURATION_MS_TRANSLATIONS)
-        }
-    }
-
-    // TestRail link: https://mozilla.testrail.io/index.php?/cases/view/2939287
-    @Test
-    fun verifyTheDailyUsagePingCanBeEnabledAndDisabledTest() {
-        homeScreen(composeTestRule) {
-        }.openThreeDotMenu {
-        }.clickSettingsButton {
-        }.openSettingsSubMenuDataCollection {
-            verifyDailyUsagePingToggle(composeTestRule, isChecked = true)
-            clickDailyUsagePingToggle(composeTestRule)
-            verifyDailyUsagePingToggle(composeTestRule, isChecked = false)
         }
     }
 

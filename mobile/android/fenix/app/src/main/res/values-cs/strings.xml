@@ -1141,23 +1141,15 @@
   <!-- Text displayed when there are no exceptions, with learn more link that brings users to a tracking protection SUMO page -->
   <string name="exceptions_empty_message_learn_more_link">Zjistit více</string>
   <!-- Preference switch for usage and technical data collection -->
-  <string name="preference_usage_data_2">Odesílat technické údaje a údaje o interakcích</string>
   <!-- Preference switch for usage and technical learn more link in new compose -->
-  <string name="preference_usage_data_learn_more_2">Zjistit více o technických údajích</string>
   <!-- Preference description for marketing data collection. Note: The words "Firefox" should NOT be translated -->
-  <string name="preferences_usage_data_description_1" tools:ignore="BrandUsage">Údaje o vašem zařízení, konfiguraci hardwaru a používání nám pomáhají zlepšovat funkce, výkon a stabilitu Firefoxu.</string>
   <!-- Preference switch for daily usage ping data collection -->
-  <string name="preferences_daily_usage_ping_title">Denní ping o používání</string>
-  <string name="preferences_daily_usage_ping_description" tools:ignore="BrandUsage">To pomáhá společnosti Mozilla odhadnout počet aktivních uživatelů.</string>
-  <string name="preferences_daily_usage_ping_learn_more">Zjistěte více o denním pingu o používání</string>
   <!-- Title for the crash reporting option in the privacy preferences dialog shown during onboarding. -->
   <string name="crash_reporting_snack_bar_message">Hlášení odesláno</string>
   <!-- Text for sumo link to learn more about crash reports in data collection screen -->
   <string name="preferences_crashes_learn_more">Zjistit více o hlášeních o pádech</string>
   <!-- Title Headers for data collection settings screen -->
   <string name="crash_reports_data_category">Hlášení pádů</string>
-  <string name="usage_data_category">Data o používání</string>
-  <string name="technical_data_category">Technická data</string>
   <string name="crash_reporting_description">Hlášení o pádech nám umožňují diagnostikovat a opravovat problémy s prohlížečem. Hlášení mohou obsahovat osobní nebo citlivé údaje.</string>
   <!-- Section title for campaign measurement in data collections screen -->
   <!-- Preference switch for campaign measurement data (marketing data) collection -->

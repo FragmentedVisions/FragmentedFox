@@ -1149,23 +1149,15 @@
   <!-- Text displayed when there are no exceptions, with learn more link that brings users to a tracking protection SUMO page -->
   <string name="exceptions_empty_message_learn_more_link">Saper plus</string>
   <!-- Preference switch for usage and technical data collection -->
-  <string name="preference_usage_data_2">Inviar datos technic e de interaction</string>
   <!-- Preference switch for usage and technical learn more link in new compose -->
-  <string name="preference_usage_data_learn_more_2">Saper plus re datos technic\u0020</string>
   <!-- Preference description for marketing data collection. Note: The words "Firefox" should NOT be translated -->
-  <string name="preferences_usage_data_description_1" tools:ignore="BrandUsage">Datos re tu apparato, configuration hardware, e uso adjuta nos meliorar functiones, prestation e stabilitate.</string>
   <!-- Preference switch for daily usage ping data collection -->
-  <string name="preferences_daily_usage_ping_title">Ping de uso quotidian</string>
-  <string name="preferences_daily_usage_ping_description" tools:ignore="BrandUsage">Isto adjuta Mozilla a estimar le usatores active.</string>
-  <string name="preferences_daily_usage_ping_learn_more">Saper plus re le uso del ping quotidian</string>
   <!-- Title for the crash reporting option in the privacy preferences dialog shown during onboarding. -->
   <string name="crash_reporting_snack_bar_message">Reporto inviate</string>
   <!-- Text for sumo link to learn more about crash reports in data collection screen -->
   <string name="preferences_crashes_learn_more">Saper plus re le reportos de crash</string>
   <!-- Title Headers for data collection settings screen -->
   <string name="crash_reports_data_category">Reportos de crash</string>
-  <string name="usage_data_category">Datos de uso</string>
-  <string name="technical_data_category">Datos technic</string>
   <string name="crash_reporting_description">Le reportos de collapso nos permitte de diagnosticar e corriger problemas del navigator, ma pote includer datos personal o sensibile.</string>
   <!-- Section title for campaign measurement in data collections screen -->
   <!-- Preference switch for campaign measurement data (marketing data) collection -->

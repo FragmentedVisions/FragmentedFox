@@ -989,29 +989,6 @@ class MainMenuTest {
         }
     }
 
-    // TestRail link: https://mozilla.testrail.io/index.php?/cases/view/2937933
-    @Test
-    fun verifyReportBrokenSiteFormNotDisplayedWhenTelemetryIsDisabledTest() {
-        val defaultWebPage = mockWebServer.getGenericAsset(1)
-
-        homeScreen(composeTestRule) {
-        }.openThreeDotMenu {
-        }.clickSettingsButton {
-        }.openSettingsSubMenuDataCollection {
-            clickUsageAndTechnicalDataToggle(composeTestRule)
-            verifyUsageAndTechnicalDataToggle(composeTestRule, isChecked = false)
-        }
-        exitMenu()
-        navigationToolbar(composeTestRule) {
-        }.enterURLAndEnterToBrowser(defaultWebPage.url) {
-        }.openThreeDotMenu {
-            clickTheMoreButton()
-        }.clickReportBrokenSiteButton {
-            waitForAppWindowToBeUpdated()
-            verifyUrl("webcompat.com/issues/new")
-        }
-    }
-
     // TestRail link: https://mozilla.testrail.io/index.php?/cases/view/3080172
     @Converted(
         replacedBy = ["org.mozilla.fenix.ui.efficiency.tests.MainMenuTest#verifyTheExtensionsMenuOptionTest"],

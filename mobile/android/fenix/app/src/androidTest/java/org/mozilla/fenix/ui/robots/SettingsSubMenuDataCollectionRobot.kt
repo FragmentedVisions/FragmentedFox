@@ -5,28 +5,17 @@
 package org.mozilla.fenix.ui.robots
 
 import android.util.Log
-import androidx.compose.ui.test.assertIsNotSelected
-import androidx.compose.ui.test.assertIsSelected
 import androidx.compose.ui.test.junit4.ComposeTestRule
 import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.performClick
-import androidx.test.espresso.Espresso.onView
-import androidx.test.espresso.assertion.ViewAssertions.matches
-import androidx.test.espresso.matcher.RootMatchers
-import androidx.test.espresso.matcher.ViewMatchers.isChecked
-import androidx.test.espresso.matcher.ViewMatchers.isNotChecked
-import androidx.test.espresso.matcher.ViewMatchers.withId
 import org.mozilla.fenix.R
 import org.mozilla.fenix.helpers.Constants.TAG
 import org.mozilla.fenix.helpers.DataGenerationHelper.getStringResource
 import org.mozilla.fenix.helpers.MatcherHelper.assertItemIsChecked
-import org.mozilla.fenix.helpers.MatcherHelper.assertItemTextEquals
 import org.mozilla.fenix.helpers.MatcherHelper.assertUIObjectExists
 import org.mozilla.fenix.helpers.MatcherHelper.itemContainingText
 import org.mozilla.fenix.helpers.MatcherHelper.itemWithDescription
 import org.mozilla.fenix.helpers.MatcherHelper.itemWithResId
-import org.mozilla.fenix.helpers.TestHelper.packageName
-import org.mozilla.fenix.helpers.TestHelper.waitForAppWindowToBeUpdated
 import org.mozilla.fenix.helpers.click
 import mozilla.components.lib.crash.R as crashR
 
@@ -37,8 +26,6 @@ class SettingsSubMenuDataCollectionRobot {
 
     fun verifyDataCollectionView(
         composeTestRule: ComposeTestRule,
-        isSendTechnicalDataEnabled: Boolean,
-        isDailyUsagePingEnabled: Boolean,
         isAskBeforeSendingCrashReportsEnabled: Boolean = true,
         isAutomaticallySendCrashReportsEnabled: Boolean = false,
         isNeverSendCrashReportsEnabled: Boolean = false,
@@ -50,25 +37,9 @@ class SettingsSubMenuDataCollectionRobot {
             // Toolbar items
             goBackButton(),
             itemContainingText(getStringResource(R.string.preferences_data_collection)),
-            // Technical Data section
-            itemContainingText(getStringResource(R.string.technical_data_category)),
-            itemContainingText(getStringResource(R.string.preference_usage_data_2)),
-            itemContainingText(getStringResource(R.string.preferences_usage_data_description_1)),
-            itemWithDescription("Learn more about technical data Links available"),
-            // Usage data section
-            itemContainingText(getStringResource(R.string.usage_data_category)),
-            itemContainingText(getStringResource(R.string.preferences_daily_usage_ping_title)),
-            itemContainingText(getStringResource(R.string.preferences_daily_usage_ping_description)),
-            itemWithDescription("Learn more about daily usage ping Links available"),
         )
         // Crash reports section
         verifyTheCrashReportsSection(composeTestRule)
-
-        // Technical Data toggle
-        verifyUsageAndTechnicalDataToggle(composeTestRule, isSendTechnicalDataEnabled)
-
-        // Daily ping toggle
-        verifyDailyUsagePingToggle(composeTestRule, isDailyUsagePingEnabled)
 
         // Crash reports radio buttons
         verifyTheCrashReportOptionStates(
@@ -77,44 +48,6 @@ class SettingsSubMenuDataCollectionRobot {
             isAutomaticallySendCrashReportsEnabled,
             isNeverSendCrashReportsEnabled,
         )
-    }
-
-    fun verifyUsageAndTechnicalDataToggle(composeTestRule: ComposeTestRule, isChecked: Boolean) {
-        Log.i(TAG, "verifyUsageAndTechnicalDataToggle: Trying to verify that the \"Technical and interaction data\" toggle is checked: $isChecked")
-        if (isChecked) {
-            composeTestRule.onNodeWithTag("data.collection.Send technical and interaction data.toggle", useUnmergedTree = true)
-                .assertIsSelected()
-            Log.i(TAG, "verifyUsageAndTechnicalDataToggle: Verified that the \"Usage and technical data\" toggle is checked: $isChecked")
-        } else {
-            composeTestRule.onNodeWithTag("data.collection.Send technical and interaction data.toggle", useUnmergedTree = true)
-                .assertIsNotSelected()
-            Log.i(TAG, "verifyUsageAndTechnicalDataToggle: Verified that the \"Usage and technical data\" toggle is checked: $isChecked")
-        }
-    }
-
-    fun verifyDailyUsagePingToggle(composeTestRule: ComposeTestRule, isChecked: Boolean) {
-        Log.i(TAG, "verifyDailyUsagePingToggle: Trying to verify that the \"Daily usage ping\" toggle is checked: $isChecked")
-        if (isChecked) {
-            composeTestRule.onNodeWithTag("data.collection.Daily usage ping.toggle", useUnmergedTree = true)
-                .assertIsSelected()
-            Log.i(TAG, "verifyDailyUsagePingToggle: Verified that the \"Daily usage ping\" toggle is checked: $isChecked")
-        } else {
-            composeTestRule.onNodeWithTag("data.collection.Daily usage ping.toggle", useUnmergedTree = true)
-                .assertIsNotSelected()
-            Log.i(TAG, "verifyDailyUsagePingToggle: Verified that the \"Daily usage ping\" toggle is checked: $isChecked")
-        }
-    }
-
-    fun clickUsageAndTechnicalDataToggle(composeTestRule: ComposeTestRule) {
-        Log.i(TAG, "clickUsageAndTechnicalDataToggle: Trying to click the \"Technical and interaction data\" toggle")
-        composeTestRule.onNodeWithTag("data.collection.Send technical and interaction data.toggle", useUnmergedTree = true).performClick()
-        Log.i(TAG, "clickUsageAndTechnicalDataToggle: Clicked the \"Technical and interaction data\" toggle")
-    }
-
-    fun clickDailyUsagePingToggle(composeTestRule: ComposeTestRule) {
-        Log.i(TAG, "clickDailyUsagePingToggle: Trying to click the \"Daily usage ping\" toggle")
-        composeTestRule.onNodeWithTag("data.collection.Daily usage ping.toggle", useUnmergedTree = true).performClick()
-        Log.i(TAG, "clickDailyUsagePingToggle: Clicked the \"Daily usage ping\" toggle")
     }
 
     fun verifyTheCrashReportsSection(composeTestRule: ComposeTestRule) {

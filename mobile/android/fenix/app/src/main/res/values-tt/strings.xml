@@ -706,8 +706,6 @@
   <!-- Text displayed when there are no exceptions, with learn more link that brings users to a tracking protection SUMO page -->
   <string name="exceptions_empty_message_learn_more_link">Күбрәк белү</string>
   <!-- Preference switch for daily usage ping data collection -->
-  <string name="preferences_daily_usage_ping_title">Көндәлек куллану пингы</string>
-  <string name="preferences_daily_usage_ping_description" tools:ignore="BrandUsage">Бу Mozilla-га актив кулланучылар санын бәяләргә ярдәм итә.</string>
   <!-- Title for studies preferences -->
   <!-- Summary for studies preferences -->
   <!-- Preference for reconnecting to FxA sync -->

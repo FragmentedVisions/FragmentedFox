@@ -1146,23 +1146,15 @@
   <!-- Text displayed when there are no exceptions, with learn more link that brings users to a tracking protection SUMO page -->
   <string name="exceptions_empty_message_learn_more_link">Argibide gehiago</string>
   <!-- Preference switch for usage and technical data collection -->
-  <string name="preference_usage_data_2">Bidali datu tekniko eta interakziozkoak</string>
   <!-- Preference switch for usage and technical learn more link in new compose -->
-  <string name="preference_usage_data_learn_more_2">Datuen teknikoei buruzko argibide gehiago</string>
   <!-- Preference description for marketing data collection. Note: The words "Firefox" should NOT be translated -->
-  <string name="preferences_usage_data_description_1" tools:ignore="BrandUsage">Zure gailuaren, hardware-konfigurazioaren eta erabilpenaren inguruko datuek guztientzat Firefoxen eginbideak, errendimendua eta egonkortasuna hobetzen laguntzen dute.</string>
   <!-- Preference switch for daily usage ping data collection -->
-  <string name="preferences_daily_usage_ping_title">Eguneroko erabilpenaren ping-a</string>
-  <string name="preferences_daily_usage_ping_description" tools:ignore="BrandUsage">Honek erabiltzaile aktiboen kopurua kalkulatzen laguntzen dio Mozillari.</string>
-  <string name="preferences_daily_usage_ping_learn_more">Eguneroko erabilpenari ping-ari buruzko argibide gehiago</string>
   <!-- Title for the crash reporting option in the privacy preferences dialog shown during onboarding. -->
   <string name="crash_reporting_snack_bar_message">Txostena bidalita</string>
   <!-- Text for sumo link to learn more about crash reports in data collection screen -->
   <string name="preferences_crashes_learn_more">Hutsegite-txostenei buruzko argibide gehiago</string>
   <!-- Title Headers for data collection settings screen -->
   <string name="crash_reports_data_category">Hutsegite-txostenak</string>
-  <string name="usage_data_category">Erabilpen-datuak</string>
-  <string name="technical_data_category">Datu teknikoak</string>
   <string name="crash_reporting_description">Hutsegite-txostenek nabigatzailearen arazoak diagnostikatu eta konpontzen laguntzen digute. Txostenek datu pertsonal edo kontuzkoak izan litzakete.</string>
   <!-- Section title for campaign measurement in data collections screen -->
   <!-- Preference switch for campaign measurement data (marketing data) collection -->

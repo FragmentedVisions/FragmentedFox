@@ -18,6 +18,7 @@
     "lib\\.push\\.firebase",
     "components:lib-push-firebase",
     "components:lib-crash-sentry",
+    "components:lib-integrity-googleplay",
     "components:feature-summarize",
     "FontEnumerationWorker",
     "FontParser",

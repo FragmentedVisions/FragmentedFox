@@ -2020,18 +2020,6 @@ projects:
     - components:support-test
     - components:tooling-fetch-tests
     - components:tooling-lint
-  components:lib-integrity-googleplay:
-    description: A library for verifying the integrity of an installation using Google
-      Play
-    path: components/lib/integrity-googleplay
-    publish: true
-    upstream_dependencies:
-    - components:concept-base
-    - components:concept-fetch
-    - components:concept-integrity
-    - components:support-base
-    - components:support-test
-    - components:tooling-lint
   components:lib-jexl:
     description: 'Javascript Expression Language: Powerful context-based expression
       parser and evaluator.'
@@ -2112,17 +2100,6 @@ projects:
     upstream_dependencies:
     - components:concept-base
     - components:concept-fetch
-    - components:support-base
-    - components:support-test
-    - components:tooling-lint
-  components:lib-push-firebase:
-    description: An implementation of concept-push for the Firebase Message Service.
-    path: components/lib/push-firebase
-    publish: true
-    upstream_dependencies:
-    - components:concept-base
-    - components:concept-fetch
-    - components:concept-push
     - components:support-base
     - components:support-test
     - components:tooling-lint

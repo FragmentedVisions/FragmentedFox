@@ -437,12 +437,6 @@ projects:
     - components:ui-icons
     - components:ui-tabcounter
     - components:ui-widgets
-  components:concept-accelerometer:
-    description: An abstract definition of an accelerometer.
-    path: components/concept/accelerometer
-    publish: true
-    upstream_dependencies:
-    - components:tooling-lint
   components:concept-ai-controls:
     description: An abstract definition of a ai-controls component.
     path: components/concept/ai-controls
@@ -507,12 +501,6 @@ projects:
     - components:concept-base
     - components:support-base
     - components:support-test
-    - components:tooling-lint
-  components:concept-integrity:
-    description: A concept for verifying the integrity of an installation
-    path: components/concept/integrity
-    publish: true
-    upstream_dependencies:
     - components:tooling-lint
   components:concept-menu:
     description: An abstract definition of a browser menu component.
@@ -815,30 +803,6 @@ projects:
     - components:ui-icons
     - components:ui-tabcounter
     - components:ui-widgets
-  components:feature-containers:
-    description: Feature component for working with contextual identities also known
-      as containers.
-    path: components/feature/containers
-    publish: true
-    upstream_dependencies:
-    - components:browser-errorpages
-    - components:browser-state
-    - components:concept-awesomebar
-    - components:concept-base
-    - components:concept-engine
-    - components:concept-fetch
-    - components:concept-storage
-    - components:concept-storage-bookmarks
-    - components:lib-publicsuffixlist
-    - components:lib-state
-    - components:support-android-test
-    - components:support-base
-    - components:support-ktx
-    - components:support-test
-    - components:support-test-libstate
-    - components:support-utils
-    - components:tooling-lint
-    - components:ui-icons
   components:feature-contextmenu:
     description: Component for displaying context menus for web content.
     path: components/feature/contextmenu
@@ -961,15 +925,6 @@ projects:
     - components:ui-colors
     - components:ui-icons
     - components:ui-widgets
-  components:feature-example:
-    description: A sample feature component demonstrating module structure and conventions.
-    path: components/feature/example
-    publish: false
-    upstream_dependencies:
-    - components:concept-base
-    - components:concept-fetch
-    - components:support-base
-    - components:tooling-lint
   components:feature-findinpage:
     description: Feature that will subscribe to the selected session and show an UI
       for results of find in page.
@@ -1072,48 +1027,6 @@ projects:
     - components:support-remotesettings
     - components:support-test
     - components:support-test-libstate
-    - components:support-utils
-    - components:tooling-lint
-    - components:ui-autocomplete
-    - components:ui-colors
-    - components:ui-icons
-    - components:ui-tabcounter
-    - components:ui-widgets
-  components:feature-ipprotection:
-    description: Feature module bridging GeckoView IP protection proxy state into
-      an AC store.
-    path: components/feature/ipprotection
-    publish: false
-    upstream_dependencies:
-    - components:browser-errorpages
-    - components:browser-menu
-    - components:browser-menu2
-    - components:browser-session-storage
-    - components:browser-state
-    - components:browser-tabstray
-    - components:browser-thumbnails
-    - components:browser-toolbar
-    - components:compose-base
-    - components:concept-awesomebar
-    - components:concept-base
-    - components:concept-engine
-    - components:concept-fetch
-    - components:concept-menu
-    - components:concept-storage
-    - components:concept-storage-bookmarks
-    - components:concept-sync
-    - components:concept-tabstray
-    - components:concept-toolbar
-    - components:feature-session
-    - components:feature-tabs
-    - components:lib-dataprotect
-    - components:lib-publicsuffixlist
-    - components:lib-state
-    - components:service-firefox-accounts
-    - components:support-base
-    - components:support-images
-    - components:support-ktx
-    - components:support-test
     - components:support-utils
     - components:tooling-lint
     - components:ui-autocomplete
@@ -1472,47 +1385,6 @@ projects:
     - components:ui-icons
     - components:ui-tabcounter
     - components:ui-widgets
-  components:feature-serviceworker:
-    description: Feature that adds support for service workers when using GeckoEngine.
-    path: components/feature/serviceworker
-    publish: true
-    upstream_dependencies:
-    - components:browser-engine-gecko
-    - components:browser-errorpages
-    - components:browser-menu
-    - components:browser-menu2
-    - components:browser-session-storage
-    - components:browser-state
-    - components:browser-tabstray
-    - components:browser-thumbnails
-    - components:browser-toolbar
-    - components:compose-base
-    - components:concept-awesomebar
-    - components:concept-base
-    - components:concept-engine
-    - components:concept-fetch
-    - components:concept-menu
-    - components:concept-storage
-    - components:concept-storage-bookmarks
-    - components:concept-tabstray
-    - components:concept-toolbar
-    - components:feature-session
-    - components:feature-tabs
-    - components:lib-publicsuffixlist
-    - components:lib-state
-    - components:service-nimbus
-    - components:support-base
-    - components:support-images
-    - components:support-ktx
-    - components:support-locale
-    - components:support-test
-    - components:support-utils
-    - components:tooling-lint
-    - components:ui-autocomplete
-    - components:ui-colors
-    - components:ui-icons
-    - components:ui-tabcounter
-    - components:ui-widgets
   components:feature-session:
     description: Feature implementation connecting an engine implementation with the
       session module.
@@ -1862,18 +1734,6 @@ projects:
     - components:ui-icons
     - components:ui-tabcounter
     - components:ui-widgets
-  components:lib-accelerometer-sensormanager:
-    description: An implementation of the accelerometer concept that uses the Android
-      SensorManager
-    path: components/lib/accelerometer-sensormanager
-    publish: true
-    upstream_dependencies:
-    - components:concept-accelerometer
-    - components:concept-base
-    - components:concept-fetch
-    - components:support-base
-    - components:support-test
-    - components:tooling-lint
   components:lib-ai-controls:
     description: An abstract definition of a ai-controls component.
     path: components/lib/ai-controls
@@ -1990,13 +1850,6 @@ projects:
     - components:support-test
     - components:tooling-fetch-tests
     - components:tooling-lint
-  components:lib-jexl:
-    description: 'Javascript Expression Language: Powerful context-based expression
-      parser and evaluator.'
-    path: components/lib/jexl
-    publish: true
-    upstream_dependencies:
-    - components:tooling-lint
   components:lib-password-parser-csv:
     description: A CSV implementation of concept-passwords-parser
     path: components/lib/password-parser-csv
@@ -2036,17 +1889,6 @@ projects:
     path: components/lib/publicsuffixlist
     publish: true
     upstream_dependencies:
-    - components:concept-base
-    - components:concept-fetch
-    - components:support-base
-    - components:support-test
-    - components:tooling-lint
-  components:lib-shake:
-    description: A library to detect shake gestures from accelerometer data
-    path: components/lib/shake
-    publish: true
-    upstream_dependencies:
-    - components:concept-accelerometer
     - components:concept-base
     - components:concept-fetch
     - components:support-base
@@ -2722,13 +2564,6 @@ projects:
     - components:support-ktx
     - components:support-utils
     - components:tooling-lint
-  components:support-test-appservices:
-    description: A component for synchronizing Application Services' unit testing
-      dependencies used in Android Components.
-    path: components/support/test-appservices
-    publish: true
-    upstream_dependencies:
-    - components:tooling-lint
   components:support-test-fakes:
     description: A collection of fake implementations for testing purposes.
     path: components/support/test-fakes
@@ -2827,33 +2662,12 @@ projects:
     publish: true
     upstream_dependencies:
     - components:tooling-lint
-  components:ui-fonts:
-    description: Convenience accessor for fonts used by Mozilla.
-    path: components/ui/fonts
-    publish: true
-    upstream_dependencies:
-    - components:tooling-lint
   components:ui-icons:
     description: A collection of often used browser icons.
     path: components/ui/icons
     publish: true
     upstream_dependencies:
     - components:tooling-lint
-  components:ui-richtext:
-    description: A UI model for display rich text component
-    path: components/ui/richtext
-    publish: true
-    upstream_dependencies:
-    - components:compose-base
-    - components:concept-base
-    - components:concept-fetch
-    - components:lib-publicsuffixlist
-    - components:support-base
-    - components:support-ktx
-    - components:support-utils
-    - components:tooling-lint
-    - components:ui-colors
-    - components:ui-icons
   components:ui-tabcounter:
     description: A tab counter for browsers.
     path: components/ui/tabcounter

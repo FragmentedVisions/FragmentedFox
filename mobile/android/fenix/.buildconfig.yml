@@ -17,7 +17,6 @@ projects:
     - components:compose-base
     - components:compose-browser-toolbar
     - components:compose-cfr
-    - components:concept-accelerometer
     - components:concept-ai-controls
     - components:concept-awesomebar
     - components:concept-base
@@ -25,7 +24,6 @@ projects:
     - components:concept-bookmarks-parser
     - components:concept-engine
     - components:concept-fetch
-    - components:concept-integrity
     - components:concept-menu
     - components:concept-passwords-file
     - components:concept-passwords-parser
@@ -47,7 +45,6 @@ projects:
     - components:feature-fxsuggest
     - components:feature-importer
     - components:feature-intent
-    - components:feature-ipprotection
     - components:feature-logins
     - components:feature-media
     - components:feature-password-importer
@@ -71,7 +68,6 @@ projects:
     - components:feature-webcompat
     - components:feature-webcompat-reporter
     - components:feature-webnotifications
-    - components:lib-accelerometer-sensormanager
     - components:lib-ai-controls
     - components:lib-bookmark-parser-jsoup
     - components:lib-bookmarks-file
@@ -109,7 +105,6 @@ projects:
     - components:ui-autocomplete
     - components:ui-colors
     - components:ui-icons
-    - components:ui-richtext
     - components:ui-tabcounter
     - components:ui-widgets
 variants:

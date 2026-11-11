@@ -55,13 +55,9 @@ work = "2.11.2"
 
 # Google other
 accompanist = "0.37.3"
-firebase-messaging = "25.0.2"
 ksp = "2.3.9"
 material = "1.14.0"
-mlkit-prompt = "1.0.0-beta2"
 osslicenses-plugin = "0.12.0"
-play-integrity = "1.6.0"
-play-services-base = "18.10.0"
 play-services-fido = "21.3.0"
 protobuf = "4.35.0" # Keep Protobuf in sync with the version used by AppServices.
 
@@ -102,7 +98,6 @@ robolectric = "4.16.1"
 # Third party libraries
 androidsvg = "1.4"
 disklrucache = "2.0.2"
-jetbrains-markdown = "0.7.3"
 jna = "5.18.1"
 json = "20260522"
 jsoup = "1.22.2"
@@ -122,7 +117,6 @@ kotlin-serialization = { module = "org.jetbrains.kotlin.plugin.serialization:org
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test" }
 kotlinx-coroutines = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "coroutines" }
 kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
-kotlinx-coroutines-play-services = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-play-services", version.ref = "coroutines" }
 kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "coroutines" }
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "serialization" }
 
@@ -164,7 +158,6 @@ androidx-lifecycle-compose = { module = "androidx.lifecycle:lifecycle-runtime-co
 androidx-lifecycle-livedata = { module = "androidx.lifecycle:lifecycle-livedata", version.ref = "lifecycle" }
 androidx-lifecycle-process = { module = "androidx.lifecycle:lifecycle-process", version.ref = "lifecycle" }
 androidx-lifecycle-runtime = { module = "androidx.lifecycle:lifecycle-runtime", version.ref = "lifecycle" }
-androidx-lifecycle-runtime-testing = { module = "androidx.lifecycle:lifecycle-runtime-testing", version.ref = "lifecycle" }
 androidx-lifecycle-service = { module = "androidx.lifecycle:lifecycle-service", version.ref = "lifecycle" }
 androidx-lifecycle-viewmodel = { module = "androidx.lifecycle:lifecycle-viewmodel", version.ref = "lifecycle" }
 androidx-lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "lifecycle" }
@@ -220,16 +213,12 @@ androidx-compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling
 
 # Google other
 accompanist-drawablepainter = { module = "com.google.accompanist:accompanist-drawablepainter", version.ref = "accompanist" }
-firebase-messaging = { module = "com.google.firebase:firebase-messaging", version.ref = "firebase-messaging" }
 google-material = { module = "com.google.android.material:material", version.ref = "material" }
 ksp-symbol-processing-aa = { module = "com.google.devtools.ksp:symbol-processing-aa", version.ref = "ksp" }
 ksp-symbol-processing-aa-embeddable = { module = "com.google.devtools.ksp:symbol-processing-aa-embeddable", version.ref = "ksp" }
 ksp-symbol-processing-api = { module = "com.google.devtools.ksp:symbol-processing-api", version.ref = "ksp" }
 ksp-symbol-processing-common-deps = { module = "com.google.devtools.ksp:symbol-processing-common-deps", version.ref = "ksp" }
-mlkit-prompt = { module = "com.google.mlkit:genai-prompt", version.ref = "mlkit-prompt" }
 osslicenses-plugin = { module = "com.google.android.gms:oss-licenses-plugin", version.ref = "osslicenses-plugin" }
-play-integrity = { module = "com.google.android.play:integrity", version.ref = "play-integrity" }
-play-services-base = { module = "com.google.android.gms:play-services-base", version.ref = "play-services-base" }
 play-services-fido = { module = "com.google.android.gms:play-services-fido", version.ref = "play-services-fido" }
 protobuf-compiler = { module = "com.google.protobuf:protoc", version.ref = "protobuf" }
 protobuf-javalite = { module = "com.google.protobuf:protobuf-javalite", version.ref = "protobuf" }
@@ -284,7 +273,6 @@ robolectric = { module = "org.robolectric:robolectric", version.ref = "robolectr
 # Third party libraries
 androidsvg = { module = "com.caverock:androidsvg-aar", version.ref = "androidsvg" }
 disklrucache = { module = "com.jakewharton:disklrucache", version.ref = "disklrucache" }
-jetbrains-markdown = { module = "org.jetbrains:markdown", version.ref = "jetbrains-markdown" }
 jna = { module = "net.java.dev.jna:jna", version.ref = "jna" }
 json = { module = "org.json:json", version.ref = "json" }
 jsoup = { module = "org.jsoup:jsoup", version.ref = "jsoup" }

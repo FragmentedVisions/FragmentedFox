@@ -279,4 +279,49 @@ for name, folder, w, h in [
     ("fox_ai_on_state", "drawable", 62, 63),
 ]:
     write(RES + f"/{folder}/{name}.xml", illustration(w, h))
+
+def fox_body(x0, y0, w, h):
+    s = min(w, h) / 256 * 0.92
+    ox = x0 + (w - 256 * s) / 2
+    oy = y0 + (h - 256 * s) / 2
+    tx = lambda x, y: (x * s + ox, y * s + oy)
+    body = ""
+    for pts, fill in polys:
+        body += path(poly_path(pts, tx), fill=fill, stroke="#050505", stroke_w=fmt(7 * s))
+    for d in eyes:
+        body += path(eye_path(d, tx), fill="#00FF88")
+    return body
+
+
+def rounded(x, y, w, h, r):
+    return (f"M{fmt(x + r)},{fmt(y)}h{fmt(w - 2 * r)}a{fmt(r)},{fmt(r)} 0 0 1 {fmt(r)},{fmt(r)}"
+            f"v{fmt(h - 2 * r)}a{fmt(r)},{fmt(r)} 0 0 1 -{fmt(r)},{fmt(r)}h-{fmt(w - 2 * r)}"
+            f"a{fmt(r)},{fmt(r)} 0 0 1 -{fmt(r)},-{fmt(r)}v-{fmt(h - 2 * r)}a{fmt(r)},{fmt(r)} 0 0 1 {fmt(r)},-{fmt(r)}z")
+
+
+def tab_groups(width, height, fox_box, grid):
+    gx, gy, tile, gap = grid
+    body = path(rounded(gx - 6, gy - 6, 2 * tile + gap + 12, 2 * tile + gap + 12, 8), fill="#F2EBFF")
+    for i, color in enumerate(["#FFB587", "#D9C2FF", "#BC8FFF", "#FFD5B2"]):
+        x = gx + (i % 2) * (tile + gap)
+        y = gy + (i // 2) * (tile + gap)
+        body += path(rounded(x, y, tile, tile, 4), fill=color)
+    body += fox_body(*fox_box)
+    return vector(width, height, width, height, body)
+
+
+# More of Mozilla's Kit artwork, replaced the same way under the same names.
+for name, folder, w, h in [
+    ("kit_head_protection_blocker_banner", "drawable", 78, 78),
+    ("protection_panel_not_protected", "drawable", 80, 80),
+    ("protection_panel_not_secure", "drawable", 100, 100),
+    ("kit_expressive_full", "drawable", 66, 62),
+    ("ic_kit_bookmarks_empty_state", "drawable", 200, 178),
+    ("bookmarks_folder_illustration", "drawable", 200, 188),
+    ("kit_sleeping_under_laptop", "drawable", 180, 103),
+]:
+    write(RES + f"/{folder}/{name}.xml", illustration(w, h))
+write(RES + "/drawable/mozac_ic_kit_tab_groups.xml", tab_groups(144, 80, (4, 0, 80, 80), (86, 16, 22, 4)))
+write(RES + "/drawable/mozac_ic_kit_tab_groups_list_view.xml", tab_groups(78, 68, (0, 0, 40, 40), (30, 22, 18, 4)))
+
 print("ok")

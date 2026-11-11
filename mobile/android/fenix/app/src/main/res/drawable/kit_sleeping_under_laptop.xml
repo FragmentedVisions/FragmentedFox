@@ -1,0 +1,75 @@
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="180dp"
+    android:height="103dp"
+    android:viewportWidth="180"
+    android:viewportHeight="103">
+    <path
+        android:fillColor="#FF4757"
+        android:strokeColor="#050505"
+        android:strokeWidth="2.59"
+        android:strokeLineJoin="round"
+        android:pathData="M61.13,14.48 L81.12,38.17 L58.91,51.5 Z" />
+    <path
+        android:fillColor="#FF4757"
+        android:strokeColor="#050505"
+        android:strokeWidth="2.59"
+        android:strokeLineJoin="round"
+        android:pathData="M118.87,14.48 L98.88,38.17 L121.09,51.5 Z" />
+    <path
+        android:fillColor="#D4122A"
+        android:strokeColor="#050505"
+        android:strokeWidth="2.59"
+        android:strokeLineJoin="round"
+        android:pathData="M81.12,38.17 L90,32.25 L98.88,38.17 Z" />
+    <path
+        android:fillColor="#A80E21"
+        android:strokeColor="#050505"
+        android:strokeWidth="2.59"
+        android:strokeLineJoin="round"
+        android:pathData="M81.12,38.17 L98.88,38.17 L90,49.28 Z" />
+    <path
+        android:fillColor="#A80E21"
+        android:strokeColor="#050505"
+        android:strokeWidth="2.59"
+        android:strokeLineJoin="round"
+        android:pathData="M58.91,51.5 L81.12,38.17 L90,49.28 L73.71,69.27 Z" />
+    <path
+        android:fillColor="#A80E21"
+        android:strokeColor="#050505"
+        android:strokeWidth="2.59"
+        android:strokeLineJoin="round"
+        android:pathData="M121.09,51.5 L98.88,38.17 L90,49.28 L106.29,69.27 Z" />
+    <path
+        android:fillColor="#D4122A"
+        android:strokeColor="#050505"
+        android:strokeWidth="2.59"
+        android:strokeLineJoin="round"
+        android:pathData="M73.71,69.27 L90,49.28 L90,72.23 Z" />
+    <path
+        android:fillColor="#D4122A"
+        android:strokeColor="#050505"
+        android:strokeWidth="2.59"
+        android:strokeLineJoin="round"
+        android:pathData="M106.29,69.27 L90,49.28 L90,72.23 Z" />
+    <path
+        android:fillColor="#D4122A"
+        android:strokeColor="#050505"
+        android:strokeWidth="2.59"
+        android:strokeLineJoin="round"
+        android:pathData="M73.71,69.27 L90,72.23 L90,92.22 Z" />
+    <path
+        android:fillColor="#9E8FB2"
+        android:strokeColor="#050505"
+        android:strokeWidth="2.59"
+        android:strokeLineJoin="round"
+        android:pathData="M106.29,69.27 L90,72.23 L90,92.22 Z" />
+    <path
+        android:fillColor="#00FF88"
+        android:pathData="M63.35,50.76 Q74.45,49.28 82.6,58.9 Q72.23,61.86 63.35,50.76 Z" />
+    <path
+        android:fillColor="#00FF88"
+        android:pathData="M116.65,50.76 Q105.55,49.28 97.4,58.9 Q107.77,61.86 116.65,50.76 Z" />
+</vector>

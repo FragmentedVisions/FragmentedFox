@@ -10,7 +10,7 @@ FragmentedFox is a private, independent fork of the Firefox browser from [Fragme
 
 ## Status
 
-Early and experimental. The Android app builds on GitHub Actions into a signed APK that installs and runs on a phone. It has had only light testing. The latest build (build 28, commit `785f561242`) passed and is in daily use on a phone. It has one known minor bug, listed under known gaps in [changes](./fragmentedfox-docs/changes.md).
+Early and experimental. The Android app builds on GitHub Actions into a signed APK that installs and runs on a phone. It has had only light testing. The latest build (build 30, commit `fb02ae860a`) passed and was installed and checked on a phone. It has one known minor bug, listed under known gaps in [changes](./fragmentedfox-docs/changes.md).
 
 | Platform | Status |
 | --- | --- |
@@ -28,8 +28,8 @@ FragmentedFox follows Mozilla's [Extended Support Release](https://support.mozil
 - Sponsored content on the new tab page, Pocket recommendations on Android, sponsored tiles and the VPN, pin and Firefox Focus promos are off.
 - Captive portal and connectivity checks, link prefetching and remote download checks are off.
 - HTTPS-Only mode is on, and DNS is encrypted by default (Quad9, falling back to normal DNS).
-- TLS 1.2 connections only use ciphers with forward secrecy and authenticated encryption (ECDHE with AES-GCM or ChaCha20). 3DES, static RSA and CBC ciphers are off, so a few older sites that offer nothing else will not connect. This is in build 28 (commit `785f561242`), which is in daily use. On `NonStable--test` only, TLS 1.3 early data (0-RTT) is also off, since it can be replayed, and servers that do not support secure renegotiation are refused; those two are not built yet. See [changes](./fragmentedfox-docs/changes.md).
-- Only the selected tab and the most recently used other tab stay running. Older tabs are shut down and reload when opened, so they run no scripts and make no connections in the background. Tabs playing media can be kept running with a setting. This is not built or tried yet. See [changes](./fragmentedfox-docs/changes.md).
+- TLS 1.2 connections only use ciphers with forward secrecy and authenticated encryption (ECDHE with AES-GCM or ChaCha20). 3DES, static RSA and CBC ciphers are off, so a few older sites that offer nothing else will not connect. TLS 1.3 early data (0-RTT) is also off, since it can be replayed, and servers that do not support secure renegotiation are refused. All of this is in build 30 (commit `fb02ae860a`), which was installed on a phone; sites were not tested systematically. See [changes](./fragmentedfox-docs/changes.md).
+- Only the selected tab and the most recently used other tab stay running. Older tabs are shut down and reload when opened, so they run no scripts and make no connections in the background. Tabs playing media can be kept running with a setting. It is in build 30 (commit `fb02ae860a`); reloading on return, typed form input and media playback were not specifically checked on a phone yet. See [changes](./fragmentedfox-docs/changes.md).
 - WebRTC is left out of the build and switched off in the prefs.
 - On first run the Android app offers to install uBlock Origin and Privacy Badger, and only does so if you accept.
 - Its own name, icons, wordmark, vendor (`FragmentedVisions`) and Android application ID (`com.fragmentedvisions.fragmentedfox`).
@@ -44,8 +44,8 @@ There are only two branches. All changes are made on `NonStable--test`, and buil
 
 | Branch | Purpose |
 | --- | --- |
-| `Stable-Main` | The default branch. The last state that was built and installed on a phone (build 28, commit `785f561242`, Android build run 42578909699). Anything after that commit is documentation only. |
-| `NonStable--test` | Where all work happens. It includes everything in `Stable-Main` plus any newer changes. Right now it has changes that `Stable-Main` lacks (0-RTT off, secure renegotiation required, only the 2 latest tabs stay active), not built yet. `Stable-Main` only moves up after a build of the new changes has been checked on a phone. |
+| `Stable-Main` | The default branch. The last state that was built and installed on a phone (build 30, commit `fb02ae860a`, Android build run 42873290132). Anything after that commit is documentation only. |
+| `NonStable--test` | Where all work happens. It includes everything in `Stable-Main` plus any newer changes. Right now it has no code changes that `Stable-Main` lacks. `Stable-Main` only moves up after a build of the new changes has been checked on a phone. |
 
 ## Building
 

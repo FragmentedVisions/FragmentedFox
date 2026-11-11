@@ -218,15 +218,9 @@ class Core(
             useContentBlockingDatabase = true,
         )
 
-        // Apply fingerprinting protection overrides if the feature is enabled in Nimbus
-        if (FxNimbus.features.fingerprintingProtection.value().enabled) {
-            defaultSettings.fingerprintingProtectionOverrides =
-                FxNimbus.features.fingerprintingProtection.value().overrides
-            defaultSettings.fingerprintingProtection =
-                FxNimbus.features.fingerprintingProtection.value().enabledNormal
-            defaultSettings.fingerprintingProtectionPrivateBrowsing =
-                FxNimbus.features.fingerprintingProtection.value().enabledPrivate
-        }
+        defaultSettings.fingerprintingProtection = context.components.settings.fingerprintingProtectionEnabled
+        defaultSettings.fingerprintingProtectionPrivateBrowsing =
+            context.components.settings.fingerprintingProtectionPrivateBrowsingEnabled
 
         if (FxNimbus.features.baselineFpp.value().featEnabled) {
             defaultSettings.baselineFingerprintingProtection =

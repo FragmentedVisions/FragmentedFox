@@ -7,5 +7,7 @@
   "keepMediaTabsActive": "false",
   "trrMode": "DOH_SETTINGS_INCREASED",
   "dohProviderUrl": "QUAD9_URI",
-  "toolbarSimpleShortcutKey": "{ ShortcutType.NONE.value }"
+  "toolbarSimpleShortcutKey": "{ ShortcutType.NONE.value }",
+  "useStandardTrackingProtection": "false",
+  "useStrictTrackingProtection": "true"
 }

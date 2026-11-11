@@ -1108,18 +1108,27 @@ class Settings(
 
     val useStandardTrackingProtection by booleanPreference(
         appContext.getPreferenceKey(R.string.pref_key_tracking_protection_standard_option),
-        true,
+        default = false,
     )
 
     val useStrictTrackingProtection by booleanPreference(
         appContext.getPreferenceKey(R.string.pref_key_tracking_protection_strict_default),
-        false,
+        default = true,
     )
 
     val useCustomTrackingProtection by booleanPreference(
         appContext.getPreferenceKey(R.string.pref_key_tracking_protection_custom_option),
         false,
     )
+
+    val fingerprintingProtectionEnabled: Boolean
+        get() = when {
+            useCustomTrackingProtection -> blockSuspectedFingerprinters
+            else -> useStrictTrackingProtection
+        }
+
+    val fingerprintingProtectionPrivateBrowsingEnabled: Boolean
+        get() = if (useCustomTrackingProtection) blockSuspectedFingerprintersPrivateBrowsing else true
 
     var strictAllowListBaselineTrackingProtection by booleanPreference(
         appContext.getPreferenceKey(R.string.pref_key_tracking_protection_strict_allow_list_baseline),

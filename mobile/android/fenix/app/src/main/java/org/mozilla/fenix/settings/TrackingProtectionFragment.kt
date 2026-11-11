@@ -409,27 +409,10 @@ class TrackingProtectionFragment : PreferenceFragmentCompat(), SystemInsetsPadde
     }
 
     private fun updateFingerprintingProtection() {
-        val isStandardSelected = requireComponents.settings.useStandardTrackingProtection
-        val isStrictSelected = requireComponents.settings.useStrictTrackingProtection
-        val isCustomSelected = requireComponents.settings.useCustomTrackingProtection
-
         context?.components?.let {
-            if (isCustomSelected) {
-                if (it.settings.blockSuspectedFingerprintersInCustomTrackingProtection) {
-                    it.core.engine.settings.fingerprintingProtection = it.settings.blockSuspectedFingerprinters
-                    it.core.engine.settings.fingerprintingProtectionPrivateBrowsing = it.settings
-                        .blockSuspectedFingerprintersPrivateBrowsing
-                } else {
-                    it.core.engine.settings.fingerprintingProtection = false
-                    it.core.engine.settings.fingerprintingProtectionPrivateBrowsing = false
-                }
-            } else if (isStrictSelected) {
-                it.core.engine.settings.fingerprintingProtection = true
-                it.core.engine.settings.fingerprintingProtectionPrivateBrowsing = true
-            } else if (isStandardSelected) {
-                it.core.engine.settings.fingerprintingProtection = false
-                it.core.engine.settings.fingerprintingProtectionPrivateBrowsing = true
-            }
+            it.core.engine.settings.fingerprintingProtection = it.settings.fingerprintingProtectionEnabled
+            it.core.engine.settings.fingerprintingProtectionPrivateBrowsing =
+                it.settings.fingerprintingProtectionPrivateBrowsingEnabled
         }
     }
 

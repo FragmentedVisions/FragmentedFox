@@ -1278,4 +1278,38 @@ class SettingsTest {
         val result = settings.deleteDownloadBehavior
         assertEquals(Settings.DeleteDownloadBehavior.REMOVE_FROM_HISTORY, result)
     }
+
+    @Test
+    fun `GIVEN no tracking protection level was chosen THEN strict is the default`() {
+        assertTrue(settings.useStrictTrackingProtection)
+        assertFalse(settings.useStandardTrackingProtection)
+        assertFalse(settings.useCustomTrackingProtection)
+    }
+
+    @Test
+    fun `GIVEN strict tracking protection WHEN reading fingerprinting protection THEN it is on in all tabs`() {
+        assertTrue(settings.fingerprintingProtectionEnabled)
+        assertTrue(settings.fingerprintingProtectionPrivateBrowsingEnabled)
+    }
+
+    @Test
+    fun `GIVEN standard tracking protection WHEN reading fingerprinting protection THEN it is on in private tabs only`() {
+        val settings = spyk(settings)
+        every { settings.useStrictTrackingProtection } returns false
+        every { settings.useStandardTrackingProtection } returns true
+
+        assertFalse(settings.fingerprintingProtectionEnabled)
+        assertTrue(settings.fingerprintingProtectionPrivateBrowsingEnabled)
+    }
+
+    @Test
+    fun `GIVEN custom tracking protection with suspected fingerprinters off THEN fingerprinting protection is off`() {
+        val settings = spyk(settings)
+        every { settings.useCustomTrackingProtection } returns true
+        every { settings.blockSuspectedFingerprinters } returns false
+        every { settings.blockSuspectedFingerprintersPrivateBrowsing } returns false
+
+        assertFalse(settings.fingerprintingProtectionEnabled)
+        assertFalse(settings.fingerprintingProtectionPrivateBrowsingEnabled)
+    }
 }

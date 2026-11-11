@@ -22,9 +22,7 @@
   <!-- The document title and heading of the error page shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_title">Ang seguridad nga koneksyon kinahanglan sa sini nga website.</string>
   <!-- The text shown inside the advanced button used to expand the advanced options. It's only shown when a website uses HSTS. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_advanced">Nag-abanse…</string>
   <!-- The text shown inside the advanced options button used to go back. It's only shown if the user has expanded the advanced options. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_back">Balikan</string>
   <!-- The document title and heading of the error page shown when the user's network connection is interrupted while connecting to a website. -->
   <string name="mozac_browser_errorpages_net_interrupt_title">May nagsablag sa koneksyon</string>
   <!-- The document title and heading of the error page shown when a website could not be reached. -->
@@ -48,7 +46,6 @@
   <!-- The document title and heading of an error page. -->
   <string name="mozac_browser_errorpages_malformed_uri_title">Sala nga Address</string>
   <!-- The document title and heading of an error page. -->
-  <string name="mozac_browser_errorpages_malformed_uri_title_alternative">Indi balido ang address</string>
   <!-- The document title and heading of an error page. -->
   <string name="mozac_browser_errorpages_unknown_protocol_title">Unknown Protocol</string>
   <!-- The document title and heading of an error page. -->

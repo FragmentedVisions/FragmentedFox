@@ -18,7 +18,6 @@
   <!-- The settings of the add-on. -->
   <string name="mozac_feature_addons_settings">Sama</string>
   <!-- Indicates the add-on is enabled. -->
-  <string name="mozac_feature_addons_settings_on">Kuna</string>
   <!-- Indicates the add-on is enabled. -->
   <string name="mozac_feature_addons_enabled">Kuna</string>
   <!-- This is displayed in a page where the user can see the installed and recommended(not installed yet) add-ons, this string indicates the disabled section. -->

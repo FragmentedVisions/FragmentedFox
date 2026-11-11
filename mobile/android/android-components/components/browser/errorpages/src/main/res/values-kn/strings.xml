@@ -75,9 +75,7 @@
   <string name="mozac_browser_errorpages_malformed_uri_title">ಅಸಿಂಧುವಾದ ವಿಳಾಸ</string>
   <string name="mozac_browser_errorpages_malformed_uri_message"><![CDATA[<p>ಒದಗಿಸಲಾದ ವಿಳಾಸವು ಒಂದು ಗುರುತಿಸಬಲ್ಲ ಮಾದರಿಯಲ್ಲಿ ಇಲ್ಲ. ದಯವಿಟ್ಟು ತಪ್ಪುಗಳಿಗಾಗಿ ಸ್ಥಳ ಪಟ್ಟಿಯಲ್ಲಿ ನೋಡಿ ನಂತರ ಮರಳಿ ಪ್ರಯತ್ನಿಸಿ.</p>]]></string>
   <!-- The document title and heading of an error page. -->
-  <string name="mozac_browser_errorpages_malformed_uri_title_alternative">ವಿಳಾಸವು ಸಮಂಜಸವಾಗಿಲ್ಲ</string>
   <!-- This string contains markup. The URL should not be localized. -->
-  <string name="mozac_browser_errorpages_malformed_uri_message_alternative"><![CDATA[<ul>\n<li>ಜಾಲ ವಿಳಾಸವು ಸಾಮಾನ್ಯವಾಗಿ <strong>http://www.example.com/</strong> ರೀತಿಯಲ್ಲಿ ಬರೆಯಲ್ಪಡುತ್ತದೆ</li>\n<li>ಮುಮ್ಮುಖವಾಗಿರುವ ಅಡ್ಡಗೆರಗಳನ್ನು ನೀವು ಬಳಸಿದ್ದೀರ ಎಂದು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಿ (ಉದಾ. <strong>/</strong>).</li>\n</ul>]]></string>
   <!-- The document title and heading of an error page. -->
   <string name="mozac_browser_errorpages_unknown_protocol_title">ಅಜ್ಞಾತ ಪ್ರೊಟೊಕಾಲ್</string>
   <string name="mozac_browser_errorpages_unknown_protocol_message"><![CDATA[<p>ವಿಳಾಸ ಸೂಚಿಸುವ ಒಂದು ಪ್ರೊಟೊಕಾಲನ್ನು (e.g. <q>wxyz://</q>) ವೀಕ್ಷಕವು ಗುರುತಿಸಲಾಗಿಲ್ಲ, ಆದ್ದರಿಂದ ವೀಕ್ಷಕವು ತಾಣಕ್ಕೆ ಸರಿಯಾಗಿ ಸಂಪರ್ಕ ಹೊಂದಲಾಗುತ್ತಿಲ್ಲ.</p>\n<ul>\n<li>ನೀವು ಮಲ್ಟಿಮೀಡಿಯಾ ಅಥವ ಪಠ್ಯವಲ್ಲದ ಇತರೆ ಸೇವೆಗಳನ್ನು ನಿಲುಕಿಸಿಕೊಳ್ಳಲು ಪ್ರಯತ್ನಿಸುತ್ತಿದ್ದೀರಾ?? ತಾಣದ ಹೆಚ್ಚುವರಿ ಅಗತ್ಯತೆಗಳನ್ನು ಪರೀಕ್ಷಿಸಿ.</li>\n<li>ಕೆಲವೊಂದು ಪ್ರೋಟೊಕಾಲ್‍ಗಳನ್ನು ವೀಕ್ಷಕವು ಗುರುತಿಸಲು ಕೆಲವೊಂದು ಮೂರನೆ ಪಕ್ಷದ(third party) ತಂತ್ರಾಂಶ ಅಥವ ಪ್ಲಗ್‍ಇನ್‍ಗಳ ಅಗತ್ಯವಿರುತ್ತದೆ.</li></ul>]]></string>

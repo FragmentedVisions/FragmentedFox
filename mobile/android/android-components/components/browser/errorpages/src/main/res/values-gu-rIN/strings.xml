@@ -68,7 +68,6 @@
   <!-- The document title and heading of an error page. -->
   <string name="mozac_browser_errorpages_malformed_uri_title">અમાન્ય સરનામું</string>
   <!-- The document title and heading of an error page. -->
-  <string name="mozac_browser_errorpages_malformed_uri_title_alternative">સરનામું માન્ય નથી</string>
   <!-- The document title and heading of an error page. -->
   <string name="mozac_browser_errorpages_unknown_protocol_title">અજ્ઞાત પ્રોટોકોલ</string>
   <!-- The document title and heading of an error page. -->

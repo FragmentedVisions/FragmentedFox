@@ -24,7 +24,6 @@
   <!-- Text for password field in an authentication dialog. -->
   <string name="mozac_feature_prompt_password_hint">密碼</string>
   <!-- Negative confirmation that we should not save the new or updated login -->
-  <string name="mozac_feature_prompt_dont_save_2">現在不要</string>
   <!-- Negative confirmation that we should never save a login for this site -->
   <string name="mozac_feature_prompt_never_save">永不儲存</string>
   <!-- Negative confirmation that we should not save a credit card for this site -->
@@ -38,7 +37,6 @@
   <!-- Error text displayed underneath the password field when it is in an error case -->
   <string name="mozac_feature_prompt_error_empty_password_2">輸入密碼</string>
   <!-- Error text displayed underneath the password field when it is in an error case -->
-  <string name="mozac_feature_prompt_error_unknown_cause_2">無法儲存密碼</string>
   <!-- Prompt message displayed when app detects a user has entered a new username and password and user decides if app should save the new password. -->
   <string name="mozac_feature_prompt_login_save_headline_2">要儲存密碼嗎？</string>
   <!-- Prompt message displayed when app detects a user has entered a new password for an existing login and user decides if app should update the password. -->
@@ -112,11 +110,9 @@
   <!-- Header for the select password prompt to allow users to fill a form with a saved password -->
   <string name="mozac_feature_prompts_saved_logins_2">已儲存的密碼</string>
   <!-- Content description for the suggest strong password prompt to allow users to fill a form with a suggested strong password -->
-  <string name="mozac_feature_prompts_suggest_strong_password_content_description">建議安全的密碼</string>
   <!-- Header for the suggest strong password prompt to allow users to fill a form with a suggested strong password -->
   <string name="mozac_feature_prompts_suggest_strong_password_2">使用較強的密碼</string>
   <!-- Title for using the suggest strong password confirmation dialog. %1$s will be replaced with the generated password -->
-  <string name="mozac_feature_prompts_suggest_strong_password_message">使用安全的密碼：%1$s</string>
   <!-- Title for using the suggest strong password confirmation dialog -->
   <string name="mozac_feature_prompts_suggest_strong_password_title">要使用較強的密碼嗎？</string>
   <!-- Content description for the suggest strong password confirmation dialog -->
@@ -124,9 +120,7 @@
   <!-- Pressing this will use the suggested strong password -->
   <string name="mozac_feature_prompts_suggest_strong_password_use_password">使用密碼</string>
   <!-- Pressing this will dismiss the suggested strong password dialog -->
-  <string name="mozac_feature_prompts_suggest_strong_password_dismiss">現在不要</string>
   <!-- Title for showing the suggest strong password updated confirmation snackbar -->
-  <string name="mozac_feature_prompts_suggest_strong_password_updated_snackbar_title">已更新密碼</string>
   <!-- Strings shown in a dialog that appear when users try to refresh a certain kind of webpages -->
   <string name="mozac_feature_prompt_repost_title">要重新發送資料到這個網站嗎？</string>
   <string name="mozac_feature_prompt_repost_message">重新整理頁面可能會再次執行最近的操作，例如重複付款或張貼留言。</string>
@@ -179,7 +173,6 @@
 
     Content description for the Account picture in the Select Account FedCM prompt
   -->
-  <string name="mozac_feature_prompts_account_picture">帳號圖片</string>
   <!-- Title of the Identity Credential provider dialog chooser. -->
   <string name="mozac_feature_prompts_identity_credentials_choose_provider">選擇登入資訊服務提供者</string>
   <!-- Title of an account picker dialog for identity credentials. The %1$s will be replaced with the name of the provider -->

@@ -34,11 +34,9 @@
   <!-- The error message shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_message"><![CDATA[<ul>\n<li>Узыхәаԥшырц иуҭаху адаҟьа аарԥшра ауам, избанзар ари асаит ашәарҭадаратә еиқәыршәара аҭахуп.</li>\n<li>Иҟалап, апроблема асаит иадҳәалазар, насгьы уара уи ӡбашьа амам.</li>\n<li>Ари азҵаара атәы асаит администратор изеиҭашәҳәар шәылшоит.</li>\n</ul>]]></string>
   <!-- The text shown inside the advanced button used to expand the advanced options. It's only shown when a website uses HSTS. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_advanced">Уи адагьы…</string>
   <!-- The advanced certificate information shown when a website uses HSTS. The %1$s will be replaced by the website URL and %2$s will be replaced by the app name. It's only shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_techInfo2"><![CDATA[<label> <b>%1$s</b> ахархәоит ашәарҭадаратә политика HTTP Forced Secure (HSTS), ҳәа изышьҭоу, уи иаҳәоит <b>%2$s</b> ашәарҭадаратә еиқәыршәара ахархәарала мацара аҽаԥхьакра шалшо. Ари асаит аҭааразы аҷыдаҟазшьа ацҵара ҟалом. </label>]]></string>
   <!-- The text shown inside the advanced options button used to go back. It's only shown if the user has expanded the advanced options. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_back">Шьҭахьҟа</string>
   <!-- The document title and heading of the error page shown when the user's network connection is interrupted while connecting to a website. -->
   <string name="mozac_browser_errorpages_net_interrupt_title">Аимадара ԥҵәеит</string>
   <!-- The error message shown when the user's network connection is interrupted while connecting to a website. -->
@@ -101,9 +99,7 @@
   <string name="mozac_browser_errorpages_malformed_uri_title">Ииашам адрес аформат</string>
   <string name="mozac_browser_errorpages_malformed_uri_message"><![CDATA[<p>Иарбоу адрес аформат еилкаашьа амам. Адрес агха ыҟоу-иҟаму гәаҭаны даҽазнык шәҽазышәшәа.</p>]]></string>
   <!-- The document title and heading of an error page. -->
-  <string name="mozac_browser_errorpages_malformed_uri_title_alternative">Ииашам адрес аформат</string>
   <!-- This string contains markup. The URL should not be localized. -->
-  <string name="mozac_browser_errorpages_malformed_uri_message_alternative"><![CDATA[<ul>\n<li>Ауеб адресқәа лассы-лассы абас еиԥшуп <strong>http://www.example.com/</strong></li>\n<li>Игәашәҭ иаабац ацәаҳәа ҵәаӷәа шәхы иашәырхәоит (иаҳҳәап. <strong>/</strong>).</li>\n</ul>]]></string>
   <!-- The document title and heading of an error page. -->
   <string name="mozac_browser_errorpages_unknown_protocol_title">Еилкаам апротокол</string>
   <string name="mozac_browser_errorpages_unknown_protocol_message"><![CDATA[<p>Адрес абраузер изымдыруа апротокол аҵоуп (<q>wxyz://</q>), еиԥш, убри аҟнытә абраузер ииашаны асаит аимадара аԥҵара алшом.</p>\n<ul>\n<li>Амедиа ма даҽа тексттәым аусбарҭақәа рахь унеирц уҭахызар, иҷыдоу аҭахрақәа рыҟазаара асаит аҿы игәаҭ.</li>\n<li>Апротоколқәак рҿы ахԥатәи аган апрограмматә еиқәыршәара ма аплагинқәа рышьақәыргылара аҭаххар ауеит, абраузер урҭ еиликаарц азы.</li>\n</ul>]]></string>

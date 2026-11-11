@@ -34,11 +34,9 @@
   <!-- The error message shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_message"><![CDATA[<ul>\n<li>Tinklalapis, kurį bandote peržiūrėti, negali būti parodytas, nes šiai svetainei reikalingas saugus ryšys.</li>\n<li>Greičiausiai problema kyla dėl svetainės, ir jūs nieko negalite padaryti, kad ją išspręstumėte.</li>\n<li>Apie problemą galite pranešti svetainės prižiūrėtojui.</li>\n</ul>]]></string>
   <!-- The text shown inside the advanced button used to expand the advanced options. It's only shown when a website uses HSTS. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_advanced">Papildomai…</string>
   <!-- The advanced certificate information shown when a website uses HSTS. The %1$s will be replaced by the website URL and %2$s will be replaced by the app name. It's only shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_techInfo2"><![CDATA[<label> <b>%1$s</b> turi saugos nuostatą, vadinamą „HTTP Strict Transport Security“ (HSTS), ir reiškia, kad <b>„%2$s“</b> gali jungtis tik saugiu ryšiu. Jūs negalite sukurti išimties, kad aplankytumėte šią svetainę. </label>]]></string>
   <!-- The text shown inside the advanced options button used to go back. It's only shown if the user has expanded the advanced options. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_back">Eiti atgal</string>
   <!-- The document title and heading of the error page shown when the user's network connection is interrupted while connecting to a website. -->
   <string name="mozac_browser_errorpages_net_interrupt_title">Ryšys buvo nutrauktas</string>
   <!-- The error message shown when the user's network connection is interrupted while connecting to a website. -->
@@ -101,9 +99,7 @@
   <string name="mozac_browser_errorpages_malformed_uri_title">Neteisingas adresas</string>
   <string name="mozac_browser_errorpages_malformed_uri_message"><![CDATA[<p>Neteisingas adreso formatas. Patikrinkite adresą adreso lauke ir bandykite dar kartą.</p>]]></string>
   <!-- The document title and heading of an error page. -->
-  <string name="mozac_browser_errorpages_malformed_uri_title_alternative">Neteisingas adresas</string>
   <!-- This string contains markup. The URL should not be localized. -->
-  <string name="mozac_browser_errorpages_malformed_uri_message_alternative"><![CDATA[<ul>\n<li>Svetainių adresai dažniausiai rašomi taip: <strong>http://www.example.com/</strong></li>\n<li>Įsitikinkite, kad naudojate pasviruosius brūkšnius (į priekį): <strong>/</strong>.</li>\n</ul>]]></string>
   <!-- The document title and heading of an error page. -->
   <string name="mozac_browser_errorpages_unknown_protocol_title">Nežinomas protokolas</string>
   <string name="mozac_browser_errorpages_unknown_protocol_message"><![CDATA[<p>Adrese nurodytas protokolas (pvz., <q>wxyz://</q>) naršyklei nežinomas, todėl svetainės įkėlimas nutrauktas.</p>\n<ul>\n<li>Jei bandote prisijungti prie įvairialypės terpės išteklių, patikrinkite, ar nėra tam specialių reikalavimų.</li>\n<li>Kai kurių protokolų atvėrimui gali būti reikalinga papildoma programinė įranga arba naršyklės papildiniai.</li>\n</ul>]]></string>

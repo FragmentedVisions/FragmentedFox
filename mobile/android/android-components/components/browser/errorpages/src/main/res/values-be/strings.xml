@@ -34,11 +34,9 @@
   <!-- The error message shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_message"><![CDATA[<ul>\n<li>Старонку, якую вы спрабуеце прагледзець, немагчыма паказаць, бо для гэтага вэб-сайта патрабуецца бяспечнае злучэнне.</li>\n<li>Праблема, хутчэй за ўсё, звязана з вэб-сайтам, і\u00a0вы нічога не можаце зрабіць, каб яе вырашыць.</li>\n<li>Вы можаце паведаміць адміністратарам вэб-сайта аб праблеме.</li>\n</ul>]]></string>
   <!-- The text shown inside the advanced button used to expand the advanced options. It's only shown when a website uses HSTS. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_advanced">Дадаткова…</string>
   <!-- The advanced certificate information shown when a website uses HSTS. The %1$s will be replaced by the website URL and %2$s will be replaced by the app name. It's only shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_techInfo2"><![CDATA[<label> <b>%1$s</b> мае палітыку бяспекі, што называецца HTTP Strict Transport Security (HSTS), і\u00a0гэта азначае, што <b>%2$s</b> можа звязвацца з\u00a0ім толькі абароненым злучэннем. Вы не можаце дадаць выключэнне для наведвання гэтага сайта. </label>]]></string>
   <!-- The text shown inside the advanced options button used to go back. It's only shown if the user has expanded the advanced options. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_back">Вярнуцца</string>
   <!-- The document title and heading of the error page shown when the user's network connection is interrupted while connecting to a website. -->
   <string name="mozac_browser_errorpages_net_interrupt_title">Злучэнне перарвана</string>
   <!-- The error message shown when the user's network connection is interrupted while connecting to a website. -->
@@ -101,9 +99,7 @@
   <string name="mozac_browser_errorpages_malformed_uri_title">Несапраўдны адрас</string>
   <string name="mozac_browser_errorpages_malformed_uri_message"><![CDATA[<p>Фармат дадзенага адраса не апазнаны. Праверце, калі ласка, ці няма памылак на паліцы месцазнаходжання і паспрабуйце зноў.</p>]]></string>
   <!-- The document title and heading of an error page. -->
-  <string name="mozac_browser_errorpages_malformed_uri_title_alternative">Несапраўдны адрас</string>
   <!-- This string contains markup. The URL should not be localized. -->
-  <string name="mozac_browser_errorpages_malformed_uri_message_alternative"><![CDATA[<ul>\n<li>Адрас Сеціва звычайна пішацца, як <strong>http://www.example.com/</strong></li>\n<li>Упэўніцеся, што вы ўжываеце простыя косыя рыскі (г.зн. <strong>/</strong>).</li>\n</ul>]]></string>
   <!-- The document title and heading of an error page. -->
   <string name="mozac_browser_errorpages_unknown_protocol_title">Невядомы пратакол</string>
   <string name="mozac_browser_errorpages_unknown_protocol_message"><![CDATA[<p>Адрас вызначае пратакол (напрыклад: <q>wxyz://</q>), які не распазнаецца браўзерам, таму браўзер не можа злучыцца з сайтам належным чынам.</p>\n<ul>\n<li>Вы спрабуеце даступіцца да мультымедыйных або нетэкставых службаў? Праверце, ці існуюць на сайце дадатковыя патрабаванні.</li>\n<li>Асобныя пратаколы могуць патрабаваць пабочныя праграмы або плагіны, каб браўзер мог распазнаваць іх.</li>\n</ul>]]></string>

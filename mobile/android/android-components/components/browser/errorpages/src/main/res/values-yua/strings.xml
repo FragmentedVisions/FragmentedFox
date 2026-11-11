@@ -34,11 +34,9 @@
   <!-- The error message shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_message"><![CDATA[<ul>\n<li>Ma\' tu páajtal u ye\'esa\'al le linki abas kaambal ka k\'áat a wile\' tumen le ts\'ono\'oto\' web k\'a\'abet jump\'éel ma\'alob conexión.</li>\n<li>Le talamilo\' yaan ti\' le ts\'ono\'oto\' web, yéetel mina\'an mixba\'al je\'el u páajtal a beetik uti\'al a yutskíintik.</li>\n<li>Je\'el u páajtal a ts\'áaik ojéeltbil ti\' u administrador le ts\'ono\'oto\' web yóok\'ol le talamilo\'.</li>\n</ul>]]></string>
   <!-- The text shown inside the advanced button used to expand the advanced options. It's only shown when a website uses HSTS. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_advanced">Áabansado…</string>
   <!-- The advanced certificate information shown when a website uses HSTS. The %1$s will be replaced by the website URL and %2$s will be replaced by the app name. It's only shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_techInfo2"><![CDATA[<label> <b>%1$s</b> yaan ti\' jump\'éel política ti\' seguridad ku k\'aaba\'tik HTTP Strict Transport Security (HSTS), u k\'áat u ya\'ale\' <b>%2$s</b> chéen je\'el u páajtal u conectar u yéetel seguridad. Ma\' je\'el u páajtal a ts\'áik jump\'éel excepción uti\'al a xíimbaltik le ts\'ono\'oto\'. </label>]]></string>
   <!-- The text shown inside the advanced options button used to go back. It's only shown if the user has expanded the advanced options. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_back">Suut</string>
   <!-- The document title and heading of the error page shown when the user's network connection is interrupted while connecting to a website. -->
   <string name="mozac_browser_errorpages_net_interrupt_title">Le conexión ts\'o\'ok u je\'elel</string>
   <!-- The error message shown when the user's network connection is interrupted while connecting to a website. -->
@@ -101,9 +99,7 @@
   <string name="mozac_browser_errorpages_malformed_uri_title">Le direccióno\' ma\' jach jaaj</string>
   <string name="mozac_browser_errorpages_malformed_uri_message"><![CDATA[<p>Le dirección ts\'a\'aba\' ma\' ti\' yaan ti\' jump\'éel formato reconocido. Ilawil wa mina\'an ba\'alo\'ob ti\' le barra direcciones ka ka\'a ilawil.</p>]]></string>
   <!-- The document title and heading of an error page. -->
-  <string name="mozac_browser_errorpages_malformed_uri_title_alternative">Le k’áaba’ ta ts’íibtiko’ ma’ utsi’</string>
   <!-- This string contains markup. The URL should not be localized. -->
-  <string name="mozac_browser_errorpages_malformed_uri_message_alternative"><![CDATA[<ul>\n<li>Le dirección web ku ts\'íibta\'al beya\': <strong>http://www.example.com/</strong></li>\n<li>Asegurar u táan u utilizando barras tak táanil (e.g. <strong>/</strong>).</li>\n</ul>]]></string>
   <!-- The document title and heading of an error page. -->
   <string name="mozac_browser_errorpages_unknown_protocol_title">Protocolo ma\' k\'ajóolta\'an</string>
   <string name="mozac_browser_errorpages_unknown_protocol_message"><![CDATA[<p>Le direccióno\' ku ya\'alik jump\'éel protocolo (je\'ebix, <q>wxyz://</q>) ma\' u k\'aj óoltik le navegadoro\', le beetike\' le navegadoro\' ma\' tu páajtal u nupikubáaj ma\'alob ti\' le ts\'ono\'oto\'.</p>\n<ul>\n<li>¿Táan a wilik a wokol ichil contenido multimedia wa uláak\' áantajo\'ob ma\' analte\'o\'? Ilawil uláak\' ba\'ax k\'a\'abéet ti\' le ts\'ono\'oto\'.</li>\n<li>Yaan protocolos je\'el u páajtal u k\'a\'abetkuunsik software wa plugins terceros bey ma\' u páajtal u k\'ajóolta\'alo\'ob tumen le navegador.</li>\n</ul>]]></string>

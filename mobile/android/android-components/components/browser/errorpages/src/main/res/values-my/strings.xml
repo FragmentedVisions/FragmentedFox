@@ -85,9 +85,7 @@
   <string name="mozac_browser_errorpages_malformed_uri_title">မမှန်ကန်သောလိပ်စာ</string>
   <string name="mozac_browser_errorpages_malformed_uri_message"><![CDATA[<p>ပေးထားသောလိပ်စာသည် သတ်မှတ်ထားသော ပုံစံမျိုးဖြင့်မဟုတ်ပါ။ ကျေးဇူးပြုပြီး ရှာဖွေရေးဘားကို စစ်ဆေးပြီး ထပ်မံ ဆောင်ရွက်ကြည့်ပါ။</p>]]></string>
   <!-- The document title and heading of an error page. -->
-  <string name="mozac_browser_errorpages_malformed_uri_title_alternative">လိပ်စာမမှန်ကန်ပါ</string>
   <!-- This string contains markup. The URL should not be localized. -->
-  <string name="mozac_browser_errorpages_malformed_uri_message_alternative"><![CDATA[<ul>\n<li>ဝဘ်လိပ်စာများကိုအများအားဖြင့်အောက်ပါအတိုင်းရေးကြသည်။<strong>http://www.example.com/</strong></li>\n<li>မျဉ်းစောင်းလေးပါသည်ကိုဂရုပြုပါ။ (နမူနာ<strong>/</strong>)</li>\n</ul>]]></string>
   <!-- The document title and heading of an error page. -->
   <string name="mozac_browser_errorpages_unknown_protocol_title">မသိသောပရိုတိုကော</string>
   <string name="mozac_browser_errorpages_unknown_protocol_message"><![CDATA[<p>လိပ်စာက protocol ကိုသတ်မှတ်သည် (ဥပမာ -<q>wxyz://</q>) ဘရောက်ဇာမှ မသိသော‌ကြောင့် ဘရောက်ဇာမှ ဤဆိုက်ကိုမချိတ်ဆက်နိုင်ပါ။</p>\n<ul>\n<li>သင် multimedia သို့မဟုတ်အခြားစာမဟုတ်သောဝန်ဆောင်မှုများကိုရယူရန်ကြိုးစားနေပါသလား။ အပိုလိုအပ်ချက်များအတွက် site ကိုစစ်ဆေးပါ။ </li>\n<li>browser သည်၎င်းတို့ကိုအသိမပြုမီ အချို့သော protocol များသည် third-party software သို့မဟုတ် plugins လိုအပ်လိမ့်မည်။</li>\n</ul>]]></string>

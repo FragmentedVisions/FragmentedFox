@@ -34,11 +34,9 @@
   <!-- The error message shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_message"><![CDATA[<ul>\n<li>Pagina pe care încerci să o vizualizezi nu poate fi afișată, deoarece acest site web necesită o conexiune securizată.</li>\n<li>Cel mai probabil, problema este de la site și nu poți face nimic pentru a o rezolva.</li>\n<li>Poți notifica administratorul site-ului web despre problemă.</li>\n</ul>]]></string>
   <!-- The text shown inside the advanced button used to expand the advanced options. It's only shown when a website uses HSTS. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_advanced">Avansat…</string>
   <!-- The advanced certificate information shown when a website uses HSTS. The %1$s will be replaced by the website URL and %2$s will be replaced by the app name. It's only shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_techInfo2"><![CDATA[<label> <b>%1$s</b> are o politică de securitate denumită HTTP Strict Transport Security (HSTS), ceea ce înseamnă că <b>%2$s</b> se poate conecta doar securizat. Nu poți adăuga o excepție ca să intri pe acest site. </label>]]></string>
   <!-- The text shown inside the advanced options button used to go back. It's only shown if the user has expanded the advanced options. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_back">Înapoi</string>
   <!-- The document title and heading of the error page shown when the user's network connection is interrupted while connecting to a website. -->
   <string name="mozac_browser_errorpages_net_interrupt_title">Conexiunea a fost întreruptă</string>
   <!-- The error message shown when the user's network connection is interrupted while connecting to a website. -->
@@ -101,9 +99,7 @@
   <string name="mozac_browser_errorpages_malformed_uri_title">Adresă nevalidă</string>
   <string name="mozac_browser_errorpages_malformed_uri_message"><![CDATA[<p>Adresa furnizată nu este într-un format recunoscut. Te rugăm să verifici să nu fie greșeli în bara de adrese și încearcă din nou.</p>]]></string>
   <!-- The document title and heading of an error page. -->
-  <string name="mozac_browser_errorpages_malformed_uri_title_alternative">Adresa nu este validă</string>
   <!-- This string contains markup. The URL should not be localized. -->
-  <string name="mozac_browser_errorpages_malformed_uri_message_alternative"><![CDATA[<ul>\n<li>Adresele web sunt scrise în mod normal așa: <strong>http://www.example.com/</strong></li>\n<li>Asigură-te că folosești bare înclinate la dreapta (adică <strong>/</strong>).</li>\n</ul>]]></string>
   <!-- The document title and heading of an error page. -->
   <string name="mozac_browser_errorpages_unknown_protocol_title">Protocol necunoscut</string>
   <string name="mozac_browser_errorpages_unknown_protocol_message"><![CDATA[<p>Adresa specifică un protocol (de ex. <q>wxyz://</q>) pe care browserul nu îl recunoaște și, prin urmare, nu se poate conecta corect la site.</p>\n<ul>\n<li>Încerci să accesezi conținut multimedia sau alte servicii non-text? Verifică site-ul pentru cerințe suplimentare.</li>\n<li>Este posibil ca unele protocoale să necesite softuri sau pluginuri de la terți înainte ca browserul să le poată recunoaște.</li>\n</ul>]]></string>

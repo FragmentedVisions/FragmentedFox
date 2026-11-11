@@ -34,11 +34,9 @@
   <!-- The error message shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_message"><![CDATA[<ul>\n<li>Nol è pussibil mostrâ la pagjine che tu stâs cirint di visualizâ parcè che chest sît web al domande une conession sigure.</li>\n<li>Al è probabil che il probleme al stedi tal sît web e duncje nol è nuie che tu podedis fâ par risolvilu.</li>\n<li>Tu puedis però notificâ il probleme al aministradôr dal sît web.</li>\n</ul>]]></string>
   <!-- The text shown inside the advanced button used to expand the advanced options. It's only shown when a website uses HSTS. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_advanced">Avanzadis…</string>
   <!-- The advanced certificate information shown when a website uses HSTS. The %1$s will be replaced by the website URL and %2$s will be replaced by the app name. It's only shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_techInfo2"><![CDATA[<label> <b>%1$s</b> al à une politiche di sigurece clamade HTTP Strict Transport Security (HSTS), che al significhe che <b>%2$s</b> al pues conetisi dome in maniere sigure e no tu puedis zontâ une ecezion par visitâ chest sît. </label>]]></string>
   <!-- The text shown inside the advanced options button used to go back. It's only shown if the user has expanded the advanced options. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_back">Torne indaûr</string>
   <!-- The document title and heading of the error page shown when the user's network connection is interrupted while connecting to a website. -->
   <string name="mozac_browser_errorpages_net_interrupt_title">La conession e je stade interote</string>
   <!-- The error message shown when the user's network connection is interrupted while connecting to a website. -->
@@ -101,9 +99,7 @@
   <string name="mozac_browser_errorpages_malformed_uri_title">Direzion no valide</string>
   <string name="mozac_browser_errorpages_malformed_uri_message"><![CDATA[<p>La direzion indicade no je intun formât ricognossût. Controle la sbare de direzion par cjatâ erôr e torne prove.</p>]]></string>
   <!-- The document title and heading of an error page. -->
-  <string name="mozac_browser_errorpages_malformed_uri_title_alternative">La direzion no je valide</string>
   <!-- This string contains markup. The URL should not be localized. -->
-  <string name="mozac_browser_errorpages_malformed_uri_message_alternative"><![CDATA[<ul>\n<li>Lis direzions dal web di solit a son scritis te forme <strong>http://www.esempli.com/</strong></li>\n<li>Controle di vê doprât lis sbaris justis (vâl a dî <strong>/</strong>).</li>\n</ul>]]></string>
   <!-- The document title and heading of an error page. -->
   <string name="mozac_browser_errorpages_unknown_protocol_title">Protocol no cognossût</string>
   <string name="mozac_browser_errorpages_unknown_protocol_message"><![CDATA[<p>La direzion e specifiche un protocol (p.e. <q>wxyz://</q>) che il navigadôr nol ricognòs, duncje il navigadôr nol pues conetisi al sît in maniere juste.</p>\n<ul>\n<li>Stâstu cirint di acedi a servizis multimediâi o altris servizis che no son testuâi? Controle sul sît i recuisîts necessaris.</li>\n<li>Cualchi protocol al podarès domandâ software di tiercis parts o plugins par che il navigadôr ju podedi ricognossi.</li>\n</ul>]]></string>

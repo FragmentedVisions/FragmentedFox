@@ -34,11 +34,9 @@
   <!-- The error message shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_message"><![CDATA[<ul>\n<li>Ikusten saiatzen ari zaren orria ezin da erakutsi webguneak konexio segurua eskatzen duelako.</li>\n<li>Arazoa ziurrenik webgunearena da eta ezin duzu ezer egin hau konpontzeko.</li>\n<li>Webgunearen kudeatzaileari arazoaren berri eman diezaiokezu.</li>\n</ul>]]></string>
   <!-- The text shown inside the advanced button used to expand the advanced options. It's only shown when a website uses HSTS. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_advanced">Aurreratua…</string>
   <!-- The advanced certificate information shown when a website uses HSTS. The %1$s will be replaced by the website URL and %2$s will be replaced by the app name. It's only shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_techInfo2"><![CDATA[<label> <b>%1$s</b> webguneak HTTP Strict Transport Security (HSTS) izeneko segurtasun-politika dauka eta beraz <b>%2$s</b> aplikazioa modu seguruan konekta daiteke soilik. Ezin duzu gune hau bisitatzeko salbuespenik gehitu. </label>]]></string>
   <!-- The text shown inside the advanced options button used to go back. It's only shown if the user has expanded the advanced options. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_back">Itzuli</string>
   <!-- The document title and heading of the error page shown when the user's network connection is interrupted while connecting to a website. -->
   <string name="mozac_browser_errorpages_net_interrupt_title">Konexioa eten egin da</string>
   <!-- The error message shown when the user's network connection is interrupted while connecting to a website. -->
@@ -101,9 +99,7 @@
   <string name="mozac_browser_errorpages_malformed_uri_title">Helbide baliogabea</string>
   <string name="mozac_browser_errorpages_malformed_uri_message"><![CDATA[<p>Idatzitako helbidearen formatua ez da ulertzen. Egiaztatu helbide-barran ea akatsik dagoen eta saiatu berriro.</p>]]></string>
   <!-- The document title and heading of an error page. -->
-  <string name="mozac_browser_errorpages_malformed_uri_title_alternative">Helbidea ez da baliozkoa</string>
   <!-- This string contains markup. The URL should not be localized. -->
-  <string name="mozac_browser_errorpages_malformed_uri_message_alternative"><![CDATA[<ul>\n<li>Web helbideak normalean <strong>http://www.adibidea.eus/</strong> formatukoak dira</li>\n<li>Ziurtatu aurrerako barrak erabiltzen dituzula (hau da, <strong>/</strong>).</li>\n</ul>]]></string>
   <!-- The document title and heading of an error page. -->
   <string name="mozac_browser_errorpages_unknown_protocol_title">Protokolo ezezaguna</string>
   <string name="mozac_browser_errorpages_unknown_protocol_message"><![CDATA[<p>Helbideak zehaztutako protokoloa (adib. <q>wxyz://</q>) ez du ezagutzen nabigatzaileak, beraz ezin da behar bezala konektatu gunera.</p>\n<ul>\n<li>Multimedia edo testua ez den bestelako zerbitzuren bat atzitzen saiatzen ari zara? Egiaztatu guneak aparteko beharrik duen.</li>\n<li>Zenbait protokolok hirugarrenen softwarea edo pluginak behar dituzte nabigatzaileak ezagutu ahal ditzan.</li>\n</ul>]]></string>

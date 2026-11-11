@@ -34,11 +34,9 @@
   <!-- The error message shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_message"><![CDATA[<ul>\n<li>جہڑا ورقہ تساں ݙیکھݨ چاہندے ہو، کائنی ݙکھایا ون٘ڄ سڳدا کیوں جو ایں ویب سائٹ کوں محفوظ کنکشن دی لوڑ ہے۔</li>\n<li>ایہ مسئلہ غالباً ویب سائٹ وی وجہ نال ہے۔ ایندے حل کیتے تہاݙے کول کجھ کائنی۔</li>\n<li>تساں ایں مسئلے بارے ویب سائٹ ایڈمن کوں ݙسا سڳدے ہو۔</li>\n</ul>]]></string>
   <!-- The text shown inside the advanced button used to expand the advanced options. It's only shown when a website uses HSTS. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_advanced">ودھایا۔۔۔</string>
   <!-- The advanced certificate information shown when a website uses HSTS. The %1$s will be replaced by the website URL and %2$s will be replaced by the app name. It's only shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_techInfo2"><![CDATA[<label> <b>%1$s</b> دی ہک حفاظتی پالیسی ہے جیکوں ایچ ٹی ٹی پی سخت ٹرانسپورٹ حفاظت(HSTS) آہدے ہن، جیندے مطلب ایہ ہے جو <b>%2$s</b> صرف ایندے نال حفاظت نال کنکٹ کر سڳدے۔ تساں ایں سائٹ تے ون٘ڄݨ کیتے کوئی استثناء شامل نہوے کر سڳدے۔</label>]]></string>
   <!-- The text shown inside the advanced options button used to go back. It's only shown if the user has expanded the advanced options. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_back">واپس ون٘ڄو</string>
   <!-- The document title and heading of the error page shown when the user's network connection is interrupted while connecting to a website. -->
   <string name="mozac_browser_errorpages_net_interrupt_title">کنکشن خراب تھی ڳیا ہائی۔</string>
   <!-- The error message shown when the user's network connection is interrupted while connecting to a website. -->
@@ -95,9 +93,7 @@
   <string name="mozac_browser_errorpages_malformed_uri_title">غلط پتہ</string>
   <string name="mozac_browser_errorpages_malformed_uri_message"><![CDATA[<p>مہیا کیتا ڳیا پتہ سُن٘ڄاپُو فارمیٹ وچ کائنی۔ سوہݨا، غلطیاں کیتے لوکیشن پٹی دی پڑتال کرو تے ولدا کوشش کرو۔</p>]]></string>
   <!-- The document title and heading of an error page. -->
-  <string name="mozac_browser_errorpages_malformed_uri_title_alternative">پتہ ٹھیک کائنی</string>
   <!-- This string contains markup. The URL should not be localized. -->
-  <string name="mozac_browser_errorpages_malformed_uri_message_alternative"><![CDATA[<ul>\n<li>ویب پتے عمومی طور تے این٘ویں <strong>http://www.example.com/</strong> لکھے ویندے ہن </li>\n<li>یقینی بݨاؤ جو تساں فارورڈ سلیشیز (جین٘ویں <strong>/</strong>) ورتندے پئے ہو۔</li>\n</ul>]]></string>
   <!-- The document title and heading of an error page. -->
   <string name="mozac_browser_errorpages_unknown_protocol_title">نامعلوم پروٹوکول</string>
   <string name="mozac_browser_errorpages_unknown_protocol_message"><![CDATA[<p>پتے وچ پروٹوکول (مثال دے طور تے <q>wxyz://</q>) جیکوں براؤز کائنی سُن٘ڄݨیندا، تہوں تاں براؤزر سائٹ کوں ٹھیک طرحاں کنکٹ کائنی کر سڳدا۔</p>\n<ul>\n<li>بھلا تساں ملٹی میڈیا تے ٻیاں غیرعبارت خدمتاں تے رسائی دی کوشش کریندے پئے ہو؟ ٻیاں ضروریات کیتے سائٹ دی پڑتال کرو۔</li>\n<li>براؤزر دے سُن٘ڄاݨݨ کنوں پہلے کجھ پروٹوکولاں کوں تریجھی پارٹی سافٹ ویئر یا پلگ اناں دی لوڑ ہوندی ہے۔</li>\n</ul>]]></string>

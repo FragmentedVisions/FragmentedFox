@@ -246,7 +246,6 @@
   <!-- The settings of the add-on. -->
   <string name="mozac_feature_addons_settings">설정</string>
   <!-- Indicates the add-on is enabled. -->
-  <string name="mozac_feature_addons_settings_on">켜짐</string>
   <!-- Indicates the add-on is allowed in private browsing mode. -->
   <string name="mozac_feature_addons_settings_allow_in_private_browsing_2">확장 기능이 사생활 보호 모드에서 실행되도록 허용</string>
   <!-- Indicates the add-on is allowed in private browsing mode. -->
@@ -256,11 +255,9 @@
   <!-- Indicates the add-on is enabled. -->
   <string name="mozac_feature_addons_enabled">사용</string>
   <!-- This is displayed in a page where the user can see the installed and recommended(not installed yet) add-ons, this string indicates the installed section. -->
-  <string name="mozac_feature_addons_installed_section">설치됨</string>
   <!-- This is displayed in a page where the user can see the installed and recommended(not installed yet) add-ons, this string indicates the recommended section. -->
   <string name="mozac_feature_addons_recommended_section">추천</string>
   <!-- This is displayed in a page where the user can see the installed and recommended(not installed yet) add-ons, this string indicates the not yet supported section. -->
-  <string name="mozac_feature_addons_unsupported_section">아직 지원되지 않음</string>
   <!-- This is displayed in a page where the user can see the installed and recommended(not installed yet) add-ons, this string indicates the not yet available section. -->
   <string name="mozac_feature_addons_unavailable_section">아직 사용할 수 없음</string>
   <!-- This is displayed in a page where the user can see the installed and recommended(not installed yet) add-ons, this string indicates the disabled section. -->
@@ -336,17 +333,12 @@
   <!-- Name of the "notification channel" used for displaying a notification for updating an extension. See https://developer.android.com/training/notify-user/channels -->
   <string name="mozac_feature_addons_updater_notification_channel_2">확장 기능 업데이트</string>
   <!-- Name of the "notification channel" used for displaying a notification for new supported add-ons. See https://developer.android.com/training/notify-user/channels -->
-  <string name="mozac_feature_addons_supported_checker_notification_channel" tools:ignore="UnusedResources">지원되는 부가 기능 검사기</string>
   <!-- The tile of the notification, this will be shown to the user when one newly supported add-on is available. -->
-  <string name="mozac_feature_addons_supported_checker_notification_title" tools:ignore="UnusedResources">새 부가 기능 있음</string>
   <!-- The tile of the notification, this will be shown to the user when more than one newly supported add-ons are available. -->
-  <string name="mozac_feature_addons_supported_checker_notification_title_plural" tools:ignore="UnusedResources">새 부가 기능 있음</string>
   <!-- The content of the notification, this will be shown to the user when one newly supported add-on is available. %1$s is the add-on name and %2$s is the app name (in most cases Firefox). -->
   <string name="mozac_feature_addons_supported_checker_notification_content_one">%2$s에 %1$s 추가</string>
   <!-- The content of the notification, this will be shown to the user when two newly supported add-ons are available. %1$s is the first add-on name. %2$s is the second add-on name. %3$s is the app name (in most cases Firefox). -->
-  <string name="mozac_feature_addons_supported_checker_notification_content_two">%3$s에 %1$s 및 %2$s 추가</string>
   <!-- The content of the notification, this will be shown to the user when more than two newly supported add-ons are available. %1$s is the app name (in most cases Firefox). -->
-  <string name="mozac_feature_addons_supported_checker_notification_content_more_than_two">%1$s에 모두 추가</string>
   <!-- This is the caption for not yet supported screen caption -->
   <string name="mozac_feature_addons_not_yet_supported_caption2">현재 초기에 선정된 추천 확장 기능들에 대한 지원을 구축하고 있습니다.</string>
   <!-- This is the caption for the extension installation progress overlay -->
@@ -356,7 +348,6 @@
   <!-- Error shown when unable to find a translation for an add-on field. %1$s is the locale of the user and %2$s is the default language of the add-on -->
   <string name="mozac_feature_addons_failed_to_translate">%1$s 로케일 및 기본 언어 %2$s에 대한 번역을 찾을 수 없습니다.</string>
   <!-- Text shown after successfully installed an add-on. %1$s is the add-on name. -->
-  <string name="mozac_feature_addons_successfully_installed">%1$s 부가 기능을 설치함</string>
   <!-- Text shown after failing to install an add-on (when add-on type isn't supported or an unknown has errored). %1$s is the add-on name. -->
   <string name="mozac_feature_addons_failed_to_install">%1$s 부가 기능 설치에 실패함</string>
   <!-- Text shown after failing to install an extension for which we don't have its name (when add-on type isn't supported or an unknown has errored). -->
@@ -388,7 +379,6 @@
   <!-- Text shown after failed to remove an add-on. %1$s is the add-on name. -->
   <string name="mozac_feature_addons_failed_to_remove" tools:ignore="UnusedResources">%1$s 부가 기능 제거에 실패함</string>
   <!-- Label shown to indicate that the add-on was migrated from a previous version of the app. %1$s is the app name most of the case it will be Firefox. -->
-  <string name="mozac_feature_addons_migrated_from_a_previous_version_label" tools:ignore="UnusedResources">이 부가 기능은 %1$s의 이전 버전에서 마이그레이션되었습니다</string>
   <!-- Text shown in not yet supported add-ons section. -->
   <string name="mozac_feature_addons_unsupported_caption_2">확장 기능 1개</string>
   <!-- Text shown in not yet supported add-ons section - plural. %1$s is the number of unsupported extensions. -->

@@ -34,11 +34,9 @@
   <!-- The error message shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_message"><![CDATA[<ul>\n<li>Страница, которую вы пытаетесь просмотреть, не может быть отображена, так как этот веб-сайт требует использования безопасного соединения.</li>\n<li>Скорее всего, проблема связана с веб-сайтом, и вы никак не можете её решить.</li>\n<li>Вы можете уведомить администратора веб-сайта об этой проблеме.</li>\n</ul>]]></string>
   <!-- The text shown inside the advanced button used to expand the advanced options. It's only shown when a website uses HSTS. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_advanced">Дополнительно…</string>
   <!-- The advanced certificate information shown when a website uses HSTS. The %1$s will be replaced by the website URL and %2$s will be replaced by the app name. It's only shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_techInfo2"><![CDATA[<label> <b>%1$s</b> использует политику безопасности под названием Форсированное безопасное соединение HTTP (HSTS), согласно которой <b>%2$s</b> может соединяться с ним только с помощью безопасного соединения. Вы не можете добавить исключение для посещения этого сайта. </label>]]></string>
   <!-- The text shown inside the advanced options button used to go back. It's only shown if the user has expanded the advanced options. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_back">Назад</string>
   <!-- The document title and heading of the error page shown when the user's network connection is interrupted while connecting to a website. -->
   <string name="mozac_browser_errorpages_net_interrupt_title">Соединение было прервано</string>
   <!-- The error message shown when the user's network connection is interrupted while connecting to a website. -->
@@ -101,9 +99,7 @@
   <string name="mozac_browser_errorpages_malformed_uri_title">Неправильный формат адреса</string>
   <string name="mozac_browser_errorpages_malformed_uri_message"><![CDATA[<p>Не удаётся распознать формат указанного адреса. Проверьте адрес на наличие ошибок и попробуйте снова.</p>]]></string>
   <!-- The document title and heading of an error page. -->
-  <string name="mozac_browser_errorpages_malformed_uri_title_alternative">Неправильный формат адреса</string>
   <!-- This string contains markup. The URL should not be localized. -->
-  <string name="mozac_browser_errorpages_malformed_uri_message_alternative"><![CDATA[<ul>\n<li>Веб-адреса обычно имеют вид <strong>http://www.example.com/</strong></li>\n<li>Убедитесь, что вы используете обычную косую черту (т.е. <strong>/</strong>).</li>\n</ul>]]></string>
   <!-- The document title and heading of an error page. -->
   <string name="mozac_browser_errorpages_unknown_protocol_title">Неизвестный протокол</string>
   <string name="mozac_browser_errorpages_unknown_protocol_message"><![CDATA[<p>Адрес содержит неизвестный браузеру протокол (такой как <q>wxyz://</q>), поэтому браузер не может правильно установить соединение с сайтом.</p>\n<ul>\n<li>Если вы пытаетесь открыть мультимедиа или другие нетекстовые сервисы, проверьте сайт на наличие особых требований.</li>\n<li>Некоторые протоколы могут требовать установки стороннего программного обеспечения или плагинов для того, чтобы браузер мог их распознать.</li>\n</ul>]]></string>

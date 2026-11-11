@@ -34,11 +34,9 @@
   <!-- The error message shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_message"><![CDATA[<ul>\n<li>Lehte, mida soovid vaadata, pole võimalik kuvada, sest see sait nõuab turvalist ühendust.</li>\n<li>Probleem on suure tõenäosusega saidi poolel ja sa ei saa selle lahendamiseks midagi teha.</li>\n<li>Sa võid sellest probleemist teavitada saidi administraatorit.</li>\n</ul>]]></string>
   <!-- The text shown inside the advanced button used to expand the advanced options. It's only shown when a website uses HSTS. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_advanced">Edasijõudnuile…</string>
   <!-- The advanced certificate information shown when a website uses HSTS. The %1$s will be replaced by the website URL and %2$s will be replaced by the app name. It's only shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_techInfo2"><![CDATA[<label>Leht <b>%1$s</b> kasutab HTTP Strict Transport Security (HSTS) turvapoliitikat, mis tähendab, et <b>%2$s</b> saab sellega luua vaid turvalise ühenduse. Selle saidi külastamiseks ei saa erandit lisada. </label>]]></string>
   <!-- The text shown inside the advanced options button used to go back. It's only shown if the user has expanded the advanced options. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_back">Mine tagasi</string>
   <!-- The document title and heading of the error page shown when the user's network connection is interrupted while connecting to a website. -->
   <string name="mozac_browser_errorpages_net_interrupt_title">Ühendus katkes</string>
   <!-- The error message shown when the user's network connection is interrupted while connecting to a website. -->
@@ -101,9 +99,7 @@
   <string name="mozac_browser_errorpages_malformed_uri_title">Vigane aadress</string>
   <string name="mozac_browser_errorpages_malformed_uri_message"><![CDATA[<p>Sisestatud aadress ei ole tunnustatud formaadis. Palun kontrolli aadressi korrektsust ja proovi uuesti.</p>]]></string>
   <!-- The document title and heading of an error page. -->
-  <string name="mozac_browser_errorpages_malformed_uri_title_alternative">Aadress pole korrektne</string>
   <!-- This string contains markup. The URL should not be localized. -->
-  <string name="mozac_browser_errorpages_malformed_uri_message_alternative"><![CDATA[<ul>\n<li>Veebiaadressid on tavaliselt kirjutatud kujul <strong>http://www.example.com/</strong></li>\n<li>Kontrolli üle, et kasutad ikka õigetpidi kaldkriipse (näiteks <strong>/</strong>).</li>\n</ul>]]></string>
   <!-- The document title and heading of an error page. -->
   <string name="mozac_browser_errorpages_unknown_protocol_title">Tundmatu protokoll</string>
   <string name="mozac_browser_errorpages_unknown_protocol_message"><![CDATA[<p>Soovitud aadress määratleb protokolli (nt <q>wxyz://</q>), mida veebilehitseja ei tunne, seega pole veebilehitsejal võimalik korralikult selle saidiga ühenduda.</p>\n<ul>\n<li>Kas üritad avada multimeedia- või muud teenust, mis pole teksti kujul? Kontrolli veebilehe lisanõudeid.</li>\n<li>Mõned protokollid võivad nõuda kolmanda osapoole tarkvara või pluginaid, enne kui veebilehitseja suudab nad tuvastada.</li>\n</ul>]]></string>

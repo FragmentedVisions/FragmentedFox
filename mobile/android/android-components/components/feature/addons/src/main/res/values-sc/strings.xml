@@ -242,7 +242,6 @@
   <!-- The settings of the add-on. -->
   <string name="mozac_feature_addons_settings">Cunfiguratzione</string>
   <!-- Indicates the add-on is enabled. -->
-  <string name="mozac_feature_addons_settings_on">Ativu</string>
   <!-- Indicates the add-on is allowed in private browsing mode. -->
   <string name="mozac_feature_addons_settings_allow_in_private_browsing_2">Permite chi custa estensione funtzionet in sa navigatzione privada</string>
   <!-- Indicates the add-on is allowed in private browsing mode. -->
@@ -252,11 +251,9 @@
   <!-- Indicates the add-on is enabled. -->
   <string name="mozac_feature_addons_enabled">Ativadu</string>
   <!-- This is displayed in a page where the user can see the installed and recommended(not installed yet) add-ons, this string indicates the installed section. -->
-  <string name="mozac_feature_addons_installed_section">Installadu</string>
   <!-- This is displayed in a page where the user can see the installed and recommended(not installed yet) add-ons, this string indicates the recommended section. -->
   <string name="mozac_feature_addons_recommended_section">Cussigiadu</string>
   <!-- This is displayed in a page where the user can see the installed and recommended(not installed yet) add-ons, this string indicates the not yet supported section. -->
-  <string name="mozac_feature_addons_unsupported_section">No est ancora cumpatìbile</string>
   <!-- This is displayed in a page where the user can see the installed and recommended(not installed yet) add-ons, this string indicates the not yet available section. -->
   <string name="mozac_feature_addons_unavailable_section">No est ancora a disponimentu</string>
   <!-- This is displayed in a page where the user can see the installed and recommended(not installed yet) add-ons, this string indicates the disabled section. -->
@@ -332,17 +329,12 @@
   <!-- Name of the "notification channel" used for displaying a notification for updating an extension. See https://developer.android.com/training/notify-user/channels -->
   <string name="mozac_feature_addons_updater_notification_channel_2">Atualizatziones de s\'estensione</string>
   <!-- Name of the "notification channel" used for displaying a notification for new supported add-ons. See https://developer.android.com/training/notify-user/channels -->
-  <string name="mozac_feature_addons_supported_checker_notification_channel" tools:ignore="UnusedResources">Verificadore de cumplementos cumpatìbiles</string>
   <!-- The tile of the notification, this will be shown to the user when one newly supported add-on is available. -->
-  <string name="mozac_feature_addons_supported_checker_notification_title" tools:ignore="UnusedResources">Cumplementu nou cumpatìbile</string>
   <!-- The tile of the notification, this will be shown to the user when more than one newly supported add-ons are available. -->
-  <string name="mozac_feature_addons_supported_checker_notification_title_plural" tools:ignore="UnusedResources">Cumplementos noos a disponimentu</string>
   <!-- The content of the notification, this will be shown to the user when one newly supported add-on is available. %1$s is the add-on name and %2$s is the app name (in most cases Firefox). -->
   <string name="mozac_feature_addons_supported_checker_notification_content_one">Agiunghe %1$s a %2$s</string>
   <!-- The content of the notification, this will be shown to the user when two newly supported add-ons are available. %1$s is the first add-on name. %2$s is the second add-on name. %3$s is the app name (in most cases Firefox). -->
-  <string name="mozac_feature_addons_supported_checker_notification_content_two">Agiunghe %1$s e %2$s a %3$s</string>
   <!-- The content of the notification, this will be shown to the user when more than two newly supported add-ons are available. %1$s is the app name (in most cases Firefox). -->
-  <string name="mozac_feature_addons_supported_checker_notification_content_more_than_two">Agiunghe·ddos a %1$s</string>
   <!-- This is the caption for not yet supported screen caption -->
   <string name="mozac_feature_addons_not_yet_supported_caption2">Semus traballende pro frunire una seletzione initziale de estensiones cussigiadas.</string>
   <!-- This is the caption for the extension installation progress overlay -->
@@ -350,7 +342,6 @@
   <!-- Error shown when unable to find a translation for an add-on field. %1$s is the locale of the user and %2$s is the default language of the add-on -->
   <string name="mozac_feature_addons_failed_to_translate">Nissuna tradutzione agatada, ne pro su %1$s nen pro sa lìngua predefinida %2$s</string>
   <!-- Text shown after successfully installed an add-on. %1$s is the add-on name. -->
-  <string name="mozac_feature_addons_successfully_installed">%1$s installadu</string>
   <!-- Text shown after failing to install an add-on (when add-on type isn't supported or an unknown has errored). %1$s is the add-on name. -->
   <string name="mozac_feature_addons_failed_to_install">Faddina in s’installatzione de %1$s</string>
   <!-- Text shown after failing to install an extension for which we don't have its name (when add-on type isn't supported or an unknown has errored). -->
@@ -380,7 +371,6 @@
   <!-- Text shown after failed to remove an add-on. %1$s is the add-on name. -->
   <string name="mozac_feature_addons_failed_to_remove" tools:ignore="UnusedResources">Faddina in s’eliminatzione de %1$s</string>
   <!-- Label shown to indicate that the add-on was migrated from a previous version of the app. %1$s is the app name most of the case it will be Firefox. -->
-  <string name="mozac_feature_addons_migrated_from_a_previous_version_label" tools:ignore="UnusedResources">Custu cumplementu est istadu tramudadu dae una versione pretzedente de %1$s</string>
   <!-- Text shown in not yet supported add-ons section. -->
   <string name="mozac_feature_addons_unsupported_caption_2">1 estensione</string>
   <!-- Text shown in not yet supported add-ons section - plural. %1$s is the number of unsupported extensions. -->

@@ -34,11 +34,9 @@
   <!-- The error message shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_message"><![CDATA[<ul>\n<li>ទំព័រដែលអ្នកកំពុងព្យាយាមមើលមិនអាចបង្ហាញបានទេ ពីព្រោះគេហទំព័រនេះតម្រូវឱ្យមានការតភ្ជាប់ដែលមានសុវត្ថិភាព។</li>\n<li>បញ្ហានេះទំនងជាកើតឡើងជាមួយគេហទំព័រ ហើយអ្នកមិនអាចធ្វើអ្វីដើម្បីដោះស្រាយវាបានទេ។</li>\n<li>អ្នកអាចជូនដំណឹងដល់អ្នកគ្រប់គ្រងគេហទំព័រអំពីបញ្ហានេះ។</li>\n</ul>]]></string>
   <!-- The text shown inside the advanced button used to expand the advanced options. It's only shown when a website uses HSTS. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_advanced">កម្រិតខ្ពស់…</string>
   <!-- The advanced certificate information shown when a website uses HSTS. The %1$s will be replaced by the website URL and %2$s will be replaced by the app name. It's only shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_techInfo2"><![CDATA[<label> <b>%1$s</b> មានគោលការណ៍សុវត្ថិភាពមួយហៅថា HTTP Strict Transport Security (HSTS) ដែលមានន័យថា <b>%2$s</b> អាចភ្ជាប់ទៅវាបានដោយសុវត្ថិភាពតែប៉ុណ្ណោះ។ អ្នកមិនអាចបន្ថែមករណីលើកលែងដើម្បីចូលមើលគេហទំព័រនេះបានទេ។ </label>]]></string>
   <!-- The text shown inside the advanced options button used to go back. It's only shown if the user has expanded the advanced options. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_back">ថយក្រោយ</string>
   <!-- The document title and heading of the error page shown when the user's network connection is interrupted while connecting to a website. -->
   <string name="mozac_browser_errorpages_net_interrupt_title">ការ​តភ្ជាប់​ត្រូវ​បាន​កាត់​ផ្តាច់</string>
   <!-- The error message shown when the user's network connection is interrupted while connecting to a website. -->
@@ -101,9 +99,7 @@
   <string name="mozac_browser_errorpages_malformed_uri_title">អាសយដ្ឋានមិនត្រឹមត្រូវ</string>
   <string name="mozac_browser_errorpages_malformed_uri_message"><![CDATA[<p>អាសយដ្ឋានដែលបានផ្តល់មិនមានទម្រង់ដែលទទួលស្គាល់ទេ។ សូមពិនិត្យមើលរបារទីតាំងសម្រាប់កំហុស ហើយព្យាយាមម្តងទៀត។</p>]]></string>
   <!-- The document title and heading of an error page. -->
-  <string name="mozac_browser_errorpages_malformed_uri_title_alternative">អាសយដ្ឋាននេះមិនត្រឹមត្រូវទេ</string>
   <!-- This string contains markup. The URL should not be localized. -->
-  <string name="mozac_browser_errorpages_malformed_uri_message_alternative"><![CDATA[<ul>\n<li>អាសយដ្ឋានគេហទំព័រជាធម្មតាត្រូវបានសរសេរដូចជា <strong>http://www.example.com/</strong></li>\n<li>ត្រូវប្រាកដថាអ្នកកំពុងប្រើសញ្ញា (ឧ. <strong>/</strong>)។</li>\n</ul>]]></string>
   <!-- The document title and heading of an error page. -->
   <string name="mozac_browser_errorpages_unknown_protocol_title">ពិធីការមិនស្គាល់</string>
   <string name="mozac_browser_errorpages_unknown_protocol_message"><![CDATA[<p>អាសយដ្ឋាននេះបញ្ជាក់ពីពិធីការ (ឧ. <q>wxyz://</q>) ដែលកម្មវិធីរុករកមិនទទួលស្គាល់ ដូច្នេះកម្មវិធីរុករកមិនអាចភ្ជាប់ទៅគេហទំព័របានត្រឹមត្រូវទេ។</p>\n<ul>\n<li>តើអ្នកកំពុងព្យាយាមចូលប្រើពហុមេឌា ឬសេវាកម្មមិនមែនអត្ថបទផ្សេងទៀតមែនទេ? សូមពិនិត្យមើលគេហទំព័រសម្រាប់តម្រូវការបន្ថែម។</li>\n<li>ពិធីការមួយចំនួនអាចតម្រូវឱ្យមានកម្មវិធីភាគីទីបី ឬកម្មវិធីជំនួយមុនពេលកម្មវិធីរុករកអាចស្គាល់ពួកវា។</li>\n</ul>]]></string>

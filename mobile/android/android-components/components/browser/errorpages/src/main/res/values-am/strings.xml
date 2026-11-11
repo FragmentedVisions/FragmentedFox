@@ -34,11 +34,9 @@
   <!-- The error message shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_message"><![CDATA[<ul>\n<li>ለማየት የሞከሩት ገጽ ሊታይ አይችልም ምክንያቱም ይህ ድረ-ገጽ ደህንነቱ የተጠበቀ ግንኙነት ስለሚያስፈልገው።</li>\n<li>ጉዳዩ ከድረ-ገፁ ሊሆን ይችላል፣ እና እሱን ለመፍታት እርስዎ ምንም ማድረግ አይችሉም።</li>\n<li>ስለ ችግሩ የድረ-ገፁን አስተዳዳሪ ማሳወቅ ይችላሉ።</li>\n</ul>]]></string>
   <!-- The text shown inside the advanced button used to expand the advanced options. It's only shown when a website uses HSTS. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_advanced">የላቀ…</string>
   <!-- The advanced certificate information shown when a website uses HSTS. The %1$s will be replaced by the website URL and %2$s will be replaced by the app name. It's only shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_techInfo2"><![CDATA[<label> <b>%1$s</b> HTTP Strict Transport Security (HSTS) የሚባል የደህንነት ፖሊሲ አለው፣ ይህ ማለት <b>%2$s</b> ደህንነቱ በተጠበቀ ሁኔታ ብቻ ነው መገናኘት የሚችለው። ይህንን ድረ-ገጽ ለመጎብኘት የተለየ ፈቃድ ማከል አይችሉም። </label>]]></string>
   <!-- The text shown inside the advanced options button used to go back. It's only shown if the user has expanded the advanced options. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_back">ወደኋላ ተመለስ</string>
   <!-- The document title and heading of the error page shown when the user's network connection is interrupted while connecting to a website. -->
   <string name="mozac_browser_errorpages_net_interrupt_title">ግንኙነቱ ተቋርጧል</string>
   <!-- The error message shown when the user's network connection is interrupted while connecting to a website. -->
@@ -101,9 +99,7 @@
   <string name="mozac_browser_errorpages_malformed_uri_title">ልክ ያልሆነ አድራሻ</string>
   <string name="mozac_browser_errorpages_malformed_uri_message"><![CDATA[<p>የቀረበው አድራሻ በሚታወቅ ቅርጸት አይደለም። እባክዎ ለስህተቶች የአካባቢ አሞሌን ያረጋግጡ እና እንደገና ይሞክሩ።</p>]]></string>
   <!-- The document title and heading of an error page. -->
-  <string name="mozac_browser_errorpages_malformed_uri_title_alternative">አድራሻው ልክ አይደለም</string>
   <!-- This string contains markup. The URL should not be localized. -->
-  <string name="mozac_browser_errorpages_malformed_uri_message_alternative"><![CDATA[<ul>\n<li>የድር አድራሻዎች ብዙውን ጊዜ እንደ <strong>http://www.example.com/</strong></li> ይጻፋሉ\n<li>እዝባሮችን እየተጠቀሙ መሆንዎን ያረጋግጡ (ማለትም <strong>/</strong>)።</li>\n</ul>]]></string>
   <!-- The document title and heading of an error page. -->
   <string name="mozac_browser_errorpages_unknown_protocol_title">ያልታወቀ ፕሮቶኮል</string>
   <string name="mozac_browser_errorpages_unknown_protocol_message"><![CDATA[<p>አድራሻው ፕሮቶኮልን ይገልጻል (ለምሳሌ <q>wxyz://</q>) አሳሹ ይህን ስለማያቀው በትክክል ከድረ-ገጹ ጋር መገናኘት አይችልም።</p>\n<ul>\n<li>መልቲሚዲያ ወይም ሌሎች የጽሑፍ ያልሆኑ አገልግሎቶችን ለማግኘት እየሞከሩ ነው? ለተጨማሪ መስፈርቶች ድረ-ገጹን ይፈትሹ።</li>\n<li>አንዳንድ ፕሮቶኮሎች በአሳሹ ከመታወቃቸው በፊት የሶስተኛ ወገን ሶፍትዌር ወይም ቅጥያዎችን ሊፈልጉ ይችላሉ።</li>\n</ul>]]></string>

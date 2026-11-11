@@ -34,11 +34,9 @@
   <!-- The error message shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_message"><![CDATA[<ul>\n<li>صفحه‌ای را که می‌خواهید مشاهده کنید نمیتواند نمایش داده شود زیرا این وبگاه به اتصال ایمن نیاز دارد.</li>\n<li>مشکل به احتمال زیاد مربوط به وبگاه است و کاری برای حل آن نمی توانید انجام دهید.</li>\n<li>می‌توانید مشکل را به مدیر وبگاه اطلاع دهید.</li>\n</ul>]]></string>
   <!-- The text shown inside the advanced button used to expand the advanced options. It's only shown when a website uses HSTS. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_advanced">پیش‌رفته…</string>
   <!-- The advanced certificate information shown when a website uses HSTS. The %1$s will be replaced by the website URL and %2$s will be replaced by the app name. It's only shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_techInfo2"><![CDATA[<label> <b>%1$s</b> یک خط‌مشی امنیتی به نام HTTP Strict Transport Security (HSTS) دارد، به این معنی که <b>%2$s</b> فقط می‌تواند به صورت ایمن به آن متصل شود. شما نمی‌توانید استثنایی برای بازدید از این پایگاه اضافه کنید. </label>]]></string>
   <!-- The text shown inside the advanced options button used to go back. It's only shown if the user has expanded the advanced options. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_back">بازگشت</string>
   <!-- The document title and heading of the error page shown when the user's network connection is interrupted while connecting to a website. -->
   <string name="mozac_browser_errorpages_net_interrupt_title">اتّصال قطع شد</string>
   <!-- The error message shown when the user's network connection is interrupted while connecting to a website. -->
@@ -101,9 +99,7 @@
   <string name="mozac_browser_errorpages_malformed_uri_title">نشانی نامعتبر</string>
   <string name="mozac_browser_errorpages_malformed_uri_message"><![CDATA[<p>نشانی فراهم‌شده دارای قالب معتبری نیست. لطفاً از عدم وجود اشتباه در نوار مکان اطمینان حاصل کنید و دوباره تلاش نمایید.</p>]]></string>
   <!-- The document title and heading of an error page. -->
-  <string name="mozac_browser_errorpages_malformed_uri_title_alternative">نشانی معتبر نیست</string>
   <!-- This string contains markup. The URL should not be localized. -->
-  <string name="mozac_browser_errorpages_malformed_uri_message_alternative"><![CDATA[<ul>\n<li>نشانی‌های وب معمولاً به این صورت نوشته می‌شوند <strong>http://www.example.com/</strong></li>\n<li>مطمئن شوید که از ممیز درست استفاده می‌کنید (یعنی <strong>/</strong>).</li>\n</ul>]]></string>
   <!-- The document title and heading of an error page. -->
   <string name="mozac_browser_errorpages_unknown_protocol_title">نشانی قابل فهم نبود</string>
   <string name="mozac_browser_errorpages_unknown_protocol_message"><![CDATA[<p>نشانی قراردادی مثلا (e.g. <q>wxyz://</q>)‏ را مشخص کرده است که مرورگر قادر به شناسایی آن نیست، بنابراین نمی‌تواند به شیوه صحیح به وب‌گاه متصل شود.</p><ul><li>آیا در حال تلاش برای دسترسی به خدمات چندرسانه‌ای یا غیر متنی هستید؟ این وب‌گاه را برای یافتن ملزومات اضافی جست‌وجو کنید.</li><li>برخی قراردادها ممکن است برای شناسایی نیاز به نرم‌افزار یا افزایه های دیگری جهت شناسایی داشته باشند.</li></ul>]]></string>

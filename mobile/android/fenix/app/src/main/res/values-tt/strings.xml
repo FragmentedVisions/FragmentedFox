@@ -328,7 +328,6 @@
   <!-- Used as text for the link in onboarding_term_of_service_line_three. -->
   <string name="onboarding_term_of_service_line_three_link_text">Идарә итү</string>
   <!-- Used as text for the link in onboarding_redesign_tou_body_one. -->
-  <string name="onboarding_redesign_tou_body_one_link_text" tools:ignore="BrandUsage,UnusedResources">Firefox куллану шартлары</string>
   <!-- ==== Project "Nova" onboarding strings ==== -->
 
   <!-- Toolbar selection onboarding "bottom" option label. -->

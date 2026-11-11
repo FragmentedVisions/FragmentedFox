@@ -80,7 +80,6 @@
   <!-- The settings of the add-on. -->
   <string name="mozac_feature_addons_settings">تنظیم‌‎لر</string>
   <!-- Indicates the add-on is enabled. -->
-  <string name="mozac_feature_addons_settings_on">آچیق</string>
   <!-- Indicates the add-on is allowed in private browsing mode. -->
   <string name="mozac_feature_addons_settings_run_in_private_browsing">اؤزل موروردا چالیشدیر</string>
   <!-- This is displayed when the add-on is not allowed to run in private browsing. -->
@@ -88,11 +87,9 @@
   <!-- Indicates the add-on is enabled. -->
   <string name="mozac_feature_addons_enabled">گوجلنمیش</string>
   <!-- This is displayed in a page where the user can see the installed and recommended(not installed yet) add-ons, this string indicates the installed section. -->
-  <string name="mozac_feature_addons_installed_section">قورولدو</string>
   <!-- This is displayed in a page where the user can see the installed and recommended(not installed yet) add-ons, this string indicates the recommended section. -->
   <string name="mozac_feature_addons_recommended_section">توصیه اولموش</string>
   <!-- This is displayed in a page where the user can see the installed and recommended(not installed yet) add-ons, this string indicates the not yet supported section. -->
-  <string name="mozac_feature_addons_unsupported_section">هله‌لیک آرخالانمیر</string>
   <!-- This is displayed in a page where the user can see the installed and recommended(not installed yet) add-ons, this string indicates the not yet available section. -->
   <string name="mozac_feature_addons_unavailable_section">هله‌لیک موجود دئییل</string>
   <!-- This is displayed in a page where the user can see the installed and recommended(not installed yet) add-ons, this string indicates the disabled section. -->
@@ -126,23 +123,17 @@
   <!-- The title of the "crash" notification in the extensions manager -->
   <string name="mozac_feature_extensions_manager_notification_title_text">اوزانتی‌لار گئچیجی اوْلاراق گوُجدن سالینمیش.</string>
   <!-- Name of the "notification channel" used for displaying a notification for new supported add-ons. See https://developer.android.com/training/notify-user/channels -->
-  <string name="mozac_feature_addons_supported_checker_notification_channel" tools:ignore="UnusedResources">آرخالانمیش تاخیلان‌لارین چک ائلیه‌نی</string>
   <!-- The tile of the notification, this will be shown to the user when one newly supported add-on is available. -->
-  <string name="mozac_feature_addons_supported_checker_notification_title" tools:ignore="UnusedResources">یئنی تاخیلان الده وار</string>
   <!-- The tile of the notification, this will be shown to the user when more than one newly supported add-ons are available. -->
-  <string name="mozac_feature_addons_supported_checker_notification_title_plural" tools:ignore="UnusedResources">یئنی تاخیلان‌لار الده وار</string>
   <!-- The content of the notification, this will be shown to the user when one newly supported add-on is available. %1$s is the add-on name and %2$s is the app name (in most cases Firefox). -->
   <string name="mozac_feature_addons_supported_checker_notification_content_one">%2$s -یه %1$s اکله‌یین</string>
   <!-- The content of the notification, this will be shown to the user when two newly supported add-ons are available. %1$s is the first add-on name. %2$s is the second add-on name. %3$s is the app name (in most cases Firefox). -->
-  <string name="mozac_feature_addons_supported_checker_notification_content_two">%1$s و %2$s\'یی %3$s\'ا اکله‌یین</string>
   <!-- The content of the notification, this will be shown to the user when more than two newly supported add-ons are available. %1$s is the app name (in most cases Firefox). -->
-  <string name="mozac_feature_addons_supported_checker_notification_content_more_than_two">بونلاری %1$s\'ا اکله‌ییه</string>
   <!-- This is the caption for not yet supported screen caption -->
   <string name="mozac_feature_addons_not_yet_supported_caption2">ایندی توصیه اولونان اوزانتی‌لارین ایلک سئچیمی اوچون ساپورت وئریریق.</string>
   <!-- Error shown when unable to find a translation for an add-on field. %1$s is the locale of the user and %2$s is the default language of the add-on -->
   <string name="mozac_feature_addons_failed_to_translate">یئرلی %1$s اوچون و %2$s وارساییلان دیل اوچون ترجومه تاپیلمادی.</string>
   <!-- Text shown after successfully installed an add-on. %1$s is the add-on name. -->
-  <string name="mozac_feature_addons_successfully_installed">باشاریلی قورولدو %1$s</string>
   <!-- Text shown after failing to install an add-on (when add-on type isn't supported or an unknown has errored). %1$s is the add-on name. -->
   <string name="mozac_feature_addons_failed_to_install">%1$s قورماسی قیریلدی</string>
   <!-- Text shown when attempting to install an add-on and an error occurred because the extension was incompatible. %1$s is the add-on name, %2$s is the app name and %3$s is the app version. -->
@@ -158,7 +149,6 @@
   <!-- Text shown after failed to remove an add-on. %1$s is the add-on name. -->
   <string name="mozac_feature_addons_failed_to_remove" tools:ignore="UnusedResources">%1$s قالدیریلماسی قیریلدی</string>
   <!-- Label shown to indicate that the add-on was migrated from a previous version of the app. %1$s is the app name most of the case it will be Firefox. -->
-  <string name="mozac_feature_addons_migrated_from_a_previous_version_label" tools:ignore="UnusedResources">بو تاخیلان %1$s -ین اؤنجه‌کی بیر یازیمیندان داشیندی.</string>
   <!-- Text link to a sumo page for learning more about unsupported add-ons. -->
   <string name="mozac_feature_addons_unsupported_learn_more">آرتیق بیلین</string>
   <!-- Displayed in the "Status" field for the updater when an add-on has been correctly updated. -->

@@ -427,13 +427,9 @@
     Terms of use (ToU) first body text. %1$s is replaced by an active link,
     using onboarding_redesign_tou_body_one_link_text as text (“Firefox Terms of Use”).
   -->
-  <string name="onboarding_redesign_tou_body_one" tools:ignore="UnusedResources">ដោយការបន្ត អ្នកយល់ព្រមតាម %1$s។</string>
   <!-- Used as text for the link in onboarding_redesign_tou_body_one. -->
-  <string name="onboarding_redesign_tou_body_one_link_text" tools:ignore="BrandUsage,UnusedResources">លក្ខខណ្ឌនៃការប្រើប្រាស់ Firefox</string>
   <!-- Used as text for the link in onboarding_redesign_tou_body_two. -->
-  <string name="onboarding_redesign_tou_body_two_link_text" tools:ignore="UnusedResources">ការជូនដំណឹង​អំពី​ឯកជនភាព</string>
   <!-- Used as text for the link in onboarding_redesign_tou_body_three. -->
-  <string name="onboarding_redesign_tou_body_three_link_text" tools:ignore="UnusedResources">គ្រប់គ្រងការកំណត់</string>
   <!-- Marketing onboarding page title. 'Firefox' is intentionally hardcoded. -->
   <!-- Marketing onboarding page opt-out checkbox. Unchecking the box does not increase data collection. Our data practices remain the same. 'Mozilla' is intentionally hardcoded. -->
   <!-- Marketing onboarding page clickable link text to "learn more" on how data is used. -->

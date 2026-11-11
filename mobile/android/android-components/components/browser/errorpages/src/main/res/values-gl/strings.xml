@@ -34,11 +34,9 @@
   <!-- The error message shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_message"><![CDATA[<ul>\n<li>A páxina que está tentando ver non se pode mostrar porque este sitio web require unha conexión segura.</li>\n<li>O máis probable é que o problema estea relacionado co sitio web e non pode facer nada para resolvelo.</li>\n<li>Pode notificarlle o problema ao administrador do sitio web.</li>\n</ul>]]></string>
   <!-- The text shown inside the advanced button used to expand the advanced options. It's only shown when a website uses HSTS. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_advanced">Avanzadas…</string>
   <!-- The advanced certificate information shown when a website uses HSTS. The %1$s will be replaced by the website URL and %2$s will be replaced by the app name. It's only shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_techInfo2"><![CDATA[<label> <b>%1$s</b> ten unha política de seguranza chamada HTTP Strict Transport Security (HSTS), o que significa que <b>%2$s</b> só se pode conectar a ela de forma segura. Non pode engadir unha excepción para visitar este sitio. </label>]]></string>
   <!-- The text shown inside the advanced options button used to go back. It's only shown if the user has expanded the advanced options. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_back">Retroceder</string>
   <!-- The document title and heading of the error page shown when the user's network connection is interrupted while connecting to a website. -->
   <string name="mozac_browser_errorpages_net_interrupt_title">Interrompeuse a conexión</string>
   <!-- The error message shown when the user's network connection is interrupted while connecting to a website. -->
@@ -101,9 +99,7 @@
   <string name="mozac_browser_errorpages_malformed_uri_title">Enderezo incorrecto</string>
   <string name="mozac_browser_errorpages_malformed_uri_message"><![CDATA[<p>Non se recoñece o formato do enderezo fornecido. Busque erros na barra de localización e tente de novo.</p>]]></string>
   <!-- The document title and heading of an error page. -->
-  <string name="mozac_browser_errorpages_malformed_uri_title_alternative">O enderezo é incorrecto</string>
   <!-- This string contains markup. The URL should not be localized. -->
-  <string name="mozac_browser_errorpages_malformed_uri_message_alternative"><![CDATA[<ul>\n<li>Normalmente, os enderezos web escríbense como <strong>http://www.exemplo.gal/</strong></li>\n<li>Asegúrese de que está a usar barras inclinadas cara adiante (isto é <strong>/</strong>).</li>\n</ul>]]></string>
   <!-- The document title and heading of an error page. -->
   <string name="mozac_browser_errorpages_unknown_protocol_title">Protocolo descoñecido</string>
   <string name="mozac_browser_errorpages_unknown_protocol_message"><![CDATA[<p>O enderezo especifica un protocolo que o navegador non recoñece (p.ex., <q>wxyz://</q>) e, por tanto, non consegue conectar correctamente co sitio.</p>\n<ul>\n<li>Está a tentar acceder a algún tipo de servizo multimedia ou outros servizos non textuais? Busque no sitio requisitos adicionais.</li>\n<li>Algúns protocolos poden requirir software ou engadidos de terceiros para que o explorador consiga recoñecelos.</li>\n</ul>]]></string>

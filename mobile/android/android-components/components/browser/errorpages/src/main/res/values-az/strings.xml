@@ -61,7 +61,6 @@
   <string name="mozac_browser_errorpages_malformed_uri_title">Xətalı ünvan</string>
   <string name="mozac_browser_errorpages_malformed_uri_message"><![CDATA[<p>Daxil etdiyiniz ünvan bilinən formata uyğun deyil. Lütfən ünvan sətrinə baxıb mümkün səhvləri düzəltdikdən sonra yenidən yoxlayın.</p>]]></string>
   <!-- The document title and heading of an error page. -->
-  <string name="mozac_browser_errorpages_malformed_uri_title_alternative">Ünvan səhvdir</string>
   <!-- The document title and heading of an error page. -->
   <string name="mozac_browser_errorpages_unknown_protocol_title">Naməlum protokol</string>
   <!-- The document title and heading of an error page. -->

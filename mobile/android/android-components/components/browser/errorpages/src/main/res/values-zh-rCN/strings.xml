@@ -34,11 +34,9 @@
   <!-- The error message shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_message"><![CDATA[<ul>\n<li>由于此网站要求使用安全连接，您尝试查看的页面无法显示。</li>\n<li>这个问题大多与网站有关，无法通过您的操作解决。</li>\n<li>您可以向此网站的管理者反馈该问题。</li>\n</ul>]]></string>
   <!-- The text shown inside the advanced button used to expand the advanced options. It's only shown when a website uses HSTS. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_advanced">高级…</string>
   <!-- The advanced certificate information shown when a website uses HSTS. The %1$s will be replaced by the website URL and %2$s will be replaced by the app name. It's only shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_techInfo2"><![CDATA[<label> <b>%1$s</b> 启用了被称为 HTTP 严格传输安全（HSTS）的安全策略，<b>%2$s</b> 只能与其建立安全连接。您无法为此网站添加例外，以访问此网站。</label>]]></string>
   <!-- The text shown inside the advanced options button used to go back. It's only shown if the user has expanded the advanced options. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_back">返回</string>
   <!-- The document title and heading of the error page shown when the user's network connection is interrupted while connecting to a website. -->
   <string name="mozac_browser_errorpages_net_interrupt_title">连接被中断</string>
   <!-- The error message shown when the user's network connection is interrupted while connecting to a website. -->
@@ -101,9 +99,7 @@
   <string name="mozac_browser_errorpages_malformed_uri_title">不正确的网址</string>
   <string name="mozac_browser_errorpages_malformed_uri_message"><![CDATA[<p>无法识别这种格式的网址。请检查网址是否有误并重试。</p>]]></string>
   <!-- The document title and heading of an error page. -->
-  <string name="mozac_browser_errorpages_malformed_uri_title_alternative">网址无效</string>
   <!-- This string contains markup. The URL should not be localized. -->
-  <string name="mozac_browser_errorpages_malformed_uri_message_alternative"><![CDATA[<ul>\n<li>网址的格式通常是：<strong>http://www.example.com/</strong>。</li>\n<li>请确保您使用的是正斜杠（即 <strong>/</strong>）。</li>\n</ul>]]></string>
   <!-- The document title and heading of an error page. -->
   <string name="mozac_browser_errorpages_unknown_protocol_title">未知协议</string>
   <string name="mozac_browser_errorpages_unknown_protocol_message"><![CDATA[<p>浏览器无法识别该网址的协议（例如 <q>wxyz://</q>），因此浏览器无法连接至该网站。</p>\n<ul>\n<li>您是否在尝试访问多媒体或其他非文字服务？请检查该站点是否有其他要求。</li>\n<li>某些协议可能需要安装第三方软件或插件后浏览器才能识别。</li>\n</ul>]]></string>

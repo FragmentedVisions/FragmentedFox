@@ -7,7 +7,6 @@
 
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- The tile for the list of external apps to open the link in -->
-    <string name="mozac_feature_applinks_open_in">Open in…</string>
     <!-- The title of the prompt that warns users their normal browsing session is trying to open another app  -->
     <string name="mozac_feature_applinks_normal_confirm_dialog_title">Open in another app</string>
     <!-- The title of the prompt that warns users their normal browsing session is trying to open another app  -->

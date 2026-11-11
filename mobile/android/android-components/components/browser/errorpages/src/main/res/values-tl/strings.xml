@@ -34,11 +34,9 @@
   <!-- The error message shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_message"><![CDATA[<ul>\n<li>Ang pahinang sinusubukan mong tingnan ay hindi maipakita dahil nangangailangan ang website na ito ng isang ligtas na koneksyon.</li>\n<li>Malamang sa malamang, ang issue ay konektado sa website mismo, at wala kang magagawa para maayos ito.</li>\n<li>Maaari mong abisuhan ang administrator ng website tungkol sa problemang ito.</li>\n</ul>]]></string>
   <!-- The text shown inside the advanced button used to expand the advanced options. It's only shown when a website uses HSTS. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_advanced">Pumaroon…</string>
   <!-- The advanced certificate information shown when a website uses HSTS. The %1$s will be replaced by the website URL and %2$s will be replaced by the app name. It's only shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_techInfo2"><![CDATA[<label> May security policy ang <b>%1$s</b> na tinatawag na HTTP Strict Transport Security (HSTS), ibig sabihin, makakakonekta lang ang <b>%2$s</b> kung ligtas ang koneksyon. Hindi ka makakapagdagdag ng exception para mabisita ito. </label>]]></string>
   <!-- The text shown inside the advanced options button used to go back. It's only shown if the user has expanded the advanced options. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_back">Bumalik</string>
   <!-- The document title and heading of the error page shown when the user's network connection is interrupted while connecting to a website. -->
   <string name="mozac_browser_errorpages_net_interrupt_title">Ang koneksyon ay naantala</string>
   <!-- The error message shown when the user's network connection is interrupted while connecting to a website. -->
@@ -101,9 +99,7 @@
   <string name="mozac_browser_errorpages_malformed_uri_title">Di-wastong Address</string>
   <string name="mozac_browser_errorpages_malformed_uri_message"><![CDATA[<p>Ang nabanggit na address ay nasa di-kilalang format. Pakisuri ang location bar sa mga pagkakamali at subukan uli.</p>]]></string>
   <!-- The document title and heading of an error page. -->
-  <string name="mozac_browser_errorpages_malformed_uri_title_alternative">Ang address ay hindi wasto</string>
   <!-- This string contains markup. The URL should not be localized. -->
-  <string name="mozac_browser_errorpages_malformed_uri_message_alternative"><![CDATA[<ul>\n<li>Web addresses are usually written like <strong>http://www.example.com/</strong></li>\n<li>Make sure that you’re using forward slashes (i.e. <strong>/</strong>).</li>\n</ul>]]></string>
   <!-- The document title and heading of an error page. -->
   <string name="mozac_browser_errorpages_unknown_protocol_title">Hindi kilalang Protocol</string>
   <string name="mozac_browser_errorpages_unknown_protocol_message"><![CDATA[<p>The address specifies a protocol (e.g., <q>wxyz://</q>) the browser does not recognize, so the browser cannot properly connect to the site.</p>\n<ul>\n<li>Are you trying to access multimedia or other non-text services? Check the site for extra requirements.</li>\n<li>Some protocols may require third-party software or plugins before the browser can recognize them.</li>\n</ul>]]></string>

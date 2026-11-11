@@ -34,11 +34,9 @@
   <!-- The error message shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_message"><![CDATA[<ul>\n<li>Kaca anu rék dibuka teu bisa ditémbongkeun kusabab ieu raramatloka butuh sambungan anu aman.</li>\n<li>Masalahna sigana di raramatlokana, jadi anjeun teu bisa kumaha.</li>\n<li>Anjeun bisa ngiberan kuncén raramatlokana ngeunaan ieu masalah.</li>\n</ul>]]></string>
   <!-- The text shown inside the advanced button used to expand the advanced options. It's only shown when a website uses HSTS. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_advanced">Leuwih lengkep…</string>
   <!-- The advanced certificate information shown when a website uses HSTS. The %1$s will be replaced by the website URL and %2$s will be replaced by the app name. It's only shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_techInfo2"><![CDATA[<label> <b>%1$s</b> miboga kawijakan kaamanan anu katelah HTTP Strict Transport Security (HSTS), anu hartina <b>%2$s</b> ngan bisa nyambung ka dinya ku cara anu aman. Anjeun teu bisa ngiwalkeun pikeun muka ieu loka. </label>]]></string>
   <!-- The text shown inside the advanced options button used to go back. It's only shown if the user has expanded the advanced options. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_back">Balik Deui</string>
   <!-- The document title and heading of the error page shown when the user's network connection is interrupted while connecting to a website. -->
   <string name="mozac_browser_errorpages_net_interrupt_title">Sambunganana kapegat</string>
   <!-- The error message shown when the user's network connection is interrupted while connecting to a website. -->
@@ -95,9 +93,7 @@
   <string name="mozac_browser_errorpages_malformed_uri_title">Alamat Teu Bener</string>
   <string name="mozac_browser_errorpages_malformed_uri_message"><![CDATA[<p>Alamat anu diasupkeun formatna teu dpikawanoh. Pariksa palang lokasi bisi aya nu salah, laju cobaan deui.</p>]]></string>
   <!-- The document title and heading of an error page. -->
-  <string name="mozac_browser_errorpages_malformed_uri_title_alternative">Alamatna teu bener</string>
   <!-- This string contains markup. The URL should not be localized. -->
-  <string name="mozac_browser_errorpages_malformed_uri_message_alternative"><![CDATA[<ul>\n<li>Alamat raramat ilaharna ditulis siga <strong>http://www.conto.com/</strong></li>\n<li>Pastikeun anjeunn maké gurat condong maju (i.e. <strong>/</strong>).</li>\n</ul>]]></string>
   <!-- The document title and heading of an error page. -->
   <string name="mozac_browser_errorpages_unknown_protocol_title">Protokol Teu Dipiwanoh</string>
   <string name="mozac_browser_errorpages_unknown_protocol_message"><![CDATA[<p>Alamatna méré protocol (e.g., <q>wxyz://</q>) anu teu dipikawanoh ku pamaluruh, ku kituna pamaluruhna teu bisa nyambung kalawan bener ka lokana.</p>\n<ul>\n<li>Badé muka multimédia atawa layanan non-téks lianna? Pariksa lokana pikeun kalengkepanana.</li>\n<li>Sababaraha protokol butuh sopwér atawa plugin pihak katilu sangkan bisa dipikawanoh ku pamaluruhna.</li>\n</ul>]]></string>

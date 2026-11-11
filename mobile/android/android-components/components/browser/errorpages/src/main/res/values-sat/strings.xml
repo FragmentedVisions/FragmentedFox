@@ -34,11 +34,9 @@
   <!-- The error message shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_message"><![CDATA[<ul>\n<li>ᱟᱢ ᱧᱮᱞ ᱥᱮᱱᱟ ᱥᱟᱦᱴᱟ ᱫᱚ ᱵᱟᱝ ᱧᱮᱞ ᱫᱟᱲᱮᱭᱟᱜᱼᱟᱢ ᱪᱮᱫᱟᱜ ᱥᱮ ᱱᱚᱶᱟ ᱣᱮᱵᱽᱥᱟᱭᱤᱴ ᱫᱚ ᱨᱩᱠᱷᱤᱭᱟᱹ ᱡᱩᱲᱟᱹᱣ ᱫᱚᱨᱠᱟᱨ ᱠᱟᱱᱟ ᱾</li>\n<li>ᱱᱚᱶᱟ ᱫᱚ ᱣᱮᱵᱽᱥᱟᱭᱤᱴ ᱨᱮᱭᱟᱜ ᱵᱤᱥᱚᱭ ᱛᱮ ᱠᱟᱱᱟ, ᱱᱚᱶᱟ ᱵᱟᱵᱚᱛ ᱥᱩᱡᱷᱟᱹᱣ ᱫᱚ ᱟᱢ ᱯᱟᱦᱴᱟ ᱠᱷᱚᱱ ᱪᱮᱫ ᱥᱩᱡᱷᱟᱹᱣ ᱠᱟᱹᱢᱤ ᱵᱟᱭ ᱮᱢᱟ ᱾</li>\n<li>ᱱᱚᱶᱟ ᱰᱤᱜᱟᱹᱣ ᱫᱚ ᱟᱢ ᱣᱮᱵᱽᱥᱟᱭᱤᱴ ᱮᱰᱢᱤᱱᱥᱴᱨᱮᱴᱚᱨ ᱠᱷᱚᱵᱚᱨ ᱫᱟᱲᱮ ᱠᱚᱣᱟᱢ ᱾</li>\n</ul>]]></string>
   <!-- The text shown inside the advanced button used to expand the advanced options. It's only shown when a website uses HSTS. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_advanced">ᱞᱟᱦᱟᱱᱛᱤ…</string>
   <!-- The advanced certificate information shown when a website uses HSTS. The %1$s will be replaced by the website URL and %2$s will be replaced by the app name. It's only shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_techInfo2"><![CDATA[<label> <b>%1$s</b> ᱴᱷᱚᱱ ᱢᱤᱫ ᱨᱩᱠᱷᱤᱭᱟᱹ ᱱᱤᱛᱤ ᱡᱟᱦᱟᱸ ᱫᱚ HTTP ᱥᱴᱨᱤᱠᱴ ᱴᱨᱟᱱᱥᱯᱚᱴ ᱠᱚ ᱥᱮᱠᱭᱚᱨᱤᱴᱤ (HSTS) ᱠᱚ ᱢᱮᱛᱮᱜ ᱠᱟᱱᱟ, ᱡᱟᱦᱟᱸ ᱢᱮᱱᱮᱛ ᱫᱚ <b>%2$s</b> ᱫᱚ ᱨᱩᱠᱷᱤᱭᱟᱹ ᱦᱤᱥᱟᱹᱵ ᱛᱮ ᱡᱩᱲᱟᱹᱣᱜᱼᱟ ᱾ ᱱᱚᱶᱟ ᱥᱟᱭᱤᱴ ᱛᱮ ᱪᱟᱞᱟᱜ ᱞᱟᱹᱜᱤᱫ ᱪᱮᱫ ᱱᱤᱥᱮᱫᱷ ᱞᱟᱹᱠᱛᱤ ᱵᱟᱝ ᱠᱟᱱᱟ ᱾ </label>]]></string>
   <!-- The text shown inside the advanced options button used to go back. It's only shown if the user has expanded the advanced options. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_back">ᱛᱟᱭᱚᱢ ᱥᱮᱫ ᱪᱟᱞᱟᱣ</string>
   <!-- The document title and heading of the error page shown when the user's network connection is interrupted while connecting to a website. -->
   <string name="mozac_browser_errorpages_net_interrupt_title">ᱡᱚᱲᱟᱣ ᱵᱟᱝ ᱧᱮᱞ ᱞᱮᱱᱟ</string>
   <!-- The error message shown when the user's network connection is interrupted while connecting to a website. -->
@@ -101,9 +99,7 @@
   <string name="mozac_browser_errorpages_malformed_uri_title">ᱵᱷᱩᱞ ᱴᱷᱤᱠᱬᱟᱹ</string>
   <string name="mozac_browser_errorpages_malformed_uri_message"><![CDATA[<p>ᱮᱢ ᱟᱠᱟᱱ ᱴᱷᱤᱠᱬᱟᱹ ᱫᱚ ᱵᱟᱝ ᱵᱟᱰᱟᱭ ᱯᱷᱚᱨᱢᱟᱴ ᱨᱮ ᱢᱮᱱᱟᱜᱼᱟ ᱾ ᱫᱚᱭᱟᱠᱟᱛᱮ ᱡᱟᱭᱜᱟ ᱵᱟᱨ ᱨᱮ ᱵᱷᱩᱞ ᱠᱚ ᱧᱮᱞ ᱵᱤᱰᱟᱹᱣ ᱢᱮ ᱟᱨ ᱫᱩᱦᱲᱟᱹ ᱪᱮᱥᱴᱟᱭ ᱢᱮ ᱾</p>]]></string>
   <!-- The document title and heading of an error page. -->
-  <string name="mozac_browser_errorpages_malformed_uri_title_alternative">ᱴᱷᱤᱠᱬᱟᱹ ᱵᱟᱭ ᱴᱷᱤᱠ ᱟ</string>
   <!-- This string contains markup. The URL should not be localized. -->
-  <string name="mozac_browser_errorpages_malformed_uri_message_alternative"><![CDATA[<ul>\n<li>ᱣᱮᱵ ᱴᱷᱤᱠᱬᱟᱹ ᱫᱚ<strong>http://www.example.com/</strong>ᱠᱚ ᱚᱞᱟ</li>\n<li>ᱯᱷᱚᱨᱣᱟᱰ ᱥᱞᱟᱥ ᱮᱢ ᱟᱞᱚ ᱦᱤᱲᱤᱧᱟᱢ (ᱡᱮᱢᱚᱱ <strong>/</strong>).</li>\n</ul>]]></string>
   <!-- The document title and heading of an error page. -->
   <string name="mozac_browser_errorpages_unknown_protocol_title">ᱵᱟᱝ ᱵᱟᱰᱟᱭ ᱯᱚᱨᱴᱟᱞ</string>
   <string name="mozac_browser_errorpages_unknown_protocol_message"><![CDATA[<p>ᱴᱷᱤᱠᱬᱟᱹ ᱫᱚ ᱯᱨᱚᱴᱚᱠᱚᱞ ᱮ ᱫᱮᱠᱷᱟᱣᱮᱫᱟᱭ (ᱡᱮᱢᱚᱱ, <q>wxyz://</q>) ᱵᱨᱟᱣᱡᱟᱹᱨ ᱵᱟᱝ ᱪᱤᱱᱦᱟᱹᱣ ᱫᱟᱲᱮᱭᱟᱜ ᱠᱟᱱᱟ, ᱵᱟᱨᱣᱡᱟᱹᱨ ᱥᱟᱭᱤᱴ ᱨᱮ ᱵᱟᱝ ᱡᱩᱲᱟᱣᱼ ᱫᱟᱲᱮᱭᱟᱜ ᱠᱟᱱᱟ ᱾</p>\n<ul>\n<li>ᱟᱢ ᱪᱮᱫ ᱢᱟᱹᱞᱴᱤᱢᱤᱰᱤᱭᱟ ᱟᱨ ᱵᱟᱝ ᱵᱟᱝᱼᱚᱞ ᱥᱟᱹᱨᱣᱤᱥ ᱫᱚᱨᱠᱟᱨ ᱥᱮ? ᱡᱟᱹᱥᱛᱤ ᱡᱤᱱᱤᱥ ᱞᱟᱹᱜᱤᱫ ᱥᱟᱭᱤᱴ ᱧᱮᱞ ᱵᱤᱰᱟᱹᱣ ᱢᱮ ᱾</li>\n<li>ᱠᱤᱪᱷᱤ ᱯᱚᱨᱴᱟᱞ ᱫᱚ ᱛᱷᱟᱰ ᱯᱟᱨᱴᱭ ᱥᱚᱯᱷᱴᱣᱮᱨ ᱟᱨ ᱵᱟᱝ ᱯᱞᱟᱹᱜᱤᱱᱥ ᱫᱚᱨᱠᱟᱨ ᱚᱠᱟ ᱫᱚ ᱵᱽᱨᱟᱣᱩᱡᱟᱹᱨ ᱪᱤᱷᱟᱣ ᱨᱮ ᱜᱚᱲᱚᱣᱟᱭ ᱾</li>\n</ul>]]></string>

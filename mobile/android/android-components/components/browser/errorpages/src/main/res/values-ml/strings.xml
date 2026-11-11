@@ -34,11 +34,9 @@
   <!-- The error message shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_message"><![CDATA[<ul>\n<li>താങ്ങൾ കാണാൻ ശ്രമിക്കുന്ന താൾ കാണിപ്പിക്കാൻ പറ്റത്തില്ല, കാരണം ഈ വെബ്സ്ഥാനത്തിനൊരു സുരക്ഷിതമായ സമ്പർക്കത്തിന്റെ ആവശ്യമുണ്ടു്.</li>\n<li>കുഴപ്പം മിക്കവാറും വെബ്സ്ഥാനത്തിലായിരിക്കും അതു് പരിഹരിക്കാനും താങ്ങൾക്കു് ഒന്നും ചെയ്യാൻ പറ്റില്ല</li>\n<li>താങ്ങൾക്കു് വേണമെങ്കിൽ ഈ വെബ്സ്ഥാനത്തിന്റെ അധികാരിയെ ഈ കുഴപ്പത്തെക്കുറിച്ചു് അറിയിക്കാം.</li>\n</ul>]]></string>
   <!-- The text shown inside the advanced button used to expand the advanced options. It's only shown when a website uses HSTS. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_advanced">കൂടുതൽ…</string>
   <!-- The advanced certificate information shown when a website uses HSTS. The %1$s will be replaced by the website URL and %2$s will be replaced by the app name. It's only shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_techInfo2"><![CDATA[<label><b>%1$s</b>-നു് HTTP Strict Transport Security (HSTS) പേരുള്ള ഒരു സംരക്ഷണ നയമുണ്ടു്. ഇതുകൊണ്ടു് <b>%2$s</b>-നെ സുരക്ഷിത വഴിയിൽ മാത്രം ബന്ധപ്പെടാം. താങ്ങൾക്കു് ഈ വെബിടത്തിലോട്ടു് ചെല്ലാൻ വേണ്ടി ഒരു വിട്ടുവീഴ്ച ചേൎക്കാൻ പറ്റത്തില്ല.</label>]]></string>
   <!-- The text shown inside the advanced options button used to go back. It's only shown if the user has expanded the advanced options. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_back">തിരിച്ചു് പോവുക</string>
   <!-- The document title and heading of the error page shown when the user's network connection is interrupted while connecting to a website. -->
   <string name="mozac_browser_errorpages_net_interrupt_title">കണക്ഷൻ തടസ്സപ്പെട്ടു</string>
   <!-- The error message shown when the user's network connection is interrupted while connecting to a website. -->
@@ -101,9 +99,7 @@
   <string name="mozac_browser_errorpages_malformed_uri_title">അസാധുവായ വിലാസം</string>
   <string name="mozac_browser_errorpages_malformed_uri_message"><![CDATA[<p>നല്‍കിയിരിക്കുന്ന വിലാസം പരിചിതമായ രീതിയിലുള്ളതല്ല. തെറ്റുകള്‍ക്കായി ലോക്കേഷന്‍ ബാര്‍ പരിശോധിച്ച് വീണ്ടും ശ്രമിക്കുക.</p>]]></string>
   <!-- The document title and heading of an error page. -->
-  <string name="mozac_browser_errorpages_malformed_uri_title_alternative">ഈ വിലാസം സാധുവല്ല</string>
   <!-- This string contains markup. The URL should not be localized. -->
-  <string name="mozac_browser_errorpages_malformed_uri_message_alternative"><![CDATA[<ul>\n<li>വെബ് വിലാസങ്ങള്‍ സാധാരണ <strong>http://www.example.com/</strong> എന്ന രീതിയിലാണ് എഴുതുന്നത്:</li>\n<li>മുന്നോട്ടുള്ള സ്ലാഷ് ആണുപയോഗിക്കുന്നത് എന്നുറപ്പാക്കുക (അതായത്, <strong>/</strong>).</li>\n</ul>]]></string>
   <!-- The document title and heading of an error page. -->
   <string name="mozac_browser_errorpages_unknown_protocol_title">അപരിചിതമായ പെരുമാറ്റച്ചട്ടം</string>
   <string name="mozac_browser_errorpages_unknown_protocol_message"><![CDATA[<p>വിലാസം നൽകിയ പ്രോട്ടോകോൾ (ഉദാ. <q>wxyz://</q>) ബ്രൗസറിനു് തിരിച്ചറിയുവാന്‍ സാധിക്കുന്നില്ല, ആയതിനാൽ ബ്രൗസറിന് സൈറ്റിലേക്ക് ശരിയായി ബന്ധിപ്പിക്കാനാവുന്നില്ല</p><ul><li>നിങ്ങള്‍ മള്‍ട്ടിമീഡിയയോ അതോ മറ്റേതെങ്കിലും ടെക്സ്റ്റല്ലാത്ത സേവനങ്ങളോ ലഭ്യമാക്കാനാണോ ശ്രമിക്കുന്നത്? കൂടുതല്‍ ആവശ്യങ്ങൾ എന്തെല്ലാം എന്നറിയുന്നതിനായി സൈറ്റ് പരിശോധിക്കുക.</li><li>ചില പ്രോട്ടോക്കോളുകള്‍ക്ക്, അവയെ ബ്രൗസറിന് തിരിച്ചറിയാനാവുന്നതിന് തേര്‍ഡ്-പാര്‍ട്ടി സോഫ്റ്റ്‌വെയര്‍ അല്ലെങ്കില്‍ പ്ലഗിനുകൾ ആവശ്യമുണ്ടാകാം.</li></ul>]]></string>

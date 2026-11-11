@@ -32,9 +32,7 @@
   <!-- The document title and heading of the error page shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_title">ఈ వెబ్‌సైటుకి సురక్షిత అనుసంధానం కావాలి.</string>
   <!-- The text shown inside the advanced button used to expand the advanced options. It's only shown when a website uses HSTS. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_advanced">ఉన్నతం…</string>
   <!-- The text shown inside the advanced options button used to go back. It's only shown if the user has expanded the advanced options. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_back">వెనుకకు వెళ్ళు</string>
   <!-- The document title and heading of the error page shown when the user's network connection is interrupted while connecting to a website. -->
   <string name="mozac_browser_errorpages_net_interrupt_title">అనుసంధానానికి అంతరాయం కలిగింది</string>
   <!-- The error message shown when the user's network connection is interrupted while connecting to a website. -->
@@ -91,9 +89,7 @@
   <string name="mozac_browser_errorpages_malformed_uri_title">చెల్లని చిరునామా</string>
   <string name="mozac_browser_errorpages_malformed_uri_message"><![CDATA[<p>ఇచ్చిన చిరునామా గుర్తించగలిగే ఆకృతిలో లేదు. దయచేసి చిరునామా పట్టీలో తప్పులను సరిచేసి అప్పుడు ప్రయత్నించండి.</p>]]></string>
   <!-- The document title and heading of an error page. -->
-  <string name="mozac_browser_errorpages_malformed_uri_title_alternative">ఈ చిరునామా చెల్లదు</string>
   <!-- This string contains markup. The URL should not be localized. -->
-  <string name="mozac_browser_errorpages_malformed_uri_message_alternative"><![CDATA[<ul>\n<li>జాల చిరునామాలను మాములుగా ఇలా వ్రాస్తారు <strong>http://www.example.com/</strong></li>\n<li>మీరు ఫార్వార్డు స్లాషులనే (అంటే <strong>/</strong>) వాడేలా చూసుకోండి.</li>\n</ul>]]></string>
   <!-- The document title and heading of an error page. -->
   <string name="mozac_browser_errorpages_unknown_protocol_title">తెలియని ప్రొటోకాల్</string>
   <string name="mozac_browser_errorpages_unknown_protocol_message"><![CDATA[<p>ఆ చిరునామా విహారిణి గుర్తించలేని ప్రొటోకాలును పేర్కొంది (ఉదా॥ <q>wxyz://</q>), కాబట్టి విహారిణి ఆ సైటుకి సరిగా అనుసంధానం కాజాలదు.</p>\n<ul>\n<li>మీరు మల్టీమీడియా లేదా పాఠ్యేతర సేవలను పొందడానికి ప్రయత్నిస్తున్నారా? అదనపు ఆవశ్యకాల కోసం సైటులో చూడండి.</li>\n<li>కొన్ని ప్రొటోకాల్లను ముడో-పక్ష సాఫ్ట్‌వేరు లేక ప్లగిన్లు కావలసిరావచ్చు, ఆ తర్వాత వాటిని విహారిణి గుర్తించగలదు.</li>\n</ul>]]></string>

@@ -34,11 +34,9 @@
   <!-- The error message shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_message"><![CDATA[<ul>\n<li>Δεν είναι δυνατή η εμφάνιση της σελίδας που προσπαθείτε να προβάλετε, επειδή αυτός ο ιστότοπος απαιτεί ασφαλή σύνδεση.</li>\n<li>Το ζήτημα οφείλεται κατά πάσα πιθανότητα στον ιστότοπο και δεν μπορείτε να κάνετε τίποτα για να το επιλύσετε.</li>\n<li>Μπορείτε να ειδοποιήστε τον διαχειριστή του ιστοτόπου σχετικά με το πρόβλημα.</li>\n</ul>]]></string>
   <!-- The text shown inside the advanced button used to expand the advanced options. It's only shown when a website uses HSTS. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_advanced">Σύνθετα…</string>
   <!-- The advanced certificate information shown when a website uses HSTS. The %1$s will be replaced by the website URL and %2$s will be replaced by the app name. It's only shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_techInfo2"><![CDATA[<label> Το <b>%1$s</b> διαθέτει μια πολιτική ασφαλείας, η οποία ονομάζεται «HTTP Strict Transport Security (HSTS)», που σημαίνει ότι το <b>%2$s</b> μπορεί να συνδεθεί μόνο με ασφάλεια σε αυτό. Δεν μπορείτε να προσθέσετε εξαίρεση για να επισκεφθείτε τον ιστότοπο αυτό. </label>]]></string>
   <!-- The text shown inside the advanced options button used to go back. It's only shown if the user has expanded the advanced options. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_back">Επιστροφή</string>
   <!-- The document title and heading of the error page shown when the user's network connection is interrupted while connecting to a website. -->
   <string name="mozac_browser_errorpages_net_interrupt_title">Η σύνδεση διακόπηκε</string>
   <!-- The error message shown when the user's network connection is interrupted while connecting to a website. -->
@@ -101,9 +99,7 @@
   <string name="mozac_browser_errorpages_malformed_uri_title">Μη έγκυρη διεύθυνση</string>
   <string name="mozac_browser_errorpages_malformed_uri_message"><![CDATA[<p>Η μορφή της διεύθυνση δεν αναγνωρίζεται. Ελέγξτε τη γραμμή διευθύνσεων για λάθη και δοκιμάστε ξανά.</p>]]></string>
   <!-- The document title and heading of an error page. -->
-  <string name="mozac_browser_errorpages_malformed_uri_title_alternative">Η διεύθυνση δεν είναι έγκυρη</string>
   <!-- This string contains markup. The URL should not be localized. -->
-  <string name="mozac_browser_errorpages_malformed_uri_message_alternative"><![CDATA[<ul>\n<li>Οι διευθύνσεις ιστού γράφονται συνήθως ως εξής: <strong>http://www.example.com/</strong></li>\n<li>Βεβαιωθείτε ότι χρησιμοποιείτε τις σωστές καθέτους (δηλ. <strong>/</strong>).</li>\n</ul>]]></string>
   <!-- The document title and heading of an error page. -->
   <string name="mozac_browser_errorpages_unknown_protocol_title">Άγνωστο πρωτόκολλο</string>
   <string name="mozac_browser_errorpages_unknown_protocol_message"><![CDATA[<p>Η διεύθυνση καθορίζει ένα πρωτόκολλο (π.χ. «wxyz://») που δεν αναγνωρίζει το πρόγραμμα περιήγησης, επομένως δεν είναι δυνατή η σωστή σύνδεση στον ιστότοπο.</p>\n<ul>\n<li>Προσπαθείτε να προσπελάσετε πολυμέσα ή άλλες υπηρεσίες χωρίς κείμενο; Ελέγξτε τον ιστότοπο για επιπλέον απαιτήσεις.</li>\n<li>Ορισμένα πρωτόκολλα ενδέχεται να απαιτούν λογισμικό ή αρθρώματα τρίτων πριν μπορέσουν να αναγνωριστούν από το πρόγραμμα περιήγησης.</li>\n</ul>]]></string>

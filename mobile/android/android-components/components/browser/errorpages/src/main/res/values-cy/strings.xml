@@ -34,11 +34,9 @@
   <!-- The error message shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_message"><![CDATA[<ul>\n<li>Nid oes modd dangos y dudalen rydych yn ceisio ei gweld oherwydd bod angen cysylltiad diogel ar y wefan hon.</li>\n<li>Mae’r broblem yn fwyaf tebygol gyda’r wefan, a does dim byd y gallwch chi ei wneud i’w ddatrys.</li>\n<li>Gallwch roi gwybod i weinyddwr y wefan am y broblem.</li>\n</ul>]]></string>
   <!-- The text shown inside the advanced button used to expand the advanced options. It's only shown when a website uses HSTS. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_advanced">Uwch…</string>
   <!-- The advanced certificate information shown when a website uses HSTS. The %1$s will be replaced by the website URL and %2$s will be replaced by the app name. It's only shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_techInfo2"><![CDATA[Mae gan <label> <b>%1$s</b> bolisi diogelwch o’r enw HTTP Strict Transport Security (HSTS), sy’n golygu mai dim ond yn ddiogel y gall <b>%2$s</b> gysylltu ag ef. Ni allwch ychwanegu eithriad i ymweld â’r wefan hon. </label>]]></string>
   <!-- The text shown inside the advanced options button used to go back. It's only shown if the user has expanded the advanced options. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_back">Ewch Nôl</string>
   <!-- The document title and heading of the error page shown when the user's network connection is interrupted while connecting to a website. -->
   <string name="mozac_browser_errorpages_net_interrupt_title">Cafodd y cysylltiad ei darfu</string>
   <!-- The error message shown when the user's network connection is interrupted while connecting to a website. -->
@@ -101,9 +99,7 @@
   <string name="mozac_browser_errorpages_malformed_uri_title">Cyfeiriad Annilys</string>
   <string name="mozac_browser_errorpages_malformed_uri_message"><![CDATA[<p>Nid yw’r cyfeiriad yma mewn fformat adnabyddus. Gwiriwch y bar lleoliad a cheisiwch eto.</p>]]></string>
   <!-- The document title and heading of an error page. -->
-  <string name="mozac_browser_errorpages_malformed_uri_title_alternative">Nid yw’r cyfeiriad yn ddilys</string>
   <!-- This string contains markup. The URL should not be localized. -->
-  <string name="mozac_browser_errorpages_malformed_uri_message_alternative"><![CDATA[<ul>\n<li>Fel rheol mae cyfeiriadau Gwe’n cael eu hysgrifennu fel <strong>http://www.example.com/</strong></li>\n<li>Gwnewch yn siŵr eich bod yn defnyddio blaen slaes (h.y. <strong>/</strong>).</li>\n</ul>]]></string>
   <!-- The document title and heading of an error page. -->
   <string name="mozac_browser_errorpages_unknown_protocol_title">Protocol Anhysbys</string>
   <string name="mozac_browser_errorpages_unknown_protocol_message"><![CDATA[<p>Mae’r cyfeiriad yn pennu protocol (e.e. <q>wxyz://</q>) nad yw’r porwr yn ei adnabod, felly nid yw’r porwr yn gallu cysylltu’n iawn â’r wefan.</p>\n<ul>\n<li>Ydych chi’n ceisio cael mynediad at wasanaethau aml-gyfrwng neu destun yn unig? Gwiriwch y wefan am yr anghenion ychwanegol hyn.</li>\n<li>Mae rhai protocolau angen meddalwedd trydydd parti neu ategion cyn bod modd i’r porwr eu hadnabod.</li>\n</ul>]]></string>

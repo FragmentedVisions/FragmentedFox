@@ -34,11 +34,9 @@
   <!-- The error message shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_message"><![CDATA[<ul>\n<li>A pagina chì vò circate à fighjà ùn pò micca esse affissata perchè u situ web richiede una cunnessione sicura.</li>\n<li>Sicuramente, stu prublema hè cagiunatu da u situ web, è ùn pudete fà nunda per què.</li>\n<li>Ma pudete cuntattà l’amministratore di stu situ web per infurmallu di stu prublema.</li>\n</ul>]]></string>
   <!-- The text shown inside the advanced button used to expand the advanced options. It's only shown when a website uses HSTS. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_advanced">Espertu…</string>
   <!-- The advanced certificate information shown when a website uses HSTS. The %1$s will be replaced by the website URL and %2$s will be replaced by the app name. It's only shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_techInfo2"><![CDATA[<label> <b>%1$s</b> impiega una strategia di sicurità chjamata HTTP Strict Transport Security (HSTS), vole si dì chì <b>%2$s</b> pò solu ci cunnettesi di manera assicurizata. Ùn pudete micca aghjunghje un’eccezzione per visità stu situ. </label>]]></string>
   <!-- The text shown inside the advanced options button used to go back. It's only shown if the user has expanded the advanced options. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_back">Ritornu</string>
   <!-- The document title and heading of the error page shown when the user's network connection is interrupted while connecting to a website. -->
   <string name="mozac_browser_errorpages_net_interrupt_title">A cunnessione hè stata interrotta</string>
   <!-- The error message shown when the user's network connection is interrupted while connecting to a website. -->
@@ -101,9 +99,7 @@
   <string name="mozac_browser_errorpages_malformed_uri_title">Indirizzu inaccettevule</string>
   <string name="mozac_browser_errorpages_malformed_uri_message"><![CDATA[<p>L’indirizzu pruvistu ùn hè micca in un furmatu ricunnisciutu. Ci vole à verificà ch’ellu ùn ci hè micca sbagliu in a barra d’indirizzu è pruvà torna.</p>]]></string>
   <!-- The document title and heading of an error page. -->
-  <string name="mozac_browser_errorpages_malformed_uri_title_alternative">L’indirizzu ùn hè accettevule</string>
   <!-- This string contains markup. The URL should not be localized. -->
-  <string name="mozac_browser_errorpages_malformed_uri_message_alternative"><![CDATA[<ul>\n<li>A sintassa di l’indirizzi hè di solitu <strong>http://www.esempiu.com/</strong></li>\n<li>Assicuratevi d’impiegà barre sbieche (i.e. <strong>/</strong>).</li>\n</ul>]]></string>
   <!-- The document title and heading of an error page. -->
   <string name="mozac_browser_errorpages_unknown_protocol_title">Protocollu scunnisciutu</string>
   <string name="mozac_browser_errorpages_unknown_protocol_message"><![CDATA[<p>L’indirizzu indicheghja un protocollu (i.e. : <q>wxyz://</q>) scunnisciutu da u navigatore chì ùn riesce micca à cunnettesi currettamente à u situ.</p>\n<ul>\n<li>>Pruvate d’accede à cuntenutu multimedia o à d’altri servizii non-testu ? Verificate nant’à u situ i prugrammi chì sò richiesti.</li>\n<li>Certi protocolli ponu richiede un terzu prugramma o moduli d’estensione per chì u navigatore possi ricunnoscelli.</li>\n</ul>]]></string>

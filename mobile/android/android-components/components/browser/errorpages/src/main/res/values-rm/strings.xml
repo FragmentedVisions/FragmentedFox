@@ -34,11 +34,9 @@
   <!-- The error message shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_message"><![CDATA[<ul>\n<li>La pagina che ti emprovas da visitar na po betg vegnir mussada perquai che questa website pretenda ina connexiun segirada.</li>\n<li>I sa tracta probablamain dad in problem da la website e ti na pos far nagut per al schliar.</li>\n<li>Ti pos dentant infurmar l\'administratur da la website davart il problem.</li>\n</ul>]]></string>
   <!-- The text shown inside the advanced button used to expand the advanced options. It's only shown when a website uses HSTS. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_advanced">Avanzà…</string>
   <!-- The advanced certificate information shown when a website uses HSTS. The %1$s will be replaced by the website URL and %2$s will be replaced by the app name. It's only shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_techInfo2"><![CDATA[<label> <b>%1$s</b> ha ina directiva da segirezza che sa numna HTTP Strict Transport Security (HSTS). Quai munta che <b>%2$s</b> po mo connectar a moda segirada cun la website. I n\'è betg pussaivel dad agiuntar ina excepziun per visitar questa website. </label>]]></string>
   <!-- The text shown inside the advanced options button used to go back. It's only shown if the user has expanded the advanced options. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_back">Turnar</string>
   <!-- The document title and heading of the error page shown when the user's network connection is interrupted while connecting to a website. -->
   <string name="mozac_browser_errorpages_net_interrupt_title">La connexiun è interrutta</string>
   <!-- The error message shown when the user's network connection is interrupted while connecting to a website. -->
@@ -101,9 +99,7 @@
   <string name="mozac_browser_errorpages_malformed_uri_title">Adressa nunvalida</string>
   <string name="mozac_browser_errorpages_malformed_uri_message"><![CDATA[<p>L\'adressa inditgada ha in format nunenconuschent. Controllescha per plaschair sche l\'adressa cuntegna sbagls ed emprova anc ina giada.</p>]]></string>
   <!-- The document title and heading of an error page. -->
-  <string name="mozac_browser_errorpages_malformed_uri_title_alternative">L\'adressa è nunvalida</string>
   <!-- This string contains markup. The URL should not be localized. -->
-  <string name="mozac_browser_errorpages_malformed_uri_message_alternative"><![CDATA[<ul>\n<li>Adressas d\'internet vegnan normalmain scrittas uschia: <strong>http://www.example.com/</strong></li>\n<li>Controllescha che ti has utilisà stritgs diagonals che mussan enavant (q.v.d. <strong>/</strong>).</li>\n</ul>]]></string>
   <!-- The document title and heading of an error page. -->
   <string name="mozac_browser_errorpages_unknown_protocol_title">Protocol nunenconuschent</string>
   <string name="mozac_browser_errorpages_unknown_protocol_message"><![CDATA[<p>L\'adressa inditgescha in protocol (per exempel <q>wxyz://</q>) ch\'il navigatur n\'enconuscha betg. Perquai na po il navigatur betg connectar correctamain cun la website.</p>\n<ul>\n<li>Emprovas ti dad acceder a multimedia u auters servetschs betg textuals? Controllescha sche la website pretenda premissas spezialas.</li>\n<li>Tscherts protocols dovran software da terzs u plug-ins per ch\'il navigatur als reconuschia.</li>\n</ul>]]></string>

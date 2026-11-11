@@ -34,11 +34,9 @@
   <!-- The error message shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_message"><![CDATA[<ul>\n<li>Stránka, kterou se snažíte načíst, nemůže být zobrazena, protože vyžaduje zabezpečené připojení.</li>\n<li>Příčina tohoto problému je pravděpodobně na straně serveru a vy ji bohužel nemůžete odstranit.</li>\n<li>O problému můžete informovat správce webu.</li>\n</ul>]]></string>
   <!-- The text shown inside the advanced button used to expand the advanced options. It's only shown when a website uses HSTS. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_advanced">Rozšířené…</string>
   <!-- The advanced certificate information shown when a website uses HSTS. The %1$s will be replaced by the website URL and %2$s will be replaced by the app name. It's only shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_techInfo2"><![CDATA[<label> Server <b>%1$s</b> má nastaveno bezpečnostní pravidlo HTTP Strict Transport Security (HSTS), které od aplikace <b>%2$s</b> vyžaduje použití pouze zabezpečeného spojení. K návštěvě tohoto webu nelze udělit výjimku. </label>]]></string>
   <!-- The text shown inside the advanced options button used to go back. It's only shown if the user has expanded the advanced options. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_back">Zpátky</string>
   <!-- The document title and heading of the error page shown when the user's network connection is interrupted while connecting to a website. -->
   <string name="mozac_browser_errorpages_net_interrupt_title">Spojení bylo přerušeno</string>
   <!-- The error message shown when the user's network connection is interrupted while connecting to a website. -->
@@ -101,9 +99,7 @@
   <string name="mozac_browser_errorpages_malformed_uri_title">Neplatná adresa</string>
   <string name="mozac_browser_errorpages_malformed_uri_message"><![CDATA[<p>Adresa (URL) není platná a nelze ji načíst. Zkontrolujte prosím, že je adresa napsána správně.</p>]]></string>
   <!-- The document title and heading of an error page. -->
-  <string name="mozac_browser_errorpages_malformed_uri_title_alternative">Neplatná adresa</string>
   <!-- This string contains markup. The URL should not be localized. -->
-  <string name="mozac_browser_errorpages_malformed_uri_message_alternative"><![CDATA[<ul>\n<li>Webové adresy jsou obvykle psány jako <strong>http://www.example.com/</strong></li>\n<li>Ujistěte se, že používáte běžná lomítka (tj. <strong>/</strong>).</li>\n</ul>]]></string>
   <!-- The document title and heading of an error page. -->
   <string name="mozac_browser_errorpages_unknown_protocol_title">Neznámý protokol</string>
   <string name="mozac_browser_errorpages_unknown_protocol_message"><![CDATA[<p>Adresu (URL) určuje protokol (např. <q>wxyz://</q>), který nebyl prohlížečem rozpoznán, a proto se k ní nemůže korektně připojit.</p>\n<ul>\n<li>Zkoušíte přistupovat k multimédiím či jiné netextové službě? Podívejte se, jaké další věci stránka vyžaduje.</li>\n<li>Některé protokoly mohou vyžadovat software třetích stran nebo zásuvné moduly dříve, než je prohlížeč může rozpoznat.</li>\n</ul>]]></string>

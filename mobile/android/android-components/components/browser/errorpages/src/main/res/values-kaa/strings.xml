@@ -34,11 +34,9 @@
   <!-- The error message shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_message"><![CDATA[<ul>\n<li>Siz kórmekshi bolǵan betti kórsetip bolmaydı, sebebi bul sayt qáwipsiz jalǵanıwdı talap etedi.</li>\n<li>Bul mashqala sayttıń ózi menen baylanıslı bolıwı múmkin hám siz bul jaǵdayda heshnárse isley almaysız.</li>\n<li>Siz bul mashqala haqqında sayttıń administratorın xabarlandırıwıńız múmkin.</li>\n</ul>]]></string>
   <!-- The text shown inside the advanced button used to expand the advanced options. It's only shown when a website uses HSTS. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_advanced">Qosımsha…</string>
   <!-- The advanced certificate information shown when a website uses HSTS. The %1$s will be replaced by the website URL and %2$s will be replaced by the app name. It's only shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_techInfo2"><![CDATA[<label> <b>%1$s</b> HTTP qatań transport qáwipsizligi (HSTS) dep atalǵan qáwipsizlik siyasatına iye, yaǵnıy <b>%2$s</b> oǵan tek ǵana qáwipsiz jalǵanıwı múmkin. Bul saytqa kiriw ushın esaptan tısqarılardı qosa almaysız.</label>]]></string>
   <!-- The text shown inside the advanced options button used to go back. It's only shown if the user has expanded the advanced options. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_back">Artqa qaytıw</string>
   <!-- The document title and heading of the error page shown when the user's network connection is interrupted while connecting to a website. -->
   <string name="mozac_browser_errorpages_net_interrupt_title">Jalǵanıw úzildi</string>
   <!-- The error message shown when the user's network connection is interrupted while connecting to a website. -->
@@ -95,9 +93,7 @@
   <string name="mozac_browser_errorpages_malformed_uri_title">Jaramsız mánzil</string>
   <string name="mozac_browser_errorpages_malformed_uri_message"><![CDATA[<p>Kórsetilgen mánzildıń formatın anıqlaw múmkin bolmay atır. Mánzildıń qátesiz kiritilgenin tekserıń hám qayta urınıp kórıń.</p>]]></string>
   <!-- The document title and heading of an error page. -->
-  <string name="mozac_browser_errorpages_malformed_uri_title_alternative">Mánzil jaramsız</string>
   <!-- This string contains markup. The URL should not be localized. -->
-  <string name="mozac_browser_errorpages_malformed_uri_message_alternative"><![CDATA[<ul>\n<li>Sayt mánzilleri ádette usınday kóriniste jazıladi <strong>http://www.example.com/</strong></li>\n<li>Qıya sızıqtan (/) paydalanıp atırǵanıńızǵa isenim kámil etıń (Mısalı: <strong>/</strong>).</li>\n</ul>]]></string>
   <!-- The document title and heading of an error page. -->
   <string name="mozac_browser_errorpages_unknown_protocol_title">Belgisiz Protokol</string>
   <string name="mozac_browser_errorpages_unknown_protocol_message"><![CDATA[<p>Mánzil (<q>wxyz://</q> uqsaǵan) belgisiz protokoldı óz ishine aladı, sonıń ushın brauzer sayt penen durıs baylanıs ornata almaydı.</p>\n<ul>\n<li>Eger de siz multimedia yamasa basqa da tekst emes xızmetlerdi ashıwǵa urınıp atırǵan bolsańız, sayttıń ayırım talapların tekseriń.</li>\n<li>Brauzer anıqlawı ushın ayırım protokollar sırtqı baǵdarlamalardı yamasa plaginlerdi ornatıwdı talap etiwi múmkin.</li>\n</ul>]]></string>

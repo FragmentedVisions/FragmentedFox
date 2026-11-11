@@ -34,11 +34,9 @@
   <!-- The error message shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_message"><![CDATA[<ul>\n<li>Ri ruxaq natojtob\'ej natz\'ët man tz\'etel ta ruma chi ri ruxaq k\'amaya\'l nrajo\' jun jikïl okem.</li>\n<li>Rik\'in jub\'a\' ri k\'ayewal xa ruma ri ruxaq ajk\'amaya\'l, majun yatikïr nab\'än chuwäch richin nasöl.</li>\n<li>Yatikïr naya\' rutzijol chi re ri runuk\'samajel ruxaq k\'amaya\'l chi rij ri k\'ayewal.</li>\n</ul>]]></string>
   <!-- The text shown inside the advanced button used to expand the advanced options. It's only shown when a website uses HSTS. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_advanced">Q\'axinäq…</string>
   <!-- The advanced certificate information shown when a website uses HSTS. The %1$s will be replaced by the website URL and %2$s will be replaced by the app name. It's only shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_techInfo2"><![CDATA[<label> <b>%1$s</b>k\'o jun runa\'ojil jikomal b\'ina\'am HTTP Jikïl Ruk\'waxik Jikomal (HSTS), ri nuq\'ajuj chi ri <b>%2$s</b> xa xe nitikïr nok pa ütz jikomal. Man yatikïr ta natz\'aqatisaj jun man relik ta richin natz\'ët re ruxaq re\'. </label>]]></string>
   <!-- The text shown inside the advanced options button used to go back. It's only shown if the user has expanded the advanced options. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_back">Titzolin</string>
   <!-- The document title and heading of the error page shown when the user's network connection is interrupted while connecting to a website. -->
   <string name="mozac_browser_errorpages_net_interrupt_title">Xq\'at ri okem</string>
   <!-- The error message shown when the user's network connection is interrupted while connecting to a website. -->
@@ -95,9 +93,7 @@
   <string name="mozac_browser_errorpages_malformed_uri_title">Man Okel Ta Ri Ochochib\'äl</string>
   <string name="mozac_browser_errorpages_malformed_uri_message"><![CDATA[<p>Man etaman ta ruwäch ri rub\'anikil ri ochochib\'äl xtz\'ib\'äx. Ke\'anik\'oj ri taq sachoj pa ri kikajtz\'ik ochochib\'äl, k\'a ri\' tatojtob\'ej chik.</p>]]></string>
   <!-- The document title and heading of an error page. -->
-  <string name="mozac_browser_errorpages_malformed_uri_title_alternative">Man nuxïm ta ri\' ri ochochib\'äl</string>
   <!-- This string contains markup. The URL should not be localized. -->
-  <string name="mozac_browser_errorpages_malformed_uri_message_alternative"><![CDATA[<ul>\n<li>Rochochib\'al Ajk\'amaya\'l achi\'el jantape\' nitz\'ib\'äx achi\'el <strong>http://www.example.com/</strong></li>\n<li>Tajikib\'a\' chi ye\'awokisaj ri q\'eq\'el taq juch\' (achi\'el <strong>/</strong>).</li>\n</ul>]]></string>
   <!-- The document title and heading of an error page. -->
   <string name="mozac_browser_errorpages_unknown_protocol_title">Man Etaman Ta Ruwäch Ri Rub\'eyal Samaj</string>
   <string name="mozac_browser_errorpages_unknown_protocol_message"><![CDATA[<p>Ri ochochib\'äl nuya\' retal jun rub\'eyal samaj (achi\'el <q>wxyz://</q>) man netamäx ta ruwäch ruma ri okik\'amaya\'l, ruma ri man nitikïr ta nok pa rub\'eyal pa ri ruxaq k\'amaya\'l.</p>\n<ul>\n<li>¿La natojtob\'ej yatok chupam jun k\'ïy k\'oxom o jun chik chi samajib\'äl? Tanik\'oj we k\'o chi k\'o taq rutz\'aqat rajowaxik k\'o chi k\'o chupam.</li>\n<li>Jujun taq rub\'eyal samaj rik\'in jub\'a\' yekajo\' taq kema\' o taq tz\'aqat kichin aj rox winaqi\' richin ütz yesamäj.</li>\n</ul>]]></string>

@@ -26,9 +26,7 @@
   <!-- The settings of the add-on. -->
   <string name="mozac_feature_addons_settings">امستنې</string>
   <!-- Indicates the add-on is enabled. -->
-  <string name="mozac_feature_addons_settings_on">فعال</string>
   <!-- This is displayed in a page where the user can see the installed and recommended(not installed yet) add-ons, this string indicates the installed section. -->
-  <string name="mozac_feature_addons_installed_section">نصب شوی</string>
   <!-- Displays a page with all the details of an add-on. -->
   <string name="mozac_feature_addons_details">جزیات</string>
   <!-- This is a button to add (install) an add-on . -->

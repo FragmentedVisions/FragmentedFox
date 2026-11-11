@@ -42,7 +42,6 @@
   -->
   <string name="mozac_feature_downloads_already_exists_dialog_title">lipu %1$s li lon a.</string>
   <!-- Message that appears when the downloaded file could not be opened. -->
-  <string name="mozac_feature_downloads_could_not_open_file">mi ken ala open e lipu</string>
   <!-- Button that pauses the download when pressed. -->
   <string name="mozac_feature_downloads_button_pause">o lape</string>
   <!-- Button that resumes the download when pressed. -->
@@ -50,7 +49,6 @@
   <!-- Button that cancels the download when pressed. -->
   <string name="mozac_feature_downloads_button_cancel">o weka jo</string>
   <!-- Button that opens the downloaded file when pressed. -->
-  <string name="mozac_feature_downloads_button_open">o open</string>
   <!-- Button that restarts the download after a failed attempt. -->
   <string name="mozac_feature_downloads_button_try_again">o sin</string>
   <!-- Content description for close button -->

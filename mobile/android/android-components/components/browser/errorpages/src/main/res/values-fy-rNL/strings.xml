@@ -34,11 +34,9 @@
   <!-- The error message shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_message"><![CDATA[<ul>\n<li>De side dy’t jo besykje te besjen kin net werjûn wurde, omdat dizze webside in befeilige ferbining fereasket.</li>\n<li>It probleem leit nei alle gedachten by de website, en jo kinne neat dwaan om it op te lossen.</li>\n<li>Jo kinne de behearder fan de website ynformearje oer it probleem.</li>\n</ul>]]></string>
   <!-- The text shown inside the advanced button used to expand the advanced options. It's only shown when a website uses HSTS. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_advanced">Avansearre…</string>
   <!-- The advanced certificate information shown when a website uses HSTS. The %1$s will be replaced by the website URL and %2$s will be replaced by the app name. It's only shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_techInfo2"><![CDATA[<label> <b>%1$s</b> hat in befeiligingsbelied mei de namme HTTP Strict Transport Security (HSTS), wat betsjut dat <b>%2$s</b> allinnich in befeilige ferbining dêrmei meitsje kin. Jo kinne gjin útsûndering tafoegje om dizze website te besykjen. </label>]]></string>
   <!-- The text shown inside the advanced options button used to go back. It's only shown if the user has expanded the advanced options. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_back">Tebek</string>
   <!-- The document title and heading of the error page shown when the user's network connection is interrupted while connecting to a website. -->
   <string name="mozac_browser_errorpages_net_interrupt_title">De ferbining waard ferbrutsen</string>
   <!-- The error message shown when the user's network connection is interrupted while connecting to a website. -->
@@ -101,9 +99,7 @@
   <string name="mozac_browser_errorpages_malformed_uri_title">Unjildich adres</string>
   <string name="mozac_browser_errorpages_malformed_uri_message"><![CDATA[<p>It opjûne adres hat gjin werkenbere yndieling. Kontrolearje de lokaasjebalke op flaters en probearje it opnij.</p>]]></string>
   <!-- The document title and heading of an error page. -->
-  <string name="mozac_browser_errorpages_malformed_uri_title_alternative">It adres is net jildich</string>
   <!-- This string contains markup. The URL should not be localized. -->
-  <string name="mozac_browser_errorpages_malformed_uri_message_alternative"><![CDATA[<ul>\n<li>Webadressen wurde trochgeans skreaun as <strong>http://www.example.com/</strong></li>\n<li>Let der op dat jo foarweartse slashes brûke (d.y. <strong>/</strong>).</li>\n</ul>]]></string>
   <!-- The document title and heading of an error page. -->
   <string name="mozac_browser_errorpages_unknown_protocol_title">Unbekend protokol</string>
   <string name="mozac_browser_errorpages_unknown_protocol_message"><![CDATA[<p>It adres spesifisearret in protokol (byg. <q>wxyz://</q>) dat de browser net werkend, wêrtroch de browser net op in krekte manier mei de website ferbine kin.</p>\n<ul>\n<li>Probearje jo tagong te krijen ta multimedia- of oare net-tekstservices? Kontrolearje de website op ekstra nedichheden.</li>\n<li>Guon protokollen kinne programmatuer of ynstekkers fan tredden fereaskje foardat de browser se werkenne kin.</li>\n</ul>]]></string>

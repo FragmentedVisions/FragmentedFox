@@ -34,11 +34,9 @@
   <!-- The error message shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_message"><![CDATA[<ul>\n<li>La paĝo, kiun vi volas vidi, ne povas esti montrita ĉar la retejo postulas sekuran konekton.</li>\n<li>La problemo plej verŝajne okazas en la retejo, kaj vi nenion povas fari por solvi ĝin.</li>\n<li>Vi povas tamen sciigi la administranton de la retejo pri la problemo.</li>\n</ul>]]></string>
   <!-- The text shown inside the advanced button used to expand the advanced options. It's only shown when a website uses HSTS. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_advanced">Spertula…</string>
   <!-- The advanced certificate information shown when a website uses HSTS. The %1$s will be replaced by the website URL and %2$s will be replaced by the app name. It's only shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_techInfo2"><![CDATA[<label> <b>%1$s</b> havas sekurecan politikon, kiun oni nomas HTTP Strict Transport Security (HSTS), kiu signifas ke <b>%2$s</b> nur povas konektiĝi per sekura konekto. Vi ne povas aldoni escepton por viziti la retejon.</label>]]></string>
   <!-- The text shown inside the advanced options button used to go back. It's only shown if the user has expanded the advanced options. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_back">Iri reen</string>
   <!-- The document title and heading of the error page shown when the user's network connection is interrupted while connecting to a website. -->
   <string name="mozac_browser_errorpages_net_interrupt_title">La konekto estis interrompita</string>
   <!-- The error message shown when the user's network connection is interrupted while connecting to a website. -->
@@ -101,9 +99,7 @@
   <string name="mozac_browser_errorpages_malformed_uri_title">Nevalida adreso</string>
   <string name="mozac_browser_errorpages_malformed_uri_message"><![CDATA[<p>La provizita adreso havas formaton nerekoneblan. Bonvolu kontroli ĉu en la adresa strio io estas mistajpita kaj klopodu denove.</p>]]></string>
   <!-- The document title and heading of an error page. -->
-  <string name="mozac_browser_errorpages_malformed_uri_title_alternative">La adreso ne estas valida</string>
   <!-- This string contains markup. The URL should not be localized. -->
-  <string name="mozac_browser_errorpages_malformed_uri_message_alternative"><![CDATA[<ul>\n<li>Retadresoj estas kutime ĉi tiel skribitaj <strong>http://www.example.com/</strong></li>\n<li>Estu certa uzi la ĝustajn oblikvajn strekojn (i.e. <strong>/</strong>).</li>\n</ul>]]></string>
   <!-- The document title and heading of an error page. -->
   <string name="mozac_browser_errorpages_unknown_protocol_title">Nekonata protokolo</string>
   <string name="mozac_browser_errorpages_unknown_protocol_message"><![CDATA[<p>La adreso specifas protokolon (ekzemple <q>wxyz://</q>) ne rekonata de la retumilo, kiu ne povas do taŭge konektiĝi al la retejo.</p>\n<ul>\n<li>Ĉu vi klopodas aliri aŭdvidaĵon aŭ alian servon ne tekstan? Kontrolu la retejon por scii ĉu estas apartaj postuloj.</li>\n<li>Kelkaj protokoloj povas postuli apartajn programojn aŭ kromprogramojn antaŭ ol la retumilo povos rekoni ilin.</li>\n</ul>]]></string>

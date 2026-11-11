@@ -34,11 +34,9 @@
   <!-- The error message shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_message"><![CDATA[<ul>\n<li>Күрәсегез килгән сәхифә күрсәтелә алмый, чөнки бу вебсайт хәвефсез бәйләнеш таләп итә.</li>\n<li>Проблема сайтта булырга тиеш һәм аны чишү өчен Сез эшли алырлык бернәрсә дә юк.</li>\n<li>Вебсайтның администраторына проблема турында хәбәр итә аласыз.</li>\n</ul>]]></string>
   <!-- The text shown inside the advanced button used to expand the advanced options. It's only shown when a website uses HSTS. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_advanced">Киңәйтелгән…</string>
   <!-- The advanced certificate information shown when a website uses HSTS. The %1$s will be replaced by the website URL and %2$s will be replaced by the app name. It's only shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_techInfo2"><![CDATA[<label><b>%1$s</b> сәхифәсенең HTTP Strict Transport Security (HSTS) дип аталган хәвефсезлек сәясәте бар, шуңа күрә <b>%2$s</b> аңа хәвефсез рәвештә генә тоташа ала. Сез бу сайтка керү өчен чыгарма өсти алмыйсыз.</label>]]></string>
   <!-- The text shown inside the advanced options button used to go back. It's only shown if the user has expanded the advanced options. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_back">Кире кайту</string>
   <!-- The document title and heading of the error page shown when the user's network connection is interrupted while connecting to a website. -->
   <string name="mozac_browser_errorpages_net_interrupt_title">Бәйләнеш өзелде</string>
   <!-- The error message shown when the user's network connection is interrupted while connecting to a website. -->
@@ -99,9 +97,7 @@
   <string name="mozac_browser_errorpages_malformed_uri_title">Яраксыз адрес</string>
   <string name="mozac_browser_errorpages_malformed_uri_message"><![CDATA[<p>Кертелгән адресның форматын танып булмады. Зинһар, адресның хатасызмы икәнен тикшереп, янәдән тырышып карагыз.</p>]]></string>
   <!-- The document title and heading of an error page. -->
-  <string name="mozac_browser_errorpages_malformed_uri_title_alternative">Адрес хаталы</string>
   <!-- This string contains markup. The URL should not be localized. -->
-  <string name="mozac_browser_errorpages_malformed_uri_message_alternative"><![CDATA[<ul>\n<li>Веб адреслары гадәттә түбәндәгечә языла — <strong>http://www.example.com/</strong></li>\n<li>Адресларда сулга түгел, ә бәлки уңга авыш бүлү билгесен кулланасы (ягъни бу билге: <strong>/</strong>).</li>\n</ul>]]></string>
   <!-- The document title and heading of an error page. -->
   <string name="mozac_browser_errorpages_unknown_protocol_title">Билгесез протокол</string>
   <!-- The document title and heading of an error page. -->

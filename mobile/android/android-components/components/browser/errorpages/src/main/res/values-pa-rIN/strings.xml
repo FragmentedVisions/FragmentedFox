@@ -34,11 +34,9 @@
   <!-- The error message shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_message"><![CDATA[<ul>\n<li>ਤੁਸੀਂ ਜਿਸ ਸਫ਼ੇ ਨੂੰ ਖੋਲ੍ਹਣ ਦੀ ਕੋਸ਼ਿਸ਼ ਕਰ ਰਹੇ ਹੋ, ਉਸ ਇਸ ਵੈੱਬਸਾਈਟ ਵਲੋਂ ਸੁਰੱਖਿਅਤ ਕਨੈਕਸ਼ਨ ਜ਼ਰੂਰੀ ਹੋਣ ਕਰਕੇ ਦਿਖਾਇਆ ਨਹੀਂ ਜਾ ਸਕਦਾ ਹੈ।</li>\n<li>ਮਸਲਾ ਅਕਸਰ ਵੈੱਬਸਾਈਟ ਨਾਲ ਹੈ ਅਤੇ ਇਸ ਨੂੰ ਠੀਕ ਕਰਨ ਲਈ ਤੁਸੀਂ ਕੁਝ ਵੀ ਨਹੀਂ ਕਰ ਸਕਦੇ ਹੋ।</li>\n<li>ਤੁਸੀਂ ਸਮੱਸਿਆ ਬਾਰੇ ਵੈੱਬਸਾਈਟ ਦੇ ਪਰਸ਼ਾਸਕ ਨੂੰ ਜਾਣਕਾਰੀ ਦੇ ਸਕਦੇ ਹੋ।</li>\n</ul>]]></string>
   <!-- The text shown inside the advanced button used to expand the advanced options. It's only shown when a website uses HSTS. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_advanced">…ਤਕਨੀਕੀ</string>
   <!-- The advanced certificate information shown when a website uses HSTS. The %1$s will be replaced by the website URL and %2$s will be replaced by the app name. It's only shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_techInfo2"><![CDATA[<label> <b>%1$s</b> ਦੀ ਸੁਰੱਖਿਆ ਪਾਲਸੀ ਹੈ, ਜਿਸ ਨੂੰ HTTP ਸਟਰਿਕ ਟਰਾਂਸਪੋਰਟ ਸਕਿਉਰਟੀ (HSTS) ਕਹਿੰਦੇ ਹਨ, ਜਿਸ ਦਾ ਅਰਥ ਹੈ ਕਿ <b>%2$s</b> ਨੂੰ ਸਿਰਫ਼ ਸੁਰੱਖਿਅਤ ਢੰਗ ਨਾਲ ਹੀ ਕਨੈਕਟ ਕੀਤਾ ਜਾ ਸਕਦਾ ਹੈ। ਤੁਸੀਂ ਇਸ ਸਾਈਟ ਨੂੰ ਛੋਟ ਨਹੀਂ ਦਿੱਤੀ ਜਾ ਸਕਦੀ ਹੈ।</label>]]></string>
   <!-- The text shown inside the advanced options button used to go back. It's only shown if the user has expanded the advanced options. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_back">ਪਿੱਛੇ ਜਾਓ</string>
   <!-- The document title and heading of the error page shown when the user's network connection is interrupted while connecting to a website. -->
   <string name="mozac_browser_errorpages_net_interrupt_title">ਕਨੈਕਸ਼ਨ ‘ਚ ਰੁਕਾਵਟ ਆਈ ਸੀ</string>
   <!-- The error message shown when the user's network connection is interrupted while connecting to a website. -->
@@ -101,9 +99,7 @@
   <string name="mozac_browser_errorpages_malformed_uri_title">ਅਢੁੱਕਵਾਂ ਸਿਰਨਾਵਾਂ</string>
   <string name="mozac_browser_errorpages_malformed_uri_message"><![CDATA[<p>ਦਿੱਤਾ ਗਿਆ ਸਿਰਨਾਵਾਂ ਪਰਵਾਨਤ ਬਣਤਰ ਨਾਲ ਮੇਲ ਨਹੀਂ ਖਾਂਦਾ। ਗਲਤੀਆਂ ਲਈ ਟਿਕਾਣਾ ਪੱਟੀ ਦੀ ਜਾਂਚ ਕਰੋ ਤੇ ਫੇਰ ਕੋਸ਼ਿਸ਼ ਕਰੋ ਜੀ।</p>]]></string>
   <!-- The document title and heading of an error page. -->
-  <string name="mozac_browser_errorpages_malformed_uri_title_alternative">ਸਿਰਨਾਵਾਂ ਵਾਜਬ ਨਹੀਂ ਹੈ</string>
   <!-- This string contains markup. The URL should not be localized. -->
-  <string name="mozac_browser_errorpages_malformed_uri_message_alternative"><![CDATA[<ul>\n<li>ਵੈੱਬ ਸਿਰਨਾਵੇਂ ਨੂੰ ਆਮ ਤੌਰ <strong>http://www.example.com/</strong> ਵਜੋਂ ਲਿਖਿਆ ਜਾਂਦਾ ਹੈ</li>\n<li>ਧਿਆਨ ਦਿਓ ਕਿ ਤੁਸੀਂ ਫਾਰਵਰਡ ਸਲੈਸ਼ (ਜਿਵੇਂ <strong>/</strong>) ਹੀ ਵਰਤ ਰਹੇ ਹੋ।</li>\n</ul>]]></string>
   <!-- The document title and heading of an error page. -->
   <string name="mozac_browser_errorpages_unknown_protocol_title">ਅਣਪਛਾਤਾ ਪਰੋਟੋਕਾਲ</string>
   <string name="mozac_browser_errorpages_unknown_protocol_message"><![CDATA[<p>ਸਿਰਨਾਵਾਂ ਪਰੋਟੋਕਾਲ (ਜਿਵੇਂ ਕਿ <q>wxyz://</q>) ਦਿੰਦਾ ਹੈ, ਜਿਸ ਦੀ ਪਛਾਣ ਬਰਾਊਜ਼ਰ ਨਹੀਂ ਕਰ ਸਕਦਾ ਹੈ, ਇਸਕਰਕੇ ਬਰਾਊਜ਼ਰ ਸਾਈਟ ਨਾਲ ਠੀਕ ਤਰ੍ਹਾਂ ਕਨੈਕਟ ਨਹੀਂ ਹੋ ਸਕਦਾ ਹੈ।</p>\n<ul>\n<li>ਕੀ ਤੁਸੀਂ ਮਲਟੀਮੀਡਿਆ ਜਾਂ ਹੋਰ ਗ਼ੈਰ-ਲਿਖਤ ਸੇਵਾ ਨੂੰ ਵਰਤਣ ਦੀ ਕੋਸ਼ਿਸ਼ ਕਰ ਰਹੇ ਹੋ? ਸਾਈਟਾਂ ਦੀ ਵਾਧੂ ਲੋੜਾਂ ਨੂੰ ਚੈੱਕ ਕਰੋ</li>\n<li>ਕੁਝ ਪਰੋਟੋਕਾਲ ਲਈ ਸੁਤੰਤਰ ਧਿਰ ਸਾਫਟਵੇਅਰ ਜਾਂ ਪਲੱਗਇਨ ਚਾਹੀਦੇ ਹੋ ਸਕਦੇ ਹਨ ਤਾਂ ਕਿ ਬਰਾਊਜ਼ਰ ਉਹਨਾਂ ਦੀ ਪਛਾਣ ਕਰ ਸਕੇ।</li>\n</ul>]]></string>

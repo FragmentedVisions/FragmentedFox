@@ -34,11 +34,9 @@
   <!-- The error message shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_message"><![CDATA[<ul>\n<li>Bok, kótaryž se cośo woglědaś, njedajo se pokazaś, dokulaž toś to websedło se wěsty zwisk pomina.</li>\n<li>Problem se nejskerjej pśez websedło zawinujo a togodla njedajo nic, což móžośo cyniś, aby jen rozwězał.</li>\n<li>Móžośo administratoroju websedła problem k wěsći daś.</li>\n</ul>]]></string>
   <!-- The text shown inside the advanced button used to expand the advanced options. It's only shown when a website uses HSTS. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_advanced">Rozšyrjony…</string>
   <!-- The advanced certificate information shown when a website uses HSTS. The %1$s will be replaced by the website URL and %2$s will be replaced by the app name. It's only shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_techInfo2"><![CDATA[<label> <b>%1$s</b> ma wěstotne pšawidło z mjenim HTTP Strict Transport Security (HSTS), kótarež wóznamjenijo, až <b>%2$s</b> móžo se jano wěsće zwězaś. Njamóžśo wuwześe pśidaś, aby se k toś tomu sedłoju woglědał. </label>]]></string>
   <!-- The text shown inside the advanced options button used to go back. It's only shown if the user has expanded the advanced options. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_back">Slědk</string>
   <!-- The document title and heading of the error page shown when the user's network connection is interrupted while connecting to a website. -->
   <string name="mozac_browser_errorpages_net_interrupt_title">Zwisk jo se pśetergnuł</string>
   <!-- The error message shown when the user's network connection is interrupted while connecting to a website. -->
@@ -101,9 +99,7 @@
   <string name="mozac_browser_errorpages_malformed_uri_title">Njepłaśiwa adresa</string>
   <string name="mozac_browser_errorpages_malformed_uri_message"><![CDATA[<p>Pódana adresa njejo w pśipóznatem formaśe. Pšosym pśeglědajśo adresowe pólo za zmólkami a wopytajśo hyšći raz.</p>]]></string>
   <!-- The document title and heading of an error page. -->
-  <string name="mozac_browser_errorpages_malformed_uri_title_alternative">Adresa njejo płaśiwa</string>
   <!-- This string contains markup. The URL should not be localized. -->
-  <string name="mozac_browser_errorpages_malformed_uri_message_alternative"><![CDATA[<ul>\n<li>Webadrese se zwětšego ako <strong>http://www.example.com/</strong> pišu.</li>\n<li>Zawěsććo, až wužywaśo doprědka schylone nakósne smužki (t. gr. <strong>/</strong>).</li>\n</ul>]]></string>
   <!-- The document title and heading of an error page. -->
   <string name="mozac_browser_errorpages_unknown_protocol_title">Njeznaty protokol</string>
   <string name="mozac_browser_errorpages_unknown_protocol_message"><![CDATA[<p>Adresa pódawa protokol (na pś. <q>wxyz://</q>), kótaryž wobglědowak njepśipóznawa, tak až wobglědowak njamóžo pšawje ze sedłom zwězaś.</p>\n<ul>\n<li>Wopytujośo na multimedia abo druge njetekstowe słužby pśistup maś? Pśespytajśo sedło za wósebnymi pótrjebnosćami.</li>\n<li>Někotare protokole trjebaju programy tśeśich abo tykace, nježli až wobglědowak móžo je pśipóznaś.</li>\n</ul>]]></string>

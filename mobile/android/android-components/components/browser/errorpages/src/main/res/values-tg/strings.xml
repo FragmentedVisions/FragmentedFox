@@ -34,11 +34,9 @@
   <!-- The error message shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_message"><![CDATA[<ul>\n<li>Саҳифае, ки шумо мехоҳед аз назар гузаронед, намоиш дода намешавад, зеро ки ин сомона пайвасти бехатареро талаб мекунад.</li>\n<li>Чунин менамояд, ки сомона дорои мушкилие мебошад, ки шумо онро мустақилона ҳал карда наметавонед.</li>\n<li>Шумо метавонед дар бораи ин мушкилӣ ба маъмури сомона хабар диҳед.</li>\n</ul>]]></string>
   <!-- The text shown inside the advanced button used to expand the advanced options. It's only shown when a website uses HSTS. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_advanced">Иловагӣ…</string>
   <!-- The advanced certificate information shown when a website uses HSTS. The %1$s will be replaced by the website URL and %2$s will be replaced by the app name. It's only shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_techInfo2"><![CDATA[<label> <b>%1$s</b> дорои сиёсати амниятӣ бо номи «Амнияти интиқоли қатъии HTTP» (HSTS) мебошад, ва ин маънои онро дорад, ки <b>%2$s</b> метавонад ба он танҳо тавассути алоқаи бехатар пайваст шавад. Шумо барои ворид шудан ба ин сомона истисноро илова карда наметавонед. </label>]]></string>
   <!-- The text shown inside the advanced options button used to go back. It's only shown if the user has expanded the advanced options. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_back">Бозгашт</string>
   <!-- The document title and heading of the error page shown when the user's network connection is interrupted while connecting to a website. -->
   <string name="mozac_browser_errorpages_net_interrupt_title">Пайвастшавӣ қатъ карда шуд</string>
   <!-- The error message shown when the user's network connection is interrupted while connecting to a website. -->
@@ -101,9 +99,7 @@
   <string name="mozac_browser_errorpages_malformed_uri_title">Нишонии нодуруст</string>
   <string name="mozac_browser_errorpages_malformed_uri_message"><![CDATA[<p>Нишонии пешниҳодшуда дар шакли эътирофшуда намебошад. Лутфан, навори нишониро барои хатоҳо санҷед ва аз нав кӯшиш намоед.</p>]]></string>
   <!-- The document title and heading of an error page. -->
-  <string name="mozac_browser_errorpages_malformed_uri_title_alternative">Нишонӣ дуруст нест</string>
   <!-- This string contains markup. The URL should not be localized. -->
-  <string name="mozac_browser_errorpages_malformed_uri_message_alternative"><![CDATA[<ul>\n<li>Нишониҳои сомона одатан дар ин шакл навишта мешаванд: <strong>http://www.example.com/</strong></li>\n<li>Мутмаин шавед, ки шумо хатҳои каҷро истифода мебаред (масалан, <strong>/</strong>).</li>\n</ul>]]></string>
   <!-- The document title and heading of an error page. -->
   <string name="mozac_browser_errorpages_unknown_protocol_title">Протоколи номаълум</string>
   <string name="mozac_browser_errorpages_unknown_protocol_message"><![CDATA[<p>Нишонӣ протоколеро нишон медиҳад, ки браузер эътироф намекунад (масалан, <q> wxyz: // </q>). Аз ин рӯ браузер ба сомона дуруст пайваст шуда наметавонад. </p>\n<ul>\n<li> Оё шумо кӯшиши дастрас кардани мултимедия ё дигар хидматҳои ғайриматни доред? Талаботи иловагиро аз сомона санҷед. </li>\n<li> Баъзеи протоколҳо метавонанд нармафзор ё плагинҳои тарафи сеюмро пеш аз шинохтани браузер талаб кунанд. </li>\n</ul>]]></string>

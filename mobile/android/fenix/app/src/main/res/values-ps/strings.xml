@@ -169,7 +169,6 @@
   -->
   <string name="onboarding_home_content_description_close_button">بندول</string>
   <!-- Used as text for the link in onboarding_redesign_tou_body_one. -->
-  <string name="onboarding_redesign_tou_body_one_link_text" tools:ignore="BrandUsage,UnusedResources">د فایرفوکس د کارولو شرایط</string>
   <!-- Marketing onboarding page button label. Button to confirm choice and start browsing. -->
   <!-- ==== Project "Nova" onboarding strings ==== -->
 

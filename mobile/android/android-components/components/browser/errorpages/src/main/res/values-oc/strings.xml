@@ -34,11 +34,9 @@
   <!-- The error message shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_message"><![CDATA[<ul>\n<li>La pagina qu’ensajatz de visualizar se pòt pas afichar perque aqueste site requerís una connexion segura.</li>\n<li>Lo problèma ven probablament del site web e i a pas res que poscatz far per lo resòlver;</li>\n<li>Podètz senhalar lo problèma als administrators del site web.</li>\n</ul>]]></string>
   <!-- The text shown inside the advanced button used to expand the advanced options. It's only shown when a website uses HSTS. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_advanced">Avançat…</string>
   <!-- The advanced certificate information shown when a website uses HSTS. The %1$s will be replaced by the website URL and %2$s will be replaced by the app name. It's only shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_techInfo2"><![CDATA[<label> <b>%1$s</b> a una estrategia de seguretat HTTP Strict Transport Security (HSTS), valent a dire que <b>%2$s</b> pòt sonque s’i connectar amb una connexion securizada. Podètz pas apondre d’excepcion per consultar aqueste site. </label>]]></string>
   <!-- The text shown inside the advanced options button used to go back. It's only shown if the user has expanded the advanced options. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_back">Tornar</string>
   <!-- The document title and heading of the error page shown when the user's network connection is interrupted while connecting to a website. -->
   <string name="mozac_browser_errorpages_net_interrupt_title">La connexion es estada interrompuda</string>
   <!-- The error message shown when the user's network connection is interrupted while connecting to a website. -->
@@ -101,9 +99,7 @@
   <string name="mozac_browser_errorpages_malformed_uri_title">Adreça invalida</string>
   <string name="mozac_browser_errorpages_malformed_uri_message"><![CDATA[<p>L’adreça fornida es pas dins un format reconegut. Mercés de verificar qu’i aja pas cap d’error a la barra d’adreça e tornatz ensajar.</p>]]></string>
   <!-- The document title and heading of an error page. -->
-  <string name="mozac_browser_errorpages_malformed_uri_title_alternative">L’adreça es pas valida</string>
   <!-- This string contains markup. The URL should not be localized. -->
-  <string name="mozac_browser_errorpages_malformed_uri_message_alternative"><![CDATA[<ul>\n<li>Las adreças web normalament son aital <strong>http://www.exemple.com/</strong></li>\n<li>Asseguratz-vos qu’utilizetz las barras inclinadas(<strong>/</strong>).</li>\n</ul>]]></string>
   <!-- The document title and heading of an error page. -->
   <string name="mozac_browser_errorpages_unknown_protocol_title">Protocòl desconegut</string>
   <string name="mozac_browser_errorpages_unknown_protocol_message"><![CDATA[<p>L’adreça indica un protocòl (per ex. <q>wxyz://</q>) desconegut del navegador que doncas se pòt pas connectar corrèctament al site.</p>\n<ul>\n<li>Ensajatz d’accedir a de contengut multimèdia o d’autres servicis que son pas de tèxte\u00a0? Verificatz los prerequesits logicials del site.</li>\n<li>D’unes protocòls pòdon necessitar un logiciel tèrç o de plugins per que lo navegador los pòsca reconéisser.</li>\n</ul>]]></string>

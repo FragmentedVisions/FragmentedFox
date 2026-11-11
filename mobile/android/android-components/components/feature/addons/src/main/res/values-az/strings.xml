@@ -66,17 +66,14 @@
   <!-- The settings of the add-on. -->
   <string name="mozac_feature_addons_settings">Tənzimləmələr</string>
   <!-- Indicates the add-on is enabled. -->
-  <string name="mozac_feature_addons_settings_on">Açıqdır</string>
   <!-- Indicates the add-on is allowed in private browsing mode. -->
   <string name="mozac_feature_addons_settings_run_in_private_browsing">Məxfi səyahətdə başlat</string>
   <!-- Indicates the add-on is enabled. -->
   <string name="mozac_feature_addons_enabled">Aktivdir</string>
   <!-- This is displayed in a page where the user can see the installed and recommended(not installed yet) add-ons, this string indicates the installed section. -->
-  <string name="mozac_feature_addons_installed_section">Qurulu</string>
   <!-- This is displayed in a page where the user can see the installed and recommended(not installed yet) add-ons, this string indicates the recommended section. -->
   <string name="mozac_feature_addons_recommended_section">Məsləhətli</string>
   <!-- This is displayed in a page where the user can see the installed and recommended(not installed yet) add-ons, this string indicates the not yet supported section. -->
-  <string name="mozac_feature_addons_unsupported_section">Hələlik dəstəklənməyən</string>
   <!-- This is displayed in a page where the user can see the installed and recommended(not installed yet) add-ons, this string indicates the not yet available section. -->
   <string name="mozac_feature_addons_unavailable_section">Hələlik mövcud deyil</string>
   <!-- This is displayed in a page where the user can see the installed and recommended(not installed yet) add-ons, this string indicates the disabled section. -->
@@ -96,19 +93,13 @@
   <!-- This is the title of page where all the add-ons are listed -->
   <string name="mozac_feature_addons_addons">Əlavələr</string>
   <!-- Name of the "notification channel" used for displaying a notification for new supported add-ons. See https://developer.android.com/training/notify-user/channels -->
-  <string name="mozac_feature_addons_supported_checker_notification_channel" tools:ignore="UnusedResources">Dəstəklənən əlavələr yoxlayıcısı</string>
   <!-- The tile of the notification, this will be shown to the user when one newly supported add-on is available. -->
-  <string name="mozac_feature_addons_supported_checker_notification_title" tools:ignore="UnusedResources">Yeni əlavə mövcuddur</string>
   <!-- The tile of the notification, this will be shown to the user when more than one newly supported add-ons are available. -->
-  <string name="mozac_feature_addons_supported_checker_notification_title_plural" tools:ignore="UnusedResources">Yeni əlavələr mövcuddur</string>
   <!-- The content of the notification, this will be shown to the user when one newly supported add-on is available. %1$s is the add-on name and %2$s is the app name (in most cases Firefox). -->
   <string name="mozac_feature_addons_supported_checker_notification_content_one">%1$s əlavəsini %2$s səyyahına əlavə et</string>
   <!-- The content of the notification, this will be shown to the user when two newly supported add-ons are available. %1$s is the first add-on name. %2$s is the second add-on name. %3$s is the app name (in most cases Firefox). -->
-  <string name="mozac_feature_addons_supported_checker_notification_content_two">%1$s və %2$s əlavələrini %3$s səyyahına əlavə et</string>
   <!-- The content of the notification, this will be shown to the user when more than two newly supported add-ons are available. %1$s is the app name (in most cases Firefox). -->
-  <string name="mozac_feature_addons_supported_checker_notification_content_more_than_two">Onları %1$s səyyahına əlavə et</string>
   <!-- Text shown after successfully installed an add-on. %1$s is the add-on name. -->
-  <string name="mozac_feature_addons_successfully_installed">%1$s uğurla quraşdırıldı</string>
   <!-- Text shown after successfully removed an add-on. %1$s is the add-on name. -->
   <string name="mozac_feature_addons_successfully_removed" tools:ignore="UnusedResources">%1$s uğurla silindi</string>
   <!-- Text link to a sumo page for learning more about unsupported add-ons. -->

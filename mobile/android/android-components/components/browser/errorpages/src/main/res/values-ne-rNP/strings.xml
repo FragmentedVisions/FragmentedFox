@@ -32,9 +32,7 @@
   <!-- The document title and heading of the error page shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_title">यो वेबसाइटलाई सुरक्षित जडानको आवश्यकता छ ।</string>
   <!-- The text shown inside the advanced button used to expand the advanced options. It's only shown when a website uses HSTS. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_advanced">उन्नत…</string>
   <!-- The text shown inside the advanced options button used to go back. It's only shown if the user has expanded the advanced options. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_back">पछाडि जानुहोस्</string>
   <!-- The document title and heading of the error page shown when the user's network connection is interrupted while connecting to a website. -->
   <string name="mozac_browser_errorpages_net_interrupt_title">जडान अवरूद्ध भयो</string>
   <!-- The error message shown when the user's network connection is interrupted while connecting to a website. -->
@@ -91,9 +89,7 @@
   <string name="mozac_browser_errorpages_malformed_uri_title">अवैध ठेगाना</string>
   <string name="mozac_browser_errorpages_malformed_uri_message"><![CDATA[<p>प्रदान गरिएको ठेगाना मान्यता प्राप्त ढाँचामा छैन। कृपया, गल्तीहरूको लागि स्थान पट्टी जाँच गर्नुहोस् र पुन: प्रयास गर्नुहोस्।</p>]]></string>
   <!-- The document title and heading of an error page. -->
-  <string name="mozac_browser_errorpages_malformed_uri_title_alternative">यो ठेगाना मान्य छैन</string>
   <!-- This string contains markup. The URL should not be localized. -->
-  <string name="mozac_browser_errorpages_malformed_uri_message_alternative"><![CDATA[<ul>\n<li>वेब ठेगानाहरू सामान्यतया लेखिएका हुन्छन् <strong>http://www.example.com/</strong></li>\n<li>तपाईंले फर्वार्ड स्ल्यासहरू प्रयोग गरिरहनुभएको छ भन्ने कुरा सुनिश्चित गर्नुहोस् (जस्तै <strong>/</strong>)।</li>\n</ul>]]></string>
   <!-- The document title and heading of an error page. -->
   <string name="mozac_browser_errorpages_unknown_protocol_title">अज्ञात प्रोटोकल</string>
   <string name="mozac_browser_errorpages_unknown_protocol_message"><![CDATA[<p>ठेगानाले एउटा प्रोटोकल निर्दिष्ट गर्दछ (जस्तै, <q>wxyz://</q>) ब्राउजरले चिन्न सक्दैन, त्यसैले ब्राउजरले साइटमा राम्रोसँग जडान गर्न सक्दैन।</p>\n<ul>\n<li>के तपाइँले मल्टिमिडिया वा अन्य गैर-पाठ सेवाहरू पहुँच गर्न प्रयास गर्दै हुनुहुन्छ? अतिरिक्त आवश्यकताहरूको लागि साइट जाँच गर्नुहोस्।</li>\n<li>केही प्रोटोकलहरूलाई ब्राउजरले पहिचान गर्न सक्नु अघि तेस्रो-पक्ष सफ्टवेयर वा प्लगइनहरू आवश्यक हुन सक्छ।</li>\n</ul>]]></string>

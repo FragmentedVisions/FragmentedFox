@@ -34,11 +34,9 @@
   <!-- The error message shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_message"><![CDATA[<ul>\n<li>Ła pàjina che te si drio sercar de védar no ła połe mìa èsar mostrà parvìa che ’sto sito el dimanda na conesion segura.</li>\n<li>Ze probàbiłe che’l problema el rive da’l sito e che no te posi far gnente par resòlvarło.</li>\n<li>Te połi segnałarghe el problema a l’aministrador de’l sito.</li>\n</ul>]]></string>
   <!-- The text shown inside the advanced button used to expand the advanced options. It's only shown when a website uses HSTS. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_advanced">Vansà…</string>
   <!-- The advanced certificate information shown when a website uses HSTS. The %1$s will be replaced by the website URL and %2$s will be replaced by the app name. It's only shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_techInfo2"><![CDATA[<label> <b>%1$s</b> el gà na połìtega de seguresa ciamada HTTP Strict Transport Security (HSTS), che vołe dir che <b>%2$s</b> el połe conétarse soło en magnera segura. No te połi zontar nissuna ecesion par vardar ’sto sito. </label>]]></string>
   <!-- The text shown inside the advanced options button used to go back. It's only shown if the user has expanded the advanced options. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_back">Indrìo</string>
   <!-- The document title and heading of the error page shown when the user's network connection is interrupted while connecting to a website. -->
   <string name="mozac_browser_errorpages_net_interrupt_title">Ƚa conesion ƚa xe stà interota</string>
   <!-- The error message shown when the user's network connection is interrupted while connecting to a website. -->
@@ -95,9 +93,7 @@
   <string name="mozac_browser_errorpages_malformed_uri_title">Indiriso mìa vaƚido</string>
   <string name="mozac_browser_errorpages_malformed_uri_message"><![CDATA[<p> El indiriso forniìo non el xe en un formato riconosuo. Controƚare ƚa bara de i indirisi par individuare eventuaƚi erori e riprovare. </p>]]></string>
   <!-- The document title and heading of an error page. -->
-  <string name="mozac_browser_errorpages_malformed_uri_title_alternative">El indiriso no el xe vaƚido</string>
   <!-- This string contains markup. The URL should not be localized. -->
-  <string name="mozac_browser_errorpages_malformed_uri_message_alternative"><![CDATA[<ul>\n<li>I indirisi internet de soƚito i se scìve ne ƚa forma <strong>http://www.example.com/</strong></li>\n<li>Verifegare se xe drio utilixare ƚe bare corete (a exempio <strong>/</strong>).</li>\n</ul>]]></string>
   <!-- The document title and heading of an error page. -->
   <string name="mozac_browser_errorpages_unknown_protocol_title">Protocoƚo no conosùo</string>
   <string name="mozac_browser_errorpages_unknown_protocol_message"><![CDATA[<p>El indiriso dimanda on protocoƚo (a ex. <q>wxyz://</q>) che el browser no riconose, indi non poƚe coƚegarse coretamente a el sito.</p>\n<ul>\n<li>Se stà asedendo a servisi multimediali o no testuaƚi? Verificare so el sito i recuisiti necesari.</li>\n<li>Alcuni protocoli i dimanda software esterni o plugin en modo che el browser li possa riconosere.</li>\n</ul>]]></string>

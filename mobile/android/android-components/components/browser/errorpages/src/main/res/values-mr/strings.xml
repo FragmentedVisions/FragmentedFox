@@ -85,9 +85,7 @@
   <string name="mozac_browser_errorpages_malformed_uri_title">अवैध पत्ता</string>
   <string name="mozac_browser_errorpages_malformed_uri_message"><![CDATA[<p>पुरवलेला पत्ता ओळखण्याजोग्या स्वरूपात नाही. कृपया चुकांसाठी पत्ता पट्टी तपासा आणि पुन्हा प्रयत्न करा.</p>]]></string>
   <!-- The document title and heading of an error page. -->
-  <string name="mozac_browser_errorpages_malformed_uri_title_alternative">पत्ता वैध नाही</string>
   <!-- This string contains markup. The URL should not be localized. -->
-  <string name="mozac_browser_errorpages_malformed_uri_message_alternative"><![CDATA[<ul>\n<li>वेब पत्ते सहसा असे लिहितात <strong>http://www.example.com/</strong></li>\n<li>आपण पुढील छेद वापरताय याची खात्री करा (उदा. <strong>य</strong>).</li>\n</ul>]]></string>
   <!-- The document title and heading of an error page. -->
   <string name="mozac_browser_errorpages_unknown_protocol_title">अज्ञात प्रोटोकॉल</string>
   <string name="mozac_browser_errorpages_unknown_protocol_message"><![CDATA[<p>पत्त्यामध्ये ब्राउझर ओळखत नाही असा प्रोटोकॉल (<q>wxyz://</q>) नमूद केला आहे, म्हणून ब्राउझर साईटबरोबर जोडणी करू शकत नाही.</p>\n<ul>\n<li>आपण मल्टिमीडिया किंवा अन्य लिखित मजकुरेतर सेवा वापरू इच्छिता का?अतिरिक्त आवश्यकतांकरिता साईट तपासा.</li>\n<li>काही प्रोटोकॉल ब्राउझर ने ओळखण्यासाठी तृतीयपक्षीय सॉफ्टवेअर किंवा प्लग-इन आवश्यक असू शकते.</li>\n</ul>]]></string>

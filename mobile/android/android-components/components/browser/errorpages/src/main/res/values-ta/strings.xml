@@ -34,9 +34,7 @@
   <!-- The error message shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_message"><![CDATA[<ul>\n<li>இந்த வலைத்தளத்திற்கு பாதுகாப்பான பிணைப்பு தேவைப்படுவதால் நீங்கள் பார்க்க முயற்சிக்கும் பக்கத்தைக் காட்ட முடியாது.</li>\n<li>சிக்கல் பெரும்பாலும் வலைத்தளத்தில்தான் இருக்கும், அதைத் தீர்க்க நீங்கள் எதுவும் செய்ய முடியாது.</li>\n<li>நீங்கள் வலைத்தளத்தின் நிர்வாகியிடம் சிக்கலைப் பற்றித் தெரிவிக்கலாம்.</li>\n</ul>]]></string>
   <!-- The text shown inside the advanced button used to expand the advanced options. It's only shown when a website uses HSTS. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_advanced">மேம்பட்டது…</string>
   <!-- The text shown inside the advanced options button used to go back. It's only shown if the user has expanded the advanced options. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_back">பின் செல்க</string>
   <!-- The document title and heading of the error page shown when the user's network connection is interrupted while connecting to a website. -->
   <string name="mozac_browser_errorpages_net_interrupt_title">இணைப்பில் தடங்கல் உள்ளது</string>
   <!-- The error message shown when the user's network connection is interrupted while connecting to a website. -->
@@ -97,9 +95,7 @@
   <string name="mozac_browser_errorpages_malformed_uri_title">செல்லாத முகவரி</string>
   <string name="mozac_browser_errorpages_malformed_uri_message"><![CDATA[<p>வழங்கிய முகவரி அடையாளங்காணத்தக்க வடிவில் இல்லை. இருப்பிடப்பட்டியைப் பார்த்து ஏதேனும் பிழைகள் உள்ளதா எனச் சரிபார்த்துவிட்டு மீண்டும் முயற்சிக்கவும்.</p>]]></string>
   <!-- The document title and heading of an error page. -->
-  <string name="mozac_browser_errorpages_malformed_uri_title_alternative">இந்த முகவரி தவறானது</string>
   <!-- This string contains markup. The URL should not be localized. -->
-  <string name="mozac_browser_errorpages_malformed_uri_message_alternative"><![CDATA[<ul>\n<li>இணைய முகவரி <strong>http://www.example.com/</strong> போன்று இருக்கும்</li>\n<li>நீங்கள் / குறியைப் பயன்படுத்தினீர்களா எனப் பார்க்கவும் (i.e. <strong>/</strong>).</li>\n</ul>]]></string>
   <!-- The document title and heading of an error page. -->
   <string name="mozac_browser_errorpages_unknown_protocol_title">நெறிமுறை தெரியவில்லை</string>
   <string name="mozac_browser_errorpages_unknown_protocol_message"><![CDATA[<p>முகவரி உலாவியால் புரிந்துகொள்ள முடியாத நெறிமுறையைக் (எ.கா, <q>wxyz://</q>) குறிப்பிடுகிறது, எனவே உலாவியால் தளத்துடன் சரியாக இணைக்க முடியவில்லை.</p>\n<ul>\n<li>நீங்கள் பல்லூடகம் அல்லது பிற உரையல்லாச் சேவைகளை அணுக முயற்சிக்கிறீர்களா? கூடுதல் தேவைகளுள்ளதா எனத் தளத்தைப் பாருங்கள்.</li>\n<li>உலாவியால் அடையாளம் காணப்படுவதற்குச் சில நெறிமுறைகளுக்கு மூன்றாம் தரப்பு மென்பொருள் அல்லது செருகுநிரல்கள் தேவைப்படலாம்.</li>\n</ul>]]></string>

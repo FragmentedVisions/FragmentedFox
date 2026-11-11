@@ -8,7 +8,6 @@
 
 <resources>
   <!-- The tile for the list of external apps to open the link in -->
-  <string name="mozac_feature_applinks_open_in">打开于…</string>
   <!-- The title of the prompt that warns users their normal browsing session is trying to open another app -->
   <string name="mozac_feature_applinks_normal_confirm_dialog_title">其他应用打开</string>
   <!-- The title of the prompt that warns users their normal browsing session is trying to open another app -->

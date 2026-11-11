@@ -34,11 +34,9 @@
   <!-- The error message shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_message"><![CDATA[<ul>\n<li>Nun se pue amosar la páxina que tentes de ver porque esti sitiu web rique una conexón segura.</li>\n<li>Ye mui probable que\'l problema seya del sitiu web y nun puedas facer nada pa igualu.</li>\n<li>Pues avisar a l\'alministración del sitiu web pa informar del problema.</li>\n</ul>]]></string>
   <!-- The text shown inside the advanced button used to expand the advanced options. It's only shown when a website uses HSTS. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_advanced">Opciones avanzaes…</string>
   <!-- The advanced certificate information shown when a website uses HSTS. The %1$s will be replaced by the website URL and %2$s will be replaced by the app name. It's only shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_techInfo2"><![CDATA[<label> <b>%1$s</b> tien una política de seguranza llamada HSTS (HTTP Strict Transport Security), lo que significa que <b>%2$s</b> namás se pue conectar con seguranza al sitiu. Nun pues amestar nenguna esceición pa visitar esti sitiu. </label>]]></string>
   <!-- The text shown inside the advanced options button used to go back. It's only shown if the user has expanded the advanced options. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_back">Dir p\'atrás</string>
   <!-- The document title and heading of the error page shown when the user's network connection is interrupted while connecting to a website. -->
   <string name="mozac_browser_errorpages_net_interrupt_title">Interrumpióse la conexón</string>
   <!-- The error message shown when the user's network connection is interrupted while connecting to a website. -->
@@ -101,9 +99,7 @@
   <string name="mozac_browser_errorpages_malformed_uri_title">La direición ye inválida</string>
   <string name="mozac_browser_errorpages_malformed_uri_message"><![CDATA[<p>La direición apurrida ta nun formatu que nun se reconoz. Comprueba si hai errores na barra de direiciones y volvi a tentalo.</p>]]></string>
   <!-- The document title and heading of an error page. -->
-  <string name="mozac_browser_errorpages_malformed_uri_title_alternative">La direición ye inválida</string>
   <!-- This string contains markup. The URL should not be localized. -->
-  <string name="mozac_browser_errorpages_malformed_uri_message_alternative"><![CDATA[<ul>\n<li>Les direiciones web suelen escribise asina <strong>https://www.softastur.org/</strong></li>\n<li>Asegúrate de que tas usando barres inclinaes a la derecha (ye dicir, <strong>/</strong>).</li>\n</ul>]]></string>
   <!-- The document title and heading of an error page. -->
   <string name="mozac_browser_errorpages_unknown_protocol_title">Desconozse\'l protocolu</string>
   <string name="mozac_browser_errorpages_unknown_protocol_message"><![CDATA[<p>La direición especifica un protocolu (por exemplu, <q>wxyz://</q>) que\'l restolador nun reconoz, polo que nun se pue conectar afayadizamente al sitiu.</p>\n<ul>\n<li>¿Tas tentando d\'acceder a servicios multimedia o que nun son de testu? Comprueba\'l sitiu pa ver más requirimientos.</li>\n<li>Dalgunos protocolos riquen software o plugins de terceros pa que\'l restolador pueda reconocelos.</li>\n</ul>]]></string>

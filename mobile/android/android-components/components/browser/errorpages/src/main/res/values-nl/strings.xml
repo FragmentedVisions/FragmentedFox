@@ -34,11 +34,9 @@
   <!-- The error message shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_message"><![CDATA[<ul>\n<li>De pagina die probeert te bekijken kan niet worden getoond, omdat deze website een beveiligde verbinding vereist.</li>\n<li>Het issue ligt waarschijnlijk bij de website en er is niets dat u kunt doen om het op te lossen.</li>\n<li>U kunt de beheerder van de website op de hoogte stellen van het probleem.</li>\n</ul>]]></string>
   <!-- The text shown inside the advanced button used to expand the advanced options. It's only shown when a website uses HSTS. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_advanced">Geavanceerd…</string>
   <!-- The advanced certificate information shown when a website uses HSTS. The %1$s will be replaced by the website URL and %2$s will be replaced by the app name. It's only shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_techInfo2"><![CDATA[<label> <b>%1$s</b> heeft een beveiligingsbeleid genaamd HTTP Strict Transport Security (HSTS), wat betekent dat <b>%2$s</b> er alleen beveiligd mee kan verbinden. U kunt geen uitzondering toevoegen om deze website te bezoeken. </label>]]></string>
   <!-- The text shown inside the advanced options button used to go back. It's only shown if the user has expanded the advanced options. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_back">Terug</string>
   <!-- The document title and heading of the error page shown when the user's network connection is interrupted while connecting to a website. -->
   <string name="mozac_browser_errorpages_net_interrupt_title">De verbinding werd onderbroken</string>
   <!-- The error message shown when the user's network connection is interrupted while connecting to a website. -->
@@ -101,9 +99,7 @@
   <string name="mozac_browser_errorpages_malformed_uri_title">Ongeldig adres</string>
   <string name="mozac_browser_errorpages_malformed_uri_message"><![CDATA[<p>Het opgegeven adres heeft geen herkenbare indeling. Controleer de locatiebalk op fouten en probeer het opnieuw.</p>]]></string>
   <!-- The document title and heading of an error page. -->
-  <string name="mozac_browser_errorpages_malformed_uri_title_alternative">Het adres is niet geldig</string>
   <!-- This string contains markup. The URL should not be localized. -->
-  <string name="mozac_browser_errorpages_malformed_uri_message_alternative"><![CDATA[<ul>\n<li>Webadressen worden doorgaans geschreven als <strong>http://www.example.com/</strong></li>\n<li>Let erop dat u voorwaartse slashes gebruikt (d.i. <strong>/</strong>).</li>\n</ul>]]></string>
   <!-- The document title and heading of an error page. -->
   <string name="mozac_browser_errorpages_unknown_protocol_title">Onbekend protocol</string>
   <string name="mozac_browser_errorpages_unknown_protocol_message"><![CDATA[<p>Het adres specificeert een protocol (bv. <q>wxyz://</q>) dat de browser niet herkent, waardoor de browser niet op een juiste manier met de website kan verbinden.</p>\n<ul>\n<li>Probeert u toegang te krijgen tot multimedia- of andere niet-tekstservices? Controleer de website op extra benodigdheden.</li>\n<li>Sommige protocollen kunnen software of plug-ins van derden vereisen voordat de browser ze kan herkennen.</li>\n</ul>]]></string>

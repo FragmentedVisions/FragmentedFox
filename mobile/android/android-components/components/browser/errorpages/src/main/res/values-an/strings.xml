@@ -85,9 +85,7 @@
   <string name="mozac_browser_errorpages_malformed_uri_title">L’adreza no ye valida</string>
   <string name="mozac_browser_errorpages_malformed_uri_message"><![CDATA[<p>L’adreza proporcionada no ye en un formato reconoixiu. Compreba si i hai errors en a barra d’adrezas y torna a intentar-lo.</p>]]></string>
   <!-- The document title and heading of an error page. -->
-  <string name="mozac_browser_errorpages_malformed_uri_title_alternative">L’adreza no ye valida</string>
   <!-- This string contains markup. The URL should not be localized. -->
-  <string name="mozac_browser_errorpages_malformed_uri_message_alternative"><![CDATA[<ul>\n<li>Las adrezas web gosan escribir-se asinas: <strong>http://www.ejemplo.com/</strong></li>\n<li>Asegura-te d’estar usando barras inclinadas enta adebant (p. eix., <strong>/</strong>).</li>\n</ul>]]></string>
   <!-- The document title and heading of an error page. -->
   <string name="mozac_browser_errorpages_unknown_protocol_title">Protocolo desconoixiu</string>
   <string name="mozac_browser_errorpages_unknown_protocol_message"><![CDATA[<p>L’adreza especifica un protocolo (p. eix., <q>wxyz://</q>) que lo navegador no reconoixe, asinas que lo navegador no puede connectar-se correctament con o puesto.</p>\n<ul>\n<li>Yes mirando d’acceder a conteniu multimedia u atros servicios que no son de texto? Compreba los requisitos adicionals d’o puesto.</li>\n<li>Qualques protocolos pueden amenester software u plugins de tercers antes que lo navegador pueda reconoixer-los.</li>\n</ul>]]></string>

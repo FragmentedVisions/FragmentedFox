@@ -30,7 +30,6 @@
   <!-- The text shown inside the advanced options button used to bypass the invalid SSL certificate. It's only shown if the user has expanded the advanced options. -->
   <string name="mozac_browser_errorpages_security_bad_cert_accept_temporary">Dawata ang Risgo ug Padayon</string>
   <!-- The text shown inside the advanced button used to expand the advanced options. It's only shown when a website uses HSTS. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_advanced">Advanced…</string>
   <!-- The document title and heading of the error page shown when the user's network connection is interrupted while connecting to a website. -->
   <string name="mozac_browser_errorpages_net_interrupt_title">Ang koneksyon naputol</string>
   <!-- The error message shown when the user's network connection is interrupted while connecting to a website. -->
@@ -87,9 +86,7 @@
   <string name="mozac_browser_errorpages_malformed_uri_title">Sayop ang Address</string>
   <string name="mozac_browser_errorpages_malformed_uri_message"><![CDATA[·\n<p>Ang gihatag nga address sayop ang format. Palihog ug tan-aw sa location bar kung naa\'y sayop ug sulay balik.</p> ·]]></string>
   <!-- The document title and heading of an error page. -->
-  <string name="mozac_browser_errorpages_malformed_uri_title_alternative">Sayop ang address</string>
   <!-- This string contains markup. The URL should not be localized. -->
-  <string name="mozac_browser_errorpages_malformed_uri_message_alternative"><![CDATA[·\n<ul> ·\n<li>Ang kasagaran sa mga Web address gisulat sama sa <strong>http://www.example.com/</strong></li> ·\n<li>Siguruha nga nigamit ka ug mga forward slash (i.e. <strong>/</strong>).</li> ·\n</ul> ·]]></string>
   <!-- The document title and heading of an error page. -->
   <string name="mozac_browser_errorpages_unknown_protocol_title">Di inila nga Protocol</string>
   <string name="mozac_browser_errorpages_unknown_protocol_message"><![CDATA[<p>Ang address nagbungat ug protocol (eg <q>wxyz://</q>) nga wa ilha sa browser, mao nga ang browser dili maka-konek ug tarong sa site.</p>\n<ul>\n<li>Nagsulay ba ka ug access ug multimedia o laing non-text nga mga service? i-Check ang site alang sa dugang requirement.</li>\n<li>Ubang mga protocol nag-require ug third-party software o mga plugin aron makaila ang browser kanila.</li>\n</ul>]]></string>

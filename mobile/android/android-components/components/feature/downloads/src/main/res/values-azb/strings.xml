@@ -22,7 +22,6 @@
   <!-- Error shown when the user is trying to download a invalid file. %1$s will be replaced with the name of the app. -->
   <string name="mozac_feature_downloads_file_not_supported2">%1$s بو فایل نوعونو یئندیره بیلمیر</string>
   <!-- Message that appears when the downloaded file could not be opened. -->
-  <string name="mozac_feature_downloads_could_not_open_file">فایل آچیلانمادی.</string>
   <!-- Message that appears when the downloaded file is a specific type (%1$s) that Android doesn't support opening. -->
   <string name="mozac_feature_downloads_open_not_supported1">%1$s فایلی آچماق اوچون هئچ بیر اپ تاپیلمادی.</string>
   <!-- Button that pauses the download when pressed. -->
@@ -32,7 +31,6 @@
   <!-- Button that cancels the download when pressed. -->
   <string name="mozac_feature_downloads_button_cancel">لغو</string>
   <!-- Button that opens the downloaded file when pressed. -->
-  <string name="mozac_feature_downloads_button_open">آچ</string>
   <!-- Button that restarts the download after a failed attempt. -->
   <string name="mozac_feature_downloads_button_try_again">یئنی‌دن چالیش</string>
   <!-- Content description for close button -->

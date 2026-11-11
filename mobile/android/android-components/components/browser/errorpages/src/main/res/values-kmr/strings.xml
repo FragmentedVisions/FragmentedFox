@@ -34,11 +34,9 @@
   <!-- The error message shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_message"><![CDATA[<ul>\n<li>Malpera tu hewlê didî ku vekî nayê nîşandan, lewre pêdiviya wê bi peywendiyeke ewle heye..</li>\n<li>Ev bi piranî têkildarî malperê ye û ji bo çareserkirinê tiştek ji destê te nayê.</li>\n<li>Tu dikarî rêveberiya malperê derbarê problemê de agahdar bikî.</li>\n</ul>]]></string>
   <!-- The text shown inside the advanced button used to expand the advanced options. It's only shown when a website uses HSTS. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_advanced">Pêşketî…</string>
   <!-- The advanced certificate information shown when a website uses HSTS. The %1$s will be replaced by the website URL and %2$s will be replaced by the app name. It's only shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_techInfo2"><![CDATA[<label> <b>%1$s</b> rêgezeke ewlekariyê ya bi navê Ewlekariya Jidandî ya Guheztinê ya HTTPê (HSTS) heye û loma <b>%2$s</b> dikare tenê di rewşeke ewle de bi malperê re têkiliyê dayne. Tu nikarî zêdekariyan bidiyê û têkeviyê.</label>]]></string>
   <!-- The text shown inside the advanced options button used to go back. It's only shown if the user has expanded the advanced options. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_back">Vegere</string>
   <!-- The document title and heading of the error page shown when the user's network connection is interrupted while connecting to a website. -->
   <string name="mozac_browser_errorpages_net_interrupt_title">Girêdan qut bû</string>
   <!-- The error message shown when the user's network connection is interrupted while connecting to a website. -->
@@ -101,9 +99,7 @@
   <string name="mozac_browser_errorpages_malformed_uri_title">Navnîşana nederbasdar</string>
   <string name="mozac_browser_errorpages_malformed_uri_message"><![CDATA[<p>Navnîşana hatî nivîsandin ne di formata naskirî de ye. Tika ye darikê cîgehê ji bo şaşiyan kontrol bike û dîsa biceribîne.</p>]]></string>
   <!-- The document title and heading of an error page. -->
-  <string name="mozac_browser_errorpages_malformed_uri_title_alternative">Navnîşan ne derbasdar e</string>
   <!-- This string contains markup. The URL should not be localized. -->
-  <string name="mozac_browser_errorpages_malformed_uri_message_alternative"><![CDATA[<ul>\n<li>Malperên înternetê bi piranî wisa tên nivîsandin: <strong>http://www.example.com/</strong></li>\n<li>Bala xwe bidê ka te xêza paldayî nivîsandiye: <strong>/</strong>).</li>\n</ul>]]></string>
   <!-- The document title and heading of an error page. -->
   <string name="mozac_browser_errorpages_unknown_protocol_title">Protokola Nenas</string>
   <string name="mozac_browser_errorpages_unknown_protocol_message"><![CDATA[<p>Navnîşan protokolekê destnîşan dike (mînak, <q>wxyz://</q>) ku gerok wê nas nake, loma gerok nikare bi asayî bi malperê ve bê girîdan.</p>\n<ul>\n<li>Tu dixwazî xwe bigihînî multîmedyayekê yan jî xizmeteke din ya ne nivîskî? Malperê ji bo pêdiviyên zêdek kontrol bike.</li>\n<li>Dibe ku ji bo hin protokolan beriya gerok wan nas bike, nermalav yan jî pêvekên partiya sêyemîn bivên.</li>\n</ul>]]></string>

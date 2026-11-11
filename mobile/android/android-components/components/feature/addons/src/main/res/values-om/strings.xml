@@ -82,5 +82,4 @@
   <!-- The settings of the add-on. -->
   <string name="mozac_feature_addons_settings">Qindaa\'inoota</string>
   <!-- Indicates the add-on is enabled. -->
-  <string name="mozac_feature_addons_settings_on">Banamaa</string>
 </resources>

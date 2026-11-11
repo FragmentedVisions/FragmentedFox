@@ -34,11 +34,9 @@
   <!-- The error message shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_message"><![CDATA[<ul>\n<li>ໜ້າ​ທີ່​ເຈົ້າ​ພະ​ຍາ​ຍາມ​ເບິ່ງ​ບໍ່​ສາ​ມາດ​ສະ​ແດງ​ໄດ້​ເນື່ອງ​ຈາກ​ວ່າ​ເວັບ​ໄຊ​ທ​໌​ນີ້​ຕ້ອງ​ການ​ການ​ເຊື່ອມ​ຕໍ່​ທີ່​ປອດ​ໄພ.</li>\n<li>ບັນຫາແມ່ນເປັນໄປໄດ້ຫຼາຍທີ່ສຸດກັບເວັບໄຊທ໌, ແລະບໍ່ມີຫຍັງທີ່ເຈົ້າສາມາດແກ້ໄຂມັນໄດ້.</li>\n<li>ທ່ານ​ສາ​ມາດ​ແຈ້ງ​ໃຫ້​ຜູ້​ຄວບ​ຄຸມ​ຂອງ​ເວັບ​ໄຊ​ທ​໌​ກ່ຽວ​ກັບ​ບັນ​ຫາ​ໄດ້.</li>\n</ul>]]></string>
   <!-- The text shown inside the advanced button used to expand the advanced options. It's only shown when a website uses HSTS. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_advanced">ຂັ້ນສູງ…</string>
   <!-- The advanced certificate information shown when a website uses HSTS. The %1$s will be replaced by the website URL and %2$s will be replaced by the app name. It's only shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_techInfo2"><![CDATA[<label> <b>%1$s</b> ມີນະໂຍບາຍຄວາມປອດໄພທີ່ເອີ້ນວ່າ HTTP Strict Transport Security (HSTS), ຊຶ່ງຫມາຍຄວາມວ່າ <b>%2$s</b> ສາມາດເຊື່ອມຕໍ່ກັບມັນໄດ້ຢ່າງປອດໄພເທົ່ານັ້ນ. ທ່ານບໍ່ສາມາດເພີ່ມຂໍ້ຍົກເວັ້ນເພື່ອເຂົ້າເບິ່ງເວັບໄຊນີ້ໄດ້.</label>]]></string>
   <!-- The text shown inside the advanced options button used to go back. It's only shown if the user has expanded the advanced options. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_back">ກັບຄືນ</string>
   <!-- The document title and heading of the error page shown when the user's network connection is interrupted while connecting to a website. -->
   <string name="mozac_browser_errorpages_net_interrupt_title">ການເຊື່ອມຕໍ່ຖືກລົບກວນ</string>
   <!-- The error message shown when the user's network connection is interrupted while connecting to a website. -->
@@ -101,9 +99,7 @@
   <string name="mozac_browser_errorpages_malformed_uri_title">ທີ່ຢູ່ບໍ່ຖືກຕ້ອງ</string>
   <string name="mozac_browser_errorpages_malformed_uri_message"><![CDATA[<p>ຮູບແບບຂອງທີ່ຢູ່ທີໃຫ້ມາແມ່ນບໍ່ຖືກຕ້ອງ. ກະລຸນາກວດເບິງທີ່ຢູ່ໃນແຖບທີ່ຕັ້ງເພື່ອຊອກຫາຂໍ້ຜິດພາດ ແລະ ລອງໃຫມ່ອີກຄັ້ງ.</p>]]></string>
   <!-- The document title and heading of an error page. -->
-  <string name="mozac_browser_errorpages_malformed_uri_title_alternative">ທີ່ຢູ່ບໍ່ຖືກຕ້ອງ</string>
   <!-- This string contains markup. The URL should not be localized. -->
-  <string name="mozac_browser_errorpages_malformed_uri_message_alternative"><![CDATA[<ul>\n<li>ທີ່ຢູ່ຂອງເວັບມັກຈະຂຽນເປັນ <strong>http://www.example.com/</strong></li>\n<li>ກວດເບິງໃຫ້ຫມັ້ນໃຈວ່າທ່ານໄດ້ໃຊ້ເຄືອງຫມາຍສະແລັດຖືກຕ້ອງແລ້ວ ( <strong>/</strong>).</li>\n</ul>]]></string>
   <!-- The document title and heading of an error page. -->
   <string name="mozac_browser_errorpages_unknown_protocol_title">ໂປຼໂຕຄໍທີ່ບໍ່ຮູ້ຈັກ</string>
   <string name="mozac_browser_errorpages_unknown_protocol_message"><![CDATA[<p>ທີ່ຢູ່ລະບຸໂປຣໂຕຄໍ (ເຊັ່ນ: <q>wxyz://</q>) ບຣາວເຊີບໍ່ຮັບຮູ້, ສະນັ້ນ ບຣາວເຊີບໍ່ສາມາດເຊື່ອມຕໍ່ກັບເວັບໄຊທ໌ໄດ້ຢ່າງຖືກຕ້ອງ.</p>\n<ul>\n<li>ທ່ານກຳລັງພະຍາຍາມເຂົ້າເຖິງມັນຕິມີເດຍ ຫຼືບໍລິການອື່ນໆທີ່ບໍ່ແມ່ນຂໍ້ຄວາມບໍ? ກວດເບິ່ງເວັບໄຊສຳລັບຄວາມຕ້ອງການເພີ່ມເຕີມ.</li>\n<li>ບາງໂປຣໂຕຄໍອາດຈະຕ້ອງການຊອບແວພາກສ່ວນທີສາມ ຫຼື plugins ກ່ອນທີ່ຕົວທ່ອງເວັບສາມາດຮັບຮູ້ພວກມັນໄດ້.</li>\n</ul>]]></string>

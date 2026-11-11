@@ -21,7 +21,6 @@
     Option in a dialog for requesting a microphone permission, this option will give access to
     the first microphone
   -->
-  <string name="mozac_feature_sitepermissions_option_microphone_one">Amikṛu1</string>
   <!--
     Text for a positive button in a permission request dialog, this button will give
     access to this permission

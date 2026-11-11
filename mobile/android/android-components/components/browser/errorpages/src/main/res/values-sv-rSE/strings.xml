@@ -34,11 +34,9 @@
   <!-- The error message shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_message"><![CDATA[<ul>\n<li>Sidan du försöker visa kan inte visas eftersom den här webbplatsen kräver en säker anslutning.</li>\n<li>Problemet ligger troligen på webbplatsen och det finns inget du kan göra för att lösa det.</li>\n<li>Du kan meddela webbplatsens administratör om problemet.</li>\n</ul>]]></string>
   <!-- The text shown inside the advanced button used to expand the advanced options. It's only shown when a website uses HSTS. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_advanced">Avancerat…</string>
   <!-- The advanced certificate information shown when a website uses HSTS. The %1$s will be replaced by the website URL and %2$s will be replaced by the app name. It's only shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_techInfo2"><![CDATA[<label> <b>%1$s</b> har en säkerhetspolicy som kallas HTTP Strict Transport Security (HSTS), vilket innebär att <b>%2$s</b> bara kan ansluta till den på ett säkert sätt. Du kan inte lägga till ett undantag för att besöka den här webbplatsen.</label>]]></string>
   <!-- The text shown inside the advanced options button used to go back. It's only shown if the user has expanded the advanced options. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_back">Gå tillbaka</string>
   <!-- The document title and heading of the error page shown when the user's network connection is interrupted while connecting to a website. -->
   <string name="mozac_browser_errorpages_net_interrupt_title">Anslutningen avbröts</string>
   <!-- The error message shown when the user's network connection is interrupted while connecting to a website. -->
@@ -101,9 +99,7 @@
   <string name="mozac_browser_errorpages_malformed_uri_title">Ogiltig adress</string>
   <string name="mozac_browser_errorpages_malformed_uri_message"><![CDATA[<p>Den angivna adressen är inte i ett erkänt format. Kontrollera adressfältet för fel och försök igen.</p>]]></string>
   <!-- The document title and heading of an error page. -->
-  <string name="mozac_browser_errorpages_malformed_uri_title_alternative">Adressen är inte giltig</string>
   <!-- This string contains markup. The URL should not be localized. -->
-  <string name="mozac_browser_errorpages_malformed_uri_message_alternative"><![CDATA[<ul>\n<li>Webbadresser är vanligtvis skrivna som <strong> http://www.example.com/</strong></li>\n<li>Se till att du använder framåtriktade snedstreck (dvs. <strong>/</strong>).</li>\n</ul>]]></string>
   <!-- The document title and heading of an error page. -->
   <string name="mozac_browser_errorpages_unknown_protocol_title">Okänt protokoll</string>
   <string name="mozac_browser_errorpages_unknown_protocol_message"><![CDATA[<p>Adressen anger ett protokoll (t.ex. <q>wxyz://</q>) webbläsaren inte känner igen, så webbläsaren kan inte ansluta till webbplatsen korrekt. </p>\n<ul>\n<li>Försöker du få tillgång till multimedia eller andra icke-texttjänster? Kontrollera webbplatsen för extra krav.</li>\n<li>Vissa protokoll kan kräva programvara eller plugins från tredje part innan webbläsaren kan känna igen dem.</li>\n</ul>]]></string>

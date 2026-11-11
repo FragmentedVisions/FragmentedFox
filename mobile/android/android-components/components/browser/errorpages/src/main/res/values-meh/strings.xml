@@ -32,9 +32,7 @@
   <!-- The document title and heading of the error page shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_title">Nuu ya\'a jiniñu\'u iin conexión va\'a.</string>
   <!-- The text shown inside the advanced button used to expand the advanced options. It's only shown when a website uses HSTS. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_advanced">Opciones avanzadas…</string>
   <!-- The text shown inside the advanced options button used to go back. It's only shown if the user has expanded the advanced options. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_back">Niko yata</string>
   <!-- The document title and heading of the error page shown when the user's network connection is interrupted while connecting to a website. -->
   <string name="mozac_browser_errorpages_net_interrupt_title">Ntu nkuvi sá´á conexión</string>
   <!-- The document title and heading of the error page shown when a website takes too long to load. -->
@@ -85,9 +83,7 @@
   <string name="mozac_browser_errorpages_malformed_uri_title">Ntu íyo vatu nuu</string>
   <string name="mozac_browser_errorpages_malformed_uri_message"><![CDATA[<p>Nuu tajinu ntu kuvi iin tu\'un vatu. Kune\'ya de ntu nkumiji errores nu barra da nuu jee nachu\'un tuku</p>]]></string>
   <!-- The document title and heading of an error page. -->
-  <string name="mozac_browser_errorpages_malformed_uri_title_alternative">Dirección ntu vatu</string>
   <!-- This string contains markup. The URL should not be localized. -->
-  <string name="mozac_browser_errorpages_malformed_uri_message_alternative"><![CDATA[<ul>\n<li>Daa nuu Web ntaka ichi íyo sukuan <strong>http://www.example.com/</strong></li>\n<li>Kune´yá de ni´í nijin-nu daa barras sukuan (kua ya´a. <strong>/</strong>).</li>\n</ul>]]></string>
   <!-- The document title and heading of an error page. -->
   <string name="mozac_browser_errorpages_unknown_protocol_title">Protocolo desconocido</string>
   <!-- The document title and heading of an error page. -->

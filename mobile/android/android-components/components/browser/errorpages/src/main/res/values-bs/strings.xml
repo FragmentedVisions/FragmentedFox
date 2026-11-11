@@ -34,11 +34,9 @@
   <!-- The error message shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_message"><![CDATA[<ul>\n<li>Stranica koju pokušavate pogledati se ne može prikazati jer ova web stranica zahtijeva sigurnu vezu.</li>\n<li>Problem je najvjerovatnije na web stranici i ne možete ništa učiniti da ga riješite.</li>\n<li>Možete obavijestiti administratora web stranice o problemu.</li>\n</ul>]]></string>
   <!-- The text shown inside the advanced button used to expand the advanced options. It's only shown when a website uses HSTS. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_advanced">Napredno…</string>
   <!-- The advanced certificate information shown when a website uses HSTS. The %1$s will be replaced by the website URL and %2$s will be replaced by the app name. It's only shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_techInfo2"><![CDATA[<label> <b>%1$s</b> ima sigurnosnu politiku koja se zove HTTP Strict Transport Security (HSTS), što znači da se <b>%2$s</b> može samo sigurno povezati na njega. Ne možete dodati izuzetak da posjetite ovu stranicu. </label>]]></string>
   <!-- The text shown inside the advanced options button used to go back. It's only shown if the user has expanded the advanced options. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_back">Idi nazad</string>
   <!-- The document title and heading of the error page shown when the user's network connection is interrupted while connecting to a website. -->
   <string name="mozac_browser_errorpages_net_interrupt_title">Veza je prekinuta</string>
   <!-- The error message shown when the user's network connection is interrupted while connecting to a website. -->
@@ -101,9 +99,7 @@
   <string name="mozac_browser_errorpages_malformed_uri_title">Neispravna adresa</string>
   <string name="mozac_browser_errorpages_malformed_uri_message"><![CDATA[<p>Navedena adresa nije u poznatrom formatu. Molimo provjerite lokaciju sa greškama i pokušajte ponovo.</p>]]></string>
   <!-- The document title and heading of an error page. -->
-  <string name="mozac_browser_errorpages_malformed_uri_title_alternative">Adresa je nevažeća</string>
   <!-- This string contains markup. The URL should not be localized. -->
-  <string name="mozac_browser_errorpages_malformed_uri_message_alternative"><![CDATA[<ul>\n<li>Adrese web stranice se obično pišu u formatu poput <strong>http://www.example.com/</strong></li>\n<li>Pazi na način pisanja kose crte (tj. <strong>/</strong>).</li>\n</ul>]]></string>
   <!-- The document title and heading of an error page. -->
   <string name="mozac_browser_errorpages_unknown_protocol_title">Nepoznat protokol</string>
   <string name="mozac_browser_errorpages_unknown_protocol_message"><![CDATA[<p>Adresa navodi protokol (npr., <q>wxyz://</q>) koji browser ne prepoznaje, pa se browser ne može pravilno povezati na stranicu.</p>\n<ul>\n<li>Da li pokušavate pristupiti multimediji ili drugim netekstualnim servisima? Provjerite stranicu za dodatne zahtjeve.</li>\n<li>Neki protokoli mogu zahtijevati softver trećeg lica ili plugine prije nego ih browser može prepoznati.</li>\n</ul>]]></string>

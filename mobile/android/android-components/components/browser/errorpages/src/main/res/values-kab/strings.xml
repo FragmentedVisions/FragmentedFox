@@ -34,11 +34,9 @@
   <!-- The error message shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_message"><![CDATA[<ul>\n<li>Asebter i tettaɛraḍeḍ ad t-twaliḍ ur yezmir ara ad d-yettwaskan acku asmel-a yesra tuqqna taɣelsant.</li>\n<li>Ugur ad yili akked usmel-a web, ur yelli wayen ara t-tgeḍ i wakken ad yefru.</li>\n<li>You can notify the website’s administrator about the problem.</li>\n</ul>]]></string>
   <!-- The text shown inside the advanced button used to expand the advanced options. It's only shown when a website uses HSTS. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_advanced">Talqayt…</string>
   <!-- The advanced certificate information shown when a website uses HSTS. The %1$s will be replaced by the website URL and %2$s will be replaced by the app name. It's only shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_techInfo2"><![CDATA[<label> <b>%1$s</b> ɣur-s tasertit n tɣellist HTTP Strict Transport Security (HSTS), ay-agi yemmal-d d akken <b>%2$s</b> izmer kan ad iqqen ɣur-s s tɣellist. Ur tezmireḍ ara ad ternuḍ tasureft akken ad twaliḍ asmel-agi.</label>]]></string>
   <!-- The text shown inside the advanced options button used to go back. It's only shown if the user has expanded the advanced options. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_back">Uɣal ɣer deffir</string>
   <!-- The document title and heading of the error page shown when the user's network connection is interrupted while connecting to a website. -->
   <string name="mozac_browser_errorpages_net_interrupt_title">Tuqqna teḥbes</string>
   <!-- The error message shown when the user's network connection is interrupted while connecting to a website. -->
@@ -101,9 +99,7 @@
   <string name="mozac_browser_errorpages_malformed_uri_title">Tansa tarameɣtut</string>
   <string name="mozac_browser_errorpages_malformed_uri_message"><![CDATA[<p>Tansa i d-tmuddeḍ ur tella ara deg umasal ittwassnen. Ma ulac aɣilif senqed afeggag n tansa akken ad tesseɣtiḍ tuccḍiwin sakin ɛreḍ tikkelt-nniḍen.</p>]]></string>
   <!-- The document title and heading of an error page. -->
-  <string name="mozac_browser_errorpages_malformed_uri_title_alternative">Tansa-yagi d tarameɣtut</string>
   <!-- This string contains markup. The URL should not be localized. -->
-  <string name="mozac_browser_errorpages_malformed_uri_message_alternative"><![CDATA[<ul>\n<li>Tansiwin web ttwarunt am <strong>http://www.example.com/</strong></li>\n<li>Wali ma yella tseqdaceḍ amgal islacen (i.e. <strong>/</strong>).</li>\n</ul>]]></string>
   <!-- The document title and heading of an error page. -->
   <string name="mozac_browser_errorpages_unknown_protocol_title">Aneggaf arussin</string>
   <string name="mozac_browser_errorpages_unknown_protocol_message"><![CDATA[<p>Tansa temmaled aneggaf (amedya <q>wxyz://</q>) arussin n iminig, ihi iminig ur yezmir ara ad iqqen ɣer usmel.</p>\n<ul>\n<li>Tettaɛraḍeḍ ad tkecmeḍ ɣer tanfiwin n wallalen n teywalt neɣ araḍris? Senqed asmel ma yesra ayen nniḍen.</li>\n<li>Kra n ineggafen sran aseɣẓan neɣ azegrir wis kraḍ send ad ten-yissin iminig.</li>\n</ul>]]></string>

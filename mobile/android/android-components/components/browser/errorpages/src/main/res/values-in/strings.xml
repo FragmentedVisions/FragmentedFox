@@ -34,11 +34,9 @@
   <!-- The error message shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_message"><![CDATA[<ul>\n<li>Halaman yang Anda coba lihat tidak dapat ditampilkan karena situs web ini memerlukan sambungan aman</li>\n<li>Kemungkinan besar, masalahnya terletak pada situs web, dan tidak ada yang dapat Anda lakukan untuk menyelesaikannya.</li>\n<li>Anda dapat memberi tahu admin situs web tentang masalah ini.</li>\n</ul>]]></string>
   <!-- The text shown inside the advanced button used to expand the advanced options. It's only shown when a website uses HSTS. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_advanced">Tingkat lanjut…</string>
   <!-- The advanced certificate information shown when a website uses HSTS. The %1$s will be replaced by the website URL and %2$s will be replaced by the app name. It's only shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_techInfo2"><![CDATA[<label> <b>%1$s</b> memiliki kebijakan keaman yang disebut HTTP Strict Transport Security (HSTS), yang berarti <b>%2$s</b> hanya dapat terhubung dengan aman. Anda tidak dapat menambahkan pengecualian untuk mengunjungi situs ini. </label>]]></string>
   <!-- The text shown inside the advanced options button used to go back. It's only shown if the user has expanded the advanced options. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_back">Kembali</string>
   <!-- The document title and heading of the error page shown when the user's network connection is interrupted while connecting to a website. -->
   <string name="mozac_browser_errorpages_net_interrupt_title">Sambungan terputus</string>
   <!-- The error message shown when the user's network connection is interrupted while connecting to a website. -->
@@ -101,9 +99,7 @@
   <string name="mozac_browser_errorpages_malformed_uri_title">Alamat Tidak Valid</string>
   <string name="mozac_browser_errorpages_malformed_uri_message"><![CDATA[<p>Laman yang diberikan tidak dalam format yang dikenali. Periksa ulang bilah lokasi kemudian coba kembali.</p>]]></string>
   <!-- The document title and heading of an error page. -->
-  <string name="mozac_browser_errorpages_malformed_uri_title_alternative">Alamat tidak valid</string>
   <!-- This string contains markup. The URL should not be localized. -->
-  <string name="mozac_browser_errorpages_malformed_uri_message_alternative"><![CDATA[<ul>\n<li>Alamat Web biasanya ditulis seperti <strong>http://www.example.com/</strong></li>\n<li>Pastikan Anda menggunakan garis miring depan (contoh: <strong>/</strong>).</li>\n</ul>]]></string>
   <!-- The document title and heading of an error page. -->
   <string name="mozac_browser_errorpages_unknown_protocol_title">Protokol Tidak Dikenal</string>
   <string name="mozac_browser_errorpages_unknown_protocol_message"><![CDATA[<p>Alamat menspesifikasi protokol (contoh: <q>wxyz://</q>) yang tidak dikenali peramban, sehingga peramban tidak dapat menghubungi situs dengan baik.</p>\n<ul>\n<li>Apakah Anda ingin mengakses layanan multimedia atau non-teks lainnya? Periksa situs untuk persyaratan tambahan.</li>\n<li>Beberapa protokol mungkin memerlukan perangkat lunak atau plugin pihak ketiga sebelum peramban dapat mengenalinya.</li>\n</ul>]]></string>

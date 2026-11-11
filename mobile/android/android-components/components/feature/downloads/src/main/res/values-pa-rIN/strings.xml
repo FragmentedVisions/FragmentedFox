@@ -53,13 +53,10 @@
     Alert dialog confirmation before downloading a file without network connection, this is the description.
     %1$s will be replaced with the name of the file.
   -->
-  <string name="mozac_feature_downloads_file_failure_no_connection" tools:ignore="UnusedResources">%1$s ਨੂੰ ਡਾਊਨਲੋਡ ਨਹੀਂ ਕੀਤਾ ਗਿਆ ਸੀ।</string>
   <!-- Alert dialog confirmation before downloading a file without network connection, this is the description. -->
-  <string name="mozac_feature_downloads_file_check_connection" tools:ignore="UnusedResources">ਆਪਣੇ ਕਨੈਕਸ਼ਨ ਦੀ ਜਾਂਚ ਕਰਕੇ ਫੇਰ ਕੋਸ਼ਿਸ਼ ਕਰੋ।</string>
   <!-- Error shown when the user is trying to download a invalid file. %1$s will be replaced with the name of the app. -->
   <string name="mozac_feature_downloads_file_not_supported2">%1$s ਇਹ ਫਾਈਲ ਕਿਸਮ ਡਾਊਨਲੋਡ ਨਹੀਂ ਕਰ ਸਕਦਾ ਹੈ</string>
   <!-- Message that appears when the downloaded file could not be opened. -->
-  <string name="mozac_feature_downloads_could_not_open_file">ਫ਼ਾਈਲ ਨੂੰ ਖੋਲ੍ਹਿਆ ਨਹੀਂ ਜਾ ਸਕਿਆ</string>
   <!-- Message that appears when the downloaded file is a specific type (%1$s) that Android doesn't support opening. -->
   <string name="mozac_feature_downloads_open_not_supported1">%1$s ਫਾਈਲਾਂ ਖੋਲ੍ਹਣ ਲਈ ਕੋਈ ਐਪ ਨਹੀਂ ਲੱਭੀ</string>
   <!-- Button that pauses the download when pressed. -->
@@ -69,7 +66,6 @@
   <!-- Button that cancels the download when pressed. -->
   <string name="mozac_feature_downloads_button_cancel">ਰੱਦ ਕਰੋ</string>
   <!-- Button that opens the downloaded file when pressed. -->
-  <string name="mozac_feature_downloads_button_open">ਖੋਲ੍ਹੋ</string>
   <!-- Button that restarts the download after a failed attempt. -->
   <string name="mozac_feature_downloads_button_try_again">ਫੇਰ ਕੋਸ਼ਿਸ਼ ਕਰੋ</string>
   <!-- Content description for close button -->

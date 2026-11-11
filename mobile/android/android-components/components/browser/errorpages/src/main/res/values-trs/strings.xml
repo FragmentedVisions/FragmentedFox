@@ -34,11 +34,9 @@
   <!-- The error message shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_message"><![CDATA[<ul>\n<li>Nā’hue nāyi’nïn pajinâ ruhuât ni’hiājt dadin’ ni’ñānj web nan ‘ngō kōneksiûn hue’ê.</li>\n<li>Ahui a’nan’ man si gūruhuaj dadin’ pajinân nan ‘hiaj nī nitāj dàj gaj gī’hiát da’ gānahuin man.</li>\n<li>Gā’hue gātāj nan’ānjt riña administrador sitio nan rayi’î sa ahui a’nan’ nan.</li></ul>]]></string>
   <!-- The text shown inside the advanced button used to expand the advanced options. It's only shown when a website uses HSTS. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_advanced">Sa huāj ñā doj…</string>
   <!-- The advanced certificate information shown when a website uses HSTS. The %1$s will be replaced by the website URL and %2$s will be replaced by the app name. It's only shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_techInfo2"><![CDATA[<label> <b>%1$s</b> nīka ‘ngō chrēj dugumîn ñùn’ gū’nàj HTTP Strict Transport Security (HSTS), ô’ nī gāta ruhuâj sisī <b>%2$s</b> gā’hue gātūt riñanj ngâ sa huā arán doj. Si ga’hue nādunāt sa huā riña sitiô nan si ruhuât gātūt. </label>]]></string>
   <!-- The text shown inside the advanced options button used to go back. It's only shown if the user has expanded the advanced options. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_back">Nānīkāj ne’ Rūkùu</string>
   <!-- The document title and heading of the error page shown when the user's network connection is interrupted while connecting to a website. -->
   <string name="mozac_browser_errorpages_net_interrupt_title">Giyichin\' ngè kōneksiûn</string>
   <!-- The error message shown when the user's network connection is interrupted while connecting to a website. -->
@@ -101,9 +99,7 @@
   <string name="mozac_browser_errorpages_malformed_uri_title">Nitāj si huā hue\'ê direksiûn gachrûnt</string>
   <string name="mozac_browser_errorpages_malformed_uri_message"><![CDATA[<p>Nu nārì\'t dà gāchrūnt direksiûn. Ni\'iāj dānè gachrûn a\'nâ\'t nī nāchrūn hue\'ê man.</p>]]></string>
   <!-- The document title and heading of an error page. -->
-  <string name="mozac_browser_errorpages_malformed_uri_title_alternative">Nitāj si huā hue\'ê direksiûn gachrûnt</string>
   <!-- This string contains markup. The URL should not be localized. -->
-  <string name="mozac_browser_errorpages_malformed_uri_message_alternative"><![CDATA[<ul>\n<li>Huā da\'āj nī achrûn\' \'ngō dīreksiûn dànanj <strong>http://www.example.com/</strong></li>\n<li>Ni\'iāj hue\'ê sisī arâj sunt huìj chrun li nīkïn\' nītïn dan ân (dàj rû\' <strong>/</strong>).</li>\n</ul>]]></string>
   <!-- The document title and heading of an error page. -->
   <string name="mozac_browser_errorpages_unknown_protocol_title">Sê dànanj gāchrūn\'</string>
   <string name="mozac_browser_errorpages_unknown_protocol_message"><![CDATA[<p>Dàj gāchrūn\' \'ngō dīreksiûn (dàj rû\', <q>wxyz://</q>) da\' nāni\'in riña sā nana\'uî\'t, si nitāj nī si na\'nïn riña sitiô ruhuât gātūt.</p>\n<ul>\n<li>Sī gātūt riña \'ngō hiūj sê sa achrû\' huin anj. Gīni\'iāj nùj huin doj sa achín sitiô dan ân.</li>\n<li>Huā da\'āj nej man nī ni\'ña \'ngō software asi plūyîn da\' ga\'ue nāni\'in sa riñā nana\'uî\'t man.</li>\n</ul>]]></string>

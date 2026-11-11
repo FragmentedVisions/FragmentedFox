@@ -34,9 +34,7 @@
   <!-- The error message shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_message"><![CDATA[<ul>\n<li>Ne iswat tikneki tikita tesu weli muneshtia ika ini sitioj matapan kineki se tasalulis seguruj.</li>\n<li>Ini uijkayu anka iwan ne sitioj matapan, wan tesu tiweli tikchiwa te tatka pal tikishtia.</li>\n<li>Tiweli tiknawatilia ne administrador pal ini sitioj ini uijkayu.</li>\n</ul>]]></string>
   <!-- The text shown inside the advanced button used to expand the advanced options. It's only shown when a website uses HSTS. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_advanced">Chayawtuk…</string>
   <!-- The text shown inside the advanced options button used to go back. It's only shown if the user has expanded the advanced options. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_back">Shimukwepa</string>
   <!-- The document title and heading of the error page shown when the user's network connection is interrupted while connecting to a website. -->
   <string name="mozac_browser_errorpages_net_interrupt_title">Ne tasalulis kutunik</string>
   <!-- The document title and heading of the error page shown when a website takes too long to load. -->

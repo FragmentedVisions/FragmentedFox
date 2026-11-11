@@ -34,11 +34,9 @@
   <!-- The error message shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_message"><![CDATA[<ul>\n<li>La page que vous essayez d’atteindre ne peut pas être affichée, car ce site web nécessite une connexion sécurisée.</li>\n<li>Ce problème vient probablement du site web et il n’y a rien que vous puissiez faire pour le résoudre.</li>\n<li>Vous pouvez informer l’administrateur du site web du problème.</li>\n</ul>]]></string>
   <!-- The text shown inside the advanced button used to expand the advanced options. It's only shown when a website uses HSTS. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_advanced">Avancé…</string>
   <!-- The advanced certificate information shown when a website uses HSTS. The %1$s will be replaced by the website URL and %2$s will be replaced by the app name. It's only shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_techInfo2"><![CDATA[<label> <b>%1$s</b> a recours à une stratégie de sécurité HTTP Strict Transport Security (HSTS), ce qui signifie que <b>%2$s</b> doit impérativement établir une connexion sécurisée pour y accéder. Vous ne pouvez pas ajouter d’exception pour accéder à ce site.</label>]]></string>
   <!-- The text shown inside the advanced options button used to go back. It's only shown if the user has expanded the advanced options. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_back">Retour</string>
   <!-- The document title and heading of the error page shown when the user's network connection is interrupted while connecting to a website. -->
   <string name="mozac_browser_errorpages_net_interrupt_title">La connexion a été interrompue</string>
   <!-- The error message shown when the user's network connection is interrupted while connecting to a website. -->
@@ -101,9 +99,7 @@
   <string name="mozac_browser_errorpages_malformed_uri_title">Adresse invalide</string>
   <string name="mozac_browser_errorpages_malformed_uri_message"><![CDATA[<p>L’adresse fournie n’est pas dans un format reconnu. Veuillez vérifier qu’il n’y a pas d’erreur dans la barre d’adresse et réessayez.</p>]]></string>
   <!-- The document title and heading of an error page. -->
-  <string name="mozac_browser_errorpages_malformed_uri_title_alternative">L’adresse n’est pas valide</string>
   <!-- This string contains markup. The URL should not be localized. -->
-  <string name="mozac_browser_errorpages_malformed_uri_message_alternative"><![CDATA[<ul>\n<li>La syntaxe des adresses web est généralement <strong>http://www.example.com/</strong>.</li>\n<li>Assurez-vous de bien utiliser des barres obliques (c.-à-d. <strong>/</strong>).</li>\n</ul>]]></string>
   <!-- The document title and heading of an error page. -->
   <string name="mozac_browser_errorpages_unknown_protocol_title">Le protocole n’a pas été reconnu</string>
   <string name="mozac_browser_errorpages_unknown_protocol_message"><![CDATA[<p>L’adresse indique un protocole (p.\u00a0ex. <q>wxyz://</q>) inconnu du navigateur qui ne peut donc pas se connecter correctement au site.</p>\n<ul>\n<li>Essayez-vous d’accéder à du contenu multimédia ou d’autres services non texte\u00a0? Vérifiez les prérequis logiciels du site.</li>\n<li>Certains protocoles peuvent nécessiter un logiciel tiers ou des plugins pour que le navigateur puisse les reconnaître.</li>\n</ul>]]></string>

@@ -34,11 +34,9 @@
   <!-- The error message shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_message"><![CDATA[<ul>\n<li>Ní féidir an leathanach a bhfuil tú ag iarraidh féachaint air a thaispeáint toisc go bhfuil ceangal slán ag teastáil ón suíomh Gréasáin seo.</li>\n<li>Is dócha go bhfuil an fhadhb leis an suíomh Gréasáin, agus níl aon rud is féidir leat a dhéanamh chun í a réiteach.</li>\n<li>Is féidir leat riarthóir an tsuímh Ghréasáin a chur ar an eolas faoin bhfadhb.</li>\n</ul>]]></string>
   <!-- The text shown inside the advanced button used to expand the advanced options. It's only shown when a website uses HSTS. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_advanced">Casta…</string>
   <!-- The advanced certificate information shown when a website uses HSTS. The %1$s will be replaced by the website URL and %2$s will be replaced by the app name. It's only shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_techInfo2"><![CDATA[Tá polasaí slándála ag <label> <b>%1$s</b> ar a dtugtar HTTP Strict Transport Security (HSTS), rud a chiallaíonn nach féidir le <b>%2$s</b> ach ceangal leis go slán. Ní féidir leat eisceacht a chur leis chun cuairt a thabhairt ar an suíomh seo. </label>]]></string>
   <!-- The text shown inside the advanced options button used to go back. It's only shown if the user has expanded the advanced options. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_back">Dul ar ais</string>
   <!-- The document title and heading of the error page shown when the user's network connection is interrupted while connecting to a website. -->
   <string name="mozac_browser_errorpages_net_interrupt_title">Idirbhriseadh an ceangal</string>
   <!-- The error message shown when the user's network connection is interrupted while connecting to a website. -->
@@ -101,9 +99,7 @@
   <string name="mozac_browser_errorpages_malformed_uri_title">Seoladh Neamhbhailí</string>
   <string name="mozac_browser_errorpages_malformed_uri_message"><![CDATA[<p>Ní aithnítear formáid an tseolta sonraithe. Féach an bhfuil botúin i mbarra na suíomhanna agus bain triail eile as.</p>]]></string>
   <!-- The document title and heading of an error page. -->
-  <string name="mozac_browser_errorpages_malformed_uri_title_alternative">Níl an seoladh bailí</string>
   <!-- This string contains markup. The URL should not be localized. -->
-  <string name="mozac_browser_errorpages_malformed_uri_message_alternative"><![CDATA[<ul>\n<li>De ghnáth scríobhtar seoltaí Gréasáin mar seo <strong>http://www.example.com/</strong></li>\n<li>Bí cinnte gur tulslaiseanna atá agat (.i. <strong>/</strong>).</li>\n</ul>]]></string>
   <!-- The document title and heading of an error page. -->
   <string name="mozac_browser_errorpages_unknown_protocol_title">Prótacal Anaithnid</string>
   <string name="mozac_browser_errorpages_unknown_protocol_message"><![CDATA[<p>Sonraíonn an seoladh prótacal (m.sh. <q>wxyz://</q>) nach n-aithníonn an brabhsálaí agus ní féidir leis an mbrabhsálaí ceangal leis an suíomh i gceart dá bharr.</p>\n<ul>\n<li>An bhfuil tú ag iarraidh seirbhísí ilmheáin, nó seirbhísí eile nach téacs iad, a rochtain? Féach an bhfuil riachtanais bhreise ag an suíomh.</li>\n<li>D\'fhéadfadh bogearraí nó forlíontáin ó sholáthraithe eile bheith ag teastáil ó phrótacail áirithe sula mbeidh an brabhsálaí in ann iad a aithint.</li>\n</ul>]]></string>

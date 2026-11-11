@@ -34,11 +34,9 @@
   <!-- The error message shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_message"><![CDATA[<ul>\n<li>Le pagina que tu tenta de vider non pote monstrar se perque iste sito web require un connexion secur.</li>\n<li>Le problema es probabilemente con le sito web, e tu nihil pote facer pro resolver lo.</li>\n<li>Avisa le administrator del sito web re le problema.</li>\n</ul>]]></string>
   <!-- The text shown inside the advanced button used to expand the advanced options. It's only shown when a website uses HSTS. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_advanced">Avantiate…</string>
   <!-- The advanced certificate information shown when a website uses HSTS. The %1$s will be replaced by the website URL and %2$s will be replaced by the app name. It's only shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_techInfo2"><![CDATA[<label> <b>%1$s</b> ha un politica de securitate appellate HTTP Strict Transport Security (HSTS), le qual significa que <b>%2$s</b> solo pote connecter se a illo de maniera secur. Tu non pote adder un exception pro visitar iste sito. </label>]]></string>
   <!-- The text shown inside the advanced options button used to go back. It's only shown if the user has expanded the advanced options. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_back">Retornar</string>
   <!-- The document title and heading of the error page shown when the user's network connection is interrupted while connecting to a website. -->
   <string name="mozac_browser_errorpages_net_interrupt_title">Le connexion ha essite interrumpite</string>
   <!-- The error message shown when the user's network connection is interrupted while connecting to a website. -->
@@ -101,9 +99,7 @@
   <string name="mozac_browser_errorpages_malformed_uri_title">Adresse non valide</string>
   <string name="mozac_browser_errorpages_malformed_uri_message"><![CDATA[<p>Le adresse fornite non es in un formato recognoscite. Verifica si il ha errores in le barra de adresse e tenta lo de novo.</p>]]></string>
   <!-- The document title and heading of an error page. -->
-  <string name="mozac_browser_errorpages_malformed_uri_title_alternative">Le adresse non es valide</string>
   <!-- This string contains markup. The URL should not be localized. -->
-  <string name="mozac_browser_errorpages_malformed_uri_message_alternative"><![CDATA[<ul>\n<li>Adresses web se scribe normalmente in forma <strong>http://www.example.com/</strong></li>\n<li>Assecura te de usar barras oblique non inverse (i.e. <strong>/</strong>).</li>\n</ul>]]></string>
   <!-- The document title and heading of an error page. -->
   <string name="mozac_browser_errorpages_unknown_protocol_title">Protocollo incognite</string>
   <string name="mozac_browser_errorpages_unknown_protocol_message"><![CDATA[<p>Le adresse specifica un protocollo (p.ex. <q>wxyz://</q>) que le navigator non recognosce, dunque le navigator non pote connecter te correctemente al sito.</p>\n<ul>\n<li>Tenta tu acceder a files multimedial o altere servicios non textual? Verifica si le sito ha requisitos additional.</li>\n<li>Alcun protocollos pote requirer software o plug-ins de tertios ante que le navigator pote recognoscer los.</li>\n</ul>]]></string>

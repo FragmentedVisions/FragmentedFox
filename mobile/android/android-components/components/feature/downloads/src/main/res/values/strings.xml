@@ -40,14 +40,11 @@
     <string name="mozac_feature_downloads_open_existing_file">Open existing file</string>
     <!-- Alert dialog confirmation before downloading a file without network connection, this is the description.
              %1$s will be replaced with the name of the file. -->
-    <string name="mozac_feature_downloads_file_failure_no_connection" tools:ignore="UnusedResources">%1$s wasn’t downloaded.</string>
     <!-- Alert dialog confirmation before downloading a file without network connection, this is the description. -->
-    <string name="mozac_feature_downloads_file_check_connection" tools:ignore="UnusedResources">Check your connection and try again.</string>
     <!-- Error shown when the user is trying to download a invalid file. %1$s will be replaced with the name of the app. -->
     <string name="mozac_feature_downloads_file_not_supported2">%1$s can’t download this file type</string>
 
     <!-- Message that appears when the downloaded file could not be opened. -->
-    <string name="mozac_feature_downloads_could_not_open_file">Could not open file</string>
 
     <!-- Message that appears when the downloaded file is a specific type (%1$s) that Android doesn't support opening. -->
     <string name="mozac_feature_downloads_open_not_supported1">No app found to open %1$s files</string>
@@ -59,7 +56,6 @@
     <!-- Button that cancels the download when pressed. -->
     <string name="mozac_feature_downloads_button_cancel">Cancel</string>
     <!-- Button that opens the downloaded file when pressed. -->
-    <string name="mozac_feature_downloads_button_open">Open</string>
     <!-- Button that restarts the download after a failed attempt. -->
     <string name="mozac_feature_downloads_button_try_again">Try Again</string>
 

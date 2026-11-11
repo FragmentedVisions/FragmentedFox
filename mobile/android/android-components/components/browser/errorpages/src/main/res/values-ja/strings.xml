@@ -34,11 +34,9 @@
   <!-- The error message shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_message"><![CDATA[<ul>\n<li>このウェブサイトには安全な接続が必要なため、閲覧しようとしているページを表示できません。</li>\n<li>この問題はウェブサイト側に原因がある可能性が高く、解決するためにあなたにできることはありません。</li>\n<li>この問題について、ウェブサイトの管理者に知らせてください。</li>\n</ul>]]></string>
   <!-- The text shown inside the advanced button used to expand the advanced options. It's only shown when a website uses HSTS. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_advanced">詳細情報...</string>
   <!-- The advanced certificate information shown when a website uses HSTS. The %1$s will be replaced by the website URL and %2$s will be replaced by the app name. It's only shown when a website uses HSTS. -->
   <string name="mozac_browser_errorpages_security_bad_hsts_cert_techInfo2"><![CDATA[<label> <b>%1$s</b> には HTTP Strict Transport Security (HSTS) と呼ばれるセキュリティポリシーが設定されており、<b>%2$s</b> は安全な接続でしか通信できません。そのため、このサイトを例外に追加することはできません。</label>]]></string>
   <!-- The text shown inside the advanced options button used to go back. It's only shown if the user has expanded the advanced options. -->
-  <string name="mozac_browser_errorpages_security_bad_hsts_cert_back">戻る</string>
   <!-- The document title and heading of the error page shown when the user's network connection is interrupted while connecting to a website. -->
   <string name="mozac_browser_errorpages_net_interrupt_title">接続が中断されました</string>
   <!-- The error message shown when the user's network connection is interrupted while connecting to a website. -->
@@ -101,9 +99,7 @@
   <string name="mozac_browser_errorpages_malformed_uri_title">アドレスが無効です</string>
   <string name="mozac_browser_errorpages_malformed_uri_message"><![CDATA[<p>指定されたアドレスの書式が正しくありません。ミスがないかロケーションバーを確認してください。</p>]]></string>
   <!-- The document title and heading of an error page. -->
-  <string name="mozac_browser_errorpages_malformed_uri_title_alternative">アドレスの書式が正しくありません</string>
   <!-- This string contains markup. The URL should not be localized. -->
-  <string name="mozac_browser_errorpages_malformed_uri_message_alternative"><![CDATA[<ul>\n<li>ウェブのアドレスは通常 <strong>http://www.example.com/</strong></li> のようなものになります。\n<li>スラッシュ (<strong>/</strong>) </li>が使われているか確認してください。\n</ul>]]></string>
   <!-- The document title and heading of an error page. -->
   <string name="mozac_browser_errorpages_unknown_protocol_title">プロトコルが不明です</string>
   <string name="mozac_browser_errorpages_unknown_protocol_message"><![CDATA[<p>指定されたプロトコル (例えば <q>wxyz://</q>) を認識できないため、サイトに正常に接続できませんでした。</p>\n<ul>\n<li>マルチメディアファイルなど非テキストデータにアクセスしようとしている場合、サイトによる特別な動作要件がないか確認してください。</li>\n<li>一部のプロトコルを使用するにはサードパーティのソフトウェアやプラグインが必要になります。</li>\n</ul>]]></string>

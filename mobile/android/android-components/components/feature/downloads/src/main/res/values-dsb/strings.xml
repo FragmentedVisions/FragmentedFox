@@ -53,13 +53,10 @@
     Alert dialog confirmation before downloading a file without network connection, this is the description.
     %1$s will be replaced with the name of the file.
   -->
-  <string name="mozac_feature_downloads_file_failure_no_connection" tools:ignore="UnusedResources">%1$s njejo se ześěgnuł.</string>
   <!-- Alert dialog confirmation before downloading a file without network connection, this is the description. -->
-  <string name="mozac_feature_downloads_file_check_connection" tools:ignore="UnusedResources">Pśeglědujśo swój zwisk a wopytajśo hyšći raz.</string>
   <!-- Error shown when the user is trying to download a invalid file. %1$s will be replaced with the name of the app. -->
   <string name="mozac_feature_downloads_file_not_supported2">%1$s njamóžo toś ten datajowy typ ześěgnuś</string>
   <!-- Message that appears when the downloaded file could not be opened. -->
-  <string name="mozac_feature_downloads_could_not_open_file">Dataja njedajo se wócyniś</string>
   <!-- Message that appears when the downloaded file is a specific type (%1$s) that Android doesn't support opening. -->
   <string name="mozac_feature_downloads_open_not_supported1">Žedno nałoženje za wócynjanje datajow typa %1$s namakane</string>
   <!-- Button that pauses the download when pressed. -->
@@ -69,7 +66,6 @@
   <!-- Button that cancels the download when pressed. -->
   <string name="mozac_feature_downloads_button_cancel">Pśetergnuś</string>
   <!-- Button that opens the downloaded file when pressed. -->
-  <string name="mozac_feature_downloads_button_open">Wócyniś</string>
   <!-- Button that restarts the download after a failed attempt. -->
   <string name="mozac_feature_downloads_button_try_again">Hyšći raz wopytaś</string>
   <!-- Content description for close button -->

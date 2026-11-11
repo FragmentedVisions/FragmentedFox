@@ -324,4 +324,29 @@ for name, folder, w, h in [
 write(RES + "/drawable/mozac_ic_kit_tab_groups.xml", tab_groups(144, 80, (4, 0, 80, 80), (86, 16, 22, 4)))
 write(RES + "/drawable/mozac_ic_kit_tab_groups_list_view.xml", tab_groups(78, 68, (0, 0, 40, 40), (30, 22, 18, 4)))
 
+
+def offline_svg():
+    s = 118 / 256 * 0.92
+    ox = (207 - 256 * s) / 2
+    oy = 4
+    tx = lambda x, y: (x * s + ox, y * s + oy)
+    body = ""
+    for pts, fill in polys:
+        body += f'<path d="{poly_path(pts, tx)}" fill="{fill}" stroke="#050505" stroke-width="{fmt(7 * s)}" stroke-linejoin="round"/>'
+    for d in eyes:
+        body += f'<path d="{eye_path(d, tx)}" fill="#00FF88"/>'
+    cable = "M34,122C52,146 88,148 108,128S156,118 174,132"
+    plugs = ""
+    for x, y, rot in ((22, 118, -25), (186, 134, 20)):
+        plugs += (f'<g transform="translate({x} {y}) rotate({rot})"><rect x="-9" y="-7" width="18" height="14" rx="3" '
+                  f'fill="#8FA8F0" stroke="#050505" stroke-width="3"/><rect x="-14" y="-4" width="5" height="3" fill="#050505"/>'
+                  f'<rect x="-14" y="1" width="5" height="3" fill="#050505"/></g>')
+    wire = (f'<path d="{cable}" fill="none" stroke="#050505" stroke-width="9" stroke-linecap="round"/>'
+            f'<path d="{cable}" fill="none" stroke="#8FA8F0" stroke-width="5" stroke-linecap="round"/>')
+    return ('<svg viewBox="0 0 207 169" fill="none" xmlns="http://www.w3.org/2000/svg">' + wire + plugs + body + "</svg>\n")
+
+
+write(ROOT + "/mobile/android/android-components/components/ui/icons/src/main/assets/mozac_error_no_internet_connection.svg",
+      offline_svg())
+
 print("ok")

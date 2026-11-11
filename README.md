@@ -36,7 +36,7 @@ FragmentedFox follows Mozilla's [Extended Support Release](https://support.mozil
 
 ### Removed from the Android app
 
-Mozilla's VPN, the Adjust, Firebase, Google Play Integrity and Sentry SDKs, the page summarizer, the Play Store review prompt, the marketing data consent flow, the growth conversion and install attribution code, and the partner distribution code are removed, not just switched off. All of these removals are in `Stable-Main` and were built and checked on a phone. Details are in [changes](./fragmentedfox-docs/changes.md), which also lists known gaps such as the missing network audit.
+Mozilla's VPN, the Adjust, Firebase, Google Play Integrity and Sentry SDKs, the page summarizer and its LLM libraries, the Play Store review prompt, the marketing data consent flow, the growth conversion and install attribution code, and the partner distribution code are removed, not just switched off. All of these removals are in `Stable-Main` and were built and checked on a phone. Details are in [changes](./fragmentedfox-docs/changes.md), which also lists known gaps such as the missing network audit.
 
 ## Branches
 
@@ -45,7 +45,7 @@ There are only two branches. All changes are made on `NonStable--test`, and buil
 | Branch | Purpose |
 | --- | --- |
 | `Stable-Main` | The default branch. The last state that was built and installed on a phone (build 30, commit `fb02ae860a`, Android build run 42873290132). Anything after that commit is documentation only. |
-| `NonStable--test` | Where all work happens. It includes everything in `Stable-Main` plus any newer changes. Right now it has no code changes that `Stable-Main` lacks. `Stable-Main` only moves up after a build of the new changes has been checked on a phone. |
+| `NonStable--test` | Where all work happens. It includes everything in `Stable-Main` plus any newer changes. Right now it has code changes that `Stable-Main` lacks and that have not been built yet: about 26,000 lines of unused modules, strings and resources deleted (see [changes](./fragmentedfox-docs/changes.md)). `Stable-Main` only moves up after a build of the new changes has been checked on a phone. |
 
 ## Building
 

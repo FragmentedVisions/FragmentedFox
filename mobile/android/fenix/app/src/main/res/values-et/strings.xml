@@ -461,7 +461,6 @@
   -->
   <string name="customize_toggle_recently_visited">Hiljuti külastatud</string>
   <!-- Title for the customize home screen section with sponsored Pocket stories. -->
-  <string name="customize_toggle_pocket_sponsored">Sponsitud lood</string>
   <!-- Title for the opening wallpaper settings screen -->
   <string name="customize_wallpapers">Taustapildid</string>
   <!-- Title for the customize home screen section with sponsored shortcuts. -->
@@ -1795,7 +1794,6 @@
   <!-- Content description for the action bar "up" button -->
   <string name="action_bar_up_description">Liigu üles</string>
   <!-- Text indicating that the Pocket story that also displays this text is a sponsored story by other 3rd party entity. -->
-  <string name="pocket_stories_sponsor_indication">Sponsitud</string>
   <!-- Snackbar message for enrolling in a Nimbus experiment from the secret settings when Studies preference is Off. -->
   <string name="experiments_snackbar">Andmete saatmiseks luba telemeetria.</string>
   <!-- Snackbar button text to navigate to telemetry settings. -->

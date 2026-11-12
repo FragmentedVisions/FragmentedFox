@@ -251,7 +251,6 @@
   -->
   <string name="customize_toggle_recently_visited">Jillaaɗe sakket</string>
   <!-- Title for the customize home screen section with sponsored Pocket stories. -->
-  <string name="customize_toggle_pocket_sponsored">Daarti barjinaaɗe</string>
   <!-- Title for the opening wallpaper settings screen -->
   <string name="customize_wallpapers">Ɗeeri ɓalal</string>
   <!-- Title for the customize home screen section with sponsored shortcuts. -->
@@ -978,7 +977,6 @@
   <!-- Label text displayed for a sponsored top site. -->
   <string name="top_sites_sponsored_label">Barjinaaɗi</string>
   <!-- Text indicating that the Pocket story that also displays this text is a sponsored story by other 3rd party entity. -->
-  <string name="pocket_stories_sponsor_indication">Barjinaaɗi</string>
   <!-- Translations feature -->
 
   <!-- TextField Design System Component -->

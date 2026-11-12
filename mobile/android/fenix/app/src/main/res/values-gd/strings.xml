@@ -56,7 +56,6 @@
   <!-- The action text displayed on the synced tabs page when the user is not logged into an account, prompting the user to sign into their account. When clicked, it takes the user to the account sign-in flow. -->
   <string name="tab_manager_empty_synced_tabs_page_sign_in_cta">Clàraich a-steach</string>
   <!-- Text for the button used to show all stories -->
-  <string name="homepage_all_stories">Gach sgeulachd</string>
   <!--
     Home - Bookmarks
 
@@ -825,9 +824,7 @@
   -->
   <string name="customize_toggle_recently_visited">Air tadhal orra o chionn goirid</string>
   <!-- Title for the customize home screen section with Pocket. -->
-  <string name="customize_toggle_pocket_3">Sgeulachdan</string>
   <!-- Title for the customize home screen section with sponsored Pocket stories. -->
-  <string name="customize_toggle_pocket_sponsored">Sgeulachdan sponsairichte</string>
   <!-- Title for the opening wallpaper settings screen -->
   <string name="customize_wallpapers">Pàipearan-balla</string>
   <!-- Title for the customize home screen section with sponsored shortcuts. -->
@@ -2947,16 +2944,12 @@
 
     Header text for a section on the home screen.
   -->
-  <string name="pocket_stories_header_2">Sgeulachdan</string>
   <!--
     Context description text for the "Discover more" button in the stories home screen section
     which navigates the user to a screen displaying more stories.
   -->
-  <string name="stories_discover_more_content_description">Fidir barrachd sgeulachdan</string>
   <!-- Content description for the "Navigate back" button on the top app bar of the Stories screen. -->
-  <string name="stories_back_button_content_description">Air ais</string>
   <!-- Text indicating that the Pocket story that also displays this text is a sponsored story by other 3rd party entity. -->
-  <string name="pocket_stories_sponsor_indication">Sponsairichte</string>
   <!-- Snackbar message for enrolling in a Nimbus experiment from the secret settings when Studies preference is Off. -->
   <string name="experiments_snackbar">Cuir an telemeatraidh an comas airson an dàta a chur.</string>
   <!-- Snackbar button text to navigate to telemetry settings. -->

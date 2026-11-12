@@ -20,7 +20,6 @@
   <!-- Content description (not visible, for screen readers etc.): "Private Browsing" menu button. -->
   <string name="content_description_private_browsing">Riña gachē nu huìt</string>
   <!-- Content description (not visible, for screen readers etc.): "Normal Browsing" menu button. -->
-  <string name="content_description_normal_browsing">Riña aché nun nāsinùnjt</string>
   <!-- Placeholder text shown in the search bar before a user enters text for the default engine -->
   <string name="search_hint">Gachrūn nuguan\' ruhuât nanà\'uìt</string>
   <!-- Shorter placeholder text shown in the search bar when an additional action (voice search) is rendered alongside the hint. -->
@@ -60,7 +59,6 @@
   <!-- The action text displayed on the synced tabs page when the user is not logged into an account, prompting the user to sign into their account. When clicked, it takes the user to the account sign-in flow. -->
   <string name="tab_manager_empty_synced_tabs_page_sign_in_cta">Gāyi\'ì sēsiûn</string>
   <!-- Text for the button used to show all stories -->
-  <string name="homepage_all_stories">Daran’ nej nuguan’ natsít</string>
   <!--
     Home - Bookmarks
 
@@ -923,9 +921,7 @@
   -->
   <string name="customize_toggle_recently_visited">Hìaj nākà gini’hiājt</string>
   <!-- Title for the customize home screen section with Pocket. -->
-  <string name="customize_toggle_pocket_3">Nej sa gahuin</string>
   <!-- Title for the customize home screen section with sponsored Pocket stories. -->
-  <string name="customize_toggle_pocket_sponsored">Nuguan’ ru’hue nej si du’hue</string>
   <!-- Title for the opening wallpaper settings screen -->
   <string name="customize_wallpapers">Sa gīnun riña raga’a</string>
   <!-- Title for the customize home screen section with sponsored shortcuts. -->
@@ -2416,9 +2412,7 @@
   <!-- Content description for the action bar "up" button -->
   <string name="action_bar_up_description">Gāchē nun gan’ānj nāhuīt</string>
   <!-- Header text for the Stories screen. -->
-  <string name="stories_screen_text_news">Notîsia</string>
   <!-- Text indicating that the Pocket story that also displays this text is a sponsored story by other 3rd party entity. -->
-  <string name="pocket_stories_sponsor_indication">Sa rugûñu’ūnj rukû nan</string>
   <!-- Snackbar message for enrolling in a Nimbus experiment from the secret settings when Studies preference is Off. -->
   <string name="experiments_snackbar">Nāchrūn telemetrîa da’ gā’hue gā’nïnjt nej dato.</string>
   <!-- Snackbar button text to navigate to telemetry settings. -->

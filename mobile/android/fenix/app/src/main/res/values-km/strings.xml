@@ -56,7 +56,6 @@
   <!-- The action text displayed on the synced tabs page when the user is not logged into an account, prompting the user to sign into their account. When clicked, it takes the user to the account sign-in flow. -->
   <string name="tab_manager_empty_synced_tabs_page_sign_in_cta">បញ្ជាប់ចូល</string>
   <!-- Text for the button used to show all stories -->
-  <string name="homepage_all_stories">រឿងរ៉ាវទាំងអស់</string>
   <!--
     Home - Bookmarks
 
@@ -709,9 +708,7 @@
   -->
   <string name="customize_toggle_recently_visited">បាន​ចូលមើល​ថ្មីៗ</string>
   <!-- Title for the customize home screen section with Pocket. -->
-  <string name="customize_toggle_pocket_3">រឿងរ៉ាវ</string>
   <!-- Title for the customize home screen section with sponsored Pocket stories. -->
-  <string name="customize_toggle_pocket_sponsored">រឿងរ៉ាវដែលបានឧបត្ថម្ភ</string>
   <!-- Title for the opening wallpaper settings screen -->
   <string name="customize_wallpapers">ផ្ទាំងរូបភាព</string>
   <!-- Title for the customize home screen section with sponsored shortcuts. -->

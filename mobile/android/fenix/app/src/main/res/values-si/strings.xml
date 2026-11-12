@@ -546,7 +546,6 @@
   -->
   <string name="customize_toggle_recently_visited">මෑතදී ගොඩවැදුණු</string>
   <!-- Title for the customize home screen section with sponsored Pocket stories. -->
-  <string name="customize_toggle_pocket_sponsored">අනුග්‍රහය ලද කතා</string>
   <!-- Title for the opening wallpaper settings screen -->
   <string name="customize_wallpapers">බිතුපත්</string>
   <!-- Title for the customize home screen section with sponsored shortcuts. -->
@@ -1907,7 +1906,6 @@
   <!-- Content description for the action bar "up" button -->
   <string name="action_bar_up_description">ඉහළට යාත්‍රණය</string>
   <!-- Text indicating that the Pocket story that also displays this text is a sponsored story by other 3rd party entity. -->
-  <string name="pocket_stories_sponsor_indication">අනුග්‍රහය ලද</string>
   <!-- Snackbar button text to navigate to telemetry settings. -->
   <string name="experiments_snackbar_button">සැකසුම් වෙත යන්න</string>
   <!--

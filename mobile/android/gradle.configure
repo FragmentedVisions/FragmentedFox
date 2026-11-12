@@ -308,8 +308,6 @@ set_config(
         "mobile/android/geckoview",
         "mobile/android/geckoview_example",
         "mobile/android/test_runner",
-        "mobile/android/examples/messaging_example",
-        "mobile/android/examples/port_messaging_example",
     ],
 )
 

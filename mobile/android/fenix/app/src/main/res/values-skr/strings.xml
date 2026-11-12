@@ -545,7 +545,6 @@
   -->
   <string name="customize_toggle_recently_visited">حالیہ ݙٹھے</string>
   <!-- Title for the customize home screen section with sponsored Pocket stories. -->
-  <string name="customize_toggle_pocket_sponsored">سپانسر تھیاں کہاݨیاں</string>
   <!-- Title for the opening wallpaper settings screen -->
   <string name="customize_wallpapers">وال پیپرز</string>
   <!-- Title for the customize home screen section with sponsored shortcuts. -->
@@ -1938,7 +1937,6 @@
   <!-- Content description for the action bar "up" button -->
   <string name="action_bar_up_description">اُتے ون٘ڄو</string>
   <!-- Text indicating that the Pocket story that also displays this text is a sponsored story by other 3rd party entity. -->
-  <string name="pocket_stories_sponsor_indication">سپانسر تھئے</string>
   <!-- Snackbar message for enrolling in a Nimbus experiment from the secret settings when Studies preference is Off. -->
   <string name="experiments_snackbar">ڈیٹا پٹھݨ کیتے ٹیلی میٹری فعال کرو۔</string>
   <!-- Snackbar button text to navigate to telemetry settings. -->

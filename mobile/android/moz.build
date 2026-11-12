@@ -109,9 +109,5 @@ TEST_HARNESS_FILES.testing.mochitest.tests.junit += [
     "geckoview/src/androidTest/assets/www/worker/service-worker.js",
 ]
 
-SPHINX_TREES["/mobile/android"] = "docs"
-SPHINX_TREES["/mobile/android/fenix"] = "fenix/docs"
-SPHINX_TREES["/mobile/android/focus-android"] = "focus-android/docs"
-
 with Files("docs/**"):
     SCHEDULES.exclusive = ["docs"]

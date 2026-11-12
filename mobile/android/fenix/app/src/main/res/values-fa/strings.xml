@@ -702,9 +702,7 @@
   -->
   <string name="customize_toggle_recently_visited">بازدید‌های اخیر</string>
   <!-- Title for the customize home screen section with Pocket. -->
-  <string name="customize_toggle_pocket_3">داستان‌ها</string>
   <!-- Title for the customize home screen section with sponsored Pocket stories. -->
-  <string name="customize_toggle_pocket_sponsored">داستان‌های حامیان</string>
   <!-- Title for the opening wallpaper settings screen -->
   <string name="customize_wallpapers">کاغذدیواری‌ها</string>
   <!-- Title for the customize home screen section with sponsored shortcuts. -->
@@ -2454,7 +2452,6 @@
   <!-- Content description for the action bar "up" button -->
   <string name="action_bar_up_description">پیمایش به بالا</string>
   <!-- Text indicating that the Pocket story that also displays this text is a sponsored story by other 3rd party entity. -->
-  <string name="pocket_stories_sponsor_indication">حمایت شده</string>
   <!-- Snackbar message for enrolling in a Nimbus experiment from the secret settings when Studies preference is Off. -->
   <string name="experiments_snackbar">به کار انداختن دورسنجی برای ارسال داده.</string>
   <!-- Snackbar button text to navigate to telemetry settings. -->

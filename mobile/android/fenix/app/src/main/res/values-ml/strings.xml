@@ -20,7 +20,6 @@
   <!-- Content description (not visible, for screen readers etc.): "Private Browsing" menu button. -->
   <string name="content_description_private_browsing">സ്വകാര്യ തിരയൽ</string>
   <!-- Content description (not visible, for screen readers etc.): "Normal Browsing" menu button. -->
-  <string name="content_description_normal_browsing">പൊതുതിരച്ചിൽ</string>
   <!-- Placeholder text shown in the search bar before a user enters text for the default engine -->
   <string name="search_hint">തിരയുക അല്ലെങ്കിൽ വിലാസം നൽകുക</string>
   <!-- Shorter placeholder text shown in the search bar when an additional action (voice search) is rendered alongside the hint. -->
@@ -56,7 +55,6 @@
   <!-- The action text displayed on the synced tabs page when the user is not logged into an account, prompting the user to sign into their account. When clicked, it takes the user to the account sign-in flow. -->
   <string name="tab_manager_empty_synced_tabs_page_sign_in_cta">പ്രവേശിക്കുക</string>
   <!-- Text for the button used to show all stories -->
-  <string name="homepage_all_stories">എല്ലാ കഥകളും</string>
   <!--
     Home - Bookmarks
 
@@ -808,9 +806,7 @@
   -->
   <string name="customize_toggle_recently_visited">അടുത്തിടെ സന്ദർശിച്ചതു്</string>
   <!-- Title for the customize home screen section with Pocket. -->
-  <string name="customize_toggle_pocket_3">കഥകൾ</string>
   <!-- Title for the customize home screen section with sponsored Pocket stories. -->
-  <string name="customize_toggle_pocket_sponsored">പണം കൊണ്ടു് പ്രസരിപ്പിച്ച കഥകൾ</string>
   <!-- Title for the opening wallpaper settings screen -->
   <string name="customize_wallpapers">ചുവർകടലാസുകൾ</string>
   <!-- Label for the menu item that opens the wallpaper settings screen. -->
@@ -2983,18 +2979,13 @@
 
     Header text for a section on the home screen.
   -->
-  <string name="pocket_stories_header_2">കഥകൾ</string>
   <!-- Header text for the Stories screen. -->
-  <string name="stories_screen_text_news">വാൎത്ത</string>
   <!--
     Context description text for the "Discover more" button in the stories home screen section
     which navigates the user to a screen displaying more stories.
   -->
-  <string name="stories_discover_more_content_description">ഇനിയും കണ്ടെത്തുക</string>
   <!-- Content description for the "Navigate back" button on the top app bar of the Stories screen. -->
-  <string name="stories_back_button_content_description">പുറകോട്ടു ചെല്ലുക</string>
   <!-- Text indicating that the Pocket story that also displays this text is a sponsored story by other 3rd party entity. -->
-  <string name="pocket_stories_sponsor_indication">പണം കൊണ്ടു് പ്രചരിപ്പിച്ചതു്</string>
   <!-- Snackbar button text to navigate to telemetry settings. -->
   <string name="experiments_snackbar_button">ക്രമീകരണങ്ങളിലേക്കു പോവുക</string>
   <!--

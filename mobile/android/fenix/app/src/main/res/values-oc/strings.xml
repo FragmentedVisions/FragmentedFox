@@ -723,9 +723,7 @@
   -->
   <string name="customize_toggle_recently_visited">Visitats fa res</string>
   <!-- Title for the customize home screen section with Pocket. -->
-  <string name="customize_toggle_pocket_3">Stories</string>
   <!-- Title for the customize home screen section with sponsored Pocket stories. -->
-  <string name="customize_toggle_pocket_sponsored">Istòrias pairinejadas</string>
   <!-- Title for the opening wallpaper settings screen -->
   <string name="customize_wallpapers">Fonzes</string>
   <!-- Title for the customize home screen section with sponsored shortcuts. -->
@@ -2700,16 +2698,12 @@
 
     Header text for a section on the home screen.
   -->
-  <string name="pocket_stories_header_2">Istòrias</string>
   <!--
     Context description text for the "Discover more" button in the stories home screen section
     which navigates the user to a screen displaying more stories.
   -->
-  <string name="stories_discover_more_content_description">Descobrir mai d’istòrias</string>
   <!-- Content description for the "Navigate back" button on the top app bar of the Stories screen. -->
-  <string name="stories_back_button_content_description">Tornar</string>
   <!-- Text indicating that the Pocket story that also displays this text is a sponsored story by other 3rd party entity. -->
-  <string name="pocket_stories_sponsor_indication">Esponsorizat</string>
   <!-- Snackbar message for enrolling in a Nimbus experiment from the secret settings when Studies preference is Off. -->
   <string name="experiments_snackbar">Activar la telemetria per enviar de donadas</string>
   <!-- Snackbar button text to navigate to telemetry settings. -->

@@ -20,7 +20,6 @@
   <!-- Content description (not visible, for screen readers etc.): "Private Browsing" menu button. -->
   <string name="content_description_private_browsing">隐私浏览</string>
   <!-- Content description (not visible, for screen readers etc.): "Normal Browsing" menu button. -->
-  <string name="content_description_normal_browsing">常规浏览</string>
   <!-- Placeholder text shown in the search bar before a user enters text for the default engine -->
   <string name="search_hint">搜索或输入网址</string>
   <!-- Shorter placeholder text shown in the search bar when an additional action (voice search) is rendered alongside the hint. -->
@@ -60,7 +59,6 @@
   <!-- The action text displayed on the synced tabs page when the user is not logged into an account, prompting the user to sign into their account. When clicked, it takes the user to the account sign-in flow. -->
   <string name="tab_manager_empty_synced_tabs_page_sign_in_cta">登录</string>
   <!-- Text for the button used to show all stories -->
-  <string name="homepage_all_stories">所有文章</string>
   <!--
     Home - Bookmarks
 
@@ -935,9 +933,7 @@
   -->
   <string name="customize_toggle_recently_visited">最近访问</string>
   <!-- Title for the customize home screen section with Pocket. -->
-  <string name="customize_toggle_pocket_3">文章</string>
   <!-- Title for the customize home screen section with sponsored Pocket stories. -->
-  <string name="customize_toggle_pocket_sponsored">赞助内容</string>
   <!-- Title for the opening wallpaper settings screen -->
   <string name="customize_wallpapers">壁纸</string>
   <!-- Label for the menu item that opens the wallpaper settings screen. -->
@@ -3257,18 +3253,13 @@
 
     Header text for a section on the home screen.
   -->
-  <string name="pocket_stories_header_2">文章</string>
   <!-- Header text for the Stories screen. -->
-  <string name="stories_screen_text_news">新闻</string>
   <!--
     Context description text for the "Discover more" button in the stories home screen section
     which navigates the user to a screen displaying more stories.
   -->
-  <string name="stories_discover_more_content_description">发现更多文章</string>
   <!-- Content description for the "Navigate back" button on the top app bar of the Stories screen. -->
-  <string name="stories_back_button_content_description">浏览上一页</string>
   <!-- Text indicating that the Pocket story that also displays this text is a sponsored story by other 3rd party entity. -->
-  <string name="pocket_stories_sponsor_indication">赞助推广</string>
   <!-- Snackbar message for enrolling in a Nimbus experiment from the secret settings when Studies preference is Off. -->
   <string name="experiments_snackbar">启用遥测以发送数据。</string>
   <!-- Snackbar button text to navigate to telemetry settings. -->

@@ -1353,7 +1353,6 @@
   <!-- Content description for expanding the inactive tabs section. -->
   <string name="inactive_tabs_expand_content_description">o lukin e poki pi pali ala</string>
   <!-- Text indicating that the Pocket story that also displays this text is a sponsored story by other 3rd party entity. -->
-  <string name="pocket_stories_sponsor_indication">jan li pana e mani tawa lipu ni</string>
   <!-- Snackbar button text to navigate to telemetry settings. -->
   <string name="experiments_snackbar_button">o lukin e nasin ilo</string>
   <!-- Translations feature -->

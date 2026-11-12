@@ -624,9 +624,7 @@
   -->
   <string name="customize_toggle_recently_visited">Gweladennet nevez ’zo</string>
   <!-- Title for the customize home screen section with Pocket. -->
-  <string name="customize_toggle_pocket_3">Pennadoù</string>
   <!-- Title for the customize home screen section with sponsored Pocket stories. -->
-  <string name="customize_toggle_pocket_sponsored">Istorioù paeroniet</string>
   <!-- Title for the opening wallpaper settings screen -->
   <string name="customize_wallpapers">Drekleurioù</string>
   <!-- Title for the customize home screen section with sponsored shortcuts. -->
@@ -2283,9 +2281,7 @@
 
     Header text for a section on the home screen.
   -->
-  <string name="pocket_stories_header_2">Pennadoù</string>
   <!-- Text indicating that the Pocket story that also displays this text is a sponsored story by other 3rd party entity. -->
-  <string name="pocket_stories_sponsor_indication">Paeroniet</string>
   <!-- Snackbar message for enrolling in a Nimbus experiment from the secret settings when Studies preference is Off. -->
   <string name="experiments_snackbar">Gweredekaet ar pellventerezh evit kas roadennoù.</string>
   <!-- Snackbar button text to navigate to telemetry settings. -->

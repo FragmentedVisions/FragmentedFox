@@ -54,7 +54,6 @@
   <!-- The action text displayed on the synced tabs page when the user is not logged into an account, prompting the user to sign into their account. When clicked, it takes the user to the account sign-in flow. -->
   <string name="tab_manager_empty_synced_tabs_page_sign_in_cta">Kcem</string>
   <!-- Text for the button used to show all stories -->
-  <string name="homepage_all_stories">Akk tidyanin</string>
   <!--
     Home - Bookmarks
 
@@ -728,9 +727,7 @@
   -->
   <string name="customize_toggle_recently_visited">Yemmẓer melmi kan</string>
   <!-- Title for the customize home screen section with Pocket. -->
-  <string name="customize_toggle_pocket_3">Imagraden</string>
   <!-- Title for the customize home screen section with sponsored Pocket stories. -->
-  <string name="customize_toggle_pocket_sponsored">Tiqṣidin yettwarefden</string>
   <!-- Title for the opening wallpaper settings screen -->
   <string name="customize_wallpapers">Tugniwin n ugilal</string>
   <!-- Title for the customize home screen section with sponsored shortcuts. -->
@@ -2609,16 +2606,12 @@
 
     Header text for a section on the home screen.
   -->
-  <string name="pocket_stories_header_2">Imagraden</string>
   <!--
     Context description text for the "Discover more" button in the stories home screen section
     which navigates the user to a screen displaying more stories.
   -->
-  <string name="stories_discover_more_content_description">Snirem ugar n tqeṣṣiḍin</string>
   <!-- Content description for the "Navigate back" button on the top app bar of the Stories screen. -->
-  <string name="stories_back_button_content_description">Inig ar deffir</string>
   <!-- Text indicating that the Pocket story that also displays this text is a sponsored story by other 3rd party entity. -->
-  <string name="pocket_stories_sponsor_indication">S lmendad</string>
   <!-- Snackbar message for enrolling in a Nimbus experiment from the secret settings when Studies preference is Off. -->
   <string name="experiments_snackbar">Rmed tilisɣelt i tuzna n yisefka.</string>
   <!-- Snackbar button text to navigate to telemetry settings. -->

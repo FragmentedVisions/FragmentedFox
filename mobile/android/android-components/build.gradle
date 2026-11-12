@@ -139,7 +139,7 @@ if (findProject(":geckoview") == null) {
 }
 
 detekt {
-    input = files("$projectDir/components", "$projectDir/buildSrc", "$projectDir/samples")
+    input = files("$projectDir/components", "$projectDir/buildSrc")
     config = files("$projectDir/config/detekt.yml")
     baseline = file("$projectDir/config/detekt-baseline.xml")
 
@@ -191,12 +191,6 @@ tasks.withType(DetektCreateBaselineTask).configureEach() {
     dependsOn(":components:browser-icons:updateBuiltInExtensionVersion")
     dependsOn(":components:feature-accounts:updateBuiltInExtensionVersion")
     dependsOn(":components:feature-readerview:updateBuiltInExtensionVersion")
-    dependsOn(":components:feature-search:updateAdsExtensionVersion")
-    dependsOn(":components:feature-search:updateCookiesExtensionVersion")
-    dependsOn(":components:samples-browser:updateBorderifyExtensionVersion")
-    dependsOn(":components:samples-browser:updateTestExtensionVersion")
-    dependsOn(":components:samples-compose-browser:updateBorderifyExtensionVersion")
-    dependsOn(":components:samples-compose-browser:updateTestExtensionVersion")
     dependsOn(":components:tooling-detekt:assemble")
 
     exclude "**/build.gradle.kts"

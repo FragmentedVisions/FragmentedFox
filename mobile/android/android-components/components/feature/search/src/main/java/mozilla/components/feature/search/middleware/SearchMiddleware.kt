@@ -45,6 +45,8 @@ data class SearchExtraParams(
 internal const val SEARCH_CONFIG_ICONS_COLLECTION_NAME = "search-config-icons"
 
 private const val PREFERRED_DEFAULT_SEARCH_ENGINE_ID = "ddg"
+private const val BING_ID = "bing"
+private const val ECOSIA_ID = "ecosia"
 
 /**
  * [Middleware] implementation for loading and saving [SearchEngine]s whenever the state changes.
@@ -59,6 +61,8 @@ private const val PREFERRED_DEFAULT_SEARCH_ENGINE_ID = "ddg"
  * @param metadataStorage A storage for saving additional metadata related to search.
  * @param searchExtraParams Optional search extra params.
  * @param ioDispatcher The coroutine dispatcher to be used when loading.
+ * @param replaceBingWithEcosia Whether Bing is left out of the search engine list and Ecosia is
+ * offered in its place.
  */
 class SearchMiddleware(
     context: Context,
@@ -73,6 +77,7 @@ class SearchMiddleware(
     private val searchEngineSelectorConfig: SearchEngineSelectorConfig? = null,
     private val searchExtraParams: SearchExtraParams? = null,
     private val ioDispatcher: CoroutineContext = Dispatchers.IO,
+    private val replaceBingWithEcosia: Boolean = false,
 ) : Middleware<BrowserState, BrowserAction> {
     private val logger = Logger("SearchMiddleware")
     private val scope = CoroutineScope(ioDispatcher)
@@ -181,13 +186,29 @@ class SearchMiddleware(
             }
         }
 
+        val regionEngines = async(ioDispatcher) {
+            if (replaceBingWithEcosia) {
+                val ecosia = findOrLoadEcosia(regionBundle.await().list + allAdditionalSearchEngines.await())
+                regionBundle.await().list.replaceBingWithEcosia(ecosia)
+            } else {
+                regionBundle.await().list
+            }
+        }
+        val additionalEngines = async(ioDispatcher) {
+            if (replaceBingWithEcosia) {
+                allAdditionalSearchEngines.await().filterNot { it.isBing() || it.isEcosia() }
+            } else {
+                allAdditionalSearchEngines.await()
+            }
+        }
+
         val customSearchEngines = async(ioDispatcher) { customStorage.loadSearchEngineList() }
         val hiddenSearchEngineIds = async(ioDispatcher) { metadataStorage.getHiddenSearchEngines() }
         val disabledSearchEngineIds = async(ioDispatcher) { metadataStorage.getDisabledSearchEngineIds() }
         val additionalSearchEngineIds = async(ioDispatcher) { metadataStorage.getAdditionalSearchEngines() }
 
         val hiddenSearchEngines = mutableListOf<SearchEngine>()
-        val filteredRegionSearchEngines = regionBundle.await().list.filter { searchEngine ->
+        val filteredRegionSearchEngines = regionEngines.await().filter { searchEngine ->
             if (hiddenSearchEngineIds.await().contains(searchEngine.id)) {
                 hiddenSearchEngines.add(searchEngine)
                 false
@@ -196,14 +217,14 @@ class SearchMiddleware(
             }
         }
 
-        val regionSearchEngineIds = regionBundle.await().list.map { searchEngine -> searchEngine.id }
+        val regionSearchEngineIds = regionEngines.await().map { searchEngine -> searchEngine.id }
 
-        val additionalSearchEngines = allAdditionalSearchEngines.await().filter { searchEngine ->
+        val additionalSearchEngines = additionalEngines.await().filter { searchEngine ->
             searchEngine.id in additionalSearchEngineIds.await() &&
                 searchEngine.id !in regionSearchEngineIds
         }
 
-        val additionalAvailableSearchEngines = allAdditionalSearchEngines.await().filter { searchEngine ->
+        val additionalAvailableSearchEngines = additionalEngines.await().filter { searchEngine ->
             searchEngine.id !in additionalSearchEngineIds.await() &&
                 searchEngine.id !in regionSearchEngineIds
         }
@@ -234,6 +255,19 @@ class SearchMiddleware(
         )
         store.dispatch(action)
     }
+
+    @SuppressWarnings("TooGenericExceptionCaught")
+    private suspend fun findOrLoadEcosia(engines: List<SearchEngine>): SearchEngine? =
+        engines.firstOrNull { it.isEcosia() } ?: try {
+            bundleStorage.load(
+                ids = listOf(ECOSIA_ID),
+                searchExtraParams = searchExtraParams,
+                coroutineContext = ioDispatcher,
+            ).firstOrNull()
+        } catch (e: Exception) {
+            logger.error("Could not load Ecosia", e)
+            null
+        }
 
     /**
      * Check whether to avoid rebuilding the search configuration.
@@ -545,4 +579,33 @@ class SearchMiddleware(
             val defaultSearchEngineName: String?,
         )
     }
+}
+
+private fun SearchEngine.isBing() = id.startsWith(BING_ID)
+
+private fun SearchEngine.isEcosia() = id.startsWith(ECOSIA_ID)
+
+/**
+ * Returns this list without any Bing engine, with [ecosia] in the place of the first one. If there
+ * was no Bing engine, [ecosia] goes at the end.
+ */
+internal fun List<SearchEngine>.replaceBingWithEcosia(ecosia: SearchEngine?): List<SearchEngine> {
+    val replacement = ecosia?.copy(
+        isOptional = false,
+        type = if (ecosia.type == SearchEngine.Type.BUNDLED_ADDITIONAL) SearchEngine.Type.BUNDLED else ecosia.type,
+    )
+    val result = mutableListOf<SearchEngine>()
+    var placed = false
+    for (engine in this) {
+        when {
+            engine.isBing() -> if (replacement != null && !placed) {
+                result.add(replacement)
+                placed = true
+            }
+            engine.isEcosia() -> Unit
+            else -> result.add(engine)
+        }
+    }
+    if (replacement != null && !placed) result.add(replacement)
+    return result
 }

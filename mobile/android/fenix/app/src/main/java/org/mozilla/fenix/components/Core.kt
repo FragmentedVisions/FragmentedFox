@@ -369,6 +369,7 @@ class Core(
                     migration = SearchMigration(context),
                     searchExtraParams = searchExtraParams,
                     searchEngineSelectorConfig = getSearchEngineSelectorConfig(),
+                    replaceBingWithEcosia = true,
                 ),
                 RecordingDevicesMiddleware(context, context.components.notificationsDelegate),
                 PromptMiddleware(),

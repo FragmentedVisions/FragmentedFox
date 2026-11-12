@@ -292,6 +292,9 @@ def check_search():
     reader = read(os.path.join(AC, "components/feature/search/src/main/java/mozilla/components/feature/search/storage/SearchEngineReader.kt"))
     if "PartnerParams::strip" not in reader or "dropPartnerCode = true" not in reader:
         fail("search", "SearchEngineReader.kt: search engines are no longer stripped of partner codes")
+    core = read(os.path.join(APP, "src/main/java/org/mozilla/fenix/components/Core.kt"))
+    if "replaceBingWithEcosia = true" not in core:
+        fail("search", "Core.kt: Bing is no longer replaced by Ecosia in the search engine list")
     top_sites = read(os.path.join(APP, "src/main/java/org/mozilla/fenix/home/topsites/controller/TopSiteController.kt"))
     if "appendSearchAttributionToUrlIfNeeded" in top_sites:
         fail("search", "TopSiteController.kt: the Google shortcut must not get a partner code added")

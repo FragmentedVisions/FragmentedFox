@@ -13,7 +13,6 @@ import mozilla.components.service.nimbus.messaging.FxNimbusMessaging
 import mozilla.components.service.nimbus.messaging.NimbusSystem
 import mozilla.components.support.base.log.logger.Logger
 import org.mozilla.experiments.nimbus.NimbusInterface
-import org.mozilla.experiments.nimbus.internal.GeckoPrefHandler
 import org.mozilla.experiments.nimbus.internal.NimbusException
 import org.mozilla.experiments.nimbus.internal.NimbusServerSettings
 import org.mozilla.fenix.BuildConfig
@@ -41,7 +40,6 @@ fun createNimbus(
     settings: Settings,
     urlString: String?,
     remoteSettingsService: RemoteSettingsService?,
-    geckoPrefHandler: GeckoPrefHandler,
 ): NimbusApi {
     // These values can be used in the JEXL expressions when targeting experiments.
     val customTargetingAttributes = CustomAttributeProvider.getCustomTargetingAttributes(context)
@@ -94,7 +92,6 @@ fun createNimbus(
             settings.nimbusExperimentsFetched = true
         }
         recordedContext = recordedNimbusContext
-        this.geckoPrefHandler = geckoPrefHandler
     }.build(appInfo, serverSettings).also { nimbusApi ->
         nimbusApi.recordIsReady(FxNimbus.features.nimbusIsReady.value().eventCount)
     }

@@ -550,12 +550,10 @@ open class FenixApplication : Application(), Provider, ThemeProvider {
     @OptIn(DelicateCoroutinesApi::class, ExperimentalAndroidComponentsApi::class) // GlobalScope usage
     private fun queueNimbusFetchInForeground(queue: RunWhenReadyQueue) =
         runOnVisualCompleteness(queue) {
-            components.nimbus.geckoPrefHandler.start()
             GlobalScope.launch(IO) {
                 components.nimbus.sdk.maybeFetchExperiments(
                     settings = components.settings,
                 )
-                components.nimbus.geckoPrefHandler.getPreferenceStateFromGecko().await()
             }
         }
 

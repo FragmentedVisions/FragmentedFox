@@ -7,7 +7,6 @@ package org.mozilla.fenix.components
 import android.content.Context
 import mozilla.appservices.remotesettings.RemoteSettingsService
 import mozilla.components.ExperimentalAndroidComponentsApi
-import mozilla.components.concept.engine.Engine
 import mozilla.components.service.nimbus.NimbusApi
 import mozilla.components.service.nimbus.messaging.FxNimbusMessaging
 import mozilla.components.service.nimbus.messaging.NimbusMessagingController
@@ -18,7 +17,6 @@ import org.mozilla.experiments.nimbus.NimbusEventStore
 import org.mozilla.experiments.nimbus.NimbusMessagingHelperInterface
 import org.mozilla.fenix.BuildConfig
 import org.mozilla.fenix.experiments.createNimbus
-import org.mozilla.fenix.experiments.prefhandling.NimbusGeckoPrefHandler
 import org.mozilla.fenix.ext.components
 import org.mozilla.fenix.messaging.CustomAttributeProvider
 import org.mozilla.fenix.perf.lazyMonitored
@@ -29,7 +27,6 @@ import org.mozilla.fenix.perf.lazyMonitored
 @OptIn(ExperimentalAndroidComponentsApi::class)
 class NimbusComponents(
     private val context: Context,
-    private val engine: Lazy<Engine>,
     remoteSettingsService: RemoteSettingsService?,
 ) {
 
@@ -43,16 +40,7 @@ class NimbusComponents(
             context.components.settings,
             BuildConfig.NIMBUS_ENDPOINT,
             remoteSettingsService,
-            geckoPrefHandler,
         )
-    }
-
-    /**
-     * Bridge between Nimbus and Gecko to allow enrollment, unenrollment, and observation of
-     * Gecko pref experiments.
-     */
-    val geckoPrefHandler by lazyMonitored {
-        NimbusGeckoPrefHandler(engine = engine, nimbusApi = lazy { sdk })
     }
 
     /**

@@ -11,7 +11,7 @@ Builds run on GitHub Actions. Each workflow is started by hand: open the reposit
 
 ## Android
 
-The job bootstraps the Android toolchain, compiles GeckoView from source on all 4 cores with debug symbols off (`--disable-debug-symbols`) and WebRTC left out (`--disable-webrtc`), then builds the app with `./mach gradle fenix:assembleRelease`. The C and C++ compile output is cached between runs with ccache (saved even when a build fails), so a rerun after a small fix reuses most of it. Rust code is not cached. The toolchain download is not cached: caching the tools folder made bootstrap fail, because the Android NDK installer tried to unzip over the restored copy.
+The job bootstraps the Android toolchain, compiles GeckoView from source on all 4 cores with debug symbols off (`--disable-debug-symbols`) WebRTC left out (`--disable-webrtc`) and only Fenix configured in Gradle (`--enable-android-subproject=fenix`), then builds the app with `./mach gradle fenix:assembleRelease`. The C and C++ compile output is cached between runs with ccache (saved even when a build fails), so a rerun after a small fix reuses most of it. Rust code is not cached. The toolchain download is not cached: caching the tools folder made bootstrap fail, because the Android NDK installer tried to unzip over the restored copy.
 
 The `shrink` choice (default `on`) shrinks code and resources for a smaller app. Choose `off` to add `-PdisableOptimization` if shrinking fails. The job adds 8 GB of swap, uploads the build logs and a size breakdown of the APK, and prints disk and memory details if a step fails.
 

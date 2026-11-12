@@ -18,6 +18,7 @@ import tempfile
 OWNED = [
     "mobile/android/fenix",
     "mobile/android/android-components",
+    "mobile/android/focus-android",
     "mobile/android/branding/fragmentedfox",
     "browser/branding/fragmentedfox",
     "fragmentedfox-docs",

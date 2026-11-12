@@ -148,6 +148,11 @@ def check_removed():
         for pattern in forbidden["patterns"]:
             if re.search(pattern, text):
                 fail("removed", f"{os.path.relpath(path, ROOT)}: matches removed pattern {pattern}")
+    if os.path.exists(os.path.join(ROOT, "mobile/android/focus-android")):
+        fail("removed", "mobile/android/focus-android is back; Focus is deleted and the build only configures Fenix")
+    workflow = read(os.path.join(ROOT, ".github/workflows/build-android.yml"))
+    if "--enable-android-subproject=fenix" not in workflow:
+        fail("removed", "build-android.yml: the build must set --enable-android-subproject=fenix now that Focus is gone")
     manifest = re.sub(r"<[^<>]*tools:node=\"remove\"[^<>]*>", "", read(os.path.join(APP, "src/main/AndroidManifest.xml")))
     for permission in forbidden["permissions"]:
         if permission in manifest:

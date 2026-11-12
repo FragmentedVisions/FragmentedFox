@@ -2,8 +2,6 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-import static org.mozilla.conventions.BuildConfigKt.updateExtensionVersion
-
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
@@ -56,23 +54,6 @@ dependencies {
     testImplementation libs.kotlinx.coroutines.test
     testImplementation libs.robolectric
 }
-
-tasks.register("updateAdsExtensionVersion", Copy) { task ->
-    updateExtensionVersion(task, 'src/main/assets/extensions/ads', rootProject.ext.config.componentsVersion)
-}
-
-tasks.register("updateCookiesExtensionVersion", Copy) { task ->
-    updateExtensionVersion(task, 'src/main/assets/extensions/search', rootProject.ext.config.componentsVersion)
-}
-
-// Make sure DAGP asset-source exploding happens after ExtensionVersion tasks
-tasks.matching { it.name.startsWith("explodeAssetSource") }.configureEach { t ->
-    t.dependsOn(tasks.named("updateAdsExtensionVersion"))
-    t.dependsOn(tasks.named("updateCookiesExtensionVersion"))
-}
-
-preBuild.dependsOn "updateAdsExtensionVersion"
-preBuild.dependsOn "updateCookiesExtensionVersion"
 
 apply from: '../../../common-config.gradle'
 apply from: '../../../publish.gradle'

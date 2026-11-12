@@ -21,7 +21,6 @@ env:
     gradle/
     mobile/android/android-components
     mobile/android/fenix
-    mobile/android/focus-android
     taskcluster/config.yml
 
   GH_REPO: ${{ github.repository }}

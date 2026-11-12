@@ -21,6 +21,7 @@
     "lib\\.push\\.firebase",
     "components:lib-push-firebase",
     "components:lib-crash-sentry",
+    "components:lib-auth",
     "components:lib-integrity-googleplay",
     "components:feature-summarize",
     "components:concept-llm",

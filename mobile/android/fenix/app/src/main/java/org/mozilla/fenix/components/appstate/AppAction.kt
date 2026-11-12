@@ -17,8 +17,6 @@ import mozilla.components.lib.crash.store.CrashAction
 import mozilla.components.lib.state.Action
 import mozilla.components.service.nimbus.messaging.Message
 import mozilla.components.service.nimbus.messaging.MessageSurfaceId
-import mozilla.components.service.pocket.PocketStory.ContentRecommendation
-import mozilla.components.service.pocket.PocketStory.SponsoredContent
 import org.mozilla.fenix.bookmarks.BookmarksGlobalResultReport
 import org.mozilla.fenix.browser.StandardSnackbarError
 import org.mozilla.fenix.browser.browsingmode.BrowsingMode
@@ -27,9 +25,6 @@ import org.mozilla.fenix.components.appstate.setup.checklist.ChecklistItem
 import org.mozilla.fenix.components.appstate.webcompat.WebCompatState
 import org.mozilla.fenix.components.metrics.MetricsUtils
 import org.mozilla.fenix.home.bookmarks.Bookmark
-import org.mozilla.fenix.home.pocket.PocketImpression
-import org.mozilla.fenix.home.pocket.PocketRecommendedStoriesCategory
-import org.mozilla.fenix.home.pocket.PocketRecommendedStoriesSelectedCategory
 import org.mozilla.fenix.home.recentsyncedtabs.RecentSyncedTab
 import org.mozilla.fenix.home.recentsyncedtabs.RecentSyncedTabState
 import org.mozilla.fenix.home.recenttabs.RecentTab
@@ -570,81 +565,6 @@ sealed class AppAction : Action {
          * @property isLocked whether the feature should be locked.
          */
         data class UpdatePrivateBrowsingLock(val isLocked: Boolean) : PrivateBrowsingLockAction()
-    }
-
-    /**
-     * [AppAction]s related to the content recommendations feature.
-     */
-    sealed class ContentRecommendationsAction : AppAction() {
-        /**
-         * [ContentRecommendationsAction] dispatched when content recommendations were fetched.
-         *
-         * @property recommendations The new list of [ContentRecommendation] that was fetched.
-         */
-        data class ContentRecommendationsFetched(
-            val recommendations: List<ContentRecommendation>,
-        ) : ContentRecommendationsAction()
-
-        /**
-         * [ContentRecommendationsAction] dispatched when an user clicks on a content
-         * recommendation.
-         *
-         * @property recommendation The [ContentRecommendation] that was clicked.
-         * @property position The position (0-index) of the [ContentRecommendation].
-         */
-        data class ContentRecommendationClicked(
-            val recommendation: ContentRecommendation,
-            val position: Int,
-        ) : ContentRecommendationsAction()
-
-        /**
-         * Indicates the given [categoryName] was selected by the user.
-         */
-        data class SelectPocketStoriesCategory(val categoryName: String) :
-            ContentRecommendationsAction()
-
-        /**
-         * Indicates the given [categoryName] was deselected by the user.
-         */
-        data class DeselectPocketStoriesCategory(val categoryName: String) :
-            ContentRecommendationsAction()
-
-        /**
-         * Indicates the given story [impressions] were seen by the user.
-         *
-         * @property impressions A list of [PocketImpression]s detailing the story shown and
-         * their respective position.
-         */
-        data class PocketStoriesShown(val impressions: List<PocketImpression>) :
-            ContentRecommendationsAction()
-
-        /**
-         * Cleans all in-memory data about Pocket stories and categories.
-         */
-        data object PocketStoriesClean : ContentRecommendationsAction()
-
-        /**
-         * Replaces the current list of [SponsoredContent]s.
-         *
-         * @property sponsoredContents THe new list of [SponsoredContent] that was fetched.
-         */
-        data class SponsoredContentsChange(
-            val sponsoredContents: List<SponsoredContent>,
-        ) : ContentRecommendationsAction()
-
-        /**
-         * Replaces the list of available Pocket recommended stories categories.
-         */
-        data class PocketStoriesCategoriesChange(val storiesCategories: List<PocketRecommendedStoriesCategory>) :
-            ContentRecommendationsAction()
-
-        /**
-         * Restores the list of Pocket recommended stories categories selections.
-         */
-        data class PocketStoriesCategoriesSelectionsChange(
-            val storiesCategories: List<PocketRecommendedStoriesCategory>,
-            val categoriesSelected: List<PocketRecommendedStoriesSelectedCategory>,
-        ) : ContentRecommendationsAction()
     }
 
     /**

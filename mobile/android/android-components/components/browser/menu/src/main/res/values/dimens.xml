@@ -49,11 +49,6 @@
     <dimen name="mozac_browser_menu_checkbox_padding">12dp</dimen>
     <!--BrowserMenuCheckbox -->
 
-    <!--WebExtensionBrowserMenuItem -->
-    <dimen name="mozac_browser_menu_item_web_extension_icon_width">24dp</dimen>
-    <dimen name="mozac_browser_menu_item_web_extension_icon_height">24dp</dimen>
-    <!--WebExtensionBrowserMenuItem -->
-
     <!--BrowserMenuImageText-->
 
     <!--Icon-->

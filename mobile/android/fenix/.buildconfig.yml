@@ -85,7 +85,6 @@ projects:
     - components:service-mars
     - components:service-merino-manifest
     - components:service-nimbus
-    - components:service-pocket
     - components:service-sync-autofill
     - components:service-sync-logins
     - components:support-android-test

@@ -105,28 +105,10 @@ class DefaultTermsOfUseDataProviderTest {
     }
 
     @Test
-    fun `showSponsoredStories returns the same as the referenced Settings value`() {
-        val settings = mockk<Settings>()
+    fun `sponsored stories and the stories feature are always off`() {
+        val defaultTermsOfUseDataProvider = DefaultTermsOfUseDataProvider(mockk<Settings>())
 
-        every { settings.showPocketSponsoredStories } returns true
-        val defaultTermsOfUseDataProvider1 = DefaultTermsOfUseDataProvider(settings)
-        assertTrue(defaultTermsOfUseDataProvider1.showSponsoredStories)
-
-        every { settings.showPocketSponsoredStories } returns false
-        val defaultTermsOfUseDataProvider2 = DefaultTermsOfUseDataProvider(settings)
-        assertFalse(defaultTermsOfUseDataProvider2.showSponsoredStories)
-    }
-
-    @Test
-    fun `showRecommendationsFeature returns the same as the referenced Settings value`() {
-        val settings = mockk<Settings>()
-
-        every { settings.showPocketRecommendationsFeature } returns true
-        val defaultTermsOfUseDataProvider1 = DefaultTermsOfUseDataProvider(settings)
-        assertTrue(defaultTermsOfUseDataProvider1.showStoriesFeature)
-
-        every { settings.showPocketRecommendationsFeature } returns false
-        val defaultTermsOfUseDataProvider2 = DefaultTermsOfUseDataProvider(settings)
-        assertFalse(defaultTermsOfUseDataProvider2.showStoriesFeature)
+        assertFalse(defaultTermsOfUseDataProvider.showSponsoredStories)
+        assertFalse(defaultTermsOfUseDataProvider.showStoriesFeature)
     }
 }

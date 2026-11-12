@@ -10,7 +10,6 @@ import io.mockk.verify
 import mozilla.components.feature.tab.collections.Tab
 import mozilla.components.feature.tab.collections.TabCollection
 import mozilla.components.feature.top.sites.TopSite
-import mozilla.components.service.pocket.PocketStory
 import org.junit.Before
 import org.junit.Test
 import org.mozilla.fenix.browser.browsingmode.BrowsingMode
@@ -18,8 +17,6 @@ import org.mozilla.fenix.components.appstate.AppState
 import org.mozilla.fenix.home.bookmarks.Bookmark
 import org.mozilla.fenix.home.bookmarks.controller.BookmarksController
 import org.mozilla.fenix.home.logo.TrackingProtectionController
-import org.mozilla.fenix.home.pocket.PocketRecommendedStoriesCategory
-import org.mozilla.fenix.home.pocket.controller.PocketStoriesController
 import org.mozilla.fenix.home.privatebrowsing.controller.PrivateBrowsingController
 import org.mozilla.fenix.home.recentsyncedtabs.RecentSyncedTab
 import org.mozilla.fenix.home.recentsyncedtabs.controller.RecentSyncedTabController
@@ -38,7 +35,6 @@ class SessionControlInteractorTest {
     private val recentTabController: RecentTabController = mockk(relaxed = true)
     private val recentSyncedTabController: RecentSyncedTabController = mockk(relaxed = true)
     private val bookmarksController: BookmarksController = mockk(relaxed = true)
-    private val pocketStoriesController: PocketStoriesController = mockk(relaxed = true)
     private val privateBrowsingController: PrivateBrowsingController = mockk(relaxed = true)
     private val toolbarController: ToolbarController = mockk(relaxed = true)
     private val homeSearchController: HomeSearchController = mockk(relaxed = true)
@@ -59,7 +55,6 @@ class SessionControlInteractorTest {
             recentSyncedTabController,
             bookmarksController,
             recentVisitsController,
-            pocketStoriesController,
             privateBrowsingController,
             toolbarController,
             homeSearchController,
@@ -223,44 +218,6 @@ class SessionControlInteractorTest {
     fun `WHEN save shortcut is called THEN handle the save action in the controller`() {
         interactor.onSaveShortcut(title = "Firefox", url = "firefox.com")
         verify { topSiteController.handleSaveShortcut(title = "Firefox", url = "firefox.com") }
-    }
-
-    @Test
-    fun `GIVEN a PocketStoriesInteractor WHEN a story is shown THEN handle it in a PocketStoriesController`() {
-        val shownStory: PocketStory = mockk()
-        val storyPosition = Triple(1, 2, 3)
-
-        interactor.onStoryShown(shownStory, storyPosition)
-
-        verify { pocketStoriesController.handleStoryShown(shownStory, storyPosition) }
-    }
-
-    @Test
-    fun `GIVEN a PocketStoriesInteractor WHEN stories are shown THEN handle it in a PocketStoriesController`() {
-        val shownStories: List<PocketStory> = emptyList()
-
-        interactor.onStoriesShown(shownStories)
-
-        verify { pocketStoriesController.handleStoriesShown(shownStories) }
-    }
-
-    @Test
-    fun `GIVEN a PocketStoriesInteractor WHEN a category is clicked THEN handle it in a PocketStoriesController`() {
-        val clickedCategory: PocketRecommendedStoriesCategory = mockk()
-
-        interactor.onCategoryClicked(clickedCategory)
-
-        verify { pocketStoriesController.handleCategoryClick(clickedCategory) }
-    }
-
-    @Test
-    fun `GIVEN a PocketStoriesInteractor WHEN a story is clicked THEN handle it in a PocketStoriesController`() {
-        val clickedStory: PocketStory = mockk()
-        val storyPosition = Triple(1, 2, 3)
-
-        interactor.onStoryClicked(clickedStory, storyPosition)
-
-        verify { pocketStoriesController.handleStoryClicked(clickedStory, storyPosition) }
     }
 
     @Test

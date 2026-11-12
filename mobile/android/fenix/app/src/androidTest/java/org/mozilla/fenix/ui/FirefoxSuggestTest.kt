@@ -32,7 +32,6 @@ class FirefoxSuggestTest {
     val composeTestRule = AndroidComposeTestRuleV2(
         HomeActivityTestRule(
             skipOnboarding = true,
-            isPocketEnabled = false,
             isRecentTabsFeatureEnabled = false,
             isWallpaperOnboardingEnabled = false,
         ),

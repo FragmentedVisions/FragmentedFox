@@ -13,7 +13,6 @@ import org.mozilla.fenix.components.appstate.lens.LensReducer
 import org.mozilla.fenix.components.appstate.privatebrowsinglock.PrivateBrowsingLockReducer
 import org.mozilla.fenix.components.appstate.qrScanner.QrScannerReducer
 import org.mozilla.fenix.components.appstate.readerview.ReaderViewStateReducer
-import org.mozilla.fenix.components.appstate.recommendations.ContentRecommendationsReducer
 import org.mozilla.fenix.components.appstate.reducer.FindInPageStateReducer
 import org.mozilla.fenix.components.appstate.search.SearchStateReducer
 import org.mozilla.fenix.components.appstate.setup.checklist.SetupChecklistReducer
@@ -226,11 +225,6 @@ internal object AppStoreReducer {
         is AppAction.UpdateWasNativeDefaultBrowserPromptShown -> {
             state.copy(wasNativeDefaultBrowserPromptShown = action.wasShown)
         }
-
-        is AppAction.ContentRecommendationsAction -> ContentRecommendationsReducer.reduce(
-            state = state,
-            action = action,
-        )
 
         is AppAction.WebCompatAction -> WebCompatReducer.reduce(state = state, action = action)
         is AppAction.SetupChecklistAction -> SetupChecklistReducer.reduce(

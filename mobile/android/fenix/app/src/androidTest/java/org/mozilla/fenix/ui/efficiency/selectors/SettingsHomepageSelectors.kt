@@ -52,13 +52,6 @@ object SettingsHomepageSelectors {
         groups = listOf("homepageSettings"),
     )
 
-    val POCKET_BUTTON = Selector(
-        strategy = SelectorStrategy.UIAUTOMATOR_WITH_TEXT,
-        value = "Pocket",
-        description = "the Pocket button",
-        groups = listOf("homepageSettings"),
-    )
-
     val all = listOf(
         SETTINGS_HOMEPAGE_TITLE,
         SHOW_TOP_SITES_TOGGLE,
@@ -66,6 +59,5 @@ object SettingsHomepageSelectors {
         JUMP_BACK_IN_BUTTON,
         RECENT_BOOKMARKS_BUTTON,
         RECENTLY_VISITED_BUTTON,
-        POCKET_BUTTON,
     )
 }

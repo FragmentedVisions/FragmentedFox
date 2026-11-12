@@ -21,7 +21,6 @@ import org.mozilla.fenix.ext.shouldShowRecentSyncedTabs
 import org.mozilla.fenix.ext.shouldShowRecentTabs
 import org.mozilla.fenix.home.bookmarks.Bookmark
 import org.mozilla.fenix.home.collections.CollectionsState
-import org.mozilla.fenix.home.pocket.PocketState
 import org.mozilla.fenix.home.recentsyncedtabs.RecentSyncedTab
 import org.mozilla.fenix.home.recentsyncedtabs.RecentSyncedTabState
 import org.mozilla.fenix.home.recenttabs.RecentTab
@@ -75,14 +74,12 @@ internal sealed class HomepageState {
      * @property bookmarks List of [Bookmark] to display.
      * @property recentlyVisited List of [RecentlyVisitedItem] to display.
      * @property collectionsState State of the collections section to display.
-     * @property pocketState State of the pocket section to display.
      * @property showTopSites Whether to show top sites or not.
      * @property showTopSitesHeader Whether to show the shortcuts section header and "show all" button.
      * @property showRecentTabs Whether to show recent tabs or not.
      * @property showRecentSyncedTab Whether to show recent synced tab or not.
      * @property showBookmarks Whether to show bookmarks.
      * @property showRecentlyVisited Whether to show recent history section.
-     * @property showPocketStoriesCarousel Whether to show the pocket stories section.
      * @property showCollections Whether to show the collections section.
      * @property showPrivacyReport Whether to show the privacy report section.
      * @property trackersBlockedCount The number of trackers blocked for the privacy report.
@@ -107,14 +104,12 @@ internal sealed class HomepageState {
         val bookmarks: List<Bookmark>,
         val recentlyVisited: List<RecentlyVisitedItem>,
         val collectionsState: CollectionsState,
-        val pocketState: PocketState,
         val showTopSites: Boolean,
         val showTopSitesHeader: Boolean,
         val showRecentTabs: Boolean,
         val showRecentSyncedTab: Boolean,
         val showBookmarks: Boolean,
         val showRecentlyVisited: Boolean,
-        val showPocketStoriesCarousel: Boolean,
         val showCollections: Boolean,
         val showPrivacyReport: Boolean,
         val trackersBlockedCount: Int,
@@ -137,17 +132,6 @@ internal sealed class HomepageState {
             is Private -> BrowsingMode.Private
         }
 
-    /**
-     * Returns whether the homepage is in the "Minimal Layout" state, where only the shortcuts and
-     * stories are visible (but both or either can be hidden). This is for the purpose of adding a
-     * weighted spacer in between so the stories are anchored to the bottom.
-     */
-    internal fun isMinimalLayout(): Boolean {
-        return (this as? Normal)?.run {
-            !showRecentTabs && !showRecentSyncedTab && !showBookmarks && !showRecentlyVisited
-        } ?: false
-    }
-
     companion object {
         private const val BOTTOM_PADDING_TOP_TOOLBAR = 68
         private const val BOTTOM_PADDING_BOTTOM_TOOLBAR = 32
@@ -168,10 +152,7 @@ internal sealed class HomepageState {
             settings: Settings,
         ): HomepageState {
             return if (browsingModeManager.mode.isPrivate) {
-                buildPrivateState(
-                    appState = appState,
-                    settings = settings,
-                )
+                buildPrivateState(appState = appState)
             } else {
                 buildNormalState(
                     appState = appState,
@@ -182,18 +163,14 @@ internal sealed class HomepageState {
         }
 
         /**
-         * Builds a new [HomepageState.Private] from the current [AppState] and [Settings].
+         * Builds a new [HomepageState.Private] from the current [AppState].
          *
          * @param appState State to build the [HomepageState.Private] from.
-         * @param settings [Settings] to build the [HomepageState.Private] from.
          */
         @Composable
-        private fun buildPrivateState(
-            appState: AppState,
-            settings: Settings,
-        ) = with(appState) {
+        private fun buildPrivateState(appState: AppState) = with(appState) {
             Private(
-                headerState = buildPrivateHeaderState(settings = settings),
+                headerState = buildPrivateHeaderState(),
                 firstFrameDrawn = firstFrameDrawn,
                 isSearchInProgress = searchState.isSearchActive,
             )
@@ -229,20 +206,16 @@ internal sealed class HomepageState {
                     appState = appState,
                     browserState = components.core.store.state,
                 ),
-                pocketState = PocketState.build(appState = appState),
                 showTopSites = settings.showTopSitesFeature && topSites.isNotEmpty(),
-                showTopSitesHeader = !(settings.privateModeAndStoriesEntryPointEnabled && topSites.size <= 8),
+                showTopSitesHeader = true,
                 showRecentTabs = shouldShowRecentTabs(settings),
                 showBookmarks = settings.showBookmarksHomeFeature && bookmarks.isNotEmpty(),
                 showRecentSyncedTab = shouldShowRecentSyncedTabs() && settings.showSyncedTabs,
                 showRecentlyVisited = settings.historyMetadataUIFeature && recentHistory.isNotEmpty(),
-                showPocketStoriesCarousel = settings.showPocketRecommendationsFeature &&
-                    recommendationState.pocketStories.isNotEmpty() && !settings.privateModeAndStoriesEntryPointEnabled,
                 showCollections = settings.collections,
                 showPrivacyReport = settings.showPrivacyReportFeature,
                 trackersBlockedCount = blockedTrackersState.trackersBlockedCount,
                 headerState = buildHeaderState(
-                    settings = settings,
                     textColor = wallpaperState.textColor,
                     privateBrowsingButtonColor = wallpaperState.iconColor,
                 ),
@@ -269,38 +242,25 @@ internal sealed class HomepageState {
 
 @Composable
 private fun buildHeaderState(
-    settings: Settings,
     textColor: Color,
     privateBrowsingButtonColor: Color,
 ): HeaderState {
-    return if (settings.privateModeAndStoriesEntryPointEnabled) {
-        HeaderState.Experimental.Normal(
-            wordmarkTextColor = textColor,
-            showButtonAnimation = settings.shouldShowNewsButtonAnimation(),
-            showStoriesButton = settings.showPocketRecommendationsFeature,
-        )
-    } else {
-        HeaderState.Normal(
-            wordmarkTextColor = textColor,
-            privateBrowsingButtonColor = privateBrowsingButtonColor,
-        )
-    }
+    return HeaderState.Normal(
+        wordmarkTextColor = textColor,
+        privateBrowsingButtonColor = privateBrowsingButtonColor,
+    )
 }
 
 @Composable
-private fun buildPrivateHeaderState(settings: Settings): HeaderState {
-    return if (settings.privateModeAndStoriesEntryPointEnabled) {
-        HeaderState.Experimental.Private
-    } else {
-        HeaderState.Normal(
-            wordmarkTextColor = null,
-            privateBrowsingButtonColor = colorResource(
-                getAttr(
-                    R.attr.mozac_ic_private_mode_circle_fill_icon_color,
-                ),
+private fun buildPrivateHeaderState(): HeaderState {
+    return HeaderState.Normal(
+        wordmarkTextColor = null,
+        privateBrowsingButtonColor = colorResource(
+            getAttr(
+                R.attr.mozac_ic_private_mode_circle_fill_icon_color,
             ),
-        )
-    }
+        ),
+    )
 }
 
 /**
@@ -309,7 +269,7 @@ private fun buildPrivateHeaderState(settings: Settings): HeaderState {
 internal sealed class HeaderState {
 
     /**
-     * Represents the non-experimental header state for both normal and private mode.
+     * Represents the header state for both normal and private mode.
      *
      * @property wordmarkTextColor an optional color for the wordmark text.
      * @property privateBrowsingButtonColor the color to use for the private browsing button.
@@ -318,30 +278,6 @@ internal sealed class HeaderState {
         val wordmarkTextColor: Color?,
         val privateBrowsingButtonColor: Color,
     ) : HeaderState()
-
-    /**
-     * Represents the experimental states for the entry points experiment.
-     */
-    sealed class Experimental : HeaderState() {
-
-        /**
-         * Represents the header in normal mode for the entry points experiment.
-         *
-         * @property wordmarkTextColor Color for the wordmark.
-         * @property showStoriesButton Whether to show the stories button.
-         * @property showButtonAnimation Whether to animate the news button label.
-         */
-        data class Normal(
-            val wordmarkTextColor: Color?,
-            val showStoriesButton: Boolean,
-            val showButtonAnimation: Boolean,
-        ) : Experimental()
-
-        /**
-         * Represents the header in private mode for the entry points experiment.
-         */
-        data object Private : Experimental()
-    }
 }
 
 /**

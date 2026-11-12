@@ -25,7 +25,7 @@ FragmentedFox follows Mozilla's [Extended Support Release](https://support.mozil
 ## What is different
 
 - Telemetry, data reporting, studies (Normandy, Nimbus rollouts) and crash report sending are off by default.
-- Sponsored content on the new tab page, Pocket recommendations on Android, sponsored tiles and the VPN, pin and Firefox Focus promos are off.
+- Sponsored content on the new tab page, Pocket recommendations on Android (removed), sponsored tiles and the VPN, pin and Firefox Focus promos are off.
 - Captive portal and connectivity checks, link prefetching and remote download checks are off.
 - HTTPS-Only mode is on, and DNS is encrypted by default (Quad9, falling back to normal DNS).
 - TLS 1.2 connections only use ciphers with forward secrecy and authenticated encryption (ECDHE with AES-GCM or ChaCha20). 3DES, static RSA and CBC ciphers are off, so a few older sites that offer nothing else will not connect. TLS 1.3 early data (0-RTT) is also off, since it can be replayed, and servers that do not support secure renegotiation are refused. All of this is in build 30 (commit `fb02ae860a`), which was installed on a phone; sites were not tested systematically. See [changes](./fragmentedfox-docs/changes.md).

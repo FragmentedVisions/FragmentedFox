@@ -89,7 +89,6 @@ import org.mozilla.fenix.components.TabCollectionStorage
 import org.mozilla.fenix.components.VoiceSearchFeature
 import org.mozilla.fenix.components.accounts.FenixFxAEntryPoint
 import org.mozilla.fenix.components.appstate.AppAction
-import org.mozilla.fenix.components.appstate.AppAction.ContentRecommendationsAction
 import org.mozilla.fenix.components.appstate.AppAction.MessagingAction
 import org.mozilla.fenix.components.appstate.AppAction.MessagingAction.MicrosurveyAction
 import org.mozilla.fenix.components.appstate.AppState
@@ -108,7 +107,6 @@ import org.mozilla.fenix.home.bookmarks.BookmarksFeature
 import org.mozilla.fenix.home.bookmarks.controller.DefaultBookmarksController
 import org.mozilla.fenix.home.ext.showWallpaperOnboardingDialog
 import org.mozilla.fenix.home.logo.TrackingProtectionController
-import org.mozilla.fenix.home.pocket.controller.DefaultPocketStoriesController
 import org.mozilla.fenix.home.privatebrowsing.controller.DefaultPrivateBrowsingController
 import org.mozilla.fenix.home.recentsyncedtabs.RecentSyncedTabFeature
 import org.mozilla.fenix.home.recentsyncedtabs.controller.DefaultRecentSyncedTabController
@@ -497,7 +495,6 @@ class HomeFragment : Fragment() {
         voiceSearchFeature = VoiceSearchFeature.register(this, voiceSearchLauncher)
         lensFeature = LensFeature.register(this, lensLauncher, lensCameraPermissionLauncher)
 
-        initStoriesState()
         initMessagingFeature(view = view)
         initTopSitesBinding(view = view)
         initRecentTabsListFeature(view = view)
@@ -818,11 +815,6 @@ class HomeFragment : Fragment() {
     override fun onStart() {
         super.onStart()
 
-        val settings = requireComponents.settings
-        if (settings.privateModeAndStoriesEntryPointEnabled) {
-            settings.incrementNewsButtonForegroundCount()
-        }
-
         findNavController().addOnDestinationChangedListener(destinationChangedListener)
 
         subscribeToTabCollections()
@@ -866,37 +858,6 @@ class HomeFragment : Fragment() {
     internal fun removeCollection(tabCollection: TabCollection) {
         lifecycleScope.launch(IO) {
             requireComponents.core.tabCollectionStorage.removeCollection(tabCollection)
-        }
-    }
-
-    private fun initStoriesState() {
-        val components = context?.components ?: return
-        lifecycleScope.launch(IO) {
-            val settings = components.settings
-
-            val showStories =
-                settings.showPocketRecommendationsFeature ||
-                    settings.privateModeAndStoriesEntryPointEnabled
-
-            val showSponsoredStories = showStories && settings.showPocketSponsoredStories
-
-            if (showStories) {
-                components.appStore.dispatch(
-                    ContentRecommendationsAction.ContentRecommendationsFetched(
-                        recommendations = components.core.pocketStoriesService.getContentRecommendations(),
-                    ),
-                )
-            } else {
-                components.appStore.dispatch(ContentRecommendationsAction.PocketStoriesClean)
-            }
-
-            if (showSponsoredStories) {
-                components.appStore.dispatch(
-                    ContentRecommendationsAction.SponsoredContentsChange(
-                        sponsoredContents = components.core.pocketStoriesService.getSponsoredContents(),
-                    ),
-                )
-            }
         }
     }
 
@@ -1194,14 +1155,6 @@ class HomeFragment : Fragment() {
                 storage = requireComponents.core.historyStorage,
                 scope = viewLifecycleOwner.lifecycleScope,
                 store = requireComponents.core.store,
-            ),
-            pocketStoriesController = DefaultPocketStoriesController(
-                navControllerRef = WeakReference(findNavController()),
-                appStore = requireComponents.appStore,
-                settings = requireComponents.settings,
-                fenixBrowserUseCases = requireComponents.useCases.fenixBrowserUseCases,
-                marsUseCases = requireComponents.useCases.marsUseCases,
-                viewLifecycleScope = viewLifecycleOwner.lifecycleScope,
             ),
             privateBrowsingController = DefaultPrivateBrowsingController(
                 navController = findNavController(),

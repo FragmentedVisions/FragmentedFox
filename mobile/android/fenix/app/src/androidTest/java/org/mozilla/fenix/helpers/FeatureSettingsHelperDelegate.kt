@@ -28,7 +28,6 @@ class FeatureSettingsHelperDelegate : FeatureSettingsHelper {
      * These will be restored when the tests end.
      */
     private val initialFeatureFlags = FeatureFlags(
-        isPocketEnabled = settings.showPocketRecommendationsFeature,
         isRecentTabsFeatureEnabled = settings.showRecentTabsFeature,
         isRecentlyVisitedFeatureEnabled = settings.historyMetadataUIFeature,
         isPWAsPromptEnabled = !settings.userKnowsAboutPwas,
@@ -47,7 +46,6 @@ class FeatureSettingsHelperDelegate : FeatureSettingsHelper {
         isTermsOfServiceAccepted = settings.hasAcceptedTermsOfService,
         openLinksInApp = getOpenLinksInApp(settings),
         tabManagerOpeningAnimationEnabled = settings.tabManagerOpeningAnimationEnabled,
-        isPrivateModeAndStoriesEntryPointEnabled = settings.privateModeAndStoriesEntryPointEnabled,
         shouldUseExpandedToolbar = settings.shouldUseExpandedToolbar,
         nativeShareSheetEnabled = settings.nativeShareSheetEnabled,
         showVoiceSearchInDisplayToolbar = settings.showVoiceSearchInDisplayToolbar,
@@ -58,7 +56,6 @@ class FeatureSettingsHelperDelegate : FeatureSettingsHelper {
      */
     private var updatedFeatureFlags = initialFeatureFlags.copy()
 
-    override var isPocketEnabled: Boolean by updatedFeatureFlags::isPocketEnabled
     override var isWallpaperOnboardingEnabled: Boolean by updatedFeatureFlags::isWallpaperOnboardingEnabled
     override var isRecentTabsFeatureEnabled: Boolean by updatedFeatureFlags::isRecentTabsFeatureEnabled
     override var isRecentlyVisitedFeatureEnabled: Boolean by updatedFeatureFlags::isRecentlyVisitedFeatureEnabled
@@ -76,7 +73,6 @@ class FeatureSettingsHelperDelegate : FeatureSettingsHelper {
     override var isTermsOfServiceAccepted: Boolean by updatedFeatureFlags::isTermsOfServiceAccepted
     override var openLinksInExternalApp: OpenLinksInApp by updatedFeatureFlags::openLinksInApp
     override var tabManagerOpeningAnimationEnabled: Boolean by updatedFeatureFlags::tabManagerOpeningAnimationEnabled
-    override var isPrivateModeAndStoriesEntryPointEnabled: Boolean by updatedFeatureFlags::isPrivateModeAndStoriesEntryPointEnabled
     override var shouldUseExpandedToolbar: Boolean by updatedFeatureFlags::shouldUseExpandedToolbar
     override var nativeShareSheetEnabled: Boolean by updatedFeatureFlags::nativeShareSheetEnabled
     override var showVoiceSearchInDisplayToolbar: Boolean by updatedFeatureFlags::showVoiceSearchInDisplayToolbar
@@ -96,7 +92,6 @@ class FeatureSettingsHelperDelegate : FeatureSettingsHelper {
     override var isDeleteSitePermissionsEnabled: Boolean by updatedFeatureFlags::isDeleteSitePermissionsEnabled
 
     private fun applyFeatureFlags(featureFlags: FeatureFlags) {
-        settings.showPocketRecommendationsFeature = featureFlags.isPocketEnabled
         settings.showRecentTabsFeature = featureFlags.isRecentTabsFeatureEnabled
         settings.historyMetadataUIFeature = featureFlags.isRecentlyVisitedFeatureEnabled
         settings.userKnowsAboutPwas = !featureFlags.isPWAsPromptEnabled
@@ -115,7 +110,6 @@ class FeatureSettingsHelperDelegate : FeatureSettingsHelper {
         settings.hasAcceptedTermsOfService = featureFlags.isTermsOfServiceAccepted
         setOpenLinksInApp(featureFlags.openLinksInApp)
         settings.tabManagerOpeningAnimationEnabled = featureFlags.tabManagerOpeningAnimationEnabled
-        settings.privateModeAndStoriesEntryPointEnabled = featureFlags.isPrivateModeAndStoriesEntryPointEnabled
         settings.shouldUseExpandedToolbar = featureFlags.shouldUseExpandedToolbar
         settings.nativeShareSheetEnabled = featureFlags.nativeShareSheetEnabled
         settings.showVoiceSearchInDisplayToolbar = featureFlags.showVoiceSearchInDisplayToolbar
@@ -123,7 +117,6 @@ class FeatureSettingsHelperDelegate : FeatureSettingsHelper {
 }
 
 private data class FeatureFlags(
-    var isPocketEnabled: Boolean,
     var isRecentTabsFeatureEnabled: Boolean,
     var isRecentlyVisitedFeatureEnabled: Boolean,
     var isPWAsPromptEnabled: Boolean,
@@ -142,7 +135,6 @@ private data class FeatureFlags(
     var isTermsOfServiceAccepted: Boolean,
     var openLinksInApp: OpenLinksInApp,
     var tabManagerOpeningAnimationEnabled: Boolean,
-    var isPrivateModeAndStoriesEntryPointEnabled: Boolean,
     var shouldUseExpandedToolbar: Boolean,
     var nativeShareSheetEnabled: Boolean,
     var showVoiceSearchInDisplayToolbar: Boolean,

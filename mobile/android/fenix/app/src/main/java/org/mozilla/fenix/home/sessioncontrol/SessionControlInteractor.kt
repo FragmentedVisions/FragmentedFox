@@ -8,7 +8,6 @@ import mozilla.components.feature.tab.collections.Tab
 import mozilla.components.feature.tab.collections.TabCollection
 import mozilla.components.feature.top.sites.TopSite
 import mozilla.components.service.nimbus.messaging.Message
-import mozilla.components.service.pocket.PocketStory
 import org.mozilla.fenix.browser.browsingmode.BrowsingMode
 import org.mozilla.fenix.components.appstate.AppState
 import org.mozilla.fenix.components.appstate.setup.checklist.ChecklistItem
@@ -16,8 +15,6 @@ import org.mozilla.fenix.home.bookmarks.Bookmark
 import org.mozilla.fenix.home.bookmarks.controller.BookmarksController
 import org.mozilla.fenix.home.interactor.HomepageInteractor
 import org.mozilla.fenix.home.logo.TrackingProtectionController
-import org.mozilla.fenix.home.pocket.PocketRecommendedStoriesCategory
-import org.mozilla.fenix.home.pocket.controller.PocketStoriesController
 import org.mozilla.fenix.home.privatebrowsing.controller.PrivateBrowsingController
 import org.mozilla.fenix.home.recentsyncedtabs.RecentSyncedTab
 import org.mozilla.fenix.home.recentsyncedtabs.controller.RecentSyncedTabController
@@ -184,7 +181,6 @@ class SessionControlInteractor(
     private val recentSyncedTabController: RecentSyncedTabController,
     private val bookmarksController: BookmarksController,
     private val recentVisitsController: RecentVisitsController,
-    private val pocketStoriesController: PocketStoriesController,
     private val privateBrowsingController: PrivateBrowsingController,
     private val toolbarController: ToolbarController,
     private val homeSearchController: HomeSearchController,
@@ -357,30 +353,6 @@ class SessionControlInteractor(
 
     override fun onRemoveRecentHistoryHighlight(highlightUrl: String) {
         recentVisitsController.handleRemoveRecentHistoryHighlight(highlightUrl)
-    }
-
-    override fun onStoryShown(storyShown: PocketStory, storyPosition: Triple<Int, Int, Int>) {
-        pocketStoriesController.handleStoryShown(storyShown, storyPosition)
-    }
-
-    override fun onStoriesShown(storiesShown: List<PocketStory>) {
-        pocketStoriesController.handleStoriesShown(storiesShown)
-    }
-
-    override fun onCategoryClicked(categoryClicked: PocketRecommendedStoriesCategory) {
-        pocketStoriesController.handleCategoryClick(categoryClicked)
-    }
-
-    override fun onStoryClicked(storyClicked: PocketStory, storyPosition: Triple<Int, Int, Int>) {
-        pocketStoriesController.handleStoryClicked(storyClicked, storyPosition)
-    }
-
-    override fun onDiscoverMoreClicked() {
-        pocketStoriesController.handleDiscoverMoreClicked()
-    }
-
-    override fun onDiscoverMoreScreenViewed() {
-        pocketStoriesController.handleDiscoverMoreScreenViewed()
     }
 
     override fun reportSessionMetrics(state: AppState) {

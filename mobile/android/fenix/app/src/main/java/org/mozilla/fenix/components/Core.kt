@@ -88,16 +88,10 @@ import mozilla.components.service.mars.NEW_TAB_TILE_2_PLACEMENT_KEY
 import mozilla.components.service.mars.Placement
 import mozilla.components.service.mars.contile.ContileTopSitesUpdater
 import mozilla.components.service.merino.manifest.MerinoManifestProvider
-import mozilla.components.service.pocket.ContentRecommendationsRequestConfig
-import mozilla.components.service.pocket.PocketStoriesConfig
-import mozilla.components.service.pocket.PocketStoriesService
-import mozilla.components.service.pocket.mars.api.MarsSpocsRequestConfig
-import mozilla.components.service.pocket.mars.api.NEW_TAB_SPOCS_PLACEMENT_KEY
 import mozilla.components.service.sync.autofill.AutofillCreditCardsAddressesStorage
 import mozilla.components.service.sync.logins.SyncableLoginsStorage
 import mozilla.components.support.base.worker.Frequency
 import mozilla.components.support.ktx.android.content.appVersionName
-import mozilla.components.support.locale.LocaleManager
 import mozilla.components.support.utils.DateTimeProvider
 import mozilla.components.support.utils.DefaultDateTimeProvider
 import mozilla.components.support.utils.DefaultDownloadFileUtils
@@ -123,7 +117,6 @@ import org.mozilla.fenix.media.MediaSessionService
 import org.mozilla.fenix.nimbus.FxNimbus
 import org.mozilla.fenix.perf.StrictModeManager
 import org.mozilla.fenix.perf.lazyMonitored
-import org.mozilla.fenix.settings.advanced.getSelectedLocale
 import org.mozilla.fenix.settings.downloads.DownloadLocationManager
 import org.mozilla.fenix.share.DefaultSentFromFirefoxManager
 import org.mozilla.fenix.share.DefaultSentFromStorage
@@ -136,7 +129,6 @@ import org.mozilla.fenix.utils.Settings.DeleteDownloadBehavior
 import org.mozilla.fenix.utils.getUndoDelay
 import org.mozilla.geckoview.GeckoRuntime
 import java.util.concurrent.TimeUnit
-import mozilla.components.service.pocket.mars.api.Placement as MarsSpocsPlacement
 
 /**
  * Component group for all core browser functionality.
@@ -570,28 +562,6 @@ class Core(
     val thumbnailStorage by lazyMonitored { ThumbnailStorage(context) }
 
     val pinnedSiteStorage by lazyMonitored { PinnedSiteStorage(context) }
-
-    @Suppress("MagicNumber")
-    val pocketStoriesConfig by lazyMonitored {
-        PocketStoriesConfig(
-            client,
-            Frequency(4, TimeUnit.HOURS),
-            contentRecommendationsParams = ContentRecommendationsRequestConfig(
-                locale = LocaleManager.getSelectedLocale(context).toLanguageTag(),
-            ),
-            marsSponsoredContentsParams = MarsSpocsRequestConfig(
-                contextId = context.components.settings.contileContextId,
-                userAgent = engine.settings.userAgentString,
-                placements = listOf(
-                    MarsSpocsPlacement(
-                        placement = NEW_TAB_SPOCS_PLACEMENT_KEY,
-                        count = 10,
-                    ),
-                ),
-            ),
-        )
-    }
-    val pocketStoriesService by lazyMonitored { PocketStoriesService(context, pocketStoriesConfig) }
 
     val marsTopSitesProvider by lazyMonitored {
         MarsTopSitesProvider(

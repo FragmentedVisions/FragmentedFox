@@ -7,19 +7,10 @@ package org.mozilla.fenix.datastore
 import android.content.Context
 import androidx.datastore.core.DataStore
 import androidx.datastore.core.IOException
-import androidx.datastore.dataStore
 import androidx.datastore.preferences.core.MutablePreferences
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.preferencesDataStore
-
-/**
- * Application / process unique [DataStore] for IO operations related to Pocket recommended stories selected categories.
- */
-internal val Context.pocketStoriesSelectedCategoriesDataStore: DataStore<SelectedPocketStoriesCategories> by dataStore(
-    fileName = "pocket_recommendations_selected_categories.pb",
-    serializer = SelectedPocketStoriesCategorySerializer,
-)
 
 /**
  * [DataStore] for accessing user preferences in Fenix.

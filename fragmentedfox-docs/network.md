@@ -12,7 +12,7 @@ What the Android app can contact, as read from the code and defaults. This is a 
 | Partner codes in search URLs | removed from result URLs by `PartnerParams.kt`, so Google, Bing, DuckDuckGo and others get a plain search. Suggestion URLs keep the parameters the engine needs to answer in the right format |
 | Search results telemetry | the "ads" and "cookies" web extensions that watched search results pages are not installed in Fenix, and Mozilla's `search-telemetry-v2` list is not downloaded for them (earlier builds up to build 31 did download it) |
 | Sponsored tiles (Contile) | `showContileFeature` false |
-| Pocket stories and sponsored stories | home screen sections default to false in `nimbus.fml.yaml` |
+| Pocket stories and sponsored stories | removed, along with the `service-pocket` library that fetched them |
 | Mozilla Ads Client for top sites | `mozilla-ads-client` default false |
 | Merino manifest and Merino client | defaults false |
 | Firefox Suggest | default false on the release channel |

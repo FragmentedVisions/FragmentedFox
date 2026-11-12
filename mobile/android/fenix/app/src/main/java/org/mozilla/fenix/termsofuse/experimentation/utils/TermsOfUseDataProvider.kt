@@ -76,9 +76,7 @@ class DefaultTermsOfUseDataProvider(private val settings: Settings) : TermsOfUse
     override val showShortcutsFeature: Boolean
         get() = settings.showTopSitesFeature
 
-    override val showSponsoredStories: Boolean
-        get() = settings.showPocketSponsoredStories
+    override val showSponsoredStories: Boolean = false
 
-    override val showStoriesFeature: Boolean
-        get() = settings.showPocketRecommendationsFeature
+    override val showStoriesFeature: Boolean = false
 }

@@ -20,7 +20,6 @@ import org.mozilla.experiments.nimbus.internal.RecordedContext
 import org.mozilla.experiments.nimbus.internal.getCalculatedAttributes
 import org.mozilla.fenix.GleanMetrics.NimbusSystem
 import org.mozilla.fenix.ext.components
-import org.mozilla.fenix.home.pocket.ContentRecommendationsFeatureHelper
 import org.mozilla.fenix.perf.runBlockingIncrement
 import org.mozilla.fenix.termsofuse.experimentation.TermsOfUseAdvancedTargetingHelper
 import org.mozilla.fenix.termsofuse.experimentation.utils.DefaultTermsOfUseDataProvider
@@ -196,7 +195,7 @@ class RecordedNimbusContext(
                 language = calculatedAttributes.language,
                 region = calculatedAttributes.region,
                 userAcceptedTou = settings.hasAcceptedTermsOfService,
-                noShortcutsOrStoriesOptOuts = settings.noShortcutsOrStoriesOptOuts(context),
+                noShortcutsOrStoriesOptOuts = settings.noShortcutsOrStoriesOptOuts(),
                 addonIds = getFormattedAddons(settings),
                 touPoints = termsOfUseAdvancedTargetingHelper.getTouPoints(),
                 userDisabledAi = isAiBlocked,
@@ -208,13 +207,12 @@ class RecordedNimbusContext(
             settings.installedAddonsList.split(",").map { it.trim() }
 
         /**
-         * Checks whether an eligible user has opted out of any sponsored top sites or stories.
+         * Checks whether an eligible user has opted out of any sponsored top sites. Stories no longer
+         * exist, so only the sponsored top sites count.
          *
-         *  @return `true` if the user has opted out of any sponsored top sites or stories,
-         * `false` otherwise.
+         *  @return `true` if the user has not opted out of sponsored top sites, `false` otherwise.
          */
-        private fun Settings.noShortcutsOrStoriesOptOuts(context: Context) =
-            !optedOutOfSponsoredTopSites() && !optedOutOfSponsoredStories(context)
+        private fun Settings.noShortcutsOrStoriesOptOuts() = !optedOutOfSponsoredTopSites()
 
         /**
          * Checks whether an eligible user has opted out of the sponsored top sites feature.
@@ -225,12 +223,6 @@ class RecordedNimbusContext(
          */
         private fun Settings.optedOutOfSponsoredTopSites() =
             !showContileFeature || !showTopSitesFeature
-
-        private fun Settings.optedOutOfSponsoredStories(context: Context) =
-            isEligibleForStories(context) && (!showPocketSponsoredStories || !showPocketRecommendationsFeature)
-
-        private fun isEligibleForStories(context: Context): Boolean =
-            ContentRecommendationsFeatureHelper.isContentRecommendationsFeatureEnabled(context)
 
         /**
          * Creates a RecordedNimbusContext instance for test purposes

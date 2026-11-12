@@ -51,7 +51,6 @@ Independent, small visual UI elements to use in applications.
 * [service-contile](https://github.com/mozilla-mobile/firefox-android/tree/main/android-components/components/service/contile) - A library for communicating with the Contile services API.
 * [service-firefox-accounts](https://github.com/mozilla-mobile/firefox-android/tree/main/android-components/components/service/firefox-accounts) - A library for integrating with [Firefox Accounts](https://mozilla.github.io/application-services/docs/accounts/welcome.html).
 * [service-fretboard](https://github.com/mozilla-mobile/firefox-android/tree/main/android-components/components/service/fretboard) - An Android framework for segmenting users in order to run A/B tests and rollout features gradually.
-* [service-pocket](https://github.com/mozilla-mobile/firefox-android/tree/main/android-components/components/service/pocket) - A library for communicating with the Pocket API.
 * [service-glean](https://github.com/mozilla-mobile/firefox-android/tree/main/android-components/components/service/glean) - A generic library for sending telemetry pings from Android applications to Mozilla's telemetry service.
 
 ## Samples

@@ -41,8 +41,6 @@ class SettingsSubMenuHomepageRobot {
         jumpBackInSwitchEnabled: Boolean = true,
         recentBookmarksSwitchEnabled: Boolean = true,
         recentlyVisitedSwitchEnabled: Boolean = true,
-        pocketSwitchEnabled: Boolean = true,
-        sponsoredStoriesCheckBox: Boolean = true,
     ) {
         Log.i(TAG, "verifyHomePageView: Trying to verify that the \"Shortcuts\" option is visible")
         shortcutsButton().check(matches(withEffectiveVisibility(Visibility.VISIBLE)))
@@ -208,74 +206,6 @@ class SettingsSubMenuHomepageRobot {
                 )
             Log.i(TAG, "verifyHomePageView: Verified that the \"Recently visited\" toggle is not checked")
         }
-        Log.i(TAG, "verifyHomePageView: Trying to verify that the \"Stories\" option is visible")
-        pocketButton().check(matches(withEffectiveVisibility(Visibility.VISIBLE)))
-        Log.i(TAG, "verifyHomePageView: Verified that the \"Stories\" option is visible")
-        if (pocketSwitchEnabled) {
-            Log.i(TAG, "verifyHomePageView: Trying to verify that the \"Stories\" toggle is checked")
-            pocketButton()
-                .check(
-                    matches(
-                        TestHelper.hasCousin(
-                            Matchers.allOf(
-                                withClassName(Matchers.endsWith("Switch")),
-                                isChecked(),
-                            ),
-                        ),
-                    ),
-                )
-            Log.i(TAG, "verifyHomePageView: Verified that the \"Stories\" toggle is checked")
-        } else {
-            Log.i(TAG, "verifyHomePageView: Trying to verify that the \"Stories\" toggle is not checked")
-            pocketButton()
-                .check(
-                    matches(
-                        TestHelper.hasCousin(
-                            Matchers.allOf(
-                                withClassName(Matchers.endsWith("Switch")),
-                                isNotChecked(),
-                            ),
-                        ),
-                    ),
-                )
-            Log.i(TAG, "verifyHomePageView: Verified that the \"Stories\" toggle is not checked")
-        }
-        Log.i(TAG, "verifyHomePageView: Trying to verify that the \"Sponsored stories\" option is visible")
-        sponsoredStoriesButton().check(matches(withEffectiveVisibility(Visibility.VISIBLE)))
-        Log.i(TAG, "verifyHomePageView: Verified that the \"Sponsored stories\" option is visible")
-        if (sponsoredStoriesCheckBox) {
-            Log.i(TAG, "verifyHomePageView: Trying to verify that the \"Sponsored stories\" check box is checked")
-            sponsoredStoriesButton()
-                .check(
-                    matches(
-                        hasSibling(
-                            ViewMatchers.withChild(
-                                allOf(
-                                    withClassName(CoreMatchers.endsWith("CheckBox")),
-                                    isChecked(),
-                                ),
-                            ),
-                        ),
-                    ),
-                )
-            Log.i(TAG, "verifyHomePageView: Verified that the \"Sponsored stories\" check box is checked")
-        } else {
-            Log.i(TAG, "verifyHomePageView: Trying to verify that the \"Sponsored stories\" check box is not checked")
-            sponsoredStoriesButton()
-                .check(
-                    matches(
-                        hasSibling(
-                            ViewMatchers.withChild(
-                                allOf(
-                                    withClassName(CoreMatchers.endsWith("CheckBox")),
-                                    isNotChecked(),
-                                ),
-                            ),
-                        ),
-                    ),
-                )
-            Log.i(TAG, "verifyHomePageView: Verified that the \"Sponsored stories\" check box is not checked")
-        }
         Log.i(TAG, "verifyHomePageView: Trying to verify that the \"Opening screen\" heading is visible")
         openingScreenHeading().check(matches(withEffectiveVisibility(Visibility.VISIBLE)))
         Log.i(TAG, "verifyHomePageView: Verified that the \"Opening screen\" heading is visible")
@@ -335,12 +265,6 @@ class SettingsSubMenuHomepageRobot {
         Log.i(TAG, "clickRecentSearchesButton: Trying to click the \"Recently visited\" option")
         recentlyVisitedButton().click()
         Log.i(TAG, "clickRecentSearchesButton: Clicked the \"Recently visited\" option")
-    }
-
-    fun clickPocketButton() {
-        Log.i(TAG, "clickPocketButton: Trying to click the \"Stories\" option")
-        pocketButton().click()
-        Log.i(TAG, "clickPocketButton: Clicked the \"Stories\" option")
     }
 
     fun clickOpeningScreenOption(openingScreenOption: String) {
@@ -437,12 +361,6 @@ private fun recentBookmarksButton() =
 
 private fun recentlyVisitedButton() =
     onView(allOf(withText(R.string.customize_toggle_recently_visited)))
-
-private fun pocketButton() =
-    onView(allOf(withText(R.string.customize_toggle_pocket_3)))
-
-private fun sponsoredStoriesButton() =
-    onView(allOf(withText(R.string.customize_toggle_pocket_sponsored)))
 
 private fun openingScreenHeading() = onView(withText(R.string.preferences_opening_screen))
 

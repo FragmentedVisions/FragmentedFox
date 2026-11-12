@@ -13,7 +13,6 @@ import org.junit.Before
 import org.junit.Test
 import org.mozilla.fenix.home.bookmarks.controller.BookmarksController
 import org.mozilla.fenix.home.logo.TrackingProtectionController
-import org.mozilla.fenix.home.pocket.controller.PocketStoriesController
 import org.mozilla.fenix.home.privatebrowsing.controller.PrivateBrowsingController
 import org.mozilla.fenix.home.recentsyncedtabs.controller.RecentSyncedTabController
 import org.mozilla.fenix.home.recenttabs.controller.RecentTabController
@@ -34,7 +33,6 @@ class RecentVisitsInteractorTest {
     private val recentSyncedTabController: RecentSyncedTabController = mockk(relaxed = true)
     private val bookmarksController: BookmarksController = mockk(relaxed = true)
     private val recentVisitsController: RecentVisitsController = mockk(relaxed = true)
-    private val pocketStoriesController: PocketStoriesController = mockk(relaxed = true)
     private val privateBrowsingController: PrivateBrowsingController = mockk(relaxed = true)
     private val toolbarController: ToolbarController = mockk(relaxed = true)
     private val homeSearchController: HomeSearchController = mockk(relaxed = true)
@@ -52,7 +50,6 @@ class RecentVisitsInteractorTest {
             recentSyncedTabController,
             bookmarksController,
             recentVisitsController,
-            pocketStoriesController,
             privateBrowsingController,
             toolbarController,
             homeSearchController,

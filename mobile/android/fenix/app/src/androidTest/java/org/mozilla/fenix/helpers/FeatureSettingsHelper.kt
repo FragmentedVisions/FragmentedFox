@@ -13,11 +13,6 @@ import org.mozilla.fenix.ext.components
  */
 interface FeatureSettingsHelper {
     /**
-     * Whether the Pocket stories feature is enabled or not.
-     */
-    var isPocketEnabled: Boolean
-
-    /**
      * Whether the onboarding dialog for choosing wallpapers should be shown or not.
      */
     var isWallpaperOnboardingEnabled: Boolean
@@ -100,11 +95,6 @@ interface FeatureSettingsHelper {
      * Accept or not the terms of service.
      */
     var isTermsOfServiceAccepted: Boolean
-
-    /**
-     * Enable or disable the private mode and stories entry point.
-     */
-    var isPrivateModeAndStoriesEntryPointEnabled: Boolean
 
     /**
      * The Open links in External apps settings, between the following options:

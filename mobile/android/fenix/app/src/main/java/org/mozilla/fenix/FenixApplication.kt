@@ -1113,8 +1113,6 @@ open class FenixApplication : Application(), Provider, ThemeProvider {
         CustomizeHome.bookmarks.set(settings.showBookmarksHomeFeature)
         CustomizeHome.mostVisitedSites.set(settings.showTopSitesFeature)
         CustomizeHome.recentlyVisited.set(settings.historyMetadataUIFeature)
-        CustomizeHome.pocket.set(settings.showPocketRecommendationsFeature)
-        CustomizeHome.sponsoredPocket.set(settings.showPocketSponsoredStories)
         CustomizeHome.contile.set(settings.showContileFeature)
     }
 

@@ -79,8 +79,6 @@ class NimbusMessagingSurveyTest {
             Homescreen(
                 sectionsEnabled = mapOf(
                     HomeScreenSection.JUMP_BACK_IN to false,
-                    HomeScreenSection.POCKET to false,
-                    HomeScreenSection.POCKET_SPONSORED_STORIES to false,
                     HomeScreenSection.RECENT_EXPLORATIONS to false,
                     HomeScreenSection.BOOKMARKS to false,
                     HomeScreenSection.TOP_SITES to false,

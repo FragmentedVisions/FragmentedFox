@@ -51,7 +51,6 @@ class AppRequestInterceptor(
         val services = context.components.services
         return listOf(
             services.appLinksInterceptor,
-            services.storyUTMRequestInterceptor,
         ).firstNotNullOfOrNull {
             it.onLoadRequest(
                 engineSession,

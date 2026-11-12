@@ -5,8 +5,6 @@
 package org.mozilla.fenix.home.fake
 
 import android.content.Context
-import androidx.compose.material3.FilterChipDefaults
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.stringResource
 import mozilla.components.browser.state.state.ContentState
@@ -21,9 +19,6 @@ import mozilla.components.feature.top.sites.TopSite
 import mozilla.components.service.nimbus.messaging.Message
 import mozilla.components.service.nimbus.messaging.MessageData
 import mozilla.components.service.nimbus.messaging.StyleData
-import mozilla.components.service.pocket.PocketStory
-import mozilla.components.service.pocket.PocketStory.ContentRecommendation
-import mozilla.components.service.pocket.PocketStory.SponsoredContent
 import org.mozilla.fenix.R
 import org.mozilla.fenix.browser.browsingmode.BrowsingMode
 import org.mozilla.fenix.components.appstate.AppState
@@ -33,9 +28,6 @@ import org.mozilla.fenix.home.bookmarks.Bookmark
 import org.mozilla.fenix.home.bookmarks.interactor.BookmarksInteractor
 import org.mozilla.fenix.home.collections.CollectionsState
 import org.mozilla.fenix.home.interactor.HomepageInteractor
-import org.mozilla.fenix.home.pocket.PocketRecommendedStoriesCategory
-import org.mozilla.fenix.home.pocket.PocketState
-import org.mozilla.fenix.home.pocket.interactor.PocketStoriesInteractor
 import org.mozilla.fenix.home.privatebrowsing.interactor.PrivateBrowsingInteractor
 import org.mozilla.fenix.home.recentsyncedtabs.RecentSyncedTab
 import org.mozilla.fenix.home.recentsyncedtabs.interactor.RecentSyncedTabInteractor
@@ -61,7 +53,6 @@ import kotlin.random.Random
  */
 internal object FakeHomepagePreview {
     private val random = Random(seed = 1)
-    private const val DEFAULT_POCKET_STORIES_COUNT = 30
 
     val homepageInteractor: HomepageInteractor
         get() = object :
@@ -74,7 +65,6 @@ internal object FakeHomepagePreview {
             RecentVisitsInteractor by recentVisitsInteractor,
             HomeSearchInteractor by homeSearchInteractor,
             CollectionInteractor by collectionInteractor,
-            PocketStoriesInteractor by storiesInteractor,
             PrivacyNoticeBannerInteractor by PrivacyNoticeBannerInteractorNoOp {
             override fun reportSessionMetrics(state: AppState) { /* no op */ }
 
@@ -93,26 +83,6 @@ internal object FakeHomepagePreview {
             override fun onRemoveChecklistButtonClicked() { /* no op */ }
 
             override fun onPrivacyReportTapped() { /* no op */ }
-        }
-
-    internal val storiesInteractor
-        get() = object : PocketStoriesInteractor {
-            override fun onStoryShown(
-                storyShown: PocketStory,
-                storyPosition: Triple<Int, Int, Int>,
-            ) { /* no op */ }
-
-            override fun onStoriesShown(storiesShown: List<PocketStory>) { /* no op */ }
-
-            override fun onCategoryClicked(categoryClicked: PocketRecommendedStoriesCategory) { /* no op */ }
-
-            override fun onStoryClicked(
-                storyClicked: PocketStory,
-                storyPosition: Triple<Int, Int, Int>,
-            ) { /* no op */ }
-
-            override fun onDiscoverMoreClicked() { /* no op */ }
-            override fun onDiscoverMoreScreenViewed() { /* no op */ }
         }
 
     internal val privateBrowsingInteractor
@@ -392,56 +362,6 @@ internal object FakeHomepagePreview {
                 engine: Engine,
                 restoreSessionId: Boolean,
             ): RecoverableTab? = null
-        }
-    }
-
-    @Composable
-    internal fun pocketState(limit: Int = DEFAULT_POCKET_STORIES_COUNT) = PocketState(
-        stories = stories(limit = limit),
-        categories = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
-            .split(" ")
-            .map { PocketRecommendedStoriesCategory(it) },
-        categoriesSelections = emptyList(),
-        categoryColors = FilterChipDefaults.filterChipColors(),
-        textColor = MaterialTheme.colorScheme.onSurface,
-        linkTextColor = MaterialTheme.colorScheme.tertiary,
-    )
-
-    internal fun contentRecommendation(index: Int = Random.nextInt(until = 5)): ContentRecommendation =
-        ContentRecommendation(
-            corpusItemId = "corpusItemId$index",
-            scheduledCorpusItemId = "scheduledCorpusItemId$index",
-            url = "https://story$index.com",
-            title = "Recommendation - This is a ${"very ".repeat(index)} long title",
-            excerpt = "Excerpt",
-            topic = null,
-            publisher = "Publisher",
-            isTimeSensitive = false,
-            imageUrl = URL,
-            tileId = index.toLong(),
-            receivedRank = index,
-            recommendedAt = index.toLong(),
-            impressions = index.toLong(),
-        )
-
-    internal fun sponsoredContent(index: Int = Random.nextInt(until = 5)) = SponsoredContent(
-        url = "https://sponsored-story$index.com",
-        title = "This is a ${"very ".repeat(index)}long title",
-        callbacks = PocketStory.SponsoredContentCallbacks(clickUrl = "", impressionUrl = ""),
-        imageUrl = URL,
-        domain = "domain",
-        excerpt = "excerpt",
-        sponsor = "Mozilla",
-        blockKey = "",
-        priority = index,
-        caps = PocketStory.SponsoredContentFrequencyCaps(flightPeriod = 1, flightCount = 0),
-    )
-
-    internal fun stories(limit: Int = 5) = (0 until limit).map { index ->
-        if (index % 2 == 0) {
-            sponsoredContent(index)
-        } else {
-            contentRecommendation(index)
         }
     }
 

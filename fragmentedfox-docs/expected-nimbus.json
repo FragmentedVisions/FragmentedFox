@@ -1,6 +1,4 @@
 {
-  "homescreen.sections-enabled.pocket": "false",
-  "homescreen.sections-enabled.pocket-sponsored-stories": "false",
   "merino-manifest.enabled": "false",
   "mozilla-ads-client.enabled": "false",
   "fx-suggest.enabled": "false",

@@ -153,7 +153,6 @@ class FenixApplicationTest {
         every { settings.showBookmarksHomeFeature } returns true
         every { settings.showTopSitesFeature } returns true
         every { settings.historyMetadataUIFeature } returns true
-        every { settings.showPocketRecommendationsFeature } returns true
         every { settings.showContileFeature } returns true
         every { application.reportHomeScreenMetrics(settings) } just Runs
         every { application.deviceTotalRAM } returns 7L

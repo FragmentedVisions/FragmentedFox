@@ -124,9 +124,6 @@ Performance:
   description: Used for data reviews to label metrics related to performance. Corresponds
     to the [Feature:Performance](https://github.com/mozilla-mobile/fenix/issues?q=label%3AFeature%3APerformance)
     label on GitHub.
-PocketIntegration:
-  description: Corresponds to the [Feature:PocketIntegration](https://github.com/mozilla-mobile/fenix/issues?q=label%3AFeature%3APocketIntegration)
-    label on GitHub.
 Privacy&Security:
   description: Corresponds to the [Feature:Privacy&Security](https://github.com/mozilla-mobile/fenix/issues?q=label%3AFeature%3APrivacy%26Security)
     label on GitHub.

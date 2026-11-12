@@ -53,16 +53,12 @@ import org.mozilla.fenix.components.lens.GoogleLensAIControlFeature
 import org.mozilla.fenix.components.metrics.MetricsMiddleware
 import org.mozilla.fenix.crashes.CrashReportingAppMiddleware
 import org.mozilla.fenix.crashes.SettingsCrashReportCache
-import org.mozilla.fenix.datastore.pocketStoriesSelectedCategoriesDataStore
 import org.mozilla.fenix.ext.asRecentTabs
 import org.mozilla.fenix.ext.components
 import org.mozilla.fenix.ext.filterState
 import org.mozilla.fenix.ext.sort
-import org.mozilla.fenix.home.PocketMiddleware
-import org.mozilla.fenix.home.SettingsBackedPocketSettings
 import org.mozilla.fenix.home.blocklist.BlocklistHandler
 import org.mozilla.fenix.home.blocklist.BlocklistMiddleware
-import org.mozilla.fenix.home.middleware.HomeTelemetryMiddleware
 import org.mozilla.fenix.home.setup.store.DefaultSetupChecklistRepository
 import org.mozilla.fenix.home.setup.store.SetupChecklistPreferencesMiddleware
 import org.mozilla.fenix.home.setup.store.SetupChecklistTelemetryMiddleware
@@ -295,12 +291,6 @@ class Components(private val context: Context) {
                 ProfileMarkerMiddleware(markerName = "AppStore", profiler = core.engine.profiler),
                 LogMiddleware(tag = "AppStore", shouldIncludeDetailedData = { Config.channel.isDebug }),
                 BlocklistMiddleware(blocklistHandler),
-                PocketMiddleware(
-                    lazyMonitored { core.pocketStoriesService },
-                    context.pocketStoriesSelectedCategoriesDataStore,
-                    SettingsBackedPocketSettings(settings),
-                    performance.visualCompletenessQueue,
-                ),
                 MessagingMiddleware(
                     controller = nimbus.messaging,
                     settings = settings,
@@ -315,7 +305,6 @@ class Components(private val context: Context) {
                         currentTimeInMillis = { System.currentTimeMillis() },
                     ),
                 ),
-                HomeTelemetryMiddleware(),
                 SetupChecklistPreferencesMiddleware(DefaultSetupChecklistRepository(context, settings)),
                 SetupChecklistTelemetryMiddleware(),
                 AppVisualCompletenessMiddleware(performance.visualCompletenessQueue),

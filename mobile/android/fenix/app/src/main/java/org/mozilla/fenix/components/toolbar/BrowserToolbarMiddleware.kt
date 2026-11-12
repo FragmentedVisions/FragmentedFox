@@ -80,7 +80,6 @@ import mozilla.telemetry.glean.private.NoExtras
 import org.mozilla.fenix.GleanMetrics.Events
 import org.mozilla.fenix.GleanMetrics.ReaderMode
 import org.mozilla.fenix.GleanMetrics.Translations
-import org.mozilla.fenix.NavGraphDirections
 import org.mozilla.fenix.R
 import org.mozilla.fenix.browser.BrowserFragmentDirections
 import org.mozilla.fenix.browser.browsingmode.BrowsingMode
@@ -123,7 +122,6 @@ import org.mozilla.fenix.components.toolbar.TabCounterInteractions.CloseCurrentT
 import org.mozilla.fenix.components.toolbar.TabCounterInteractions.TabCounterClicked
 import org.mozilla.fenix.components.toolbar.TabCounterInteractions.TabCounterLongClicked
 import org.mozilla.fenix.components.usecases.ShareUseCases
-import org.mozilla.fenix.ext.canGoBackInHistoryOrToStories
 import org.mozilla.fenix.ext.nav
 import org.mozilla.fenix.ext.navigateSafe
 import org.mozilla.fenix.nimbus.FxNimbus
@@ -132,8 +130,6 @@ import org.mozilla.fenix.settings.quicksettings.protections.cookiebanners.getCoo
 import org.mozilla.fenix.tabstray.ext.isActiveDownload
 import org.mozilla.fenix.tabstray.redux.state.Page
 import org.mozilla.fenix.utils.Settings
-import org.mozilla.fenix.utils.Stories.hasUrlOfAHomeScreenStory
-import org.mozilla.fenix.utils.Stories.hasUrlOfAStoriesScreenStory
 import mozilla.components.browser.toolbar.R as toolbarR
 import mozilla.components.lib.state.Action as MVIAction
 import mozilla.components.ui.icons.R as iconsR
@@ -432,34 +428,7 @@ class BrowserToolbarMiddleware(
             }
             is NavigateBackClicked -> {
                 browserStore.state.selectedTab?.let {
-                    when {
-                        settings.enableHomepageAsNewTab -> browserStore.dispatch(EngineAction.GoBackAction(it.id))
-                        it.hasUrlOfAHomeScreenStory() -> {
-                            // First attempting to go back to the existing home fragment
-                            // to preserve its scroll position.
-                            val popToExistingHomeFragment =
-                                navController.popBackStack(R.id.homeFragment, false)
-                            if (!popToExistingHomeFragment) {
-                                navController.nav(
-                                    id = R.id.browserFragment,
-                                    directions = NavGraphDirections.actionGlobalHome(),
-                                )
-                            }
-                        }
-                        it.hasUrlOfAStoriesScreenStory() -> {
-                            // First attempting to go back to the existing stories fragment
-                            // to preserve its scroll position.
-                            val popToExistingStoriesFragment =
-                                navController.popBackStack(R.id.storiesFragment, false)
-                            if (!popToExistingStoriesFragment) {
-                                navController.nav(
-                                    id = R.id.browserFragment,
-                                    directions = BrowserFragmentDirections.actionBrowserFragmentToStoriesFragment(),
-                                )
-                            }
-                        }
-                        else -> browserStore.dispatch(EngineAction.GoBackAction(it.id))
-                    }
+                    browserStore.dispatch(EngineAction.GoBackAction(it.id))
                 }
                 next(action)
             }
@@ -1135,7 +1104,7 @@ class BrowserToolbarMiddleware(
         ToolbarAction.Back -> ActionButtonRes(
             drawableResId = iconsR.drawable.mozac_ic_back_24,
             contentDescription = R.string.browser_menu_back,
-            state = if (browserStore.state.canGoBackInHistoryOrToStories()) {
+            state = if (browserStore.state.selectedTab?.content?.canGoBack == true) {
                 ActionButton.State.DEFAULT
             } else {
                 ActionButton.State.DISABLED

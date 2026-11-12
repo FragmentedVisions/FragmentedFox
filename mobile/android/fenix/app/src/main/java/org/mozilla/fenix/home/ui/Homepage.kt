@@ -49,7 +49,6 @@ import org.mozilla.fenix.GleanMetrics.History
 import org.mozilla.fenix.GleanMetrics.HomeBookmarks
 import org.mozilla.fenix.GleanMetrics.RecentlyVisitedHomepage
 import org.mozilla.fenix.R
-import org.mozilla.fenix.browser.browsingmode.BrowsingMode
 import org.mozilla.fenix.components.appstate.setup.checklist.SetupChecklistState
 import org.mozilla.fenix.components.components
 import org.mozilla.fenix.compose.MessageCard
@@ -62,7 +61,6 @@ import org.mozilla.fenix.home.collections.Collections
 import org.mozilla.fenix.home.collections.CollectionsState
 import org.mozilla.fenix.home.fake.FakeHomepagePreview
 import org.mozilla.fenix.home.interactor.HomepageInteractor
-import org.mozilla.fenix.home.pocket.ui.PocketSection
 import org.mozilla.fenix.home.recentsyncedtabs.view.RecentSyncedTab
 import org.mozilla.fenix.home.recenttabs.RecentTab
 import org.mozilla.fenix.home.recenttabs.interactor.RecentTabInteractor
@@ -152,24 +150,6 @@ internal fun Homepage(
             }
 
             when (val headerState = state.headerState) {
-                is HeaderState.Experimental.Normal -> {
-                    val settings = components.settings
-                    ExperimentalHomepageHeader(
-                        wordmarkTextColor = headerState.wordmarkTextColor,
-                        showStoriesButton = headerState.showStoriesButton,
-                        showButtonAnimation = headerState.showButtonAnimation,
-                        onPrivateModeTapped = { browsingModeChanged(BrowsingMode.Private) },
-                        onStoriesTapped = { interactor.onDiscoverMoreClicked() },
-                        onNewsAnimationShown = { settings.recordNewsButtonAnimationShown() },
-                    )
-                }
-
-                is HeaderState.Experimental.Private -> {
-                    ExperimentalPrivateHomepageHeader(
-                        onHomeTapped = { browsingModeChanged(BrowsingMode.Normal) },
-                    )
-                }
-
                 is HeaderState.Normal -> {
                     HomepageHeader(
                         wordmarkTextColor = headerState.wordmarkTextColor,
@@ -266,22 +246,6 @@ internal fun Homepage(
                             if (showCollections) {
                                 CollectionsSection(
                                     collectionsState = collectionsState,
-                                    interactor = interactor,
-                                )
-                            }
-
-                            if (showPocketStoriesCarousel) {
-                                Spacer(
-                                    modifier = if (isMinimalLayout()) {
-                                        Modifier.weight(1f)
-                                    } else {
-                                        Modifier.padding(top = 72.dp)
-                                    },
-                                )
-
-                                PocketSection(
-                                    state = pocketState,
-                                    cardBackgroundColor = cardBackgroundColor,
                                     interactor = interactor,
                                 )
                             }
@@ -573,13 +537,11 @@ private fun HomepagePreview() {
                     bookmarks = FakeHomepagePreview.bookmarks(),
                     recentlyVisited = FakeHomepagePreview.recentHistory(),
                     collectionsState = CollectionsState.Gone,
-                    pocketState = FakeHomepagePreview.pocketState(),
                     showTopSites = true,
                     showRecentTabs = true,
                     showRecentSyncedTab = true,
                     showBookmarks = true,
                     showRecentlyVisited = true,
-                    showPocketStoriesCarousel = true,
                     showCollections = true,
                     showPrivacyReport = true,
                     trackersBlockedCount = 754,
@@ -626,13 +588,11 @@ private fun HomepageBannerPreview() {
                     bookmarks = FakeHomepagePreview.bookmarks(),
                     recentlyVisited = FakeHomepagePreview.recentHistory(),
                     collectionsState = CollectionsState.Gone,
-                    pocketState = FakeHomepagePreview.pocketState(),
                     showTopSites = true,
                     showRecentTabs = true,
                     showRecentSyncedTab = true,
                     showBookmarks = true,
                     showRecentlyVisited = true,
-                    showPocketStoriesCarousel = true,
                     showCollections = true,
                     showPrivacyReport = true,
                     trackersBlockedCount = 754,
@@ -679,13 +639,11 @@ private fun HomepagePreviewCollections() {
                     bookmarks = FakeHomepagePreview.bookmarks(),
                     recentlyVisited = FakeHomepagePreview.recentHistory(),
                     collectionsState = FakeHomepagePreview.collectionState(),
-                    pocketState = FakeHomepagePreview.pocketState(),
                     showTopSites = false,
                     showRecentTabs = false,
                     showRecentSyncedTab = false,
                     showBookmarks = false,
                     showRecentlyVisited = true,
-                    showPocketStoriesCarousel = true,
                     showCollections = true,
                     showPrivacyReport = true,
                     trackersBlockedCount = 754,
@@ -732,13 +690,11 @@ private fun MinimalHomepagePreview() {
                     bookmarks = FakeHomepagePreview.bookmarks(),
                     recentlyVisited = FakeHomepagePreview.recentHistory(),
                     collectionsState = FakeHomepagePreview.collectionState(),
-                    pocketState = FakeHomepagePreview.pocketState(),
                     showTopSites = true,
                     showRecentTabs = false,
                     showRecentSyncedTab = false,
                     showBookmarks = false,
                     showRecentlyVisited = false,
-                    showPocketStoriesCarousel = true,
                     showCollections = false,
                     showPrivacyReport = true,
                     trackersBlockedCount = 754,

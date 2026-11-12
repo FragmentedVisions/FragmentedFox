@@ -76,7 +76,15 @@
     "TabsToolbarFeature",
     "CoordinateScrollingFeature",
     "TrustedWebActivityIntentProcessor",
-    "webCompatReporterEnhancementsEnabled"
+    "webCompatReporterEnhancementsEnabled",
+    "service\\.pocket",
+    "home\\.pocket",
+    "ContentRecommendationsAction",
+    "PocketMiddleware",
+    "PersistStoryUTMRequestInterceptor",
+    "privateModeAndStoriesEntryPoint",
+    "showPocketRecommendationsFeature",
+    "showPocketSponsoredStories"
   ],
   "permissions": [
     "com.adjust.preinstall.READ_PERMISSION"

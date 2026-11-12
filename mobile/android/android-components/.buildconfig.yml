@@ -1934,21 +1934,6 @@ projects:
     - components:support-utils
     - components:tooling-lint
     - components:ui-icons
-  components:service-pocket:
-    description: A library to communicate with the Pocket API
-    path: components/service/pocket
-    publish: true
-    upstream_dependencies:
-    - components:concept-base
-    - components:concept-fetch
-    - components:lib-fetch-httpurlconnection
-    - components:lib-publicsuffixlist
-    - components:support-android-test
-    - components:support-base
-    - components:support-ktx
-    - components:support-test
-    - components:support-utils
-    - components:tooling-lint
   components:service-sync-autofill:
     description: A library for autofilling addresses and credit cards.
     path: components/service/sync-autofill

@@ -10,7 +10,7 @@ import org.mozilla.fenix.helpers.TestAssetHelper.getGenericAsset
 import org.mozilla.fenix.ui.efficiency.helpers.BaseTest
 import org.mozilla.fenix.ui.efficiency.selectors.HomeSelectors
 
-class HomeTest : BaseTest(isPocketEnabled = false, isRecentlyVisitedFeatureEnabled = false) {
+class HomeTest : BaseTest(isRecentlyVisitedFeatureEnabled = false) {
     private val mockWebServer get() = fenixTestRule.mockWebServer
 
     // TestRail link: https://mozilla.testrail.io/index.php?/cases/view/235396

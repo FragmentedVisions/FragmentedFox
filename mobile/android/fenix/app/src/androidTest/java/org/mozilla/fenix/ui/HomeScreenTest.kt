@@ -55,7 +55,6 @@ class HomeScreenTest {
             verifyHomePrivateBrowsingButton()
             verifyExistingTopSitesTabs("Wikipedia")
             verifyExistingTopSitesTabs("Google")
-            verifyThoughtProvokingStories(true)
             verifyNavigationToolbar()
             verifyHomeMenuButton()
             verifyTabCounter("0")
@@ -86,7 +85,6 @@ class HomeScreenTest {
     fun verifyJumpBackInSectionTest() {
         composeTestRule.activityRule.applySettingsExceptions {
             it.isRecentlyVisitedFeatureEnabled = false
-            it.isPocketEnabled = false
         }
 
         val firstWebPage = mockWebServer.getGenericAsset(4)

@@ -420,8 +420,6 @@
     <string name="pref_key_return_to_browser" translatable="false">pref_key_return_to_browser</string>
     <string name="pref_key_show_menu_banner" translatable="false">pref_key_show_menu_banner</string>
 
-    <!-- Pocket -->
-
     <!-- Secret Info Setting Keys -->
     <string name="pref_key_start_profiler" translatable="false">pref_key_start_profiler</string>
 

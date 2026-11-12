@@ -373,6 +373,9 @@ class BrowserIcons(
             ComponentCallbacks2.TRIM_MEMORY_RUNNING_CRITICAL,
             -> true
 
+            // Background: Our process has moved to the cached list, and is the first to be reclaimed when memory
+            // is needed. This is the level that is still delivered on current Android versions.
+            ComponentCallbacks2.TRIM_MEMORY_BACKGROUND,
             // Background: The system is running low on memory and our process is near the middle of the LRU list.
             // If the system becomes further constrained for memory, there's a chance our process will be killed.
             ComponentCallbacks2.TRIM_MEMORY_MODERATE,

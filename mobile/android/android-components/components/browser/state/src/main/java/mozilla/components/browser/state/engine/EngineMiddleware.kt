@@ -16,7 +16,6 @@ import mozilla.components.browser.state.engine.middleware.LinkingMiddleware
 import mozilla.components.browser.state.engine.middleware.PdfStateMiddleware
 import mozilla.components.browser.state.engine.middleware.SuspendMiddleware
 import mozilla.components.browser.state.engine.middleware.TabsRemovedMiddleware
-import mozilla.components.browser.state.engine.middleware.TrimMemoryMiddleware
 import mozilla.components.browser.state.engine.middleware.WebExtensionMiddleware
 import mozilla.components.browser.state.state.BrowserState
 import mozilla.components.browser.state.store.BrowserStore
@@ -30,14 +29,10 @@ object EngineMiddleware {
     /**
      * Creates a list of [Middleware] to be installed on a [BrowserStore] in order to support all
      * [EngineAction]s.
-     *
-     * @param trimMemoryAutomatically Whether a middleware should listen to LowMemoryAction and
-     * automatically trim memory by suspending tabs.
      */
     fun create(
         engine: Engine,
         scope: CoroutineScope = MainScope(),
-        trimMemoryAutomatically: Boolean = true,
     ): List<Middleware<BrowserState, BrowserAction>> {
         return listOf(
             EngineDelegateMiddleware(scope),
@@ -52,10 +47,6 @@ object EngineMiddleware {
             CrashMiddleware(),
             ExtensionsProcessMiddleware(engine),
             PdfStateMiddleware(scope),
-        ) + if (trimMemoryAutomatically) {
-            listOf(TrimMemoryMiddleware())
-        } else {
-            emptyList()
-        }
+        )
     }
 }

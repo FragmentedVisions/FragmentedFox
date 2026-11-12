@@ -40,7 +40,6 @@ import kotlinx.coroutines.withContext
 import mozilla.appservices.autofill.AutofillApiException
 import mozilla.components.ExperimentalAndroidComponentsApi
 import mozilla.components.browser.state.action.SearchAction.SearchConfigurationAvailabilityChanged
-import mozilla.components.browser.state.action.SystemAction
 import mozilla.components.browser.state.selector.selectedTab
 import mozilla.components.browser.state.state.selectedOrDefaultPrivateSearchEngine
 import mozilla.components.browser.state.store.BrowserStore
@@ -686,7 +685,6 @@ open class FenixApplication : Application(), Provider, ThemeProvider {
             )
 
             components.core.icons.onTrimMemory(level)
-            components.core.store.dispatch(SystemAction.LowMemoryAction(level))
         }
     }
 

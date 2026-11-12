@@ -28,7 +28,6 @@ import mozilla.components.browser.state.action.RecentlyClosedAction
 import mozilla.components.browser.state.action.RestoreCompleteAction
 import mozilla.components.browser.state.action.SearchAction
 import mozilla.components.browser.state.action.ShareResourceAction
-import mozilla.components.browser.state.action.SystemAction
 import mozilla.components.browser.state.action.SystemPermissionRequestAction
 import mozilla.components.browser.state.action.TabGroupAction
 import mozilla.components.browser.state.action.TabListAction
@@ -62,7 +61,6 @@ internal object BrowserStateReducer {
             is CustomTabListAction -> CustomTabListReducer.reduce(state, action)
             is EngineAction -> EngineStateReducer.reduce(state, action)
             is ReaderAction -> ReaderStateReducer.reduce(state, action)
-            is SystemAction -> SystemReducer.reduce(state, action)
             is TabListAction -> TabListReducer.reduce(state, action)
             is TabGroupAction -> TabGroupReducer.reduce(state, action)
             is TrackingProtectionAction -> TrackingProtectionStateReducer.reduce(state, action)

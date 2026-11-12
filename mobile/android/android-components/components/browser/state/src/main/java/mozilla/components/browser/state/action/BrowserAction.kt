@@ -4,7 +4,6 @@
 
 package mozilla.components.browser.state.action
 
-import android.content.ComponentCallbacks2
 import android.graphics.Bitmap
 import android.os.SystemClock
 import mozilla.components.browser.state.search.RegionState
@@ -104,22 +103,6 @@ sealed class ExtensionsProcessAction : BrowserAction() {
      * [BrowserAction] to indicate that the process has been left disabled by the user.
      */
     object DisabledAction : ExtensionsProcessAction()
-}
-
-/**
- * [BrowserAction] implementations to react to system events.
- */
-sealed class SystemAction : BrowserAction() {
-    /**
-     * Optimizes the [BrowserState] by removing unneeded and optional resources if the system is in
-     * a low memory condition.
-     *
-     * @param level The context of the trim, giving a hint of the amount of trimming the application
-     * may like to perform. See constants in [ComponentCallbacks2].
-     */
-    data class LowMemoryAction(
-        val level: Int,
-    ) : SystemAction()
 }
 
 /**

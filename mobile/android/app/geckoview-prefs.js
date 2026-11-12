@@ -121,6 +121,7 @@ pref("browser.search.update", false);
 // Session history
 pref("browser.sessionhistory.contentViewerTimeout", 360);
 pref("browser.sessionhistory.max_entries", 50);
+pref("browser.sessionhistory.max_total_viewers", 0);
 
 // Session store
 pref("browser.sessionstore.interval", 10000); // milliseconds

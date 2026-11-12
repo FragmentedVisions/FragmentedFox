@@ -6,6 +6,7 @@ package mozilla.components.feature.search.middleware
 
 import android.content.Context
 import android.graphics.BitmapFactory
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Deferred
 import kotlinx.coroutines.Dispatchers
@@ -264,6 +265,8 @@ class SearchMiddleware(
                 searchExtraParams = searchExtraParams,
                 coroutineContext = ioDispatcher,
             ).firstOrNull()
+        } catch (e: CancellationException) {
+            throw e
         } catch (e: Exception) {
             logger.error("Could not load Ecosia", e)
             null

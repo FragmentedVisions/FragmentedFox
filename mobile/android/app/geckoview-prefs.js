@@ -293,6 +293,9 @@ pref("media.eme.require-app-approval", true);
 // Enable autoplay permission prompts (bug 1577596)
 pref("media.geckoview.autoplay.request", true);
 
+// Allow autoplay only within a few seconds of a tap, not for the rest of the page's life
+pref("media.autoplay.blocking_policy", 1);
+
 // Enable Widevine MediaKeySystem (bug 1306219)
 pref("media.mediadrm-widevinecdm.visible", true);
 

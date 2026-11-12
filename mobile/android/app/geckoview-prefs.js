@@ -123,6 +123,9 @@ pref("browser.sessionhistory.contentViewerTimeout", 360);
 pref("browser.sessionhistory.max_entries", 50);
 pref("browser.sessionhistory.max_total_viewers", 0);
 
+// Drop decoded images that are off screen after 15 seconds instead of 60
+pref("image.mem.surfacecache.min_expiration_ms", 15000);
+
 // Session store
 pref("browser.sessionstore.interval", 10000); // milliseconds
 pref("browser.sessionstore.max_resumed_crashes", 2);

@@ -4,14 +4,10 @@
 
 package org.mozilla.fenix.perf
 
-import android.Manifest
 import android.content.ClipData
 import android.content.ClipboardManager
 import android.content.Context
-import android.content.pm.PackageManager
-import android.os.Build
 import android.util.Base64
-import androidx.core.content.ContextCompat
 import mozilla.components.concept.fetch.MutableHeaders
 import mozilla.components.concept.fetch.Request
 import mozilla.components.concept.fetch.Response
@@ -228,25 +224,5 @@ object ProfilerUtils {
             jwtToken.append(jsonObject[TOKEN])
         }
         return jwtToken.toString()
-    }
-
-    /**
-     * Checks if the app has notification permission on Android 13+ (API level 33+).
-     *
-     * This permission check is required for profiler notifications on newer Android versions.
-     * On older versions, notification permission is granted by default.
-     *
-     * @param context Android context for permission checking
-     * @return true if notification permission is granted or not required, false otherwise
-     */
-    fun hasNotificationPermission(context: Context): Boolean {
-        return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-            ContextCompat.checkSelfPermission(
-                context,
-                Manifest.permission.POST_NOTIFICATIONS,
-            ) == PackageManager.PERMISSION_GRANTED
-        } else {
-            true
-        }
     }
 }

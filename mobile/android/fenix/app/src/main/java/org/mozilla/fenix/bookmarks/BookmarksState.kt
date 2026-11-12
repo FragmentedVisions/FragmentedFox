@@ -131,11 +131,6 @@ internal data class BookmarksState(
     }
 }
 
-internal fun BookmarksState.isGuidBeingMoved(guid: String): Boolean {
-    return bookmarksMultiselectMoveState?.guidsToMove?.contains(guid) ?: false ||
-        bookmarksEditFolderState?.folder?.guid == guid
-}
-
 internal data class MultiselectMoveState(
     val guidsToMove: List<String>,
     val destination: String,

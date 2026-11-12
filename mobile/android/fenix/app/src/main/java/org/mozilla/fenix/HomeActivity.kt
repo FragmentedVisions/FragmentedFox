@@ -1459,14 +1459,6 @@ open class HomeActivity : LocaleAwareAppCompatActivity(), NavHostActivity, Crash
         components.core.store.state.extensions.values
             .firstOrNull { it.activeOptionsPage == activeOptionsPage }
 
-    /**
-     * The root container is null at this point, so let the HomeActivity know that
-     * we are visually complete.
-     */
-    fun setVisualCompletenessQueueReady() {
-        isVisuallyComplete = true
-    }
-
     private fun captureSnapshotTelemetryMetrics() {
         lifecycleScope.launch {
             val recentlyUsedPwaCount = withContext(Dispatchers.IO) {

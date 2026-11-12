@@ -613,32 +613,6 @@
     <ID>UndocumentedPublicClass:TabHistoryViewHolder.kt$TabHistoryViewHolder : ViewHolder</ID>
     <ID>UndocumentedPublicClass:ThemeManager.kt$DefaultThemeManager : ThemeManager</ID>
     <ID>UndocumentedPublicClass:ThemeManager.kt$ThemeManager</ID>
-    <ID>UndocumentedPublicClass:ToolbarMenu.kt$ToolbarMenu</ID>
-    <ID>UndocumentedPublicClass:ToolbarMenu.kt$ToolbarMenu$Item</ID>
-    <ID>UndocumentedPublicClass:ToolbarMenu.kt$ToolbarMenu.Item$AddToHomeScreen : Item</ID>
-    <ID>UndocumentedPublicClass:ToolbarMenu.kt$ToolbarMenu.Item$AddToTopSites : Item</ID>
-    <ID>UndocumentedPublicClass:ToolbarMenu.kt$ToolbarMenu.Item$AddonsManager : Item</ID>
-    <ID>UndocumentedPublicClass:ToolbarMenu.kt$ToolbarMenu.Item$Back : Item</ID>
-    <ID>UndocumentedPublicClass:ToolbarMenu.kt$ToolbarMenu.Item$Bookmark : Item</ID>
-    <ID>UndocumentedPublicClass:ToolbarMenu.kt$ToolbarMenu.Item$Bookmarks : Item</ID>
-    <ID>UndocumentedPublicClass:ToolbarMenu.kt$ToolbarMenu.Item$CustomizeReaderView : Item</ID>
-    <ID>UndocumentedPublicClass:ToolbarMenu.kt$ToolbarMenu.Item$Downloads : Item</ID>
-    <ID>UndocumentedPublicClass:ToolbarMenu.kt$ToolbarMenu.Item$FindInPage : Item</ID>
-    <ID>UndocumentedPublicClass:ToolbarMenu.kt$ToolbarMenu.Item$Forward : Item</ID>
-    <ID>UndocumentedPublicClass:ToolbarMenu.kt$ToolbarMenu.Item$History : Item</ID>
-    <ID>UndocumentedPublicClass:ToolbarMenu.kt$ToolbarMenu.Item$InstallPwaToHomeScreen : Item</ID>
-    <ID>UndocumentedPublicClass:ToolbarMenu.kt$ToolbarMenu.Item$NewTab : Item</ID>
-    <ID>UndocumentedPublicClass:ToolbarMenu.kt$ToolbarMenu.Item$OpenInApp : Item</ID>
-    <ID>UndocumentedPublicClass:ToolbarMenu.kt$ToolbarMenu.Item$OpenInFenix : Item</ID>
-    <ID>UndocumentedPublicClass:ToolbarMenu.kt$ToolbarMenu.Item$Quit : Item</ID>
-    <ID>UndocumentedPublicClass:ToolbarMenu.kt$ToolbarMenu.Item$Reload : Item</ID>
-    <ID>UndocumentedPublicClass:ToolbarMenu.kt$ToolbarMenu.Item$RemoveFromTopSites : Item</ID>
-    <ID>UndocumentedPublicClass:ToolbarMenu.kt$ToolbarMenu.Item$RequestDesktop : Item</ID>
-    <ID>UndocumentedPublicClass:ToolbarMenu.kt$ToolbarMenu.Item$SaveToCollection : Item</ID>
-    <ID>UndocumentedPublicClass:ToolbarMenu.kt$ToolbarMenu.Item$SetDefaultBrowser : Item</ID>
-    <ID>UndocumentedPublicClass:ToolbarMenu.kt$ToolbarMenu.Item$Settings : Item</ID>
-    <ID>UndocumentedPublicClass:ToolbarMenu.kt$ToolbarMenu.Item$Share : Item</ID>
-    <ID>UndocumentedPublicClass:ToolbarMenu.kt$ToolbarMenu.Item$Stop : Item</ID>
     <ID>UndocumentedPublicClass:TrackerBuckets.kt$TrackerBuckets$BucketedTrackerLog</ID>
     <ID>UndocumentedPublicClass:TrackingProtectionCategoryItem.kt$TrackingProtectionCategoryItem : ConstraintLayout</ID>
     <ID>UndocumentedPublicClass:TrackingProtectionExceptionsAdapter.kt$TrackingProtectionExceptionsAdapter$TrackingProtectionAdapterItem : Item</ID>
@@ -726,7 +700,6 @@
     <ID>UndocumentedPublicFunction:ImageButton.kt$fun ImageButton.showAndEnable()</ID>
     <ID>UndocumentedPublicFunction:IntentReceiverActivity.kt$IntentReceiverActivity$fun processIntent(intent: Intent)</ID>
     <ID>UndocumentedPublicFunction:LibrarySiteItemView.kt$LibrarySiteItemView$fun &lt;T&gt; setSelectionInteractor(item: T, holder: SelectionHolder&lt;T&gt;, interactor: SelectionInteractor&lt;T&gt;)</ID>
-    <ID>UndocumentedPublicFunction:LibrarySiteItemView.kt$LibrarySiteItemView$fun attachMenu(menuController: MenuController)</ID>
     <ID>UndocumentedPublicFunction:LibrarySiteItemView.kt$LibrarySiteItemView$fun loadFavicon(url: String)</ID>
     <ID>UndocumentedPublicFunction:LocaleAdapter.kt$LocaleAdapter$fun updateData(localeList: List&lt;Locale&gt;, selectedLocale: Locale)</ID>
     <ID>UndocumentedPublicFunction:LocaleManagerExtension.kt$fun LocaleManager.isDefaultLocaleSelected(context: Context): Boolean</ID>
@@ -801,7 +774,6 @@
     <ID>UndocumentedPublicFunction:Settings.kt$Settings$fun incrementSecureWarningCount()</ID>
     <ID>UndocumentedPublicFunction:Settings.kt$Settings$fun incrementShowLoginsSecureWarningSyncCount()</ID>
     <ID>UndocumentedPublicFunction:Settings.kt$Settings$fun incrementVisitedInstallableCount()</ID>
-    <ID>UndocumentedPublicFunction:Settings.kt$Settings$fun recordPasswordsEncryptionKeyGenerated()</ID>
     <ID>UndocumentedPublicFunction:Settings.kt$Settings$fun setSitePermissionSettingListener(lifecycleOwner: LifecycleOwner, listener: () -&gt; Unit)</ID>
     <ID>UndocumentedPublicFunction:ShareCloseView.kt$ShareCloseInteractor$fun onShareClosed()</ID>
     <ID>UndocumentedPublicFunction:ShareCloseView.kt$ShareCloseView$fun setTabs(tabs: List&lt;ShareData&gt;)</ID>
@@ -826,7 +798,6 @@
     <ID>UndocumentedPublicFunction:SitePermissionsManageExceptionsPhoneFeatureFragment.kt$SitePermissionsManageExceptionsPhoneFeatureFragment$fun initAutoplay(sitePermissions: SitePermissions? = null)</ID>
     <ID>UndocumentedPublicFunction:SitePermissionsManageExceptionsPhoneFeatureFragment.kt$SitePermissionsManageExceptionsPhoneFeatureFragment$fun initNormalFeature()</ID>
     <ID>UndocumentedPublicFunction:SpannableString.kt$fun SpannableString.setTextColor( context: Context, @AttrRes colorResId: Int, )</ID>
-    <ID>UndocumentedPublicFunction:SpannableString.kt$fun SpannableString.setTextSize( context: Context, @Dimension(unit = DP) textSize: Int, )</ID>
     <ID>UndocumentedPublicFunction:StartupActivityLog.kt$StartupActivityLog$@VisibleForTesting(otherwise = NONE) fun getObserversForTesting()</ID>
     <ID>UndocumentedPublicFunction:StartupActivityLog.kt$StartupActivityLog$@VisibleForTesting(otherwise = PRIVATE) fun logEntries(loggerArg: Logger = logger, logLevel: Log.Priority = Log.logLevel)</ID>
     <ID>UndocumentedPublicFunction:StartupActivityLog.kt$StartupActivityLog$fun registerInAppOnCreate( application: Application, processLifecycleOwner: LifecycleOwner = ProcessLifecycleOwner.get(), )</ID>

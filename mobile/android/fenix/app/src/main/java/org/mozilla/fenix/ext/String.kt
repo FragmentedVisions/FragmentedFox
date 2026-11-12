@@ -4,7 +4,6 @@
 
 package org.mozilla.fenix.ext
 
-import android.text.Editable
 import androidx.compose.runtime.Composable
 import mozilla.components.compose.base.utils.inComposePreview
 import mozilla.components.lib.publicsuffixlist.PublicSuffixList
@@ -48,11 +47,6 @@ fun String.simplifiedUrl(): String {
     }
     return afterScheme
 }
-
-/**
- * Returns an [Editable] for the provided string.
- */
-fun String.toEditable(): Editable = Editable.Factory.getInstance().newEditable(this)
 
 /**
  * Returns a Ipv6 address with consecutive sections of zeroes replaced with a double colon.

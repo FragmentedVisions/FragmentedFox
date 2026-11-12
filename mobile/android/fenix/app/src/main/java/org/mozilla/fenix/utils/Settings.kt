@@ -16,7 +16,6 @@ import androidx.annotation.VisibleForTesting
 import androidx.annotation.VisibleForTesting.Companion.PRIVATE
 import androidx.core.content.edit
 import androidx.lifecycle.LifecycleOwner
-import androidx.preference.PreferenceManager
 import mozilla.components.concept.engine.Engine
 import mozilla.components.concept.engine.Engine.HttpsOnlyMode
 import mozilla.components.concept.engine.EngineSession.CookieBannerHandlingMode
@@ -1476,13 +1475,6 @@ class Settings(
         false,
     )
 
-    fun recordPasswordsEncryptionKeyGenerated() = preferences.edit {
-        putBoolean(
-            appContext.getPreferenceKey(R.string.pref_key_encryption_key_generated),
-            true,
-        )
-    }
-
     @VisibleForTesting(otherwise = PRIVATE)
     internal val loginsSecureWarningSyncCount = counterPreference(
         appContext.getPreferenceKey(R.string.pref_key_logins_secure_warning_sync),
@@ -2808,15 +2800,6 @@ class Settings(
         key = appContext.getPreferenceKey(R.string.pref_key_show_voice_search_in_display_toolbar),
         default = { FxNimbus.features.voiceSearchInDisplayMode.value().enabled },
     )
-
-    /**
-     * Indicates whether the app should automatically clean up downloaded files.
-     */
-    fun shouldCleanUpDownloadsAutomatically(): Boolean {
-        val sharedPreferences = PreferenceManager.getDefaultSharedPreferences(appContext)
-        val cleanupPreferenceKey = appContext.getString(R.string.pref_key_downloads_clean_up_files_automatically)
-        return sharedPreferences.getBoolean(cleanupPreferenceKey, false)
-    }
 
     var downloadsDefaultLocation by stringPreference(
         appContext.getPreferenceKey(R.string.pref_key_downloads_default_location),

@@ -11,9 +11,6 @@ import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.core.view.isVisible
-import mozilla.components.concept.menu.MenuController
-import mozilla.components.concept.menu.Orientation
 import org.mozilla.fenix.databinding.LibrarySiteItemBinding
 import org.mozilla.fenix.ext.components
 import org.mozilla.fenix.ext.loadIntoView
@@ -42,13 +39,6 @@ class LibrarySiteItemView @JvmOverloads constructor(
     val overflowView: ImageButton get() = binding.overflowMenu
 
     /**
-     * Change visibility of parts of this view based on what type of item is being represented.
-     */
-    fun displayAs(mode: ItemType) {
-        urlView.isVisible = mode == ItemType.SITE
-    }
-
-    /**
      * Changes the icon to show a check mark if [isSelected]
      */
     fun changeSelected(isSelected: Boolean) {
@@ -57,15 +47,6 @@ class LibrarySiteItemView @JvmOverloads constructor(
 
     fun loadFavicon(url: String) {
         context.components.core.icons.loadIntoView(iconView, url)
-    }
-
-    fun attachMenu(menuController: MenuController) {
-        overflowView.setOnClickListener {
-            menuController.show(
-                anchor = it,
-                orientation = Orientation.DOWN,
-            )
-        }
     }
 
     fun <T> setSelectionInteractor(item: T, holder: SelectionHolder<T>, interactor: SelectionInteractor<T>) {

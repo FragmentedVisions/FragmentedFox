@@ -67,15 +67,6 @@ class BottomToolbarContainerView(
 
         parent.addView(toolbarContainerView)
     }
-
-    /**
-     * Updates the Composable content of the [composeView].
-     */
-    fun updateContent(content: @Composable () -> Unit) {
-        composeView.setContent {
-            content()
-        }
-    }
 }
 
 /**

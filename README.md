@@ -10,7 +10,7 @@ FragmentedFox is a private, independent fork of the Firefox browser from [Fragme
 
 ## Status
 
-Early and experimental. The Android app builds on GitHub Actions into a signed APK that installs and runs on a phone. It has had only light testing. The latest build (build 30, commit `fb02ae860a`) passed and was installed and checked on a phone. It has one known minor bug, listed under known gaps in [changes](./fragmentedfox-docs/changes.md).
+Early and experimental. The Android app builds on GitHub Actions into a signed APK that installs and runs on a phone. It has had only light testing. The latest build (build 34, commit `bfbcf5db3c`) passed and was installed and checked on a phone. It has one known minor bug, listed under known gaps in [changes](./fragmentedfox-docs/changes.md).
 
 | Platform | Status |
 | --- | --- |
@@ -45,8 +45,8 @@ There are only two branches. All changes are made on `NonStable--test`, and buil
 
 | Branch | Purpose |
 | --- | --- |
-| `Stable-Main` | The default branch. The last state that was built and installed on a phone (build 30, commit `fb02ae860a`, Android build run 42873290132). Anything after that commit is documentation only. |
-| `NonStable--test` | Where all work happens. It includes everything in `Stable-Main` plus any newer changes. Right now it has code changes that `Stable-Main` lacks. Build 31 (commit `3902e41696`, run 43062300032) compiled them: about 26,000 lines of unused modules, strings and resources deleted, Strict tracking protection by default and the new fox artwork. It has not been checked on a phone yet. Build 34 (commit `bfbcf5db3c`, run 43262005292) compiled everything up to the memory docs: Ecosia in place of Bing, no partner codes in search URLs, no search results telemetry, fewer Nimbus features, the back/forward cache off, decoded images dropped after 15 seconds, autoplay blocked, the tab limit rework, about 30 unused library classes removed and Pocket and the Stories feature removed (see [changes](./fragmentedfox-docs/changes.md) and [memory](./fragmentedfox-docs/memory.md)). On a phone: no lag, Back and Forward keep a typed comment, autoplay is blocked, the homepage and Ecosia work. `Stable-Main` only moves up after a build of the new changes has been checked on a phone. |
+| `Stable-Main` | The default branch. The last state that was built and installed on a phone (build 34, commit `bfbcf5db3c`, Android build run 43262005292). Anything after that commit is documentation only. |
+| `NonStable--test` | Where all work happens. It starts level with `Stable-Main`. Changes made after build 34 are listed in [changes](./fragmentedfox-docs/changes.md). `Stable-Main` only moves up after a build of the new changes has been checked on a phone. |
 
 ## Building
 

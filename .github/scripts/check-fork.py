@@ -289,6 +289,12 @@ def check_search():
     text = read(path)
     if 'PREFERRED_DEFAULT_SEARCH_ENGINE_ID = "ddg"' not in text or "it.id == PREFERRED_DEFAULT_SEARCH_ENGINE_ID" not in text:
         fail("search", "SearchMiddleware.kt: DuckDuckGo is no longer the preferred default search engine")
+    reader = read(os.path.join(AC, "components/feature/search/src/main/java/mozilla/components/feature/search/storage/SearchEngineReader.kt"))
+    if "PartnerParams::strip" not in reader or "dropPartnerCode = true" not in reader:
+        fail("search", "SearchEngineReader.kt: search engines are no longer stripped of partner codes")
+    top_sites = read(os.path.join(APP, "src/main/java/org/mozilla/fenix/home/topsites/controller/TopSiteController.kt"))
+    if "appendSearchAttributionToUrlIfNeeded" in top_sites:
+        fail("search", "TopSiteController.kt: the Google shortcut must not get a partner code added")
 
 
 def glean_class(category):

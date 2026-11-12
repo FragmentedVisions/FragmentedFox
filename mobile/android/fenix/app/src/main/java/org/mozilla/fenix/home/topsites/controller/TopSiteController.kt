@@ -288,7 +288,7 @@ class DefaultTopSiteController(
 
         if (settings.enableHomepageAsNewTab) {
             fenixBrowserUseCases.loadUrlOrSearch(
-                searchTermOrURL = appendSearchAttributionToUrlIfNeeded(topSite.url),
+                searchTermOrURL = topSite.url,
                 newTab = false,
                 private = false,
             )
@@ -305,7 +305,7 @@ class DefaultTopSiteController(
                 TopSites.openInNewTab.record(NoExtras())
 
                 addTabUseCase.invoke(
-                    url = appendSearchAttributionToUrlIfNeeded(topSite.url),
+                    url = topSite.url,
                     selectTab = true,
                     startLoading = true,
                 )
@@ -417,23 +417,6 @@ class DefaultTopSiteController(
                 url = url,
             )
         }
-    }
-
-    /**
-     * Append a search attribution query to any provided search engine URL based on the
-     * user's current region.
-     */
-    private fun appendSearchAttributionToUrlIfNeeded(url: String): String {
-        if (url == SupportUtils.GOOGLE_URL) {
-            store.state.search.region?.let { region ->
-                return when (region.current) {
-                    "US" -> SupportUtils.GOOGLE_US_URL
-                    else -> SupportUtils.GOOGLE_XX_URL
-                }
-            }
-        }
-
-        return url
     }
 
     @VisibleForTesting

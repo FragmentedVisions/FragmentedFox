@@ -22,8 +22,6 @@ import com.google.android.material.R as materialR
 
 object SupportUtils {
     const val GOOGLE_URL = "https://www.google.com/"
-    const val GOOGLE_US_URL = "https://www.google.com/webhp?client=firefox-b-1-m&channel=ts"
-    const val GOOGLE_XX_URL = "https://www.google.com/webhp?client=firefox-b-m&channel=ts"
     const val WHATS_NEW_URL = "https://www.mozilla.org/firefox/android/notes"
     const val FRAGMENTEDFOX_REPO_URL = "https://github.com/FragmentedVisions/FragmentedFox"
     const val FRAGMENTEDFOX_CHANGES_URL = "$FRAGMENTEDFOX_REPO_URL/blob/HEAD/fragmentedfox-docs/changes.md"

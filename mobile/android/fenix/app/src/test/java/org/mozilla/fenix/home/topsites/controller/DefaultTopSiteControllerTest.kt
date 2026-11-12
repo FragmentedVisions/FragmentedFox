@@ -424,7 +424,7 @@ class DefaultTopSiteControllerTest {
 
         verify {
             tabsUseCases.addTab.invoke(
-                url = SupportUtils.GOOGLE_US_URL,
+                url = SupportUtils.GOOGLE_URL,
                 selectTab = true,
                 startLoading = true,
             )
@@ -462,7 +462,7 @@ class DefaultTopSiteControllerTest {
 
         verify {
             tabsUseCases.addTab.invoke(
-                SupportUtils.GOOGLE_XX_URL,
+                SupportUtils.GOOGLE_URL,
                 selectTab = true,
                 startLoading = true,
             )
@@ -549,7 +549,7 @@ class DefaultTopSiteControllerTest {
 
         verify {
             tabsUseCases.addTab.invoke(
-                SupportUtils.GOOGLE_US_URL,
+                SupportUtils.GOOGLE_URL,
                 selectTab = true,
                 startLoading = true,
             )
@@ -587,7 +587,7 @@ class DefaultTopSiteControllerTest {
 
         verify {
             tabsUseCases.addTab.invoke(
-                SupportUtils.GOOGLE_XX_URL,
+                SupportUtils.GOOGLE_URL,
                 selectTab = true,
                 startLoading = true,
             )
@@ -625,7 +625,7 @@ class DefaultTopSiteControllerTest {
 
         verify {
             tabsUseCases.addTab.invoke(
-                SupportUtils.GOOGLE_US_URL,
+                SupportUtils.GOOGLE_URL,
                 selectTab = true,
                 startLoading = true,
             )
@@ -663,7 +663,7 @@ class DefaultTopSiteControllerTest {
 
         verify {
             tabsUseCases.addTab.invoke(
-                SupportUtils.GOOGLE_XX_URL,
+                SupportUtils.GOOGLE_URL,
                 selectTab = true,
                 startLoading = true,
             )

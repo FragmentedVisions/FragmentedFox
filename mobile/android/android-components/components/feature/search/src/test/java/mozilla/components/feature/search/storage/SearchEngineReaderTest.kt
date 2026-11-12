@@ -126,7 +126,7 @@ class SearchEngineReaderTest {
     }
 
     @Test
-    fun `GIVEN {partnerCode} in value of a SearchURLParam THEN it is replaced by actual partnerCode`() {
+    fun `GIVEN {partnerCode} in value of a SearchURLParam THEN it is left out of the search URL`() {
         val reader = SearchEngineReader(context = testContext, type = SearchEngine.Type.BUNDLED)
         val searchEngineDefinition = sampleSearchEngineDefinitionData()
 
@@ -139,7 +139,7 @@ class SearchEngineReaderTest {
             )
         searchEngineDefinition.partnerCode = "test-firefox-code"
         val searchEngine = reader.loadStreamAPI(searchEngineDefinition, emptyByteArray, validMimeType, mock())
-        assertEquals("https://www.google.com/search?client=test-firefox-code", searchEngine.resultUrls[0])
+        assertEquals("https://www.google.com/search", searchEngine.resultUrls[0])
     }
 
     @Test

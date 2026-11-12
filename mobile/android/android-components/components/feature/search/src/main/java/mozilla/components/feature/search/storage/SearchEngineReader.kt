@@ -86,7 +86,7 @@ internal class SearchEngineReader(
             name = name!!,
             icon = icon!!,
             type = type,
-            resultUrls = resultsUrls,
+            resultUrls = if (type == SearchEngine.Type.CUSTOM) resultsUrls else resultsUrls.map(PartnerParams::strip),
             suggestUrl = suggestUrl,
             trendingUrl = trendingUrl,
             inputEncoding = inputEncoding,
@@ -306,6 +306,7 @@ internal class SearchEngineReader(
                 template = engineDefinition.urls.search.base,
                 partnerCode = engineDefinition.partnerCode,
                 builderName = builder.name,
+                dropPartnerCode = true,
             ),
         )
         engineDefinition.urls.suggestions?.let { suggestions ->
@@ -334,6 +335,7 @@ internal class SearchEngineReader(
         template: String,
         partnerCode: String?,
         builderName: String?,
+        dropPartnerCode: Boolean = false,
     ): String {
         return buildString {
             val newParams = params.toMutableList()
@@ -347,7 +349,7 @@ internal class SearchEngineReader(
                     ),
                 )
             }
-            append(readUriAPI(newParams, template, partnerCode))
+            append(readUriAPI(newParams, template, partnerCode, dropPartnerCode))
             searchExtraParams?.let {
                 with(it) {
                     if (builderName == searchEngineName) {
@@ -360,12 +362,17 @@ internal class SearchEngineReader(
     }
 
     @Throws(IllegalArgumentException::class)
-    private fun readUriAPI(params: List<SearchUrlParam>, template: String, partnerCode: String?): Uri {
+    private fun readUriAPI(
+        params: List<SearchUrlParam>,
+        template: String,
+        partnerCode: String?,
+        dropPartnerCode: Boolean,
+    ): Uri {
         require(template.isNotBlank()) { "URI cannot be blank" }
         val uriBuilder = template.toUri().buildUpon()
         for (param in params) {
             if (param.value == "{partnerCode}") {
-                uriBuilder.appendQueryParameter(param.name, partnerCode)
+                if (!dropPartnerCode) uriBuilder.appendQueryParameter(param.name, partnerCode)
             } else if (param.value == "{acceptLanguages}") {
                 uriBuilder.appendQueryParameter(param.name, applicationContext.getAcceptLanguage())
             } else if (param.value != null) {

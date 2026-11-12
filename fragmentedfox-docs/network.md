@@ -9,6 +9,7 @@ What the Android app can contact, as read from the code and defaults. This is a 
 | Telemetry (Glean) | `isTelemetryEnabled` is false |
 | Remote experiments and rollouts (Nimbus) | the app is not given the Remote Settings service, so it never fetches them, and the experiments Mozilla bundled in the app are removed. See the correction below |
 | Studies and Normandy | prefs off |
+| Partner codes in search URLs | removed from result URLs by `PartnerParams.kt`, so Google, Bing, DuckDuckGo and others get a plain search. Suggestion URLs keep the parameters the engine needs to answer in the right format |
 | Search results telemetry | the "ads" and "cookies" web extensions that watched search results pages are not installed in Fenix, and Mozilla's `search-telemetry-v2` list is not downloaded for them (earlier builds up to build 31 did download it) |
 | Sponsored tiles (Contile) | `showContileFeature` false |
 | Pocket stories and sponsored stories | home screen sections default to false in `nimbus.fml.yaml` |

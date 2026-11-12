@@ -31,9 +31,9 @@ object Constants {
     const val RETRY_COUNT = 3
 
     val searchEngineCodes = mapOf(
-        "Google" to "client=firefox-b-m",
-        "Bing" to "MOZB&form=MOZMBA&q=firefox",
-        "DuckDuckGo" to "t=fpas",
+        "Google" to "google.com/search",
+        "Bing" to "bing.com/search",
+        "DuckDuckGo" to "duckduckgo.com",
     )
 
     val firstSponsoredShortcutTitle by lazy { getSponsoredShortcutTitle(2) }

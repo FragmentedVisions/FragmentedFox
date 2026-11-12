@@ -27,8 +27,6 @@ import mozilla.components.feature.prompts.facts.LoginAutofillDialogFacts
 import mozilla.components.feature.protection.dashboard.TrackerCategory
 import mozilla.components.feature.protection.dashboard.facts.ProtectionDashboardFacts
 import mozilla.components.feature.pwa.ProgressiveWebAppFacts
-import mozilla.components.feature.search.telemetry.ads.AdsTelemetry
-import mozilla.components.feature.search.telemetry.incontent.InContentTelemetry
 import mozilla.components.feature.sitepermissions.SitePermissionsFacts
 import mozilla.components.feature.syncedtabs.facts.SyncedTabsFacts
 import mozilla.components.feature.top.sites.facts.TopSitesFacts
@@ -46,7 +44,6 @@ import org.mozilla.fenix.GleanMetrics.Addons
 import org.mozilla.fenix.GleanMetrics.Addresses
 import org.mozilla.fenix.GleanMetrics.AndroidAutofill
 import org.mozilla.fenix.GleanMetrics.Awesomebar
-import org.mozilla.fenix.GleanMetrics.BrowserSearch
 import org.mozilla.fenix.GleanMetrics.ContextMenu
 import org.mozilla.fenix.GleanMetrics.ContextualMenu
 import org.mozilla.fenix.GleanMetrics.CreditCards
@@ -431,15 +428,6 @@ internal class ReleaseMetricController(
             ProgressiveWebApp.installTap.record(NoExtras())
         }
 
-        Component.FEATURE_SEARCH to AdsTelemetry.SERP_ADD_CLICKED -> {
-            BrowserSearch.adClicks[value!!].add()
-        }
-        Component.FEATURE_SEARCH to AdsTelemetry.SERP_SHOWN_WITH_ADDS -> {
-            BrowserSearch.withAds[value!!].add()
-        }
-        Component.FEATURE_SEARCH to InContentTelemetry.IN_CONTENT_SEARCH -> {
-            BrowserSearch.inContent[value!!].add()
-        }
         Component.SUPPORT_WEBEXTENSIONS to WebExtensionFacts.Items.WEB_EXTENSIONS_INITIALIZED -> {
             metadata?.get("installed")?.let { installedAddons ->
                 if (installedAddons is List<*>) {

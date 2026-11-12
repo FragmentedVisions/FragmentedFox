@@ -26,8 +26,6 @@ import mozilla.components.feature.prompts.facts.CreditCardAutofillDialogFacts
 import mozilla.components.feature.protection.dashboard.TrackerCategory
 import mozilla.components.feature.protection.dashboard.facts.ProtectionDashboardFacts
 import mozilla.components.feature.pwa.ProgressiveWebAppFacts
-import mozilla.components.feature.search.telemetry.ads.AdsTelemetry
-import mozilla.components.feature.search.telemetry.incontent.InContentTelemetry
 import mozilla.components.feature.sitepermissions.SitePermissionsFacts
 import mozilla.components.feature.syncedtabs.facts.SyncedTabsFacts
 import mozilla.components.feature.top.sites.facts.TopSitesFacts
@@ -45,7 +43,6 @@ import org.junit.Test
 import org.junit.runner.RunWith
 import org.mozilla.fenix.GleanMetrics.AndroidAutofill
 import org.mozilla.fenix.GleanMetrics.Awesomebar
-import org.mozilla.fenix.GleanMetrics.BrowserSearch
 import org.mozilla.fenix.GleanMetrics.ContextualMenu
 import org.mozilla.fenix.GleanMetrics.CreditCards
 import org.mozilla.fenix.GleanMetrics.GeneratedPasswordDialog
@@ -888,68 +885,6 @@ class MetricControllerTest {
         assertNotNull(Awesomebar.optimizedSuggestionCardClicked.testGetValue()!![0].extra)
         assertEquals("stocks", Awesomebar.optimizedSuggestionCardClicked.testGetValue()!![0].extra!!["card_type"])
         assertEquals("up", Awesomebar.optimizedSuggestionCardClicked.testGetValue()!![0].extra!!["extra"])
-    }
-
-    @Test
-    fun `GIVEN advertising search facts WHEN the list is processed THEN the right metric is recorded`() {
-        val controller = createReleaseMetricController()
-        val action = mockk<Action>()
-
-        // an ad was clicked in a Search Engine Result Page
-        val addClickedInSearchFact = Fact(
-            Component.FEATURE_SEARCH,
-            action,
-            AdsTelemetry.SERP_ADD_CLICKED,
-            "provider",
-        )
-
-        assertNull(BrowserSearch.adClicks["provider"].testGetValue())
-        controller.run {
-            addClickedInSearchFact.process()
-        }
-        assertNotNull(BrowserSearch.adClicks["provider"].testGetValue())
-        assertEquals(1, BrowserSearch.adClicks["provider"].testGetValue())
-
-        // the user opened a Search Engine Result Page of one of our search providers which contains ads
-        val searchWithAdsOpenedFact = Fact(
-            Component.FEATURE_SEARCH,
-            action,
-            AdsTelemetry.SERP_SHOWN_WITH_ADDS,
-            "provider",
-        )
-
-        assertNull(BrowserSearch.withAds["provider"].testGetValue())
-
-        controller.run {
-            searchWithAdsOpenedFact.process()
-        }
-
-        assertNotNull(BrowserSearch.withAds["provider"].testGetValue())
-        assertEquals(1, BrowserSearch.withAds["provider"].testGetValue())
-
-        // the user performed a search
-        val inContentSearchFact = Fact(
-            Component.FEATURE_SEARCH,
-            action,
-            InContentTelemetry.IN_CONTENT_SEARCH,
-            "provider",
-        )
-
-        assertNull(BrowserSearch.inContent["provider"].testGetValue())
-
-        controller.run {
-            inContentSearchFact.process()
-        }
-
-        assertNotNull(BrowserSearch.inContent["provider"].testGetValue())
-        assertEquals(1, BrowserSearch.inContent["provider"].testGetValue())
-
-        // the user performed another search
-        controller.run {
-            inContentSearchFact.process()
-        }
-
-        assertEquals(2, BrowserSearch.inContent["provider"].testGetValue())
     }
 
     @Test

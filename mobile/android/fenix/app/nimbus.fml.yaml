@@ -1064,22 +1064,6 @@ features:
         value:
           enabled: true
 
-
-  webcompat-reporter-enhancements:
-    description: Feature to enable WebCompat Reporter enhancements for users on Firefox Android.
-    variables:
-      enabled:
-        description: If true, WebCompat Reporter enhancements is enabled.
-        type: Boolean
-        default: false
-    defaults:
-      - channel: nightly
-        value:
-          enabled: false
-      - channel: developer
-        value:
-          enabled: true
-
 types:
   objects:
     GleanServerKnobsConfiguration:

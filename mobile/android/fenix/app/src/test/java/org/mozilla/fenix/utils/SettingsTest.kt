@@ -31,6 +31,7 @@ import org.mozilla.fenix.nimbus.FxNimbus
 import org.mozilla.fenix.nimbus.HomescreenEdgeToEdgeBackground
 import org.mozilla.fenix.settings.PhoneFeature
 import org.mozilla.fenix.settings.deletebrowsingdata.DeleteBrowsingDataOnQuitType
+import org.mozilla.fenix.settings.sitepermissions.AUTOPLAY_BLOCK_ALL
 import org.mozilla.fenix.wallpapers.Wallpaper
 import org.robolectric.RobolectricTestRunner
 import java.util.Calendar
@@ -48,7 +49,7 @@ class SettingsTest {
         microphone = ASK_TO_ALLOW,
         notification = ASK_TO_ALLOW,
         autoplayAudible = AutoplayAction.BLOCKED,
-        autoplayInaudible = AutoplayAction.ALLOWED,
+        autoplayInaudible = AutoplayAction.BLOCKED,
         persistentStorage = ASK_TO_ALLOW,
         mediaKeySystemAccess = ASK_TO_ALLOW,
         crossOriginStorageAccess = ASK_TO_ALLOW,
@@ -649,9 +650,14 @@ class SettingsTest {
         )
 
         assertEquals(
-            AutoplayAction.ALLOWED,
+            AutoplayAction.BLOCKED,
             settings.getSitePermissionsCustomSettingsRules().autoplayInaudible,
         )
+    }
+
+    @Test
+    fun `GIVEN no autoplay choice was made THEN all autoplay is blocked`() {
+        assertEquals(AUTOPLAY_BLOCK_ALL, Settings(testContext).getAutoplayUserSetting())
     }
 
     @Test

@@ -66,7 +66,6 @@ import org.mozilla.fenix.settings.ShortcutType
 import org.mozilla.fenix.settings.deletebrowsingdata.DeleteBrowsingDataOnQuitType
 import org.mozilla.fenix.settings.registerOnSharedPreferenceChangeListener
 import org.mozilla.fenix.settings.sitepermissions.AUTOPLAY_BLOCK_ALL
-import org.mozilla.fenix.settings.sitepermissions.AUTOPLAY_BLOCK_AUDIBLE
 import org.mozilla.fenix.tabstray.DefaultTabManagementFeatureHelper
 import org.mozilla.fenix.termsofuse.TOU_VERSION
 import org.mozilla.fenix.wallpapers.Wallpaper
@@ -1642,7 +1641,7 @@ class Settings(
      * either [AUTOPLAY_ALLOW_ALL] or [AUTOPLAY_BLOCK_ALL]. Because of this, we are forced to save
      * the user selected setting as well.
      */
-    fun getAutoplayUserSetting() = preferences.getInt(AUTOPLAY_USER_SETTING, AUTOPLAY_BLOCK_AUDIBLE)
+    fun getAutoplayUserSetting() = preferences.getInt(AUTOPLAY_USER_SETTING, AUTOPLAY_BLOCK_ALL)
 
     private fun getSitePermissionsPhoneFeatureAutoplayAction(
         feature: PhoneFeature,
@@ -1671,7 +1670,7 @@ class Settings(
             ),
             autoplayInaudible = getSitePermissionsPhoneFeatureAutoplayAction(
                 feature = PhoneFeature.AUTOPLAY_INAUDIBLE,
-                default = AutoplayAction.ALLOWED,
+                default = AutoplayAction.BLOCKED,
             ),
             persistentStorage = getSitePermissionsPhoneFeatureAction(PhoneFeature.PERSISTENT_STORAGE),
             crossOriginStorageAccess = getSitePermissionsPhoneFeatureAction(PhoneFeature.CROSS_ORIGIN_STORAGE_ACCESS),

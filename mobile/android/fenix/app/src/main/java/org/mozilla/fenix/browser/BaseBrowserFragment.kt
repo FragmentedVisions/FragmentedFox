@@ -1475,6 +1475,10 @@ abstract class BaseBrowserFragment :
         )
     }
 
+    private fun onAutocompleteBarShow() {
+        browserToolbar.layout.elevation = 0.0f
+    }
+
     /**
      * Show a [Snackbar] when data is set to the device clipboard. To avoid duplicate displays of
      * information only show a [Snackbar] for Android 12 and lower.

@@ -324,6 +324,25 @@ def check_gradle_projects():
                 fail("gradle", f"{name}: project directory {target} does not exist")
 
 
+def check_callable_references():
+    # A removed function that is still passed as ::name fails the Kotlin compile an hour into a build.
+    declaration = re.compile(r"\b(?:fun|val|var|class|object|interface)\s+(?:<[^>]*>\s*)?(?:[\w.<>?]+\.)?(\w+)")
+    declared = set()
+    for base in (os.path.join(APP, "src"), os.path.join(AC, "components")):
+        for directory, _, names in os.walk(base):
+            if "/build" in directory:
+                continue
+            for name in names:
+                if name.endswith((".kt", ".java")):
+                    declared.update(declaration.findall(read(os.path.join(directory, name))))
+    library = {"addPreference"}
+    for path in source_files():
+        text = re.sub(r"//.*", "", read(path))
+        for name in re.findall(r"(?<![\w:])::(\w+)", text):
+            if name != "class" and name not in declared and name not in library:
+                fail("references", f"{os.path.relpath(path, ROOT)}: ::{name} refers to a function that does not exist")
+
+
 def glean_class(category):
     return "".join(part[:1].upper() + part[1:] for part in re.split(r"[._]", category))
 
@@ -425,7 +444,7 @@ def normalise(section, message):
 
 
 def main():
-    checks = [check_imports, check_resources, check_pings, check_removed, check_prefs, check_settings, check_nimbus, check_cleartext, check_launcher_aliases, check_theme, check_palette_visibility, check_remote_experiments, check_query_stripping, check_licenses, check_translations, check_hidden_settings, check_search, check_gradle_projects, check_glean, check_features, check_telemetry, check_syntax]
+    checks = [check_imports, check_resources, check_pings, check_removed, check_prefs, check_settings, check_nimbus, check_cleartext, check_launcher_aliases, check_theme, check_palette_visibility, check_remote_experiments, check_query_stripping, check_licenses, check_translations, check_hidden_settings, check_search, check_gradle_projects, check_callable_references, check_glean, check_features, check_telemetry, check_syntax]
     selected_flags = [a for a in sys.argv[1:] if a.startswith("--")]
     selected = [a for a in sys.argv[1:] if not a.startswith("--")]
     for check in checks:

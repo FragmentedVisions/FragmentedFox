@@ -42,7 +42,7 @@ GitHub's free runners have 4 cores, 16 GB of memory and a 6 hour job limit. A fu
 - nothing from `fragmentedfox-docs/removed.json` (the removed SDKs and features) has come back;
 - the prefs in `expected-prefs.json` and the Android defaults in `expected-settings.json` and the Nimbus defaults in `expected-nimbus.json` still have the values FragmentedFox sets (an ESR upgrade can silently change them);
 - cleartext traffic is still refused, DuckDuckGo is still the preferred default search engine, and the Android defaults flipped by FragmentedFox (ads client, expanded toolbar and others) have not changed back;
-- string, drawable and raw resources used by instrumentation tests (`androidTest`) exist as well, so removing a resource from the app cannot leave a test pointing at it;
+- string, drawable and raw resources used by the unit tests exist as well, so removing a resource from the app cannot leave a test pointing at it (the instrumentation tests in `androidTest` were deleted);
 - every Glean metric and ping the app code records is defined in `metrics.yaml` and `pings.yaml`, and every `FxNimbus.features` flag exists in the FML files (these are generated classes, so a metric or flag removed while code still uses it only fails deep in the compile);
 - the Glean pings, YAML and XML files are consistent.
 - the 23 alternative launcher aliases are still in the manifest and the install permission removal has not come back (see [changes](./changes.md)); the dark theme is the default and the Fragmented Visions colours are applied; and no android-components module refers to a palette colour it cannot see.

@@ -353,7 +353,7 @@ class HomeFragment : Fragment() {
         }
 
         nullableToolbarView = buildToolbar(activity, view)
-        initComposeHomepage(view = view, activity = activity)
+        initComposeHomepage(view = view)
 
         // DO NOT MOVE ANYTHING BELOW THIS addMarker CALL!
         requireComponents.core.engine.profiler?.addMarker(
@@ -484,10 +484,7 @@ class HomeFragment : Fragment() {
     }
 
     @Suppress("LongMethod", "CognitiveComplexMethod")
-    private fun initComposeHomepage(
-        view: ComposeView,
-        activity: HomeActivity,
-    ) {
+    private fun initComposeHomepage(view: ComposeView) {
         view.setContent {
             FirefoxTheme {
                 val settings = components.settings

@@ -305,6 +305,25 @@ def check_search():
         fail("search", "TopSiteController.kt: the Google shortcut must not get a partner code added")
 
 
+def check_gradle_projects():
+    # Gradle refuses to configure a project whose directory is gone, and that only shows up minutes into a build.
+    # Only top level lines are checked, because indented ones sit inside conditions for subprojects we do not build.
+    for name in ("settings.gradle", "mobile/android/shared-settings.gradle"):
+        path = os.path.join(ROOT, name)
+        if not os.path.exists(path):
+            continue
+        for line in read(path).splitlines():
+            match = re.match(r"project\(['\"]:[^)]+\)\.projectDir\s*=\s*new File\((.*)\)\s*$", line)
+            if not match:
+                continue
+            literals = re.findall(r"['\"]([^'\"]+)['\"]", match.group(1))
+            if not literals:
+                continue
+            target = literals[-1].replace("${gradle.mozconfig.topsrcdir}/", "").replace("${rootDir}/", "")
+            if not os.path.isdir(os.path.join(ROOT, target.lstrip("/"))):
+                fail("gradle", f"{name}: project directory {target} does not exist")
+
+
 def glean_class(category):
     return "".join(part[:1].upper() + part[1:] for part in re.split(r"[._]", category))
 
@@ -406,7 +425,7 @@ def normalise(section, message):
 
 
 def main():
-    checks = [check_imports, check_resources, check_pings, check_removed, check_prefs, check_settings, check_nimbus, check_cleartext, check_launcher_aliases, check_theme, check_palette_visibility, check_remote_experiments, check_query_stripping, check_licenses, check_translations, check_hidden_settings, check_search, check_glean, check_features, check_telemetry, check_syntax]
+    checks = [check_imports, check_resources, check_pings, check_removed, check_prefs, check_settings, check_nimbus, check_cleartext, check_launcher_aliases, check_theme, check_palette_visibility, check_remote_experiments, check_query_stripping, check_licenses, check_translations, check_hidden_settings, check_search, check_gradle_projects, check_glean, check_features, check_telemetry, check_syntax]
     selected_flags = [a for a in sys.argv[1:] if a.startswith("--")]
     selected = [a for a in sys.argv[1:] if not a.startswith("--")]
     for check in checks:

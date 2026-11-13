@@ -28,7 +28,7 @@ What the Android app can contact, as read from the code and defaults. This is a 
 | --- | --- |
 | Your search engine (DuckDuckGo by default) | search suggestions are on by default (`shouldShowSearchSuggestions`), so typed text is sent to the engine as you type. This is left on on purpose, and the user can turn it off in settings |
 | Quad9 (`dns.quad9.net`) | encrypted DNS, the default resolver |
-| Mozilla Remote Settings | tracker lists, certificate revocation filters, add-on blocklist and the list of tracking link parameters to strip (`query-stripping`) and the list of sites exempted from fingerprinting protection (`fingerprinting-protection-overrides`, `privacy.fingerprintingProtection.remoteOverrides.enabled` stays on so protected sites that would break are exempted), polled daily |
+| Mozilla Remote Settings (sync every 2 hours, `Components.kt`) | tracker lists, certificate revocation filters, add-on blocklist and the list of tracking link parameters to strip (`query-stripping`) and the list of sites exempted from fingerprinting protection (`fingerprinting-protection-overrides`, `privacy.fingerprintingProtection.remoteOverrides.enabled` stays on so protected sites that would break are exempted), polled daily |
 | Google Safe Browsing | phishing and malware list updates (hash prefixes only) |
 | addons.mozilla.org | add-on search, install and update checks |
 | Mozilla account servers | only if you sign in to sync |

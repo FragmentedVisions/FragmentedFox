@@ -265,8 +265,6 @@
   <string name="browser_menu_syncing_paused_caption">Njëkohësimi i ndal</string>
   <!-- Browser menu caption label for an authenticated user -->
   <string name="browser_menu_signed_in_caption">Administroni ç’të kopjeruhet dhe të njëkohësohet</string>
-  <!-- Browser menu label that creates a private tab -->
-  <string name="browser_menu_new_private_tab">Skedë e re private</string>
   <!-- Browser menu label that navigates to the Password screen -->
   <string name="browser_menu_passwords">Fjalëkalime</string>
   <!-- Content description (not visible, for screen readers etc.) for the handle used to drag the main menu at the bottom of the screen. -->
@@ -416,18 +414,6 @@
   <string name="onboarding_preferences_dialog_positive_button">U bë</string>
   <!-- Terms of service onboarding title card label. 'Firefox' intentionally hardcoded here -->
   <string name="onboarding_welcome_to_firefox" tools:ignore="BrandUsage">Mirë se vini në Firefox</string>
-  <!-- Line one of the terms of service onboarding page. %1$s is replaced by an active link, using onboarding_term_of_service_line_one_link_text_2 as text (“Firefox Terms of Use”). -->
-  <string name="onboarding_term_of_service_line_one_2">Duke vazhduar, pajtoheni me %1$s.</string>
-  <!-- Used as text for the link in onboarding_term_of_service_line_one_2. -->
-  <string name="onboarding_term_of_service_line_one_link_text_2" tools:ignore="BrandUsage">Terma Përdorimi Firefox-i</string>
-  <!-- Line two of the terms of service onboarding page. 'Firefox' is intentionally hardcoded. %1$s is replaced by an active link, using onboarding_term_of_service_line_two_link_text as text (“Privacy Notice”). -->
-  <string name="onboarding_term_of_service_line_two_2" tools:ignore="BrandUsage">Firefox-i kujdeset për privatësinë tuaj. Mësoni më tepër te %1$s tona.</string>
-  <!-- Used as text for the link in onboarding_term_of_service_line_two. -->
-  <string name="onboarding_term_of_service_line_two_link_text">Shënim Mbi Privatësinë</string>
-  <!-- Line three of the terms of service onboarding page. 'Firefox' and 'Mozilla' are intentionally hardcoded. %1$s is replaced by an active link using onboarding_term_of_service_line_three_link_text as text (“Manage”). -->
-  <string name="onboarding_term_of_service_line_three" tools:ignore="BrandUsage">Që të ndihmoni të përmirësohet shfletuesi, Firefox-i dërgon te Mozilla të dhëna diagnostikimesh dhe ndërveprimesh. %1$s</string>
-  <!-- Used as text for the link in onboarding_term_of_service_line_three. -->
-  <string name="onboarding_term_of_service_line_three_link_text">Administrojini</string>
   <!--
     Terms of use (ToU) first body text. %1$s is replaced by an active link,
     using onboarding_redesign_tou_body_one_link_text as text (“Firefox Terms of Use”).
@@ -447,8 +433,6 @@
   <!-- Marketing onboarding page opt-out checkbox. Unchecking the box does not increase data collection. Our data practices remain the same. 'Mozilla' is intentionally hardcoded. -->
   <!-- Marketing onboarding page clickable link text to "learn more" on how data is used. -->
   <!-- Marketing onboarding page button label. Button to confirm choice and start browsing. -->
-  <!-- Sync onboarding redesign positive button text. -->
-  <string name="onboarding_redesign_sync_positive_button" tools:ignore="UnusedResources">Fillo njëkohësim</string>
   <!-- Marketing onboarding page title variant. “One last thing” refers to the final step or action in the onboarding process that we’re asking users to take before they can start using the browser. -->
   <!-- Marketing onboarding page body variant. 'Firefox' is intentionally hardcoded. -->
   <!-- Marketing onboarding page button label variant. Button to confirm choice and start browsing. -->
@@ -1334,8 +1318,6 @@
   <string name="open_tabs_menu">Menu skedash të hapura</string>
   <!-- Content description (not visible, for screen readers etc.): Return to tab manager -->
   <string name="tab_manager_search_bar_back_content_description">Kthehuni te përgjegjës skedash</string>
-  <!-- Open tabs menu item to save tabs to collection -->
-  <string name="tabs_menu_save_to_collection1">Ruaj skeda në koleksion</string>
   <!-- Text for the menu button to delete a collection -->
   <string name="collection_delete">Fshije koleksionin</string>
   <!-- Text for the menu button to rename a collection -->
@@ -2009,29 +1991,6 @@
   <!-- Text shown in the notification that pops up to remind the user that a private browsing session is active for Android 14+ -->
   <string name="notification_erase_title_android_14">Të mbyllen skeda private?</string>
   <string name="notification_erase_text_android_14">Prekeni, ose fërkoni mbi këtë njoftim, që të mbyllen skeda private.</string>
-  <!-- Name of the marketing notification channel. Displayed in the "App notifications" system settings for the app -->
-  <string name="notification_marketing_channel_name">Marketing</string>
-  <!--
-    Title shown in the notification that pops up to remind the user to set fenix as default browser.
-    The app name is in the text, due to limitations with localizing Nimbus experiments
-  -->
-  <string name="nimbus_notification_default_browser_title" tools:ignore="BrandUsage,UnusedResources">Firefox-i është i shpejtë dhe privat</string>
-  <!--
-    Text shown in the notification that pops up to remind the user to set fenix as default browser.
-    The app name is in the text, due to limitations with localizing Nimbus experiments
-  -->
-  <string name="nimbus_notification_default_browser_text" tools:ignore="BrandUsage,UnusedResources">Bëjeni Firefox-in shfletuesin tuaj parazgjedhje</string>
-  <!--
-    Survey
-
-    Text shown in the fullscreen message that pops up to ask user to take a short survey.
-    The app name is in the text, due to limitations with localizing Nimbus experiments
-  -->
-  <string name="nimbus_survey_message_text" tools:ignore="BrandUsage">Ju lutemi, ndihmoni të bëhet Firefox-i më i mirë, duke plotësuar këtë pyetësor të shkurtër.</string>
-  <!-- Preference for taking the short survey. -->
-  <string name="preferences_take_survey">Plotësoni Pyetësorin</string>
-  <!-- Preference for not taking the short survey. -->
-  <string name="preferences_not_take_survey">Jo, Faleminderit</string>
   <!--
     Snackbar
 
@@ -2822,10 +2781,6 @@
   <string name="certificate_info_verified_by">Verifikuar Nga: %1$s</string>
   <!-- Message in delete confirmation dialog for password -->
   <string name="login_deletion_confirmation_2">Jeni i sigurt se doni të fshihet ky fjalëkalim?</string>
-  <!-- Positive action of a dialog asking to delete -->
-  <string name="dialog_delete_positive">Fshije</string>
-  <!-- Negative action of a dialog asking to delete login -->
-  <string name="dialog_delete_negative">Anuloje</string>
   <!-- The page title for editing a saved password. -->
   <string name="edit_2">Përpunoni fjalëkalimin</string>
   <!-- The page title for adding new password. -->
@@ -2947,14 +2902,6 @@
   <string name="other_default_search_engine_suggestion_header">Kërkim me %s</string>
   <!-- Title for recent search suggestions. -->
   <string name="recent_searches_header">Kërkime Së Fundi</string>
-  <!--
-    Default browser experiment
-
-    Default browser card title
-  -->
-  <string name="default_browser_experiment_card_title">Ndërroni shfletuesin tuaj parazgjedhje</string>
-  <!-- Default browser card text -->
-  <string name="default_browser_experiment_card_text" tools:ignore="BrandUsage">Caktoni lidhje prej sajtesh, email-esh dhe mesazhezh për hapje të automatizuar në Firefox.</string>
   <!-- Content description radio buttons with a link to more information -->
   <string name="radio_preference_info_content_description">Klikoni për më tepër hollësi</string>
   <!-- Content description for the action bar "up" button -->
@@ -3348,48 +3295,6 @@
   <string name="debug_drawer_tab_tools_tab_creation_tool_button_text_inactive">Shtoje te skeda joaktive</string>
   <!-- The button text to add tabs to the private tab group in the tab creation tool. -->
   <string name="debug_drawer_tab_tools_tab_creation_tool_button_text_private">Shtoje te skeda private</string>
-  <!-- The continue button label -->
-  <string name="micro_survey_continue_button_label" tools:ignore="UnusedResources">Vazhdoni</string>
-  <!--
-    Survey view
-
-    The survey header
-  -->
-  <string name="micro_survey_survey_header_2">Ju lutemi, plotësoni pyetësorin</string>
-  <!-- The privacy notice link -->
-  <string name="micro_survey_privacy_notice_2">Shënim mbi privatësinë</string>
-  <!-- The submit button label text -->
-  <string name="micro_survey_submit_button_label">Parashtroje</string>
-  <!-- The survey completion confirmation text -->
-  <string name="micro_survey_feedback_confirmation">Faleminderit për përshtypjet tuaja!</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_1" tools:ignore="UnusedResources">Shumë i Kënaqur</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_2" tools:ignore="UnusedResources">I kënaqur</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_3" tools:ignore="UnusedResources">Asnjanës</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_4" tools:ignore="UnusedResources">Jo i kënaqur</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_5" tools:ignore="UnusedResources">Shumë i Pakënaqur</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_6" tools:ignore="UnusedResources">S’e përdor</string>
-  <!-- Text shown in prompt for printing microsurvey. "sec" It's an abbreviation for "second". Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_prompt_printing_title" tools:ignore="BrandUsage,UnusedResources">Ndihmoni të përmirësojmë shtypjen në Firefox. Ha vetëm një sekondë</string>
-  <!-- Text shown in the survey title for printing microsurvey. Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_survey_printing_title" tools:ignore="BrandUsage,UnusedResources">Sa të kënaqur jeni me shtypjen në Firefox?</string>
-  <!--
-    Accessibility
-
-    Content description for the survey application icon. Note: The word "Firefox" should NOT be translated.
-  -->
-  <string name="microsurvey_app_icon_content_description" tools:ignore="BrandUsage">Stemë Firefox-i</string>
-  <!-- Content description for the survey feature icon. -->
-  <string name="microsurvey_feature_icon_content_description">Ikonë e veçorisë pyetësor</string>
-  <!-- Content description (not visible, for screen readers etc.) for closing microsurvey bottom sheet. -->
-  <string name="microsurvey_close_handle_content_description">Mbylleni pyetësorin</string>
-  <!-- Content description for "X" button that is closing microsurvey. -->
-  <string name="microsurvey_close_button_content_description">Mbylle</string>
   <!-- The title of the autofill tab in the Debug Drawer. -->
   <string name="debug_drawer_autofill_title">Mjete vetëplotësimi</string>
   <!--

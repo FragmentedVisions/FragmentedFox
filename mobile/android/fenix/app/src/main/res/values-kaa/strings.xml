@@ -640,8 +640,6 @@
   <string name="close_tab_title">%s betin jabıw</string>
   <!-- Content description (not visible, for screen readers etc.): Opens the open tabs menu when pressed -->
   <string name="open_tabs_menu">Betler menyusin ashıw</string>
-  <!-- Open tabs menu item to save tabs to collection -->
-  <string name="tabs_menu_save_to_collection1">Betlerdi toplamǵa saqlaw</string>
   <!-- Text for the menu button to delete a collection -->
   <string name="collection_delete">Toplamdı óshiriw</string>
   <!-- Text for the menu button to rename a collection -->
@@ -929,15 +927,6 @@
     Text shown in the notification that pops up to remind the user that a private browsing session is active.
   -->
   <string name="notification_pbm_delete_text_2">Jeke betlerdı jabıw</string>
-  <!-- Name of the marketing notification channel. Displayed in the "App notifications" system settings for the app -->
-  <string name="notification_marketing_channel_name">Marketing</string>
-  <!--
-    Title shown in the notification that pops up to remind the user to set fenix as default browser.
-    The app name is in the text, due to limitations with localizing Nimbus experiments
-  -->
-  <string name="nimbus_notification_default_browser_title" tools:ignore="BrandUsage,UnusedResources">Firefox — tez hám jeke</string>
-  <!-- Preference for not taking the short survey. -->
-  <string name="preferences_not_take_survey">Yaq, raxmet</string>
   <!--
     Snackbar
 
@@ -1407,10 +1396,6 @@
     the certificate authority that verified the ticket
   -->
   <string name="certificate_info_verified_by">Tastıyıqlawshı: %1$s</string>
-  <!-- Positive action of a dialog asking to delete -->
-  <string name="dialog_delete_positive">Óshiriw</string>
-  <!-- Negative action of a dialog asking to delete login -->
-  <string name="dialog_delete_negative">Biykarlaw</string>
   <!-- Voice search button content description -->
   <string name="voice_search_content_description">Dawıslı izlew</string>
   <!-- Voice search prompt description displayed after the user presses the voice search button -->
@@ -1489,8 +1474,6 @@
   <string name="google_search_engine_suggestion_header">Googlede izlew</string>
   <!-- Title for search suggestions when the default search suggestion engine is anything other than Google. %s is default search engine name. -->
   <string name="other_default_search_engine_suggestion_header">%s da izlew</string>
-  <!-- Default browser card text -->
-  <string name="default_browser_experiment_card_text" tools:ignore="BrandUsage">Saytlardaǵı, elektron xatlardaǵı hám xabarlardaǵı siltemelerdi Firefoxda avtomat tárizde ashılatuǵın etip sazlań.</string>
   <!-- Content description radio buttons with a link to more information -->
   <string name="radio_preference_info_content_description">Kóbirek biliw ushın basıń</string>
   <!-- Content description for the action bar "up" button -->

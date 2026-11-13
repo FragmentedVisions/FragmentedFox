@@ -99,7 +99,6 @@ import org.mozilla.fenix.GleanMetrics.TabStrip
 import org.mozilla.fenix.GleanMetrics.TermsOfUse
 import org.mozilla.fenix.components.Components
 import org.mozilla.fenix.components.Core
-import org.mozilla.fenix.components.appstate.AppAction
 import org.mozilla.fenix.components.initializeGlean
 import org.mozilla.fenix.components.startMetricsIfEnabled
 import org.mozilla.fenix.experiments.maybeFetchExperiments
@@ -339,7 +338,6 @@ open class FenixApplication : Application(), Provider, ThemeProvider {
 
         restoreBrowserState()
         restoreDownloads()
-        restoreMessaging()
 
         // [IMPORTANT] Don't progress further until application-services is actually ready to go.
         // This makes it easier to reason about behaviour and avoids issues in the Rust code.
@@ -652,13 +650,6 @@ open class FenixApplication : Application(), Provider, ThemeProvider {
                 RustHttpConfig.allowEmulatorLoopback()
             }
             RustHttpConfig.setClient(lazy { components.core.client })
-        }
-    }
-
-    @VisibleForTesting
-    internal fun restoreMessaging() {
-        if (components.settings.isExperimentationEnabled) {
-            components.appStore.dispatch(AppAction.MessagingAction.Restore)
         }
     }
 

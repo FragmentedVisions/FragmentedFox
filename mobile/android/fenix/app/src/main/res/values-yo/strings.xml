@@ -548,8 +548,6 @@
   <string name="close_tab_title">Pa táàbù dé %s</string>
   <!-- Content description (not visible, for screen readers etc.): Opens the open tabs menu when pressed -->
   <string name="open_tabs_menu">Ṣí àwọn àtẹ táàbù</string>
-  <!-- Open tabs menu item to save tabs to collection -->
-  <string name="tabs_menu_save_to_collection1">Tọ́jú àwọn táàbù sínú àkójọpọ̀</string>
   <!-- Text for the menu button to delete a collection -->
   <string name="collection_delete">Pa àkójọpọ̀ rẹ́</string>
   <!-- Text for the menu button to rename a collection -->
@@ -823,8 +821,6 @@
     Text shown in the notification that pops up to remind the user that a private browsing session is active.
   -->
   <string name="notification_pbm_delete_text_2">Pa àwọn táàbù ìkọ̀kọ̀ dé</string>
-  <!-- Name of the marketing notification channel. Displayed in the "App notifications" system settings for the app -->
-  <string name="notification_marketing_channel_name">Ìpolówó ọjà</string>
   <!--
     Snackbar
 
@@ -1286,10 +1282,6 @@
     the certificate authority that verified the ticket
   -->
   <string name="certificate_info_verified_by">Jẹ́rìí sí láti ọwọ́: %1$s</string>
-  <!-- Positive action of a dialog asking to delete -->
-  <string name="dialog_delete_positive">Parẹ́</string>
-  <!-- Negative action of a dialog asking to delete login -->
-  <string name="dialog_delete_negative">Paárẹ́</string>
   <!-- Voice search button content description -->
   <string name="voice_search_content_description">Ìwádìí olóhùn</string>
   <!-- Voice search prompt description displayed after the user presses the voice search button -->
@@ -1364,8 +1356,6 @@
     Search suggestions title for Firefox Suggest.
   -->
   <string name="firefox_suggest_header" tools:ignore="BrandUsage">Firefox Dábàá</string>
-  <!-- Default browser card text -->
-  <string name="default_browser_experiment_card_text" tools:ignore="BrandUsage">Ṣètò àwọn líǹkì láti àwọn wẹ́íbúsaìtì, íméèlì àti àwọn ìfiráńṣẹ láti ṣí fún ra wọn ní Firefox.</string>
   <!-- Content description radio buttons with a link to more information -->
   <string name="radio_preference_info_content_description">Tẹ̀ẹ́ fún àlàyé nípa kókó díẹ̀ si</string>
   <!-- Content description for the action bar "up" button -->

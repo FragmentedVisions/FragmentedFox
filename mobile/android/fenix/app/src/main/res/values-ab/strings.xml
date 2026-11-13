@@ -220,8 +220,6 @@
   <string name="browser_menu_sign_back_in_to_sync">Асинхронизациазы даҽазнык аҭалара</string>
   <!-- Browser menu caption label for the "Sign back in to sync" browser menu item described in `browser_menu_sign_back_in_to_sync` when there is an error in syncing -->
   <string name="browser_menu_syncing_paused_caption">Асинхронизациа аанкылоуп</string>
-  <!-- Browser menu label that creates a private tab -->
-  <string name="browser_menu_new_private_tab">Ахатә абӷьыц ҿыц</string>
   <!-- Browser menu label that navigates to the Password screen -->
   <string name="browser_menu_passwords">Амаӡажәақәа</string>
   <!-- Content description (not visible, for screen readers etc.) for bottom sheet handlebar custom tab menu. -->
@@ -861,8 +859,6 @@
   <string name="close_tab_title">Агәылаҵа арктәуп %s</string>
   <!-- Content description (not visible, for screen readers etc.): Opens the open tabs menu when pressed -->
   <string name="open_tabs_menu">Иаарту абларҭақәа рмениу</string>
-  <!-- Open tabs menu item to save tabs to collection -->
-  <string name="tabs_menu_save_to_collection1">Агәылаҵақәа аизгаҿы еиқәырхатәуп</string>
   <!-- Text for the menu button to delete a collection -->
   <string name="collection_delete">Ианыхтәуп аизга</string>
   <!-- Text for the menu button to rename a collection -->
@@ -1203,29 +1199,6 @@
   <!-- Text shown in the notification that pops up to remind the user that a private browsing session is active for Android 14+ -->
   <string name="notification_erase_title_android_14">Ахатә абӷьыцқәа арктәума?</string>
   <string name="notification_erase_text_android_14">Ахатә анҵамҭақәа аркразы ари ардырра ақәыӷәӷәара ма ақәыӷәӷәара.</string>
-  <!-- Name of the marketing notification channel. Displayed in the "App notifications" system settings for the app -->
-  <string name="notification_marketing_channel_name">Амаркетингтә</string>
-  <!--
-    Title shown in the notification that pops up to remind the user to set fenix as default browser.
-    The app name is in the text, due to limitations with localizing Nimbus experiments
-  -->
-  <string name="nimbus_notification_default_browser_title" tools:ignore="BrandUsage,UnusedResources">Firefox иццакуеит, иагьыхадоуп</string>
-  <!--
-    Text shown in the notification that pops up to remind the user to set fenix as default browser.
-    The app name is in the text, due to limitations with localizing Nimbus experiments
-  -->
-  <string name="nimbus_notification_default_browser_text" tools:ignore="BrandUsage,UnusedResources">Firefox браузерс иҟашәҵа</string>
-  <!--
-    Survey
-
-    Text shown in the fullscreen message that pops up to ask user to take a short survey.
-    The app name is in the text, due to limitations with localizing Nimbus experiments
-  -->
-  <string name="nimbus_survey_message_text" tools:ignore="BrandUsage">Ҳаҳәоит, абри аҭҵаара кьаҿ амҩаԥгарала Firefox аиӷьтәраҿы шәыцхраа.</string>
-  <!-- Preference for taking the short survey. -->
-  <string name="preferences_take_survey">Аҭҵаара амҩаԥгара</string>
-  <!-- Preference for not taking the short survey. -->
-  <string name="preferences_not_take_survey">Мап иҭабуп</string>
   <!--
     Snackbar
 
@@ -1804,10 +1777,6 @@
   <string name="certificate_info_verified_by">Ишьақәырӷәӷәоуп: %1$s</string>
   <!-- Message in delete confirmation dialog for password -->
   <string name="login_deletion_confirmation_2">Агәра ганы уҟоума ари амаӡажәа аԥыхра?</string>
-  <!-- Positive action of a dialog asking to delete -->
-  <string name="dialog_delete_positive">Аныхра</string>
-  <!-- Negative action of a dialog asking to delete login -->
-  <string name="dialog_delete_negative">Аԥыхра</string>
   <!-- The page title for editing a saved password. -->
   <string name="edit_2">Амаӡажәа ԥсахтәуп</string>
   <!-- The page title for adding new password. -->
@@ -1906,14 +1875,6 @@
   <string name="google_search_engine_suggestion_header">Google Аԥшаара</string>
   <!-- Title for search suggestions when the default search suggestion engine is anything other than Google. %s is default search engine name. -->
   <string name="other_default_search_engine_suggestion_header">Аԥшаара %s аҟны</string>
-  <!--
-    Default browser experiment
-
-    Default browser card title
-  -->
-  <string name="default_browser_experiment_card_title">Убраузер ишыҟоу ԥсахтәуп</string>
-  <!-- Default browser card text -->
-  <string name="default_browser_experiment_card_text" tools:ignore="BrandUsage">Firefox аҟны асаитқәа, аимеилқәа, адырраҭарақәа рҟынтәи азхьарԥшқәа автоматикала раартра еиқәыршәатәуп.</string>
   <!-- Content description radio buttons with a link to more information -->
   <string name="radio_preference_info_content_description">Еиҳаны адырразы шәақәыӷәӷәа</string>
   <!-- Content description for the action bar "up" button -->
@@ -2219,48 +2180,6 @@
   <string name="debug_drawer_tab_tools_tab_creation_tool_button_text_inactive">Иактивым абларҭақәа рахь иацҵатәуп</string>
   <!-- The button text to add tabs to the private tab group in the tab creation tool. -->
   <string name="debug_drawer_tab_tools_tab_creation_tool_button_text_private">Ихатәу абларҭақәа рахь иацҵатәуп</string>
-  <!-- The continue button label -->
-  <string name="micro_survey_continue_button_label" tools:ignore="UnusedResources">Ацҵара</string>
-  <!--
-    Survey view
-
-    The survey header
-  -->
-  <string name="micro_survey_survey_header_2">Ҳаҳәоит, аҭҵаара мҩаԥыжәга</string>
-  <!-- The privacy notice link -->
-  <string name="micro_survey_privacy_notice_2">Амаӡаратә рдырраҭара</string>
-  <!-- The submit button label text -->
-  <string name="micro_survey_submit_button_label">Ашьҭра</string>
-  <!-- The survey completion confirmation text -->
-  <string name="micro_survey_feedback_confirmation">Иҭабуп шәгәаанагаразы!</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_1" tools:ignore="UnusedResources">Инагӡаны агәахәара узҭо</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_2" tools:ignore="UnusedResources">Ицәгьам</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_3" tools:ignore="UnusedResources">Инеитралтәу</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_4" tools:ignore="UnusedResources">Агәынамӡара</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_5" tools:ignore="UnusedResources">Зынӡакгьы угәы ҟанаҵом</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_6" tools:ignore="UnusedResources">Сара уи схы иасырхәом</string>
-  <!-- Text shown in prompt for printing microsurvey. "sec" It's an abbreviation for "second". Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_prompt_printing_title" tools:ignore="BrandUsage,UnusedResources">Firefox аҟны акьыԥхьра аиӷьтәраҿы ацхыраара. Секундк ауп иаҭаххо</string>
-  <!-- Text shown in the survey title for printing microsurvey. Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_survey_printing_title" tools:ignore="BrandUsage,UnusedResources">Шаҟа угәы иақәшәозеи Firefox ала акьыԥхьра?</string>
-  <!--
-    Accessibility
-
-    Content description for the survey application icon. Note: The word "Firefox" should NOT be translated.
-  -->
-  <string name="microsurvey_app_icon_content_description" tools:ignore="BrandUsage">Firefox алоготип</string>
-  <!-- Content description for the survey feature icon. -->
-  <string name="microsurvey_feature_icon_content_description">Абжьаҭара афункциа адыргаҷа</string>
-  <!-- Content description (not visible, for screen readers etc.) for closing microsurvey bottom sheet. -->
-  <string name="microsurvey_close_handle_content_description">Иааигәаны аҭҵаара</string>
-  <!-- Content description for "X" button that is closing microsurvey. -->
-  <string name="microsurvey_close_button_content_description">Аркра</string>
   <!--
     Debug drawer logins
 

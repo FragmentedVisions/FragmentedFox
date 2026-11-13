@@ -62,7 +62,6 @@ import org.mozilla.fenix.home.blocklist.BlocklistMiddleware
 import org.mozilla.fenix.home.setup.store.DefaultSetupChecklistRepository
 import org.mozilla.fenix.home.setup.store.SetupChecklistPreferencesMiddleware
 import org.mozilla.fenix.home.setup.store.SetupChecklistTelemetryMiddleware
-import org.mozilla.fenix.messaging.state.MessagingMiddleware
 import org.mozilla.fenix.nimbus.FxNimbus
 import org.mozilla.fenix.onboarding.FenixOnboarding
 import org.mozilla.fenix.perf.AppLinkIntentLaunchTypeProvider
@@ -291,10 +290,6 @@ class Components(private val context: Context) {
                 ProfileMarkerMiddleware(markerName = "AppStore", profiler = core.engine.profiler),
                 LogMiddleware(tag = "AppStore", shouldIncludeDetailedData = { Config.channel.isDebug }),
                 BlocklistMiddleware(blocklistHandler),
-                MessagingMiddleware(
-                    controller = nimbus.messaging,
-                    settings = settings,
-                ),
                 MetricsMiddleware(
                     nimbusEventStore = nimbus.events,
                 ),

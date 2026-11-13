@@ -411,8 +411,6 @@
   <string name="close_tab_title">بازدەری %s دابخە</string>
   <!-- Content description (not visible, for screen readers etc.): Opens the open tabs menu when pressed -->
   <string name="open_tabs_menu">پێڕستی بازدەرەکان بکەرەوە</string>
-  <!-- Open tabs menu item to save tabs to collection -->
-  <string name="tabs_menu_save_to_collection1">بازدەرەکان هەڵبگرە لە کۆکەرەوە</string>
   <!-- Text for the menu button to delete a collection -->
   <string name="collection_delete">کۆکەرەوە بسڕەوە</string>
   <!-- Text for the menu button to rename a collection -->
@@ -959,8 +957,6 @@
     the certificate authority that verified the ticket
   -->
   <string name="certificate_info_verified_by">سەلمێنراوە لە لایەن: %1$s</string>
-  <!-- Positive action of a dialog asking to delete -->
-  <string name="dialog_delete_positive">سڕینەوە</string>
   <!-- Voice search button content description -->
   <string name="voice_search_content_description">گەڕانی دەنگی</string>
   <!-- Voice search prompt description displayed after the user presses the voice search button -->

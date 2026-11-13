@@ -24,17 +24,13 @@ import androidx.annotation.CallSuper
 import androidx.annotation.VisibleForTesting
 import androidx.appcompat.app.AlertDialog
 import androidx.biometric.BiometricManager
-import androidx.compose.foundation.layout.Column
-import androidx.compose.material3.HorizontalDivider
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.ComposeView
-import androidx.compose.ui.viewinterop.AndroidView
 import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.core.content.getSystemService
 import androidx.core.text.HtmlCompat
 import androidx.core.view.OnApplyWindowInsetsListener
-import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.NavController
@@ -125,7 +121,6 @@ import mozilla.components.feature.sitepermissions.SitePermissionsLearnMoreUrlPro
 import mozilla.components.feature.tabs.LastTabFeature
 import mozilla.components.feature.webauthn.WebAuthnFeature
 import mozilla.components.lib.state.ext.consumeFlow
-import mozilla.components.lib.state.ext.consumeFrom
 import mozilla.components.lib.state.ext.flowScoped
 import mozilla.components.lib.state.helpers.StoreProvider.Companion.fragmentStore
 import mozilla.components.service.sync.autofill.DefaultCreditCardValidationDelegate
@@ -172,21 +167,15 @@ import org.mozilla.fenix.browser.store.BrowserScreenState
 import org.mozilla.fenix.browser.store.BrowserScreenStore
 import org.mozilla.fenix.browser.tabstrip.TabStrip
 import org.mozilla.fenix.components.AppStore
-import org.mozilla.fenix.components.Components
 import org.mozilla.fenix.components.FenixAutocompletePrompt
 import org.mozilla.fenix.components.FenixEmailMaskPrompt
 import org.mozilla.fenix.components.FenixSuggestStrongPasswordPrompt
 import org.mozilla.fenix.components.FindInPageIntegration
 import org.mozilla.fenix.components.accounts.FxaWebChannelIntegration
 import org.mozilla.fenix.components.appstate.AppAction
-import org.mozilla.fenix.components.appstate.AppAction.MessagingAction
-import org.mozilla.fenix.components.appstate.AppAction.MessagingAction.MicrosurveyAction
 import org.mozilla.fenix.components.share.ShareSource
-import org.mozilla.fenix.components.toolbar.BottomToolbarContainerIntegration
-import org.mozilla.fenix.components.toolbar.BottomToolbarContainerView
 import org.mozilla.fenix.components.toolbar.BrowserNavigationBar
 import org.mozilla.fenix.components.toolbar.BrowserToolbarComposable
-import org.mozilla.fenix.components.toolbar.ToolbarContainerView
 import org.mozilla.fenix.components.toolbar.ToolbarPosition
 import org.mozilla.fenix.components.toolbar.ToolbarsIntegration
 import org.mozilla.fenix.compose.snackbar.DefaultSnackbarFactory
@@ -204,7 +193,6 @@ import org.mozilla.fenix.ext.getBottomToolbarHeight
 import org.mozilla.fenix.ext.getPreferenceKey
 import org.mozilla.fenix.ext.getTopToolbarHeight
 import org.mozilla.fenix.ext.hideToolbar
-import org.mozilla.fenix.ext.isToolbarAtBottom
 import org.mozilla.fenix.ext.nav
 import org.mozilla.fenix.ext.pixelSizeFor
 import org.mozilla.fenix.ext.registerForActivityResult
@@ -212,12 +200,6 @@ import org.mozilla.fenix.ext.requireComponents
 import org.mozilla.fenix.ext.runIfFragmentIsAttached
 import org.mozilla.fenix.ext.secure
 import org.mozilla.fenix.ext.tabClosedUndoMessage
-import org.mozilla.fenix.ext.updateMicrosurveyPromptForConfigurationChange
-import org.mozilla.fenix.messaging.FenixMessageSurfaceId
-import org.mozilla.fenix.messaging.MessagingFeature
-import org.mozilla.fenix.microsurvey.ui.MicrosurveyRequestPrompt
-import org.mozilla.fenix.microsurvey.ui.ext.MicrosurveyUIData
-import org.mozilla.fenix.microsurvey.ui.ext.toMicrosurveyUIData
 import org.mozilla.fenix.nimbus.FxNimbus
 import org.mozilla.fenix.pbmlock.BlackScreenOverlay
 import org.mozilla.fenix.pbmlock.NavigationOrigin
@@ -278,21 +260,12 @@ abstract class BaseBrowserFragment :
     @VisibleForTesting(otherwise = VisibleForTesting.PROTECTED)
     internal var browserNavigationBar: BrowserNavigationBar? = null
 
-    @VisibleForTesting(otherwise = VisibleForTesting.PROTECTED)
-    @Suppress("VariableNaming")
-    internal var _bottomToolbarContainerView: BottomToolbarContainerView? = null
-    protected val bottomToolbarContainerView: BottomToolbarContainerView
-        get() = _bottomToolbarContainerView!!
-
     private var _findInPageLauncher: (() -> Unit)? = null
     private val findInPageLauncher: () -> Unit
         get() = _findInPageLauncher!!
 
     protected val readerViewFeature = ViewBoundFeatureWrapper<ReaderViewFeature>()
     protected val thumbnailsFeature = ViewBoundFeatureWrapper<BrowserThumbnails>()
-
-    @VisibleForTesting
-    internal val messagingFeatureMicrosurvey = ViewBoundFeatureWrapper<MessagingFeature>()
 
     private val sessionFeature = ViewBoundFeatureWrapper<SessionFeature>()
     private val lastTabFeature = ViewBoundFeatureWrapper<LastTabFeature>()
@@ -306,7 +279,6 @@ abstract class BaseBrowserFragment :
     @VisibleForTesting
     internal val findInPageIntegration = ViewBoundFeatureWrapper<FindInPageIntegration>()
     private val toolbarsIntegration = ViewBoundFeatureWrapper<ToolbarsIntegration>()
-    private val bottomToolbarContainerIntegration = ViewBoundFeatureWrapper<BottomToolbarContainerIntegration>()
     private val sitePermissionsFeature = ViewBoundFeatureWrapper<SitePermissionsFeature>()
     private val fullScreenFeature = ViewBoundFeatureWrapper<FullScreenFeature>()
     protected val hideToolbarFeature = ViewBoundFeatureWrapper<WebAppHideToolbarFeature>()
@@ -532,10 +504,6 @@ abstract class BaseBrowserFragment :
         }
 
         _browserToolbar = initializeBrowserToolbar(activity, store, readerMenuController)
-
-        if (context.components.settings.microsurveyFeatureEnabled) {
-            listenForMicrosurveyMessage(context)
-        }
 
         toolbarsIntegration.set(
             feature = ToolbarsIntegration(
@@ -863,10 +831,7 @@ abstract class BaseBrowserFragment :
                 appStore = requireComponents.appStore,
                 downloadState = downloadState,
                 downloadJobStatus = downloadJobStatus,
-                browserToolbars = listOfNotNull(
-                    browserToolbar,
-                    _bottomToolbarContainerView?.toolbarContainerView,
-                ),
+                browserToolbars = listOf(browserToolbar),
                 downloadFileUtils = downloadFileUtils,
             )
         }
@@ -1350,8 +1315,6 @@ abstract class BaseBrowserFragment :
             ),
             bottomToolbarHeight = bottomToolbarHeight,
         )
-
-        initializeMicrosurveyFeature(context)
     }
 
     private fun initializeBrowserToolbar(
@@ -1512,10 +1475,6 @@ abstract class BaseBrowserFragment :
         )
     }
 
-    private fun onAutocompleteBarShow() {
-        removeBottomToolbarDivider()
-    }
-
     /**
      * Show a [Snackbar] when data is set to the device clipboard. To avoid duplicate displays of
      * information only show a [Snackbar] for Android 12 and lower.
@@ -1627,8 +1586,7 @@ abstract class BaseBrowserFragment :
      * @param topToolbarHeight The height of the top toolbar, which could be zero if the toolbar is positioned at the
      * bottom, or it could be equal to the height of [BrowserToolbar].
      * @param bottomToolbarHeight The height of the bottom toolbar, which could be equal to the height of
-     * [BrowserToolbar] or [ToolbarContainerView], or zero if the toolbar is positioned at the top without a navigation
-     * bar.
+     * [BrowserToolbar], or zero if the toolbar is positioned at the top without a navigation bar.
      */
     @VisibleForTesting
     internal fun initializeEngineView(
@@ -1671,137 +1629,6 @@ abstract class BaseBrowserFragment :
             ),
         )
     }
-
-    @VisibleForTesting
-    internal fun initializeMicrosurveyFeature(context: Context) {
-        if (context.components.settings.isExperimentationEnabled &&
-            context.components.settings.microsurveyFeatureEnabled
-        ) {
-            messagingFeatureMicrosurvey.set(
-                feature = MessagingFeature(
-                    appStore = requireComponents.appStore,
-                    surface = FenixMessageSurfaceId.MICROSURVEY,
-                    runWhenReadyQueue = requireComponents.performance.visualCompletenessQueue,
-                ),
-                owner = viewLifecycleOwner,
-                view = binding.root,
-            )
-        }
-    }
-
-    @Suppress("LongMethod", "CognitiveComplexMethod")
-    private fun initializeMicrosurveyPrompt() {
-        val context = requireContext()
-        val view = requireView()
-
-        val isToolbarAtBottom = context.isToolbarAtBottom()
-        val browserToolbarLayout = browserToolbar.layout
-        val navigationBar = browserNavigationBar?.layout
-        // The toolbar view has already been added directly to the container.
-        if (isToolbarAtBottom) {
-            binding.browserLayout.removeView(browserToolbarLayout)
-        } else if (navigationBar != null) {
-            binding.browserLayout.removeView(navigationBar)
-        }
-
-        _bottomToolbarContainerView = BottomToolbarContainerView(
-            context = context,
-            parent = binding.browserLayout,
-            hideOnScroll = isToolbarDynamic(context),
-            content = {
-                FirefoxTheme {
-                    Column {
-                        val activity = requireActivity() as HomeActivity
-
-                        if (!activity.isMicrosurveyPromptDismissed.value) {
-                            currentMicrosurvey?.let {
-                                if (isToolbarAtBottom) {
-                                    removeBottomToolbarDivider()
-                                }
-
-                                HorizontalDivider()
-
-                                MicrosurveyRequestPrompt(
-                                    microsurvey = it,
-                                    onStartSurveyClicked = {
-                                        context.components.appStore.dispatch(MicrosurveyAction.Started(it.id))
-                                        findNavController().nav(
-                                            R.id.browserFragment,
-                                            BrowserFragmentDirections.actionGlobalMicrosurveyDialog(it.id),
-                                        )
-                                    },
-                                    onCloseButtonClicked = {
-                                        context.components.appStore.dispatch(
-                                            MicrosurveyAction.Dismissed(it.id),
-                                        )
-
-                                        context.components.settings.shouldShowMicrosurveyPrompt = false
-                                        activity.isMicrosurveyPromptDismissed.value = true
-                                    },
-                                )
-                            }
-                        }
-
-                        if (isToolbarAtBottom) {
-                            AndroidView(factory = { _ -> browserToolbarLayout })
-                        } else if (navigationBar != null) {
-                            AndroidView(factory = { _ -> navigationBar })
-                        }
-                    }
-                }
-            },
-        ).apply {
-            // This covers the usecase when the app goes into fullscreen mode from portrait orientation.
-            // Transition to fullscreen happens first, and orientation change follows. Microsurvey container is getting
-            // reinitialized when going into landscape mode, but it shouldn't be visible if the app is already in the
-            // fullscreen mode. It still has to be initialized to be shown after the user exits the fullscreen.
-            val isFullscreen = fullScreenFeature.get()?.isFullScreen == true
-            toolbarContainerView.isVisible = !isFullscreen
-        }
-
-        bottomToolbarContainerIntegration.set(
-            feature = BottomToolbarContainerIntegration(
-                toolbar = bottomToolbarContainerView.toolbarContainerView,
-                store = requireComponents.core.store,
-                sessionId = customTabSessionId,
-            ),
-            owner = this,
-            view = view,
-        )
-
-        reinitializeEngineView()
-    }
-
-    private fun removeBottomToolbarDivider() {
-        browserToolbar.layout.elevation = 0.0f
-    }
-
-    private var currentMicrosurvey: MicrosurveyUIData? = null
-
-    /**
-     * Listens for the microsurvey message and initializes the microsurvey prompt if one is available.
-     */
-    private fun listenForMicrosurveyMessage(context: Context) {
-        binding.root.consumeFrom(context.components.appStore, viewLifecycleOwner) { state ->
-            state.messaging.messageToShow[FenixMessageSurfaceId.MICROSURVEY]?.let { message ->
-                if (message.id != currentMicrosurvey?.id) {
-                    message.toMicrosurveyUIData()?.let { microsurvey ->
-                        context.components.settings.shouldShowMicrosurveyPrompt = true
-                        currentMicrosurvey = microsurvey
-
-                        _bottomToolbarContainerView?.toolbarContainerView.let {
-                            binding.browserLayout.removeView(it)
-                        }
-
-                        initializeMicrosurveyPrompt()
-                    }
-                }
-            }
-        }
-    }
-
-    private fun shouldShowMicrosurveyPrompt(context: Context) =
-        context.components.settings.shouldShowMicrosurveyPrompt
 
     private fun isToolbarDynamic(context: Context) =
         !context.components.settings.shouldUseFixedTopToolbar && context.components.settings.isDynamicToolbarEnabled
@@ -1921,8 +1748,6 @@ abstract class BaseBrowserFragment :
         }
         hideToolbar()
 
-        evaluateMessagesForMicrosurvey(components)
-
         BiometricAuthenticationManager.biometricAuthenticationNeededInfo.shouldShowAuthenticationPrompt =
             true
         BiometricAuthenticationManager.biometricAuthenticationNeededInfo.authenticationStatus =
@@ -1937,9 +1762,6 @@ abstract class BaseBrowserFragment :
             )
         }
     }
-
-    private fun evaluateMessagesForMicrosurvey(components: Components) =
-        components.appStore.dispatch(MessagingAction.Evaluate(FenixMessageSurfaceId.MICROSURVEY))
 
     @CallSuper
     override fun onPause() {
@@ -2225,10 +2047,6 @@ abstract class BaseBrowserFragment :
             gone()
         }
 
-        _bottomToolbarContainerView?.toolbarContainerView?.apply {
-            collapse()
-            isVisible = false
-        }
         val browserEngine = getSwipeRefreshLayout().layoutParams as CoordinatorLayout.LayoutParams
         browserEngine.behavior = null
         browserEngine.bottomMargin = 0
@@ -2249,25 +2067,14 @@ abstract class BaseBrowserFragment :
         if (webAppToolbarShouldBeVisible) {
             browserToolbar.visible()
             browserNavigationBar?.visible()
-            _bottomToolbarContainerView?.toolbarContainerView?.isVisible = true
             reinitializeEngineView()
             browserToolbar.expand()
-            _bottomToolbarContainerView?.toolbarContainerView?.expand()
         }
     }
 
     @CallSuper
     internal open fun onUpdateToolbarForConfigurationChange(toolbar: BrowserToolbarComposable) {
         reinitializeEngineView()
-
-        // If the microsurvey feature is visible, we should update it's state.
-        if (shouldShowMicrosurveyPrompt(requireContext())) {
-            updateMicrosurveyPromptForConfigurationChange(
-                parent = binding.browserLayout,
-                bottomToolbarContainerView = _bottomToolbarContainerView?.toolbarContainerView,
-                reinitializeMicrosurveyPrompt = ::initializeMicrosurveyPrompt,
-            )
-        }
 
         view?.let { setupIMEInsetsHandling(it) }
     }
@@ -2312,7 +2119,6 @@ abstract class BaseBrowserFragment :
 
         _findInPageLauncher = null
 
-        _bottomToolbarContainerView = null
         _browserToolbar = null
         awesomeBarComposable = null
         browserNavigationBar = null
@@ -2474,10 +2280,7 @@ abstract class BaseBrowserFragment :
 
         when (context?.components?.settings?.toolbarPosition) {
             ToolbarPosition.BOTTOM -> {
-                val toolbar = listOf(
-                    _bottomToolbarContainerView?.toolbarContainerView,
-                    _browserToolbar?.layout,
-                ).firstOrNull { it != null } ?: return
+                val toolbar = _browserToolbar?.layout ?: return
 
                 // Ensure the toolbar is anchored to the bottom of the screen.
                 (toolbar.layoutParams as? ViewGroup.MarginLayoutParams)?.bottomMargin = 0

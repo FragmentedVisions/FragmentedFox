@@ -569,15 +569,6 @@ features:
         value:
           enabled: true
 
-  microsurveys:
-    description: Feature for microsurveys.
-    variables:
-      enabled:
-        description: >
-          When the feature is enabled then microsurveys can be used.
-        type: Boolean
-        default: false
-
   terms-of-use-prompt:
     description: Enables the terms of use prompt for users who have not accepted ToU
     variables:

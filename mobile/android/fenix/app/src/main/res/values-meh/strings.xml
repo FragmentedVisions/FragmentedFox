@@ -205,8 +205,6 @@
   <string name="browser_menu_customize_reader_view_2">Sá\'á vii jíí vista lectura</string>
   <!-- Browser menu label to sign in to sync on the device using Mozilla accounts -->
   <string name="browser_menu_sign_in">Kajie´e sesión</string>
-  <!-- Browser menu label that creates a private tab -->
-  <string name="browser_menu_new_private_tab">Pestaña yu´u jíía</string>
   <!-- Browser menu label that navigates to the Password screen -->
   <string name="browser_menu_passwords">Contraseñas</string>
   <!-- Browser menu label that navigates to the edit bookmark screen for the current bookmarked page -->
@@ -777,8 +775,6 @@
   <string name="close_tab_title">Nakasɨ pestaña %s</string>
   <!-- Content description (not visible, for screen readers etc.): Opens the open tabs menu when pressed -->
   <string name="open_tabs_menu">Síne nu kaji pestañas</string>
-  <!-- Open tabs menu item to save tabs to collection -->
-  <string name="tabs_menu_save_to_collection1">Chuva\'a daa pestañas nu colección</string>
   <!-- Text for the menu button to delete a collection -->
   <string name="collection_delete">Xita colección</string>
   <!-- Text for the menu button to rename a collection -->
@@ -1084,29 +1080,6 @@
   <string name="notification_pbm_delete_text_2">Nakasɨ daa pestañas yu´u</string>
   <!-- Text shown in the notification that pops up to remind the user that a private browsing session is active for Android 14+ -->
   <string name="notification_erase_title_android_14">Nakasɨ daa pestañas yu´u?</string>
-  <!-- Name of the marketing notification channel. Displayed in the "App notifications" system settings for the app -->
-  <string name="notification_marketing_channel_name">Difusión</string>
-  <!--
-    Title shown in the notification that pops up to remind the user to set fenix as default browser.
-    The app name is in the text, due to limitations with localizing Nimbus experiments
-  -->
-  <string name="nimbus_notification_default_browser_title" tools:ignore="BrandUsage,UnusedResources">Firefox kuviji ñama jee yu\'u</string>
-  <!--
-    Text shown in the notification that pops up to remind the user to set fenix as default browser.
-    The app name is in the text, due to limitations with localizing Nimbus experiments
-  -->
-  <string name="nimbus_notification_default_browser_text" tools:ignore="BrandUsage,UnusedResources">Sá´á Firefox ka̱a̱ nánuku xinañu´u</string>
-  <!--
-    Survey
-
-    Text shown in the fullscreen message that pops up to ask user to take a short survey.
-    The app name is in the text, due to limitations with localizing Nimbus experiments
-  -->
-  <string name="nimbus_survey_message_text" tools:ignore="BrandUsage">Kuneka\'nu ininu, chinei Firefox jíí iin encuesta luli.</string>
-  <!-- Preference for taking the short survey. -->
-  <string name="preferences_take_survey">Chu\'un encuesta</string>
-  <!-- Preference for not taking the short survey. -->
-  <string name="preferences_not_take_survey">Nkuvi, kuta´vini</string>
   <!--
     Snackbar
 
@@ -1639,10 +1612,6 @@
   <string name="certificate_info_verified_by">Nne´ya: %1$s</string>
   <!-- Message in delete confirmation dialog for password -->
   <string name="login_deletion_confirmation_2">¿A mana kuvinu xitanu contraseña ya\'a?</string>
-  <!-- Positive action of a dialog asking to delete -->
-  <string name="dialog_delete_positive">Xita</string>
-  <!-- Negative action of a dialog asking to delete login -->
-  <string name="dialog_delete_negative">Nkuvi-ka</string>
   <!-- The page title for editing a saved password. -->
   <string name="edit_2">Natee contraseña</string>
   <!-- The page title for adding new password. -->
@@ -1735,12 +1704,6 @@
   <string name="google_search_engine_suggestion_header">Nnánuku Google</string>
   <!-- Title for search suggestions when the default search suggestion engine is anything other than Google. %s is default search engine name. -->
   <string name="other_default_search_engine_suggestion_header">Nánuku jíí %s</string>
-  <!--
-    Default browser experiment
-
-    Default browser card title
-  -->
-  <string name="default_browser_experiment_card_title">Sama ka̱a̱ a ni´inu ntaka íchi</string>
   <!-- Content description radio buttons with a link to more information -->
   <string name="radio_preference_info_content_description">Kaxin sa kuninu detalles</string>
   <!-- Content description for the action bar "up" button -->
@@ -1866,22 +1829,6 @@
   <string name="debug_drawer_tab_tools_tab_creation_tool_button_text_active">Tee daa pestañas íyo activa</string>
   <!-- The button text to add tabs to the private tab group in the tab creation tool. -->
   <string name="debug_drawer_tab_tools_tab_creation_tool_button_text_private">Tee nu pestaña yu´u</string>
-  <!-- The continue button label -->
-  <string name="micro_survey_continue_button_label" tools:ignore="UnusedResources">Kɨ´ɨ</string>
-  <!-- The submit button label text -->
-  <string name="micro_survey_submit_button_label">Chu\'un íchi</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_3" tools:ignore="UnusedResources">Neutral</string>
-  <!--
-    Accessibility
-
-    Content description for the survey application icon. Note: The word "Firefox" should NOT be translated.
-  -->
-  <string name="microsurvey_app_icon_content_description" tools:ignore="BrandUsage">Logo de Firefox</string>
-  <!-- Content description (not visible, for screen readers etc.) for closing microsurvey bottom sheet. -->
-  <string name="microsurvey_close_handle_content_description">Nakasɨ encuesta</string>
-  <!-- Content description for "X" button that is closing microsurvey. -->
-  <string name="microsurvey_close_button_content_description">Nakasɨ</string>
   <!--
     Debug drawer logins
 

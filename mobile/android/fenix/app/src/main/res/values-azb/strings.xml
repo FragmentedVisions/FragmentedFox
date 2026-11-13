@@ -213,8 +213,6 @@
   <string name="browser_menu_sign_back_in_to_sync">دؤنگل اوچون گئنه گیرین</string>
   <!-- Browser menu caption label for the "Sign back in to sync" browser menu item described in `browser_menu_sign_back_in_to_sync` when there is an error in syncing -->
   <string name="browser_menu_syncing_paused_caption">دؤنگل دایاندیریلدی</string>
-  <!-- Browser menu label that creates a private tab -->
-  <string name="browser_menu_new_private_tab">یئنی گیزلی تاغ</string>
   <!-- Browser menu label that navigates to the Password screen -->
   <string name="browser_menu_passwords">رمز‌لر</string>
   <!-- Browser menu label that navigates to the edit bookmark screen for the current bookmarked page -->
@@ -837,8 +835,6 @@
   <string name="close_tab_title">%s تاغی باغلا</string>
   <!-- Content description (not visible, for screen readers etc.): Opens the open tabs menu when pressed -->
   <string name="open_tabs_menu">آچیق تاغ‌لار منوسونو آچ</string>
-  <!-- Open tabs menu item to save tabs to collection -->
-  <string name="tabs_menu_save_to_collection1">تاغ‌لاریْ مجموعه‌ده ساخلاییْن</string>
   <!-- Text for the menu button to delete a collection -->
   <string name="collection_delete">مجموعه‌نی سیل</string>
   <!-- Text for the menu button to rename a collection -->
@@ -1147,29 +1143,6 @@
   <!-- Text shown in the notification that pops up to remind the user that a private browsing session is active for Android 14+ -->
   <string name="notification_erase_title_android_14">گیزلی تاغ‌لار باغلانسین؟</string>
   <string name="notification_erase_text_android_14">گیزلی تاغلاریْ باغلاماق اوچون بو بیلدیریشه توْخونون و یا چکین.</string>
-  <!-- Name of the marketing notification channel. Displayed in the "App notifications" system settings for the app -->
-  <string name="notification_marketing_channel_name">بازارلاما</string>
-  <!--
-    Title shown in the notification that pops up to remind the user to set fenix as default browser.
-    The app name is in the text, due to limitations with localizing Nimbus experiments
-  -->
-  <string name="nimbus_notification_default_browser_title" tools:ignore="BrandUsage,UnusedResources">فایرفاکس یئیین و گیزلی‌دیر.</string>
-  <!--
-    Text shown in the notification that pops up to remind the user to set fenix as default browser.
-    The app name is in the text, due to limitations with localizing Nimbus experiments
-  -->
-  <string name="nimbus_notification_default_browser_text" tools:ignore="BrandUsage,UnusedResources">فایرفاکسیْ وارساییلان مورورچو ائله‌یین</string>
-  <!--
-    Survey
-
-    Text shown in the fullscreen message that pops up to ask user to take a short survey.
-    The app name is in the text, due to limitations with localizing Nimbus experiments
-  -->
-  <string name="nimbus_survey_message_text" tools:ignore="BrandUsage">لطفا، قیسا بیر سؤرغویا قاتیلاراق فایرفاکس تکمیل اولماسینا کمک ائدین.</string>
-  <!-- Preference for taking the short survey. -->
-  <string name="preferences_take_survey">سوْرغویا قاتیلن</string>
-  <!-- Preference for not taking the short survey. -->
-  <string name="preferences_not_take_survey">یوْخ ممنون</string>
   <!--
     Snackbar
 
@@ -1748,10 +1721,6 @@
   <string name="certificate_info_verified_by">دوغرولایان: %1$s</string>
   <!-- Message in delete confirmation dialog for password -->
   <string name="login_deletion_confirmation_2">بو رمزی سیلمه‌گه آرخایینسیز؟</string>
-  <!-- Positive action of a dialog asking to delete -->
-  <string name="dialog_delete_positive">سیل</string>
-  <!-- Negative action of a dialog asking to delete login -->
-  <string name="dialog_delete_negative">لغو</string>
   <!-- The page title for editing a saved password. -->
   <string name="edit_2">رمز دوزه‌لیشی</string>
   <!-- The page title for adding new password. -->
@@ -1850,14 +1819,6 @@
   <string name="google_search_engine_suggestion_header">گوگل آختاریشیْ</string>
   <!-- Title for search suggestions when the default search suggestion engine is anything other than Google. %s is default search engine name. -->
   <string name="other_default_search_engine_suggestion_header">%s آختاریشیْ</string>
-  <!--
-    Default browser experiment
-
-    Default browser card title
-  -->
-  <string name="default_browser_experiment_card_title">وارساییلان مرورچوزا دگیشدیرین</string>
-  <!-- Default browser card text -->
-  <string name="default_browser_experiment_card_text" tools:ignore="BrandUsage">فایرفاکس‌دا اتوماتیک آچیلماق اوچون سایتلاریندان، ایمیل‌لریندن و مسیج‌لریندن باغلانتی‌ْ تعیین ائدین.‎</string>
   <!-- Content description radio buttons with a link to more information -->
   <string name="radio_preference_info_content_description">چوْخ جزئیات اوچون کلیک ائله‌</string>
   <!-- Content description for the action bar "up" button -->
@@ -1893,10 +1854,6 @@
   <string name="translations_bottom_sheet_title_translation_completed">صفحه %1$s دیلیندن %2$s دیلینه ترجمه اوْلدو</string>
   <!-- Title for the translation dialog that allows a user to translate the webpage when a user uses the translation feature the first time. %1$s is the name of the app (for example "Firefox"). -->
   <string name="translations_bottom_sheet_title_first_time">%1$s ده اؤزل ترجمه‌لری امتحان ائدین</string>
-  <!-- Text shown in prompt for printing microsurvey. "sec" It's an abbreviation for "second". Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_prompt_printing_title" tools:ignore="BrandUsage,UnusedResources">فایرفاکس‌دا پرینتی یاخچیلاشدیرماغا کمک ائدین. یالنیز بیر ثانیه چکیر.</string>
-  <!-- Text shown in the survey title for printing microsurvey. Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_survey_printing_title" tools:ignore="BrandUsage,UnusedResources">فایرفاکس‌دا پرینت‌دن نه قدر راضیسینیز؟</string>
   <!-- TextField Design System Component -->
 
   <!-- ==== Terms of use pop up prompt ==== -->

@@ -9,8 +9,6 @@ import mozilla.appservices.remotesettings.RemoteSettingsService
 import mozilla.components.ExperimentalAndroidComponentsApi
 import mozilla.components.service.nimbus.NimbusApi
 import mozilla.components.service.nimbus.messaging.FxNimbusMessaging
-import mozilla.components.service.nimbus.messaging.NimbusMessagingController
-import mozilla.components.service.nimbus.messaging.NimbusMessagingControllerInterface
 import mozilla.components.service.nimbus.messaging.NimbusMessagingStorage
 import mozilla.components.service.nimbus.messaging.OnDiskMessageMetadataStorage
 import org.mozilla.experiments.nimbus.NimbusEventStore
@@ -86,20 +84,9 @@ class NimbusComponents(
         messagingStorage.createMessagingHelper()
 
     /**
-     * The main entry point for UI surfaces to interact with (get, click, dismiss) messages
-     * from the Nimbus Messaging component.
-     */
-    val messaging: NimbusMessagingControllerInterface by lazyMonitored {
-        NimbusMessagingController(
-            messagingStorage = messagingStorage,
-            deepLinkScheme = BuildConfig.DEEP_LINK_SCHEME,
-        )
-    }
-
-    /**
      * Low level access to the messaging component.
      *
-     * The app should access this through a [mozilla.components.service.nimbus.messaging.NimbusMessagingController].
+     * The app uses it to create the JEXL helper.
      */
     private val messagingStorage by lazyMonitored {
         NimbusMessagingStorage(

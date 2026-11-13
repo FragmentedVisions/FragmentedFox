@@ -5,25 +5,17 @@
 package org.mozilla.fenix.home.fake
 
 import android.content.Context
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.res.stringResource
 import mozilla.components.browser.state.state.ContentState
 import mozilla.components.browser.state.state.TabSessionState
 import mozilla.components.browser.state.state.recover.RecoverableTab
-import mozilla.components.compose.base.BannerColors
 import mozilla.components.concept.engine.Engine
 import mozilla.components.concept.sync.DeviceType
 import mozilla.components.feature.tab.collections.Tab
 import mozilla.components.feature.tab.collections.TabCollection
 import mozilla.components.feature.top.sites.TopSite
-import mozilla.components.service.nimbus.messaging.Message
-import mozilla.components.service.nimbus.messaging.MessageData
-import mozilla.components.service.nimbus.messaging.StyleData
-import org.mozilla.fenix.R
 import org.mozilla.fenix.browser.browsingmode.BrowsingMode
 import org.mozilla.fenix.components.appstate.AppState
 import org.mozilla.fenix.components.appstate.setup.checklist.ChecklistItem
-import org.mozilla.fenix.compose.MessageCardState
 import org.mozilla.fenix.home.bookmarks.Bookmark
 import org.mozilla.fenix.home.bookmarks.interactor.BookmarksInteractor
 import org.mozilla.fenix.home.collections.CollectionsState
@@ -39,7 +31,6 @@ import org.mozilla.fenix.home.recentvisits.RecentlyVisitedItem.RecentHistoryHigh
 import org.mozilla.fenix.home.recentvisits.interactor.RecentVisitsInteractor
 import org.mozilla.fenix.home.search.HomeSearchInteractor
 import org.mozilla.fenix.home.sessioncontrol.CollectionInteractor
-import org.mozilla.fenix.home.store.NimbusMessageState
 import org.mozilla.fenix.home.termsofuse.PrivacyNoticeBannerInteractor
 import org.mozilla.fenix.home.termsofuse.PrivacyNoticeBannerInteractorNoOp
 import org.mozilla.fenix.home.topsites.interactor.TopSiteInteractor
@@ -69,10 +60,6 @@ internal object FakeHomepagePreview {
             override fun reportSessionMetrics(state: AppState) { /* no op */ }
 
             override fun onNavigateSearch() { /* no op */ }
-
-            override fun onMessageClicked(message: Message) { /* no op */ }
-
-            override fun onMessageClosedClicked(message: Message) { /* no op */ }
 
             override fun showWallpapersOnboardingDialog(state: WallpaperState): Boolean {
                 return false
@@ -187,35 +174,6 @@ internal object FakeHomepagePreview {
         get() = object : HomeSearchInteractor {
             override fun onHomeContentFocusedWhileSearchIsActive() { /* no op */ }
         }
-
-    @Composable
-    internal fun nimbusMessageState() = NimbusMessageState(
-        cardState = messageCardState(),
-        message = message(),
-    )
-
-    @Composable
-    internal fun messageCardState() = MessageCardState(
-        messageText = stringResource(id = R.string.default_browser_experiment_card_text),
-        titleText = stringResource(id = R.string.default_browser_experiment_card_title),
-        buttonText = "",
-        bannerColors = BannerColors.bannerColors(),
-    )
-
-    internal fun message() = Message(
-        id = "id",
-        data = MessageData(),
-        style = StyleData(),
-        action = "action",
-        triggerIfAll = emptyList(),
-        excludeIfAny = emptyList(),
-        metadata = Message.Metadata(
-            id = "id",
-            displayCount = 0,
-            pressed = false,
-            dismissed = false,
-        ),
-    )
 
     internal fun topSites(
         providedCount: Int = 2,

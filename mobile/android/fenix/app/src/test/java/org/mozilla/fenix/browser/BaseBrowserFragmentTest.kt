@@ -9,7 +9,6 @@ import android.content.res.Configuration
 import android.view.View
 import android.view.ViewGroup
 import androidx.coordinatorlayout.widget.CoordinatorLayout
-import androidx.core.view.isVisible
 import io.mockk.Called
 import io.mockk.Runs
 import io.mockk.every
@@ -32,10 +31,8 @@ import org.junit.Before
 import org.junit.Test
 import org.mozilla.fenix.R
 import org.mozilla.fenix.components.FindInPageIntegration
-import org.mozilla.fenix.components.toolbar.BottomToolbarContainerView
 import org.mozilla.fenix.components.toolbar.BrowserNavigationBar
 import org.mozilla.fenix.components.toolbar.BrowserToolbarComposable
-import org.mozilla.fenix.components.toolbar.ToolbarContainerView
 import org.mozilla.fenix.components.toolbar.ToolbarPosition
 import org.mozilla.fenix.ext.components
 import org.mozilla.fenix.utils.Settings
@@ -132,7 +129,6 @@ class BaseBrowserFragmentTest {
     fun `initializeEngineView should set EngineViewClippingBehavior when dynamic toolbar is enabled`() {
         every { settings.shouldUseFixedTopToolbar } returns false
         every { settings.isDynamicToolbarEnabled } returns true
-        every { settings.shouldShowMicrosurveyPrompt } returns true
         val params: CoordinatorLayout.LayoutParams = mockk(relaxed = true)
         every { params.behavior } returns mockk(relaxed = true)
         every { swipeRefreshLayout.layoutParams } returns params
@@ -294,54 +290,6 @@ class BaseBrowserFragmentTest {
     }
 
     @Test
-    fun `WHEN isMicrosurveyEnabled and isExperimentationEnabled are true GIVEN a call to setupMicrosurvey THEN messagingFeature is initialized`() {
-        every { testContext.components.settings.isExperimentationEnabled } returns true
-        every { testContext.components.settings.microsurveyFeatureEnabled } returns true
-
-        assertNull(fragment.messagingFeatureMicrosurvey.get())
-
-        fragment.initializeMicrosurveyFeature(testContext)
-
-        assertNotNull(fragment.messagingFeatureMicrosurvey.get())
-    }
-
-    @Test
-    fun `WHEN isMicrosurveyEnabled and isExperimentationEnabled are false GIVEN a call to setupMicrosurvey THEN messagingFeature is not initialized`() {
-        every { testContext.components.settings.isExperimentationEnabled } returns false
-        every { testContext.components.settings.microsurveyFeatureEnabled } returns false
-
-        assertNull(fragment.messagingFeatureMicrosurvey.get())
-
-        fragment.initializeMicrosurveyFeature(testContext)
-
-        assertNull(fragment.messagingFeatureMicrosurvey.get())
-    }
-
-    @Test
-    fun `WHEN isMicrosurveyEnabled is true and isExperimentationEnabled false GIVEN a call to setupMicrosurvey THEN messagingFeature is not initialized`() {
-        every { testContext.components.settings.isExperimentationEnabled } returns false
-        every { testContext.components.settings.microsurveyFeatureEnabled } returns true
-
-        assertNull(fragment.messagingFeatureMicrosurvey.get())
-
-        fragment.initializeMicrosurveyFeature(testContext)
-
-        assertNull(fragment.messagingFeatureMicrosurvey.get())
-    }
-
-    @Test
-    fun `WHEN isMicrosurveyEnabled is false and isExperimentationEnabled true GIVEN a call to setupMicrosurvey THEN messagingFeature is not initialized`() {
-        every { testContext.components.settings.isExperimentationEnabled } returns true
-        every { testContext.components.settings.microsurveyFeatureEnabled } returns false
-
-        assertNull(fragment.messagingFeatureMicrosurvey.get())
-
-        fragment.initializeMicrosurveyFeature(testContext)
-
-        assertNull(fragment.messagingFeatureMicrosurvey.get())
-    }
-
-    @Test
     fun `GIVEN fixed toolbar WHEN setting engine view insets THEN use bottom toolbar's height as bottom margin`() {
         val currentTab = createTab("https://example.com")
         every { testContext.components.core.store.state } returns BrowserState(
@@ -500,28 +448,6 @@ class BaseBrowserFragmentTest {
     }
 
     @Test
-    fun `GIVEN addressbar and micro survey shown WHEN setting engine view insets THEN use both toolbars' heights`() {
-        val currentTab = createTab("https://example.com")
-        every { testContext.components.core.store.state } returns BrowserState(
-            tabs = listOf(currentTab),
-            selectedTabId = currentTab.id,
-        )
-        every { fragment.view } returns mockk {
-            every { context } returns testContext
-        }
-        every { settings.browserToolbarHeight } returns 11
-        every { settings.toolbarPosition } returns ToolbarPosition.TOP
-        every { settings.shouldShowMicrosurveyPrompt } returns true
-        every { settings.isDynamicToolbarEnabled } returns true
-        every { settings.shouldUseFixedTopToolbar } returns false
-        every { testContext.resources.getDimensionPixelSize(R.dimen.browser_microsurvey_height) } returns 131
-
-        fragment.configureEngineViewWithDynamicToolbarsMaxHeight()
-
-        verify { engineView.setDynamicToolbarMaxHeight(142) }
-    }
-
-    @Test
     fun `GIVEN default engine view resize behavior and addressbar and navbar shown WHEN setting engine view insets THEN use don't update current values`() {
         val currentTab = createTab("https://example.com")
         every { testContext.components.core.store.state } returns BrowserState(
@@ -599,20 +525,14 @@ class BaseBrowserFragmentTest {
     @Test
     fun `WHEN asked to expand the browser view THEN hide all toolbars and show only the browser view`() {
         val browserToolbar = mockk<BrowserToolbarComposable>(relaxed = true)
-        val toolbarContainerView = mockk<ToolbarContainerView>(relaxed = true)
-        val bottomToolbarContainerView = mockk<BottomToolbarContainerView>()
         val browserNavigationBar = mockk<BrowserNavigationBar>(relaxed = true)
-        every { bottomToolbarContainerView.toolbarContainerView } returns toolbarContainerView
         fragment._browserToolbar = browserToolbar
-        fragment._bottomToolbarContainerView = bottomToolbarContainerView
         fragment.browserNavigationBar = browserNavigationBar
 
         fragment.expandBrowserView()
 
         verify { browserToolbar.gone() }
         verify { browserNavigationBar.gone() }
-        verify { toolbarContainerView.collapse() }
-        verify { toolbarContainerView.isVisible = false }
         val browserViewParams = swipeRefreshLayout.layoutParams as CoordinatorLayout.LayoutParams
         verify { browserViewParams.behavior = null }
         verify { (swipeRefreshLayout.layoutParams as CoordinatorLayout.LayoutParams).bottomMargin = 0 }
@@ -627,21 +547,15 @@ class BaseBrowserFragmentTest {
         fragment.webAppToolbarShouldBeVisible = true
         every { fragment.reinitializeEngineView() } just Runs
         val browserToolbar = mockk<BrowserToolbarComposable>(relaxed = true)
-        val toolbarContainerView = mockk<ToolbarContainerView>(relaxed = true)
-        val bottomToolbarContainerView = mockk<BottomToolbarContainerView>()
         val browserNavigationBar = mockk<BrowserNavigationBar>(relaxed = true)
-        every { bottomToolbarContainerView.toolbarContainerView } returns toolbarContainerView
         fragment._browserToolbar = browserToolbar
-        fragment._bottomToolbarContainerView = bottomToolbarContainerView
         fragment.browserNavigationBar = browserNavigationBar
 
         fragment.collapseBrowserView()
 
         verify { fragment.reinitializeEngineView() }
         verify { browserToolbar.visible() }
-        verify { toolbarContainerView.isVisible = true }
         verify { browserToolbar.expand() }
-        verify { toolbarContainerView.expand() }
     }
 
     @Test
@@ -649,17 +563,12 @@ class BaseBrowserFragmentTest {
         fragment.webAppToolbarShouldBeVisible = false
         every { fragment.reinitializeEngineView() } just Runs
         val browserToolbar = mockk<BrowserToolbarComposable>(relaxed = true)
-        val toolbarContainerView = mockk<ToolbarContainerView>(relaxed = true)
-        val bottomToolbarContainerView = mockk<BottomToolbarContainerView>()
-        every { bottomToolbarContainerView.toolbarContainerView } returns toolbarContainerView
         fragment._browserToolbar = browserToolbar
-        fragment._bottomToolbarContainerView = bottomToolbarContainerView
 
         fragment.collapseBrowserView()
 
         verify(exactly = 0) { fragment.reinitializeEngineView() }
         verify { browserToolbar wasNot Called }
-        verify { toolbarContainerView wasNot Called }
     }
 
     @Test

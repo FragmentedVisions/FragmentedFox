@@ -338,12 +338,6 @@ class SecretSettingsFragment : PreferenceFragmentCompat(), SystemInsetsPaddedFra
             }
         }
 
-        requirePreference<SwitchPreferenceCompat>(R.string.pref_key_microsurvey_feature_enabled).apply {
-            isVisible = true
-            isChecked = settings.microsurveyFeatureEnabled
-            onPreferenceChangeListener = SharedPreferenceUpdater()
-        }
-
         requirePreference<SwitchPreferenceCompat>(R.string.pref_key_enable_import_bookmarks).apply {
             isVisible = Config.channel.isDebug
             isChecked = settings.importBookmarksFeatureFlagEnabled

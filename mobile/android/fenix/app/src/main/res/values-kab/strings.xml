@@ -261,8 +261,6 @@
   <string name="browser_menu_sign_back_in_to_sync">Ales qqen i wakken ad tesnekreḍ amtawi</string>
   <!-- Browser menu caption label for the "Sign back in to sync" browser menu item described in `browser_menu_sign_back_in_to_sync` when there is an error in syncing -->
   <string name="browser_menu_syncing_paused_caption">Amtawa yeḥbes</string>
-  <!-- Browser menu label that creates a private tab -->
-  <string name="browser_menu_new_private_tab">Iccer uslig amaynut</string>
   <!-- Browser menu label that navigates to the Password screen -->
   <string name="browser_menu_passwords">Awalen uffiren</string>
   <!-- Content description (not visible, for screen readers etc.) for the handle used to drag the main menu at the bottom of the screen. -->
@@ -401,18 +399,6 @@
   <string name="onboarding_preferences_dialog_positive_button">Immed</string>
   <!-- Terms of service onboarding title card label. 'Firefox' intentionally hardcoded here -->
   <string name="onboarding_welcome_to_firefox" tools:ignore="BrandUsage">Anṣuf ar Firefox</string>
-  <!-- Line one of the terms of service onboarding page. %1$s is replaced by an active link, using onboarding_term_of_service_line_one_link_text_2 as text (“Firefox Terms of Use”). -->
-  <string name="onboarding_term_of_service_line_one_2">S ukemmel, ad tqebleḍ %1$s.</string>
-  <!-- Used as text for the link in onboarding_term_of_service_line_one_2. -->
-  <string name="onboarding_term_of_service_line_one_link_text_2" tools:ignore="BrandUsage">Tiwtiln n useqdec n Fiefox</string>
-  <!-- Line two of the terms of service onboarding page. 'Firefox' is intentionally hardcoded. %1$s is replaced by an active link, using onboarding_term_of_service_line_two_link_text as text (“Privacy Notice”). -->
-  <string name="onboarding_term_of_service_line_two_2" tools:ignore="BrandUsage">Firefox terḥa-t tudert-ik tabaḍnit. Issin ugar deg %1$s.</string>
-  <!-- Used as text for the link in onboarding_term_of_service_line_two. -->
-  <string name="onboarding_term_of_service_line_two_link_text">Tasertit n tbaḍnit</string>
-  <!-- Line three of the terms of service onboarding page. 'Firefox' and 'Mozilla' are intentionally hardcoded. %1$s is replaced by an active link using onboarding_term_of_service_line_three_link_text as text (“Manage”). -->
-  <string name="onboarding_term_of_service_line_three" tools:ignore="BrandUsage">Akken ad tεawneḍ deg usnerni iminig, Firefox ad yazen isefka n tawassna akked umyigew ɣer Mozilla. %1$s</string>
-  <!-- Used as text for the link in onboarding_term_of_service_line_three. -->
-  <string name="onboarding_term_of_service_line_three_link_text">Sefrek</string>
   <!--
     Terms of use (ToU) first body text. %1$s is replaced by an active link,
     using onboarding_redesign_tou_body_one_link_text as text (“Firefox Terms of Use”).
@@ -432,8 +418,6 @@
   <!-- Marketing onboarding page opt-out checkbox. Unchecking the box does not increase data collection. Our data practices remain the same. 'Mozilla' is intentionally hardcoded. -->
   <!-- Marketing onboarding page clickable link text to "learn more" on how data is used. -->
   <!-- Marketing onboarding page button label. Button to confirm choice and start browsing. -->
-  <!-- Sync onboarding redesign positive button text. -->
-  <string name="onboarding_redesign_sync_positive_button" tools:ignore="UnusedResources">Bdu amtawi</string>
   <!-- Marketing onboarding page title variant. “One last thing” refers to the final step or action in the onboarding process that we’re asking users to take before they can start using the browser. -->
   <!-- Marketing onboarding page body variant. 'Firefox' is intentionally hardcoded. -->
   <!-- Marketing onboarding page button label variant. Button to confirm choice and start browsing. -->
@@ -1170,8 +1154,6 @@
   <string name="close_tab_title">Mdel iccer %s</string>
   <!-- Content description (not visible, for screen readers etc.): Opens the open tabs menu when pressed -->
   <string name="open_tabs_menu">Ldi umuɣ n yiccaren</string>
-  <!-- Open tabs menu item to save tabs to collection -->
-  <string name="tabs_menu_save_to_collection1">Sekles iccaren ɣer tegrumma</string>
   <!-- Text for the menu button to delete a collection -->
   <string name="collection_delete">Kkes tagrumma</string>
   <!-- Text for the menu button to rename a collection -->
@@ -1739,29 +1721,6 @@
   <!-- Text shown in the notification that pops up to remind the user that a private browsing session is active for Android 14+ -->
   <string name="notification_erase_title_android_14">Mdel iccaren usligen?</string>
   <string name="notification_erase_text_android_14">Sit ɣef ulɣu-a neɣ zuɣer-it i wakken ad tmedleḍ accaren usligen.</string>
-  <!-- Name of the marketing notification channel. Displayed in the "App notifications" system settings for the app -->
-  <string name="notification_marketing_channel_name">Talzuzit</string>
-  <!--
-    Title shown in the notification that pops up to remind the user to set fenix as default browser.
-    The app name is in the text, due to limitations with localizing Nimbus experiments
-  -->
-  <string name="nimbus_notification_default_browser_title" tools:ignore="BrandUsage,UnusedResources">Firefox d arurad, d uslig</string>
-  <!--
-    Text shown in the notification that pops up to remind the user to set fenix as default browser.
-    The app name is in the text, due to limitations with localizing Nimbus experiments
-  -->
-  <string name="nimbus_notification_default_browser_text" tools:ignore="BrandUsage,UnusedResources">Err Firefox d iminig-ik amezwer</string>
-  <!--
-    Survey
-
-    Text shown in the fullscreen message that pops up to ask user to take a short survey.
-    The app name is in the text, due to limitations with localizing Nimbus experiments
-  -->
-  <string name="nimbus_survey_message_text" tools:ignore="BrandUsage">Ttxil-k ɛawen Firefox ad igerrez ugar s uɛemmer n uḥedqus-a.</string>
-  <!-- Preference for taking the short survey. -->
-  <string name="preferences_take_survey">Eg aḥedqis</string>
-  <!-- Preference for not taking the short survey. -->
-  <string name="preferences_not_take_survey">Ala, tanemmirt</string>
   <!--
     Snackbar
 
@@ -2474,10 +2433,6 @@
   <string name="certificate_info_verified_by">Isenqed-it: %1$s</string>
   <!-- Message in delete confirmation dialog for password -->
   <string name="login_deletion_confirmation_2">D tidet tebɣiḍ ad tekkseḍ awal-a n uεeddi?</string>
-  <!-- Positive action of a dialog asking to delete -->
-  <string name="dialog_delete_positive">Kkes</string>
-  <!-- Negative action of a dialog asking to delete login -->
-  <string name="dialog_delete_negative">Sefsex</string>
   <!-- The page title for editing a saved password. -->
   <string name="edit_2">Ẓreg awal uffir</string>
   <!-- The page title for adding new password. -->
@@ -2589,14 +2544,6 @@
   <string name="other_default_search_engine_suggestion_header">Anadi %s</string>
   <!-- Title for recent search suggestions. -->
   <string name="recent_searches_header">Inadiyen n melmi kan</string>
-  <!--
-    Default browser experiment
-
-    Default browser card title
-  -->
-  <string name="default_browser_experiment_card_title">Beddel iminig-ik·im amezwer</string>
-  <!-- Default browser card text -->
-  <string name="default_browser_experiment_card_text" tools:ignore="BrandUsage">Sbadu iseɣwan seg yismal web, seg yimaylen d yiznan i twaledyawt s wudem awurman deg Firefox.</string>
   <!-- Content description radio buttons with a link to more information -->
   <string name="radio_preference_info_content_description">Sit i wugar n telqayt</string>
   <!-- Content description for the action bar "up" button -->
@@ -2980,48 +2927,6 @@
   <string name="debug_drawer_tab_tools_tab_creation_tool_button_text_inactive">Rnu ɣer waccaren irurmiden</string>
   <!-- The button text to add tabs to the private tab group in the tab creation tool. -->
   <string name="debug_drawer_tab_tools_tab_creation_tool_button_text_private">Rnu ɣer waccaren usligen</string>
-  <!-- The continue button label -->
-  <string name="micro_survey_continue_button_label" tools:ignore="UnusedResources">Kemmel</string>
-  <!--
-    Survey view
-
-    The survey header
-  -->
-  <string name="micro_survey_survey_header_2">Ttxil-k smed aḥedqis</string>
-  <!-- The privacy notice link -->
-  <string name="micro_survey_privacy_notice_2">Tasertit n tbaḍnit</string>
-  <!-- The submit button label text -->
-  <string name="micro_survey_submit_button_label">Azen</string>
-  <!-- The survey completion confirmation text -->
-  <string name="micro_survey_feedback_confirmation">Tanemmirt ɣef tekti yinek!</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_1" tools:ignore="UnusedResources">Yumer aṭas</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_2" tools:ignore="UnusedResources">Y·Tumer</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_3" tools:ignore="UnusedResources">War tamawt</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_4" tools:ignore="UnusedResources">Ur yumir ara</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_5" tools:ignore="UnusedResources">Texseṛ-as akk nniya</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_6" tools:ignore="UnusedResources">Ur t-sseqdaceɣ ara</string>
-  <!-- Text shown in prompt for printing microsurvey. "sec" It's an abbreviation for "second". Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_prompt_printing_title" tools:ignore="BrandUsage,UnusedResources">Ɛawen-aɣ ad nesnerni asiggez deg Firefox. Aya ad yeṭṭef cwiṭ kan n wakud</string>
-  <!-- Text shown in the survey title for printing microsurvey. Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_survey_printing_title" tools:ignore="BrandUsage,UnusedResources">Tumreḍ s usiggez deg Firefox?</string>
-  <!--
-    Accessibility
-
-    Content description for the survey application icon. Note: The word "Firefox" should NOT be translated.
-  -->
-  <string name="microsurvey_app_icon_content_description" tools:ignore="BrandUsage">Alugu Firefox</string>
-  <!-- Content description for the survey feature icon. -->
-  <string name="microsurvey_feature_icon_content_description">Tignit n tmahilt n uḥedqis</string>
-  <!-- Content description (not visible, for screen readers etc.) for closing microsurvey bottom sheet. -->
-  <string name="microsurvey_close_handle_content_description">Mdel aḥedqis</string>
-  <!-- Content description for "X" button that is closing microsurvey. -->
-  <string name="microsurvey_close_button_content_description">Mdel</string>
   <!--
     Debug drawer logins
 

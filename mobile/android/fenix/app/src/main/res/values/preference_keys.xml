@@ -464,10 +464,6 @@
     <!--Translations -->
     <string name="pref_key_ignore_translations_data_saver_warning" translatable="false">pref_key_ignore_translations_data_saver_warning</string>
 
-    <!-- Microsurvey -->
-    <string name="pref_key_should_show_microsurvey_prompt" translatable="false">pref_key_should_show_microsurvey_prompt</string>
-    <string name="pref_key_microsurvey_feature_enabled" translatable="false">pref_key_microsurvey_feature_enabled</string>
-
     <!--ApplicationExitInfo-->
     <string name="pref_key_application_exit_info_last_handled_time" translatable="false">pref_key_application_exit_info_last_handled_time</string>
 

@@ -216,8 +216,6 @@
   <string name="browser_menu_open_app_link">Ava äpis</string>
   <!-- Browser menu button to show reader view appearance controls e.g. the used font type and size -->
   <string name="browser_menu_customize_reader_view_2">Kohanda lugemisvaadet</string>
-  <!-- Browser menu label that creates a private tab -->
-  <string name="browser_menu_new_private_tab">Uus privaatne kaart</string>
   <!-- Browser menu label that navigates to the Password screen -->
   <string name="browser_menu_passwords">Paroolid</string>
   <!-- Browser menu label that bookmarks the currently visited page -->
@@ -717,8 +715,6 @@
   <string name="close_tab_title">Sulge kaart %s</string>
   <!-- Content description (not visible, for screen readers etc.): Opens the open tabs menu when pressed -->
   <string name="open_tabs_menu">Ava kaartide menüü</string>
-  <!-- Open tabs menu item to save tabs to collection -->
-  <string name="tabs_menu_save_to_collection1">Salvesta kaardid kollektsiooni</string>
   <!-- Text for the menu button to delete a collection -->
   <string name="collection_delete">Kustuta kollektsioon</string>
   <!-- Text for the menu button to rename a collection -->
@@ -1101,10 +1097,6 @@
   <!-- Text shown in the notification that pops up to remind the user that a private browsing session is active for Android 14+ -->
   <string name="notification_erase_title_android_14">Kas sulgeda privaatsed kaardid?</string>
   <string name="notification_erase_text_android_14">Privaatsete kaartide sulgemiseks puuduta või libista teavitust.</string>
-  <!-- Name of the marketing notification channel. Displayed in the "App notifications" system settings for the app -->
-  <string name="notification_marketing_channel_name">Turundus</string>
-  <!-- Preference for not taking the short survey. -->
-  <string name="preferences_not_take_survey">Ei soovi</string>
   <!--
     Snackbar
 
@@ -1697,10 +1689,6 @@
   <string name="certificate_info_verified_by">Verifitseerija: %1$s</string>
   <!-- Message in delete confirmation dialog for password -->
   <string name="login_deletion_confirmation_2">Kas oled kindel, et soovid selle parooli kustutada?</string>
-  <!-- Positive action of a dialog asking to delete -->
-  <string name="dialog_delete_positive">Kustuta</string>
-  <!-- Negative action of a dialog asking to delete login -->
-  <string name="dialog_delete_negative">Loobu</string>
   <!-- The page title for editing a saved password. -->
   <string name="edit_2">Parooli muutmine</string>
   <!-- The page title for adding new password. -->
@@ -1787,8 +1775,6 @@
   <string name="inactive_tabs_auto_close_message_snackbar">Automaatne sulgemine on lubatud</string>
   <!-- Title for search suggestions when Google is the default search suggestion engine. -->
   <string name="google_search_engine_suggestion_header">Google\'i otsing</string>
-  <!-- Default browser card text -->
-  <string name="default_browser_experiment_card_text" tools:ignore="BrandUsage">Määra Firefox automaatselt avama linke, e-posti ja sõnumeid.</string>
   <!-- Content description radio buttons with a link to more information -->
   <string name="radio_preference_info_content_description">Rohkema teabe jaoks puuduta</string>
   <!-- Content description for the action bar "up" button -->
@@ -1940,8 +1926,6 @@
   <string name="clear_site_data_dialog_negative_button_text">Loobu</string>
   <!-- The error message of the text field in the tab creation tool when the text field is empty -->
   <string name="debug_drawer_tab_tools_tab_quantity_empty_error">Tekstiväli on tühi</string>
-  <!-- The continue button label -->
-  <string name="micro_survey_continue_button_label" tools:ignore="UnusedResources">Jätka</string>
   <!-- TextField Design System Component -->
 
   <!-- Label for the primary action button to unlock private tabs -->

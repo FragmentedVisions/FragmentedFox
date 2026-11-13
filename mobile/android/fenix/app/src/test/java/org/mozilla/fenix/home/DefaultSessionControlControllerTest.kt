@@ -23,7 +23,6 @@ import mozilla.components.concept.engine.Engine
 import mozilla.components.feature.session.SessionUseCases
 import mozilla.components.feature.tab.collections.TabCollection
 import mozilla.components.feature.tabs.TabsUseCases
-import mozilla.components.service.nimbus.messaging.Message
 import mozilla.components.support.test.robolectric.testContext
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
@@ -55,13 +54,11 @@ import org.mozilla.fenix.home.bookmarks.Bookmark
 import org.mozilla.fenix.home.recenttabs.RecentTab
 import org.mozilla.fenix.home.sessioncontrol.DefaultSessionControlController
 import org.mozilla.fenix.home.sessioncontrol.SessionControlControllerCallback
-import org.mozilla.fenix.messaging.MessageController
 import org.mozilla.fenix.onboarding.WallpaperOnboardingDialogFragment.Companion.THUMBNAILS_SELECTION_COUNT
 import org.mozilla.fenix.utils.Settings
 import org.mozilla.fenix.wallpapers.Wallpaper
 import org.mozilla.fenix.wallpapers.WallpaperState
 import org.robolectric.RobolectricTestRunner
-import org.robolectric.annotation.Config
 import java.io.File
 import java.lang.ref.WeakReference
 import kotlin.test.assertNotNull
@@ -81,7 +78,6 @@ class DefaultSessionControlControllerTest {
     private val filesDir: File by lazy { temporaryFolder.newFolder() }
     private val appStore: AppStore = mockk(relaxed = true)
     private val navController: NavController = mockk(relaxed = true)
-    private val messageController: MessageController = mockk(relaxed = true)
     private val engine: Engine = mockk(relaxed = true)
     private val tabCollectionStorage: TabCollectionStorage = mockk(relaxed = true)
     private val tabsUseCases: TabsUseCases = mockk(relaxed = true)
@@ -532,22 +528,6 @@ class DefaultSessionControlControllerTest {
     }
 
     @Test
-    fun `WHEN handleMessageClicked and handleMessageClosed are called THEN delegate to messageController`() {
-        val controller = createController()
-        val message = mockk<Message>()
-
-        controller.handleMessageClicked(message)
-        controller.handleMessageClosed(message)
-
-        verify {
-            messageController.onMessagePressed(message)
-        }
-        verify {
-            messageController.onMessageDismissed(message)
-        }
-    }
-
-    @Test
     fun `GIVEN item is a group WHEN onChecklistItemClicked is called THEN dispatch checklist performs the expected actions`() {
         val controller = createController()
         val group = mockk<ChecklistItem.Group>()
@@ -687,7 +667,6 @@ class DefaultSessionControlControllerTest {
             settings = settings,
             engine = engine,
             store = store,
-            messageController = messageController,
             tabCollectionStorage = tabCollectionStorage,
             addTabUseCase = tabsUseCases.addTab,
             restoreUseCase = mockk(relaxed = true),

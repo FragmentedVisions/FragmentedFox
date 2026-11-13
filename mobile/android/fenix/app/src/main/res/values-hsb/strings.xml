@@ -268,8 +268,6 @@
   <string name="browser_menu_syncing_paused_caption">Synchronizacija je zastajena</string>
   <!-- Browser menu caption label for an authenticated user -->
   <string name="browser_menu_signed_in_caption">Rjadujće, štož zawěsćeće a synchronizujeće</string>
-  <!-- Browser menu label that creates a private tab -->
-  <string name="browser_menu_new_private_tab">Nowy priwatny rajtark</string>
   <!-- Browser menu label that navigates to the Password screen -->
   <string name="browser_menu_passwords">Hesła</string>
   <!-- Content description (not visible, for screen readers etc.) for the handle used to drag the main menu at the bottom of the screen. -->
@@ -471,18 +469,6 @@
   <string name="onboarding_preferences_dialog_positive_button">Dokónčeny</string>
   <!-- Terms of service onboarding title card label. 'Firefox' intentionally hardcoded here -->
   <string name="onboarding_welcome_to_firefox" tools:ignore="BrandUsage">Witajće k Firefox</string>
-  <!-- Line one of the terms of service onboarding page. %1$s is replaced by an active link, using onboarding_term_of_service_line_one_link_text_2 as text (“Firefox Terms of Use”). -->
-  <string name="onboarding_term_of_service_line_one_2">Hdyž pokročujeće, zwoliće do %1$s.</string>
-  <!-- Used as text for the link in onboarding_term_of_service_line_one_2. -->
-  <string name="onboarding_term_of_service_line_one_link_text_2" tools:ignore="BrandUsage">Wužiwanske wuměnjenja Firefox</string>
-  <!-- Line two of the terms of service onboarding page. 'Firefox' is intentionally hardcoded. %1$s is replaced by an active link, using onboarding_term_of_service_line_two_link_text as text (“Privacy Notice”). -->
-  <string name="onboarding_term_of_service_line_two_2" tools:ignore="BrandUsage">Firefox so wo wašu priwatnosć stara. Dalše informacije w: %1$s.</string>
-  <!-- Used as text for the link in onboarding_term_of_service_line_two. -->
-  <string name="onboarding_term_of_service_line_two_link_text">Zdźělenka priwatnosće</string>
-  <!-- Line three of the terms of service onboarding page. 'Firefox' and 'Mozilla' are intentionally hardcoded. %1$s is replaced by an active link using onboarding_term_of_service_line_three_link_text as text (“Manage”). -->
-  <string name="onboarding_term_of_service_line_three" tools:ignore="BrandUsage">Zo by pomhał, wobhladowak polěpšić, Firefox diagnostiske a daty interakcije na Mozilla sćele. %1$s</string>
-  <!-- Used as text for the link in onboarding_term_of_service_line_three. -->
-  <string name="onboarding_term_of_service_line_three_link_text">Rjadować</string>
   <!--
     Terms of use (ToU) first body text. %1$s is replaced by an active link,
     using onboarding_redesign_tou_body_one_link_text as text (“Firefox Terms of Use”).
@@ -502,8 +488,6 @@
   <!-- Marketing onboarding page opt-out checkbox. Unchecking the box does not increase data collection. Our data practices remain the same. 'Mozilla' is intentionally hardcoded. -->
   <!-- Marketing onboarding page clickable link text to "learn more" on how data is used. -->
   <!-- Marketing onboarding page button label. Button to confirm choice and start browsing. -->
-  <!-- Sync onboarding redesign positive button text. -->
-  <string name="onboarding_redesign_sync_positive_button" tools:ignore="UnusedResources">Synchronizaciju započeć</string>
   <!-- Marketing onboarding page title variant. “One last thing” refers to the final step or action in the onboarding process that we’re asking users to take before they can start using the browser. -->
   <!-- Marketing onboarding page body variant. 'Firefox' is intentionally hardcoded. -->
   <!-- Marketing onboarding page button label variant. Button to confirm choice and start browsing. -->
@@ -1460,8 +1444,6 @@
   <string name="open_tabs_menu">Meni wočinjenych rajtarkow</string>
   <!-- Content description (not visible, for screen readers etc.): Return to tab manager -->
   <string name="tab_manager_search_bar_back_content_description">Wróćo k zrjadowakej rajtarkow</string>
-  <!-- Open tabs menu item to save tabs to collection -->
-  <string name="tabs_menu_save_to_collection1">Rajtarki do zběrki składować</string>
   <!-- Text for the menu button to delete a collection -->
   <string name="collection_delete">Zběrku zhašeć</string>
   <!-- Text for the menu button to rename a collection -->
@@ -2301,29 +2283,6 @@
   <!-- Text shown in the notification that pops up to remind the user that a private browsing session is active for Android 14+ -->
   <string name="notification_erase_title_android_14">Priwatne rajtarki začinić?</string>
   <string name="notification_erase_text_android_14">Podótkńće so tuteje zdźělenki abo jědźće přez nju, zo byšće priwatne rajtarki začinił.</string>
-  <!-- Name of the marketing notification channel. Displayed in the "App notifications" system settings for the app -->
-  <string name="notification_marketing_channel_name">Marketing</string>
-  <!--
-    Title shown in the notification that pops up to remind the user to set fenix as default browser.
-    The app name is in the text, due to limitations with localizing Nimbus experiments
-  -->
-  <string name="nimbus_notification_default_browser_title" tools:ignore="BrandUsage,UnusedResources">Firefox je spěšny a priwatny</string>
-  <!--
-    Text shown in the notification that pops up to remind the user to set fenix as default browser.
-    The app name is in the text, due to limitations with localizing Nimbus experiments
-  -->
-  <string name="nimbus_notification_default_browser_text" tools:ignore="BrandUsage,UnusedResources">Firefox k wašemu standardnemu wobhladowakej činić</string>
-  <!--
-    Survey
-
-    Text shown in the fullscreen message that pops up to ask user to take a short survey.
-    The app name is in the text, due to limitations with localizing Nimbus experiments
-  -->
-  <string name="nimbus_survey_message_text" tools:ignore="BrandUsage">Prošu wobdźělće so na krótkim naprašowanju, zo byšće pomhał, Firefox polěpšować.</string>
-  <!-- Preference for taking the short survey. -->
-  <string name="preferences_take_survey">Woprašowanje wupjelnić</string>
-  <!-- Preference for not taking the short survey. -->
-  <string name="preferences_not_take_survey">Ně, dźakuju so</string>
   <!-- Error message shown in a Toast when the system fails to trigger the device uninstallation prompt. -->
   <!--
     Snackbar
@@ -3131,10 +3090,6 @@
   <string name="certificate_info_verified_by">Přepruwowany wot: %1$s</string>
   <!-- Message in delete confirmation dialog for password -->
   <string name="login_deletion_confirmation_2">Chceće woprawdźe tute hesło zhašeć?</string>
-  <!-- Positive action of a dialog asking to delete -->
-  <string name="dialog_delete_positive">Zhašeć</string>
-  <!-- Negative action of a dialog asking to delete login -->
-  <string name="dialog_delete_negative">Přetorhnyć</string>
   <!-- The page title for editing a saved password. -->
   <string name="edit_2">Hesło wobdźěłać</string>
   <!-- The page title for adding new password. -->
@@ -3266,14 +3221,6 @@
   <string name="other_default_search_engine_suggestion_header">Z %s pytać</string>
   <!-- Title for recent search suggestions. -->
   <string name="recent_searches_header">Najnowše pytanja</string>
-  <!--
-    Default browser experiment
-
-    Default browser card title
-  -->
-  <string name="default_browser_experiment_card_title">Waš standardny wobhladowak změnić</string>
-  <!-- Default browser card text -->
-  <string name="default_browser_experiment_card_text" tools:ignore="BrandUsage">Nastajće wotkazy z websydłow, mejlkow a powěsćow, zo bychu so awtomatisce we Firefox wočinili.</string>
   <!-- Content description radio buttons with a link to more information -->
   <string name="radio_preference_info_content_description">Klikńće za dalše podrobnosće</string>
   <!-- Content description for the action bar "up" button -->
@@ -3763,36 +3710,6 @@
   <string name="debug_drawer_tab_tools_tab_creation_tool_button_text_inactive">Njeaktiwnym rajtarkam přidać</string>
   <!-- The button text to add tabs to the private tab group in the tab creation tool. -->
   <string name="debug_drawer_tab_tools_tab_creation_tool_button_text_private">Priwatnym rajtarkam přidać</string>
-  <!-- The continue button label -->
-  <string name="micro_survey_continue_button_label" tools:ignore="UnusedResources">Dale</string>
-  <!--
-    Survey view
-
-    The survey header
-  -->
-  <string name="micro_survey_survey_header_2">Prošu dokónčće naprašowanje</string>
-  <!-- The privacy notice link -->
-  <string name="micro_survey_privacy_notice_2">Zdźělenka priwatnosće</string>
-  <!-- The submit button label text -->
-  <string name="micro_survey_submit_button_label">Wotpósłać</string>
-  <!-- The survey completion confirmation text -->
-  <string name="micro_survey_feedback_confirmation">Dźakujemy so za waš komentar!</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_1" tools:ignore="UnusedResources">Jara spokojny</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_2" tools:ignore="UnusedResources">Spokojny</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_3" tools:ignore="UnusedResources">Neutralny</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_4" tools:ignore="UnusedResources">Njespokojny</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_5" tools:ignore="UnusedResources">Jara njespokojny</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_6" tools:ignore="UnusedResources">To njewužiwam</string>
-  <!-- Text shown in prompt for printing microsurvey. "sec" It's an abbreviation for "second". Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_prompt_printing_title" tools:ignore="BrandUsage,UnusedResources">Pomhajće ćišćenje w Firefox polěpšić. Traje jenož sekundu</string>
-  <!-- Text shown in the survey title for printing microsurvey. Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_survey_printing_title" tools:ignore="BrandUsage,UnusedResources">Kak spokojny sće z ćišćenjom w Firefox?</string>
   <!--
     Uninstall Survey
 
@@ -3805,18 +3722,6 @@
   <!-- Uninstall survey answer option -->
   <!-- Uninstall survey answer option -->
   <!-- Button label shown at the bottom of the uninstall survey -->
-  <!--
-    Accessibility
-
-    Content description for the survey application icon. Note: The word "Firefox" should NOT be translated.
-  -->
-  <string name="microsurvey_app_icon_content_description" tools:ignore="BrandUsage">Logo Firefox</string>
-  <!-- Content description for the survey feature icon. -->
-  <string name="microsurvey_feature_icon_content_description">Symbol funkcije naprašowanja</string>
-  <!-- Content description (not visible, for screen readers etc.) for closing microsurvey bottom sheet. -->
-  <string name="microsurvey_close_handle_content_description">Naprašowanje začinić</string>
-  <!-- Content description for "X" button that is closing microsurvey. -->
-  <string name="microsurvey_close_button_content_description">Začinić</string>
   <!-- The title of the autofill tab in the Debug Drawer. -->
   <string name="debug_drawer_autofill_title">Nastroje za awtomatiske wupjelnjenje</string>
   <!--

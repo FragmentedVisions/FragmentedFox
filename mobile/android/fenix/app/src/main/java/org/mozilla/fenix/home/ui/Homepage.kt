@@ -51,7 +51,6 @@ import org.mozilla.fenix.GleanMetrics.RecentlyVisitedHomepage
 import org.mozilla.fenix.R
 import org.mozilla.fenix.components.appstate.setup.checklist.SetupChecklistState
 import org.mozilla.fenix.components.components
-import org.mozilla.fenix.compose.MessageCard
 import org.mozilla.fenix.compose.home.HomeSectionHeader
 import org.mozilla.fenix.home.bookmarks.Bookmark
 import org.mozilla.fenix.home.bookmarks.interactor.BookmarksInteractor
@@ -73,11 +72,9 @@ import org.mozilla.fenix.home.recentvisits.interactor.RecentVisitsInteractor
 import org.mozilla.fenix.home.recentvisits.view.RecentVisitMenuItem
 import org.mozilla.fenix.home.recentvisits.view.RecentlyVisited
 import org.mozilla.fenix.home.sessioncontrol.CollectionInteractor
-import org.mozilla.fenix.home.sessioncontrol.MessageCardInteractor
 import org.mozilla.fenix.home.setup.ui.SetupChecklist
 import org.mozilla.fenix.home.store.HeaderState
 import org.mozilla.fenix.home.store.HomepageState
-import org.mozilla.fenix.home.store.NimbusMessageState
 import org.mozilla.fenix.home.termsofuse.PrivacyNoticeBanner
 import org.mozilla.fenix.home.termsofuse.PrivacyNoticeBannerInteractor
 import org.mozilla.fenix.home.topsites.TOP_SITES_TO_SHOW
@@ -143,9 +140,7 @@ internal fun Homepage(
             if (state is HomepageState.Normal) {
                 BannerCardSection(
                     shouldShowPrivacyNoticeBanner = state.shouldShowPrivacyNoticeBanner,
-                    nimbusMessage = state.nimbusMessage,
                     privacyNoticeBannerInteractor = interactor,
-                    messageCardInteractor = interactor,
                 )
             }
 
@@ -315,9 +310,7 @@ private fun MaybeAddSetupChecklist(
 @Composable
 private fun BannerCardSection(
     shouldShowPrivacyNoticeBanner: Boolean,
-    nimbusMessage: NimbusMessageState?,
     privacyNoticeBannerInteractor: PrivacyNoticeBannerInteractor,
-    messageCardInteractor: MessageCardInteractor,
 ) {
     if (shouldShowPrivacyNoticeBanner) {
         Spacer(modifier = Modifier.height(12.dp))
@@ -325,16 +318,6 @@ private fun BannerCardSection(
         PrivacyNoticeBanner(
             modifier = Modifier.padding(horizontal = 16.dp),
             interactor = privacyNoticeBannerInteractor,
-        )
-    }
-    nimbusMessage?.apply {
-        Spacer(modifier = Modifier.height(12.dp))
-
-        MessageCard(
-            messageCardState = cardState,
-            modifier = Modifier.padding(horizontal = 16.dp),
-            onClick = { messageCardInteractor.onMessageClicked(message) },
-            onCloseButtonClick = { messageCardInteractor.onMessageClosedClicked(message) },
         )
     }
 }
@@ -530,7 +513,6 @@ private fun HomepagePreview() {
             Homepage(
                 state = HomepageState.Normal(
                     shouldShowPrivacyNoticeBanner = false,
-                    nimbusMessage = null,
                     topSites = FakeHomepagePreview.topSites(),
                     recentTabs = FakeHomepagePreview.recentTabs(),
                     syncedTab = FakeHomepagePreview.recentSyncedTab(),
@@ -581,7 +563,6 @@ private fun HomepageBannerPreview() {
             Homepage(
                 state = HomepageState.Normal(
                     shouldShowPrivacyNoticeBanner = true,
-                    nimbusMessage = null,
                     topSites = FakeHomepagePreview.topSites(),
                     recentTabs = FakeHomepagePreview.recentTabs(),
                     syncedTab = FakeHomepagePreview.recentSyncedTab(),
@@ -632,7 +613,6 @@ private fun HomepagePreviewCollections() {
             Homepage(
                 state = HomepageState.Normal(
                     shouldShowPrivacyNoticeBanner = false,
-                    nimbusMessage = null,
                     topSites = FakeHomepagePreview.topSites(),
                     recentTabs = FakeHomepagePreview.recentTabs(),
                     syncedTab = FakeHomepagePreview.recentSyncedTab(),
@@ -683,7 +663,6 @@ private fun MinimalHomepagePreview() {
             Homepage(
                 state = HomepageState.Normal(
                     shouldShowPrivacyNoticeBanner = false,
-                    nimbusMessage = null,
                     topSites = FakeHomepagePreview.topSites(),
                     recentTabs = FakeHomepagePreview.recentTabs(),
                     syncedTab = FakeHomepagePreview.recentSyncedTab(),

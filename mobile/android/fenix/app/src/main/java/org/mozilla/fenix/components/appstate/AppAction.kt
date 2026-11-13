@@ -15,8 +15,6 @@ import mozilla.components.feature.top.sites.TopSite
 import mozilla.components.lib.crash.Crash.NativeCodeCrash
 import mozilla.components.lib.crash.store.CrashAction
 import mozilla.components.lib.state.Action
-import mozilla.components.service.nimbus.messaging.Message
-import mozilla.components.service.nimbus.messaging.MessageSurfaceId
 import org.mozilla.fenix.bookmarks.BookmarksGlobalResultReport
 import org.mozilla.fenix.browser.StandardSnackbarError
 import org.mozilla.fenix.browser.browsingmode.BrowsingMode
@@ -30,7 +28,6 @@ import org.mozilla.fenix.home.recentsyncedtabs.RecentSyncedTabState
 import org.mozilla.fenix.home.recenttabs.RecentTab
 import org.mozilla.fenix.home.recentvisits.RecentlyVisitedItem
 import org.mozilla.fenix.library.history.PendingDeletionHistory
-import org.mozilla.fenix.messaging.MessagingState
 import org.mozilla.fenix.wallpapers.Wallpaper
 
 /**
@@ -164,94 +161,6 @@ sealed class AppAction : Action {
      * @property isDefault The updated boolean to [AppState.isDefaultBrowser]
      */
     data class UpdateDefaultBrowserStatus(val isDefault: Boolean) : AppAction()
-
-    /**
-     * [Action]s related to interactions with the Messaging Framework.
-     */
-    sealed class MessagingAction : AppAction() {
-        /**
-         * Restores the [Message] state from the storage.
-         */
-        object Restore : MessagingAction()
-
-        /**
-         * Evaluates if a new messages should be shown to users.
-         */
-        data class Evaluate(val surface: MessageSurfaceId) : MessagingAction()
-
-        /**
-         * Updates [MessagingState.messageToShow] with the given [message].
-         */
-        data class UpdateMessageToShow(val message: Message) : MessagingAction()
-
-        /**
-         * Updates [MessagingState.messageToShow] with the given [message].
-         */
-        data class ConsumeMessageToShow(val surface: MessageSurfaceId) : MessagingAction()
-
-        /**
-         * Updates [MessagingState.messages] with the given [messages].
-         */
-        data class UpdateMessages(val messages: List<Message>) : MessagingAction()
-
-        /**
-         * Indicates the given [message] was clicked.
-         */
-        data class MessageClicked(val message: Message) : MessagingAction()
-
-        /**
-         * Indicates the given [message] was dismissed.
-         */
-        data class MessageDismissed(val message: Message) : MessagingAction()
-
-        /**
-         * Sealed class representing actions related to microsurveys within messaging functionality.
-         */
-        sealed class MicrosurveyAction : MessagingAction() {
-            /**
-             * Indicates that the microsurvey associated with the [id] has been completed.
-             *
-             * @property id The id message associated with the completed microsurvey.
-             * @property answer The answer provided for the microsurvey.
-             */
-            data class Completed(val id: String, val answer: String) : MicrosurveyAction()
-
-            /**
-             * Indicates the microsurvey associated with this [id] has been started.
-             *
-             * @property id The id of the message associated with the started microsurvey.
-             */
-            data class Started(val id: String) : MicrosurveyAction()
-
-            /**
-             * Indicates the microsurvey associated with the [id] has been shown.
-             *
-             * @property id The id of the message associated with the shown microsurvey.
-             */
-            data class Shown(val id: String) : MicrosurveyAction()
-
-            /**
-             * Indicates the microsurvey associated with the [id] has been dismissed.
-             *
-             * @property id The id of the message associated with the microsurvey.
-             */
-            data class Dismissed(val id: String) : MicrosurveyAction()
-
-            /**
-             * Indicates the sent confirmation message for this microsurvey [id] has been shown.
-             *
-             * @property id The id of the message associated with the microsurvey.
-             */
-            data class SentConfirmationShown(val id: String) : MicrosurveyAction()
-
-            /**
-             * Indicates the privacy notice of microsurveys has been tapped.
-             *
-             * @property id The id of the message associated with the microsurvey.
-             */
-            data class OnPrivacyNoticeTapped(val id: String) : MicrosurveyAction()
-        }
-    }
 
     /**
      * [Action]s related to interactions with the wallpapers feature.

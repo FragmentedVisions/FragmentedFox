@@ -475,8 +475,6 @@
   <string name="close_tab_title">टैब बंद करें %s</string>
   <!-- Content description (not visible, for screen readers etc.): Opens the open tabs menu when pressed -->
   <string name="open_tabs_menu">टैब मेन्यू खोलें</string>
-  <!-- Open tabs menu item to save tabs to collection -->
-  <string name="tabs_menu_save_to_collection1">संग्रहण में टैब सहेजें</string>
   <!-- Text for the menu button to delete a collection -->
   <string name="collection_delete">संग्रहण को मिटाएं</string>
   <!-- Text for the menu button to rename a collection -->
@@ -724,8 +722,6 @@
     Text shown in the notification that pops up to remind the user that a private browsing session is active.
   -->
   <string name="notification_pbm_delete_text_2">निजी टैब बंद करें</string>
-  <!-- Name of the marketing notification channel. Displayed in the "App notifications" system settings for the app -->
-  <string name="notification_marketing_channel_name">विपणन</string>
   <!--
     Snackbar
 
@@ -1073,8 +1069,6 @@
     the certificate authority that verified the ticket
   -->
   <string name="certificate_info_verified_by">इसके द्वारा जाँचा गया: %1$s</string>
-  <!-- Positive action of a dialog asking to delete -->
-  <string name="dialog_delete_positive">हटाएं</string>
   <!-- Voice search button content description -->
   <string name="voice_search_content_description">आवाज़ द्वारा खोज</string>
   <!-- Voice search prompt description displayed after the user presses the voice search button -->

@@ -483,8 +483,6 @@
   <string name="close_tab_title">Uddu tabbe %s</string>
   <!-- Content description (not visible, for screen readers etc.): Opens the open tabs menu when pressed -->
   <string name="open_tabs_menu">Uddit dosol tabbe</string>
-  <!-- Open tabs menu item to save tabs to collection -->
-  <string name="tabs_menu_save_to_collection1">Danndu tabbe to leemannde</string>
   <!-- Text for the button to open tabs of the selected collection -->
   <string name="collection_open_tabs">Uddit tabbe</string>
   <!-- Text for the menu button to remove a top site -->
@@ -946,8 +944,6 @@
   <string name="phone_feature_blocked_step_settings">1. Yah to teelte Android</string>
   <!-- Confirmation message for a dialog confirming if the user wants to set default value a permission for a site -->
   <string name="confirm_clear_permission_site">Aɗa yananaa yiɗde momtude ɗee jamirooje e ɗee lowe?</string>
-  <!-- Positive action of a dialog asking to delete -->
-  <string name="dialog_delete_positive">Momtu</string>
   <!-- Voice search button content description -->
   <string name="voice_search_content_description">Njiilaw sawto</string>
   <!-- Voice search prompt description displayed after the user presses the voice search button -->

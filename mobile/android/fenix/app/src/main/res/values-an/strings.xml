@@ -497,8 +497,6 @@
   <string name="close_tab_title">Zarrar pestanya %s</string>
   <!-- Content description (not visible, for screen readers etc.): Opens the open tabs menu when pressed -->
   <string name="open_tabs_menu">Ubrir menú de pestanyas</string>
-  <!-- Open tabs menu item to save tabs to collection -->
-  <string name="tabs_menu_save_to_collection1">Alzar pestanyas en a colección</string>
   <!-- Text for the menu button to delete a collection -->
   <string name="collection_delete">Borrar colección</string>
   <!-- Text for the menu button to rename a collection -->
@@ -1069,8 +1067,6 @@
     the certificate authority that verified the ticket
   -->
   <string name="certificate_info_verified_by">Verificau per: %1$s</string>
-  <!-- Positive action of a dialog asking to delete -->
-  <string name="dialog_delete_positive">Borrar</string>
   <!-- Voice search button content description -->
   <string name="voice_search_content_description">Busqueda per voz</string>
   <!-- Voice search prompt description displayed after the user presses the voice search button -->

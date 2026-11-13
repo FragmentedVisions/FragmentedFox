@@ -177,7 +177,6 @@ private fun MiddleSearchHomepagePreview() {
         MiddleSearchHomepage(
             HomepageState.Normal(
                 shouldShowPrivacyNoticeBanner = false,
-                nimbusMessage = null,
                 topSites = FakeHomepagePreview.topSites(),
                 recentTabs = FakeHomepagePreview.recentTabs(),
                 syncedTab = FakeHomepagePreview.recentSyncedTab(),

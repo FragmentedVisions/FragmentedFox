@@ -224,8 +224,6 @@
   <string name="browser_menu_sign_back_in_to_sync">සමමුහූර්තයට පිවිසෙන්න</string>
   <!-- Browser menu caption label for the "Sign back in to sync" browser menu item described in `browser_menu_sign_back_in_to_sync` when there is an error in syncing -->
   <string name="browser_menu_syncing_paused_caption">සමමුහූර්ත විරාමයකි</string>
-  <!-- Browser menu label that creates a private tab -->
-  <string name="browser_menu_new_private_tab">නව පෞද්. පටිත්ත</string>
   <!-- Browser menu label that navigates to the Password screen -->
   <string name="browser_menu_passwords">මුරපද</string>
   <!-- Content description (not visible, for screen readers etc.) for bottom sheet handlebar custom tab menu. -->
@@ -300,10 +298,6 @@
   <string name="onboarding_preferences_dialog_positive_button">අහවරයි</string>
   <!-- Terms of service onboarding title card label. 'Firefox' intentionally hardcoded here -->
   <string name="onboarding_welcome_to_firefox" tools:ignore="BrandUsage">ෆයර්ෆොක්ස් වෙත පිළිගනිමු</string>
-  <!-- Used as text for the link in onboarding_term_of_service_line_two. -->
-  <string name="onboarding_term_of_service_line_two_link_text">රහස්‍යතා දැන්වීම</string>
-  <!-- Used as text for the link in onboarding_term_of_service_line_three. -->
-  <string name="onboarding_term_of_service_line_three_link_text">කළමනාකරණය</string>
   <!-- ==== Project "Nova" onboarding strings ==== -->
 
   <!-- ==== End of Project "Nova" onboarding strings ==== -->
@@ -857,8 +851,6 @@
   <string name="close_tab_title">%s පටිත්ත වසන්න</string>
   <!-- Content description (not visible, for screen readers etc.): Opens the open tabs menu when pressed -->
   <string name="open_tabs_menu">පටිති වට්ටෝරුව අරින්න</string>
-  <!-- Open tabs menu item to save tabs to collection -->
-  <string name="tabs_menu_save_to_collection1">එකතුව වෙත පටිති සුරකින්න</string>
   <!-- Text for the menu button to delete a collection -->
   <string name="collection_delete">එකතුව මකන්න</string>
   <!-- Text for the menu button to rename a collection -->
@@ -1220,29 +1212,6 @@
   <!-- Text shown in the notification that pops up to remind the user that a private browsing session is active for Android 14+ -->
   <string name="notification_erase_title_android_14">පෞද්. පටිති වසන්නද?</string>
   <string name="notification_erase_text_android_14">පෞද්. පටිති වැසීමට දැනුම්දීම මත තට්ටු හෝ තල්ලු කරන්න.</string>
-  <!-- Name of the marketing notification channel. Displayed in the "App notifications" system settings for the app -->
-  <string name="notification_marketing_channel_name">අළෙවිකරණය</string>
-  <!--
-    Title shown in the notification that pops up to remind the user to set fenix as default browser.
-    The app name is in the text, due to limitations with localizing Nimbus experiments
-  -->
-  <string name="nimbus_notification_default_browser_title" tools:ignore="BrandUsage,UnusedResources">ෆයර්ෆොක්ස් වේගවත් හා පෞද්ගලිකයි</string>
-  <!--
-    Text shown in the notification that pops up to remind the user to set fenix as default browser.
-    The app name is in the text, due to limitations with localizing Nimbus experiments
-  -->
-  <string name="nimbus_notification_default_browser_text" tools:ignore="BrandUsage,UnusedResources">ෆයර්ෆොක්ස් පෙරනිමි අතිරික්සුව කරන්න</string>
-  <!--
-    Survey
-
-    Text shown in the fullscreen message that pops up to ask user to take a short survey.
-    The app name is in the text, due to limitations with localizing Nimbus experiments
-  -->
-  <string name="nimbus_survey_message_text" tools:ignore="BrandUsage">කෙටි සමීක්‍ෂණයෙන් ෆයර්ෆොක්ස් දියුණු කිරීමට උදව් කරන්න.</string>
-  <!-- Preference for taking the short survey. -->
-  <string name="preferences_take_survey">සමීක්‍ෂණය ගන්න</string>
-  <!-- Preference for not taking the short survey. -->
-  <string name="preferences_not_take_survey">එපා, ස්තුතියි</string>
   <!--
     Snackbar
 
@@ -1791,10 +1760,6 @@
     the certificate authority that verified the ticket
   -->
   <string name="certificate_info_verified_by">සත්‍යාපනය: %1$s</string>
-  <!-- Positive action of a dialog asking to delete -->
-  <string name="dialog_delete_positive">මකන්න</string>
-  <!-- Negative action of a dialog asking to delete login -->
-  <string name="dialog_delete_negative">අවලංගු</string>
   <!-- The page title for editing a saved password. -->
   <string name="edit_2">මුරපදය සංස්කරණය</string>
   <!-- The page title for adding new password. -->
@@ -1893,14 +1858,6 @@
   <string name="google_search_engine_suggestion_header">ගූගල් සෙවුම</string>
   <!-- Title for search suggestions when the default search suggestion engine is anything other than Google. %s is default search engine name. -->
   <string name="other_default_search_engine_suggestion_header">%s සෙවුම</string>
-  <!--
-    Default browser experiment
-
-    Default browser card title
-  -->
-  <string name="default_browser_experiment_card_title">පෙරනිමි අතිරික්සුව මාරු කරන්න</string>
-  <!-- Default browser card text -->
-  <string name="default_browser_experiment_card_text" tools:ignore="BrandUsage">ෆයර්ෆොක්ස් අතිරික්සුවේ ස්වයංක්‍රීයව විවෘත වීමට පණිවිඩ, වි-තැපැල් සහ අඩවිවල සබැඳි සකසන්න.</string>
   <!-- Content description radio buttons with a link to more information -->
   <string name="radio_preference_info_content_description">වැඩි විස්තර සඳහා ඔබන්න</string>
   <!-- Content description for the action bar "up" button -->
@@ -2086,32 +2043,6 @@
   <string name="debug_drawer_tab_tools_tab_creation_tool_button_text_inactive">අක්‍රිය පටිති වෙත දමන්න</string>
   <!-- The button text to add tabs to the private tab group in the tab creation tool. -->
   <string name="debug_drawer_tab_tools_tab_creation_tool_button_text_private">පෞද්. පටිති වෙත දමන්න</string>
-  <!-- The continue button label -->
-  <string name="micro_survey_continue_button_label" tools:ignore="UnusedResources">ඉදිරියට</string>
-  <!--
-    Survey view
-
-    The survey header
-  -->
-  <string name="micro_survey_survey_header_2">කරුණාකර සමීක්ෂණය සම්පූර්ණ කරන්න</string>
-  <!-- The privacy notice link -->
-  <string name="micro_survey_privacy_notice_2">රහස්‍යතා දැන්වීම</string>
-  <!-- The submit button label text -->
-  <string name="micro_survey_submit_button_label">යොමන්න</string>
-  <!-- The survey completion confirmation text -->
-  <string name="micro_survey_feedback_confirmation">ඔබගේ ප්‍රතිපෝෂණයට ස්තූතියි!</string>
-  <!--
-    Accessibility
-
-    Content description for the survey application icon. Note: The word "Firefox" should NOT be translated.
-  -->
-  <string name="microsurvey_app_icon_content_description" tools:ignore="BrandUsage">ෆයර්ෆොක්ස් ලාංඡනය</string>
-  <!-- Content description for the survey feature icon. -->
-  <string name="microsurvey_feature_icon_content_description">සමීක්ෂණ විශේෂාංගයේ නිරූපකය</string>
-  <!-- Content description (not visible, for screen readers etc.) for closing microsurvey bottom sheet. -->
-  <string name="microsurvey_close_handle_content_description">සමීක්ෂණය වසන්න</string>
-  <!-- Content description for "X" button that is closing microsurvey. -->
-  <string name="microsurvey_close_button_content_description">වසන්න</string>
   <!--
     Debug drawer logins
 

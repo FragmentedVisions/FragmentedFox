@@ -13,8 +13,6 @@ import mozilla.components.concept.sync.DeviceType
 import mozilla.components.feature.tab.collections.TabCollection
 import mozilla.components.feature.top.sites.TopSite
 import mozilla.components.service.fxa.manager.FxaAccountManager
-import mozilla.components.service.nimbus.messaging.Message
-import mozilla.components.service.nimbus.messaging.MessageData
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertTrue
@@ -25,7 +23,6 @@ import org.mozilla.fenix.R
 import org.mozilla.fenix.browser.browsingmode.BrowsingMode
 import org.mozilla.fenix.browser.browsingmode.BrowsingModeManager
 import org.mozilla.fenix.components.appstate.AppAction
-import org.mozilla.fenix.components.appstate.AppAction.MessagingAction.UpdateMessageToShow
 import org.mozilla.fenix.components.appstate.AppState
 import org.mozilla.fenix.components.appstate.filterOut
 import org.mozilla.fenix.components.appstate.setup.checklist.ChecklistItem
@@ -38,7 +35,6 @@ import org.mozilla.fenix.home.recenttabs.RecentTab
 import org.mozilla.fenix.home.recentvisits.RecentlyVisitedItem
 import org.mozilla.fenix.home.recentvisits.RecentlyVisitedItem.RecentHistoryGroup
 import org.mozilla.fenix.home.recentvisits.RecentlyVisitedItem.RecentHistoryHighlight
-import org.mozilla.fenix.messaging.FenixMessageSurfaceId
 import org.mozilla.fenix.onboarding.FenixOnboarding
 import mozilla.components.ui.icons.R as iconsR
 
@@ -97,25 +93,6 @@ class AppStoreTest {
         appStore.dispatch(AppAction.BrowsingModeManagerModeChanged(BrowsingMode.Normal))
         assertEquals(BrowsingMode.Normal, appStore.state.mode)
     }
-
-    @Test
-    fun `GIVEN a new value for messageToShow WHEN NimbusMessageChange is called THEN update the current value`() =
-        runTest {
-            assertTrue(appStore.state.messaging.messageToShow.isEmpty())
-
-            val message = Message(
-                "message",
-                MessageData(surface = FenixMessageSurfaceId.HOMESCREEN),
-                "action",
-                mockk(),
-                emptyList(),
-                emptyList(),
-                mockk(),
-            )
-            appStore.dispatch(UpdateMessageToShow(message))
-
-            assertFalse(appStore.state.messaging.messageToShow.isEmpty())
-        }
 
     @Test
     fun `Test changing the collections in AppStore`() = runTest {

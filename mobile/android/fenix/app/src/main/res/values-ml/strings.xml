@@ -263,8 +263,6 @@
   <string name="browser_menu_syncing_paused_caption">സമന്വയിപ്പിക്കൽ താൽക്കാലികമായി നിർത്തി</string>
   <!-- Browser menu caption label for an authenticated user -->
   <string name="browser_menu_signed_in_caption">താങ്ങൾ എന്തിന്റെ കരുതൽപ്പകൎപ്പു് എടുക്കാൻ പോവുന്നു അല്ലെങ്കിൽ സമന്വയിപ്പിക്കാൻ പോവുന്നുയെന്നു കൈകാര്യം ചെയ്യുക</string>
-  <!-- Browser menu label that creates a private tab -->
-  <string name="browser_menu_new_private_tab">പുതിയ സ്വകാര്യ ടാബ്</string>
   <!-- Browser menu label that navigates to the Password screen -->
   <string name="browser_menu_passwords">ഒളിവാക്കുകൾ</string>
   <!-- Content description (not visible, for screen readers etc.) for the handle used to drag the main menu at the bottom of the screen. -->
@@ -436,18 +434,6 @@
   <string name="onboarding_preferences_dialog_positive_button">ചെയ്തു</string>
   <!-- Terms of service onboarding title card label. 'Firefox' intentionally hardcoded here -->
   <string name="onboarding_welcome_to_firefox" tools:ignore="BrandUsage">ഫയര്‍ഫോക്സിലേക്കു് സ്വാഗതം</string>
-  <!-- Line one of the terms of service onboarding page. %1$s is replaced by an active link, using onboarding_term_of_service_line_one_link_text_2 as text (“Firefox Terms of Use”). -->
-  <string name="onboarding_term_of_service_line_one_2">തുടരുന്നതിലൂടെ, താങ്ങൾ %1$s അംഗീകരിക്കുന്നു.</string>
-  <!-- Used as text for the link in onboarding_term_of_service_line_one_2. -->
-  <string name="onboarding_term_of_service_line_one_link_text_2" tools:ignore="BrandUsage">Firefox ഉപയോഗനിബന്ധനകൾ</string>
-  <!-- Line two of the terms of service onboarding page. 'Firefox' is intentionally hardcoded. %1$s is replaced by an active link, using onboarding_term_of_service_line_two_link_text as text (“Privacy Notice”). -->
-  <string name="onboarding_term_of_service_line_two_2" tools:ignore="BrandUsage">താങ്ങളുടെ സ്വകാര്യതക്കു് ഫയർഫോക്സു് ശ്രദ്ധിക്കാരുണ്ടു്. ഞങ്ങളുടെ %1$s-ൽ കൂടുതൽ അറിയുക.</string>
-  <!-- Used as text for the link in onboarding_term_of_service_line_two. -->
-  <string name="onboarding_term_of_service_line_two_link_text">സ്വകാര്യതാ അറിയിപ്പ്</string>
-  <!-- Line three of the terms of service onboarding page. 'Firefox' and 'Mozilla' are intentionally hardcoded. %1$s is replaced by an active link using onboarding_term_of_service_line_three_link_text as text (“Manage”). -->
-  <string name="onboarding_term_of_service_line_three" tools:ignore="BrandUsage">അന്വേഷിയന്ത്രത്തിനെ മെച്ചപ്പെുടത്താൻ ഫയർഫോക്സു് മോസില്ലക്കു് നിദാനനിർണയനീയും ഇടപാടുനീയ ദത്ത അയയ്ക്കാരുണ്ടു്. %1$s</string>
-  <!-- Used as text for the link in onboarding_term_of_service_line_three. -->
-  <string name="onboarding_term_of_service_line_three_link_text">കൈകാര്യം ചെയ്യുക</string>
   <!--
     Terms of use (ToU) first body text. %1$s is replaced by an active link,
     using onboarding_redesign_tou_body_one_link_text as text (“Firefox Terms of Use”).
@@ -458,8 +444,6 @@
   <!-- Marketing onboarding page title. 'Firefox' is intentionally hardcoded. -->
   <!-- Marketing onboarding page clickable link text to "learn more" on how data is used. -->
   <!-- Marketing onboarding page button label. Button to confirm choice and start browsing. -->
-  <!-- Sync onboarding redesign positive button text. -->
-  <string name="onboarding_redesign_sync_positive_button" tools:ignore="UnusedResources">സമന്വയിപ്പിക്കാൻ തുടങ്ങുക</string>
   <!-- Marketing onboarding page title variant. “One last thing” refers to the final step or action in the onboarding process that we’re asking users to take before they can start using the browser. -->
   <!-- Marketing onboarding page button label variant. Button to confirm choice and start browsing. -->
   <!-- ==== Project "Nova" onboarding strings ==== -->
@@ -1291,8 +1275,6 @@
   <string name="close_tab_title">%s ടാബ് അടയ്ക്കുക</string>
   <!-- Content description (not visible, for screen readers etc.): Opens the open tabs menu when pressed -->
   <string name="open_tabs_menu">ടാബുകളുടെ മെനു തുറക്കുക</string>
-  <!-- Open tabs menu item to save tabs to collection -->
-  <string name="tabs_menu_save_to_collection1">ശേഖരത്തിലേക്ക് ടാബുകൾ സംരക്ഷിക്കുക</string>
   <!-- Text for the menu button to delete a collection -->
   <string name="collection_delete">ശേഖരം നീക്കം ചെയ്യുക</string>
   <!-- Text for the menu button to rename a collection -->
@@ -2043,29 +2025,6 @@
   <!-- Text shown in the notification that pops up to remind the user that a private browsing session is active for Android 14+ -->
   <string name="notification_erase_title_android_14">സ്വകാര്യ ടാബുകൾ അടയ്ക്കട്ടെ?</string>
   <string name="notification_erase_text_android_14">സ്വകാര്യ ടാബുകൾ അടയ്ക്കുന്നതിന് ഈ അറിയിപ്പിൽ അമർത്തുക അല്ലെങ്കിൽ സ്വൈപ്പ് ചെയ്യുക.</string>
-  <!-- Name of the marketing notification channel. Displayed in the "App notifications" system settings for the app -->
-  <string name="notification_marketing_channel_name">വില്പണം</string>
-  <!--
-    Title shown in the notification that pops up to remind the user to set fenix as default browser.
-    The app name is in the text, due to limitations with localizing Nimbus experiments
-  -->
-  <string name="nimbus_notification_default_browser_title" tools:ignore="BrandUsage,UnusedResources">ഫയർഫോക്സ് അതിവേഗവും സ്വകാര്യവുമാണു്</string>
-  <!--
-    Text shown in the notification that pops up to remind the user to set fenix as default browser.
-    The app name is in the text, due to limitations with localizing Nimbus experiments
-  -->
-  <string name="nimbus_notification_default_browser_text" tools:ignore="BrandUsage,UnusedResources">ഫയർഫോക്സിനെ താങ്ങളുടെ സ്ഥിര അന്വേഷിയന്ത്രം ആക്കുക</string>
-  <!--
-    Survey
-
-    Text shown in the fullscreen message that pops up to ask user to take a short survey.
-    The app name is in the text, due to limitations with localizing Nimbus experiments
-  -->
-  <string name="nimbus_survey_message_text" tools:ignore="BrandUsage">ഒരു ചെറിയ കണക്കെടുപ്പിൽ പങ്കെടുത്തിട്ടു് ഫയൎഫോക്സിനെ മികച്ചതാക്കാൻ സഹായിക്കുക.</string>
-  <!-- Preference for taking the short survey. -->
-  <string name="preferences_take_survey">നിരീക്ഷണത്തിൽ പങ്കെടുക്കുക</string>
-  <!-- Preference for not taking the short survey. -->
-  <string name="preferences_not_take_survey">വേണ്ട, നന്ദി</string>
   <!--
     Snackbar
 
@@ -2832,10 +2791,6 @@
   <string name="certificate_info_verified_by">പരിശോധിച്ചത്: %1$s</string>
   <!-- Message in delete confirmation dialog for password -->
   <string name="login_deletion_confirmation_2">താങ്ങൾക്കു് ഉറപ്പായിട്ടു് ഈ ഒളിവാക്കു് മായ്ക്കണോ?</string>
-  <!-- Positive action of a dialog asking to delete -->
-  <string name="dialog_delete_positive">നീക്കം ചെയ്യുക</string>
-  <!-- Negative action of a dialog asking to delete login -->
-  <string name="dialog_delete_negative">റദ്ദാക്കുക</string>
   <!-- The page title for editing a saved password. -->
   <string name="edit_2">ഒളിവാക്കു് തിരുത്തുക</string>
   <!-- The page title for adding new password. -->
@@ -2962,14 +2917,6 @@
   <string name="other_default_search_engine_suggestion_header">%s തിരച്ചിൽ</string>
   <!-- Title for recent search suggestions. -->
   <string name="recent_searches_header">അടുത്തിടെ തിരഞ്ഞതെല്ലാം</string>
-  <!--
-    Default browser experiment
-
-    Default browser card title
-  -->
-  <string name="default_browser_experiment_card_title">താങ്ങളുടെ തനുതായ അന്വേഷിയന്ത്രം മാറുക</string>
-  <!-- Default browser card text -->
-  <string name="default_browser_experiment_card_text" tools:ignore="BrandUsage">വെബിടങ്ങളിലും ഇതപാലുകളിലും സന്ദേശങ്ങളിലും നിന്നുള്ള കണ്ണികൾ തന്നെതാനെ ഫയൎഫോക്സിൽ തുറക്കണമെന്നാക്കി വയ്ക്കുക.</string>
   <!-- Content description radio buttons with a link to more information -->
   <string name="radio_preference_info_content_description">കൂടുതൽ വിവരങ്ങൾക്ക് അമർത്തുക</string>
   <!-- Content description for the action bar "up" button -->
@@ -3413,48 +3360,6 @@
   <string name="debug_drawer_tab_tools_tab_creation_tool_button_text_inactive">നിഷ്ക്രിയ ടാബുകളിലേക്ക് ചേർക്കുക</string>
   <!-- The button text to add tabs to the private tab group in the tab creation tool. -->
   <string name="debug_drawer_tab_tools_tab_creation_tool_button_text_private">സ്വകാര്യ ടാബുകളിലേക്കു് ചേർക്കുക</string>
-  <!-- The continue button label -->
-  <string name="micro_survey_continue_button_label" tools:ignore="UnusedResources">തുടരുക</string>
-  <!--
-    Survey view
-
-    The survey header
-  -->
-  <string name="micro_survey_survey_header_2">ദയവായി സൎവ്വേ പൂർത്തിയാക്കുക</string>
-  <!-- The privacy notice link -->
-  <string name="micro_survey_privacy_notice_2">സ്വകാര്യതാ അറിയിപ്പ്</string>
-  <!-- The submit button label text -->
-  <string name="micro_survey_submit_button_label">സമർപ്പിക്കുക</string>
-  <!-- The survey completion confirmation text -->
-  <string name="micro_survey_feedback_confirmation">താങ്കളുടെ പ്രതികരണത്തിനു് നന്ദി</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_1" tools:ignore="UnusedResources">വളരെ സന്തുഷ്ടമായി</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_2" tools:ignore="UnusedResources">സന്തുഷ്ടമായി</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_3" tools:ignore="UnusedResources">അത്രതൊന്നും പറയാൻ ഇല്ല</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_4" tools:ignore="UnusedResources">സന്തുഷ്ടമായില്ല</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_5" tools:ignore="UnusedResources">തീരെ സന്തുഷ്ടമായില്ല</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_6" tools:ignore="UnusedResources">ഞാൻ ഉപയോഗിക്കാരില്ല</string>
-  <!-- Text shown in prompt for printing microsurvey. "sec" It's an abbreviation for "second". Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_prompt_printing_title" tools:ignore="BrandUsage,UnusedResources">ഫയർഫോക്സിൽ അച്ചടിപ്പു് മെച്ചപെടുത്താൻ സഹായിക്കുക. ഇതു് ചെയ്യാൻ വെറും ഒരു നിമിഷം എടുക്കും</string>
-  <!-- Text shown in the survey title for printing microsurvey. Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_survey_printing_title" tools:ignore="BrandUsage,UnusedResources">ഫയർഫോക്സിൽ അച്ചടിപ്പുക്കൂടെ താങ്ങൾക്കു് എത്രത്തോളം സംതൃപ്തിയുണ്ട്?</string>
-  <!--
-    Accessibility
-
-    Content description for the survey application icon. Note: The word "Firefox" should NOT be translated.
-  -->
-  <string name="microsurvey_app_icon_content_description" tools:ignore="BrandUsage">ഫയർഫോക്സു് അടയാളം</string>
-  <!-- Content description for the survey feature icon. -->
-  <string name="microsurvey_feature_icon_content_description">കണക്കെടുപ്പു് സവിശേഷത അടയാളം</string>
-  <!-- Content description (not visible, for screen readers etc.) for closing microsurvey bottom sheet. -->
-  <string name="microsurvey_close_handle_content_description">കണക്കെടുപ്പു് അടയ്ക്കുക</string>
-  <!-- Content description for "X" button that is closing microsurvey. -->
-  <string name="microsurvey_close_button_content_description">അടയ്ക്കുക</string>
   <!-- The title of the autofill tab in the Debug Drawer. -->
   <string name="debug_drawer_autofill_title">താനെ നിറയ്ക്കൽ കരുകൾ</string>
   <!--

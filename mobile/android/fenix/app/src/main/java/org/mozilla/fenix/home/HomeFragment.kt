@@ -14,21 +14,18 @@ import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.annotation.VisibleForTesting
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.displayCutoutPadding
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.imePadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.systemBarsPadding
-import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
-import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
@@ -61,7 +58,6 @@ import mozilla.components.feature.tab.collections.TabCollection
 import mozilla.components.feature.top.sites.presenter.DefaultTopSitesPresenter
 import mozilla.components.lib.state.ext.flow
 import mozilla.components.lib.state.ext.observeAsComposableState
-import mozilla.components.service.nimbus.messaging.Message
 import mozilla.components.support.base.feature.ViewBoundFeatureWrapper
 import mozilla.components.support.ktx.android.view.toScope
 import mozilla.components.support.utils.BuildManufacturerChecker
@@ -81,7 +77,6 @@ import org.mozilla.fenix.browser.BrowserFragmentDirections
 import org.mozilla.fenix.browser.browsingmode.BrowsingMode
 import org.mozilla.fenix.browser.tabstrip.TabStrip
 import org.mozilla.fenix.browser.tabstrip.TabStripColors
-import org.mozilla.fenix.components.Components
 import org.mozilla.fenix.components.HomepageThumbnailIntegration
 import org.mozilla.fenix.components.LensFeature
 import org.mozilla.fenix.components.QrScanFenixFeature
@@ -89,8 +84,6 @@ import org.mozilla.fenix.components.TabCollectionStorage
 import org.mozilla.fenix.components.VoiceSearchFeature
 import org.mozilla.fenix.components.accounts.FenixFxAEntryPoint
 import org.mozilla.fenix.components.appstate.AppAction
-import org.mozilla.fenix.components.appstate.AppAction.MessagingAction
-import org.mozilla.fenix.components.appstate.AppAction.MessagingAction.MicrosurveyAction
 import org.mozilla.fenix.components.appstate.AppState
 import org.mozilla.fenix.components.components
 import org.mozilla.fenix.components.metrics.installSourcePackage
@@ -133,11 +126,6 @@ import org.mozilla.fenix.home.topsites.controller.DefaultTopSiteController
 import org.mozilla.fenix.home.topsites.getTopSitesConfig
 import org.mozilla.fenix.home.ui.Homepage
 import org.mozilla.fenix.home.ui.WallpaperBackground
-import org.mozilla.fenix.messaging.DefaultMessageController
-import org.mozilla.fenix.messaging.FenixMessageSurfaceId
-import org.mozilla.fenix.messaging.MessagingFeature
-import org.mozilla.fenix.microsurvey.ui.MicrosurveyRequestPrompt
-import org.mozilla.fenix.microsurvey.ui.ext.toMicrosurveyUIData
 import org.mozilla.fenix.nimbus.FxNimbus
 import org.mozilla.fenix.onboarding.OnboardingFragmentDirections
 import org.mozilla.fenix.onboarding.OnboardingReason
@@ -229,12 +217,6 @@ class HomeFragment : Fragment() {
 
     private val toolbarView: FenixHomeToolbar
         get() = nullableToolbarView!!
-
-    @VisibleForTesting
-    internal val messagingFeatureHomescreen = ViewBoundFeatureWrapper<MessagingFeature>()
-
-    @VisibleForTesting
-    internal val messagingFeatureMicrosurvey = ViewBoundFeatureWrapper<MessagingFeature>()
 
     private val recentTabsListFeature = ViewBoundFeatureWrapper<RecentTabsListFeature>()
     private val recentSyncedTabFeature = ViewBoundFeatureWrapper<RecentSyncedTabFeature>()
@@ -439,37 +421,6 @@ class HomeFragment : Fragment() {
         browsingModeManager = activity.browsingModeManager,
     )
 
-    private fun initMessagingFeature(view: View) {
-        if (requireComponents.settings.isExperimentationEnabled) {
-            messagingFeatureHomescreen.set(
-                feature = MessagingFeature(
-                    appStore = requireComponents.appStore,
-                    surface = FenixMessageSurfaceId.HOMESCREEN,
-                    runWhenReadyQueue = requireComponents.performance.visualCompletenessQueue,
-                ),
-                owner = viewLifecycleOwner,
-                view = view,
-            )
-
-            initializeMicrosurveyFeature(requireComponents.settings.microsurveyFeatureEnabled, view)
-        }
-    }
-
-    @VisibleForTesting
-    internal fun initializeMicrosurveyFeature(isMicrosurveyEnabled: Boolean, view: View) {
-        if (isMicrosurveyEnabled) {
-            messagingFeatureMicrosurvey.set(
-                feature = MessagingFeature(
-                    appStore = requireComponents.appStore,
-                    surface = FenixMessageSurfaceId.MICROSURVEY,
-                    runWhenReadyQueue = requireComponents.performance.visualCompletenessQueue,
-                ),
-                owner = viewLifecycleOwner,
-                view = view,
-            )
-        }
-    }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         // DO NOT ADD ANYTHING ABOVE THIS getProfilerTime CALL!
         val profilerStartTime = requireComponents.core.engine.profiler?.getProfilerTime()
@@ -495,7 +446,6 @@ class HomeFragment : Fragment() {
         voiceSearchFeature = VoiceSearchFeature.register(this, voiceSearchLauncher)
         lensFeature = LensFeature.register(this, lensLauncher, lensCameraPermissionLauncher)
 
-        initMessagingFeature(view = view)
         initTopSitesBinding(view = view)
         initRecentTabsListFeature(view = view)
         initPrivacyReportFeature(view = view)
@@ -555,22 +505,6 @@ class HomeFragment : Fragment() {
                 )
                 val isToolbarAtTop = settings.toolbarPosition == ToolbarPosition.TOP
 
-                val isMicrosurveyDismissed by activity.isMicrosurveyPromptDismissed
-                val microsurveyVisible by remember(isMicrosurveyDismissed) {
-                    derivedStateOf {
-                        settings.microsurveyFeatureEnabled &&
-                            !appState.value.mode.isPrivate &&
-                            !isMicrosurveyDismissed &&
-                            appState.value.messaging.messageToShow.containsKey(
-                                FenixMessageSurfaceId.MICROSURVEY,
-                            )
-                    }
-                }
-
-                LaunchedEffect(microsurveyVisible) {
-                    settings.shouldShowMicrosurveyPrompt = microsurveyVisible
-                }
-
                 Box(modifier = Modifier.fillMaxSize().systemBarsPadding().displayCutoutPadding()) {
                     if (!appState.value.mode.isPrivate) {
                         WallpaperBackground(
@@ -612,13 +546,6 @@ class HomeFragment : Fragment() {
                             privacyNoticeBannerState = privacyNoticeBannerState.value,
                             settings = settings,
                             innerPadding = innerPadding,
-                            microsurveyVisible = microsurveyVisible,
-                            microsurveyMessage = appState.value.messaging.messageToShow[
-                                FenixMessageSurfaceId.MICROSURVEY,
-                            ],
-                            onMicrosurveyDismiss = {
-                                activity.isMicrosurveyPromptDismissed.value = true
-                            },
                         )
                     }
                 }
@@ -636,9 +563,6 @@ class HomeFragment : Fragment() {
         privacyNoticeBannerState: PrivacyNoticeBannerState,
         settings: Settings,
         innerPadding: PaddingValues,
-        microsurveyVisible: Boolean,
-        microsurveyMessage: Message?,
-        onMicrosurveyDismiss: () -> Unit,
     ) {
         Box(
             modifier = Modifier
@@ -658,50 +582,12 @@ class HomeFragment : Fragment() {
                 },
             )
 
-            if (microsurveyVisible) {
-                MicrosurveyPrompt(
-                    message = microsurveyMessage,
-                    modifier = Modifier.align(Alignment.BottomCenter),
-                    onDismiss = onMicrosurveyDismiss,
-                )
-            }
-
             SnackbarHost(
                 hostState = snackbarHostState,
                 modifier = Modifier.align(Alignment.BottomCenter),
             ) { snackbarData ->
                 Snackbar(snackbarData = snackbarData)
             }
-        }
-    }
-
-    @Composable
-    private fun MicrosurveyPrompt(
-        message: Message?,
-        modifier: Modifier = Modifier,
-        onDismiss: () -> Unit,
-    ) {
-        val microsurvey = remember(message?.id) { message?.toMicrosurveyUIData() } ?: return
-        val appStore = requireComponents.appStore
-        val navController = findNavController()
-
-        Column(modifier = modifier) {
-            HorizontalDivider()
-
-            MicrosurveyRequestPrompt(
-                microsurvey = microsurvey,
-                onStartSurveyClicked = {
-                    appStore.dispatch(MicrosurveyAction.Started(microsurvey.id))
-                    navController.nav(
-                        R.id.homeFragment,
-                        HomeFragmentDirections.actionGlobalMicrosurveyDialog(microsurvey.id),
-                    )
-                },
-                onCloseButtonClicked = {
-                    appStore.dispatch(MicrosurveyAction.Dismissed(microsurvey.id))
-                    onDismiss()
-                },
-            )
         }
     }
 
@@ -876,16 +762,11 @@ class HomeFragment : Fragment() {
 
         DefaultExtensionsPrompt(requireContext(), components.settings, components.addonManager).showIfNeeded()
 
-        evaluateMessagesForMicrosurvey(components)
-
         BiometricAuthenticationManager.biometricAuthenticationNeededInfo.shouldShowAuthenticationPrompt =
             true
         BiometricAuthenticationManager.biometricAuthenticationNeededInfo.authenticationStatus =
             AuthenticationStatus.NOT_AUTHENTICATED
     }
-
-    private fun evaluateMessagesForMicrosurvey(components: Components) =
-        components.appStore.dispatch(MessagingAction.Evaluate(FenixMessageSurfaceId.MICROSURVEY))
 
     override fun onPause() {
         super.onPause()
@@ -1199,13 +1080,6 @@ class HomeFragment : Fragment() {
             activityRef = WeakReference(activity),
             settings = requireComponents.settings,
             engine = requireComponents.core.engine,
-            messageController = DefaultMessageController(
-                appStore = requireComponents.appStore,
-                messagingController = requireComponents.nimbus.messaging,
-                processIntent = { intent ->
-                    intent?.let { startActivity(it) }
-                },
-            ),
             store = store,
             tabCollectionStorage = requireComponents.core.tabCollectionStorage,
             addTabUseCase = requireComponents.useCases.tabsUseCases.addTab,

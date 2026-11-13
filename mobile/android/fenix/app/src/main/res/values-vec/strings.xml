@@ -743,8 +743,6 @@
     the certificate authority that verified the ticket
   -->
   <string name="certificate_info_verified_by">Verificà da: %1$s</string>
-  <!-- Positive action of a dialog asking to delete -->
-  <string name="dialog_delete_positive">Rimovi</string>
   <!-- Translations feature -->
 
   <!-- TextField Design System Component -->

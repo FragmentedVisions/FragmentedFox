@@ -240,8 +240,6 @@
   <string name="browser_menu_sign_back_in_to_sync">ለማመሳሰል ተመልሰው ይግቡ</string>
   <!-- Browser menu caption label for the "Sign back in to sync" browser menu item described in `browser_menu_sign_back_in_to_sync` when there is an error in syncing -->
   <string name="browser_menu_syncing_paused_caption">ማመሳሰል ባለበት ቆሟል</string>
-  <!-- Browser menu label that creates a private tab -->
-  <string name="browser_menu_new_private_tab">አዲስ የግል ትር</string>
   <!-- Browser menu label that navigates to the Password screen -->
   <string name="browser_menu_passwords">የይለፍ ቃሎች</string>
   <!-- Content description (not visible, for screen readers etc.) for bottom sheet handlebar custom tab menu. -->
@@ -352,18 +350,6 @@
   <string name="onboarding_preferences_dialog_positive_button">ተከናውኗል</string>
   <!-- Terms of service onboarding title card label. 'Firefox' intentionally hardcoded here -->
   <string name="onboarding_welcome_to_firefox" tools:ignore="BrandUsage">ወደ Firefox እንኳን በደህና መጡ</string>
-  <!-- Line one of the terms of service onboarding page. %1$s is replaced by an active link, using onboarding_term_of_service_line_one_link_text_2 as text (“Firefox Terms of Use”). -->
-  <string name="onboarding_term_of_service_line_one_2">በመቀጠል፣ በ%1$s ተስማምተዋል።</string>
-  <!-- Used as text for the link in onboarding_term_of_service_line_one_2. -->
-  <string name="onboarding_term_of_service_line_one_link_text_2" tools:ignore="BrandUsage">የፋየርፎክስ የአጠቃቀም ውል</string>
-  <!-- Line two of the terms of service onboarding page. 'Firefox' is intentionally hardcoded. %1$s is replaced by an active link, using onboarding_term_of_service_line_two_link_text as text (“Privacy Notice”). -->
-  <string name="onboarding_term_of_service_line_two_2" tools:ignore="BrandUsage">ፋየርፎክስ የእርስዎን ግላዊነት ያስባል። በእኛ %1$s ውስጥ የበለጠ ይወቁ።</string>
-  <!-- Used as text for the link in onboarding_term_of_service_line_two. -->
-  <string name="onboarding_term_of_service_line_two_link_text">የግላዊነት ማስታወቂያ</string>
-  <!-- Line three of the terms of service onboarding page. 'Firefox' and 'Mozilla' are intentionally hardcoded. %1$s is replaced by an active link using onboarding_term_of_service_line_three_link_text as text (“Manage”). -->
-  <string name="onboarding_term_of_service_line_three" tools:ignore="BrandUsage">አሳሹን ለማሻሻል እንዲረዳ Firefox የምርመራ እና የመስተጋብር ውሂብ ወደ ሞዚላ ይልካል። %1$s</string>
-  <!-- Used as text for the link in onboarding_term_of_service_line_three. -->
-  <string name="onboarding_term_of_service_line_three_link_text">አስተዳድር</string>
   <!-- Marketing onboarding page title variant. “One last thing” refers to the final step or action in the onboarding process that we’re asking users to take before they can start using the browser. -->
   <!-- Marketing onboarding page body variant. 'Firefox' is intentionally hardcoded. -->
   <!-- Marketing onboarding page button label variant. Button to confirm choice and start browsing. -->
@@ -1052,8 +1038,6 @@
   <string name="close_tab_title">%s ትርን ዝጋ</string>
   <!-- Content description (not visible, for screen readers etc.): Opens the open tabs menu when pressed -->
   <string name="open_tabs_menu">የትሮች ምናሌን ይክፈቱ</string>
-  <!-- Open tabs menu item to save tabs to collection -->
-  <string name="tabs_menu_save_to_collection1">ትሮችን ወደ ስብስብ አስቀምጥ</string>
   <!-- Text for the menu button to delete a collection -->
   <string name="collection_delete">ስብስብን ሰርዝ</string>
   <!-- Text for the menu button to rename a collection -->
@@ -1607,29 +1591,6 @@
   <!-- Text shown in the notification that pops up to remind the user that a private browsing session is active for Android 14+ -->
   <string name="notification_erase_title_android_14">የግል ትሮች ይዘጉ?</string>
   <string name="notification_erase_text_android_14">የግል ትሮችን ለመዝጋት ይህን ማሳወቂያ ነካ ያድርጉ ወይም ያንሸራትቱ።</string>
-  <!-- Name of the marketing notification channel. Displayed in the "App notifications" system settings for the app -->
-  <string name="notification_marketing_channel_name">ግብይት</string>
-  <!--
-    Title shown in the notification that pops up to remind the user to set fenix as default browser.
-    The app name is in the text, due to limitations with localizing Nimbus experiments
-  -->
-  <string name="nimbus_notification_default_browser_title" tools:ignore="BrandUsage,UnusedResources">Firefox ፈጣን እና ግላዊ ነው</string>
-  <!--
-    Text shown in the notification that pops up to remind the user to set fenix as default browser.
-    The app name is in the text, due to limitations with localizing Nimbus experiments
-  -->
-  <string name="nimbus_notification_default_browser_text" tools:ignore="BrandUsage,UnusedResources">Firefoxን ነባሪ አሳሽዎ ያድርጉ</string>
-  <!--
-    Survey
-
-    Text shown in the fullscreen message that pops up to ask user to take a short survey.
-    The app name is in the text, due to limitations with localizing Nimbus experiments
-  -->
-  <string name="nimbus_survey_message_text" tools:ignore="BrandUsage">እባኮትን አጭር ዳሰሳ በማድረግ ፋየርፎክስን የተሻለ ለማድረግ ያግዙ።</string>
-  <!-- Preference for taking the short survey. -->
-  <string name="preferences_take_survey">በዳሰሳ ጥናት ይሳተፉ</string>
-  <!-- Preference for not taking the short survey. -->
-  <string name="preferences_not_take_survey">አይ አመሰግናለሁ</string>
   <!--
     Snackbar
 
@@ -2304,10 +2265,6 @@
   <string name="certificate_info_verified_by">አረጋጋጭ:- %1$s</string>
   <!-- Message in delete confirmation dialog for password -->
   <string name="login_deletion_confirmation_2">እርግጠኛ ነዎት ይህን የይለፍ ቃል መሰረዝ ይፈልጋሉ?</string>
-  <!-- Positive action of a dialog asking to delete -->
-  <string name="dialog_delete_positive">ሰርዝ</string>
-  <!-- Negative action of a dialog asking to delete login -->
-  <string name="dialog_delete_negative">ተወው</string>
   <!-- The page title for editing a saved password. -->
   <string name="edit_2">የይለፍ ቃል አርትዕ</string>
   <!-- The page title for adding new password. -->
@@ -2413,14 +2370,6 @@
   <string name="other_default_search_engine_suggestion_header">%s ፍለጋ</string>
   <!-- Title for recent search suggestions. -->
   <string name="recent_searches_header">የቅርብ ጊዜ ፍለጋዎች</string>
-  <!--
-    Default browser experiment
-
-    Default browser card title
-  -->
-  <string name="default_browser_experiment_card_title">ነባሪ አሳሽዎን ይቀይሩ</string>
-  <!-- Default browser card text -->
-  <string name="default_browser_experiment_card_text" tools:ignore="BrandUsage">በፋየርፎክስ ውስጥ በራስ-ሰር የሚከፈቱ ከድረ-ገፆች፣ ኢሜይሎች እና መልዕክቶች አገናኞችን ያዘጋጁ።</string>
   <!-- Content description radio buttons with a link to more information -->
   <string name="radio_preference_info_content_description">ለተጨማሪ ዝርዝሮች ጠቅ ያድርጉ</string>
   <!-- Content description for the action bar "up" button -->
@@ -2789,48 +2738,6 @@
   <string name="debug_drawer_tab_tools_tab_creation_tool_button_text_inactive">ወደ ቦዘኑ ትሮች ያክሉ</string>
   <!-- The button text to add tabs to the private tab group in the tab creation tool. -->
   <string name="debug_drawer_tab_tools_tab_creation_tool_button_text_private">ወደ የግል ትሮች ያክሉ</string>
-  <!-- The continue button label -->
-  <string name="micro_survey_continue_button_label" tools:ignore="UnusedResources">ቀጥል</string>
-  <!--
-    Survey view
-
-    The survey header
-  -->
-  <string name="micro_survey_survey_header_2">እባክዎ የዳሰሳ ጥናት ያጠናቅቁ</string>
-  <!-- The privacy notice link -->
-  <string name="micro_survey_privacy_notice_2">የግላዊነት ማስታወቂያ</string>
-  <!-- The submit button label text -->
-  <string name="micro_survey_submit_button_label">አስገባ</string>
-  <!-- The survey completion confirmation text -->
-  <string name="micro_survey_feedback_confirmation">ለአስተያየትዎ እናመሰግናለን!</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_1" tools:ignore="UnusedResources">በጣም ረክቻለሁ</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_2" tools:ignore="UnusedResources">ረክቻለሁ</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_3" tools:ignore="UnusedResources">ገለልተኛ</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_4" tools:ignore="UnusedResources">አልረካም</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_5" tools:ignore="UnusedResources">በጣም አልረካም</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_6" tools:ignore="UnusedResources">እኔ አልጠቀምበትም</string>
-  <!-- Text shown in prompt for printing microsurvey. "sec" It's an abbreviation for "second". Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_prompt_printing_title" tools:ignore="BrandUsage,UnusedResources">በFirefox ማተምን የተሻለ ለማድረግ ያግዙ። አንድ ሰከንድ ብቻ ነው የሚወስደው</string>
-  <!-- Text shown in the survey title for printing microsurvey. Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_survey_printing_title" tools:ignore="BrandUsage,UnusedResources">በFirefox ውስጥ በማተም ምን ያህል ረክተዋል?</string>
-  <!--
-    Accessibility
-
-    Content description for the survey application icon. Note: The word "Firefox" should NOT be translated.
-  -->
-  <string name="microsurvey_app_icon_content_description" tools:ignore="BrandUsage">የFirefox አርማ</string>
-  <!-- Content description for the survey feature icon. -->
-  <string name="microsurvey_feature_icon_content_description">የዳሰሳ ባህሪ አዶ</string>
-  <!-- Content description (not visible, for screen readers etc.) for closing microsurvey bottom sheet. -->
-  <string name="microsurvey_close_handle_content_description">ዳሰሳ ጥናት ዝጋ</string>
-  <!-- Content description for "X" button that is closing microsurvey. -->
-  <string name="microsurvey_close_button_content_description">ዝጋ</string>
   <!--
     Debug drawer logins
 

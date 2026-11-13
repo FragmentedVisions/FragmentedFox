@@ -2352,14 +2352,6 @@ class Settings(
             return appContext.pixelSizeFor(dimen)
         }
 
-    /**
-     * Indicates if the microsurvey feature is enabled.
-     */
-    var microsurveyFeatureEnabled by booleanPreference(
-        key = appContext.getPreferenceKey(R.string.pref_key_microsurvey_feature_enabled),
-        default = { FxNimbus.features.microsurveys.value().enabled },
-    )
-
     var aiControlsFeatureFlagEnabled by booleanPreference(
         key = appContext.getPreferenceKey(R.string.pref_key_enable_ai_controls),
         default = true,
@@ -2371,14 +2363,6 @@ class Settings(
     var importBookmarksFeatureFlagEnabled by booleanPreference(
         key = appContext.getPreferenceKey(R.string.pref_key_enable_import_bookmarks),
         default = { FxNimbus.features.importBookmarks.value().enabled },
-    )
-
-    /**
-     * Indicates if a microsurvey should be shown to the user.
-     */
-    var shouldShowMicrosurveyPrompt by booleanPreference(
-        appContext.getPreferenceKey(R.string.pref_key_should_show_microsurvey_prompt),
-        default = false,
     )
 
     /**

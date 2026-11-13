@@ -237,8 +237,6 @@
   <string name="browser_menu_sign_back_in_to_sync">Синхронлауга кире керү</string>
   <!-- Browser menu caption label for the "Sign back in to sync" browser menu item described in `browser_menu_sign_back_in_to_sync` when there is an error in syncing -->
   <string name="browser_menu_syncing_paused_caption">Синхронлау туктатылды</string>
-  <!-- Browser menu label that creates a private tab -->
-  <string name="browser_menu_new_private_tab">Яңа хосусый таб</string>
   <!-- Browser menu label that navigates to the Password screen -->
   <string name="browser_menu_passwords">Серсүзләр</string>
   <!-- Browser menu label that navigates to the edit bookmark screen for the current bookmarked page -->
@@ -321,12 +319,6 @@
   <string name="onboarding_preferences_dialog_positive_button">Әзер</string>
   <!-- Terms of service onboarding title card label. 'Firefox' intentionally hardcoded here -->
   <string name="onboarding_welcome_to_firefox" tools:ignore="BrandUsage">Firefox-ка рәхим итегез</string>
-  <!-- Used as text for the link in onboarding_term_of_service_line_one_2. -->
-  <string name="onboarding_term_of_service_line_one_link_text_2" tools:ignore="BrandUsage">Firefox куллану шартлары</string>
-  <!-- Used as text for the link in onboarding_term_of_service_line_two. -->
-  <string name="onboarding_term_of_service_line_two_link_text">Хосусыйлык аңлатмасы</string>
-  <!-- Used as text for the link in onboarding_term_of_service_line_three. -->
-  <string name="onboarding_term_of_service_line_three_link_text">Идарә итү</string>
   <!-- Used as text for the link in onboarding_redesign_tou_body_one. -->
   <!-- ==== Project "Nova" onboarding strings ==== -->
 
@@ -907,8 +899,6 @@
   <string name="close_tab_title">%s табын ябу</string>
   <!-- Content description (not visible, for screen readers etc.): Opens the open tabs menu when pressed -->
   <string name="open_tabs_menu">Ачык таблар менюсы</string>
-  <!-- Open tabs menu item to save tabs to collection -->
-  <string name="tabs_menu_save_to_collection1">Табларны җыентыкка саклау</string>
   <!-- Text for the menu button to delete a collection -->
   <string name="collection_delete">Җыентыкны бетерү</string>
   <!-- Text for the menu button to rename a collection -->
@@ -1311,29 +1301,6 @@
   <string name="notification_pbm_delete_text_2">Хосусый табларны ябу</string>
   <!-- Text shown in the notification that pops up to remind the user that a private browsing session is active for Android 14+ -->
   <string name="notification_erase_title_android_14">Хосусый таблар ябылсынмы?</string>
-  <!-- Name of the marketing notification channel. Displayed in the "App notifications" system settings for the app -->
-  <string name="notification_marketing_channel_name">Маркетинг</string>
-  <!--
-    Title shown in the notification that pops up to remind the user to set fenix as default browser.
-    The app name is in the text, due to limitations with localizing Nimbus experiments
-  -->
-  <string name="nimbus_notification_default_browser_title" tools:ignore="BrandUsage,UnusedResources">Firefox — тиз һәм хосусый</string>
-  <!--
-    Text shown in the notification that pops up to remind the user to set fenix as default browser.
-    The app name is in the text, due to limitations with localizing Nimbus experiments
-  -->
-  <string name="nimbus_notification_default_browser_text" tools:ignore="BrandUsage,UnusedResources">Firefox-ны төп браузерыгыз итү</string>
-  <!--
-    Survey
-
-    Text shown in the fullscreen message that pops up to ask user to take a short survey.
-    The app name is in the text, due to limitations with localizing Nimbus experiments
-  -->
-  <string name="nimbus_survey_message_text" tools:ignore="BrandUsage">Зинһар, Firefox-ны яхшыртырга ярдәм итү өчен бу кыска сораулыкны алыгыз.</string>
-  <!-- Preference for taking the short survey. -->
-  <string name="preferences_take_survey">Анкетада катнашу</string>
-  <!-- Preference for not taking the short survey. -->
-  <string name="preferences_not_take_survey">Юк, рәхмәт</string>
   <!--
     Snackbar
 
@@ -1902,10 +1869,6 @@
   <string name="certificate_info_verified_by">Раслаучы: %1$s</string>
   <!-- Message in delete confirmation dialog for password -->
   <string name="login_deletion_confirmation_2">Бу серсүзне бетерүне раслыйсызмы?</string>
-  <!-- Positive action of a dialog asking to delete -->
-  <string name="dialog_delete_positive">Бетерү</string>
-  <!-- Negative action of a dialog asking to delete login -->
-  <string name="dialog_delete_negative">Баш тарту</string>
   <!-- The page title for editing a saved password. -->
   <string name="edit_2">Серсүзне үзгәртү</string>
   <!-- The page title for adding new password. -->
@@ -1998,14 +1961,6 @@
   <string name="google_search_engine_suggestion_header">Google-да эзләү</string>
   <!-- Title for search suggestions when the default search suggestion engine is anything other than Google. %s is default search engine name. -->
   <string name="other_default_search_engine_suggestion_header">%s эзләү</string>
-  <!--
-    Default browser experiment
-
-    Default browser card title
-  -->
-  <string name="default_browser_experiment_card_title">Башка браузерны төп браузер итү</string>
-  <!-- Default browser card text -->
-  <string name="default_browser_experiment_card_text" tools:ignore="BrandUsage">Вебсайтлардан, эл. хатлардан һәм хәбәрләрдән сылтамаларны автоматик рәвештә Firefox-та ачылсын.</string>
   <!-- Content description radio buttons with a link to more information -->
   <string name="radio_preference_info_content_description">Күбрәк белү өчен басыгыз</string>
   <!-- Content description for the action bar "up" button -->
@@ -2265,46 +2220,6 @@
   <string name="debug_drawer_tab_tools_tab_creation_tool_button_text_inactive">Актив булмаган табларга өстәү</string>
   <!-- The button text to add tabs to the private tab group in the tab creation tool. -->
   <string name="debug_drawer_tab_tools_tab_creation_tool_button_text_private">Хосусый табларга өстәү</string>
-  <!-- The continue button label -->
-  <string name="micro_survey_continue_button_label" tools:ignore="UnusedResources">Дәвам итү</string>
-  <!--
-    Survey view
-
-    The survey header
-  -->
-  <string name="micro_survey_survey_header_2">Зинһар, сораулыкны тәмамлагыз</string>
-  <!-- The privacy notice link -->
-  <string name="micro_survey_privacy_notice_2">Хосусыйлык аңлатмасы</string>
-  <!-- The submit button label text -->
-  <string name="micro_survey_submit_button_label">Җибәрү</string>
-  <!-- The survey completion confirmation text -->
-  <string name="micro_survey_feedback_confirmation">Фикерегез өчен рәхмәт!</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_1" tools:ignore="UnusedResources">Бик яхшы</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_2" tools:ignore="UnusedResources">Яхшы</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_3" tools:ignore="UnusedResources">Урта</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_4" tools:ignore="UnusedResources">Начар</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_5" tools:ignore="UnusedResources">Бик начар</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_6" tools:ignore="UnusedResources">Мин аны кулланмыйм</string>
-  <!-- Text shown in prompt for printing microsurvey. "sec" It's an abbreviation for "second". Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_prompt_printing_title" tools:ignore="BrandUsage,UnusedResources">Безгә Firefox эчендәге бастыруны яхшыртырга ярдәм итегез. Моңа берничә секунд кына кирәк</string>
-  <!--
-    Accessibility
-
-    Content description for the survey application icon. Note: The word "Firefox" should NOT be translated.
-  -->
-  <string name="microsurvey_app_icon_content_description" tools:ignore="BrandUsage">Firefox логотибы</string>
-  <!-- Content description for the survey feature icon. -->
-  <string name="microsurvey_feature_icon_content_description">Сораулык үзенчәлеге тамгасы</string>
-  <!-- Content description (not visible, for screen readers etc.) for closing microsurvey bottom sheet. -->
-  <string name="microsurvey_close_handle_content_description">Сораулыкны ябу</string>
-  <!-- Content description for "X" button that is closing microsurvey. -->
-  <string name="microsurvey_close_button_content_description">Ябу</string>
   <!--
     Debug drawer logins
 

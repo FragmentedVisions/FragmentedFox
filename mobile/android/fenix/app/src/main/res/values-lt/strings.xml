@@ -229,8 +229,6 @@
   <string name="browser_menu_syncing_paused_caption">Sinchronizavimas pristabdytas</string>
   <!-- Browser menu caption label for an authenticated user -->
   <string name="browser_menu_signed_in_caption">Valdykite savo atsargines kopijas bei tai, ką sinchronizuojate</string>
-  <!-- Browser menu label that creates a private tab -->
-  <string name="browser_menu_new_private_tab">Nauja privačioji kortelė</string>
   <!-- Browser menu label that navigates to the Password screen -->
   <string name="browser_menu_passwords">Slaptažodžiai</string>
   <!-- Content description (not visible, for screen readers etc.) for the handle used to drag the main menu at the bottom of the screen. -->
@@ -626,8 +624,6 @@
   <string name="close_tab_title">Užverti kortelę „%s“</string>
   <!-- Content description (not visible, for screen readers etc.): Opens the open tabs menu when pressed -->
   <string name="open_tabs_menu">Atvertų kortelių meniu</string>
-  <!-- Open tabs menu item to save tabs to collection -->
-  <string name="tabs_menu_save_to_collection1">Įtraukti korteles į rinkinį</string>
   <!-- Text for the menu button to delete a collection -->
   <string name="collection_delete">Pašalinti rinkinį</string>
   <!-- Text for the menu button to rename a collection -->
@@ -883,8 +879,6 @@
     Text shown in the notification that pops up to remind the user that a private browsing session is active.
   -->
   <string name="notification_pbm_delete_text_2">Užverti privačiąsias korteles</string>
-  <!-- Name of the marketing notification channel. Displayed in the "App notifications" system settings for the app -->
-  <string name="notification_marketing_channel_name">Rinkodara</string>
   <!--
     Snackbar
 
@@ -1269,8 +1263,6 @@
     the certificate authority that verified the ticket
   -->
   <string name="certificate_info_verified_by">Tai liudija: %1$s</string>
-  <!-- Positive action of a dialog asking to delete -->
-  <string name="dialog_delete_positive">Pašalinti</string>
   <!-- Voice search button content description -->
   <string name="voice_search_content_description">Paieška balsu</string>
   <!-- Voice search prompt description displayed after the user presses the voice search button -->
@@ -1325,8 +1317,6 @@
   <string name="inactive_tabs_delete_all">Užverti visas neaktyvias korteles</string>
   <!-- Text for the snackbar to confirm auto-close is enabled for inactive tabs -->
   <string name="inactive_tabs_auto_close_message_snackbar">Automatinis užvėrimas įjungtas</string>
-  <!-- Default browser card text -->
-  <string name="default_browser_experiment_card_text" tools:ignore="BrandUsage">Leiskite saitams iš svetainių, el. laiškų, ir žinučių būti automatiškai atvertiems per „Firefox“.</string>
   <!-- Content description radio buttons with a link to more information -->
   <string name="radio_preference_info_content_description">Spustelėkite čia, jeigu norite daugiau informacijos</string>
   <!-- Content description for the action bar "up" button -->

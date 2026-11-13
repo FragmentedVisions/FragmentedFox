@@ -84,7 +84,16 @@
     "PersistStoryUTMRequestInterceptor",
     "privateModeAndStoriesEntryPoint",
     "showPocketRecommendationsFeature",
-    "showPocketSponsoredStories"
+    "showPocketSponsoredStories",
+    "MessageNotificationWorker",
+    "MicrosurveyAction",
+    "microsurveyFeatureEnabled",
+    "shouldShowMicrosurveyPrompt",
+    "MessagingMiddleware",
+    "MessagingAction",
+    "FenixMessageSurfaceId",
+    "ResearchSurfaceDialogFragment",
+    "BottomToolbarContainerView"
   ],
   "permissions": [
     "com.adjust.preinstall.READ_PERMISSION"

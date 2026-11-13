@@ -367,8 +367,6 @@
   <string name="close_tab_title">%s கீற்றை மூடு</string>
   <!-- Content description (not visible, for screen readers etc.): Opens the open tabs menu when pressed -->
   <string name="open_tabs_menu">கீற்றுப் பட்டியைத் திற</string>
-  <!-- Open tabs menu item to save tabs to collection -->
-  <string name="tabs_menu_save_to_collection1">கீற்றுகளைத் திரட்டில் சேமி</string>
   <!-- Text for the menu button to delete a collection -->
   <string name="collection_delete">திரட்டை நீக்கு</string>
   <!-- Text for the menu button to rename a collection -->
@@ -896,8 +894,6 @@
     the certificate authority that verified the ticket
   -->
   <string name="certificate_info_verified_by">சரிபார்த்தது: %1$s</string>
-  <!-- Positive action of a dialog asking to delete -->
-  <string name="dialog_delete_positive">நீக்கு</string>
   <!-- Voice search button content description -->
   <string name="voice_search_content_description">குரல் தேடல்</string>
   <!-- Voice search prompt description displayed after the user presses the voice search button -->

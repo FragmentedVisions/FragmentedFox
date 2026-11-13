@@ -26,7 +26,6 @@ import org.mozilla.fenix.home.recentsyncedtabs.RecentSyncedTabState
 import org.mozilla.fenix.home.recenttabs.RecentTab
 import org.mozilla.fenix.home.recentvisits.RecentlyVisitedItem
 import org.mozilla.fenix.library.history.PendingDeletionHistory
-import org.mozilla.fenix.messaging.MessagingState
 import org.mozilla.fenix.wallpapers.WallpaperState
 
 /**
@@ -54,7 +53,6 @@ import org.mozilla.fenix.wallpapers.WallpaperState
  * @property recentSyncedTabState The [RecentSyncedTabState] in the [HomeFragment].
  * @property bookmarks The list of recently saved [BookmarkNode]s to show on the [HomeFragment].
  * @property recentHistory The list of [RecentlyVisitedItem]s.
- * @property messaging State related messages.
  * @property pendingDeletionHistoryItems The set of History items marked for removal in the UI,
  * awaiting to be removed once the Undo snackbar hides away.
  * @property wallpaperState The [WallpaperState] to display in the [HomeFragment].
@@ -93,7 +91,6 @@ data class AppState(
     val recentSyncedTabState: RecentSyncedTabState = RecentSyncedTabState.None,
     val bookmarks: List<Bookmark> = emptyList(),
     val recentHistory: List<RecentlyVisitedItem> = emptyList(),
-    val messaging: MessagingState = MessagingState(),
     val pendingDeletionHistoryItems: Set<PendingDeletionHistory> = emptySet(),
     val wallpaperState: WallpaperState = WallpaperState.default,
     val standardSnackbarError: StandardSnackbarError? = null,

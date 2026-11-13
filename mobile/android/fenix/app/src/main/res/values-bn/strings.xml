@@ -815,8 +815,6 @@
     the certificate authority that verified the ticket
   -->
   <string name="certificate_info_verified_by">যাচাই করা হয়েছে : %1$s দিয়ে</string>
-  <!-- Positive action of a dialog asking to delete -->
-  <string name="dialog_delete_positive">মুছে ফেলুন</string>
   <!-- Translations feature -->
 
   <!-- TextField Design System Component -->

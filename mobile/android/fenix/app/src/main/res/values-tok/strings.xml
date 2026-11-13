@@ -214,8 +214,6 @@
   <string name="browser_menu_customize_reader_view_2">o nasin e lukin pona</string>
   <!-- Browser menu label to sign in to sync on the device using Mozilla accounts -->
   <string name="browser_menu_sign_in">o lon sijelo</string>
-  <!-- Browser menu label that creates a private tab -->
-  <string name="browser_menu_new_private_tab">poki sin pi nasin len</string>
   <!-- Browser menu label that navigates to the Password screen -->
   <string name="browser_menu_passwords">nimi open</string>
   <!-- Browser menu label that bookmarks the currently visited page -->
@@ -303,14 +301,6 @@
   <string name="onboarding_preferences_dialog_positive_button">pona</string>
   <!-- Terms of service onboarding title card label. 'Firefox' intentionally hardcoded here -->
   <string name="onboarding_welcome_to_firefox" tools:ignore="BrandUsage">o kama pona tawa ilo Firefox</string>
-  <!-- Line one of the terms of service onboarding page. %1$s is replaced by an active link, using onboarding_term_of_service_line_one_link_text_2 as text (“Firefox Terms of Use”). -->
-  <string name="onboarding_term_of_service_line_one_2">sina kepeken ilo ni la %1$s li lawa e sina.</string>
-  <!-- Used as text for the link in onboarding_term_of_service_line_one_2. -->
-  <string name="onboarding_term_of_service_line_one_link_text_2" tools:ignore="BrandUsage">nasin kepeken pi ilo Firefox</string>
-  <!-- Line two of the terms of service onboarding page. 'Firefox' is intentionally hardcoded. %1$s is replaced by an active link, using onboarding_term_of_service_line_two_link_text as text (“Privacy Notice”). -->
-  <string name="onboarding_term_of_service_line_two_2" tools:ignore="BrandUsage">ilo Firefox li wile awen e len sina. o lukin e %1$s</string>
-  <!-- Used as text for the link in onboarding_term_of_service_line_two. -->
-  <string name="onboarding_term_of_service_line_two_link_text">toki lawa pi len sona</string>
   <!-- ==== Project "Nova" onboarding strings ==== -->
 
   <!-- ==== End of Project "Nova" onboarding strings ==== -->
@@ -700,8 +690,6 @@
   <string name="close_tab">o pini e poki</string>
   <!-- Content description (not visible, for screen readers etc.): Close tab <title> button. %s is the tab title -->
   <string name="close_tab_title">o pini e poki \"%s\"</string>
-  <!-- Open tabs menu item to save tabs to collection -->
-  <string name="tabs_menu_save_to_collection1">o pana poki tawa kulupu ni</string>
   <!-- Text for the menu button to delete a collection -->
   <string name="collection_delete">o weka e kulupu poki</string>
   <!-- Text for the menu button to rename a collection -->
@@ -1038,20 +1026,6 @@
   <!-- Text shown in the notification that pops up to remind the user that a private browsing session is active for Android 14+ -->
   <string name="notification_erase_title_android_14">sina wile ala wile pini e poki len?</string>
   <string name="notification_erase_text_android_14">wile la o nena e poki mu ni.</string>
-  <!-- Name of the marketing notification channel. Displayed in the "App notifications" system settings for the app -->
-  <string name="notification_marketing_channel_name">mu esun</string>
-  <!--
-    Title shown in the notification that pops up to remind the user to set fenix as default browser.
-    The app name is in the text, due to limitations with localizing Nimbus experiments
-  -->
-  <string name="nimbus_notification_default_browser_title" tools:ignore="BrandUsage,UnusedResources">ilo Firefox li awen suli</string>
-  <!--
-    Text shown in the notification that pops up to remind the user to set fenix as default browser.
-    The app name is in the text, due to limitations with localizing Nimbus experiments
-  -->
-  <string name="nimbus_notification_default_browser_text" tools:ignore="BrandUsage,UnusedResources">o open e lipu ale kepeken ilo Firefox</string>
-  <!-- Preference for not taking the short survey. -->
-  <string name="preferences_not_take_survey">mi wile ala</string>
   <!--
     Snackbar
 

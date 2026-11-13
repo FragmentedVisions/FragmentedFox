@@ -10,7 +10,6 @@ import io.mockk.every
 import io.mockk.mockk
 import io.mockk.spyk
 import org.junit.Assert.assertFalse
-import org.junit.Assert.assertNull
 import org.junit.Assert.assertTrue
 import org.junit.Before
 import org.junit.Test
@@ -20,7 +19,6 @@ import org.mozilla.fenix.ext.application
 import org.mozilla.fenix.ext.components
 import org.mozilla.fenix.utils.Settings
 import org.mozilla.fenix.wallpapers.Wallpaper
-import kotlin.test.assertNotNull
 
 class HomeFragmentTest {
 
@@ -46,24 +44,6 @@ class HomeFragmentTest {
         every { context.components.settings } answers { settings }
         every { context.components.core } answers { core }
         every { homeFragment.viewLifecycleOwner } returns mockk(relaxed = true)
-    }
-
-    @Test
-    fun `WHEN isMicrosurveyEnabled is true GIVEN a call to initializeMicrosurveyFeature THEN messagingFeature is initialized`() {
-        assertNull(homeFragment.messagingFeatureMicrosurvey.get())
-
-        homeFragment.initializeMicrosurveyFeature(isMicrosurveyEnabled = true, view = view)
-
-        assertNotNull(homeFragment.messagingFeatureMicrosurvey.get())
-    }
-
-    @Test
-    fun `WHEN isMicrosurveyEnabled is false GIVEN a call to initializeMicrosurveyFeature THEN messagingFeature is not initialized`() {
-        assertNull(homeFragment.messagingFeatureMicrosurvey.get())
-
-        homeFragment.initializeMicrosurveyFeature(isMicrosurveyEnabled = false, view = view)
-
-        assertNull(homeFragment.messagingFeatureMicrosurvey.get())
     }
 
     @Test

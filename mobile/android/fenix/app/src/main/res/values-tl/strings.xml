@@ -232,8 +232,6 @@
   <string name="browser_menu_sign_back_in_to_sync">Mag-sign in uli sa sync</string>
   <!-- Browser menu caption label for the "Sign back in to sync" browser menu item described in `browser_menu_sign_back_in_to_sync` when there is an error in syncing -->
   <string name="browser_menu_syncing_paused_caption">Panandaliang nakatigil ang pag-sync</string>
-  <!-- Browser menu label that creates a private tab -->
-  <string name="browser_menu_new_private_tab">Bagong pribadong tab</string>
   <!-- Browser menu label that navigates to the Password screen -->
   <string name="browser_menu_passwords">Mga password</string>
   <!-- Content description (not visible, for screen readers etc.) for bottom sheet handlebar custom tab menu. -->
@@ -331,18 +329,6 @@
   <string name="onboarding_preferences_dialog_positive_button">Tapos na</string>
   <!-- Terms of service onboarding title card label. 'Firefox' intentionally hardcoded here -->
   <string name="onboarding_welcome_to_firefox" tools:ignore="BrandUsage">Maligayang pagdating sa Firefox</string>
-  <!-- Line one of the terms of service onboarding page. %1$s is replaced by an active link, using onboarding_term_of_service_line_one_link_text_2 as text (“Firefox Terms of Use”). -->
-  <string name="onboarding_term_of_service_line_one_2">Sa pagpapatuloy, sumasang-ayon ka sa %1$s.</string>
-  <!-- Used as text for the link in onboarding_term_of_service_line_one_2. -->
-  <string name="onboarding_term_of_service_line_one_link_text_2" tools:ignore="BrandUsage">Mga Tuntunin sa Paggamit ng Firefox</string>
-  <!-- Line two of the terms of service onboarding page. 'Firefox' is intentionally hardcoded. %1$s is replaced by an active link, using onboarding_term_of_service_line_two_link_text as text (“Privacy Notice”). -->
-  <string name="onboarding_term_of_service_line_two_2" tools:ignore="BrandUsage">Pinapahalagahan ng Firefox ang iyong privacy. Alamin sa aming %1$s.</string>
-  <!-- Used as text for the link in onboarding_term_of_service_line_two. -->
-  <string name="onboarding_term_of_service_line_two_link_text">Paunawa sa Privacy</string>
-  <!-- Line three of the terms of service onboarding page. 'Firefox' and 'Mozilla' are intentionally hardcoded. %1$s is replaced by an active link using onboarding_term_of_service_line_three_link_text as text (“Manage”). -->
-  <string name="onboarding_term_of_service_line_three" tools:ignore="BrandUsage">Para tulungang mapaganda ang browser, nagpapadala ang Firefox ng mga diagnostic at interaction data sa Mozilla. %1$s</string>
-  <!-- Used as text for the link in onboarding_term_of_service_line_three. -->
-  <string name="onboarding_term_of_service_line_three_link_text">Pamahalaan</string>
   <!-- Marketing onboarding page title variant. “One last thing” refers to the final step or action in the onboarding process that we’re asking users to take before they can start using the browser. -->
   <!-- Marketing onboarding page body variant. 'Firefox' is intentionally hardcoded. -->
   <!-- Marketing onboarding page button label variant. Button to confirm choice and start browsing. -->
@@ -954,8 +940,6 @@
   <string name="close_tab_title">Isara ang tab na %s</string>
   <!-- Content description (not visible, for screen readers etc.): Opens the open tabs menu when pressed -->
   <string name="open_tabs_menu">Buksan ang menu ng mga tab</string>
-  <!-- Open tabs menu item to save tabs to collection -->
-  <string name="tabs_menu_save_to_collection1">I-save ang mga tab sa collection</string>
   <!-- Text for the menu button to delete a collection -->
   <string name="collection_delete">Burahin ang collection</string>
   <!-- Text for the menu button to rename a collection -->
@@ -1430,29 +1414,6 @@
   <!-- Text shown in the notification that pops up to remind the user that a private browsing session is active for Android 14+ -->
   <string name="notification_erase_title_android_14">Isara ang mga pribadong tab?</string>
   <string name="notification_erase_text_android_14">I-tap o i-swipe ang abisong ito para isara ang mga pribadong tab.</string>
-  <!-- Name of the marketing notification channel. Displayed in the "App notifications" system settings for the app -->
-  <string name="notification_marketing_channel_name">Marketing</string>
-  <!--
-    Title shown in the notification that pops up to remind the user to set fenix as default browser.
-    The app name is in the text, due to limitations with localizing Nimbus experiments
-  -->
-  <string name="nimbus_notification_default_browser_title" tools:ignore="BrandUsage,UnusedResources">Mabilis at pribado ang Firefox</string>
-  <!--
-    Text shown in the notification that pops up to remind the user to set fenix as default browser.
-    The app name is in the text, due to limitations with localizing Nimbus experiments
-  -->
-  <string name="nimbus_notification_default_browser_text" tools:ignore="BrandUsage,UnusedResources">Gawin mong default browser ang Firefox</string>
-  <!--
-    Survey
-
-    Text shown in the fullscreen message that pops up to ask user to take a short survey.
-    The app name is in the text, due to limitations with localizing Nimbus experiments
-  -->
-  <string name="nimbus_survey_message_text" tools:ignore="BrandUsage">Pakitulungan pagandahin ang Firefox sa pamamagitan ng pagsagot sa isang maikling survey.</string>
-  <!-- Preference for taking the short survey. -->
-  <string name="preferences_take_survey">Sagutin ang Survey</string>
-  <!-- Preference for not taking the short survey. -->
-  <string name="preferences_not_take_survey">Salamat na lang</string>
   <!--
     Snackbar
 
@@ -2117,10 +2078,6 @@
   <string name="certificate_info_verified_by">Naberipika ng: %1$s</string>
   <!-- Message in delete confirmation dialog for password -->
   <string name="login_deletion_confirmation_2">Sigurado ka ba na gusto mong i-delete ang password na ito?</string>
-  <!-- Positive action of a dialog asking to delete -->
-  <string name="dialog_delete_positive">Burahin</string>
-  <!-- Negative action of a dialog asking to delete login -->
-  <string name="dialog_delete_negative">Ikansela</string>
   <!-- The page title for editing a saved password. -->
   <string name="edit_2">Baguhin ang password</string>
   <!-- The page title for adding new password. -->
@@ -2226,14 +2183,6 @@
   <string name="other_default_search_engine_suggestion_header">Paghahanap sa %s</string>
   <!-- Title for recent search suggestions. -->
   <string name="recent_searches_header">Mga Hinahanap Kamakailan</string>
-  <!--
-    Default browser experiment
-
-    Default browser card title
-  -->
-  <string name="default_browser_experiment_card_title">Palitan ang iyong default browser</string>
-  <!-- Default browser card text -->
-  <string name="default_browser_experiment_card_text" tools:ignore="BrandUsage">Set links from websites, emails, and messages to open automatically in Firefox.</string>
   <!-- Content description radio buttons with a link to more information -->
   <string name="radio_preference_info_content_description">Pindutin para sa karagdagang detalye</string>
   <!-- Content description for the action bar "up" button -->
@@ -2597,48 +2546,6 @@
   <string name="debug_drawer_tab_tools_tab_creation_tool_button_text_inactive">Idagdag sa mga di-aktibong tab</string>
   <!-- The button text to add tabs to the private tab group in the tab creation tool. -->
   <string name="debug_drawer_tab_tools_tab_creation_tool_button_text_private">Idagdag sa mga pribadong tab</string>
-  <!-- The continue button label -->
-  <string name="micro_survey_continue_button_label" tools:ignore="UnusedResources">Magpatuloy</string>
-  <!--
-    Survey view
-
-    The survey header
-  -->
-  <string name="micro_survey_survey_header_2">Mangyaring kumpletuhin ang survey</string>
-  <!-- The privacy notice link -->
-  <string name="micro_survey_privacy_notice_2">Paunawa sa pribasiya</string>
-  <!-- The submit button label text -->
-  <string name="micro_survey_submit_button_label">Ipadala</string>
-  <!-- The survey completion confirmation text -->
-  <string name="micro_survey_feedback_confirmation">Salamat sa iyong mga puna!</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_1" tools:ignore="UnusedResources">Lubos na nasiyahan</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_2" tools:ignore="UnusedResources">Nasiyahan</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_3" tools:ignore="UnusedResources">Neutral</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_4" tools:ignore="UnusedResources">Di nasiyahan</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_5" tools:ignore="UnusedResources">Lubos na di nasiyahan</string>
-  <!-- Option for likert scale -->
-  <string name="likert_scale_option_6" tools:ignore="UnusedResources">Hindi ko ginagamit</string>
-  <!-- Text shown in prompt for printing microsurvey. "sec" It's an abbreviation for "second". Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_prompt_printing_title" tools:ignore="BrandUsage,UnusedResources">Tulungang pagandahin ang pag-print sa Firefox. Saglit lang ito</string>
-  <!-- Text shown in the survey title for printing microsurvey. Note: The word "Firefox" should NOT be translated. -->
-  <string name="microsurvey_survey_printing_title" tools:ignore="BrandUsage,UnusedResources">Gaano ka nasiyahan sa pag-print sa Firefox?</string>
-  <!--
-    Accessibility
-
-    Content description for the survey application icon. Note: The word "Firefox" should NOT be translated.
-  -->
-  <string name="microsurvey_app_icon_content_description" tools:ignore="BrandUsage">Logo ng Firefox</string>
-  <!-- Content description for the survey feature icon. -->
-  <string name="microsurvey_feature_icon_content_description">Survey feature icon</string>
-  <!-- Content description (not visible, for screen readers etc.) for closing microsurvey bottom sheet. -->
-  <string name="microsurvey_close_handle_content_description">Isara ang survey</string>
-  <!-- Content description for "X" button that is closing microsurvey. -->
-  <string name="microsurvey_close_button_content_description">Isara</string>
   <!--
     Debug drawer logins
 

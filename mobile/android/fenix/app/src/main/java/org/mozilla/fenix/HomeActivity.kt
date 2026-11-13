@@ -30,8 +30,6 @@ import androidx.annotation.IdRes
 import androidx.annotation.VisibleForTesting
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.widget.Toolbar
-import androidx.compose.runtime.mutableStateOf
-import androidx.core.app.NotificationManagerCompat
 import androidx.core.net.toUri
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.core.text.layoutDirection
@@ -44,7 +42,6 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Dispatchers.IO
-import kotlinx.coroutines.Dispatchers.Main
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.distinctUntilChanged
@@ -77,7 +74,6 @@ import mozilla.components.support.ktx.android.content.call
 import mozilla.components.support.ktx.android.content.email
 import mozilla.components.support.ktx.android.content.share
 import mozilla.components.support.locale.LocaleAwareAppCompatActivity
-import mozilla.components.support.utils.BootUtils
 import mozilla.components.support.utils.Browsers
 import mozilla.components.support.utils.BrowsersCache
 import mozilla.components.support.utils.BuildManufacturerChecker
@@ -119,7 +115,6 @@ import org.mozilla.fenix.debugsettings.data.DefaultDebugSettingsRepository
 import org.mozilla.fenix.debugsettings.ui.FenixOverlay
 import org.mozilla.fenix.downloads.DownloadSnackbar
 import org.mozilla.fenix.e2e.EdgeToEdgeFragmentLifecycleCallbacks
-import org.mozilla.fenix.experiments.ResearchSurfaceDialogFragment
 import org.mozilla.fenix.ext.alreadyOnDestination
 import org.mozilla.fenix.ext.breadcrumb
 import org.mozilla.fenix.ext.components
@@ -146,8 +141,6 @@ import org.mozilla.fenix.home.intent.OpenSpecificTabIntentProcessor
 import org.mozilla.fenix.home.intent.SpeechProcessingIntentProcessor
 import org.mozilla.fenix.home.intent.StartSearchIntentProcessor
 import org.mozilla.fenix.home.topsites.DefaultTopSitesBinding
-import org.mozilla.fenix.messaging.FenixMessageSurfaceId
-import org.mozilla.fenix.messaging.MessageNotificationWorker
 import org.mozilla.fenix.nimbus.FxNimbus
 import org.mozilla.fenix.pbmlock.DefaultPrivateBrowsingLockStorage
 import org.mozilla.fenix.pbmlock.PrivateBrowsingLockFeature
@@ -192,8 +185,6 @@ open class HomeActivity : LocaleAwareAppCompatActivity(), NavHostActivity, Crash
     internal lateinit var binding: ActivityHomeBinding
     lateinit var themeManager: ThemeManager
     lateinit var browsingModeManager: BrowsingModeManager
-
-    var isMicrosurveyPromptDismissed = mutableStateOf(false)
 
     private var privateNotificationObserver: PrivateNotificationFeature<PrivateNotificationService>? =
         null
@@ -493,10 +484,6 @@ open class HomeActivity : LocaleAwareAppCompatActivity(), NavHostActivity, Crash
         }
 
         if (!shouldShowOnboarding) {
-            lifecycleScope.launch(IO) {
-                showFullscreenMessageIfNeeded(applicationContext)
-            }
-
             // Unless the activity is recreated, navigate to home first (without rendering it)
             // to add it to the back stack.
             if (savedInstanceState == null) {
@@ -717,11 +704,6 @@ open class HomeActivity : LocaleAwareAppCompatActivity(), NavHostActivity, Crash
 
                 components.appStore.dispatch(AppAction.UpdateDefaultBrowserStatus(true))
                 Events.defaultBrowserChanged.record(NoExtras())
-            }
-
-
-            if (NotificationManagerCompat.from(applicationContext).areNotificationsEnabled()) {
-                MessageNotificationWorker.setMessageNotificationWorker(applicationContext)
             }
 
             if (components.core.sentFromFirefoxManager.shouldShowSnackbar) {
@@ -1515,37 +1497,6 @@ open class HomeActivity : LocaleAwareAppCompatActivity(), NavHostActivity, Crash
     private fun shouldNavigateToBrowserOnColdStart(savedInstanceState: Bundle?): Boolean {
         return isActivityColdStarted(intent, savedInstanceState) &&
             !processIntent(intent)
-    }
-
-    private suspend fun showFullscreenMessageIfNeeded(context: Context) {
-        val messaging = context.components.nimbus.messaging
-        val nextMessage = messaging.getNextMessage(FenixMessageSurfaceId.SURVEY) ?: return
-        val researchSurfaceDialogFragment = ResearchSurfaceDialogFragment.newInstance(
-            keyMessageText = nextMessage.text,
-            keyAcceptButtonText = nextMessage.buttonLabel,
-            keyDismissButtonText = null,
-        )
-
-        researchSurfaceDialogFragment.onAccept = {
-            processIntent(messaging.getIntentForMessage(nextMessage))
-            components.appStore.dispatch(AppAction.MessagingAction.MessageClicked(nextMessage))
-        }
-
-        researchSurfaceDialogFragment.onDismiss = {
-            components.appStore.dispatch(AppAction.MessagingAction.MessageDismissed(nextMessage))
-        }
-
-        lifecycleScope.launch(Main) {
-            researchSurfaceDialogFragment.showNow(
-                supportFragmentManager,
-                ResearchSurfaceDialogFragment.FRAGMENT_TAG,
-            )
-        }
-
-        // Update message as displayed.
-        val currentBootUniqueIdentifier = BootUtils.getBootIdentifier(context)
-
-        messaging.onMessageDisplayed(nextMessage, currentBootUniqueIdentifier)
     }
 
     /**

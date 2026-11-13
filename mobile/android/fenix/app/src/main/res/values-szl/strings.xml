@@ -670,8 +670,6 @@
   <string name="close_tab_title">Zawrzij karta %s</string>
   <!-- Content description (not visible, for screen readers etc.): Opens the open tabs menu when pressed -->
   <string name="open_tabs_menu">Myni ôtwartych kart</string>
-  <!-- Open tabs menu item to save tabs to collection -->
-  <string name="tabs_menu_save_to_collection1">Spamiyntej karty do kolekcyje</string>
   <!-- Text for the menu button to delete a collection -->
   <string name="collection_delete">Skasuj kolekcyjo</string>
   <!-- Text for the menu button to rename a collection -->
@@ -961,18 +959,6 @@
     Text shown in the notification that pops up to remind the user that a private browsing session is active.
   -->
   <string name="notification_pbm_delete_text_2">Zawrzij prywatne karty</string>
-  <!-- Name of the marketing notification channel. Displayed in the "App notifications" system settings for the app -->
-  <string name="notification_marketing_channel_name">Marketing</string>
-  <!--
-    Title shown in the notification that pops up to remind the user to set fenix as default browser.
-    The app name is in the text, due to limitations with localizing Nimbus experiments
-  -->
-  <string name="nimbus_notification_default_browser_title" tools:ignore="BrandUsage,UnusedResources">Firefox je gibki i prywatny</string>
-  <!--
-    Text shown in the notification that pops up to remind the user to set fenix as default browser.
-    The app name is in the text, due to limitations with localizing Nimbus experiments
-  -->
-  <string name="nimbus_notification_default_browser_text" tools:ignore="BrandUsage,UnusedResources">Nastow Firefox za bazowo przeglōndarka</string>
   <!--
     Snackbar
 

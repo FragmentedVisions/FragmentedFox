@@ -10,7 +10,7 @@ FragmentedFox is a private, independent fork of the Firefox browser from [Fragme
 
 ## Status
 
-Early and experimental. The Android app builds on GitHub Actions into a signed APK that installs and runs on a phone. It has had only light testing. The latest build (build 34, commit `bfbcf5db3c`) passed and was installed and checked on a phone. It has one known minor bug, listed under known gaps in [changes](./fragmentedfox-docs/changes.md).
+Early and experimental. The Android app builds on GitHub Actions into a signed APK that installs and runs on a phone. It has had only light testing. The latest build (build 37, commit `cbd89e5d79`) passed and was installed and checked on a phone. It has one known minor bug, listed under known gaps in [changes](./fragmentedfox-docs/changes.md).
 
 | Platform | Status |
 | --- | --- |
@@ -45,8 +45,8 @@ There are only two branches. All changes are made on `NonStable--test`, and buil
 
 | Branch | Purpose |
 | --- | --- |
-| `Stable-Main` | The default branch. The last state that was built and installed on a phone (build 34, commit `bfbcf5db3c`, Android build run 43262005292). Anything after that commit is documentation only. |
-| `NonStable--test` | Where all work happens. It starts level with `Stable-Main`. Changes made after build 34 are listed in [changes](./fragmentedfox-docs/changes.md). `Stable-Main` only moves up after a build of the new changes has been checked on a phone. |
+| `Stable-Main` | The default branch. The last state that was built and installed on a phone (build 37, commit `cbd89e5d79`, Android build run 43492714687). Anything after that commit is documentation only. |
+| `NonStable--test` | Where all work happens. It starts level with `Stable-Main`. Changes made after build 37 are listed in [changes](./fragmentedfox-docs/changes.md). `Stable-Main` only moves up after a build of the new changes has been checked on a phone. |
 
 ## Building
 

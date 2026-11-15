@@ -20,7 +20,7 @@ import org.mozilla.geckoview.GeckoRuntimeSettings
 @OptIn(ExperimentalGeckoViewApi::class)
 @Suppress("SpreadOperator")
 fun TrackingProtectionPolicy.toContentBlockingSetting(
-    safeBrowsingPolicy: Array<EngineSession.SafeBrowsingPolicy> = arrayOf(EngineSession.SafeBrowsingPolicy.RECOMMENDED),
+    safeBrowsingPolicy: Array<EngineSession.SafeBrowsingPolicy> = arrayOf(EngineSession.SafeBrowsingPolicy.NONE),
     cookieBannerHandlingMode: EngineSession.CookieBannerHandlingMode = EngineSession.CookieBannerHandlingMode.DISABLED,
     cookieBannerHandlingModePrivateBrowsing: EngineSession.CookieBannerHandlingMode =
         EngineSession.CookieBannerHandlingMode.REJECT_ALL,

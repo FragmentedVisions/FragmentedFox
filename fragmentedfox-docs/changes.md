@@ -11,12 +11,13 @@ Defaults changed in `browser/app/profile/firefox.js` and `modules/libpref/init/a
 - Crash report sending from tabs: `browser.tabs.crashReporting.sendReport`.
 - Studies: `app.normandy.enabled`, `app.shield.optoutstudies.enabled`, `nimbus.rollouts.enabled`, `messaging-system.askForFeedback`, `browser.discovery.enabled`.
 - Promos: `browser.vpn_promo.enabled`, `browser.promo.pin.enabled`, `browser.promo.focus.enabled`, `browser.topsites.contile.enabled`.
+- **Safe Browsing off:** the Google Safe Browsing lists are not used. Mozilla builds pass a Google API key at build time; ours has none, so the build fills in the placeholder `no-google-safebrowsing-api-key` and the daily list update to `safebrowsing.googleapis.com` could not succeed. The lists never downloaded, so the protection did nothing while still sending Google a request. `GeckoEngine.kt` and `TrackingProtectionPolicy.kt` now default to `SafeBrowsingPolicy.NONE`. There was no settings switch to hide. Visible effect: no warning page for known phishing or malware sites (there was none in practice). Mozilla's own tracker lists are unaffected. `check-fork.py` fails if `RECOMMENDED` comes back. Not built yet.
 - Background connections: `network.captive-portal-service.enabled`, `network.connectivity-service.enabled`, `network.prefetch-next`, `browser.safebrowsing.downloads.remote.enabled`.
 - HTTPS-Only mode is on (`dom.security.https_only_mode`), and encrypted DNS is on in fallback mode (`network.trr.mode` 2) with Quad9 (`https://dns.quad9.net/dns-query`) as the resolver. If Quad9 is unreachable, DNS falls back to the system resolver.
 - WebRTC is off (`media.peerconnection.enabled`), so websites cannot use video calls, voice calls or peer-to-peer connections. Camera capture is also off (`media.navigator.video.enabled`) and, if WebRTC is switched back on, local network addresses stay hidden (`media.peerconnection.ice.default_address_only` and `ice.no_host`). The same four prefs are set for Android in `mobile/android/app/geckoview-prefs.js`. The CI builds also leave WebRTC out of the compile with `--disable-webrtc`. With that flag the engine compile finished (about 87 minutes), and GeckoView's `VideoCaptureTest.kt`, which needs the WebRTC classes, was deleted because it stopped the build.
 - New tab page (`browser/extensions/newtab/lib/ActivityStream.sys.mjs`): sponsored content, sponsored top sites, top stories, weather and telemetry are off.
 
-Not changed: Safe Browsing local list updates, search suggestions, and the add-on blocklist and certificate data that arrive through Remote Settings.
+Not changed: search suggestions, and the add-on blocklist and certificate data that arrive through Remote Settings.
 
 ## Android
 

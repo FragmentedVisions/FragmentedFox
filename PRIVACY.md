@@ -8,6 +8,7 @@ FragmentedFox is a browser. This page says what the Android app sends and where.
 - Fragmented Visions runs no servers for this app, and there are no accounts to create.
 - Sponsored shortcuts, sponsored stories, Pocket stories, ads and Firefox Suggest are off by default.
 - It does not download experiments, surveys or feature rollouts from Mozilla, and the ones Mozilla bundled in the app are removed, so Mozilla cannot switch features on in your copy.
+- It does not use Google Safe Browsing. The lists are off, so it sends nothing to Google for that, and it does not warn you about known phishing or malware sites.
 - It has no background jobs that talk to Mozilla's messaging or survey systems. The notification worker, the in-app surveys and Mozilla's built-in promotional messages (such as the default browser card and notification) are removed, not just switched off.
 - Videos and audio do not start by themselves. Autoplay is blocked by default and a page may only start playback within a few seconds of a tap.
 - WebRTC is off, so sites cannot find your local network address through it.
@@ -30,7 +31,6 @@ FragmentedFox is a browser. This page says what the Android app sends and where.
 | Your search engine (DuckDuckGo by default) | to search, and to suggest results as you type | when you search. Suggestions can be turned off in settings |
 | Quad9 | encrypted DNS lookups, the default resolver | when you load pages. The resolver can be changed in settings |
 | Mozilla Remote Settings | tracker lists, the list of tracking link parameters to remove, certificate revocation lists, the add-on blocklist | about every 2 hours |
-| Google Safe Browsing | phishing and malware list updates (hash prefixes only) | about once a day |
 | addons.mozilla.org | to find, install and update add-ons | when you use add-ons |
 | Mozilla account servers | to sync | only if you sign in |
 | Mozilla crash reports | to send a crash report | only if you choose to send one |

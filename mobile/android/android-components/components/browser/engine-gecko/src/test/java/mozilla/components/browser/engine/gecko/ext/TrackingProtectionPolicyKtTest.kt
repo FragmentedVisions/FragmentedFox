@@ -16,7 +16,7 @@ import org.mozilla.geckoview.ExperimentalGeckoViewApi
 
 class TrackingProtectionPolicyKtTest {
 
-    private val defaultSafeBrowsing = arrayOf(EngineSession.SafeBrowsingPolicy.RECOMMENDED)
+    private val defaultSafeBrowsing = arrayOf(EngineSession.SafeBrowsingPolicy.NONE)
 
     @OptIn(ExperimentalGeckoViewApi::class)
     @Test

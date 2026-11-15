@@ -1467,7 +1467,7 @@ class GeckoEngine(
             }
 
         override var safeBrowsingPolicy: Array<SafeBrowsingPolicy> =
-            arrayOf(SafeBrowsingPolicy.RECOMMENDED)
+            arrayOf(SafeBrowsingPolicy.NONE)
             set(value) {
                 val policy = value.sumOf { it.id }
                 runtime.settings.contentBlocking.setSafeBrowsing(policy)
@@ -1991,7 +1991,7 @@ class GeckoEngine(
             this.automaticFontSizeAdjustment = it.automaticFontSizeAdjustment
             this.automaticLanguageAdjustment = it.automaticLanguageAdjustment
             this.trackingProtectionPolicy = it.trackingProtectionPolicy
-            this.safeBrowsingPolicy = arrayOf(SafeBrowsingPolicy.RECOMMENDED)
+            this.safeBrowsingPolicy = arrayOf(SafeBrowsingPolicy.NONE)
             this.remoteDebuggingEnabled = it.remoteDebuggingEnabled
             this.testingModeEnabled = it.testingModeEnabled
             this.userAgentString = it.userAgentString

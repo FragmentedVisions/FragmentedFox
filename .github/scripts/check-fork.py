@@ -182,6 +182,16 @@ def check_settings():
             fail("settings", f"Settings.kt: {name} default is {match.group(1).strip()}, expected {value}")
 
 
+def check_safe_browsing():
+    files = [
+        "mobile/android/android-components/components/browser/engine-gecko/src/main/java/mozilla/components/browser/engine/gecko/GeckoEngine.kt",
+        "mobile/android/android-components/components/browser/engine-gecko/src/main/java/mozilla/components/browser/engine/gecko/ext/TrackingProtectionPolicy.kt",
+    ]
+    for relative in files:
+        if "SafeBrowsingPolicy.RECOMMENDED" in read(os.path.join(ROOT, relative)):
+            fail("safe-browsing", f"{relative}: Safe Browsing is back on, but the build has no Google API key so it only sends useless requests to Google")
+
+
 def check_nimbus():
     expected = json.loads(read(os.path.join(ROOT, "fragmentedfox-docs/expected-nimbus.json")))
     features = yaml.safe_load(read(os.path.join(APP, "nimbus.fml.yaml")))["features"]
@@ -444,7 +454,7 @@ def normalise(section, message):
 
 
 def main():
-    checks = [check_imports, check_resources, check_pings, check_removed, check_prefs, check_settings, check_nimbus, check_cleartext, check_launcher_aliases, check_theme, check_palette_visibility, check_remote_experiments, check_query_stripping, check_licenses, check_translations, check_hidden_settings, check_search, check_gradle_projects, check_callable_references, check_glean, check_features, check_telemetry, check_syntax]
+    checks = [check_imports, check_resources, check_pings, check_removed, check_prefs, check_settings, check_safe_browsing, check_nimbus, check_cleartext, check_launcher_aliases, check_theme, check_palette_visibility, check_remote_experiments, check_query_stripping, check_licenses, check_translations, check_hidden_settings, check_search, check_gradle_projects, check_callable_references, check_glean, check_features, check_telemetry, check_syntax]
     selected_flags = [a for a in sys.argv[1:] if a.startswith("--")]
     selected = [a for a in sys.argv[1:] if not a.startswith("--")]
     for check in checks:

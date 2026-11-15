@@ -332,7 +332,7 @@ class GeckoEngineTest {
         engine.settings.emailTrackerBlockingPrivateBrowsing = true
         assertTrue(engine.settings.emailTrackerBlockingPrivateBrowsing)
 
-        val safeStrictBrowsingCategories = SafeBrowsingPolicy.RECOMMENDED.id
+        val safeStrictBrowsingCategories = SafeBrowsingPolicy.NONE.id
         assertEquals(safeStrictBrowsingCategories, contentBlockingSettings.safeBrowsingCategories)
 
         engine.settings.safeBrowsingPolicy = arrayOf(SafeBrowsingPolicy.PHISHING)

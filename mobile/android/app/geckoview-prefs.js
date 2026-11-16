@@ -421,3 +421,11 @@ pref("security.tls.enable_0rtt_data", false);
 
 // Refuse servers that do not support secure renegotiation (RFC 5746)
 pref("security.ssl.require_safe_negotiation", true);
+
+// No connections or DNS lookups for links before they are opened
+pref("network.http.speculative-parallel-limit", 0);
+pref("network.dns.disablePrefetch", true);
+pref("network.dns.disablePrefetchFromHTTPS", true);
+
+// Sites cannot read the battery level
+pref("dom.battery.enabled", false);

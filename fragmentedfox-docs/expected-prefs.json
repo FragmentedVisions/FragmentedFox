@@ -42,7 +42,11 @@
     "security.ssl.require_safe_negotiation": "true",
     "browser.sessionhistory.max_total_viewers": "0",
     "image.mem.surfacecache.min_expiration_ms": "15000",
-    "media.autoplay.blocking_policy": "1"
+    "media.autoplay.blocking_policy": "1",
+    "network.http.speculative-parallel-limit": "0",
+    "network.dns.disablePrefetch": "true",
+    "network.dns.disablePrefetchFromHTTPS": "true",
+    "dom.battery.enabled": "false"
   },
   "modules/libpref/init/all.js": {
     "datareporting.policy.dataSubmissionEnabled": "false",

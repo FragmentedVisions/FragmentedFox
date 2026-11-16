@@ -8,6 +8,7 @@ FragmentedFox is a browser. This page says what the Android app sends and where.
 - Fragmented Visions runs no servers for this app, and there are no accounts to create.
 - Sponsored shortcuts, sponsored stories, Pocket stories, ads and Firefox Suggest are off by default.
 - It does not download experiments, surveys or feature rollouts from Mozilla, and the ones Mozilla bundled in the app are removed, so Mozilla cannot switch features on in your copy.
+- It does not open connections or look up domains for links you have not opened, and sites cannot read your battery level.
 - It does not use Google Safe Browsing. The lists are off, so it sends nothing to Google for that, and it does not warn you about known phishing or malware sites.
 - It has no background jobs that talk to Mozilla's messaging or survey systems. The notification worker, the in-app surveys and Mozilla's built-in promotional messages (such as the default browser card and notification) are removed, not just switched off.
 - Videos and audio do not start by themselves. Autoplay is blocked by default and a page may only start playback within a few seconds of a tap.

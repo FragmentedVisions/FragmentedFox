@@ -5,7 +5,9 @@ The app layer (OWNED) is FragmentedFox's own code and is copied over unchanged.
 Every other file we changed is merged three ways between the old base tag, our
 branch and the new tag. Everything else is Mozilla's new version.
 
-Usage: upgrade-esr.py NEW_TAG [--ours REF] [--branch NAME] [--check]
+Usage: upgrade-esr.py NEW_TAG [--ours REF] [--branch NAME] [--check] [--keep PATH ...]
+  --keep    leave this folder at the version in --ours instead of taking the new
+            tag's (for code the build never compiles, such as third_party/libwebrtc)
   --check   build the tree only and print whether it equals the tree of --ours
             (use it with the current base tag as NEW_TAG to test the script)
 """
@@ -58,6 +60,7 @@ def main():
     ap.add_argument("--ours", default="HEAD")
     ap.add_argument("--branch")
     ap.add_argument("--check", action="store_true")
+    ap.add_argument("--keep", action="append", default=[])
     a = ap.parse_args()
 
     base = out("show", "%s:%s" % (a.ours, BASE_FILE)).strip()
@@ -93,6 +96,22 @@ def main():
             mode, _, sha = meta.split()
             entries.append("%s %s\t%s\n" % (mode, sha, path))
         git("update-index", "--add", "--index-info", env=env, input="".join(entries).encode())
+
+    for keep in a.keep:
+        keep = keep.rstrip("/")
+        gone = [p for p in out("ls-files", env=env).split("\n") if p and (p == keep or p.startswith(keep + "/"))]
+        if gone:
+            git("update-index", "--force-remove", "-z", "--stdin", env=env,
+                input=("\0".join(gone) + "\0").encode())
+        info = out("ls-tree", "-r", ours, "--", keep)
+        if info:
+            entries = []
+            for l in info.strip().split("\n"):
+                meta, path = l.split("\t", 1)
+                mode, _, sha = meta.split()
+                entries.append("%s %s\t%s\n" % (mode, sha, path))
+            git("update-index", "--add", "--index-info", env=env, input="".join(entries).encode())
+        print("kept %s at the version in ours" % keep)
 
     conflicts = []
     for path, st in sorted(changes.items()):

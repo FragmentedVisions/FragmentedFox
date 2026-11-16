@@ -30,8 +30,10 @@ The old base tag is recorded in `fragmentedfox-docs/esr-base.txt`.
 4. Build the upgrade branch from it:
 
    ```bash
-   python3 .github/scripts/upgrade-esr.py FIREFOX_153_7_0esr_RELEASE --branch upgrade-153-7
+   python3 .github/scripts/upgrade-esr.py FIREFOX_153_7_0esr_RELEASE --branch upgrade-153-7 --keep third_party/libwebrtc
    ```
+
+   `--keep` leaves a folder at our version instead of taking the new tag's. `third_party/libwebrtc` is about 680 files and 46,000 changed lines in 153.7 and is never compiled (`--disable-webrtc`), so we skip it. Tests are not skipped: they are spread over every folder and `moz.build` files refer to them.
 
    The script prints how many files it merged and lists any with conflicts. Conflict markers are committed in those files: check out the branch, fix them and commit. It also writes the new tag into `esr-base.txt`. To test the script, run it against the current base tag with `--check`: it must report `tree equals ours: True`.
 5. Fix what Mozilla's new engine broke in the app layer. The app is not merged, so GeckoView or android-components API changes show up as build errors. Pref files change between releases too, so check that every pref in `expected-prefs.json` still exists. If Mozilla's new release adds translations for strings we removed, run `python3 .github/scripts/check-fork.py`: it fails on them, and the fix is to delete those entries.

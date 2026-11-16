@@ -109,9 +109,9 @@ object GeckoProvider {
                     context.components.settings.strictAllowListBaselineTrackingProtection,
                     allowListConvenienceTrackingProtection =
                     context.components.settings.strictAllowListConvenienceTrackingProtection,
-                    safeBrowsingGlobalCacheEnabled = Config.channel.isNightlyOrDebug,
-                    safeBrowsingRealTimeEnabled = Config.channel.isNightlyOrDebug,
-                    safeBrowsingRealTimeSimulationEnabled = Config.channel.isNightlyOrDebug,
+                    safeBrowsingGlobalCacheEnabled = false,
+                    safeBrowsingRealTimeEnabled = false,
+                    safeBrowsingRealTimeSimulationEnabled = false,
                     safeBrowsingRealTimeSimulationHitProbability = 5,
                     safeBrowsingRealTimeSimulationCacheTTLSec = 300,
                     safeBrowsingRealTimeSimulationNegativeCacheEnabled = false,

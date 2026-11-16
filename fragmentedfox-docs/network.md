@@ -20,6 +20,7 @@ What the Android app can contact, as read from the code and defaults. This is a 
 | Google Safe Browsing | `SafeBrowsingPolicy.NONE` in `GeckoEngine.kt` and `TrackingProtectionPolicy.kt`. Our builds have no Google API key, so list updates could only fail. See [changes](./changes.md) |
 | Download reputation lookups | `browser.safebrowsing.downloads.remote.enabled` false |
 | Link prefetch | `network.prefetch-next` false |
+| Look-ahead connections and DNS lookups | `network.http.speculative-parallel-limit` 0 and `network.dns.disablePrefetch` / `disablePrefetchFromHTTPS` true, in `geckoview-prefs.js`. Pages that ask the browser to preconnect to other sites (`<link rel=preconnect>`) are ignored too |
 | Region lookup (Mozilla Location Service) | no token in this build, so the offline default is used |
 | WebRTC | disabled at build time and by pref |
 

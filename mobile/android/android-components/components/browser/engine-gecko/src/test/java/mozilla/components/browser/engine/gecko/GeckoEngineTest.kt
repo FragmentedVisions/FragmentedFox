@@ -1036,7 +1036,7 @@ class GeckoEngineTest {
             contentBlockingSettings.antiTrackingCategories,
         )
 
-        assertEquals(SafeBrowsingPolicy.RECOMMENDED.id, contentBlockingSettings.safeBrowsingCategories)
+        assertEquals(SafeBrowsingPolicy.NONE.id, contentBlockingSettings.safeBrowsingCategories)
 
         assertEquals(CookiePolicy.ACCEPT_FIRST_PARTY_AND_ISOLATE_OTHERS.id, contentBlockingSettings.cookieBehavior)
         assertEquals(

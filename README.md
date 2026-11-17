@@ -46,7 +46,7 @@ There are only two branches. All changes are made on `NonStable--test`, and buil
 | Branch | Purpose |
 | --- | --- |
 | `Stable-Main` | The default branch. The last state that was built and installed on a phone (build 37, commit `cbd89e5d79`, Android build run 43492714687). Anything after that commit is documentation only. |
-| `NonStable--test` | Where all work happens. It starts level with `Stable-Main`. Changes made after build 37 are listed in [changes](./fragmentedfox-docs/changes.md). `Stable-Main` only moves up after a build of the new changes has been checked on a phone. |
+| `NonStable--test` | Where all work happens. Changes made after build 37 are listed in [changes](./fragmentedfox-docs/changes.md). Build 38 (run 43894514143, branch `upgrade-153-7`) adds ESR 153.7.0, Safe Browsing off and no look-ahead connections; it passed and works on an 8 inch Onn tablet (Android 14, 3 GB of RAM). It is waiting for a check on a phone before `Stable-Main` moves. `Stable-Main` only moves up after a build of the new changes has been checked on a phone. |
 
 ## Building
 

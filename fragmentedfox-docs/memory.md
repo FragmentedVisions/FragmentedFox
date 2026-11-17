@@ -24,6 +24,10 @@ Fission (one process per site) follows the Nimbus `fission.isolationStrategy` va
 | `image.mem.surfacecache.min_expiration_ms` | 15000 | Off-screen decoded images are freed after about 15 seconds (Mozilla: 60). Scrolling back re-decodes them. |
 | `media.autoplay.blocking_policy` | 1 | With the Settings default of blocking all autoplay, a video only starts within 5 seconds of a tap. |
 
+## Tested on low-memory hardware
+
+Build 38 (ESR 153.7.0) was installed on an 8 inch Onn tablet with Android 14 and 3 GB of RAM and works there. No measurements were taken; this only says the app runs on a device of that size.
+
 ## Not done
 
 A timed memory-pressure signal for a long-running tab, compressing page data over time (the engine has no such feature), and a lower `dom.ipc.processCount` were considered and not made. See [changes](./changes.md) for details of what was changed and what is untested.

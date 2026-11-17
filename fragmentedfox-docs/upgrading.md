@@ -44,4 +44,8 @@ The old base tag is recorded in `fragmentedfox-docs/esr-base.txt`.
 
 Use only ESR release tags, not the moving `esr153` branch tip. Mozilla publishes security advisories for each release at https://www.mozilla.org/security/advisories/.
 
+## Upgrade log
+
+- **153.6.0 to 153.7.0** (branch `upgrade-153-7`, build 38, run 43894514143, commit `73fc64c766`). The release changes about 1,350 files, of which 678 are `third_party/libwebrtc` (never compiled here), so the branch was made with `--keep third_party/libwebrtc` and has 669 changed files. 21 files were merged three ways with no conflicts. Mozilla did not change `fenix` or `android-components`. The only pref changes in `StaticPrefList.yaml` are three new ones (`dom.ipc.validatePrincipal.validateSiteLoaded`, `gfx.webrender.enforce-embed-policy`, `network.cache.entry_wait_timeout_ms`), none of which contacts anything. `check-fork.py` passed on the branch. The build took about 2 hours because the compile cache was cold (the engine compile alone was about 95 minutes; a build with a warm cache is faster). Installed on an 8 inch Onn tablet (Android 14, 3 GB of RAM) and works; not yet checked on a phone, so `Stable-Main` stays on 153.6.0. The security advisory for the release is mfsa2026-127 (read it on Mozilla's site; it was not opened when the upgrade was made).
+
 When Mozilla moves ESR to a new major version (for example ESR 153 to the next one), expect more build errors in the app layer where GeckoView and android-components changed, and more three-way conflicts in the branding and configuration files.

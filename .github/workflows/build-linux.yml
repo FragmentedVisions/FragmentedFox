@@ -14,12 +14,12 @@ jobs:
           sudo docker image prune --all --force || true
           df -h /
 
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
           fetch-depth: 1
 
       - name: Cache toolchains
-        uses: actions/cache@v5
+        uses: actions/cache@caa296126883cff596d87d8935842f9db880ef25 # v5
         with:
           path: ~/.mozbuild
           key: mozbuild-${{ runner.os }}-${{ hashFiles('python/mozboot/mozboot/*.py', 'build/mach_bootstrap.py') }}
@@ -52,7 +52,7 @@ jobs:
           grep -E '^(Vendor|Name|Version)=' obj-fragmentedfox/dist/bin/application.ini
 
       - name: Upload build
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
         with:
           name: fragmentedfox-linux-x86_64
           path: obj-fragmentedfox/dist/*.tar.*

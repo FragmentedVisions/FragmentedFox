@@ -440,6 +440,14 @@ def check_telemetry():
         fail("telemetry", "OnboardingFragment.kt: the onboarding opt-out ping is no longer gated on BuildConfig.TELEMETRY")
 
 
+def check_actions_pinned():
+    for path in sorted(glob.glob(os.path.join(ROOT, ".github", "**", "*.yml"), recursive=True)):
+        for number, line in enumerate(read(path).splitlines(), 1):
+            match = re.match(r"\s*(?:-\s*)?uses:\s*(\S+)", line)
+            if match and not match.group(1).startswith("./") and not re.search(r"@[0-9a-f]{40}$", match.group(1)):
+                fail("actions", f"{os.path.relpath(path, ROOT)}:{number}: {match.group(1)} is not pinned to a commit, a moved tag would run new code in the build that holds the signing key")
+
+
 def check_syntax():
     for path in glob.glob(os.path.join(APP, "*.yaml")):
         try:
@@ -466,7 +474,7 @@ def normalise(section, message):
 
 
 def main():
-    checks = [check_imports, check_resources, check_pings, check_removed, check_prefs, check_settings, check_safe_browsing, check_cache_patch, check_nimbus, check_cleartext, check_launcher_aliases, check_theme, check_palette_visibility, check_remote_experiments, check_query_stripping, check_licenses, check_translations, check_hidden_settings, check_search, check_gradle_projects, check_callable_references, check_glean, check_features, check_telemetry, check_syntax]
+    checks = [check_imports, check_resources, check_pings, check_removed, check_prefs, check_settings, check_safe_browsing, check_cache_patch, check_nimbus, check_cleartext, check_launcher_aliases, check_theme, check_palette_visibility, check_remote_experiments, check_query_stripping, check_licenses, check_translations, check_hidden_settings, check_search, check_gradle_projects, check_actions_pinned, check_callable_references, check_glean, check_features, check_telemetry, check_syntax]
     selected_flags = [a for a in sys.argv[1:] if a.startswith("--")]
     selected = [a for a in sys.argv[1:] if not a.startswith("--")]
     for check in checks:

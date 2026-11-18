@@ -43,6 +43,7 @@ GitHub's free runners have 4 cores, 16 GB of memory and a 6 hour job limit. A fu
 `.github/scripts/check-fork.py` is a quick guard that runs in seconds. The Android build runs it before the long compile, and the `Check FragmentedFox` workflow runs it on its own. It checks that:
 
 - every `org.mozilla.fenix` import points at something that still exists, and every string and drawable used in code exists (this catches code that still points at something deleted, which would otherwise fail 90 minutes into a build);
+- every GitHub Action in `.github` is pinned to a full commit SHA (the version is in a trailing comment), so a moved tag in someone else's repository cannot run new code in the build that holds the signing key. To update one, look up the tag's commit with `git ls-remote https://github.com/OWNER/REPO refs/tags/TAG` (an annotated tag needs its `^{}` line) and change both the SHA and the comment;
 - nothing from `fragmentedfox-docs/removed.json` (the removed SDKs and features) has come back;
 - the prefs in `expected-prefs.json` and the Android defaults in `expected-settings.json` and the Nimbus defaults in `expected-nimbus.json` still have the values FragmentedFox sets (an ESR upgrade can silently change them);
 - cleartext traffic is still refused, DuckDuckGo is still the preferred default search engine, and the Android defaults flipped by FragmentedFox (ads client, expanded toolbar and others) have not changed back;

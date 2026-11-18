@@ -207,19 +207,6 @@ export class GeckoViewStartup {
             ],
           });
 
-          GeckoViewUtils.addLazyGetter(this, "GeckoViewIPProtection", {
-            module: "resource://gre/modules/GeckoViewIPProtection.sys.mjs",
-            ged: [
-              "GeckoView:IPProtection:Init",
-              "GeckoView:IPProtection:Uninit",
-              "GeckoView:IPProtection:IPProtectionService:GetState",
-              "GeckoView:IPProtection:IPPProxyManager:GetState",
-              "GeckoView:IPProtection:Activate",
-              "GeckoView:IPProtection:Deactivate",
-              "GeckoView:IPProtection:Enroll",
-            ],
-          });
-
           GeckoViewUtils.addLazyGetter(this, "ChildCrashHandler", {
             module: "resource://gre/modules/ChildCrashHandler.sys.mjs",
             observers: [

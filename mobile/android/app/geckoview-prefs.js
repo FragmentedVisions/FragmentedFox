@@ -335,13 +335,13 @@ pref("network.protocol-handler.warn-external.vnd.youtube", false);
 // Transmit UDP busy-work to the LAN when anticipating low latency
 // network reads and on wifi to mitigate 802.11 Power Save Polling delays
 // (bug 888268)
-pref("network.tickle-wifi.enabled", true);
+pref("network.tickle-wifi.enabled", false);
 
 // Controls OHTTP config URL
-pref("network.ohttp.configURL", "https://prod.ohttp-gateway.prod.webservices.mozgcp.net/ohttp-configs");
+pref("network.ohttp.configURL", "");
 
 // Controls OHTTP relay URL
-pref("network.ohttp.relayURL", "https://mozilla-ohttp.fastly-edge.com/");
+pref("network.ohttp.relayURL", "");
 
 // Nimbus QA prefs. Used for testing pref-setting experiments.
 pref("nimbus.qa.pref-string-default", "default");
@@ -391,11 +391,6 @@ pref("xpinstall.signatures.required", true);
 pref("xpinstall.whitelist.add", "https://addons.mozilla.org");
 pref("xpinstall.whitelist.fileRequest", false);
 
-// Pref to enable the IP protection feature
-pref("browser.ipProtection.enabled", false);
-pref("browser.ipProtection.guardian.endpoint", "https://vpn.mozilla.org/");
-pref("toolkit.ipProtection.android.authProvider", "fxa");
-
 pref("media.navigator.video.enabled", false);
 pref("media.peerconnection.ice.default_address_only", true);
 pref("media.peerconnection.ice.no_host", true);
@@ -429,3 +424,5 @@ pref("network.dns.disablePrefetchFromHTTPS", true);
 
 // Sites cannot read the battery level
 pref("dom.battery.enabled", false);
+
+pref("browser.ipProtection.enabled", false);

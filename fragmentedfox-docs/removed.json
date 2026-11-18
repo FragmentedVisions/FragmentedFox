@@ -69,6 +69,8 @@
     "trimMemoryAutomatically",
     "IPProtectionDelegate",
     "IPProtectionHandler",
+    "IPProtectionController",
+    "GeckoViewIPProtection",
     "WebExtensionBrowserMenuBuilder",
     "ToolbarAutocompleteFeature",
     "WebExtensionToolbarFeature",

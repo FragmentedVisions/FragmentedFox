@@ -46,7 +46,10 @@
     "network.http.speculative-parallel-limit": "0",
     "network.dns.disablePrefetch": "true",
     "network.dns.disablePrefetchFromHTTPS": "true",
-    "dom.battery.enabled": "false"
+    "dom.battery.enabled": "false",
+    "network.ohttp.configURL": "\"\"",
+    "network.ohttp.relayURL": "\"\"",
+    "network.tickle-wifi.enabled": "false"
   },
   "modules/libpref/init/all.js": {
     "datareporting.policy.dataSubmissionEnabled": "false",

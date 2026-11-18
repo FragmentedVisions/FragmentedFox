@@ -429,7 +429,3 @@ pref("network.dns.disablePrefetchFromHTTPS", true);
 
 // Sites cannot read the battery level
 pref("dom.battery.enabled", false);
-
-// No system add-ons ship with the app, so no daily check of Mozilla's update server for them
-pref("extensions.systemAddon.update.enabled", false);
-pref("extensions.systemAddon.update.url", "");

@@ -608,8 +608,8 @@ void nsHttpChannel::CancelSuspendOrResumeAfterExamineResponse() {
   if (mSuspendAfterExamineResponse.isNothing()) {
     return;
   }
-  bool oldValue = mSuspendAfterExamineResponse.ref().exchange(false);
-  if (!oldValue) {
+  mSuspendAfterExamineResponse.ref() = false;
+  if (mSuspendedForExamineResponse.exchange(false)) {
     Resume();
   }
 }
@@ -620,6 +620,7 @@ void nsHttpChannel::MaybeSuspendAfterExamineResponse() {
   }
   bool oldValue = mSuspendAfterExamineResponse.ref().exchange(false);
   if (oldValue) {
+    mSuspendedForExamineResponse = true;
     Suspend();
   }
 }
@@ -7340,6 +7341,14 @@ nsresult nsHttpChannel::CancelInternal(nsresult status) {
     needAsyncAbort = false;
     (void)AsyncAbort(status);
   }
+
+  // If we suspended after examining the response to await asynchronous
+  // tracking-protection annotation, a cancel while suspended would defer the
+  // terminal teardown below (CloseCacheEntry / AsyncAbort) to a Resume() that
+  // may never arrive. For a cache writer that leaves the entry perpetually
+  // "being written" and wedges later same-URL requests (bug 2052908). Undo the
+  // suspension now. Safe if we only primed but never actually suspended.
+  CancelSuspendOrResumeAfterExamineResponse();
 
   // If suspended waiting for dictionary prefetch, unblock it so the channel
   // can proceed to cleanup. The prefetch callback may never fire, so we must

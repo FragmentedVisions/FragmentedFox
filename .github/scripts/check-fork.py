@@ -192,6 +192,19 @@ def check_safe_browsing():
             fail("safe-browsing", f"{relative}: Safe Browsing is back on, but the build has no Google API key so it only sends useless requests to Google")
 
 
+def check_cache_patch():
+    checks = {
+        "netwerk/protocol/http/nsHttpChannel.cpp": ["mSuspendedForExamineResponse", "CancelSuspendOrResumeAfterExamineResponse();"],
+        "netwerk/protocol/http/nsHttpChannel.h": ["mSuspendedForExamineResponse"],
+        "netwerk/cache2/CacheEntry.cpp": ["writer lock bypassed while data still in progress"],
+    }
+    for relative, needles in checks.items():
+        text = read(os.path.join(ROOT, relative))
+        for needle in needles:
+            if needle not in text:
+                fail("cache-patch", f"{relative}: our backport of Mozilla's cache hang fix (bug 2052908) is missing '{needle}'; see fragmentedfox-docs/changes.md before taking Mozilla's version")
+
+
 def check_nimbus():
     expected = json.loads(read(os.path.join(ROOT, "fragmentedfox-docs/expected-nimbus.json")))
     features = yaml.safe_load(read(os.path.join(APP, "nimbus.fml.yaml")))["features"]
@@ -454,7 +467,7 @@ def normalise(section, message):
 
 
 def main():
-    checks = [check_imports, check_resources, check_pings, check_removed, check_prefs, check_settings, check_safe_browsing, check_nimbus, check_cleartext, check_launcher_aliases, check_theme, check_palette_visibility, check_remote_experiments, check_query_stripping, check_licenses, check_translations, check_hidden_settings, check_search, check_gradle_projects, check_callable_references, check_glean, check_features, check_telemetry, check_syntax]
+    checks = [check_imports, check_resources, check_pings, check_removed, check_prefs, check_settings, check_safe_browsing, check_cache_patch, check_nimbus, check_cleartext, check_launcher_aliases, check_theme, check_palette_visibility, check_remote_experiments, check_query_stripping, check_licenses, check_translations, check_hidden_settings, check_search, check_gradle_projects, check_callable_references, check_glean, check_features, check_telemetry, check_syntax]
     selected_flags = [a for a in sys.argv[1:] if a.startswith("--")]
     selected = [a for a in sys.argv[1:] if not a.startswith("--")]
     for check in checks:

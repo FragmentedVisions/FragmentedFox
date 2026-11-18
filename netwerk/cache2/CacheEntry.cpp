@@ -887,13 +887,24 @@ bool CacheEntry::InvokeCallback(Callback& aCallback) MOZ_REQUIRES(mLock) {
       }
 
       if (bypass) {
-        LOG(("  bypassing, entry data still being written"));
-        return false;
+        if (!mBypassWriterLock) {
+          LOG(("  bypassing, entry data still being written"));
+          return false;
+        }
+        // The writer lock is bypassed because the writer has been suspended for
+        // too long (see SetBypassWriterLock, armed by nsHttpChannel's suspend
+        // timer). The entry's data may never be finished, so instead of parking
+        // this consumer forever, hand it the entry as "not wanted" so it falls
+        // back to the network (bug 2052908).
+        LOG(
+            ("  writer lock bypassed while data still in progress; delivering "
+             "as not-wanted so the consumer goes to the network"));
+        aCallback.mNotWanted = true;
+      } else {
+        // Entry is complete now, do the check+avail call again
+        aCallback.mRecheckAfterWrite = false;
+        return InvokeCallback(aCallback);
       }
-
-      // Entry is complete now, do the check+avail call again
-      aCallback.mRecheckAfterWrite = false;
-      return InvokeCallback(aCallback);
     }
 
     mozilla::MutexAutoUnlock unlock(mLock);

@@ -448,6 +448,17 @@ def check_actions_pinned():
                 fail("actions", f"{os.path.relpath(path, ROOT)}:{number}: {match.group(1)} is not pinned to a commit, a moved tag would run new code in the build that holds the signing key")
 
 
+def check_target_sdk():
+    configure = read(os.path.join(ROOT, "build/moz.configure/android-sdk.configure"))
+    config = read(os.path.join(AC, ".config.yml"))
+    a = re.search(r'target_sdk_version="(\d+)"', configure)
+    b = re.search(r"^targetSdkVersion:\s*(\d+)", config, flags=re.M)
+    if not a or not b:
+        fail("sdk", "could not read the target SDK level from android-sdk.configure or android-components/.config.yml")
+    elif a.group(1) != b.group(1) or a.group(1) != "36":
+        fail("sdk", f"target SDK is {a.group(1)} in android-sdk.configure and {b.group(1)} in .config.yml, both must be 36: from 37 on, Android blocks local network access (router pages, home servers) unless the app declares and requests ACCESS_LOCAL_NETWORK")
+
+
 def check_syntax():
     for path in glob.glob(os.path.join(APP, "*.yaml")):
         try:
@@ -474,7 +485,7 @@ def normalise(section, message):
 
 
 def main():
-    checks = [check_imports, check_resources, check_pings, check_removed, check_prefs, check_settings, check_safe_browsing, check_cache_patch, check_nimbus, check_cleartext, check_launcher_aliases, check_theme, check_palette_visibility, check_remote_experiments, check_query_stripping, check_licenses, check_translations, check_hidden_settings, check_search, check_gradle_projects, check_actions_pinned, check_callable_references, check_glean, check_features, check_telemetry, check_syntax]
+    checks = [check_imports, check_resources, check_pings, check_removed, check_prefs, check_settings, check_safe_browsing, check_cache_patch, check_nimbus, check_cleartext, check_launcher_aliases, check_theme, check_palette_visibility, check_remote_experiments, check_query_stripping, check_licenses, check_translations, check_hidden_settings, check_search, check_gradle_projects, check_actions_pinned, check_target_sdk, check_callable_references, check_glean, check_features, check_telemetry, check_syntax]
     selected_flags = [a for a in sys.argv[1:] if a.startswith("--")]
     selected = [a for a in sys.argv[1:] if not a.startswith("--")]
     for check in checks:

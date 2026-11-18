@@ -207,7 +207,6 @@
     <ID>HardcodedPaddingUsage:ExceptionsListScreen.kt$(horizontal = 16.dp)</ID>
     <ID>HardcodedPaddingUsage:ExpandableListHeader.kt$(horizontal = 16.dp, vertical = 8.dp)</ID>
     <ID>HardcodedPaddingUsage:ExtensionsMenuItem.kt$( start = if (count &gt; 0) 8.dp else 2.dp, top = 2.dp, bottom = 2.dp, end = 2.dp, )</ID>
-    <ID>HardcodedPaddingUsage:FirefoxLabsScreen.kt$(horizontal = 16.dp, vertical = 24.dp)</ID>
     <ID>HardcodedPaddingUsage:FontSizeSlider.kt$(16.dp)</ID>
     <ID>HardcodedPaddingUsage:FontSizeSlider.kt$(6.dp)</ID>
     <ID>HardcodedPaddingUsage:FontSizeSlider.kt$(start = 72.dp, top = 16.dp, end = 16.dp, bottom = 16.dp)</ID>
@@ -223,7 +222,6 @@
     <ID>HardcodedPaddingUsage:InactiveTabs.kt$(start = 16.dp)</ID>
     <ID>HardcodedPaddingUsage:InfoScreen.kt$( start = 72.dp, top = 6.dp, end = 16.dp, bottom = 6.dp, )</ID>
     <ID>HardcodedPaddingUsage:InfoScreen.kt$(end = 8.dp)</ID>
-    <ID>HardcodedPaddingUsage:LensCameraScreen.kt$(top = 48.dp, start = 12.dp)</ID>
     <ID>HardcodedPaddingUsage:LibraryMenuItem.kt$(horizontal = 4.dp, vertical = 12.dp)</ID>
     <ID>HardcodedPaddingUsage:LoginsTools.kt$(16.dp)</ID>
     <ID>HardcodedPaddingUsage:MainMenu.kt$( start = 8.dp, top = if (accessPoint != MenuAccessPoint.Home &amp;&amp; (isBottomToolbar || isExpandedToolbarEnabled) ) { 0.dp } else { 8.dp }, end = 8.dp, bottom = if (accessPoint != MenuAccessPoint.Home &amp;&amp; (isBottomToolbar || isExpandedToolbarEnabled) ) { 84.dp } else { 16.dp }, )</ID>

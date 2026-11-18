@@ -49,7 +49,6 @@ import org.mozilla.fenix.components.appstate.AppState
 import org.mozilla.fenix.components.appstate.setup.checklist.SetupChecklistState
 import org.mozilla.fenix.components.appstate.setup.checklist.getSetupChecklistCollection
 import org.mozilla.fenix.components.bookmarks.lastSavedFolderCache
-import org.mozilla.fenix.components.lens.GoogleLensAIControlFeature
 import org.mozilla.fenix.components.metrics.MetricsMiddleware
 import org.mozilla.fenix.crashes.CrashReportingAppMiddleware
 import org.mozilla.fenix.crashes.SettingsCrashReportCache
@@ -75,7 +74,6 @@ import org.mozilla.fenix.settings.ai.AIControlsSearchProvider
 import org.mozilla.fenix.settings.datachoices.DataChoicesSearchProvider
 import org.mozilla.fenix.settings.emailmasks.middleware.DefaultEmailMasksRepository
 import org.mozilla.fenix.settings.emailmasks.middleware.EmailMasksRepository
-import org.mozilla.fenix.settings.labs.FirefoxLabsSettingsSearchProvider
 import org.mozilla.fenix.settings.settingssearch.DefaultFenixSettingsIndexer
 import org.mozilla.fenix.utils.Settings
 import org.mozilla.fenix.utils.isLargeScreenSize
@@ -329,9 +327,6 @@ class Components(private val context: Context) {
             additionalProviders = listOf(
                 DataChoicesSearchProvider,
                 AIControlsSearchProvider,
-                FirefoxLabsSettingsSearchProvider(
-                    isLabsEnabled = { settings.enableFirefoxLabs },
-                ),
             ),
         )
     }
@@ -373,9 +368,6 @@ class Components(private val context: Context) {
                     onUpdateWidget = { VoiceSearchAIControlFeature.updateWidget(context) },
                 ),
             )
-            if (settings.googleLensIntegrationEnabled) {
-                it.register(GoogleLensAIControlFeature(settings = settings))
-            }
         }
     }
 

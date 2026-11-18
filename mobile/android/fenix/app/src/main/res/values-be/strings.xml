@@ -3053,7 +3053,6 @@
   <!-- The first active link used in privacy_notice_updated_homepage_message -->
   <!-- The second active link used in privacy_notice_updated_homepage_message -->
   <!-- Content description for the QR scanner half of the camera mode toggle -->
-  <string name="lens_camera_mode_qr">QR-сканэр</string>
   <!--
     Firefox Labs
 
@@ -3062,11 +3061,7 @@
     The "Labs" portion can be localized, "Firefox" must be treated as a brand and kept
     in English.
   -->
-  <string name="firefox_labs_title" tools:ignore="BrandUsage">Firefox Labs</string>
   <!-- The link text shown when a feedback URL for a Firefox Labs feature is available. The feedback URL page will allow users to provide opinions and suggestions. -->
-  <string name="firefox_labs_share_feedback">Падзяліцца водгукам</string>
   <!-- The text on the dialog on the Firefox Labs screen for the positive button when toggling "on" and "off" experimental features. This prompts the user to confirm that they want to restart the app. -->
-  <string name="firefox_labs_dialog_restart_button">Перазапусціць</string>
   <!-- The text on the dialog on the Firefox Labs screen for the negative button when toggling "on" and "off" experimental features. This is used to cancel the action and return to the previous screen. -->
-  <string name="firefox_labs_dialog_cancel_button">Адмена</string>
 </resources>

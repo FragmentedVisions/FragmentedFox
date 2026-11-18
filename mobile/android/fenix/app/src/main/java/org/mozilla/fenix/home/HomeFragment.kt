@@ -76,7 +76,6 @@ import org.mozilla.fenix.browser.browsingmode.BrowsingMode
 import org.mozilla.fenix.browser.tabstrip.TabStrip
 import org.mozilla.fenix.browser.tabstrip.TabStripColors
 import org.mozilla.fenix.components.HomepageThumbnailIntegration
-import org.mozilla.fenix.components.LensFeature
 import org.mozilla.fenix.components.QrScanFenixFeature
 import org.mozilla.fenix.components.TabCollectionStorage
 import org.mozilla.fenix.components.VoiceSearchFeature
@@ -223,20 +222,6 @@ class HomeFragment : Fragment() {
     private val voiceSearchLauncher: ActivityResultLauncher<Intent> =
         registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
             voiceSearchFeature?.get()?.handleVoiceSearchResult(result.resultCode, result.data)
-        }
-    private var lensFeature: ViewBoundFeatureWrapper<LensFeature>? =
-        ViewBoundFeatureWrapper()
-    private val lensLauncher: ActivityResultLauncher<Intent> =
-        registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
-            lensFeature?.get()?.handleCameraActivityResult(
-                result.resultCode,
-                result.data,
-                qrScanFenixFeature?.get(),
-            )
-        }
-    private val lensCameraPermissionLauncher: ActivityResultLauncher<String> =
-        registerForActivityResult(ActivityResultContracts.RequestPermission()) { isGranted ->
-            lensFeature?.get()?.onCameraPermissionResult(isGranted)
         }
 
     private val setToDefaultPromptRequestLauncher: ActivityResultLauncher<Intent> =
@@ -420,7 +405,6 @@ class HomeFragment : Fragment() {
 
         qrScanFenixFeature = QrScanFenixFeature.register(this, qrScanLauncher)
         voiceSearchFeature = VoiceSearchFeature.register(this, voiceSearchLauncher)
-        lensFeature = LensFeature.register(this, lensLauncher, lensCameraPermissionLauncher)
 
         initTopSitesBinding(view = view)
         initRecentTabsListFeature(view = view)

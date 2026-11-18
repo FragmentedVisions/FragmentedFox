@@ -659,12 +659,6 @@
             android:taskAffinity=""
             />
 
-        <activity android:name=".components.lens.LensCameraActivity"
-            android:theme="@style/Theme.LensCamera"
-            android:exported="false"
-            android:taskAffinity=""
-            />
-
         <activity
             android:name=".settings.account.AuthCustomTabActivity"
             android:autoRemoveFromRecents="false"
@@ -768,16 +762,6 @@
             <property android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
                 android:value="Developer tool: Shows notification during performance profiling" />
         </service>
-
-        <provider
-            android:name=".components.LensFileProvider"
-            android:authorities="${applicationId}.lens.fileprovider"
-            android:exported="false"
-            android:grantUriPermissions="true">
-            <meta-data
-                android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/file_provider_paths" />
-        </provider>
 
         <provider
             android:name=".perf.ProfilerProvider"

@@ -2486,5 +2486,4 @@
 
   <!-- The second active link used in privacy_notice_updated_homepage_message -->
   <!-- The text on the dialog on the Firefox Labs screen for the negative button when toggling "on" and "off" experimental features. This is used to cancel the action and return to the previous screen. -->
-  <string name="firefox_labs_dialog_cancel_button">Dūyichin\'</string>
 </resources>

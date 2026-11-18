@@ -4056,34 +4056,20 @@
     The "Labs" portion can be localized, "Firefox" must be treated as a brand and kept
     in English.
   -->
-  <string name="firefox_labs_title" tools:ignore="BrandUsage">Firefox Labs</string>
   <!-- Banner title text on the Firefox Labs screen. -->
-  <string name="firefox_labs_banner_title_2">実験的な機能をお試しください！</string>
   <!--
     Banner description text on the Firefox Labs screen. Provides information on what Firefox Labs does. %s is the name of the app (for example "Firefox Nightly").
     Text will appear under the Firefox Labs banner title.
   -->
-  <string name="firefox_labs_experimental_description">これらは開発段階のため進化していきますが、%s の動作に影響を与える可能性があります。</string>
   <!-- The link text shown when a feedback URL for a Firefox Labs feature is available. The feedback URL page will allow users to provide opinions and suggestions. -->
-  <string name="firefox_labs_share_feedback">フィードバックを共有する</string>
   <!-- Content description for the share feedback link on a Firefox Labs feature. This text will be used by screen readers to provide more context on the feedback link. %s is the name of the Firefox Labs feature. -->
-  <string name="firefox_labs_share_feedback_content_description">%s に関するフィードバックをお寄せください。</string>
   <!-- Button text on the Firefox Labs screen for restoring all toggles back to the default settings. The button will turn off any experimental features. -->
-  <string name="firefox_labs_restore_default_button_text">初期設定に戻す</string>
   <!-- The title used in a confirmation dialog on the Firefox Labs screen when toggling "on" or "off" an experimental feature that requires a restart. -->
-  <string name="firefox_labs_feature_dialog_title">再起動が必要です</string>
   <!-- The text on the dialog on the Firefox Labs screen for the positive button when toggling "on" and "off" experimental features. This prompts the user to confirm that they want to restart the app. -->
-  <string name="firefox_labs_dialog_restart_button">再起動</string>
   <!-- The text on the dialog on the Firefox Labs screen for the negative button when toggling "on" and "off" experimental features. This is used to cancel the action and return to the previous screen. -->
-  <string name="firefox_labs_dialog_cancel_button">キャンセル</string>
   <!-- The title used in a confirmation dialog on the Firefox Labs screen when restoring the application to its defaults by turning "off" any experimental features. -->
-  <string name="firefox_labs_restore_defaults_dialog_title">再起動が必要です</string>
   <!-- The description used in a confirmation dialog on the Firefox Labs screen when restoring the application to its defaults by turning "off" any experimental features. %s is the name of the app (for example "Firefox Nightly") -->
-  <string name="firefox_labs_restore_defaults_dialog_message">初期設定に戻すには、%s を再起動してください。</string>
   <!-- The description text that is displayed in the confirmation dialog on the Firefox Labs screen for toggling "on" experimental features. %s is the name of the app (for example "Firefox Nightly") -->
-  <string name="firefox_labs_feature_enable_dialog_message">この機能を有効にするには、%s を再起動してください。</string>
   <!-- The description text that is displayed in the confirmation dialog on the Firefox Labs screen for toggling "off" experimental features. %s is the name of the app (for example "Firefox Nightly") -->
-  <string name="firefox_labs_feature_disable_dialog_message">この機能を無効にするには、%s を再起動してください。</string>
   <!-- Text displayed on the Firefox Labs screen when there are no Labs experimental features present. -->
-  <string name="firefox_labs_no_labs_available_description">現時点で試せる実験的な機能はありません</string>
 </resources>

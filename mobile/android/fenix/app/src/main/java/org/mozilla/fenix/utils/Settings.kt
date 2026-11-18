@@ -2113,14 +2113,6 @@ class Settings(
     )
 
     /**
-     * Indicates if Firefox Labs is enabled.
-     */
-    var enableFirefoxLabs by booleanPreference(
-        key = appContext.getPreferenceKey(R.string.pref_key_enable_firefox_labs),
-        default = FeatureFlags.FIREFOX_LABS,
-    )
-
-    /**
      * Indicates if the top sites pager layout is enabled.
      */
     var topSitesPager by booleanPreference(
@@ -2594,21 +2586,6 @@ class Settings(
     var nativeShareSheetEnabled by booleanPreference(
         key = appContext.getPreferenceKey(R.string.pref_key_native_share_sheet),
         default = { FxNimbus.features.nativeShareSheet.value().enabled },
-    )
-
-    var googleLensIntegrationEnabled by booleanPreference(
-        key = appContext.getPreferenceKey(R.string.pref_key_google_lens_integration),
-        default = { FxNimbus.features.googleLensIntegration.value().enabled },
-    )
-
-    /**
-     * User preference (local only) controlling whether the Google Lens integration is active
-     * when [googleLensIntegrationEnabled] is on. When false, the standard QR scanner is used
-     * and the "Open with Google Lens" image context menu entry is hidden.
-     */
-    var googleLensIntegrationUserEnabled by booleanPreference(
-        key = appContext.getPreferenceKey(R.string.pref_key_google_lens_integration_user_enabled),
-        default = true,
     )
 
     /**

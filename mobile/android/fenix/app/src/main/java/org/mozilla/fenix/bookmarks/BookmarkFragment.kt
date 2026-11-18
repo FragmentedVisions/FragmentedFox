@@ -29,7 +29,6 @@ import mozilla.components.lib.state.helpers.StoreProvider.Companion.fragmentStor
 import mozilla.components.support.base.feature.ViewBoundFeatureWrapper
 import org.mozilla.fenix.HomeActivity
 import org.mozilla.fenix.R
-import org.mozilla.fenix.components.LensFeature
 import org.mozilla.fenix.components.QrScanFenixFeature
 import org.mozilla.fenix.components.VoiceSearchFeature
 import org.mozilla.fenix.components.accounts.FenixFxAEntryPoint
@@ -72,20 +71,6 @@ class BookmarkFragment : Fragment(), SystemInsetsPaddedFragment {
     private val voiceSearchLauncher: ActivityResultLauncher<Intent> =
         registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
             voiceSearchFeature?.get()?.handleVoiceSearchResult(result.resultCode, result.data)
-        }
-    private var lensFeature: ViewBoundFeatureWrapper<LensFeature>? =
-        ViewBoundFeatureWrapper<LensFeature>()
-    private val lensLauncher: ActivityResultLauncher<Intent> =
-        registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
-            lensFeature?.get()?.handleCameraActivityResult(
-                result.resultCode,
-                result.data,
-                qrScanFenixFeature?.get(),
-            )
-        }
-    private val lensCameraPermissionLauncher: ActivityResultLauncher<String> =
-        registerForActivityResult(ActivityResultContracts.RequestPermission()) { isGranted ->
-            lensFeature?.get()?.onCameraPermissionResult(isGranted)
         }
 
     private val importResultFlow = MutableSharedFlow<ImporterResult>(extraBufferCapacity = 1)
@@ -222,7 +207,6 @@ class BookmarkFragment : Fragment(), SystemInsetsPaddedFragment {
         super.onViewCreated(view, savedInstanceState)
         qrScanFenixFeature = QrScanFenixFeature.register(this, qrScanLauncher)
         voiceSearchFeature = VoiceSearchFeature.register(this, voiceSearchLauncher)
-        lensFeature = LensFeature.register(this, lensLauncher, lensCameraPermissionLauncher)
 
         childFragmentManager.setFragmentResultListener(
             ImportBookmarksDialogFragment.REQUEST_KEY,

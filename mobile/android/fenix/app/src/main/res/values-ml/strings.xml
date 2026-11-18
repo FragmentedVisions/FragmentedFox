@@ -3607,19 +3607,11 @@
   <!-- The first active link used in privacy_notice_updated_homepage_message -->
   <!-- The second active link used in privacy_notice_updated_homepage_message -->
   <!-- Lens image search button content description -->
-  <string name="lens_search_content_description">പടം ഉപയോഗിച്ചു തിരയുക</string>
   <!-- Content description for the gallery picker button in the Lens camera screen -->
-  <string name="content_description_gallery">ചിത്രശാലയിൽ നിന്നൊരു പടം ഗൂഗിൾ ലെൻസേക്കു് അയയ്ക്കുക</string>
   <!-- Content description for the shutter button in the Lens camera screen -->
-  <string name="content_description_take_photo">പടമെടുത്തിട്ടു ഗൂഗിൾ ലെൻസേക്കു് അയയ്ക്കുക</string>
   <!-- Image context menu entry that sends the long-pressed image to Google Lens -->
-  <string name="context_menu_open_image_with_google_lens">ഗൂഗിൾ ലെൻസ് ഉപയോഗിച്ചു തിരയുക</string>
   <!-- Toast shown when the user denies the camera permission requested by the Lens camera screen -->
-  <string name="lens_camera_permission_denied">അനുമതി നല്കിയില്ല</string>
   <!-- Title for the Google Lens AI feature toggle -->
-  <string name="ai_controls_google_lens_title">ഗൂഗിൾ ലെൻസ്</string>
   <!-- The text on the dialog on the Firefox Labs screen for the negative button when toggling "on" and "off" experimental features. This is used to cancel the action and return to the previous screen. -->
-  <string name="firefox_labs_dialog_cancel_button">റദ്ദാക്കുക</string>
   <!-- The description text that is displayed in the confirmation dialog on the Firefox Labs screen for toggling "on" experimental features. %s is the name of the app (for example "Firefox Nightly") -->
-  <string name="firefox_labs_feature_enable_dialog_message">ഈ സവിശേഷത തുടങ്ങാൻ %s-നെ പുനരാരംഭിക്കുക.</string>
 </resources>

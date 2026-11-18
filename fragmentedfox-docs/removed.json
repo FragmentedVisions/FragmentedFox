@@ -97,7 +97,13 @@
     "PrivacyNoticeBanner",
     "TermsOfUseManager",
     "TermsOfUseBottomSheet",
-    "TermsOfUsePromptRepository"
+    "TermsOfUsePromptRepository",
+    "LensFeature",
+    "LensCameraActivity",
+    "GoogleLensAIControlFeature",
+    "googleLensIntegration",
+    "FirefoxLabsFragment",
+    "enableFirefoxLabs"
   ],
   "permissions": [
     "com.adjust.preinstall.READ_PERMISSION"

@@ -4114,17 +4114,11 @@
   <!-- The first active link used in privacy_notice_updated_homepage_message -->
   <!-- The second active link used in privacy_notice_updated_homepage_message -->
   <!-- Google Lens prototype related strings -->
-  <string name="preferences_debug_settings_google_lens_integration">Google-Lens-Integration aktivieren</string>
   <!-- Lens image search button content description -->
-  <string name="lens_search_content_description">Mit Grafik suchen</string>
   <!-- Content description for the gallery picker button in the Lens camera screen -->
-  <string name="content_description_gallery">Aus Galerie auswählen und an Google Lens senden</string>
   <!-- Content description for the shutter button in the Lens camera screen -->
-  <string name="content_description_take_photo">Foto machen und an Google Lens senden</string>
   <!-- Image context menu entry that sends the long-pressed image to Google Lens -->
-  <string name="context_menu_open_image_with_google_lens">Mit Google Lens suchen</string>
   <!-- Toast shown when the user denies the camera permission requested by the Lens camera screen -->
-  <string name="lens_camera_permission_denied">Zugriff verweigert</string>
   <!--
     Title shown at the top of the camera screen, next to the close button, telling the
     user that the photo they capture will be sent to Google Lens for a visual search.
@@ -4137,15 +4131,10 @@
   <!-- Description for the Google Lens Search Settings page feature toggle -->
   <!-- Caption shown under the Google Lens toggle clarifying when the feature is available -->
   <!-- Title for the Google Lens AI feature toggle -->
-  <string name="ai_controls_google_lens_title">Google Lens</string>
   <!-- Description for the Google Lens AI feature toggle -->
-  <string name="ai_controls_google_lens_description">Sendet Grafiken und Fotos zur visuellen Suche an Google.</string>
   <!-- Content description for the Google Lens half of the camera mode toggle -->
-  <string name="lens_camera_mode_lens">Google Lens</string>
   <!-- Content description for the QR scanner half of the camera mode toggle -->
-  <string name="lens_camera_mode_qr">QR-Scanner</string>
   <!-- Toast shown when the user picks an image from the gallery in QR mode but no QR code is found in it -->
-  <string name="lens_camera_qr_no_code_found">Kein QR-Code in der Grafik gefunden</string>
   <!--
     Firefox Labs
 
@@ -4154,35 +4143,21 @@
     The "Labs" portion can be localized, "Firefox" must be treated as a brand and kept
     in English.
   -->
-  <string name="firefox_labs_title" tools:ignore="BrandUsage">Firefox Labs</string>
   <!-- Banner title text on the Firefox Labs screen. -->
-  <string name="firefox_labs_banner_title_2">Probieren Sie unsere experimentellen Funktionen aus!</string>
   <!--
     Banner description text on the Firefox Labs screen. Provides information on what Firefox Labs does. %s is the name of the app (for example "Firefox Nightly").
     Text will appear under the Firefox Labs banner title.
   -->
-  <string name="firefox_labs_experimental_description">Sie sind noch in der Entwicklung und entwickeln sich weiter, was sich auf die Funktionsweise von %s auswirken könnte.</string>
   <!-- The link text shown when a feedback URL for a Firefox Labs feature is available. The feedback URL page will allow users to provide opinions and suggestions. -->
-  <string name="firefox_labs_share_feedback">Sagen Sie Ihre Meinung</string>
   <!-- Content description for the share feedback link on a Firefox Labs feature. This text will be used by screen readers to provide more context on the feedback link. %s is the name of the Firefox Labs feature. -->
-  <string name="firefox_labs_share_feedback_content_description">Geben Sie Feedback für %s.</string>
   <!-- Button text on the Firefox Labs screen for restoring all toggles back to the default settings. The button will turn off any experimental features. -->
-  <string name="firefox_labs_restore_default_button_text">Standards wiederherstellen</string>
   <!-- The title used in a confirmation dialog on the Firefox Labs screen when toggling "on" or "off" an experimental feature that requires a restart. -->
-  <string name="firefox_labs_feature_dialog_title">Neustart erforderlich</string>
   <!-- The text on the dialog on the Firefox Labs screen for the positive button when toggling "on" and "off" experimental features. This prompts the user to confirm that they want to restart the app. -->
-  <string name="firefox_labs_dialog_restart_button">Neu starten</string>
   <!-- The text on the dialog on the Firefox Labs screen for the negative button when toggling "on" and "off" experimental features. This is used to cancel the action and return to the previous screen. -->
-  <string name="firefox_labs_dialog_cancel_button">Abbrechen</string>
   <!-- The title used in a confirmation dialog on the Firefox Labs screen when restoring the application to its defaults by turning "off" any experimental features. -->
-  <string name="firefox_labs_restore_defaults_dialog_title">Neustart erforderlich</string>
   <!-- The description used in a confirmation dialog on the Firefox Labs screen when restoring the application to its defaults by turning "off" any experimental features. %s is the name of the app (for example "Firefox Nightly") -->
-  <string name="firefox_labs_restore_defaults_dialog_message">Um die Standardeinstellungen wiederherzustellen, starten Sie %s neu.</string>
   <!-- The description text that is displayed in the confirmation dialog on the Firefox Labs screen for toggling "on" experimental features. %s is the name of the app (for example "Firefox Nightly") -->
-  <string name="firefox_labs_feature_enable_dialog_message">Um diese Funktion zu aktivieren, müssen Sie %s neu starten.</string>
   <!-- The description text that is displayed in the confirmation dialog on the Firefox Labs screen for toggling "off" experimental features. %s is the name of the app (for example "Firefox Nightly") -->
-  <string name="firefox_labs_feature_disable_dialog_message">Um diese Funktion zu deaktivieren, müssen Sie %s neu starten.</string>
   <!-- Helper text shown beneath a Firefox Labs item when it is blocked from being turned on. -->
   <!-- Text displayed on the Firefox Labs screen when there are no Labs experimental features present. -->
-  <string name="firefox_labs_no_labs_available_description">Derzeit gibt es keine experimentellen Funktionen zum Testen</string>
 </resources>

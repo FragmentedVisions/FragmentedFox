@@ -512,11 +512,6 @@ class SettingsFragment : PreferenceFragmentCompat(), SystemInsetsPaddedFragment 
                 SettingsFragmentDirections.actionSettingsFragmentToOpenDownloadsSettingsFragment()
             }
 
-            resources.getString(R.string.pref_key_firefox_labs) -> {
-                SettingsMetrics.firefoxLabs.record()
-                SettingsFragmentDirections.actionSettingsFragmentToFirefoxLabsFragment()
-            }
-
             resources.getString(R.string.pref_key_sync_debug) -> {
                 SettingsFragmentDirections.actionSettingsFragmentToSyncDebugFragment()
             }
@@ -593,9 +588,6 @@ class SettingsFragment : PreferenceFragmentCompat(), SystemInsetsPaddedFragment 
             findPreference<Preference>(
                 getPreferenceKey(R.string.pref_key_sync_debug),
             )?.isVisible = showSecretDebugMenuThisSession
-            findPreference<Preference>(
-                getPreferenceKey(R.string.pref_key_firefox_labs),
-            )?.isVisible = enableFirefoxLabs
             preferenceStartProfiler?.isVisible = showSecretDebugMenuThisSession &&
                 (components.core.engine.profiler?.isProfilerActive() != null)
         }

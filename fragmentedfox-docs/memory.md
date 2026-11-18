@@ -26,7 +26,7 @@ Fission (one process per site) follows the Nimbus `fission.isolationStrategy` va
 
 ## Tested on low-memory hardware
 
-Build 38 (ESR 153.7.0) was installed on an 8 inch Onn tablet with Android 14 and 3 GB of RAM and works there. No measurements were taken; this only says the app runs on a device of that size.
+A build on ESR 153.7.0 (build 38, since dropped) was installed on an 8 inch Onn tablet with Android 14 and 3 GB of RAM and works there. No measurements were taken; this only says the app runs on a device of that size.
 
 ## Not done
 

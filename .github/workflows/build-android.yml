@@ -15,6 +15,9 @@ jobs:
   build:
     runs-on: ubuntu-24.04
     timeout-minutes: 355
+    env:
+      # Java4Shell (CVE-2026-114938): the JDK's AVX-512 Base64 decoder is unsafe. Turn it off for every JVM in the build.
+      JAVA_TOOL_OPTIONS: "-XX:+IgnoreUnrecognizedVMOptions -XX:+UnlockDiagnosticVMOptions -XX:-UseBASE64Intrinsics"
     steps:
       - name: Free disk space
         run: |

@@ -26,6 +26,10 @@ To install the APK on a phone, download the artifact. It always arrives as a zip
 
 The workflow runs on the branch you pick. Build from `NonStable--test` to test new changes. Build from `Stable-Main` only to rebuild the last known good version.
 
+### JDK and Java4Shell
+
+The Android build runs Gradle on Eclipse Temurin JDK 17.0.18+8, which Mozilla's `mach bootstrap` downloads (`JAVA_VERSION_*` in `python/mozboot/mozboot/android.py`). In November 2026 the AVX-512 Base64 decoder in OpenJDK 17.0.6 and later, 21 and 25 was reported as a remote code execution flaw (Java4Shell, CVE-2026-114938). The app is not affected (it runs on Android's runtime, not this JVM), only the build is. `build-android.yml` sets `JAVA_TOOL_OPTIONS` to `-XX:-UseBASE64Intrinsics`, which switches that decoder off for every JVM in the build; `-XX:+IgnoreUnrecognizedVMOptions` is there so a JDK that lacks the flag still starts. The flag was checked to be accepted by a local JDK 21, but a build with it has not been run yet. Once Temurin ships a fixed 17 release, raise the three version constants in `android.py` (a Mozilla file, merged on ESR upgrades) and the flag can be removed.
+
 ## Linux desktop
 
 The job uses a `mozconfig` with the updater, tests and debug code off, then runs `./mach build` and `./mach package`. It prints the version, vendor and name from `application.ini` as a check.

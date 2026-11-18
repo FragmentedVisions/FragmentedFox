@@ -1117,17 +1117,6 @@
     </issue>
 
     <issue
-        id="UseOfNonLambdaOffsetOverload"
-        message="State backed values should use the lambda overload of Modifier.offset"
-        errorLine1="            .offset(y = offsetState),"
-        errorLine2="             ~~~~~~">
-        <location
-            file="src/main/java/org/mozilla/fenix/experiments/view/ResearchSurfaceSurvey.kt"
-            line="77"
-            column="14"/>
-    </issue>
-
-    <issue
         id="TypographyFractions"
         message="Use fraction character ⅓ (&amp;#8531;) instead of 1/3?"
         errorLine1="  &lt;string name=&quot;setup_checklist_subtitle_3_steps_first_step&quot;>Khởi đầu tuyệt vời! Bạn đã hoàn thành 1 / 3 bước.&lt;/string>"
@@ -1450,26 +1439,6 @@
     <issue
         id="NoSystemCurrentTimeMillis"
         message="`System.currentTimeMillis()` must be injectable. Only permitted as a default value of a parameter on a top-level function or on a class."
-        errorLine1="    fun updatePrivacyNoticeBannerDisplayedPreference(nowMillis: Long = System.currentTimeMillis())"
-        errorLine2="                                                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="src/main/java/org/mozilla/fenix/termsofuse/store/PrivacyNoticeBannerRepository.kt"
-            line="17"
-            column="72"/>
-    </issue>
-    <issue
-        id="NoSystemCurrentTimeMillis"
-        message="`System.currentTimeMillis()` must be injectable. Only permitted as a default value of a parameter on a top-level function or on a class."
-        errorLine1="            System.currentTimeMillis()"
-        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="src/main/java/org/mozilla/fenix/termsofuse/store/PrivacyNoticeBannerRepository.kt"
-            line="37"
-            column="13"/>
-    </issue>
-    <issue
-        id="NoSystemCurrentTimeMillis"
-        message="`System.currentTimeMillis()` must be injectable. Only permitted as a default value of a parameter on a top-level function or on a class."
         errorLine1="                            settings.lastCfrShownTimeInMillis = System.currentTimeMillis()"
         errorLine2="                                                                ~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
@@ -1666,36 +1635,6 @@
             file="src/main/java/org/mozilla/fenix/telemetry/TelemetryMiddleware.kt"
             line="230"
             column="23"/>
-    </issue>
-    <issue
-        id="NoSystemCurrentTimeMillis"
-        message="`System.currentTimeMillis()` must be injectable. Only permitted as a default value of a parameter on a top-level function or on a class."
-        errorLine1="        currentTimeInMillis: Long = System.currentTimeMillis(),"
-        errorLine2="                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="src/main/java/org/mozilla/fenix/termsofuse/TermsOfUseManager.kt"
-            line="41"
-            column="37"/>
-    </issue>
-    <issue
-        id="NoSystemCurrentTimeMillis"
-        message="`System.currentTimeMillis()` must be injectable. Only permitted as a default value of a parameter on a top-level function or on a class."
-        errorLine1="    fun updateHasAcceptedTermsOfUsePreference(nowMillis: Long = System.currentTimeMillis())"
-        errorLine2="                                                                ~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="src/main/java/org/mozilla/fenix/termsofuse/store/TermsOfUsePromptRepository.kt"
-            line="42"
-            column="65"/>
-    </issue>
-    <issue
-        id="NoSystemCurrentTimeMillis"
-        message="`System.currentTimeMillis()` must be injectable. Only permitted as a default value of a parameter on a top-level function or on a class."
-        errorLine1="    fun updateLastTermsOfUsePromptTimeInMillis(currentTimeInMillis: Long = System.currentTimeMillis())"
-        errorLine2="                                                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="src/main/java/org/mozilla/fenix/termsofuse/store/TermsOfUsePromptRepository.kt"
-            line="54"
-            column="76"/>
     </issue>
     <issue
         id="NoSystemCurrentTimeMillis"

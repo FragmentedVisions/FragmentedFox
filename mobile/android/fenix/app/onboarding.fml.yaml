@@ -37,7 +37,6 @@ features:
                   line-two-link-text: nova_onboarding_tou_body_line_2_link_text
                   line-two-link-url: fragmentedfox_about_url
                   line-three-text: nova_onboarding_tou_body_line_3
-                  line-three-link-text: nova_onboarding_tou_body_line_3_link_text
 
             default-browser:
               card-type: default-browser
@@ -256,11 +255,6 @@ objects:
       line-three-text:
         type: Text
         description: The text for line three.
-        # This should never be defaulted.
-        default: ""
-      line-three-link-text:
-        type: Text
-        description: The text for the link of line three.
         # This should never be defaulted.
         default: ""
 

@@ -392,13 +392,9 @@
   -->
   <string name="onboarding_home_content_description_close_button">ᱵᱚᱸᱫᱚᱭ ᱢᱮ</string>
   <!-- Title for the privacy preferences dialog shown during onboarding. Note: The word "Firefox" should NOT be translated. -->
-  <string name="onboarding_preferences_dialog_title" tools:ignore="BrandUsage">ᱯᱷᱟᱭᱟᱨᱯᱷᱚᱠᱥ ᱵᱮᱥ ᱵᱮᱱᱟᱣ ᱞᱟᱹᱜᱤᱫ ᱟᱞᱮ ᱜᱚᱲᱚ ᱞᱮᱢ</string>
   <!-- Title for the crash reporting option in the privacy preferences dialog shown during onboarding. -->
-  <string name="onboarding_preferences_dialog_crash_reporting_title">ᱟᱡ ᱛᱮ ᱰᱤᱜᱟᱹᱣ ᱠᱷᱚᱵᱚᱨ ᱵᱷᱮᱡᱟᱭᱟ</string>
   <!-- Description for the crash reporting option in the privacy preferences dialog shown during onboarding. -->
-  <string name="onboarding_preferences_dialog_crash_reporting_description">ᱠᱨᱟᱥ ᱨᱤᱯᱚᱨᱴ ᱟᱞᱮ ᱵᱽᱨᱟᱣᱩᱡᱟᱨ ᱨᱮᱭᱟᱜ ᱮᱴᱠᱮᱴᱚᱬᱮ ᱠᱚ ᱵᱤᱰᱟᱹᱣ ᱟᱨ ᱥᱟᱹᱛ ᱨᱮᱭᱟᱜ ᱫᱟᱣ ᱮ ᱮᱢᱟ ᱞᱮᱭᱟ ᱾ ᱠᱷᱚᱵᱚᱨ ᱨᱮ ᱯᱚᱨᱥᱚᱱᱟᱞ ᱵᱟᱝᱠᱷᱟᱱ ᱥᱮᱱᱥᱮᱴᱤᱵᱷ ᱰᱟᱴᱟ ᱥᱮᱞᱮᱫ ᱛᱟᱦᱮᱸ ᱫᱟᱲᱮᱭᱟᱜᱼᱟ ᱾</string>
   <!-- Learn more link for the crash reporting option in the privacy preferences dialog shown during onboarding. -->
-  <string name="onboarding_preferences_dialog_crash_reporting_learn_more_2">ᱰᱷᱮᱨ ᱥᱮᱬᱟᱭ ᱢᱮ</string>
   <!-- Title for the startup crash page. %s is the name of the app (for example "Firefox") -->
   <string name="startup_crash_title">%s ᱫᱚ ᱫᱩᱦᱲᱟᱹ ᱮᱛᱵᱟᱦ ᱛᱮ ᱦᱩᱭ ᱟᱭᱟ</string>
   <!-- Body text for the startup crash page. %s is the name of the app (for example "Firefox") -->
@@ -411,7 +407,6 @@
   <string name="startup_crash_restart">%s ᱫᱚᱦᱲᱟ ᱡᱷᱤᱡᱽ ᱢᱮ</string>
   <!-- Title for the usage data option in the privacy preferences dialog shown during onboarding. Note: The word "Mozilla" should NOT be translated. -->
   <!-- Positive button label for the privacy preferences dialog shown during onboarding. -->
-  <string name="onboarding_preferences_dialog_positive_button">ᱦᱩᱭᱮᱱᱟ</string>
   <!-- Terms of service onboarding title card label. 'Firefox' intentionally hardcoded here -->
   <string name="onboarding_welcome_to_firefox" tools:ignore="BrandUsage">Firefox ᱨᱮ ᱥᱟᱹᱜᱩᱱ ᱫᱟᱨᱟᱢ</string>
   <!--
@@ -464,7 +459,6 @@
   -->
   <string name="nova_onboarding_tou_body_line_3" tools:ignore="BrandUsage">ᱵᱽᱨᱟᱣᱩᱡᱟᱨ ᱥᱩᱫᱷᱨᱟᱹᱣ ᱜᱚᱲᱚ ᱞᱟᱹᱜᱤᱫ, Firefox ᱫᱚ Mozilla ᱴᱷᱮᱱ ᱰᱟᱭᱜᱽᱱᱚᱥᱴᱤᱠ ᱟᱨ ᱜᱟᱯᱟᱞᱢᱟᱨᱟᱣ ᱰᱟᱴᱟ ᱠᱩᱞᱟ ᱾ %1$s</string>
   <!-- Terms of use (ToU) onboarding body line three link text for nova_onboarding_tou_body_line_3. -->
-  <string name="nova_onboarding_tou_body_line_3_link_text">ᱥᱟᱡᱟᱣ ᱠᱚ ᱢᱮᱱᱮᱡᱽ ᱢᱮ</string>
   <!-- "Set to default" onboarding subtitle. -->
   <string name="nova_onboarding_set_to_default_subtitle">ᱟᱞᱮ ᱟᱢᱟᱜ ᱰᱟᱴᱟ ᱞᱮ ᱨᱩᱠᱷᱤᱭᱟᱹᱭᱟ ᱟᱨ ᱟᱢᱟᱜ ᱠᱞᱤᱠ ᱨᱮ ᱡᱟᱹᱥᱛᱤ ᱠᱷᱚᱱ ᱠᱚᱢᱯᱟᱱᱤ ᱠᱚ ᱟᱡ ᱛᱮ ᱵᱚᱱ ᱵᱚᱱᱫᱚ ᱠᱚᱣᱟ᱾</string>
   <!-- "Set to default" onboarding button. -->

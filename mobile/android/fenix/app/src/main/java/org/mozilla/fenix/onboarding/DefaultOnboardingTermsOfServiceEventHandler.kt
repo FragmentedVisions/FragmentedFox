@@ -16,7 +16,6 @@ import org.mozilla.fenix.utils.Settings
 class DefaultOnboardingTermsOfServiceEventHandler(
     private val telemetryRecorder: OnboardingTelemetryRecorder,
     private val openLink: (String) -> Unit,
-    private val showManagePrivacyPreferencesDialog: () -> Unit,
     private val settings: Settings,
     private val startGlean: () -> Unit,
 ) : OnboardingTermsOfServiceEventHandler {
@@ -37,11 +36,6 @@ class DefaultOnboardingTermsOfServiceEventHandler(
                 SupportUtils.getMozillaPageUrl(SupportUtils.MozillaPage.PRIVACY_NOTICE)
             },
         )
-    }
-
-    override fun onManagePrivacyPreferencesLinkClicked() {
-        telemetryRecorder.onTermsOfServiceManagePrivacyPreferencesLinkClick()
-        showManagePrivacyPreferencesDialog()
     }
 
     override fun onAcceptTermsButtonClicked(nowMillis: Long) {

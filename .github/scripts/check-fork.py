@@ -307,9 +307,8 @@ def check_hidden_settings():
     match = re.search(r"fun buildDataChoicesItems.*?\n}\n", screen, flags=re.S)
     if not match or re.findall(r"add\(DataChoicesSectionKey\.(\w+)\)", match.group(0)) != ["CRASH_REPORTS"]:
         fail("settings", "DataChoicesScreen.kt: only the crash report section may be shown, telemetry and studies do nothing here")
-    dialog = read(os.path.join(APP, "src/main/java/org/mozilla/fenix/onboarding/ManagePrivacyPreferencesDialog.kt"))
-    if "UsageDataPreference(" in dialog:
-        fail("settings", "ManagePrivacyPreferencesDialog.kt: the usage data switch does nothing and must stay removed")
+    if os.path.exists(os.path.join(APP, "src/main/java/org/mozilla/fenix/onboarding/ManagePrivacyPreferencesDialog.kt")):
+        fail("settings", "ManagePrivacyPreferencesDialog.kt: the first-run dialog only held a crash report switch that does nothing in this build, and must stay removed")
 
 
 def check_search():

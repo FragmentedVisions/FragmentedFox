@@ -79,7 +79,6 @@ data class OnboardingTermsOfService(
     val lineTwoLinkText: String,
     val lineTwoLinkUrl: String,
     val lineThreeText: String,
-    val lineThreeLinkText: String,
 )
 
 /**
@@ -96,11 +95,6 @@ interface OnboardingTermsOfServiceEventHandler {
      * Invoked when the privacy notice link is clicked.
      */
     fun onPrivacyNoticeLinkClicked(url: String) = Unit
-
-    /**
-     * Invoked when the manage privacy preferences link is clicked.
-     */
-    fun onManagePrivacyPreferencesLinkClicked() = Unit
 
     /**
      * Invoked when the accept button is clicked.

@@ -382,13 +382,9 @@
   -->
   <string name="onboarding_home_content_description_close_button">بستن</string>
   <!-- Title for the privacy preferences dialog shown during onboarding. Note: The word "Firefox" should NOT be translated. -->
-  <string name="onboarding_preferences_dialog_title" tools:ignore="BrandUsage">به ما کمک کنید Firefox را بهتر کنیم</string>
   <!-- Title for the crash reporting option in the privacy preferences dialog shown during onboarding. -->
-  <string name="onboarding_preferences_dialog_crash_reporting_title">به‌صورت خودکار گزارش‌های ازکارافتادگی ارسال کنید</string>
   <!-- Description for the crash reporting option in the privacy preferences dialog shown during onboarding. -->
-  <string name="onboarding_preferences_dialog_crash_reporting_description">گزارش‌های ازکارافتادگی به ما کمک می‌کنند مشکلات مرورگر را تشخیص دهیم و حل کنیم. گزارش‌ها ممکن است شامل داده‌های شخصی یا حساس باشند.</string>
   <!-- Learn more link for the crash reporting option in the privacy preferences dialog shown during onboarding. -->
-  <string name="onboarding_preferences_dialog_crash_reporting_learn_more_2">بیشتر بدانید</string>
   <!-- Title for the startup crash page. %s is the name of the app (for example "Firefox") -->
   <string name="startup_crash_title">‏%s نیاز به راه‌اندازی مجدد دارد</string>
   <!-- Body text for the startup crash page. %s is the name of the app (for example "Firefox") -->
@@ -401,7 +397,6 @@
   <string name="startup_crash_restart">%s را دوباره باز کن</string>
   <!-- Title for the usage data option in the privacy preferences dialog shown during onboarding. Note: The word "Mozilla" should NOT be translated. -->
   <!-- Positive button label for the privacy preferences dialog shown during onboarding. -->
-  <string name="onboarding_preferences_dialog_positive_button">انجام شد</string>
   <!-- Terms of service onboarding title card label. 'Firefox' intentionally hardcoded here -->
   <string name="onboarding_welcome_to_firefox" tools:ignore="BrandUsage">به Firefox خوش‌آمدید</string>
   <!--

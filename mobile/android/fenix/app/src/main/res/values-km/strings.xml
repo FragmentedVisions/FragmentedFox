@@ -392,11 +392,8 @@
   -->
   <string name="onboarding_home_content_description_close_button">បិទ</string>
   <!-- Title for the privacy preferences dialog shown during onboarding. Note: The word "Firefox" should NOT be translated. -->
-  <string name="onboarding_preferences_dialog_title" tools:ignore="BrandUsage">ជួយយើងធ្វើឱ្យ Firefox កាន់តែប្រសើរឡើង</string>
   <!-- Title for the crash reporting option in the privacy preferences dialog shown during onboarding. -->
-  <string name="onboarding_preferences_dialog_crash_reporting_title">ផ្ញើរបាយការណ៍គាំងដោយស្វ័យប្រវត្តិ</string>
   <!-- Learn more link for the crash reporting option in the privacy preferences dialog shown during onboarding. -->
-  <string name="onboarding_preferences_dialog_crash_reporting_learn_more_2">ស្វែងយល់​បន្ថែម</string>
   <!-- Title for the startup crash page. %s is the name of the app (for example "Firefox") -->
   <string name="startup_crash_title">%s ត្រូវការ ចាប់ផ្តើមឡើងវិញ</string>
   <!-- Body text for the startup crash page. %s is the name of the app (for example "Firefox") -->
@@ -409,7 +406,6 @@
   <string name="startup_crash_restart">បើក %s ឡើងវិញ</string>
   <!-- Title for the usage data option in the privacy preferences dialog shown during onboarding. Note: The word "Mozilla" should NOT be translated. -->
   <!-- Positive button label for the privacy preferences dialog shown during onboarding. -->
-  <string name="onboarding_preferences_dialog_positive_button">ធ្វើ​រួច</string>
   <!-- Terms of service onboarding title card label. 'Firefox' intentionally hardcoded here -->
   <string name="onboarding_welcome_to_firefox" tools:ignore="BrandUsage">សូមស្វាគមន៍មកកាន់ Firefox</string>
   <!--
@@ -442,7 +438,6 @@
   <!-- Terms of use (ToU) onboarding body line two link text for nova_onboarding_tou_body_line_2. -->
   <string name="nova_onboarding_tou_body_line_2_link_text">ការជូនដំណឹង​អំពី​ឯកជនភាព</string>
   <!-- Terms of use (ToU) onboarding body line three link text for nova_onboarding_tou_body_line_3. -->
-  <string name="nova_onboarding_tou_body_line_3_link_text">គ្រប់គ្រងការកំណត់</string>
   <!-- "Set to default" onboarding button. -->
   <string name="nova_onboarding_set_to_default_button">កំណត់ជាកម្មវិធីច្បោលបុរេជម្រើស</string>
   <!-- Toolbar selection onboarding title. -->

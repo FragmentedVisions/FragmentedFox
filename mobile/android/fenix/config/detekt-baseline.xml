@@ -255,7 +255,6 @@
     <ID>HardcodedPaddingUsage:LoginsTools.kt$(16.dp)</ID>
     <ID>HardcodedPaddingUsage:MainMenu.kt$( start = 8.dp, top = if (accessPoint != MenuAccessPoint.Home &amp;&amp; (isBottomToolbar || isExpandedToolbarEnabled) ) { 0.dp } else { 8.dp }, end = 8.dp, bottom = if (accessPoint != MenuAccessPoint.Home &amp;&amp; (isBottomToolbar || isExpandedToolbarEnabled) ) { 84.dp } else { 16.dp }, )</ID>
     <ID>HardcodedPaddingUsage:MainMenu.kt$(start = 40.dp)</ID>
-    <ID>HardcodedPaddingUsage:ManagePrivacyPreferencesDialog.kt$(16.dp)</ID>
     <ID>HardcodedPaddingUsage:MenuBanner.kt$(end = 16.dp)</ID>
     <ID>HardcodedPaddingUsage:MenuBanner.kt$(start = 24.dp, top = 12.dp, bottom = 10.dp)</ID>
     <ID>HardcodedPaddingUsage:MenuBanner.kt$(top = 8.dp, end = 12.dp)</ID>

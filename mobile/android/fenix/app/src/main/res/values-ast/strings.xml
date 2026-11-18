@@ -224,7 +224,6 @@
   -->
   <string name="onboarding_home_content_description_close_button">Zarrar</string>
   <!-- Positive button label for the privacy preferences dialog shown during onboarding. -->
-  <string name="onboarding_preferences_dialog_positive_button">Fecho</string>
   <!-- Terms of service onboarding title card label. 'Firefox' intentionally hardcoded here -->
   <string name="onboarding_welcome_to_firefox" tools:ignore="BrandUsage">Afáyate en Firefox</string>
   <!-- ==== Project "Nova" onboarding strings ==== -->

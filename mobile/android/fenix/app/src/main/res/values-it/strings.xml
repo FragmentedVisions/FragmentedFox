@@ -447,13 +447,9 @@
   -->
   <string name="onboarding_home_content_description_close_button">Chiudi</string>
   <!-- Title for the privacy preferences dialog shown during onboarding. Note: The word "Firefox" should NOT be translated. -->
-  <string name="onboarding_preferences_dialog_title" tools:ignore="BrandUsage">Aiutaci a migliorare Firefox</string>
   <!-- Title for the crash reporting option in the privacy preferences dialog shown during onboarding. -->
-  <string name="onboarding_preferences_dialog_crash_reporting_title">Invia automaticamente segnalazioni di arresto anomalo</string>
   <!-- Description for the crash reporting option in the privacy preferences dialog shown during onboarding. -->
-  <string name="onboarding_preferences_dialog_crash_reporting_description">Le segnalazioni di arresto anomalo ci consentono di diagnosticare e risolvere problemi con il browser. Le segnalazioni possono includere dati personali o sensibili.</string>
   <!-- Learn more link for the crash reporting option in the privacy preferences dialog shown during onboarding. -->
-  <string name="onboarding_preferences_dialog_crash_reporting_learn_more_2">Ulteriori informazioni</string>
   <!-- Title for the startup crash page. %s is the name of the app (for example "Firefox") -->
   <string name="startup_crash_title">%s deve essere riavviato</string>
   <!-- Body text for the startup crash page. %s is the name of the app (for example "Firefox") -->
@@ -466,7 +462,6 @@
   <string name="startup_crash_restart">Riapri %s</string>
   <!-- Title for the usage data option in the privacy preferences dialog shown during onboarding. Note: The word "Mozilla" should NOT be translated. -->
   <!-- Positive button label for the privacy preferences dialog shown during onboarding. -->
-  <string name="onboarding_preferences_dialog_positive_button">Fatto</string>
   <!-- Terms of service onboarding title card label. 'Firefox' intentionally hardcoded here -->
   <string name="onboarding_welcome_to_firefox" tools:ignore="BrandUsage">Ti diamo il benvenuto in Firefox</string>
   <!--
@@ -519,7 +514,6 @@
   -->
   <string name="nova_onboarding_tou_body_line_3" tools:ignore="BrandUsage">Per migliorare il browser, Firefox invia a Mozilla dati diagnostici e di interazione. %1$s</string>
   <!-- Terms of use (ToU) onboarding body line three link text for nova_onboarding_tou_body_line_3. -->
-  <string name="nova_onboarding_tou_body_line_3_link_text">Gestisci impostazioni</string>
   <!-- "Set to default" onboarding title. -->
   <string name="nova_onboarding_set_to_default_title_2">Apri ogni link sapendo che la privacy è integrata</string>
   <!-- "Set to default" onboarding subtitle. -->

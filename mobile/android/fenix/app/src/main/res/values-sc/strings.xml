@@ -391,13 +391,9 @@
   -->
   <string name="onboarding_home_content_description_close_button">Serra</string>
   <!-- Title for the privacy preferences dialog shown during onboarding. Note: The word "Firefox" should NOT be translated. -->
-  <string name="onboarding_preferences_dialog_title" tools:ignore="BrandUsage">Agiuda·nos a fàghere Firefox mègius</string>
   <!-- Title for the crash reporting option in the privacy preferences dialog shown during onboarding. -->
-  <string name="onboarding_preferences_dialog_crash_reporting_title">Imbia informes de faddinas in automàticu</string>
   <!-- Description for the crash reporting option in the privacy preferences dialog shown during onboarding. -->
-  <string name="onboarding_preferences_dialog_crash_reporting_description">Is informes de faddinas nos agiudant a agatare e arrangiare is faddinas de su navigadore. Is informes podent incluire datos personale o sensìbiles.</string>
   <!-- Learn more link for the crash reporting option in the privacy preferences dialog shown during onboarding. -->
-  <string name="onboarding_preferences_dialog_crash_reporting_learn_more_2">Àteras informatziones</string>
   <!-- Title for the startup crash page. %s is the name of the app (for example "Firefox") -->
   <string name="startup_crash_title">%s depet èssere torradu a aviare</string>
   <!-- Button text to submit a startup crash report -->
@@ -408,7 +404,6 @@
   <string name="startup_crash_restart">Torra a abèrrere %s</string>
   <!-- Title for the usage data option in the privacy preferences dialog shown during onboarding. Note: The word "Mozilla" should NOT be translated. -->
   <!-- Positive button label for the privacy preferences dialog shown during onboarding. -->
-  <string name="onboarding_preferences_dialog_positive_button">Fatu</string>
   <!-- Terms of service onboarding title card label. 'Firefox' intentionally hardcoded here -->
   <string name="onboarding_welcome_to_firefox" tools:ignore="BrandUsage">Bos donamus su benebènnidu a Firefox</string>
   <!--
@@ -436,7 +431,6 @@
   <!-- "Continue" onboarding button. -->
   <string name="nova_onboarding_continue_button">Sighi</string>
   <!-- Terms of use (ToU) onboarding body line three link text for nova_onboarding_tou_body_line_3. -->
-  <string name="nova_onboarding_tou_body_line_3_link_text">Gesti sa cunfiguratzione</string>
   <!-- "Set to default" onboarding button. -->
   <string name="nova_onboarding_set_to_default_button">Cunfigura comente navigadore predefinidu</string>
   <!-- Toolbar selection onboarding title. -->

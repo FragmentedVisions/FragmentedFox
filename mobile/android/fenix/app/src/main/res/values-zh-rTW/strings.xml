@@ -447,13 +447,9 @@
   -->
   <string name="onboarding_home_content_description_close_button">關閉</string>
   <!-- Title for the privacy preferences dialog shown during onboarding. Note: The word "Firefox" should NOT be translated. -->
-  <string name="onboarding_preferences_dialog_title" tools:ignore="BrandUsage">幫助我們讓 Firefox 變得更好</string>
   <!-- Title for the crash reporting option in the privacy preferences dialog shown during onboarding. -->
-  <string name="onboarding_preferences_dialog_crash_reporting_title">自動傳送錯誤報告</string>
   <!-- Description for the crash reporting option in the privacy preferences dialog shown during onboarding. -->
-  <string name="onboarding_preferences_dialog_crash_reporting_description">錯誤報告可幫助我們找出瀏覽器的問題並進行修正。報告內容可能會包含私人或敏感資料。</string>
   <!-- Learn more link for the crash reporting option in the privacy preferences dialog shown during onboarding. -->
-  <string name="onboarding_preferences_dialog_crash_reporting_learn_more_2">更多資訊</string>
   <!-- Title for the startup crash page. %s is the name of the app (for example "Firefox") -->
   <string name="startup_crash_title">%s 需要重新啟動</string>
   <!-- Body text for the startup crash page. %s is the name of the app (for example "Firefox") -->
@@ -466,7 +462,6 @@
   <string name="startup_crash_restart">重新開啟 %s</string>
   <!-- Title for the usage data option in the privacy preferences dialog shown during onboarding. Note: The word "Mozilla" should NOT be translated. -->
   <!-- Positive button label for the privacy preferences dialog shown during onboarding. -->
-  <string name="onboarding_preferences_dialog_positive_button">完成</string>
   <!-- Terms of service onboarding title card label. 'Firefox' intentionally hardcoded here -->
   <string name="onboarding_welcome_to_firefox" tools:ignore="BrandUsage">歡迎使用 Firefox</string>
   <!--
@@ -519,7 +514,6 @@
   -->
   <string name="nova_onboarding_tou_body_line_3" tools:ignore="BrandUsage">為了幫助改善瀏覽器，Firefox 會將除錯與互動資料傳送回 Mozilla。%1$s</string>
   <!-- Terms of use (ToU) onboarding body line three link text for nova_onboarding_tou_body_line_3. -->
-  <string name="nova_onboarding_tou_body_line_3_link_text">管理設定</string>
   <!-- "Set to default" onboarding title. -->
   <string name="nova_onboarding_set_to_default_title_2">透過內建隱私權保護的瀏覽器開啟所有鏈結</string>
   <!-- "Set to default" onboarding subtitle. -->

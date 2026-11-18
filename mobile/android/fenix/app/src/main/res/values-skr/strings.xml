@@ -292,7 +292,6 @@
   -->
   <string name="onboarding_home_content_description_close_button">بند کرو</string>
   <!-- Positive button label for the privacy preferences dialog shown during onboarding. -->
-  <string name="onboarding_preferences_dialog_positive_button">تھی ڳیا</string>
   <!-- ==== Project "Nova" onboarding strings ==== -->
 
   <!-- ==== End of Project "Nova" onboarding strings ==== -->

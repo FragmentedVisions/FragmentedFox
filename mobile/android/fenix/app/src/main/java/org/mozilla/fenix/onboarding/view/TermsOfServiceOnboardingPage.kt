@@ -222,14 +222,12 @@ private fun BodyText(
                 bodyTwoLinkState,
             )
 
-            val bodyThreeLinkState = LinkTextState(
-                text = lineThreeLinkText,
-                url = "", // No URL
-                onClick = { _ -> eventHandler.onManagePrivacyPreferencesLinkClicked() },
-            )
-            BodyLinkText(
-                lineThreeText.updateFirstPlaceholder(lineThreeLinkText),
-                bodyThreeLinkState,
+            Text(
+                text = lineThreeText,
+                style = FirefoxTheme.typography.caption.copy(
+                    textAlign = TextAlign.Start,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                ),
             )
         }
     }
@@ -273,7 +271,6 @@ private fun OnboardingPagePreview() {
                     lineTwoLinkText = stringResource(id = R.string.nova_onboarding_tou_body_line_2_link_text),
                     lineTwoLinkUrl = "URL",
                     lineThreeText = stringResource(id = R.string.nova_onboarding_tou_body_line_3),
-                    lineThreeLinkText = stringResource(id = R.string.nova_onboarding_tou_body_line_3_link_text),
                 ),
                 imageRes = R.drawable.nova_onboarding_tou,
                 primaryButton = Action(

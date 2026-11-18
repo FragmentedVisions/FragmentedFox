@@ -447,13 +447,9 @@
   -->
   <string name="onboarding_home_content_description_close_button">დახურვა</string>
   <!-- Title for the privacy preferences dialog shown during onboarding. Note: The word "Firefox" should NOT be translated. -->
-  <string name="onboarding_preferences_dialog_title" tools:ignore="BrandUsage">დაგვეხმარეთ, გავაუმჯობესოთ Firefox</string>
   <!-- Title for the crash reporting option in the privacy preferences dialog shown during onboarding. -->
-  <string name="onboarding_preferences_dialog_crash_reporting_title">უეცარი გათიშვის მოხსენებების თვითგაგზავნა</string>
   <!-- Description for the crash reporting option in the privacy preferences dialog shown during onboarding. -->
-  <string name="onboarding_preferences_dialog_crash_reporting_description">უეცარი გათიშვის მოხსენებები საშუალებას გვაძლევს, გამოვავლინოთ და მოვაგვაროთ ბრაუზერის ხარვეზები. მოხსენებები შეიძლება შეიცავდეს პირად ან საფრთხილო მონაცემებს.</string>
   <!-- Learn more link for the crash reporting option in the privacy preferences dialog shown during onboarding. -->
-  <string name="onboarding_preferences_dialog_crash_reporting_learn_more_2">ვრცლად</string>
   <!-- Title for the startup crash page. %s is the name of the app (for example "Firefox") -->
   <string name="startup_crash_title">%s ახლიდან უნდა ჩაირთოს</string>
   <!-- Body text for the startup crash page. %s is the name of the app (for example "Firefox") -->
@@ -466,7 +462,6 @@
   <string name="startup_crash_restart">ახლიდან ჩაირთოს %s</string>
   <!-- Title for the usage data option in the privacy preferences dialog shown during onboarding. Note: The word "Mozilla" should NOT be translated. -->
   <!-- Positive button label for the privacy preferences dialog shown during onboarding. -->
-  <string name="onboarding_preferences_dialog_positive_button">მზადაა</string>
   <!-- Terms of service onboarding title card label. 'Firefox' intentionally hardcoded here -->
   <string name="onboarding_welcome_to_firefox" tools:ignore="BrandUsage">მოგესალმებათ Firefox</string>
   <!--
@@ -519,7 +514,6 @@
   -->
   <string name="nova_onboarding_tou_body_line_3" tools:ignore="BrandUsage">ბრაუზერის გასაუმჯობესებლად Firefox გზავნის შემოწმებისა და გამოყენების შედეგებს, რომელთაც გაეცნობა Mozilla. %1$s</string>
   <!-- Terms of use (ToU) onboarding body line three link text for nova_onboarding_tou_body_line_3. -->
-  <string name="nova_onboarding_tou_body_line_3_link_text">პარამეტრების მართვა</string>
   <!-- "Set to default" onboarding title. -->
   <string name="nova_onboarding_set_to_default_title_2">გახსენით ყველა ბმული თანმომყოლი პირადულობით</string>
   <!-- "Set to default" onboarding subtitle. -->

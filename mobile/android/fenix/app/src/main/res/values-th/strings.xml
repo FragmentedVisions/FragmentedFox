@@ -447,13 +447,9 @@
   -->
   <string name="onboarding_home_content_description_close_button">ปิด</string>
   <!-- Title for the privacy preferences dialog shown during onboarding. Note: The word "Firefox" should NOT be translated. -->
-  <string name="onboarding_preferences_dialog_title" tools:ignore="BrandUsage">ช่วยเราทำให้ Firefox ดีขึ้น</string>
   <!-- Title for the crash reporting option in the privacy preferences dialog shown during onboarding. -->
-  <string name="onboarding_preferences_dialog_crash_reporting_title">ส่งรายงานข้อขัดข้องโดยอัตโนมัติ</string>
   <!-- Description for the crash reporting option in the privacy preferences dialog shown during onboarding. -->
-  <string name="onboarding_preferences_dialog_crash_reporting_description">รายงานข้อขัดข้องทำให้เราสามารถวินิจฉัยและแก้ไขปัญหาเกี่ยวกับเบราว์เซอร์ได้ รายงานอาจมีข้อมูลส่วนตัวหรือข้อมูลละเอียดอ่อน</string>
   <!-- Learn more link for the crash reporting option in the privacy preferences dialog shown during onboarding. -->
-  <string name="onboarding_preferences_dialog_crash_reporting_learn_more_2">เรียนรู้เพิ่มเติม</string>
   <!-- Title for the startup crash page. %s is the name of the app (for example "Firefox") -->
   <string name="startup_crash_title">%s ต้องเริ่มการทำงานใหม่</string>
   <!-- Body text for the startup crash page. %s is the name of the app (for example "Firefox") -->
@@ -466,7 +462,6 @@
   <string name="startup_crash_restart">เปิด %s ใหม่</string>
   <!-- Title for the usage data option in the privacy preferences dialog shown during onboarding. Note: The word "Mozilla" should NOT be translated. -->
   <!-- Positive button label for the privacy preferences dialog shown during onboarding. -->
-  <string name="onboarding_preferences_dialog_positive_button">เสร็จสิ้น</string>
   <!-- Terms of service onboarding title card label. 'Firefox' intentionally hardcoded here -->
   <string name="onboarding_welcome_to_firefox" tools:ignore="BrandUsage">ยินดีต้อนรับสู่ Firefox</string>
   <!--
@@ -519,7 +514,6 @@
   -->
   <string name="nova_onboarding_tou_body_line_3" tools:ignore="BrandUsage">เพื่อช่วยปรับปรุงเบราว์เซอร์ Firefox จะส่งข้อมูลวินิจฉัยและการโต้ตอบไปยัง Mozilla %1$s</string>
   <!-- Terms of use (ToU) onboarding body line three link text for nova_onboarding_tou_body_line_3. -->
-  <string name="nova_onboarding_tou_body_line_3_link_text">จัดการการตั้งค่า</string>
   <!-- "Set to default" onboarding title. -->
   <string name="nova_onboarding_set_to_default_title_2">เปิดลิงก์ทั้งหมดพร้อมความเป็นส่วนตัวในตัว</string>
   <!-- "Set to default" onboarding subtitle. -->

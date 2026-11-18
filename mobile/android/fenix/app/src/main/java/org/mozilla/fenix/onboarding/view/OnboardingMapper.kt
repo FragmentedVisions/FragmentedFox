@@ -128,7 +128,6 @@ private fun TermsOfServiceData.toOnboardingTermsOfService() = with(this) {
         lineTwoLinkText = lineTwoLinkText,
         lineTwoLinkUrl = lineTwoLinkUrl,
         lineThreeText = lineThreeText,
-        lineThreeLinkText = lineThreeLinkText,
     )
 }
 

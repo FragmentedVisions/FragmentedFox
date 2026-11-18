@@ -285,7 +285,6 @@
   <!-- Menu option in the search selector menu to open the search settings -->
   <string name="search_settings_menu_item">Paieškos nustatymai</string>
   <!-- Positive button label for the privacy preferences dialog shown during onboarding. -->
-  <string name="onboarding_preferences_dialog_positive_button">Atlikta</string>
   <!-- ==== Project "Nova" onboarding strings ==== -->
 
   <!-- "Continue" onboarding button. -->

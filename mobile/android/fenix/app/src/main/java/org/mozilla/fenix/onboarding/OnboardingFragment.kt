@@ -50,7 +50,6 @@ import org.mozilla.fenix.onboarding.store.DefaultOnboardingPreferencesRepository
 import org.mozilla.fenix.onboarding.store.OnboardingPreferencesMiddleware
 import org.mozilla.fenix.onboarding.store.OnboardingState
 import org.mozilla.fenix.onboarding.store.OnboardingStore
-import org.mozilla.fenix.onboarding.view.ManagePrivacyPreferencesDialogFragment
 import org.mozilla.fenix.onboarding.view.OnboardingPageUiData
 import org.mozilla.fenix.onboarding.view.OnboardingScreen
 import org.mozilla.fenix.onboarding.view.sequencePosition
@@ -71,7 +70,6 @@ class OnboardingFragment : Fragment() {
         DefaultOnboardingTermsOfServiceEventHandler(
             telemetryRecorder = telemetryRecorder,
             openLink = this::launchSandboxCustomTab,
-            showManagePrivacyPreferencesDialog = this::showPrivacyPreferencesDialog,
             settings = requireComponents.settings,
             startGlean = ::startGlean,
         )
@@ -373,11 +371,6 @@ class OnboardingFragment : Fragment() {
 
     private fun launchSandboxCustomTab(url: String) =
         SupportUtils.launchSandboxCustomTab(requireContext(), url)
-
-    private fun showPrivacyPreferencesDialog() {
-        ManagePrivacyPreferencesDialogFragment()
-            .show(parentFragmentManager, ManagePrivacyPreferencesDialogFragment.TAG)
-    }
 
     private fun maybeAddMenuNotification() {
         with(requireContext()) {

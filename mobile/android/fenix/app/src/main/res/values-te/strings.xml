@@ -175,7 +175,6 @@
   -->
   <string name="onboarding_home_content_description_close_button">మూసివేయి</string>
   <!-- Positive button label for the privacy preferences dialog shown during onboarding. -->
-  <string name="onboarding_preferences_dialog_positive_button">పూర్తయింది</string>
   <!-- Terms of service onboarding title card label. 'Firefox' intentionally hardcoded here -->
   <string name="onboarding_welcome_to_firefox" tools:ignore="BrandUsage">Firefoxకి స్వాగతం</string>
   <!-- ==== Project "Nova" onboarding strings ==== -->

@@ -379,13 +379,9 @@
   -->
   <string name="onboarding_home_content_description_close_button">Mdel</string>
   <!-- Title for the privacy preferences dialog shown during onboarding. Note: The word "Firefox" should NOT be translated. -->
-  <string name="onboarding_preferences_dialog_title" tools:ignore="BrandUsage">All-aneɣ ad nerr Firefox igerrez ugar</string>
   <!-- Title for the crash reporting option in the privacy preferences dialog shown during onboarding. -->
-  <string name="onboarding_preferences_dialog_crash_reporting_title">Azen s wudem awurman ineqqisen n truẓi</string>
   <!-- Description for the crash reporting option in the privacy preferences dialog shown during onboarding. -->
-  <string name="onboarding_preferences_dialog_crash_reporting_description">Ineqqisen n uɣelluy ttaǧǧan-aɣ ad nesnined syen ad nṣeggem uguren akked yiminig. Ineqqisen zemren ad d-skecmen isefka udmawanen neɣ imḥulfa.</string>
   <!-- Learn more link for the crash reporting option in the privacy preferences dialog shown during onboarding. -->
-  <string name="onboarding_preferences_dialog_crash_reporting_learn_more_2">Issin ugar</string>
   <!-- Title for the startup crash page. %s is the name of the app (for example "Firefox") -->
   <string name="startup_crash_title">%s yesra allus n tnekkra</string>
   <!-- Button text to submit a startup crash report -->
@@ -396,7 +392,6 @@
   <string name="startup_crash_restart">Ales alday n %s</string>
   <!-- Title for the usage data option in the privacy preferences dialog shown during onboarding. Note: The word "Mozilla" should NOT be translated. -->
   <!-- Positive button label for the privacy preferences dialog shown during onboarding. -->
-  <string name="onboarding_preferences_dialog_positive_button">Immed</string>
   <!-- Terms of service onboarding title card label. 'Firefox' intentionally hardcoded here -->
   <string name="onboarding_welcome_to_firefox" tools:ignore="BrandUsage">Anṣuf ar Firefox</string>
   <!--

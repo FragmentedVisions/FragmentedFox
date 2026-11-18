@@ -392,13 +392,9 @@
   -->
   <string name="onboarding_home_content_description_close_button">Mbylle</string>
   <!-- Title for the privacy preferences dialog shown during onboarding. Note: The word "Firefox" should NOT be translated. -->
-  <string name="onboarding_preferences_dialog_title" tools:ignore="BrandUsage">Ndihmonani ta bëjmë Firefox-in më të mirë</string>
   <!-- Title for the crash reporting option in the privacy preferences dialog shown during onboarding. -->
-  <string name="onboarding_preferences_dialog_crash_reporting_title">Dërgo vetvetiu njoftime vithisjesh</string>
   <!-- Description for the crash reporting option in the privacy preferences dialog shown during onboarding. -->
-  <string name="onboarding_preferences_dialog_crash_reporting_description">Raportet e vithisjeve na lejojnë të diagnostikojmë dhe ndreqim probleme me shfletuesin. Raportet mund të përfshijnë të dhëna personale, ose rezervat.</string>
   <!-- Learn more link for the crash reporting option in the privacy preferences dialog shown during onboarding. -->
-  <string name="onboarding_preferences_dialog_crash_reporting_learn_more_2">Mësoni më tepër</string>
   <!-- Title for the startup crash page. %s is the name of the app (for example "Firefox") -->
   <string name="startup_crash_title">%s i duhet të riniset</string>
   <!-- Body text for the startup crash page. %s is the name of the app (for example "Firefox") -->
@@ -411,7 +407,6 @@
   <string name="startup_crash_restart">Rihape %s</string>
   <!-- Title for the usage data option in the privacy preferences dialog shown during onboarding. Note: The word "Mozilla" should NOT be translated. -->
   <!-- Positive button label for the privacy preferences dialog shown during onboarding. -->
-  <string name="onboarding_preferences_dialog_positive_button">U bë</string>
   <!-- Terms of service onboarding title card label. 'Firefox' intentionally hardcoded here -->
   <string name="onboarding_welcome_to_firefox" tools:ignore="BrandUsage">Mirë se vini në Firefox</string>
   <!--
@@ -464,7 +459,6 @@
   -->
   <string name="nova_onboarding_tou_body_line_3" tools:ignore="BrandUsage">Që të ndihmoni të përmirësohet shfletuesi, Firefox-i dërgon te Mozilla të dhëna diagnostikimesh dhe ndërveprimesh. %1$s</string>
   <!-- Terms of use (ToU) onboarding body line three link text for nova_onboarding_tou_body_line_3. -->
-  <string name="nova_onboarding_tou_body_line_3_link_text">Administroni rregullime</string>
   <!-- "Set to default" onboarding title. -->
   <string name="nova_onboarding_set_to_default_title_2">Hapini krejt lidhjet tuaja me privatësi që brenda</string>
   <!-- "Set to default" onboarding subtitle. -->

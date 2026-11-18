@@ -376,13 +376,9 @@
   -->
   <string name="onboarding_home_content_description_close_button">Zatvori</string>
   <!-- Title for the privacy preferences dialog shown during onboarding. Note: The word "Firefox" should NOT be translated. -->
-  <string name="onboarding_preferences_dialog_title" tools:ignore="BrandUsage">Pomozite nam da poboljšamo Firefox</string>
   <!-- Title for the crash reporting option in the privacy preferences dialog shown during onboarding. -->
-  <string name="onboarding_preferences_dialog_crash_reporting_title">Automatski šalji izvještaje o padu</string>
   <!-- Description for the crash reporting option in the privacy preferences dialog shown during onboarding. -->
-  <string name="onboarding_preferences_dialog_crash_reporting_description">Izvještaji o padu programa nam omogućavaju da dijagnosticiramo i popravimo probleme s pretraživačem. Izvještaji mogu uključivati lične ili osjetljive podatke.</string>
   <!-- Learn more link for the crash reporting option in the privacy preferences dialog shown during onboarding. -->
-  <string name="onboarding_preferences_dialog_crash_reporting_learn_more_2">Saznajte više</string>
   <!-- Title for the startup crash page. %s is the name of the app (for example "Firefox") -->
   <string name="startup_crash_title">%s treba ponovo pokrenuti</string>
   <!-- Body text for the startup crash page. %s is the name of the app (for example "Firefox") -->
@@ -395,7 +391,6 @@
   <string name="startup_crash_restart">Ponovo otvori %s</string>
   <!-- Title for the usage data option in the privacy preferences dialog shown during onboarding. Note: The word "Mozilla" should NOT be translated. -->
   <!-- Positive button label for the privacy preferences dialog shown during onboarding. -->
-  <string name="onboarding_preferences_dialog_positive_button">Gotovo</string>
   <!-- Terms of service onboarding title card label. 'Firefox' intentionally hardcoded here -->
   <string name="onboarding_welcome_to_firefox" tools:ignore="BrandUsage">Dobrodošli u Firefox</string>
   <!--

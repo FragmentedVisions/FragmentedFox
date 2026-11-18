@@ -390,18 +390,6 @@ class OnboardingTelemetryRecorder(
     }
 
     /**
-     * Records when the manage privacy preferences link clicked.
-     */
-    fun onTermsOfServiceManagePrivacyPreferencesLinkClick() {
-        Onboarding.termsOfServiceManageLinkClicked.record(
-            extra = Onboarding.TermsOfServiceManageLinkClickedExtra(
-                onboardingReason = onboardingReason.value,
-                installSource = installSource,
-            ),
-        )
-    }
-
-    /**
      * Records when the accept terms button clicked.
      */
     fun onTermsOfServiceManagerAcceptTermsButtonClick() {

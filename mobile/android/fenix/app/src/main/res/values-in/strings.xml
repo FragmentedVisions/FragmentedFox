@@ -438,13 +438,9 @@
   -->
   <string name="onboarding_home_content_description_close_button">Tutup</string>
   <!-- Title for the privacy preferences dialog shown during onboarding. Note: The word "Firefox" should NOT be translated. -->
-  <string name="onboarding_preferences_dialog_title" tools:ignore="BrandUsage">Bantu kami membuat Firefox lebih baik</string>
   <!-- Title for the crash reporting option in the privacy preferences dialog shown during onboarding. -->
-  <string name="onboarding_preferences_dialog_crash_reporting_title">Kirim laporan kerusakan secara otomatis</string>
   <!-- Description for the crash reporting option in the privacy preferences dialog shown during onboarding. -->
-  <string name="onboarding_preferences_dialog_crash_reporting_description">Laporan kerusakan memungkinkan kami mendiagnosis dan memperbaiki masalah pada peramban. Laporan mungkin termasuk data pribadi atau sensitif.</string>
   <!-- Learn more link for the crash reporting option in the privacy preferences dialog shown during onboarding. -->
-  <string name="onboarding_preferences_dialog_crash_reporting_learn_more_2">Pelajari lebih lanjut</string>
   <!-- Title for the startup crash page. %s is the name of the app (for example "Firefox") -->
   <string name="startup_crash_title">%s perlu dimulai ulang</string>
   <!-- Body text for the startup crash page. %s is the name of the app (for example "Firefox") -->
@@ -457,7 +453,6 @@
   <string name="startup_crash_restart">Buka kembali %s</string>
   <!-- Title for the usage data option in the privacy preferences dialog shown during onboarding. Note: The word "Mozilla" should NOT be translated. -->
   <!-- Positive button label for the privacy preferences dialog shown during onboarding. -->
-  <string name="onboarding_preferences_dialog_positive_button">Selesai</string>
   <!-- Terms of service onboarding title card label. 'Firefox' intentionally hardcoded here -->
   <string name="onboarding_welcome_to_firefox" tools:ignore="BrandUsage">Selamat datang di Firefox</string>
   <!--
@@ -510,7 +505,6 @@
   -->
   <string name="nova_onboarding_tou_body_line_3" tools:ignore="BrandUsage">Untuk membantu meningkatkan peramban, Firefox mengirimkan data diagnostik dan interaksi ke Mozilla. %1$s</string>
   <!-- Terms of use (ToU) onboarding body line three link text for nova_onboarding_tou_body_line_3. -->
-  <string name="nova_onboarding_tou_body_line_3_link_text">Kelola pengaturan</string>
   <!-- "Set to default" onboarding title. -->
   <string name="nova_onboarding_set_to_default_title_2">Buka semua tautan Anda dengan privasi bawaan</string>
   <!-- "Set to default" onboarding subtitle. -->

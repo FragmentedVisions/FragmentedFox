@@ -634,7 +634,6 @@ private fun touPageUIData() = OnboardingPageUiData(
         lineTwoLinkText = stringResource(id = R.string.nova_onboarding_tou_body_line_2_link_text),
         lineTwoLinkUrl = "URL",
         lineThreeText = stringResource(id = R.string.nova_onboarding_tou_body_line_3),
-        lineThreeLinkText = stringResource(id = R.string.nova_onboarding_tou_body_line_3_link_text),
     ),
     imageRes = R.drawable.nova_onboarding_tou,
     primaryButtonLabel = stringResource(

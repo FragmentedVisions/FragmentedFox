@@ -25,13 +25,11 @@ class DefaultOnboardingTermsOfServiceEventHandlerTest {
     private lateinit var settings: Settings
 
     private var openLinkUrl: String? = null
-    private var showManagePrivacyPreferencesDialogCalled = false
     private var gleanStarted = false
 
     @Before
     fun setup() {
         openLinkUrl = null
-        showManagePrivacyPreferencesDialogCalled = false
         gleanStarted = false
 
         telemetryRecorder = mockk(relaxed = true)
@@ -40,7 +38,6 @@ class DefaultOnboardingTermsOfServiceEventHandlerTest {
         eventHandler = DefaultOnboardingTermsOfServiceEventHandler(
             telemetryRecorder = telemetryRecorder,
             openLink = { openLinkUrl = it },
-            showManagePrivacyPreferencesDialog = { showManagePrivacyPreferencesDialogCalled = true },
             settings = settings,
             startGlean = { gleanStarted = true },
         )
@@ -68,16 +65,6 @@ class DefaultOnboardingTermsOfServiceEventHandlerTest {
             telemetryRecorder.onTermsOfServicePrivacyNoticeLinkClick()
         }
         assertEquals(url, openLinkUrl)
-    }
-
-    @Test
-    fun onManagePrivacyPreferencesLinkClicked() {
-        eventHandler.onManagePrivacyPreferencesLinkClicked()
-
-        verify {
-            telemetryRecorder.onTermsOfServiceManagePrivacyPreferencesLinkClick()
-        }
-        assertTrue(showManagePrivacyPreferencesDialogCalled)
     }
 
     @Test

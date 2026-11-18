@@ -338,16 +338,11 @@
   -->
   <string name="onboarding_home_content_description_close_button">ዝጋ</string>
   <!-- Title for the privacy preferences dialog shown during onboarding. Note: The word "Firefox" should NOT be translated. -->
-  <string name="onboarding_preferences_dialog_title" tools:ignore="BrandUsage">Firefoxን የተሻለ እንድናደርግ ያግዙን</string>
   <!-- Title for the crash reporting option in the privacy preferences dialog shown during onboarding. -->
-  <string name="onboarding_preferences_dialog_crash_reporting_title">የብልሽት ሪፖርቶችን በራስ-ሰር ይላኩ</string>
   <!-- Description for the crash reporting option in the privacy preferences dialog shown during onboarding. -->
-  <string name="onboarding_preferences_dialog_crash_reporting_description">የብልሽት ሪፖርቶች በአሳሹ ላይ ችግሮችን እንድንመረምር እና እንድናስተካክል ያስችሉናል። ሪፖርቶች ግላዊ ወይም ሚስጥራዊ መረጃዎችን ሊያካትቱ ይችላሉ።</string>
   <!-- Learn more link for the crash reporting option in the privacy preferences dialog shown during onboarding. -->
-  <string name="onboarding_preferences_dialog_crash_reporting_learn_more_2">ተጨማሪ ይወቁ</string>
   <!-- Title for the usage data option in the privacy preferences dialog shown during onboarding. Note: The word "Mozilla" should NOT be translated. -->
   <!-- Positive button label for the privacy preferences dialog shown during onboarding. -->
-  <string name="onboarding_preferences_dialog_positive_button">ተከናውኗል</string>
   <!-- Terms of service onboarding title card label. 'Firefox' intentionally hardcoded here -->
   <string name="onboarding_welcome_to_firefox" tools:ignore="BrandUsage">ወደ Firefox እንኳን በደህና መጡ</string>
   <!-- Marketing onboarding page title variant. “One last thing” refers to the final step or action in the onboarding process that we’re asking users to take before they can start using the browser. -->

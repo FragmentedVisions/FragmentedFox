@@ -426,3 +426,5 @@ pref("network.dns.disablePrefetchFromHTTPS", true);
 pref("dom.battery.enabled", false);
 
 pref("browser.ipProtection.enabled", false);
+
+pref("security.remote_settings.intermediates.enabled", false);

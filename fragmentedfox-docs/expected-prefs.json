@@ -49,7 +49,8 @@
     "dom.battery.enabled": "false",
     "network.ohttp.configURL": "\"\"",
     "network.ohttp.relayURL": "\"\"",
-    "network.tickle-wifi.enabled": "false"
+    "network.tickle-wifi.enabled": "false",
+    "security.remote_settings.intermediates.enabled": "false"
   },
   "modules/libpref/init/all.js": {
     "datareporting.policy.dataSubmissionEnabled": "false",

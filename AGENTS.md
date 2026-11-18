@@ -1,11 +1,11 @@
 # FragmentedFox fork notes
-- This repository is FragmentedFox, a fork of Firefox based on a Mozilla ESR release tag. There are two branches: `Stable-Main` (the default, only updated after a successful build checked on a phone) and `NonStable--test` (all changes are made and built here). See `README.md` and `fragmentedfox-docs/` for what differs from Mozilla's code and how to upgrade.
+- This repository is FragmentedFox, a fork of Firefox based on a Mozilla ESR release tag. There are two branches: `Stable-Main` (the default, only updated after a successful build checked on a phone) and `NonStable--test` (all changes are made and built here). See `README.md` and `fragmentedfox-docs/README.md` (the index, including `status.md` for builds) for what differs from Mozilla's code and how to upgrade.
 - The Android app layer (`mobile/android/fenix`, `mobile/android/android-components`) is FragmentedFox's own code. Change, rebuild and delete it freely and remove dead code rather than leaving it for ESR merges: an ESR upgrade copies this layer over and does not merge Mozilla's changes into it (see `fragmentedfox-docs/upgrading.md`). Outside those folders, keep changes small and prefer changing a default value over restructuring Mozilla code, because those files are merged three ways on every upgrade.
 - Builds run on GitHub Actions, not locally. Do not start long local builds in cloud sessions.
 - Never commit keystores, tokens or other secrets.
 - Do not make the Android app send anything to Mozilla. Telemetry upload and the first-run opt-out ping are tied to `BuildConfig.TELEMETRY`; see `fragmentedfox-docs/telemetry.md` before touching Glean, pings or the metric controller.
 - Before pushing Android changes, run `python3 .github/scripts/check-fork.py`. It catches code that still points at removed things and prefs or defaults that changed. Keep `fragmentedfox-docs/removed.json`, `expected-prefs.json`, `expected-settings.json` and `expected-nimbus.json` in step with deliberate changes.
-- The Android app has had its VPN, Adjust, Firebase, Play Integrity, Sentry, summarizer and Play Store review prompt removed. See `fragmentedfox-docs/changes.md` before adding anything back, and do not reintroduce those SDKs.
+- The Android app has had its VPN, Adjust, Firebase, Play Integrity, Sentry, summarizer and Play Store review prompt removed. See `fragmentedfox-docs/removed.md` before adding anything back, and do not reintroduce those SDKs.
 - Do not use the Firefox name or logo for FragmentedFox's own branding. Names of real Mozilla services (Relay, Monitor, Send, Profiler) stay as they are.
 
 # Global instructions

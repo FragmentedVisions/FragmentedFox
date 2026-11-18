@@ -51,7 +51,7 @@ GitHub's free runners have 4 cores, 16 GB of memory and a 6 hour job limit. A fu
 - every Glean metric and ping the app code records is defined in `metrics.yaml` and `pings.yaml`, and every `FxNimbus.features` flag exists in the FML files (these are generated classes, so a metric or flag removed while code still uses it only fails deep in the compile);
 - every top level `projectDir` in `settings.gradle` points at a folder that exists, and every `::function` reference in the app points at a function that still exists (both only failed minutes or an hour into a build before);
 - the Glean pings, YAML and XML files are consistent.
-- the 23 alternative launcher aliases are still in the manifest and the install permission removal has not come back (see [changes](./changes.md)); the dark theme is the default and the Fragmented Visions colours are applied; and no android-components module refers to a palette colour it cannot see.
+- the 23 alternative launcher aliases are still in the manifest and the install permission removal has not come back (see [known gaps](./known-gaps.md)); the dark theme is the default and the Fragmented Visions colours are applied; and no android-components module refers to a palette colour it cannot see.
 
 The `Check FragmentedFox` workflow has options besides the guard, all started by hand:
 

@@ -30,4 +30,4 @@ A build on ESR 153.7.0 (build 38, since dropped) was installed on an 8 inch Onn 
 
 ## Not done
 
-A timed memory-pressure signal for a long-running tab, compressing page data over time (the engine has no such feature), and a lower `dom.ipc.processCount` were considered and not made. See [changes](./changes.md) for details of what was changed and what is untested.
+A timed memory-pressure signal for a long-running tab, compressing page data over time (the engine has no such feature), and a lower `dom.ipc.processCount` were considered and not made. See [defaults](./defaults.md) for details of what was changed and what is untested.

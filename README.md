@@ -10,11 +10,11 @@ FragmentedFox is a private, independent fork of the Firefox browser from [Fragme
 
 ## Status
 
-Early and experimental. The Android app builds on GitHub Actions into a signed APK that installs and runs on a phone. It has had only light testing. The latest build (build 37, commit `cbd89e5d79`) passed and was installed and checked on a phone. It has one known minor bug, listed under known gaps in [changes](./fragmentedfox-docs/changes.md).
+Early and experimental. The Android app builds on GitHub Actions into a signed APK that installs and runs on a phone, and has had only light testing. Which build is which, and what is still unbuilt, is on the [status page](./fragmentedfox-docs/status.md).
 
 | Platform | Status |
 | --- | --- |
-| Android (arm64) | Builds on GitHub Actions into a signed APK (about 65 minutes with a warm compile cache). Installed and checked on a phone. |
+| Android (arm64) | Builds on GitHub Actions into a signed APK (about an hour with a warm compile cache). Installed and checked on a phone. |
 | Linux desktop | Workflow written, not run yet. |
 | Windows, macOS, iOS | Not supported yet. |
 
@@ -24,33 +24,24 @@ FragmentedFox follows Mozilla's [Extended Support Release](https://support.mozil
 
 ## What is different
 
-- Telemetry, data reporting, studies (Normandy, Nimbus rollouts) and crash report sending are off by default.
-- Sponsored content on the new tab page, Pocket recommendations on Android (removed), sponsored tiles and the VPN, pin and Firefox Focus promos are off.
-- Captive portal and connectivity checks, link prefetching and remote download checks are off.
-- HTTPS-Only mode is on, and DNS is encrypted by default (Quad9, falling back to normal DNS).
-- TLS 1.2 connections only use ciphers with forward secrecy and authenticated encryption (ECDHE with AES-GCM or ChaCha20). 3DES, static RSA and CBC ciphers are off, so a few older sites that offer nothing else will not connect. TLS 1.3 early data (0-RTT) is also off, since it can be replayed, and servers that do not support secure renegotiation are refused. All of this is in build 30 (commit `fb02ae860a`), which was installed on a phone; sites were not tested systematically. See [changes](./fragmentedfox-docs/changes.md).
-- Enhanced Tracking Protection is on Strict by default, and fingerprinting protection runs in every tab at that level. Some sites may need an exception from the shield in the toolbar. Compiled in build 31; not checked on a phone yet. See [changes](./fragmentedfox-docs/changes.md).
-- Only the selected tab and the most recently used other tab stay running. Older tabs are shut down and reload when opened, so they run no scripts and make no connections in the background. Tabs playing media can be kept running with a setting. It is in build 30 (commit `fb02ae860a`); reloading on return, typed form input and media playback were checked on a phone. See [changes](./fragmentedfox-docs/changes.md).
-- WebRTC is left out of the build and switched off in the prefs.
-- On first run the Android app offers to install uBlock Origin and Privacy Badger, and only does so if you accept.
-- Its own name, icons, wordmark, vendor (`FragmentedVisions`) and Android application ID (`com.fragmentedvisions.fragmentedfox`).
+- **No telemetry or remote control.** Telemetry, data reporting, studies and Mozilla's remote experiments are off or compiled out, and crash report sending is off by default.
+- **No sponsored content or promos.** Sponsored tiles, Pocket stories, and the VPN, pin and Firefox Focus promos are gone or off.
+- **Fewer background connections.** Captive portal and connectivity checks, link prefetching, look-ahead connections, DNS prefetch and Google Safe Browsing are off. WebRTC is left out of the build.
+- **Safer connections.** HTTPS-Only mode is on, DNS is encrypted by default (Quad9, falling back to normal DNS), and TLS 1.2 only uses forward-secret authenticated ciphers.
+- **Tracking protection.** Strict by default, with fingerprinting protection in every tab, and tracking parameters stripped from links.
+- **Lean tabs.** Only the selected tab and the most recently used other tab keep running.
+- **Removed from the Android app, not just switched off:** Mozilla's VPN, the Adjust, Firebase, Play Integrity and Sentry SDKs, the page summarizer, Google Lens, Firefox Labs, the Play Store review prompt, marketing consent and attribution code, and more. See [removed](./fragmentedfox-docs/removed.md).
+- **Its own name and look:** name, icons, wordmark, vendor (`FragmentedVisions`) and application ID (`com.fragmentedvisions.fragmentedfox`). On first run the Android app offers to install uBlock Origin and Privacy Badger, and only does so if you accept.
 
-### Removed from the Android app
-
-Mozilla's VPN, the Adjust, Firebase, Google Play Integrity and Sentry SDKs, the page summarizer and its LLM libraries, the Play Store review prompt, the marketing data consent flow, the growth conversion and install attribution code, and the partner distribution code are removed, not just switched off. All of these removals are in `Stable-Main` and were built and checked on a phone. Details are in [changes](./fragmentedfox-docs/changes.md), which also lists known gaps such as the missing network audit.
+The full list is in [changes](./fragmentedfox-docs/changes.md), with defaults in [defaults](./fragmentedfox-docs/defaults.md) and open problems in [known gaps](./fragmentedfox-docs/known-gaps.md).
 
 ## Branches
 
-There are only two branches. All changes are made on `NonStable--test`, and builds are run from it. `Stable-Main` only moves forward after a `NonStable--test` build succeeds and the app has been checked on a phone.
-
-| Branch | Purpose |
-| --- | --- |
-| `Stable-Main` | The default branch. The last state that was built and installed on a phone (build 37, commit `cbd89e5d79`, Android build run 43492714687). Anything after that commit is documentation only. |
-| `NonStable--test` | Where all work happens. Changes made after build 37 are listed in [changes](./fragmentedfox-docs/changes.md). An upgrade to ESR 153.7.0 was tried (build 38) and dropped because it made pages get stuck after a Google Store tab change; the app stays on ESR 153.6.0. See [upgrading](./fragmentedfox-docs/upgrading.md). Build 40 (run 44285769439, commit `2c79351500`) is the 153.6 line with Safe Browsing off, no look-ahead connections, no DNS prefetch, no battery API and the Base64 fixes. It passed and is waiting for a check on a phone. Build 41 (run 44304046692, commit `9be010b72a`) adds the Terms of Use prompt removal, a two-part backport of Mozilla's cache fix, removal of the first-run "Manage settings" dialog, unused Glean metrics and baseline entries, and GitHub Actions pinned to commit SHAs. It passed; the Google Store repro on a phone is the check for the cache backport. Not built yet: removal of Google Lens and Firefox Labs. `Stable-Main` only moves up after a build of the new changes has been checked on a phone. |
+There are two branches. All changes are made on `NonStable--test`, and builds are run from it. `Stable-Main` is the default branch and only moves forward after a `NonStable--test` build succeeds and the app has been checked on a phone. Current commits and builds are on the [status page](./fragmentedfox-docs/status.md).
 
 ## Building
 
-Builds run on GitHub Actions and are started by hand from the Actions tab. See [building](./fragmentedfox-docs/building.md). What the app can and cannot send is in [memory](./fragmentedfox-docs/memory.md), [telemetry](./fragmentedfox-docs/telemetry.md) and [network](./fragmentedfox-docs/network.md). Android builds are signed with a stored release key, described in [signing](./fragmentedfox-docs/signing.md). A quick check (`.github/scripts/check-fork.py`) runs before every Android build and catches code that points at removed things, and prefs or defaults that changed.
+Builds run on GitHub Actions and are started by hand from the Actions tab. See [building](./fragmentedfox-docs/building.md). The full documentation index is [fragmentedfox-docs](./fragmentedfox-docs/README.md). What the app can and cannot send is in [memory](./fragmentedfox-docs/memory.md), [telemetry](./fragmentedfox-docs/telemetry.md) and [network](./fragmentedfox-docs/network.md). Android builds are signed with a stored release key, described in [signing](./fragmentedfox-docs/signing.md). A quick check (`.github/scripts/check-fork.py`) runs before every Android build and catches code that points at removed things, and prefs or defaults that changed.
 
 ## Security
 

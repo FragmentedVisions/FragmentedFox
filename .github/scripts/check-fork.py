@@ -202,7 +202,7 @@ def check_cache_patch():
         text = read(os.path.join(ROOT, relative))
         for needle in needles:
             if needle not in text:
-                fail("cache-patch", f"{relative}: our backport of Mozilla's cache hang fix (bug 2052908) is missing '{needle}'; see fragmentedfox-docs/changes.md before taking Mozilla's version")
+                fail("cache-patch", f"{relative}: our backport of Mozilla's cache hang fix (bug 2052908) is missing '{needle}'; see fragmentedfox-docs/maintenance.md before taking Mozilla's version")
 
 
 def check_nimbus():
@@ -235,9 +235,9 @@ def check_cleartext():
 def check_launcher_aliases():
     manifest = read(os.path.join(APP, "src/main/AndroidManifest.xml"))
     if manifest.count("<activity-alias") < 26:
-        fail("manifest", "AndroidManifest.xml: launcher aliases were removed; builds without them did not install (see changes.md)")
+        fail("manifest", "AndroidManifest.xml: launcher aliases were removed; builds without them did not install (see fragmentedfox-docs/known-gaps.md)")
     if 'android.permission.REQUEST_INSTALL_PACKAGES" tools:node="remove"' in manifest:
-        fail("manifest", "AndroidManifest.xml: REQUEST_INSTALL_PACKAGES removal is untested (see changes.md)")
+        fail("manifest", "AndroidManifest.xml: REQUEST_INSTALL_PACKAGES removal is untested (see fragmentedfox-docs/known-gaps.md)")
 
 
 def check_theme():
@@ -287,7 +287,7 @@ def check_licenses():
     if not match:
         fail("licenses", "app/build.gradle: the oss-licenses plugin is no longer applied, so the libraries screen would be empty")
     elif "MOZILLA_OFFICIAL" in match.group(1):
-        fail("licenses", "app/build.gradle: the oss-licenses plugin must not depend on MOZILLA_OFFICIAL, our builds never set it (see changes.md)")
+        fail("licenses", "app/build.gradle: the oss-licenses plugin must not depend on MOZILLA_OFFICIAL, our builds never set it (see fragmentedfox-docs/known-gaps.md)")
 
 
 def check_translations():

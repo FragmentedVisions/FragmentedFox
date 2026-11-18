@@ -31,9 +31,13 @@ internal class CustomSearchEngineStorage(
 
     override suspend fun loadSearchEngineList(): List<SearchEngine> = withContext(coroutineContext) {
         val searchEngineList = mutableListOf<SearchEngine>()
-        getFileDirectory().listFiles()?.forEach {
+        getFileDirectory().listFiles()?.filter { it.name.endsWith(SEARCH_FILE_EXTENSION) }?.forEach {
             val filename = it.name.removeSuffix(SEARCH_FILE_EXTENSION)
-            val identifier = String(Base64.decode(filename, Base64.NO_WRAP or Base64.URL_SAFE))
+            val identifier = try {
+                String(Base64.decode(filename, Base64.NO_WRAP or Base64.URL_SAFE))
+            } catch (_: IllegalArgumentException) {
+                return@forEach
+            }
             searchEngineList.add(loadSearchEngine(identifier))
         }
         searchEngineList.toList()

@@ -483,8 +483,12 @@ fun String.trimmed(): String {
  */
 fun String.base64ToBitmap(): Bitmap? =
     extractBase6RawString()?.let { rawString ->
-        val raw = Base64.decode(rawString, Base64.DEFAULT)
-        BitmapFactory.decodeByteArray(raw, 0, raw.size)
+        val raw = try {
+            Base64.decode(rawString, Base64.DEFAULT)
+        } catch (_: IllegalArgumentException) {
+            null
+        }
+        raw?.let { BitmapFactory.decodeByteArray(it, 0, it.size) }
     }
 
 @VisibleForTesting

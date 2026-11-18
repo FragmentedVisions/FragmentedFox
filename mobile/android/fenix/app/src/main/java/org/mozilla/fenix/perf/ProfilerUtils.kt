@@ -218,7 +218,10 @@ object ProfilerUtils {
         response.body.useBufferedReader {
             val jwt = it.readText()
             val jwtSplit = jwt.split(".")
-            val decodedBytes = Base64.decode(jwtSplit[1], Base64.DEFAULT)
+            if (jwtSplit.size < 2) {
+                throw IOException("The profiler server did not return a token")
+            }
+            val decodedBytes = Base64.decode(jwtSplit[1], Base64.URL_SAFE)
             val decodedStr = decodedBytes.decodeToString()
             val jsonObject = JSONObject(decodedStr)
             jwtToken.append(jsonObject[TOKEN])

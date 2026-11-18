@@ -250,9 +250,15 @@ internal class SearchEngineReader(
             return
         }
 
-        val raw = Base64.decode(uri.substring(IMAGE_URI_PREFIX.length), Base64.DEFAULT)
+        val raw = try {
+            Base64.decode(uri.substring(IMAGE_URI_PREFIX.length), Base64.DEFAULT)
+        } catch (_: IllegalArgumentException) {
+            null
+        }
 
-        builder.icon = BitmapFactory.decodeByteArray(raw, 0, raw.size)
+        if (raw != null) {
+            builder.icon = BitmapFactory.decodeByteArray(raw, 0, raw.size)
+        }
 
         parser.nextTag()
     }

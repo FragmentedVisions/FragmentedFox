@@ -704,6 +704,11 @@ class StringTest {
     }
 
     @Test
+    fun `GIVEN a data uri whose base64 content has illegal characters WHEN converting it into bitmap THEN the result is null and no exception is thrown`() {
+        assertNull("data:image/png;base64,!!!not base64!!!".base64ToBitmap())
+    }
+
+    @Test
     fun `GIVEN a valid or invalid base64 image string WHEN extracting its raw content string THEN the result is correct`() {
         val validBase64JpegString = "data:image/jpeg;base64,R0lGODlhAQABAIAAAP///wAAACwAAAAAAQABAAACAkQBADs="
         val validBase64JpgString = "data:image/jpeg;base64,R0lGODlhAQABAIAAAP///wAAACwAAAAAAQABAAACAkQBADs="

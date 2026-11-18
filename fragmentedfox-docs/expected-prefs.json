@@ -46,7 +46,9 @@
     "network.http.speculative-parallel-limit": "0",
     "network.dns.disablePrefetch": "true",
     "network.dns.disablePrefetchFromHTTPS": "true",
-    "dom.battery.enabled": "false"
+    "dom.battery.enabled": "false",
+    "extensions.systemAddon.update.enabled": "false",
+    "extensions.systemAddon.update.url": "\"\""
   },
   "modules/libpref/init/all.js": {
     "datareporting.policy.dataSubmissionEnabled": "false",

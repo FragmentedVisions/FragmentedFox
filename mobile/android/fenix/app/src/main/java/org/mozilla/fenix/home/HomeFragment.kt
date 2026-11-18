@@ -656,7 +656,6 @@ class HomeFragment : Fragment() {
     override fun onStart() {
         super.onStart()
 
-
         subscribeToTabCollections()
         updateLastHomeActivity()
 
@@ -727,7 +726,6 @@ class HomeFragment : Fragment() {
     override fun onStop() {
         super.onStop()
         updateLastHomeActivity()
-
     }
 
     private fun subscribeToTabCollections(): Observer<List<TabCollection>> {

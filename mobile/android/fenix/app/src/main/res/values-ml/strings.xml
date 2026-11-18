@@ -3566,38 +3566,27 @@
   <!-- ==== Terms of use pop up prompt ==== -->
 
   <!-- Title for the pop up prompt -->
-  <string name="terms_of_use_prompt_title">പുതുക്കൽ ലഭ്യം</string>
   <!--
     Second part of the terms of use pop up prompt
     %1$s is the string terms_of_use_prompt_link_learn_more (Learn more) that is a link to a website with more information about the terms of use
   -->
-  <string name="terms_of_use_prompt_message_2">ദയവായി %1$s-ന് പരിശോധിച്ച് അംഗീകരിക്കുക.\u0020</string>
   <!-- Terms of use link in the pop up prompt message that links to the terms of use -->
-  <string name="terms_of_use_prompt_link_terms_of_use">ഉപയോഗനിബന്ധനകള്‍</string>
   <!-- Privacy notice link in the pop up prompt message that links to the privacy notice -->
-  <string name="terms_of_use_prompt_link_privacy_notice">സ്വകാര്യത അറിയിപ്പു്</string>
   <!-- Learn more link in the pop up prompt message that links to a site with more information about the terms of use -->
-  <string name="terms_of_use_prompt_link_learn_more">കൂടുതലറിയുക</string>
   <!-- Label for a button to accept the terms of use -->
-  <string name="terms_of_use_prompt_accept">അംഗീകരിക്കുക</string>
   <!-- Label for a button to postpone accepting the terms of use -->
-  <string name="terms_of_use_prompt_postpone">പിന്നീടു് ഓൎമ്മിപ്പിക്കുക</string>
   <!-- ==== Experiment strings. ==== -->
 
   <!-- A title for the popup prompt. -->
-  <string name="terms_of_use_prompt_title_option_a" tools:ignore="UnusedResources">ഉപയോഗനിബന്ധനകള്‍</string>
   <!--
     A title for the popup prompt.
     %1$s is the product name "Firefox"
   -->
-  <string name="terms_of_use_prompt_title_option_b" tools:ignore="UnusedResources">%1$s-ൽ നിന്നൊരു കുറിപ്പു്</string>
   <!--
     Copy for the Terms of Use popup prompt body line two.
     %1$s is the string terms_of_use_prompt_body_line_two_alternative_link ("here") that is a link to the Terms of Use
   -->
-  <string name="terms_of_use_prompt_body_line_two_alternative" tools:ignore="UnusedResources">%1$s-ൽ താങ്ങൾക്കു കൂടുതലറിയാം.</string>
   <!-- Link text for terms_of_use_prompt_body_line_two_alternative that links to a site with more information about the Terms of Use -->
-  <string name="terms_of_use_prompt_body_line_two_alternative_link" tools:ignore="UnusedResources">ഇവിടെ</string>
   <!-- Section header for the North America region in the sports widget country selector. -->
   <!-- Section header for the Africa confederation group in the sports widget country selector. -->
   <!-- Section header for the Asia confederation group in the sports widget country selector. -->
@@ -3622,9 +3611,7 @@
   <!-- ==== End of Terms of use popup prompt. ==== -->
 
   <!-- The first active link used in privacy_notice_updated_homepage_message -->
-  <string name="privacy_notice_updated_homepage_message_privacy_notice" tools:ignore="UnusedResources">സ്വകാര്യത അറിയിപ്പു്</string>
   <!-- The second active link used in privacy_notice_updated_homepage_message -->
-  <string name="privacy_notice_updated_homepage_message_learn_more" tools:ignore="UnusedResources">കൂടുതല്‍ അറിയുക</string>
   <!-- Lens image search button content description -->
   <string name="lens_search_content_description">പടം ഉപയോഗിച്ചു തിരയുക</string>
   <!-- Content description for the gallery picker button in the Lens camera screen -->

@@ -3260,30 +3260,21 @@
   <!-- ==== Terms of use pop up prompt ==== -->
 
   <!-- Title for the pop up prompt -->
-  <string name="terms_of_use_prompt_title">I a de nòu</string>
   <!-- Terms of use link in the pop up prompt message that links to the terms of use -->
-  <string name="terms_of_use_prompt_link_terms_of_use">Condicions d’utilizacion</string>
   <!-- Privacy notice link in the pop up prompt message that links to the privacy notice -->
-  <string name="terms_of_use_prompt_link_privacy_notice">Politica de confidencialitat</string>
   <!-- Learn more link in the pop up prompt message that links to a site with more information about the terms of use -->
-  <string name="terms_of_use_prompt_link_learn_more">Ne saber mai</string>
   <!-- Label for a button to accept the terms of use -->
-  <string name="terms_of_use_prompt_accept">Acceptar</string>
   <!-- Label for a button to postpone accepting the terms of use -->
-  <string name="terms_of_use_prompt_postpone">Lo me remembrar mai tard</string>
   <!-- ==== Experiment strings. ==== -->
 
   <!--
     Copy for the Terms of Use popup prompt body line two.
     %1$s is the string terms_of_use_prompt_body_line_two_alternative_link ("here") that is a link to the Terms of Use
   -->
-  <string name="terms_of_use_prompt_body_line_two_alternative" tools:ignore="UnusedResources">Ne podètz saber mai %1$s.</string>
   <!-- Link text for terms_of_use_prompt_body_line_two_alternative that links to a site with more information about the Terms of Use -->
-  <string name="terms_of_use_prompt_body_line_two_alternative_link" tools:ignore="UnusedResources">aicí</string>
   <!-- Content description (for accessibility, not displayed) for the close button on the sports widget card. -->
   <!-- Content description (for accessibility, not displayed) for the overflow (more options) menu button on the sports widget card. -->
   <!-- ==== End of Terms of use popup prompt. ==== -->
 
   <!-- The second active link used in privacy_notice_updated_homepage_message -->
-  <string name="privacy_notice_updated_homepage_message_learn_more" tools:ignore="UnusedResources">Ne saber mai</string>
 </resources>

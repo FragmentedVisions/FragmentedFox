@@ -729,7 +729,6 @@ open class HomeActivity : LocaleAwareAppCompatActivity(), NavHostActivity, Crash
         // DO NOT MOVE ANYTHING ABOVE THIS getProfilerTime CALL.
         val startProfilerTime = components.core.engine.profiler?.getProfilerTime()
 
-        components.termsOfUseManager.onStart()
 
         super.onStart()
 

@@ -23,7 +23,6 @@ import org.mozilla.fenix.home.recentvisits.RecentlyVisitedItem.RecentHistoryGrou
 import org.mozilla.fenix.home.recentvisits.RecentlyVisitedItem.RecentHistoryHighlight
 import org.mozilla.fenix.home.recentvisits.controller.RecentVisitsController
 import org.mozilla.fenix.home.search.HomeSearchController
-import org.mozilla.fenix.home.termsofuse.PrivacyNoticeBannerController
 import org.mozilla.fenix.home.toolbar.ToolbarController
 import org.mozilla.fenix.home.topsites.controller.TopSiteController
 import org.mozilla.fenix.wallpapers.WallpaperState
@@ -172,7 +171,6 @@ class SessionControlInteractor(
     private val toolbarController: ToolbarController,
     private val homeSearchController: HomeSearchController,
     private val topSiteController: TopSiteController,
-    private val privacyNoticeBannerController: PrivacyNoticeBannerController,
     private val trackingProtectionController: TrackingProtectionController,
 ) : HomepageInteractor {
 
@@ -344,22 +342,6 @@ class SessionControlInteractor(
 
     override fun reportSessionMetrics(state: AppState) {
         controller.handleReportSessionMetrics(state)
-    }
-
-    override fun onPrivacyNoticeBannerCloseClicked() {
-        privacyNoticeBannerController.onBannerCloseClicked()
-    }
-
-    override fun onPrivacyNoticeBannerPrivacyNoticeClicked() {
-        privacyNoticeBannerController.onBannerPrivacyNoticeClicked()
-    }
-
-    override fun onPrivacyNoticeBannerLearnMoreClicked() {
-        privacyNoticeBannerController.onBannerLearnMoreClicked()
-    }
-
-    override fun onPrivacyNoticeBannerDisplayed() {
-        privacyNoticeBannerController.onBannerDisplayed()
     }
 
     override fun onPrivacyReportTapped() {

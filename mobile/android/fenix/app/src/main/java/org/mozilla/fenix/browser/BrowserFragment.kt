@@ -66,7 +66,6 @@ import org.mozilla.fenix.onboarding.continuous.ContinuousOnboardingStageProvider
 import org.mozilla.fenix.settings.downloads.DownloadLocationManager
 import org.mozilla.fenix.settings.quicksettings.protections.cookiebanners.getCookieBannerUIMode
 import org.mozilla.fenix.shortcut.PwaOnboardingObserver
-import org.mozilla.fenix.termsofuse.store.Surface
 import org.mozilla.fenix.utils.Settings
 
 /**
@@ -314,12 +313,6 @@ class BrowserFragment : BaseBrowserFragment(), UserInteractionHandler, SystemIns
 
         subscribeToTabCollections()
         updateLastBrowseActivity()
-
-        if (requireComponents.termsOfUseManager.shouldShowTermsOfUsePromptOnBrowserFragment()) {
-            findNavController().navigate(
-                BrowserFragmentDirections.actionGlobalTermsOfUseDialog(Surface.BROWSER),
-            )
-        }
     }
 
     override fun onStop() {

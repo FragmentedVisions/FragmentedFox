@@ -77,8 +77,6 @@ import org.mozilla.fenix.settings.emailmasks.middleware.DefaultEmailMasksReposit
 import org.mozilla.fenix.settings.emailmasks.middleware.EmailMasksRepository
 import org.mozilla.fenix.settings.labs.FirefoxLabsSettingsSearchProvider
 import org.mozilla.fenix.settings.settingssearch.DefaultFenixSettingsIndexer
-import org.mozilla.fenix.termsofuse.TermsOfUseManager
-import org.mozilla.fenix.termsofuse.store.DefaultTermsOfUsePromptRepository
 import org.mozilla.fenix.utils.Settings
 import org.mozilla.fenix.utils.isLargeScreenSize
 import org.mozilla.fenix.wifi.WifiConnectionMonitor
@@ -324,14 +322,6 @@ class Components(private val context: Context) {
     }
 
     val fxSuggest by lazyMonitored { FxSuggest(context, remoteSettingsService.value, analytics.crashReporter) }
-
-    val termsOfUsePromptRepository by lazyMonitored {
-        DefaultTermsOfUsePromptRepository(settings)
-    }
-
-    val termsOfUseManager by lazyMonitored {
-        TermsOfUseManager(termsOfUsePromptRepository)
-    }
 
     val settingsIndexer by lazyMonitored {
         DefaultFenixSettingsIndexer(

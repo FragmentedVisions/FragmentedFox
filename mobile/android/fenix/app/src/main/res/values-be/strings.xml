@@ -3018,21 +3018,14 @@
   <!-- ==== Terms of use pop up prompt ==== -->
 
   <!-- Terms of use link in the pop up prompt message that links to the terms of use -->
-  <string name="terms_of_use_prompt_link_terms_of_use">Умовы выкарыстання</string>
   <!-- Privacy notice link in the pop up prompt message that links to the privacy notice -->
-  <string name="terms_of_use_prompt_link_privacy_notice">Паведамленне аб прыватнасці</string>
   <!-- Learn more link in the pop up prompt message that links to a site with more information about the terms of use -->
-  <string name="terms_of_use_prompt_link_learn_more">Падрабязней</string>
   <!-- Label for a button to accept the terms of use -->
-  <string name="terms_of_use_prompt_accept">Прыняць</string>
   <!-- Label for a button to postpone accepting the terms of use -->
-  <string name="terms_of_use_prompt_postpone">Нагадаць пазней</string>
   <!-- ==== Experiment strings. ==== -->
 
   <!-- A title for the popup prompt. -->
-  <string name="terms_of_use_prompt_title_option_a" tools:ignore="UnusedResources">Умовы выкарыстання</string>
   <!-- Link text for terms_of_use_prompt_body_line_two_alternative that links to a site with more information about the Terms of Use -->
-  <string name="terms_of_use_prompt_body_line_two_alternative_link" tools:ignore="UnusedResources">тут</string>
   <!-- Section header for the North America region in the sports widget country selector. -->
   <!-- Section header for the Europe confederation group in the sports widget country selector. -->
   <!-- Section header for the Oceania confederation group in the sports widget country selector. -->
@@ -3064,9 +3057,7 @@
   <!-- ==== End of Terms of use popup prompt. ==== -->
 
   <!-- The first active link used in privacy_notice_updated_homepage_message -->
-  <string name="privacy_notice_updated_homepage_message_privacy_notice" tools:ignore="UnusedResources">Паведамленне аб прыватнасці</string>
   <!-- The second active link used in privacy_notice_updated_homepage_message -->
-  <string name="privacy_notice_updated_homepage_message_learn_more" tools:ignore="UnusedResources">Падрабязней</string>
   <!-- Content description for the QR scanner half of the camera mode toggle -->
   <string name="lens_camera_mode_qr">QR-сканэр</string>
   <!--

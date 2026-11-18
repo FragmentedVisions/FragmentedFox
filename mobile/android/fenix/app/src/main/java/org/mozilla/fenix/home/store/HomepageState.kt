@@ -27,7 +27,6 @@ import org.mozilla.fenix.home.recenttabs.RecentTab
 import org.mozilla.fenix.home.recentvisits.RecentlyVisitedItem
 import org.mozilla.fenix.home.topsites.TopSiteColors
 import org.mozilla.fenix.home.ui.getAttr
-import org.mozilla.fenix.termsofuse.store.PrivacyNoticeBannerState
 import org.mozilla.fenix.utils.Settings
 
 /**
@@ -66,7 +65,6 @@ internal sealed class HomepageState {
     /**
      * State corresponding with the homepage in normal browsing mode.
      *
-     * @property shouldShowPrivacyNoticeBanner If the privacy notice banner should show.
      * @property topSites List of [TopSite] to display.
      * @property recentTabs List of [RecentTab] to display.
      * @property syncedTab The [RecentSyncedTab] to display.
@@ -95,7 +93,6 @@ internal sealed class HomepageState {
      * @property bottomPadding Amount of padding to display at the bottom of the homepage.
      */
     internal data class Normal(
-        val shouldShowPrivacyNoticeBanner: Boolean,
         val topSites: List<TopSite>,
         val recentTabs: List<RecentTab>,
         val syncedTab: RecentSyncedTab?,
@@ -138,14 +135,12 @@ internal sealed class HomepageState {
          * Builds a new [HomepageState] from the current [AppState] and [Settings].
          *
          * @param appState State to build the [HomepageState] from.
-         * @param privacyNoticeBannerState State of the privacy notice banner.
          * @param browsingModeManager Manager holding current state of whether the browser is in private mode or not.
          * @param settings [Settings] corresponding to how the homepage should be displayed.
          */
         @Composable
         internal fun build(
             appState: AppState,
-            privacyNoticeBannerState: PrivacyNoticeBannerState,
             browsingModeManager: BrowsingModeManager,
             settings: Settings,
         ): HomepageState {
@@ -154,7 +149,6 @@ internal sealed class HomepageState {
             } else {
                 buildNormalState(
                     appState = appState,
-                    privacyNoticeBannerState = privacyNoticeBannerState,
                     settings = settings,
                 )
             }
@@ -178,17 +172,14 @@ internal sealed class HomepageState {
          * Builds a new [HomepageState.Normal] from the current [AppState] and [Settings].
          *
          * @param appState State to build the [HomepageState.Normal] from.
-         * @param privacyNoticeBannerState State of the privacy notice banner.
          * @param settings [Settings] corresponding to how the homepage should be displayed.
          */
         @Composable
         private fun buildNormalState(
             appState: AppState,
-            privacyNoticeBannerState: PrivacyNoticeBannerState,
             settings: Settings,
         ) = with(appState) {
             Normal(
-                shouldShowPrivacyNoticeBanner = privacyNoticeBannerState.visible,
                 topSites = topSites,
                 recentTabs = recentTabs,
                 syncedTab = when (recentSyncedTabState) {

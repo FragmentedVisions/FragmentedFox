@@ -31,8 +31,6 @@ import org.mozilla.fenix.home.recentvisits.RecentlyVisitedItem.RecentHistoryHigh
 import org.mozilla.fenix.home.recentvisits.interactor.RecentVisitsInteractor
 import org.mozilla.fenix.home.search.HomeSearchInteractor
 import org.mozilla.fenix.home.sessioncontrol.CollectionInteractor
-import org.mozilla.fenix.home.termsofuse.PrivacyNoticeBannerInteractor
-import org.mozilla.fenix.home.termsofuse.PrivacyNoticeBannerInteractorNoOp
 import org.mozilla.fenix.home.topsites.interactor.TopSiteInteractor
 import org.mozilla.fenix.wallpapers.WallpaperState
 import java.io.File
@@ -55,8 +53,7 @@ internal object FakeHomepagePreview {
             BookmarksInteractor by bookmarksInteractor,
             RecentVisitsInteractor by recentVisitsInteractor,
             HomeSearchInteractor by homeSearchInteractor,
-            CollectionInteractor by collectionInteractor,
-            PrivacyNoticeBannerInteractor by PrivacyNoticeBannerInteractorNoOp {
+            CollectionInteractor by collectionInteractor {
             override fun reportSessionMetrics(state: AppState) { /* no op */ }
 
             override fun onNavigateSearch() { /* no op */ }

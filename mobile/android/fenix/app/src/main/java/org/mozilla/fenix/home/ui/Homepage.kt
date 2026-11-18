@@ -75,8 +75,6 @@ import org.mozilla.fenix.home.sessioncontrol.CollectionInteractor
 import org.mozilla.fenix.home.setup.ui.SetupChecklist
 import org.mozilla.fenix.home.store.HeaderState
 import org.mozilla.fenix.home.store.HomepageState
-import org.mozilla.fenix.home.termsofuse.PrivacyNoticeBanner
-import org.mozilla.fenix.home.termsofuse.PrivacyNoticeBannerInteractor
 import org.mozilla.fenix.home.topsites.TOP_SITES_TO_SHOW
 import org.mozilla.fenix.home.topsites.TopSiteColors
 import org.mozilla.fenix.home.topsites.TopSites
@@ -137,13 +135,6 @@ internal fun Homepage(
                 .verticalScroll(scrollState),
             horizontalAlignment = Alignment.CenterHorizontally,
         ) {
-            if (state is HomepageState.Normal) {
-                BannerCardSection(
-                    shouldShowPrivacyNoticeBanner = state.shouldShowPrivacyNoticeBanner,
-                    privacyNoticeBannerInteractor = interactor,
-                )
-            }
-
             when (val headerState = state.headerState) {
                 is HeaderState.Normal -> {
                     HomepageHeader(
@@ -303,21 +294,6 @@ private fun MaybeAddSetupChecklist(
         SetupChecklist(
             setupChecklistState = setupChecklistState,
             interactor = interactor,
-        )
-    }
-}
-
-@Composable
-private fun BannerCardSection(
-    shouldShowPrivacyNoticeBanner: Boolean,
-    privacyNoticeBannerInteractor: PrivacyNoticeBannerInteractor,
-) {
-    if (shouldShowPrivacyNoticeBanner) {
-        Spacer(modifier = Modifier.height(12.dp))
-
-        PrivacyNoticeBanner(
-            modifier = Modifier.padding(horizontal = 16.dp),
-            interactor = privacyNoticeBannerInteractor,
         )
     }
 }
@@ -512,57 +488,6 @@ private fun HomepagePreview() {
         Surface {
             Homepage(
                 state = HomepageState.Normal(
-                    shouldShowPrivacyNoticeBanner = false,
-                    topSites = FakeHomepagePreview.topSites(),
-                    recentTabs = FakeHomepagePreview.recentTabs(),
-                    syncedTab = FakeHomepagePreview.recentSyncedTab(),
-                    bookmarks = FakeHomepagePreview.bookmarks(),
-                    recentlyVisited = FakeHomepagePreview.recentHistory(),
-                    collectionsState = CollectionsState.Gone,
-                    showTopSites = true,
-                    showRecentTabs = true,
-                    showRecentSyncedTab = true,
-                    showBookmarks = true,
-                    showRecentlyVisited = true,
-                    showCollections = true,
-                    showPrivacyReport = true,
-                    trackersBlockedCount = 754,
-                    headerState = HeaderState.Normal(
-                        wordmarkTextColor = null,
-                        privateBrowsingButtonColor = colorResource(
-                            getAttr(
-                                iconsR.attr.mozac_ic_private_mode_circle_fill_icon_color,
-                            ),
-                        ),
-                    ),
-                    searchBarVisible = true,
-                    searchBarEnabled = false,
-                    firstFrameDrawn = true,
-                    setupChecklistState = null,
-                    topSiteColors = TopSiteColors.colors(),
-                    cardBackgroundColor = WallpaperState.default.cardBackgroundColor,
-                    buttonTextColor = WallpaperState.default.buttonTextColor,
-                    buttonBackgroundColor = WallpaperState.default.buttonBackgroundColor,
-                    isSearchInProgress = false,
-                    bottomPadding = 68,
-                    showTopSitesHeader = true,
-                ),
-                interactor = FakeHomepagePreview.homepageInteractor,
-                onTopSitesItemBound = {},
-                modifier = Modifier.fillMaxSize(),
-            )
-        }
-    }
-}
-
-@Composable
-@PreviewLightDark
-private fun HomepageBannerPreview() {
-    FirefoxTheme {
-        Surface {
-            Homepage(
-                state = HomepageState.Normal(
-                    shouldShowPrivacyNoticeBanner = true,
                     topSites = FakeHomepagePreview.topSites(),
                     recentTabs = FakeHomepagePreview.recentTabs(),
                     syncedTab = FakeHomepagePreview.recentSyncedTab(),
@@ -612,7 +537,6 @@ private fun HomepagePreviewCollections() {
         Surface {
             Homepage(
                 state = HomepageState.Normal(
-                    shouldShowPrivacyNoticeBanner = false,
                     topSites = FakeHomepagePreview.topSites(),
                     recentTabs = FakeHomepagePreview.recentTabs(),
                     syncedTab = FakeHomepagePreview.recentSyncedTab(),
@@ -662,7 +586,6 @@ private fun MinimalHomepagePreview() {
         Surface {
             Homepage(
                 state = HomepageState.Normal(
-                    shouldShowPrivacyNoticeBanner = false,
                     topSites = FakeHomepagePreview.topSites(),
                     recentTabs = FakeHomepagePreview.recentTabs(),
                     syncedTab = FakeHomepagePreview.recentSyncedTab(),

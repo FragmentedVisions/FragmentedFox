@@ -93,7 +93,11 @@
     "MessagingAction",
     "FenixMessageSurfaceId",
     "ResearchSurfaceDialogFragment",
-    "BottomToolbarContainerView"
+    "BottomToolbarContainerView",
+    "PrivacyNoticeBanner",
+    "TermsOfUseManager",
+    "TermsOfUseBottomSheet",
+    "TermsOfUsePromptRepository"
   ],
   "permissions": [
     "com.adjust.preinstall.READ_PERMISSION"

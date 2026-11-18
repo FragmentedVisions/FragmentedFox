@@ -374,18 +374,6 @@ class SecretSettingsFragment : PreferenceFragmentCompat(), SystemInsetsPaddedFra
             onPreferenceChangeListener = SharedPreferenceUpdater()
         }
 
-        requirePreference<SwitchPreferenceCompat>(R.string.pref_key_terms_latest_date).apply {
-            isVisible = Config.channel.isNightlyOrDebug || Config.channel.isBeta
-            isChecked = settings.isTermsOfUsePublishedDebugDateEnabled
-            onPreferenceChangeListener = SharedPreferenceUpdater()
-        }
-
-        requirePreference<SwitchPreferenceCompat>(R.string.pref_key_debug_terms_trigger_time).apply {
-            isVisible = Config.channel.isNightlyOrDebug || Config.channel.isBeta
-            isChecked = settings.isDebugTermsOfServiceTriggerTimeEnabled
-            onPreferenceChangeListener = SharedPreferenceUpdater()
-        }
-
         requirePreference<SwitchPreferenceCompat>(R.string.pref_key_enable_isolated_process).apply {
             isVisible = Config.channel.isNightlyOrDebug
             isChecked = settings.isIsolatedProcessEnabled

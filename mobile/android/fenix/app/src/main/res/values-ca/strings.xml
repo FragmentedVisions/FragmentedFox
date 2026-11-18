@@ -3947,45 +3947,33 @@
   <!-- ==== Terms of use pop up prompt ==== -->
 
   <!-- Title for the pop up prompt -->
-  <string name="terms_of_use_prompt_title">Hi ha una actualització</string>
   <!--
     Message for the terms of use pop up prompt
     %1$s is the product name "Firefox"
     %2$s is the string terms_of_use_prompt_link_terms_of_use (Terms of Use) that is a link to the terms of use
     %3$s is the string terms_of_use_prompt_link_privacy_notice (Privacy Notice) that is a link to the privacy notice
   -->
-  <string name="terms_of_use_prompt_message_1">Hem afegit les %2$s del %1$s i hem actualitzat l’%3$s.</string>
   <!--
     Second part of the terms of use pop up prompt
     %1$s is the string terms_of_use_prompt_link_learn_more (Learn more) that is a link to a website with more information about the terms of use
   -->
-  <string name="terms_of_use_prompt_message_2">Dediqueu un moment per revisar-ho i acceptar-ho. %1$s.</string>
   <!-- Terms of use link in the pop up prompt message that links to the terms of use -->
-  <string name="terms_of_use_prompt_link_terms_of_use">Condicions d’ús</string>
   <!-- Privacy notice link in the pop up prompt message that links to the privacy notice -->
-  <string name="terms_of_use_prompt_link_privacy_notice">Avís de privadesa</string>
   <!-- Learn more link in the pop up prompt message that links to a site with more information about the terms of use -->
-  <string name="terms_of_use_prompt_link_learn_more">Més informació</string>
   <!-- Label for a button to accept the terms of use -->
-  <string name="terms_of_use_prompt_accept">Accepta</string>
   <!-- Label for a button to postpone accepting the terms of use -->
-  <string name="terms_of_use_prompt_postpone">Recorda-m’ho més tard</string>
   <!-- ==== Experiment strings. ==== -->
 
   <!-- A title for the popup prompt. -->
-  <string name="terms_of_use_prompt_title_option_a" tools:ignore="UnusedResources">Condicions d’ús</string>
   <!--
     A title for the popup prompt.
     %1$s is the product name "Firefox"
   -->
-  <string name="terms_of_use_prompt_title_option_b" tools:ignore="UnusedResources">Un missatge del %1$s</string>
   <!--
     Copy for the Terms of Use popup prompt body line two.
     %1$s is the string terms_of_use_prompt_body_line_two_alternative_link ("here") that is a link to the Terms of Use
   -->
-  <string name="terms_of_use_prompt_body_line_two_alternative" tools:ignore="UnusedResources">Podeu trobar més informació %1$s.</string>
   <!-- Link text for terms_of_use_prompt_body_line_two_alternative that links to a site with more information about the Terms of Use -->
-  <string name="terms_of_use_prompt_body_line_two_alternative_link" tools:ignore="UnusedResources">aquí</string>
   <!--
     Sports widget
 
@@ -4128,11 +4116,8 @@
     %1$s is replaced by an active link using privacy_notice_updated_homepage_message_privacy_notice as text (Privacy Notice)
     %2$s is replaced by an active link using privacy_notice_updated_homepage_message_learn_more as text (Learn more)
   -->
-  <string name="privacy_notice_updated_homepage_message" tools:ignore="BrandUsage,UnusedResources">Hem actualitzat el nostre %1$s per a reflectir les darreres funcions del Firefox. %2$s</string>
   <!-- The first active link used in privacy_notice_updated_homepage_message -->
-  <string name="privacy_notice_updated_homepage_message_privacy_notice" tools:ignore="UnusedResources">Avís de privadesa</string>
   <!-- The second active link used in privacy_notice_updated_homepage_message -->
-  <string name="privacy_notice_updated_homepage_message_learn_more" tools:ignore="UnusedResources">Més informació</string>
   <!-- Google Lens prototype related strings -->
   <string name="preferences_debug_settings_google_lens_integration">Activa la integració amb el Google Lens</string>
   <!-- Lens image search button content description -->

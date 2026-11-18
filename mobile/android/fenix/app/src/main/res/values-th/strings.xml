@@ -3866,45 +3866,33 @@
   <!-- ==== Terms of use pop up prompt ==== -->
 
   <!-- Title for the pop up prompt -->
-  <string name="terms_of_use_prompt_title">เรามีอัปเดต</string>
   <!--
     Message for the terms of use pop up prompt
     %1$s is the product name "Firefox"
     %2$s is the string terms_of_use_prompt_link_terms_of_use (Terms of Use) that is a link to the terms of use
     %3$s is the string terms_of_use_prompt_link_privacy_notice (Privacy Notice) that is a link to the privacy notice
   -->
-  <string name="terms_of_use_prompt_message_1">เราได้นำ%2$s %1$s มาใช้ และอัปเดต%3$sของเราแล้ว</string>
   <!--
     Second part of the terms of use pop up prompt
     %1$s is the string terms_of_use_prompt_link_learn_more (Learn more) that is a link to a website with more information about the terms of use
   -->
-  <string name="terms_of_use_prompt_message_2">โปรดใช้เวลาสักครู่เพื่อดูและยอมรับ %1$s</string>
   <!-- Terms of use link in the pop up prompt message that links to the terms of use -->
-  <string name="terms_of_use_prompt_link_terms_of_use">เงื่อนไขการใช้งาน</string>
   <!-- Privacy notice link in the pop up prompt message that links to the privacy notice -->
-  <string name="terms_of_use_prompt_link_privacy_notice">ประกาศความเป็นส่วนตัว</string>
   <!-- Learn more link in the pop up prompt message that links to a site with more information about the terms of use -->
-  <string name="terms_of_use_prompt_link_learn_more">เรียนรู้เพิ่มเติม</string>
   <!-- Label for a button to accept the terms of use -->
-  <string name="terms_of_use_prompt_accept">ยอมรับ</string>
   <!-- Label for a button to postpone accepting the terms of use -->
-  <string name="terms_of_use_prompt_postpone">เตือนฉันภายหลัง</string>
   <!-- ==== Experiment strings. ==== -->
 
   <!-- A title for the popup prompt. -->
-  <string name="terms_of_use_prompt_title_option_a" tools:ignore="UnusedResources">เงื่อนไขการใช้งาน</string>
   <!--
     A title for the popup prompt.
     %1$s is the product name "Firefox"
   -->
-  <string name="terms_of_use_prompt_title_option_b" tools:ignore="UnusedResources">ข้อความจาก %1$s</string>
   <!--
     Copy for the Terms of Use popup prompt body line two.
     %1$s is the string terms_of_use_prompt_body_line_two_alternative_link ("here") that is a link to the Terms of Use
   -->
-  <string name="terms_of_use_prompt_body_line_two_alternative" tools:ignore="UnusedResources">คุณสามารถเรียนรู้เพิ่มเติม %1$s ได้</string>
   <!-- Link text for terms_of_use_prompt_body_line_two_alternative that links to a site with more information about the Terms of Use -->
-  <string name="terms_of_use_prompt_body_line_two_alternative_link" tools:ignore="UnusedResources">ที่นี่</string>
   <!--
     Sports widget
 
@@ -4047,11 +4035,8 @@
     %1$s is replaced by an active link using privacy_notice_updated_homepage_message_privacy_notice as text (Privacy Notice)
     %2$s is replaced by an active link using privacy_notice_updated_homepage_message_learn_more as text (Learn more)
   -->
-  <string name="privacy_notice_updated_homepage_message" tools:ignore="BrandUsage,UnusedResources">เราได้ปรับปรุง%1$sของเราให้สอดคล้องกับคุณลักษณะล่าสุดใน Firefox %2$s</string>
   <!-- The first active link used in privacy_notice_updated_homepage_message -->
-  <string name="privacy_notice_updated_homepage_message_privacy_notice" tools:ignore="UnusedResources">ประกาศความเป็นส่วนตัว</string>
   <!-- The second active link used in privacy_notice_updated_homepage_message -->
-  <string name="privacy_notice_updated_homepage_message_learn_more" tools:ignore="UnusedResources">เรียนรู้เพิ่มเติม</string>
   <!-- Lens image search button content description -->
   <string name="lens_search_content_description">ค้นหาด้วยรูปภาพ</string>
   <!-- Image context menu entry that sends the long-pressed image to Google Lens -->

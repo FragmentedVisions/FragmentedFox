@@ -2303,15 +2303,11 @@
   <!-- ==== Terms of use pop up prompt ==== -->
 
   <!-- Terms of use link in the pop up prompt message that links to the terms of use -->
-  <string name="terms_of_use_prompt_link_terms_of_use">Куллану шартлары</string>
   <!-- Learn more link in the pop up prompt message that links to a site with more information about the terms of use -->
-  <string name="terms_of_use_prompt_link_learn_more">Күбрәк белү</string>
   <!-- Label for a button to accept the terms of use -->
-  <string name="terms_of_use_prompt_accept">Кабул итү</string>
   <!-- ==== Experiment strings. ==== -->
 
   <!-- ==== End of Terms of use popup prompt. ==== -->
 
   <!-- The second active link used in privacy_notice_updated_homepage_message -->
-  <string name="privacy_notice_updated_homepage_message_learn_more" tools:ignore="UnusedResources">Күбрәк белү</string>
 </resources>

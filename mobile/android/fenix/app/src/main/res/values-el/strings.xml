@@ -3939,45 +3939,33 @@
   <!-- ==== Terms of use pop up prompt ==== -->
 
   <!-- Title for the pop up prompt -->
-  <string name="terms_of_use_prompt_title">Έχουμε μια ενημέρωση</string>
   <!--
     Message for the terms of use pop up prompt
     %1$s is the product name "Firefox"
     %2$s is the string terms_of_use_prompt_link_terms_of_use (Terms of Use) that is a link to the terms of use
     %3$s is the string terms_of_use_prompt_link_privacy_notice (Privacy Notice) that is a link to the privacy notice
   -->
-  <string name="terms_of_use_prompt_message_1">Σας παρουσιάζουμε τους %2$s του %1$s και ενημερώσαμε την %3$s μας.</string>
   <!--
     Second part of the terms of use pop up prompt
     %1$s is the string terms_of_use_prompt_link_learn_more (Learn more) that is a link to a website with more information about the terms of use
   -->
-  <string name="terms_of_use_prompt_message_2">Αφιερώστε λίγο χρόνο για να τα ελέγξετε και να τα αποδεχτείτε. %1$s.</string>
   <!-- Terms of use link in the pop up prompt message that links to the terms of use -->
-  <string name="terms_of_use_prompt_link_terms_of_use">Όροι χρήσης</string>
   <!-- Privacy notice link in the pop up prompt message that links to the privacy notice -->
-  <string name="terms_of_use_prompt_link_privacy_notice">Σημείωση απορρήτου</string>
   <!-- Learn more link in the pop up prompt message that links to a site with more information about the terms of use -->
-  <string name="terms_of_use_prompt_link_learn_more">Μάθετε περισσότερα</string>
   <!-- Label for a button to accept the terms of use -->
-  <string name="terms_of_use_prompt_accept">Αποδοχή</string>
   <!-- Label for a button to postpone accepting the terms of use -->
-  <string name="terms_of_use_prompt_postpone">Υπενθύμιση αργότερα</string>
   <!-- ==== Experiment strings. ==== -->
 
   <!-- A title for the popup prompt. -->
-  <string name="terms_of_use_prompt_title_option_a" tools:ignore="UnusedResources">Όροι χρήσης</string>
   <!--
     A title for the popup prompt.
     %1$s is the product name "Firefox"
   -->
-  <string name="terms_of_use_prompt_title_option_b" tools:ignore="UnusedResources">Μια σημείωση από το %1$s</string>
   <!--
     Copy for the Terms of Use popup prompt body line two.
     %1$s is the string terms_of_use_prompt_body_line_two_alternative_link ("here") that is a link to the Terms of Use
   -->
-  <string name="terms_of_use_prompt_body_line_two_alternative" tools:ignore="UnusedResources">Μπορείτε να μάθετε περισσότερα %1$s.</string>
   <!-- Link text for terms_of_use_prompt_body_line_two_alternative that links to a site with more information about the Terms of Use -->
-  <string name="terms_of_use_prompt_body_line_two_alternative_link" tools:ignore="UnusedResources">εδώ</string>
   <!--
     Sports widget
 
@@ -4120,11 +4108,8 @@
     %1$s is replaced by an active link using privacy_notice_updated_homepage_message_privacy_notice as text (Privacy Notice)
     %2$s is replaced by an active link using privacy_notice_updated_homepage_message_learn_more as text (Learn more)
   -->
-  <string name="privacy_notice_updated_homepage_message" tools:ignore="BrandUsage,UnusedResources">Ενημερώσαμε τη %1$s μας ώστε να περιέχει τις πιο πρόσφατες λειτουργίες του Firefox. %2$s</string>
   <!-- The first active link used in privacy_notice_updated_homepage_message -->
-  <string name="privacy_notice_updated_homepage_message_privacy_notice" tools:ignore="UnusedResources">Σημείωση απορρήτου</string>
   <!-- The second active link used in privacy_notice_updated_homepage_message -->
-  <string name="privacy_notice_updated_homepage_message_learn_more" tools:ignore="UnusedResources">Μάθετε περισσότερα</string>
   <!-- Google Lens prototype related strings -->
   <string name="preferences_debug_settings_google_lens_integration">Ενεργοποίηση της ενσωμάτωσης του Google Lens</string>
   <!-- Lens image search button content description -->

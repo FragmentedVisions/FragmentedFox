@@ -96,13 +96,11 @@ class Settings(
         private const val ALLOWED_INT = 2
         private const val INACTIVE_TAB_MINIMUM_TO_SHOW_AUTO_CLOSE_DIALOG = 20
 
-        const val THIRTY_SECONDS_MS = 30 * 1000L
         const val FOUR_HOURS_MS = 60 * 60 * 4 * 1000L
         const val ONE_MINUTE_MS = 60 * 1000L
         const val ONE_HOUR_MS = 60 * ONE_MINUTE_MS
         const val ONE_DAY_MS = 60 * 60 * 24 * 1000L
         const val THREE_DAYS_MS = 3 * ONE_DAY_MS
-        const val FIVE_DAYS_MS = 5 * ONE_DAY_MS
         const val ONE_WEEK_MS = 60 * 60 * 24 * 7 * 1000L
         const val ONE_MONTH_MS = (60 * 60 * 24 * 365 * 1000L) / 12
 
@@ -488,86 +486,12 @@ class Settings(
         },
     )
 
-    var isTermsOfUsePublishedDebugDateEnabled by booleanPreference(
-        appContext.getPreferenceKey(R.string.pref_key_terms_latest_date),
-        default = false,
-        persistDefaultIfNotExists = true,
-    )
-
-    var privacyNoticeBannerLastDisplayedTimeInMillis by longPreference(
-        key = appContext.getPreferenceKey(R.string.pref_key_privacy_notice_banner_last_displayed_time),
-        default = 0,
-    )
-
     /**
      * The version of the Terms of Use that the user has accepted.
      */
     var termsOfUseAcceptedVersion by intPreference(
         key = appContext.getPreferenceKey(R.string.pref_key_terms_accepted_version),
         default = { if (hasAcceptedTermsOfService) TOU_VERSION else 0 },
-    )
-
-    /**
-     * Returns true if the terms of use feature flag is enabled
-     */
-    var isTermsOfUsePromptEnabled by booleanPreference(
-        key = appContext.getPreferenceKey(R.string.pref_key_terms_prompt_enabled),
-        default = { FxNimbus.features.termsOfUsePrompt.value().enabled },
-    )
-
-    /**
-     * Returns true if the nimbus flag for showing the terms of use drag handle is true.
-     */
-    var shouldShowTermsOfUsePromptDragHandle by booleanPreference(
-        key = appContext.getPreferenceKey(R.string.pref_key_terms_prompt_drag_handle_enabled),
-        default = { FxNimbus.features.termsOfUsePrompt.value().enableDragToDismiss },
-    )
-
-    /**
-     * The ID of the content option for the Terms of Use prompt.
-     */
-    var termsOfUsePromptContentOptionId by stringPreference(
-        key = appContext.getPreferenceKey(R.string.pref_key_terms_prompt_content_option),
-        default = { FxNimbus.features.termsOfUsePrompt.value().contentOption.name },
-    )
-
-    /**
-     * The maximum number of times the Terms of Use prompt should be displayed.
-     *
-     * Use a function to ensure the most up-to-date Nimbus value is retrieved.
-     */
-    fun getTermsOfUseMaxDisplayCount() = FxNimbus.features.termsOfUsePrompt.value().maxDisplayCount
-
-    /**
-     * The total number of times the Terms of Use prompt has been displayed.
-     */
-    var termsOfUsePromptDisplayedCount by intPreference(
-        key = appContext.getPreferenceKey(R.string.pref_key_terms_prompt_displayed_count),
-        default = 0,
-    )
-
-    /**
-     * Timestamp in milliseconds when the terms of use prompt was last shown to the user.
-     * A value of 0L indicates that the prompt has never been shown.
-     */
-    var lastTermsOfUsePromptTimeInMillis: Long by longPreference(
-        appContext.getPreferenceKey(R.string.pref_key_terms_last_prompt_time),
-        default = 0L,
-    )
-
-    /**
-     * Users who have not accepted ToS will see a popup asking them to accept.
-     * They can select "Not now" to postpone accepting.
-     */
-    var hasPostponedAcceptingTermsOfUse by booleanPreference(
-        appContext.getPreferenceKey(R.string.pref_key_terms_postponed),
-        default = false,
-    )
-
-    var isDebugTermsOfServiceTriggerTimeEnabled by booleanPreference(
-        appContext.getPreferenceKey(R.string.pref_key_debug_terms_trigger_time),
-        default = false,
-        persistDefaultIfNotExists = true,
     )
 
     /**

@@ -2445,13 +2445,10 @@
   <!-- ==== Terms of use pop up prompt ==== -->
 
   <!-- Learn more link in the pop up prompt message that links to a site with more information about the terms of use -->
-  <string name="terms_of_use_prompt_link_learn_more">Gāhuin chrūn doj</string>
   <!-- Label for a button to accept the terms of use -->
-  <string name="terms_of_use_prompt_accept">Gārāyina</string>
   <!-- ==== Experiment strings. ==== -->
 
   <!-- Link text for terms_of_use_prompt_body_line_two_alternative that links to a site with more information about the Terms of Use -->
-  <string name="terms_of_use_prompt_body_line_two_alternative_link" tools:ignore="UnusedResources">hiuj nan</string>
   <!-- Section header for the Africa confederation group in the sports widget country selector. -->
   <!-- Section header for the Asia confederation group in the sports widget country selector. -->
   <!-- Section header for the CONCACAF confederation group in the sports widget country selector. "CONCACAF" is the abbreviation for "Confederation of North, Central America and Caribbean Association Football". -->
@@ -2494,7 +2491,6 @@
   <!-- ==== End of Terms of use popup prompt. ==== -->
 
   <!-- The second active link used in privacy_notice_updated_homepage_message -->
-  <string name="privacy_notice_updated_homepage_message_learn_more" tools:ignore="UnusedResources">Gāhuin chrūn doj</string>
   <!-- The text on the dialog on the Firefox Labs screen for the negative button when toggling "on" and "off" experimental features. This is used to cancel the action and return to the previous screen. -->
   <string name="firefox_labs_dialog_cancel_button">Dūyichin\'</string>
 </resources>

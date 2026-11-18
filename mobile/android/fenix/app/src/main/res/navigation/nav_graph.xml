@@ -45,11 +45,6 @@
         app:popUpTo="@id/homeFragment" />
 
     <action
-        android:id="@+id/action_global_terms_of_use_dialog"
-        app:destination="@+id/termsOfUseDialogFragment"
-        app:launchSingleTop="true" />
-
-    <action
         android:id="@+id/action_global_recently_closed"
         app:destination="@id/recentlyClosedFragment" />
 
@@ -296,15 +291,6 @@
     <dialog
         android:id="@+id/wallpaperOnboardingDialogFragment"
         android:name="org.mozilla.fenix.onboarding.WallpaperOnboardingDialogFragment" />
-
-    <dialog
-        android:id="@+id/termsOfUseDialogFragment"
-        android:name="org.mozilla.fenix.termsofuse.ui.TermsOfUseBottomSheetFragment">
-        <argument
-            android:name="surface"
-            app:argType="org.mozilla.fenix.termsofuse.store.Surface"
-            app:nullable="false" />
-    </dialog>
 
     <fragment
         android:id="@+id/recentlyClosedFragment"

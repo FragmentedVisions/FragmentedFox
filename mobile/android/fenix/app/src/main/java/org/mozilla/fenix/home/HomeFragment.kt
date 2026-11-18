@@ -37,7 +37,6 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.lifecycle.lifecycleScope
-import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import kotlinx.coroutines.Dispatchers.IO
@@ -73,7 +72,6 @@ import org.mozilla.fenix.R
 import org.mozilla.fenix.addons.DefaultExtensionsPrompt
 import org.mozilla.fenix.biometricauthentication.AuthenticationStatus
 import org.mozilla.fenix.biometricauthentication.BiometricAuthenticationManager
-import org.mozilla.fenix.browser.BrowserFragmentDirections
 import org.mozilla.fenix.browser.browsingmode.BrowsingMode
 import org.mozilla.fenix.browser.tabstrip.TabStrip
 import org.mozilla.fenix.browser.tabstrip.TabStripColors
@@ -114,7 +112,6 @@ import org.mozilla.fenix.home.sessioncontrol.SessionControlControllerCallback
 import org.mozilla.fenix.home.sessioncontrol.SessionControlInteractor
 import org.mozilla.fenix.home.store.HomeToolbarStoreBuilder
 import org.mozilla.fenix.home.store.HomepageState
-import org.mozilla.fenix.home.termsofuse.DefaultPrivacyNoticeBannerController
 import org.mozilla.fenix.home.toolbar.DefaultToolbarController
 import org.mozilla.fenix.home.toolbar.FenixHomeToolbar
 import org.mozilla.fenix.home.toolbar.HomeNavigationBar
@@ -141,13 +138,6 @@ import org.mozilla.fenix.snackbar.FenixSnackbarDelegate
 import org.mozilla.fenix.snackbar.SnackbarBinding
 import org.mozilla.fenix.tabstray.redux.state.Page
 import org.mozilla.fenix.tabstray.ui.AccessPoint
-import org.mozilla.fenix.termsofuse.store.DefaultPrivacyNoticeBannerRepository
-import org.mozilla.fenix.termsofuse.store.PrivacyNoticeBannerAction
-import org.mozilla.fenix.termsofuse.store.PrivacyNoticeBannerMiddleware
-import org.mozilla.fenix.termsofuse.store.PrivacyNoticeBannerState
-import org.mozilla.fenix.termsofuse.store.PrivacyNoticeBannerStore
-import org.mozilla.fenix.termsofuse.store.PrivacyNoticeBannerTelemetryMiddleware
-import org.mozilla.fenix.termsofuse.store.Surface
 import org.mozilla.fenix.theme.FirefoxTheme
 import org.mozilla.fenix.trackingprotection.TrackersBlockedFeature
 import org.mozilla.fenix.utils.Settings
@@ -195,14 +185,7 @@ class HomeFragment : Fragment() {
     private val store: BrowserStore
         get() = requireComponents.core.store
 
-    private val privacyNoticeBannerRepository by lazy {
-        DefaultPrivacyNoticeBannerRepository(
-            settings = requireComponents.settings,
-        )
-    }
     private val dateTimeProvider: DateTimeProvider by lazy { DefaultDateTimeProvider() }
-
-    private lateinit var privacyNoticeBannerStore: PrivacyNoticeBannerStore
 
     private var _sessionControlController: SessionControlController? = null
     private val sessionControlController: SessionControlController
@@ -254,13 +237,6 @@ class HomeFragment : Fragment() {
     private val lensCameraPermissionLauncher: ActivityResultLauncher<String> =
         registerForActivityResult(ActivityResultContracts.RequestPermission()) { isGranted ->
             lensFeature?.get()?.onCameraPermissionResult(isGranted)
-        }
-
-    private val destinationChangedListener =
-        NavController.OnDestinationChangedListener { _, destination, _ ->
-            if (destination.id != R.id.homeFragment) {
-                privacyNoticeBannerStore.dispatch(PrivacyNoticeBannerAction.OnNavigatedAwayFromHome)
-            }
         }
 
     private val setToDefaultPromptRequestLauncher: ActivityResultLauncher<Intent> =
@@ -455,18 +431,6 @@ class HomeFragment : Fragment() {
         initTabsCleanupFeature(view = view)
         initSnackbarBinding(view = view)
 
-        privacyNoticeBannerStore = PrivacyNoticeBannerStore(
-            initialState = PrivacyNoticeBannerState(
-                visible = privacyNoticeBannerRepository.shouldShowPrivacyNoticeBanner(),
-            ),
-            middleware = listOf(
-                PrivacyNoticeBannerMiddleware(
-                    repository = privacyNoticeBannerRepository,
-                ),
-                PrivacyNoticeBannerTelemetryMiddleware(),
-            ),
-        )
-
         initController()
         initInteractor()
 
@@ -497,9 +461,6 @@ class HomeFragment : Fragment() {
                         flow().distinctUntilChanged { old, new -> old.mode != new.mode }
                     }.collectAsState(state)
                 }
-                val privacyNoticeBannerState = privacyNoticeBannerStore.flow().collectAsState(
-                    initial = privacyNoticeBannerStore.state,
-                )
                 val isToolbarAtTop = settings.toolbarPosition == ToolbarPosition.TOP
 
                 Box(modifier = Modifier.fillMaxSize().systemBarsPadding().displayCutoutPadding()) {
@@ -540,7 +501,6 @@ class HomeFragment : Fragment() {
                     ) { innerPadding ->
                         HomeContent(
                             appState = appState.value,
-                            privacyNoticeBannerState = privacyNoticeBannerState.value,
                             settings = settings,
                             innerPadding = innerPadding,
                         )
@@ -557,7 +517,6 @@ class HomeFragment : Fragment() {
     @Composable
     private fun HomeContent(
         appState: AppState,
-        privacyNoticeBannerState: PrivacyNoticeBannerState,
         settings: Settings,
         innerPadding: PaddingValues,
     ) {
@@ -569,7 +528,6 @@ class HomeFragment : Fragment() {
             Homepage(
                 state = HomepageState.build(
                     appState = appState,
-                    privacyNoticeBannerState = privacyNoticeBannerState,
                     settings = settings,
                     browsingModeManager = browsingModeManager,
                 ),
@@ -698,7 +656,6 @@ class HomeFragment : Fragment() {
     override fun onStart() {
         super.onStart()
 
-        findNavController().addOnDestinationChangedListener(destinationChangedListener)
 
         subscribeToTabCollections()
         updateLastHomeActivity()
@@ -729,12 +686,6 @@ class HomeFragment : Fragment() {
 
         // We only want this observer live just before we navigate away to the collection creation screen
         requireComponents.core.tabCollectionStorage.unregister(collectionStorageObserver)
-
-        if (requireComponents.termsOfUseManager.shouldShowTermsOfUsePromptOnHomepage()) {
-            findNavController().navigate(
-                BrowserFragmentDirections.actionGlobalTermsOfUseDialog(Surface.HOMEPAGE_NEW_TAB),
-            )
-        }
     }
 
     @VisibleForTesting
@@ -777,7 +728,6 @@ class HomeFragment : Fragment() {
         super.onStop()
         updateLastHomeActivity()
 
-        findNavController().removeOnDestinationChangedListener(destinationChangedListener)
     }
 
     private fun subscribeToTabCollections(): Observer<List<TabCollection>> {
@@ -1047,9 +997,6 @@ class HomeFragment : Fragment() {
                 appStore = requireComponents.appStore,
             ),
             topSiteController = buildTopSitesController(),
-            privacyNoticeBannerController = DefaultPrivacyNoticeBannerController(
-                privacyNoticeBannerStore = privacyNoticeBannerStore,
-            ),
             trackingProtectionController = TrackingProtectionController(
                 navController = findNavController(),
                 currentSessionId = requireComponents.core.store.state.selectedTabId,

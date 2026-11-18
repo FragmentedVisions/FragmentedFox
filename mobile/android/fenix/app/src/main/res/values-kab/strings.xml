@@ -3137,15 +3137,10 @@
   <!-- ==== Terms of use pop up prompt ==== -->
 
   <!-- Terms of use link in the pop up prompt message that links to the terms of use -->
-  <string name="terms_of_use_prompt_link_terms_of_use">Tiwtilin n useqdec</string>
   <!-- Privacy notice link in the pop up prompt message that links to the privacy notice -->
-  <string name="terms_of_use_prompt_link_privacy_notice">Tasertit n tbaḍnit</string>
   <!-- Learn more link in the pop up prompt message that links to a site with more information about the terms of use -->
-  <string name="terms_of_use_prompt_link_learn_more">Issin ugar</string>
   <!-- Label for a button to accept the terms of use -->
-  <string name="terms_of_use_prompt_accept">Qbel</string>
   <!-- Label for a button to postpone accepting the terms of use -->
-  <string name="terms_of_use_prompt_postpone">Smekti-y-id ticki</string>
   <!-- ==== Experiment strings. ==== -->
 
   <!-- ==== End of Terms of use popup prompt. ==== -->

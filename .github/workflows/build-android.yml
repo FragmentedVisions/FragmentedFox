@@ -104,7 +104,10 @@ jobs:
         run: |
           FLAGS=""
           if [ "$SHRINK" = "off" ]; then FLAGS="-PdisableOptimization"; fi
-          ./mach gradle fenix:assembleRelease -x :fenix:lintVitalRelease $FLAGS
+          (while true; do sleep 60; echo "--- memory $(date +%H:%M:%S)"; free -m | sed -n 1,3p; ps -eo rss,comm --sort=-rss | head -4; done) &
+          SAMPLER=$!
+          trap 'kill $SAMPLER 2>/dev/null || true' EXIT
+          ./mach gradle fenix:assembleRelease -x :fenix:lintVitalRelease --max-workers=3 -Pkotlin.daemon.jvmargs=-Xmx3g $FLAGS
 
       - name: List APKs
         run: find obj-android/gradle/build/mobile/android/fenix/app/outputs/apk -name '*.apk' -exec ls -l {} \;

@@ -19,6 +19,7 @@ The app stays on ESR 153.6.0. An upgrade to 153.7.0 was tried (build 38) and dro
 | 38 | 43894514143 | `73fc64c766` | ESR 153.7.0 upgrade. Built, but dropped (pages got stuck after a Google Store tab change). |
 | 40 | 44285769439 | `2c79351500` | ESR 153.6 with Safe Browsing off, no look-ahead connections, no DNS prefetch, no battery API and the Base64 fixes. Passed; waiting for a phone check. |
 | 41 | 44304046692 | `9be010b72a` | Adds the Terms of Use prompt removal, a two-part backport of Mozilla's cache fix (bug 2052908), removal of the first-run "Manage settings" dialog, unused Glean metrics and baseline entries, and GitHub Actions pinned to commit SHAs. Passed. The Google Store repro on a phone is the check for the cache backport. |
+| 42 | 44364545520 | `350c23a9bf` | Failed twice (two attempts) in "Build the app" after about 47 minutes: "The hosted runner lost communication with the server", with no logs kept. The engine step passed both times. The commit only deletes code, so it is likely memory starvation on the runner, not a compile error. The workflow now caps Gradle workers and the Kotlin daemon and prints memory every minute. |
 
 ## On `NonStable--test` but not built yet
 

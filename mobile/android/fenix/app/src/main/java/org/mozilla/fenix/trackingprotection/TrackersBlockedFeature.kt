@@ -87,9 +87,14 @@ class TrackersBlockedFeature(
     }
 
     private fun syncTotalTrackerBlocked() {
-        trackingProtectionUseCases.fetchTotalTrackersBlocked(
-            onSuccess = {
-                appStore.dispatch(UpdateTrackersBlockedCount(it))
+        trackingProtectionUseCases.fetchTrackingEvents(
+            dateFrom = 0L,
+            dateTo = DefaultDateTimeProvider().currentTimeMillis(),
+            onSuccess = { events ->
+                val total = events.orEmpty()
+                    .filter { it.type in countedTypes }
+                    .sumOf { it.count }
+                appStore.dispatch(UpdateTrackersBlockedCount(total))
             },
         )
     }
@@ -150,6 +155,8 @@ class TrackersBlockedFeature(
                 TrackersBlockedCategory(config.iconRes, config.nameRes, count, config.category)
             }
         }
+
+    private val countedTypes = setOf(TRACKING_COOKIES, SOCIAL, FINGERPRINTERS, SUSPICIOUS_FINGERPRINTERS, TRACKERS)
 
     private data class CategoryConfig(
         val nameRes: Int,

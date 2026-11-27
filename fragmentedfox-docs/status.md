@@ -24,7 +24,7 @@ The app stays on ESR 153.6.0. An upgrade to 153.7.0 was tried (build 38) and dro
 
 ## On `NonStable--test` but not built yet
 
-Nothing. Build 43 contains every change up to its commit; later commits are documentation only.
+- Tracker counts: the all-time total now counts the same four categories as the weekly card (see [maintenance](./maintenance.md)).
 
 ## Still to do by hand
 

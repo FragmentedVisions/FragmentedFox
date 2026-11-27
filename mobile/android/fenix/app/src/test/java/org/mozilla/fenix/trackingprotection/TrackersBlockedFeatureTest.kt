@@ -59,8 +59,6 @@ class TrackersBlockedFeatureTest {
     private val fetchEventsOnError = slot<(Throwable) -> Unit>()
     private val fetchEventsDateFrom = slot<Long>()
     private val fetchEventsDateTo = slot<Long>()
-    private val fetchTotalOnSuccess = slot<(Int) -> Unit>()
-    private val fetchTotalOnError = slot<(Throwable) -> Unit>()
     private val fetchDateOnSuccess = slot<(Long?) -> Unit>()
     private val fetchDateOnError = slot<(Throwable) -> Unit>()
 
@@ -72,13 +70,6 @@ class TrackersBlockedFeatureTest {
                 dateTo = capture(fetchEventsDateTo),
                 onSuccess = capture(fetchEventsOnSuccess),
                 onError = capture(fetchEventsOnError),
-            )
-        } answers { }
-
-        every {
-            trackingProtectionUseCases.fetchTotalTrackersBlocked.invoke(
-                onSuccess = capture(fetchTotalOnSuccess),
-                onError = capture(fetchTotalOnError),
             )
         } answers { }
 
@@ -110,7 +101,6 @@ class TrackersBlockedFeatureTest {
         shadowOf(Looper.getMainLooper()).idle()
 
         verify {
-            trackingProtectionUseCases.fetchTotalTrackersBlocked(any(), any())
             trackingProtectionUseCases.fetchTrackingEvents.invoke(any(), any(), any(), any())
             trackingProtectionUseCases.fetchEarliestTrackingDate.invoke(any(), any())
         }
@@ -124,9 +114,10 @@ class TrackersBlockedFeatureTest {
         shadowOf(Looper.getMainLooper()).idle()
 
         // Verify the initial sync
-        verify(exactly = 1) {
-            trackingProtectionUseCases.fetchTotalTrackersBlocked(any(), any())
+        verify(exactly = 2) {
             trackingProtectionUseCases.fetchTrackingEvents.invoke(any(), any(), any(), any())
+        }
+        verify(exactly = 1) {
             trackingProtectionUseCases.fetchEarliestTrackingDate.invoke(any(), any())
         }
         val windowMs = fetchEventsDateTo.captured - fetchEventsDateFrom.captured
@@ -136,8 +127,7 @@ class TrackersBlockedFeatureTest {
         blockNewTracker()
         testDispatcher.scheduler.advanceUntilIdle()
         shadowOf(Looper.getMainLooper()).idle()
-        verify(exactly = 2) {
-            trackingProtectionUseCases.fetchTotalTrackersBlocked(any(), any())
+        verify(exactly = 4) {
             trackingProtectionUseCases.fetchTrackingEvents.invoke(
                 dateFrom = any(),
                 dateTo = any(),
@@ -158,8 +148,8 @@ class TrackersBlockedFeatureTest {
         startFeature()
         shadowOf(Looper.getMainLooper()).idle()
 
-        verify(exactly = 1) {
-            trackingProtectionUseCases.fetchTotalTrackersBlocked(any(), any())
+        verify(exactly = 2) {
+            trackingProtectionUseCases.fetchTrackingEvents.invoke(any(), any(), any(), any())
         }
 
         // Block multiple trackers within the debounce window (500ms intervals)
@@ -171,16 +161,16 @@ class TrackersBlockedFeatureTest {
 
         // At this point, no additional sync should have happened because of debounce(1s)
         shadowOf(Looper.getMainLooper()).idle()
-        verify(exactly = 1) {
-            trackingProtectionUseCases.fetchTotalTrackersBlocked(any(), any())
+        verify(exactly = 2) {
+            trackingProtectionUseCases.fetchTrackingEvents.invoke(any(), any(), any(), any())
         }
 
         // Advance time past the debounce period (1s)
         testDispatcher.scheduler.advanceTimeBy(1001)
         shadowOf(Looper.getMainLooper()).idle()
 
-        verify(exactly = 2) {
-            trackingProtectionUseCases.fetchTotalTrackersBlocked(any(), any())
+        verify(exactly = 4) {
+            trackingProtectionUseCases.fetchTrackingEvents.invoke(any(), any(), any(), any())
         }
     }
 

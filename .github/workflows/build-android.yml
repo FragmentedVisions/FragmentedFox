@@ -71,6 +71,7 @@ jobs:
           ac_add_options --disable-tests
           ac_add_options --disable-debug-symbols
           ac_add_options --disable-webrtc
+          ac_add_options --disable-jxl
           ac_add_options --with-ccache
           mk_add_options MOZ_OBJDIR=@TOPSRCDIR@/obj-android
           EOF

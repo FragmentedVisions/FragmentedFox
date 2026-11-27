@@ -22,6 +22,7 @@ Not changed: search suggestions, and the add-on blocklist and certificate data t
 
 ## Android engine and app
 
+- **JPEG XL decoder left out of the Android build:** `ac_add_options --disable-jxl` in the mozconfig of `build-android.yml`. Mozilla only enables JXL on nightly (`image.jxl.enabled`), so release builds never used the decoder; compiling it out removes unused code from `libxul` and one parser of untrusted image data. Android only, no source files changed. If a build fails in configure or image code, this is the first thing to remove. Not yet built.
 - `Settings.kt`: the telemetry and Contile settings default to off.
 - `GleanHelper.kt` and `OnboardingFragment.kt`: Glean only uploads when the build has `TELEMETRY` on, whatever the Settings switch says, and the first-run "onboarding opt-out" ping (which is sent even when telemetry is off) is only sent in those builds. Before this change the opt-out ping went to Mozilla when the terms card was accepted on a fresh install. `check-fork.py` checks both.
 - `SearchMiddleware.kt` (android-components): DuckDuckGo (`ddg`) is the default search engine whenever it is in the list for the user's region, instead of the region's default (Google in most places). A search engine the user picks still wins. `check-fork.py` checks this.

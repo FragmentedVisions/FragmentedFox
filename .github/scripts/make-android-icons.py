@@ -319,6 +319,8 @@ for name, folder, w, h in [
     ("ic_kit_bookmarks_empty_state", "drawable", 200, 178),
     ("bookmarks_folder_illustration", "drawable", 200, 188),
     ("kit_sleeping_under_laptop", "drawable", 180, 103),
+    ("nova_onboarding_tou", "drawable", 257, 297),
+    ("nova_onboarding_tou_2", "drawable", 220, 257),
 ]:
     write(RES + f"/{folder}/{name}.xml", illustration(w, h))
 write(RES + "/drawable/mozac_ic_kit_tab_groups.xml", tab_groups(144, 80, (4, 0, 80, 80), (86, 16, 22, 4)))

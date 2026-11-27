@@ -25,6 +25,7 @@ The app stays on ESR 153.6.0. An upgrade to 153.7.0 was tried (build 38) and dro
 ## On `NonStable--test` but not built yet
 
 - JPEG XL decoder compiled out of the Android build (`--disable-jxl`, see [defaults](./defaults.md)). A configure failure points here first.
+- First-run onboarding config holds only the welcome and default-browser cards (the four unused cards are deleted, see [branding](./branding.md)).
 - First-run welcome card shows the FragmentedFox fox instead of Mozilla's (see [branding](./branding.md)).
 - Tracker counts: the all-time total now counts the same four categories as the weekly card (see [maintenance](./maintenance.md)).
 

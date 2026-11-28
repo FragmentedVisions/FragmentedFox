@@ -98,58 +98,6 @@ class OnboardingTelemetryRecorder(
                 )
             }
 
-            OnboardingPageUiData.Type.ADD_SEARCH_WIDGET -> {
-                Onboarding.addSearchWidgetCard.record(
-                    Onboarding.AddSearchWidgetCardExtra(
-                        action = ACTION_IMPRESSION,
-                        elementType = ET_ONBOARDING_CARD,
-                        sequenceId = sequenceId,
-                        sequencePosition = sequencePosition,
-                        onboardingReason = onboardingReason.value,
-                        installSource = installSource,
-                    ),
-                )
-            }
-
-            OnboardingPageUiData.Type.SYNC_SIGN_IN -> {
-                Onboarding.signInCard.record(
-                    Onboarding.SignInCardExtra(
-                        action = ACTION_IMPRESSION,
-                        elementType = ET_ONBOARDING_CARD,
-                        sequenceId = sequenceId,
-                        sequencePosition = sequencePosition,
-                        onboardingReason = onboardingReason.value,
-                        installSource = installSource,
-                    ),
-                )
-            }
-
-            OnboardingPageUiData.Type.NOTIFICATION_PERMISSION -> {
-                Onboarding.turnOnNotificationsCard.record(
-                    Onboarding.TurnOnNotificationsCardExtra(
-                        action = ACTION_IMPRESSION,
-                        elementType = ET_ONBOARDING_CARD,
-                        sequenceId = sequenceId,
-                        sequencePosition = sequencePosition,
-                        onboardingReason = onboardingReason.value,
-                        installSource = installSource,
-                    ),
-                )
-            }
-
-            OnboardingPageUiData.Type.TOOLBAR_PLACEMENT -> {
-                Onboarding.toolbarPlacementCard.record(
-                    Onboarding.ToolbarPlacementCardExtra(
-                        action = ACTION_IMPRESSION,
-                        elementType = ET_ONBOARDING_CARD,
-                        sequenceId = sequenceId,
-                        sequencePosition = sequencePosition,
-                        onboardingReason = onboardingReason.value,
-                        installSource = installSource,
-                    ),
-                )
-            }
-
             OnboardingPageUiData.Type.TERMS_OF_SERVICE -> {
                 Onboarding.termsOfServiceCard.record(
                     Onboarding.TermsOfServiceCardExtra(
@@ -162,7 +110,6 @@ class OnboardingTelemetryRecorder(
                     ),
                 )
             }
-
         }
     }
 
@@ -190,70 +137,6 @@ class OnboardingTelemetryRecorder(
     }
 
     /**
-     * Records sync sign in click event.
-     * @param sequenceId The identifier of the onboarding sequence shown to the user.
-     * @param sequencePosition The sequence position of the page for which the impression occurred.
-     */
-    fun onSyncSignInClick(sequenceId: String, sequencePosition: String) {
-        logger.debug(
-            "Recording sync sign in click event, sequenceId: $sequenceId, " +
-                "sequencePosition: $sequencePosition",
-        )
-
-        Onboarding.signIn.record(
-            Onboarding.SignInExtra(
-                action = ACTION_CLICK,
-                elementType = ET_PRIMARY_BUTTON,
-                sequenceId = sequenceId,
-                sequencePosition = sequencePosition,
-                onboardingReason = onboardingReason.value,
-                installSource = installSource,
-            ),
-        )
-    }
-
-    /**
-     * Records notification permission click event.
-     * @param sequenceId The identifier of the onboarding sequence shown to the user.
-     * @param sequencePosition The sequence position of the page for which the impression occurred.
-     */
-    fun onNotificationPermissionClick(sequenceId: String, sequencePosition: String) {
-        logger.debug(
-            "Recording notification permission click event, sequenceId: $sequenceId, " +
-                "sequencePosition: $sequencePosition",
-        )
-
-        Onboarding.turnOnNotifications.record(
-            Onboarding.TurnOnNotificationsExtra(
-                action = ACTION_CLICK,
-                elementType = ET_PRIMARY_BUTTON,
-                sequenceId = sequenceId,
-                sequencePosition = sequencePosition,
-                onboardingReason = onboardingReason.value,
-                installSource = installSource,
-            ),
-        )
-    }
-
-    /**
-     * Records add search widget click event.
-     * @param sequenceId The identifier of the onboarding sequence shown to the user.
-     * @param sequencePosition The sequence position of the page for which the impression occurred.
-     */
-    fun onAddSearchWidgetClick(sequenceId: String, sequencePosition: String) {
-        Onboarding.addSearchWidget.record(
-            Onboarding.AddSearchWidgetExtra(
-                action = ACTION_CLICK,
-                elementType = ET_PRIMARY_BUTTON,
-                sequenceId = sequenceId,
-                sequencePosition = sequencePosition,
-                onboardingReason = onboardingReason.value,
-                installSource = installSource,
-            ),
-        )
-    }
-
-    /**
      * Records skip set to default click event.
      * @param sequenceId The identifier of the onboarding sequence shown to the user.
      * @param sequencePosition The sequence position of the page for which the impression occurred.
@@ -265,100 +148,6 @@ class OnboardingTelemetryRecorder(
                 elementType = ET_SECONDARY_BUTTON,
                 sequenceId = sequenceId,
                 sequencePosition = sequencePosition,
-                onboardingReason = onboardingReason.value,
-                installSource = installSource,
-            ),
-        )
-    }
-
-    /**
-     * Records skip sign in click event.
-     * @param sequenceId The identifier of the onboarding sequence shown to the user.
-     * @param sequencePosition The sequence position of the page for which the impression occurred.
-     * @param elementType The type of UI element that triggered the click event.
-     */
-    fun onSkipSignInClick(
-        sequenceId: String,
-        sequencePosition: String,
-        elementType: String = ET_SECONDARY_BUTTON,
-    ) {
-        logger.debug(
-            "Recording skip sign in click event, sequenceId: $sequenceId, " +
-                "sequencePosition: $sequencePosition, elementType: $elementType",
-        )
-
-        Onboarding.skipSignIn.record(
-            Onboarding.SkipSignInExtra(
-                action = ACTION_CLICK,
-                elementType = elementType,
-                sequenceId = sequenceId,
-                sequencePosition = sequencePosition,
-                onboardingReason = onboardingReason.value,
-                installSource = installSource,
-            ),
-        )
-    }
-
-    /**
-     * Records skip add widget click event.
-     * @param sequenceId The identifier of the onboarding sequence shown to the user.
-     * @param sequencePosition The sequence position of the page for which the impression occurred.
-     */
-    fun onSkipAddWidgetClick(sequenceId: String, sequencePosition: String) {
-        Onboarding.skipAddSearchWidget.record(
-            Onboarding.SkipAddSearchWidgetExtra(
-                action = ACTION_CLICK,
-                elementType = ET_SECONDARY_BUTTON,
-                sequenceId = sequenceId,
-                sequencePosition = sequencePosition,
-                onboardingReason = onboardingReason.value,
-                installSource = installSource,
-            ),
-        )
-    }
-
-    /**
-     * Records skip notification permission click event.
-     * @param sequenceId The identifier of the onboarding sequence shown to the user.
-     * @param sequencePosition The sequence position of the page for which the impression occurred.
-     * @param elementType The type of UI element that triggered the click event.
-     */
-    fun onSkipTurnOnNotificationsClick(
-        sequenceId: String,
-        sequencePosition: String,
-        elementType: String = ET_SECONDARY_BUTTON,
-    ) {
-        logger.debug(
-            "Recording skip notification permission click event, " +
-                "sequenceId: $sequenceId, sequencePosition: $sequencePosition, elementType: $elementType",
-        )
-
-        Onboarding.skipTurnOnNotifications.record(
-            Onboarding.SkipTurnOnNotificationsExtra(
-                action = ACTION_CLICK,
-                elementType = elementType,
-                sequenceId = sequenceId,
-                sequencePosition = sequencePosition,
-                onboardingReason = onboardingReason.value,
-                installSource = installSource,
-            ),
-        )
-    }
-
-    /**
-     * Records select toolbar placement click event.
-     * @param sequenceId The identifier of the onboarding sequence shown to the user.
-     * @param sequencePosition The sequence position of the page for which the impression occurred.
-     * @param toolbarPlacement The toolbar placement option chosen by the user.
-     */
-    fun onSelectToolbarPlacementClick(sequenceId: String, sequencePosition: String, toolbarPlacement: String) {
-        Onboarding.selectToolbarPlacement.record(
-            Onboarding.SelectToolbarPlacementExtra(
-                action = ACTION_CLICK,
-                elementType = ET_PRIMARY_BUTTON,
-                sequenceId = sequenceId,
-                sequencePosition = sequencePosition,
-                toolbarPlacement = toolbarPlacement,
                 onboardingReason = onboardingReason.value,
                 installSource = installSource,
             ),

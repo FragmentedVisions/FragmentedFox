@@ -170,7 +170,6 @@
     <ID>HardcodedPaddingUsage:ClipboardSuggestionBar.kt$(8.dp)</ID>
     <ID>HardcodedPaddingUsage:Collection.kt$( start = 16.dp, end = 8.dp, // (24.dp - 16.dp) hardcoded in ExpandableListHeader )</ID>
     <ID>HardcodedPaddingUsage:Collections.kt$(8.dp)</ID>
-    <ID>HardcodedPaddingUsage:ContinuousOnboardingScreen.kt$(16.dp)</ID>
     <ID>HardcodedPaddingUsage:CrashTools.kt$(all = 16.dp)</ID>
     <ID>HardcodedPaddingUsage:CustomTabMenu.kt$( start = 8.dp, top = if (isBottomToolbar) 0.dp else 8.dp, end = 8.dp, bottom = if (isBottomToolbar) 84.dp else 16.dp, )</ID>
     <ID>HardcodedPaddingUsage:CustomTabMenu.kt$(top = 4.dp)</ID>
@@ -340,7 +339,6 @@
     <ID>MaterialTextButtonUsage:AppLinksPromptFragment.kt$import androidx.compose.material3.TextButton</ID>
     <ID>MaterialTextButtonUsage:HomeSectionHeader.kt$import androidx.compose.material3.TextButton</ID>
     <ID>MaterialTextButtonUsage:WallpaperOnboarding.kt$import androidx.compose.material3.TextButton</ID>
-    <ID>MaterialTypographyUsage:ContinuousOnboardingScreen.kt$MaterialTheme.typography</ID>
     <ID>MaterialTypographyUsage:DownloadDeleteBehaviorComposePreference.kt$MaterialTheme.typography</ID>
     <ID>MaterialTypographyUsage:DownloadsScreen.kt$MaterialTheme.typography</ID>
     <ID>MaterialTypographyUsage:FontSizeSlider.kt$MaterialTheme.typography</ID>

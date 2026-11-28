@@ -9,8 +9,7 @@ import org.junit.Test
 import org.junit.runner.RunWith
 import org.mozilla.fenix.R
 import org.mozilla.fenix.onboarding.view.OnboardingPageUiData
-import org.mozilla.fenix.onboarding.view.notificationPageUiData
-import org.mozilla.fenix.onboarding.view.syncPageUiData
+import org.mozilla.fenix.onboarding.view.defaultBrowserPageUiData
 import org.robolectric.RobolectricTestRunner
 
 @RunWith(RobolectricTestRunner::class)
@@ -57,11 +56,8 @@ class DefaultBrowserPromptManagerTest {
         assertTrue(promptManager.canShowPrompt())
 
         promptManager.maybePromptToSetAsDefaultBrowser(
-            pagesToDisplay = listOf(
-                syncPageUiData,
-                notificationPageUiData,
-            ),
-            currentCard = syncPageUiData,
+            pagesToDisplay = listOf(defaultBrowserPageUiData),
+            currentCard = defaultBrowserPageUiData,
         )
 
         assertTrue(promptToSetAsDefaultBrowserCalled)
@@ -74,14 +70,14 @@ class DefaultBrowserPromptManagerTest {
             storage = buildStorage(),
             promptToSetAsDefaultBrowser = { promptToSetAsDefaultBrowserCalled = true },
         )
-        val pagesToDisplay = listOf(syncPageUiData, tosPageUiData, notificationPageUiData)
+        val pagesToDisplay = listOf(defaultBrowserPageUiData, tosPageUiData)
 
         assertTrue(promptManager.canShowPrompt())
 
         // yet to show ToS
         promptManager.maybePromptToSetAsDefaultBrowser(
             pagesToDisplay = pagesToDisplay,
-            currentCard = syncPageUiData,
+            currentCard = defaultBrowserPageUiData,
         )
         assertFalse(promptToSetAsDefaultBrowserCalled)
 
@@ -94,8 +90,8 @@ class DefaultBrowserPromptManagerTest {
 
         // already showed ToS, can prompt the user
         promptManager.maybePromptToSetAsDefaultBrowser(
-            pagesToDisplay = pagesToDisplay,
-            currentCard = notificationPageUiData,
+            pagesToDisplay = listOf(tosPageUiData, defaultBrowserPageUiData),
+            currentCard = defaultBrowserPageUiData,
         )
 
         assertTrue(promptToSetAsDefaultBrowserCalled)

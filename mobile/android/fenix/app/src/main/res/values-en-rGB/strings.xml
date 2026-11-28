@@ -445,7 +445,6 @@
 
     Content description (not visible, for screen readers etc.): Close button for the home onboarding dialog
   -->
-  <string name="onboarding_home_content_description_close_button">Close</string>
   <!-- Title for the privacy preferences dialog shown during onboarding. Note: The word "Firefox" should NOT be translated. -->
   <!-- Title for the crash reporting option in the privacy preferences dialog shown during onboarding. -->
   <!-- Description for the crash reporting option in the privacy preferences dialog shown during onboarding. -->
@@ -521,17 +520,11 @@
   <!-- "Set to default" onboarding button. -->
   <string name="nova_onboarding_set_to_default_button">Set as default browser</string>
   <!-- Toolbar selection onboarding title. -->
-  <string name="nova_onboarding_toolbar_selection_title">Choose your address bar</string>
   <!-- Toolbar selection onboarding "top" option label. -->
-  <string name="nova_onboarding_toolbar_selection_top_label">Top</string>
   <!-- Toolbar selection onboarding "bottom" option label. -->
-  <string name="nova_onboarding_toolbar_selection_bottom_label">Bottom</string>
   <!-- Sync onboarding title. -->
-  <string name="nova_onboarding_sync_title">Instantly pick up where you left off</string>
   <!-- Sync onboarding subtitle. -->
-  <string name="nova_onboarding_sync_subtitle">Grab bookmarks, passwords and more on any device in a snap. Your personal data stays safe and secure with encryption.</string>
   <!-- Sync onboarding button. -->
-  <string name="nova_onboarding_sync_button">Start synchronising</string>
   <!-- Marketing onboarding title. -->
   <!--
     Marketing onboarding body. 'Firefox' and 'Mozilla' are intentionally hardcoded.
@@ -570,28 +563,11 @@
   <!-- Marketing onboarding secondary button text. -->
   <!-- Marketing onboarding secondary button text. -->
   <!-- Notifications onboarding title. 'Firefox' is intentionally hardcoded. -->
-  <string name="nova_onboarding_notifications_title" tools:ignore="BrandUsage,UnusedResources">Notifications help you stay safer with Firefox</string>
   <!-- Notifications onboarding subtitle. 'Firefox' is intentionally hardcoded. -->
-  <string name="nova_onboarding_notifications_subtitle" tools:ignore="BrandUsage,UnusedResources">Discover the latest privacy features in Firefox so you’re always up to date on how to stay protected.</string>
   <!-- Notifications onboarding button. -->
-  <string name="nova_onboarding_notifications_button">Turn on notifications</string>
   <!-- "Add search widget" onboarding title. -->
-  <string name="nova_onboarding_add_search_widget_title">Make every search more private</string>
   <!-- "Add search widget" onboarding subtitle. 'Firefox' is intentionally hardcoded. -->
-  <string name="nova_onboarding_add_search_widget_subtitle" tools:ignore="BrandUsage">Start every search from your phone’s home screen and know Firefox’s automatic protections have your back.</string>
   <!-- "Add search widget" onboarding button. 'Firefox' is intentionally hardcoded. -->
-  <string name="nova_onboarding_add_search_widget_button" tools:ignore="BrandUsage">Add Firefox widget</string>
-  <plurals name="nova_onboarding_customize_prompt_body" tools:ignore="UnusedResources">
-    <!--
-      Customize prompt onboarding body.
-      %1$s is replaced by the product name (for example "Firefox"),
-      %2$,d is replaced by the number of trackers blocked. The comma represents the thousand
-      separator (e.g. 1,000 in English), and it will automatically use the correct character
-      for your locale (don't change or remove it).
-    -->
-    <item quantity="one">%1$s blocked %2$,d tracker while you roamed the web.</item>
-    <item quantity="other">%1$s blocked %2$,d trackers while you roamed the web.</item>
-  </plurals>
   <!-- ==== End of Project "Nova" onboarding strings ==== -->
 
   <!--

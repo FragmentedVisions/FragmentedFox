@@ -20,15 +20,15 @@ class OnboardingPageUiDataTest {
 
     @Test
     fun `GIVEN last page in the list WHEN sequencePosition called THEN returns the index plus 1`() {
-        val expected = "3"
-        val actual = allKnownPages.sequencePosition(notificationPageUiData.type)
+        val expected = "2"
+        val actual = allKnownPages.sequencePosition(termsOfServicePageUiData.type)
 
         assertEquals(expected, actual)
     }
 
     @Test
     fun `GIVEN all known pages of WHEN sequenceId() called THEN should map to the correct sequence id`() {
-        val expected = "default_sync_notification"
+        val expected = "default_terms_of_service"
         val actual = allKnownPages.telemetrySequenceId()
 
         assertEquals(expected, actual)
@@ -36,8 +36,8 @@ class OnboardingPageUiDataTest {
 
     @Test
     fun `GIVEN some of the known pages WHEN sequenceId() called THEN should map to the correct sequence id`() {
-        val expected = "default_sync"
-        val actual = listOf(defaultBrowserPageUiData, syncPageUiData).telemetrySequenceId()
+        val expected = "terms_of_service_default"
+        val actual = listOf(termsOfServicePageUiData, defaultBrowserPageUiData).telemetrySequenceId()
 
         assertEquals(expected, actual)
     }
@@ -60,26 +60,15 @@ val defaultBrowserPageUiData = OnboardingPageUiData(
     secondaryButtonLabel = "default browser secondary button text",
 )
 
-val syncPageUiData = OnboardingPageUiData(
-    type = OnboardingPageUiData.Type.SYNC_SIGN_IN,
-    imageRes = R.drawable.ic_onboarding_sync,
-    title = "sync title",
-    description = "sync body",
-    primaryButtonLabel = "sync primary button text",
-    secondaryButtonLabel = "sync secondary button text",
-)
-
-val notificationPageUiData = OnboardingPageUiData(
-    type = OnboardingPageUiData.Type.NOTIFICATION_PERMISSION,
-    imageRes = R.drawable.ic_notification_permission,
-    title = "notification title",
-    description = "notification body",
-    primaryButtonLabel = "notification primary button text",
-    secondaryButtonLabel = "notification secondary button text",
+val termsOfServicePageUiData = OnboardingPageUiData(
+    type = OnboardingPageUiData.Type.TERMS_OF_SERVICE,
+    imageRes = R.drawable.ic_onboarding_welcome,
+    title = "terms of service title",
+    description = "",
+    primaryButtonLabel = "terms of service primary button text",
 )
 
 private val allKnownPages = listOf(
     defaultBrowserPageUiData,
-    syncPageUiData,
-    notificationPageUiData,
+    termsOfServicePageUiData,
 )

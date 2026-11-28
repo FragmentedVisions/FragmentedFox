@@ -265,27 +265,7 @@
             column="20"/>
     </issue>
 
-    <issue
-        id="VectorRaster"
-        message="Limit vector icons sizes to 200×200 to keep icon drawing fast; see https://developer.android.com/studio/write/vector-asset-studio#when for more"
-        errorLine1="    android:width=&quot;973dp&quot;"
-        errorLine2="                   ~~~~~">
-        <location
-            file="src/main/res/drawable/ic_notification_permission.xml"
-            line="7"
-            column="20"/>
-    </issue>
 
-    <issue
-        id="VectorRaster"
-        message="Limit vector icons sizes to 200×200 to keep icon drawing fast; see https://developer.android.com/studio/write/vector-asset-studio#when for more"
-        errorLine1="    android:width=&quot;324dp&quot;"
-        errorLine2="                   ~~~~~">
-        <location
-            file="src/main/res/drawable/ic_onboarding_customize_toolbar.xml"
-            line="7"
-            column="20"/>
-    </issue>
 
     <issue
         id="VectorRaster"
@@ -310,27 +290,7 @@
     </issue>
 
 
-    <issue
-        id="VectorRaster"
-        message="Limit vector icons sizes to 200×200 to keep icon drawing fast; see https://developer.android.com/studio/write/vector-asset-studio#when for more"
-        errorLine1="    android:width=&quot;312dp&quot;"
-        errorLine2="                   ~~~~~">
-        <location
-            file="src/main/res/drawable/ic_onboarding_search_widget.xml"
-            line="7"
-            column="20"/>
-    </issue>
 
-    <issue
-        id="VectorRaster"
-        message="Limit vector icons sizes to 200×200 to keep icon drawing fast; see https://developer.android.com/studio/write/vector-asset-studio#when for more"
-        errorLine1="&lt;vector xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot; xmlns:aapt=&quot;http://schemas.android.com/aapt&quot; android:width=&quot;235dp&quot; android:height=&quot;298dp&quot; android:viewportWidth=&quot;235&quot; android:viewportHeight=&quot;298&quot;>"
-        errorLine2="                                                                                                                               ~~~~~">
-        <location
-            file="src/main/res/drawable/ic_onboarding_sync.xml"
-            line="5"
-            column="128"/>
-    </issue>
 
     <issue
         id="VectorRaster"
@@ -377,16 +337,6 @@
             column="20"/>
     </issue>
 
-    <issue
-        id="VectorRaster"
-        message="Limit vector icons sizes to 200×200 to keep icon drawing fast; see https://developer.android.com/studio/write/vector-asset-studio#when for more"
-        errorLine1="    android:width=&quot;202dp&quot;"
-        errorLine2="                   ~~~~~">
-        <location
-            file="src/main/res/drawable/nova_onboarding_notifications.xml"
-            line="7"
-            column="20"/>
-    </issue>
 
     <issue
         id="VectorRaster"
@@ -410,16 +360,6 @@
             column="21"/>
     </issue>
 
-    <issue
-        id="VectorRaster"
-        message="Limit vector icons sizes to 200×200 to keep icon drawing fast; see https://developer.android.com/studio/write/vector-asset-studio#when for more"
-        errorLine1="    android:width=&quot;206dp&quot;"
-        errorLine2="                   ~~~~~">
-        <location
-            file="src/main/res/drawable/nova_onboarding_widget.xml"
-            line="7"
-            column="20"/>
-    </issue>
 
     <issue
         id="VisibleForTests"
@@ -521,16 +461,6 @@
     </issue>
 
 
-    <issue
-        id="UnusedQuantity"
-        message="For language &quot;zh&quot; (Chinese) the following quantities are not relevant: `one`"
-        errorLine1="  &lt;plurals name=&quot;nova_onboarding_customize_prompt_body&quot; tools:ignore=&quot;UnusedResources&quot;>"
-        errorLine2="  ^">
-        <location
-            file="src/main/res/values-zh-rTW/strings.xml"
-            line="724"
-            column="3"/>
-    </issue>
 
     <issue
         id="UnusedQuantity"

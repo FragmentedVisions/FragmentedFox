@@ -17,7 +17,6 @@ data class OnboardingPageUiData(
     val description: String,
     val primaryButtonLabel: String,
     val secondaryButtonLabel: String? = null,
-    val toolbarOptions: List<ToolbarOption>? = null,
     val termsOfService: OnboardingTermsOfService? = null,
 ) {
     /**
@@ -30,18 +29,6 @@ data class OnboardingPageUiData(
     ) {
         DEFAULT_BROWSER(
             telemetryId = "default",
-        ),
-        SYNC_SIGN_IN(
-            telemetryId = "sync",
-        ),
-        ADD_SEARCH_WIDGET(
-            telemetryId = "search_widget",
-        ),
-        NOTIFICATION_PERMISSION(
-            telemetryId = "notification",
-        ),
-        TOOLBAR_PLACEMENT(
-            telemetryId = "toolbar_placement",
         ),
         TERMS_OF_SERVICE(
             telemetryId = "terms_of_service",
@@ -58,7 +45,7 @@ fun List<OnboardingPageUiData>.sequencePosition(type: OnboardingPageUiData.Type)
 /**
  * Helper function for telemetry that maps List<OnboardingPageUiData> to a string of page names
  * separated by an underscore.
- * e.g. [DEFAULT_BROWSER, SYNC_SIGN_IN] will be mapped to "default_sync".
+ * e.g. [TERMS_OF_SERVICE, DEFAULT_BROWSER] will be mapped to "terms_of_service_default".
  */
 fun List<OnboardingPageUiData>.telemetrySequenceId(): String =
     joinToString(separator = "_") { it.type.telemetryId }

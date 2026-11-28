@@ -445,7 +445,6 @@
 
     Content description (not visible, for screen readers etc.): Close button for the home onboarding dialog
   -->
-  <string name="onboarding_home_content_description_close_button">닫기</string>
   <!-- Title for the privacy preferences dialog shown during onboarding. Note: The word "Firefox" should NOT be translated. -->
   <!-- Title for the crash reporting option in the privacy preferences dialog shown during onboarding. -->
   <!-- Description for the crash reporting option in the privacy preferences dialog shown during onboarding. -->
@@ -521,17 +520,11 @@
   <!-- "Set to default" onboarding button. -->
   <string name="nova_onboarding_set_to_default_button">기본 브라우저로 설정</string>
   <!-- Toolbar selection onboarding title. -->
-  <string name="nova_onboarding_toolbar_selection_title">주소 표시줄 선택</string>
   <!-- Toolbar selection onboarding "top" option label. -->
-  <string name="nova_onboarding_toolbar_selection_top_label">위쪽</string>
   <!-- Toolbar selection onboarding "bottom" option label. -->
-  <string name="nova_onboarding_toolbar_selection_bottom_label">아래쪽</string>
   <!-- Sync onboarding title. -->
-  <string name="nova_onboarding_sync_title">중단했던 지점에서 즉시 다시 시작하세요</string>
   <!-- Sync onboarding subtitle. -->
-  <string name="nova_onboarding_sync_subtitle">모든 기기에서 북마크, 비밀번호 등을 한 번에 가져오세요. 개인 데이터는 암호화되어 안전하게 유지됩니다.</string>
   <!-- Sync onboarding button. -->
-  <string name="nova_onboarding_sync_button">동기화 시작</string>
   <!-- Marketing onboarding title. -->
   <!--
     Marketing onboarding body. 'Firefox' and 'Mozilla' are intentionally hardcoded.
@@ -570,27 +563,11 @@
   <!-- Marketing onboarding secondary button text. -->
   <!-- Marketing onboarding secondary button text. -->
   <!-- Notifications onboarding title. 'Firefox' is intentionally hardcoded. -->
-  <string name="nova_onboarding_notifications_title" tools:ignore="BrandUsage,UnusedResources">알림으로 Firefox를 더욱 안전하게 사용할 수 있습니다</string>
   <!-- Notifications onboarding subtitle. 'Firefox' is intentionally hardcoded. -->
-  <string name="nova_onboarding_notifications_subtitle" tools:ignore="BrandUsage,UnusedResources">Firefox의 최신 개인 정보 보호 기능을 살펴보고 보호를 유지하는 방법에 대해 항상 알 수 있습니다.</string>
   <!-- Notifications onboarding button. -->
-  <string name="nova_onboarding_notifications_button">알림 켜기</string>
   <!-- "Add search widget" onboarding title. -->
-  <string name="nova_onboarding_add_search_widget_title">모든 검색을 보다 안전하게 하세요</string>
   <!-- "Add search widget" onboarding subtitle. 'Firefox' is intentionally hardcoded. -->
-  <string name="nova_onboarding_add_search_widget_subtitle" tools:ignore="BrandUsage">모든 검색을 휴대폰의 홈 화면에서 시작하세요. Firefox의 자동 보호 기능이 여러분을 지켜줍니다.</string>
   <!-- "Add search widget" onboarding button. 'Firefox' is intentionally hardcoded. -->
-  <string name="nova_onboarding_add_search_widget_button" tools:ignore="BrandUsage">Firefox 위젯 추가</string>
-  <plurals name="nova_onboarding_customize_prompt_body" tools:ignore="UnusedResources">
-    <!--
-      Customize prompt onboarding body.
-      %1$s is replaced by the product name (for example "Firefox"),
-      %2$,d is replaced by the number of trackers blocked. The comma represents the thousand
-      separator (e.g. 1,000 in English), and it will automatically use the correct character
-      for your locale (don't change or remove it).
-    -->
-    <item quantity="other">웹 탐색 중에 %1$s가 추적기 %2$,d개를 차단했습니다.</item>
-  </plurals>
   <!-- ==== End of Project "Nova" onboarding strings ==== -->
 
   <!--

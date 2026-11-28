@@ -412,7 +412,6 @@
 
     Content description (not visible, for screen readers etc.): Close button for the home onboarding dialog
   -->
-  <string name="onboarding_home_content_description_close_button">അടയ്ക്കുക</string>
   <!-- Title for the privacy preferences dialog shown during onboarding. Note: The word "Firefox" should NOT be translated. -->
   <!-- Title for the crash reporting option in the privacy preferences dialog shown during onboarding. -->
   <!-- Description for the crash reporting option in the privacy preferences dialog shown during onboarding. -->
@@ -472,28 +471,19 @@
   <!-- "Set to default" onboarding button. -->
   <string name="nova_onboarding_set_to_default_button">തനിമട്ടായ അന്വേഷിയായി വയ്ക്കുക</string>
   <!-- Toolbar selection onboarding title. -->
-  <string name="nova_onboarding_toolbar_selection_title">വിലാസപ്പട്ട തിരഞ്ഞെടുക്കുക</string>
   <!-- Toolbar selection onboarding "top" option label. -->
-  <string name="nova_onboarding_toolbar_selection_top_label">മുകള്‍ഭാഗം</string>
   <!-- Toolbar selection onboarding "bottom" option label. -->
-  <string name="nova_onboarding_toolbar_selection_bottom_label">കീഴ്ഭാഗം</string>
   <!-- Sync onboarding title. -->
-  <string name="nova_onboarding_sync_title">താങ്ങൾ നിറുത്തിയയിടത്തിൽ നിന്നു് ഉടൻ തുടങ്ങുക</string>
   <!-- Sync onboarding subtitle. -->
-  <string name="nova_onboarding_sync_subtitle">ഏതൊരു ഉപകരണത്തിലും ഞൊടിയിടയിൽ അടയാളക്കുറിപ്പുകളും ഒളിവാക്കുകളും മറ്റും നേടൂ. എൻക്രിപ്ഷൻ കൊണ്ടു താങ്ങളുടെ സ്വകാര്യ ഡാറ്റ സുരക്ഷിതമായി നിലനില്ക്കും.</string>
   <!-- Sync onboarding button. -->
-  <string name="nova_onboarding_sync_button">സമന്വയിപ്പിക്കാൻ തുടങ്ങുക</string>
   <!-- Marketing onboarding title. -->
   <!-- Marketing onboarding body link text. -->
   <!-- Marketing onboarding body link text. -->
   <!-- Marketing onboarding primary button text. -->
   <!-- Marketing onboarding secondary button text. -->
   <!-- Notifications onboarding title. 'Firefox' is intentionally hardcoded. -->
-  <string name="nova_onboarding_notifications_title" tools:ignore="BrandUsage,UnusedResources">Firefox-ൽ സുരക്ഷിതമായി തുടരാൻ അറിയിപ്പുകൾ താങ്ങളെ സഹായിക്കുന്നു</string>
   <!-- Notifications onboarding button. -->
-  <string name="nova_onboarding_notifications_button">അറിയിപ്പുകൾ തുടങ്ങിവയ്ക്കുക</string>
   <!-- "Add search widget" onboarding title. -->
-  <string name="nova_onboarding_add_search_widget_title">ഓരോ തിരച്ചിലും ഇനിയും സ്വകാര്യമാക്കുക</string>
   <!-- ==== End of Project "Nova" onboarding strings ==== -->
 
   <!--
